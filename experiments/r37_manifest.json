@@ -1,0 +1,70 @@
+{
+  "experiment": "FlyGraph R37",
+  "status": "completed",
+  "files": {
+    "RESEARCH_REPORT_R37_RU.md": {
+      "bytes": 4803,
+      "sha256": "d9802f90d90effebc6aff2e6e543e7901d40a6f3195f6ed49e6991b744b99af5"
+    },
+    "r37_metrics.json": {
+      "bytes": 112766,
+      "sha256": "5b49607a965f614cba3d68bcfc2b943796f921ff87eea33d33f508a527655cc8"
+    },
+    "r37_metrics.csv": {
+      "bytes": 1950,
+      "sha256": "101e631fd7245b820c557b6496826dcd93368cf282dad53ac9a22ce756dd3688"
+    },
+    "r37_offpolicy_prefix_verifier.py": {
+      "bytes": 22399,
+      "sha256": "4cca5e2519ce9d29c8ad3e2f25c210e8bb33a994d1fc40eef5c2fec87ecf8202"
+    },
+    "r37_config.json": {
+      "bytes": 1231,
+      "sha256": "75bcab1af3a97025fcc97b69a7c9da168d1084a2242717cd480965f7ec576f63"
+    },
+    "r37_offpolicy_model.npz": {
+      "bytes": 2324,
+      "sha256": "eca696b64be13b87486af7499d10ace23f87d3ade34671e08de147c4fcc655d2"
+    },
+    "r37_teacher_model.npz": {
+      "bytes": 2302,
+      "sha256": "914c313233ee54257c0ac86f46d0a14fc239a3f7c90809f9e1ce635b22e8b252"
+    },
+    "test_r37_semantics.py": {
+      "bytes": 2221,
+      "sha256": "b25c9243ef3ee78e15cf94ee567e5b99b4bbdd83655f9b5e0b1b89e280b0e76e"
+    },
+    "r35_base.py": {
+      "bytes": 14974,
+      "sha256": "838c28a0c8c7c1c72be0a07e04da4a3874115af8fe9dda444dae2815998f39d1"
+    },
+    "r35_verifier_weights.npz": {
+      "bytes": 3778,
+      "sha256": "c618260f21a3499d2443ec69a5cc227d359fcedfd16da771b62afb0ec2893f52"
+    },
+    "aggregate_r37.py": {
+      "bytes": 8559,
+      "sha256": "e874a74baeeb243b1f99f2b00d86aed562c121920f990d51cd24b62a2cf7c9f4"
+    },
+    "chunks/calibration_complete.json": {
+      "bytes": 30427,
+      "sha256": "4a2822a056a35fd3e989feee8bdba08842a56016256a9376e445c1d49b90ee68"
+    },
+    "chunks/held_id8_complete.json": {
+      "bytes": 18485,
+      "sha256": "fc7c895003f2a1b3c292940884e50a4b51a4242cb6d1f46ca26507e2b7991e3e"
+    },
+    "chunks/held_ood128_complete.json": {
+      "bytes": 14504,
+      "sha256": "2c5df89ae196562ff03f7d64aa6a14b0e9e5f7dcc6de1ab61c895045cd621076"
+    },
+    "chunks/held_ood32_complete.json": {
+      "bytes": 15519,
+      "sha256": "7afed75dea87868dc7b05724d846553466ec7d381acda72458050f5d5779523b"
+    },
+    "chunks/held_ood64_complete.json": {
+      "bytes": 16102,
+      "sha256": "b43b6c7449a4b39e50cdd950babcd0185b57c412f98cc777b6502497ee38443d"
+    }
+  }
+}
