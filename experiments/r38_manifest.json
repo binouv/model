@@ -1,0 +1,81 @@
+{
+  "experiment": "R38",
+  "status": "completed",
+  "artifacts": [
+    {
+      "path": "RESEARCH_REPORT_R38_RU.md",
+      "size": 3337,
+      "sha256": "930bdce0502f4aeb52782ecfa90372ee17c9ee0a3b73effaf6e312a1a2994fea"
+    },
+    {
+      "path": "r35_base.py",
+      "size": 14974,
+      "sha256": "838c28a0c8c7c1c72be0a07e04da4a3874115af8fe9dda444dae2815998f39d1"
+    },
+    {
+      "path": "r35_verifier_weights.npz",
+      "size": 3778,
+      "sha256": "c618260f21a3499d2443ec69a5cc227d359fcedfd16da771b62afb0ec2893f52"
+    },
+    {
+      "path": "r37_base.py",
+      "size": 22399,
+      "sha256": "4cca5e2519ce9d29c8ad3e2f25c210e8bb33a994d1fc40eef5c2fec87ecf8202"
+    },
+    {
+      "path": "r37_offpolicy_model.npz",
+      "size": 2324,
+      "sha256": "eca696b64be13b87486af7499d10ace23f87d3ade34671e08de147c4fcc655d2"
+    },
+    {
+      "path": "r38_calibration.json",
+      "size": 936,
+      "sha256": "8dafb853973890e9c7460a2311c4d8f4d3ffce9f2d28e20697f30baf6f2482bc"
+    },
+    {
+      "path": "r38_config.json",
+      "size": 304,
+      "sha256": "ec69a4a7464227c2de92d3501f5fbe042e0eacecd7f9305f389d0ce4acd5f248"
+    },
+    {
+      "path": "r38_held_id8.json",
+      "size": 13514,
+      "sha256": "df5314d763723495700ac1a79a172d2a3c9d346f521b2c0503ae64a7b0e28780"
+    },
+    {
+      "path": "r38_held_ood128.json",
+      "size": 14345,
+      "sha256": "207029c243cfa1ec8ca13c98a04321c415a4ac7a6aac0098759b9c708418bd05"
+    },
+    {
+      "path": "r38_held_ood32.json",
+      "size": 13773,
+      "sha256": "aa92a9541f68659b55aaaad771795175d63437203d272e4a23172f2aa9c17517"
+    },
+    {
+      "path": "r38_held_ood64.json",
+      "size": 14339,
+      "sha256": "4cd55677589da5c28fd798dfac7ed6e2914c9f8a8077af1a6098b91f4a011cc5"
+    },
+    {
+      "path": "r38_metrics.csv",
+      "size": 1721,
+      "sha256": "2ac4b1993fa36f9d352f8f8439897372f62b2dd04befeaa883365ba16f9da5da"
+    },
+    {
+      "path": "r38_metrics.json",
+      "size": 71295,
+      "sha256": "78be6e50d1719c916bfc745b1281d6510e71f78ea5fe33eca08b3bde7599b00c"
+    },
+    {
+      "path": "r38_residual_verifier.py",
+      "size": 12328,
+      "sha256": "4d51300c2291c0851923425b529bb9f5801d8c03843432ad33867faf390598ec"
+    },
+    {
+      "path": "test_r38_semantics.py",
+      "size": 659,
+      "sha256": "cc33ef5b61926b8eb7d2f946a8de9792ecfc1eb31f41ad5faefaac3ef3da03c9"
+    }
+  ]
+}
