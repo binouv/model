@@ -1,0 +1,24 @@
+{
+  "experiment": "FlyGraph R35 consistency verifier/reranker",
+  "priority": "cognition: memory + reasoning",
+  "noise": 0.30,
+  "train_seeds": [3501, 3502, 3503],
+  "calibration_seed": [3599],
+  "held_seeds": [3601, 3602, 3603],
+  "n_train_per_seed_per_condition": 24,
+  "n_calibration_per_condition": 8,
+  "n_held_per_seed_per_condition": 16,
+  "beam_width": 8,
+  "beam_expand": 8,
+  "r34_margin_threshold": 0.5,
+  "alpha_grid": [0.0, 0.25, 0.5],
+  "selected_local_alpha": 0.25,
+  "core_conditions": {
+    "id8": [8, 48, 80, 0.25],
+    "ood32": [32, 128, 240, 0.35],
+    "ood64": [64, 192, 320, 0.40],
+    "ood128": [128, 320, 560, 0.45]
+  },
+  "extension_256": [256, 576, 1024, 0.50],
+  "extension_256_n_per_seed": 8
+}
