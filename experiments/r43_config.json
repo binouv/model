@@ -1,0 +1,16 @@
+{
+  "experiment": "FlyGraph R43 set-relative listwise beam reranking",
+  "noise": 0.3,
+  "beam": 32,
+  "expand": 8,
+  "max_hard_negatives_per_set": 12,
+  "train_seeds": [4311,4312,4313],
+  "calibration_seeds": [4321,4322],
+  "held_seeds": [4341,4342,4343],
+  "train_counts": {"ood32":5,"ood64":4,"ood128":2},
+  "held_counts": {"id8":8,"ood32":6,"ood64":6,"ood128":4},
+  "calibration_n_per_seed": 2,
+  "lambda_grid": [0.0,0.15,0.3,0.6],
+  "calibration_objective": "answers + final/selected true path + inverse true-prefix rank on calibration only",
+  "success_criterion": "8-hop answer delta vs greedy >= -2pp; 64-hop and 128-hop answer strictly exceed R35 fixed32; 128-hop main strictly exceeds independent-feature ablation."
+}
