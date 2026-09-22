@@ -1,0 +1,17 @@
+{
+  "experiment": "FlyGraph R37 off-policy hard-negative prefix verifier",
+  "noise": 0.30,
+  "train_seeds": [3711, 3712, 3713],
+  "calibration_seeds": [3721, 3722],
+  "held_seeds": [3731, 3732, 3733],
+  "train_episode_counts_per_seed": {"id8": 10, "ood32": 6, "ood64": 5, "ood128": 3},
+  "calibration_n_per_seed": 2,
+  "held_episode_counts_per_seed": {"id8": 12, "ood32": 8, "ood64": 8, "ood128": 6},
+  "threshold_grid": [0.20, 0.50, 1.00, 2.00],
+  "selected_threshold": 0.20,
+  "beam": {"base_width": 8, "max_width": 32, "expand": 8},
+  "primary_hypothesis": "A prefix/trajectory verifier trained on beam-generated off-policy hard negatives will correct remaining long-horizon ranking drift better than the same verifier trained only on teacher-forced prefixes, improving 128-hop noisy-memory accuracy while preserving 8-hop performance.",
+  "ablation": "Same prefix features, LogisticRegression and adaptive inference, but teacher-forced-only verifier training.",
+  "success_criterion": "Improve held 128-hop answer over R35 fixed32 AND beat teacher-forced ablation at 128; keep 8-hop answer within 2pp of greedy.",
+  "extension_256": "Not promoted to a completed result because the primary 128-hop success criterion failed."
+}
