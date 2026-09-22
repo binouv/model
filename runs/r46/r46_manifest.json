@@ -1,0 +1,11 @@
+{
+  "experiment":"R46","status":"completed",
+  "files":{
+    "r46_distributional_address_belief.py":{"size_bytes":14685,"sha256":"67f24810aa0c9fc91f93af9b34097a466a9561c415470ed0a193a9890ddd1394"},
+    "r46_config.json":{"size_bytes":806,"sha256":"dece9673a0999e73154657e05f4944bec27fd86f699381fc8dced7a867aafe70"},
+    "r46_metrics.json":{"size_bytes":199322,"sha256":"68c1e3a85b98533984b7b631f90ce0e0534daf83aec1c737767365d674c27236"},
+    "r46_metrics.csv":{"size_bytes":2498,"sha256":"734536ba8afafd05ea8804239f5b94996d06900057b57f1afc9f6cc78f50cdc3"},
+    "RESEARCH_REPORT_R46_RU.md":{"size_bytes":1600,"sha256":"69f270156d9b55ce5a9c7af5f7f27563cf86b81f17b5a174788631bf4e2e9f95"},
+    "test_r46_semantics.py":{"size_bytes":304,"sha256":"4e635142d8462cef5d30a63e869fee1d8dfe4bc6bd43e5244d101372cfc8c099"}
+  }
+}
