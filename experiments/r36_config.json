@@ -1,0 +1,32 @@
+{
+  "experiment": "FlyGraph R36 verifier-uncertainty adaptive beam allocation",
+  "noise": 0.3,
+  "calibration_seeds": [
+    3691,
+    3692
+  ],
+  "held_seeds": [
+    3701,
+    3702,
+    3703
+  ],
+  "n_cal_per_seed": 4,
+  "n_held_by_condition": {
+    "id8": 16,
+    "ood32": 12,
+    "ood64": 12,
+    "ood128": 8
+  },
+  "n_256_per_seed": 4,
+  "threshold_grid": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "selected_threshold": 0.1,
+  "base_width": 8,
+  "max_width": 32,
+  "expand": 8,
+  "r35_weights_frozen": true,
+  "success_criterion": "Improve held 128-hop answer vs R35 fixed8; 8-hop regression >= -2pp vs greedy; verifier-candidate evals at 128 lower than fixed32."
+}
