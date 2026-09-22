@@ -1,0 +1,1000 @@
+{
+  "experiment": "FlyGraph R38 protected cumulative + frozen off-policy residual verifier",
+  "status": "completed",
+  "hypothesis": "A frozen off-policy verifier used only as a confidence-gated residual on top of the protected cumulative R35 trajectory score can correct hard ranking errors without destroying long-horizon evidence aggregation.",
+  "protocol": {
+    "noise": 0.3,
+    "residual_model": "frozen completed R37 off-policy verifier",
+    "calibration_seed": 3821,
+    "calibration_episodes_per_condition": 2,
+    "held_seeds": [
+      3831,
+      3832,
+      3833
+    ],
+    "held_episodes_per_seed_per_condition": 4,
+    "beam_width": 32,
+    "expand": 8,
+    "calibration_grid": {
+      "beta": [
+        0.1,
+        0.2
+      ],
+      "gate_threshold": [
+        0.7,
+        0.85
+      ]
+    }
+  },
+  "calibration": {
+    "seed": 3821,
+    "episodes_per_condition": 2,
+    "rows": [
+      {
+        "beta": 0.1,
+        "gate_threshold": 0.7,
+        "objective": 6.0,
+        "answers": {
+          "id8": 1.0,
+          "ood64": 1.0,
+          "ood128": 1.0
+        }
+      },
+      {
+        "beta": 0.1,
+        "gate_threshold": 0.85,
+        "objective": 6.0,
+        "answers": {
+          "id8": 1.0,
+          "ood64": 1.0,
+          "ood128": 1.0
+        }
+      },
+      {
+        "beta": 0.2,
+        "gate_threshold": 0.7,
+        "objective": 6.0,
+        "answers": {
+          "id8": 1.0,
+          "ood64": 1.0,
+          "ood128": 1.0
+        }
+      },
+      {
+        "beta": 0.2,
+        "gate_threshold": 0.85,
+        "objective": 4.75,
+        "answers": {
+          "id8": 1.0,
+          "ood64": 1.0,
+          "ood128": 0.5
+        }
+      }
+    ],
+    "best": {
+      "beta": 0.1,
+      "gate_threshold": 0.7,
+      "objective": 6.0,
+      "answers": {
+        "id8": 1.0,
+        "ood64": 1.0,
+        "ood128": 1.0
+      }
+    }
+  },
+  "selected": {
+    "beta": 0.1,
+    "gate_threshold": 0.7,
+    "objective": 6.0,
+    "answers": {
+      "id8": 1.0,
+      "ood64": 1.0,
+      "ood128": 1.0
+    }
+  },
+  "held_results": {
+    "id8": {
+      "greedy": {
+        "n_episodes": 12,
+        "answer": {
+          "mean": 0.9166666666666666,
+          "std": 0.2763853991962833,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "path_survival": {
+          "mean": 0.96875,
+          "std": 0.10364452469860624,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.625,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 0.9166666666666666,
+          "std": 0.2763853991962833,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "selected_true_path": {
+          "mean": 0.9166666666666666,
+          "std": 0.2763853991962833,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "candidate_evals": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "gate_rate": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "seeds": [
+          {
+            "seed": 3831,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "gate_rate": {
+              "mean": 0.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 3832,
+            "n": 4,
+            "answer": {
+              "mean": 0.75,
+              "std": 0.4330127018922193
+            },
+            "path_survival": {
+              "mean": 0.90625,
+              "std": 0.16237976320958225
+            },
+            "final_true_path_in_beam": {
+              "mean": 0.75,
+              "std": 0.4330127018922193
+            },
+            "selected_true_path": {
+              "mean": 0.75,
+              "std": 0.4330127018922193
+            },
+            "candidate_evals": {
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "gate_rate": {
+              "mean": 0.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 3833,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 0.0,
+              "std": 0.0
+            },
+            "gate_rate": {
+              "mean": 0.0,
+              "std": 0.0
+            }
+          }
+        ]
+      },
+      "r35_fixed32": {
+        "n_episodes": 12,
+        "answer": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "path_survival": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "selected_true_path": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "candidate_evals": {
+          "mean": 1608.0,
+          "std": 0.0,
+          "values": [
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0
+          ]
+        },
+        "gate_rate": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "seeds": [
+          {
+            "seed": 3831,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            },
+            "gate_rate": {
+              "mean": 0.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 3832,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            },
+            "gate_rate": {
+              "mean": 0.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 3833,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            },
+            "gate_rate": {
+              "mean": 0.0,
+              "std": 0.0
+            }
+          }
+        ]
+      },
+      "r38_gated_residual": {
+        "n_episodes": 12,
+        "answer": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "path_survival": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "selected_true_path": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "candidate_evals": {
+          "mean": 1608.0,
+          "std": 0.0,
+          "values": [
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0
+          ]
+        },
+        "gate_rate": {
+          "mean": 0.9952321724709785,
+          "std": 0.0029968557825043513,
+          "values": [
+            0.9975124378109452,
+            0.9950248756218906,
+            0.9987562189054726,
+            0.9937810945273632,
+            0.9912935323383084,
+            0.9906716417910447,
+            0.996268656716418,
+            0.9968905472636815,
+            0.9925373134328358,
+            0.9919154228855721,
+            0.9993781094527363,
+            0.9987562189054726
+          ]
+        },
+        "seeds": [
+          {
+            "seed": 3831,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            },
+            "gate_rate": {
+              "mean": 0.9962686567164178,
+              "std": 0.00196659058468181
+            }
+          },
+          {
+            "seed": 3832,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            },
+            "gate_rate": {
+              "mean": 0.9937810945273632,
+              "std": 0.0028157292096198626
+            }
+          },
+          {
+            "seed": 3833,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            },
+            "gate_rate": {
+              "mean": 0.9956467661691542,
+              "std": 0.003434502803851766
+            }
+          }
+        ]
+      },
+      "ablation_ungated_residual": {
+        "n_episodes": 12,
+        "answer": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "path_survival": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "selected_true_path": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "candidate_evals": {
+          "mean": 1608.0,
+          "std": 0.0,
+          "values": [
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0
+          ]
+        },
+        "gate_rate": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "seeds": [
+          {
+            "seed": 3831,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            },
+            "gate_rate": {
+              "mean": 1.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 3832,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            },
+            "gate_rate": {
+              "mean": 1.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 3833,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            },
+            "gate_rate": {
+              "mean": 1.0,
+              "std": 0.0
+            }
+          }
+        ]
+      }
+    },
+    "ood32": {
+      "greedy": {
+        "n_episodes": 12,
+        "answer": {
+          "mean": 0.6666666666666666,
+          "std": 0.4714045207910317,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "path_survival": {
+          "mean": 0.8515625,
+          "std": 0.28899210854638113,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.125,
+            1.0,
+            0.84375,
+            1.0,
+            1.0,
+            0.9375,
+            0.3125
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 0.6666666666666666,
+          "std": 0.4714045207910317,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "selected_true_path": {
+          "mean": 0.6666666666666666,
+          "std": 0.4714045207910317,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "candidate_evals": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "gate_rate": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "seeds": [
+          {
+            "seed": 3831,
+            "n": 4,
