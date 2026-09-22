@@ -1,0 +1,169 @@
+{
+  "note": "Lossless base64 for small model artifacts. Large checkpoints are represented by manifests because normal Git/GitHub file limits make direct commits unsuitable.",
+  "small_models": [
+    {
+      "name": "r35_verifier_weights.npz",
+      "size_bytes": 3778,
+      "sha256": "c618260f21a3499d2443ec69a5cc227d359fcedfd16da771b62afb0ec2893f52",
+      "encoding": "base64",
+      "data": "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eQEAEADwAAAAAAAAAPAAAAAAAAAAk05VTVBZAQB2AHsnZGVzY3InOiAnPGk4JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDE0LCksIH0gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAoAAAAAAAAAAAEAAAAAAAAAAgAAAAAAAAADAAAAAAAAAAQAAAAAAAAABQAAAAAAAAAGAAAAAAAAAAcAAAAAAAAACAAAAAAAAAAJAAAAAAAAAAoAAAAAAAAACwAAAAAAAAAMAAAAAAAAAA0AAAAAAAAAUEsDBC0AAAAAAAAAIQBc+KTx//////////8IABQAbWVhbi5ucHkBABAA8AAAAAAAAADwAAAAAAAAAJNOVU1QWQEAdgB7J2Rlc2NyJzogJzxmOCcsICdmb3J0cmFuX29yZGVyJzogRmFsc2UsICdzaGFwZSc6ICgxNCwpLCB9ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKQhoslnyzyz/BCIzACPzuP+wEGGuIn+c/Jf5fwwiDCsDFzkSetgfyP3CWEOiWngZAYARGYASm6D+Xb/mWb/nHP1MyoZKnLNM/5DiesXxUuT8AAAAAAADgP7dAo8wamvK/2Ub71HTi7z8codMzKfTYP1BLAwQtAAAAAAAAACEA95ZZKf//////////CQAUAHNjYWxlLm5weQEAEADwAAAAAAAAAPAAAAAAAAAAk05VTVBZAQB2AHsnZGVzY3InOiAnPGY4JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDE0LCksIH0gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIArMO+XHDvbAPxSX31jyb8Y/w/tzOeOQzD9MbfWUHG7zP1XSojXcFPM/PLqd3tYy6z8fJHnRH+zaPy+K57I/+Ng/695rt2Alvz+JnT4nh065P/7L7mGcCNM/u5kSWVBp1D8wpDJ7pk3cP31o0/lPurI/UEsDBC0AAAAAAAAAIQDGrt1F//////////8IABQAY29lZi5ucHkBABAA8AAAAAAAAADwAAAAAAAAAJNOVU1QWQEAdgB7J2Rlc2NyJzogJzxmOCcsICdmb3J0cmFuX29yZGVyJzogRmFsc2UsICdzaGFwZSc6ICgxNCwpLCB9ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKdmrrYGb26D/s+f7X7jPMPykLASmlv+w/alkvy1YEGUDvpPKRJbLrv55xc7pEHAJA256Y19A9FECydSWFvaEIwGUid4cmT+U/gxXQxnWyzz9RkEKn7ufPP0JNYabz0Kc/fOTHJyl7nb9ghBg6bG9Sv1BLAwQtAAAAAAAAACEAgiwz+P//////////DQAUAGludGVyY2VwdC5ucHkBABAAiAAAAAAAAACIAAAAAAAAAJNOVU1QWQEAdgB7J2Rlc2NyJzogJzxmOCcsICdmb3J0cmFuX29yZGVyJzogRmFsc2UsICdzaGFwZSc6ICgxLCksIH0gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKxncf7qZwJ8BQSwMELQAAAAAAAAAhABnzX0L//////////w8AFABsb2NhbF9hbHBoYS5ucHkBABAAiAAAAAAAAACIAAAAAAAAAJNOVU1QWQEAdgB7J2Rlc2NyJzogJzxmOCcsICdmb3J0cmFuX29yZGVyJzogRmFsc2UsICdzaGFwZSc6ICgxLCksIH0gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKAAAAAAAA0D9QSwECLQMtAAAAAAAAACEAhoq926AGAACgBgAAEQAAAAAAAAAAAAAAgAEAAAAAZmVhdHVyZV9uYW1lcy5ucHlQSwECLQMtAAAAAAAAACEAIlLny/AAAADwAAAACAAAAAAAAAAAAAAAgAHjBgAAY29scy5ucHlQSwECLQMtAAAAAAAAACEAXPik8fAAAADwAAAACAAAAAAAAAAAAAAAgAENCAAAbWVhbi5ucHlQSwECLQMtAAAAAAAAACEA95ZZKfAAAADwAAAACQAAAAAAAAAAAAAAgAE3CQAAc2NhbGUubnB5UEsBAi0DLQAAAAAAAAAhAMau3UXwAAAA8AAAAAgAAAAAAAAAAAAAAIABYgoAAGNvZWYubnB5UEsBAi0DLQAAAAAAAAAhAIIsM/iIAAAAiAAAAA0AAAAAAAAAAAAAAIABjAsAAGludGVyY2VwdC5ucHlQSwECLQMtAAAAAAAAACEAGfNfQogAAACIAAAADwAAAAAAAAAAAAAAgAFTDAAAbG9jYWxfYWxwaGEubnB5UEsFBgAAAAAHAAcAkAEAABwNAAAAAA=="
+    },
+    {
+      "name": "r37_offpolicy_model.npz",
+      "size_bytes": 2324,
+      "sha256": "eca696b64be13b87486af7499d10ace23f87d3ade34671e08de147c4fcc655d2",
+      "encoding": "base64",
+      "data": "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"
+    },
+    {
+      "name": "r37_teacher_model.npz",
+      "size_bytes": 2302,
+      "sha256": "914c313233ee54257c0ac86f46d0a14fc239a3f7c90809f9e1ce635b22e8b252",
+      "encoding": "base64",
+      "data": "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"
+    },
+    {
+      "name": "r37_offpolicy_model.npz",
+      "size_bytes": 2324,
+      "sha256": "eca696b64be13b87486af7499d10ace23f87d3ade34671e08de147c4fcc655d2",
+      "encoding": "base64",
+      "data": "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"
+    }
+  ],
+  "checkpoint_manifests": {
+    "CHECKPOINTS_R14_R18.json": {
+      "generated_at": "2026-09-22",
+      "lineage": [
+        "R14 base",
+        "R15 temporal adapter",
+        "R16 100M capacity (external/previous run)",
+        "R17 compact audio adapters",
+        "R18 ephemeral 200M/300M probes"
+      ],
+      "files": [
+        {
+          "name": "r14_preroute34m_s0.pt",
+          "role": "R14 inherited base",
+          "source_path": "/mnt/data/flygraph_work/FlyGraph_Research_Archive/models/r14_preroute34m_s0.pt",
+          "size_bytes": 135335994,
+          "sha256": "750bb3d430d820f4bfc23cb27fe180a027c189c569d5cf4298e8acc9625cf67c",
+          "large_for_ordinary_github": true,
+          "persisted": true
+        },
+        {
+          "name": "r15_time_router.pt",
+          "role": "R15 temporal adapter",
+          "source_path": "/mnt/data/flygraph_work/FlyGraph_R15_R16_100M_2026-09-21/models/r15_time_router.pt",
+          "size_bytes": 4521,
+          "sha256": "8e7c160ca9277435d2884b237c4179003b7643de1b5d07269dec434219153735",
+          "large_for_ordinary_github": false,
+          "persisted": true
+        },
+        {
+          "name": "ce_only.pt",
+          "role": "R17 compact experimental adapter/checkpoint",
+          "source_path": "/mnt/data/flygraph_work/repo_snapshot/runs/r17/ce_only.pt",
+          "size_bytes": 209584,
+          "sha256": "3418e20df635ae15d96b33a0d53999389f50774c307412cc43d4228e9bf23a30",
+          "large_for_ordinary_github": false,
+          "persisted": true
+        },
+        {
+          "name": "e2e_rehearsal20.pt",
+          "role": "R17 compact experimental adapter/checkpoint",
+          "source_path": "/mnt/data/flygraph_work/repo_snapshot/runs/r17/e2e_rehearsal20.pt",
+          "size_bytes": 69485,
+          "sha256": "67812d85745c76d5b8c8031709fad97fe86fc806013387e273441d4da2d6cac9",
+          "large_for_ordinary_github": false,
+          "persisted": true
+        },
+        {
+          "name": "e2e_stress_only.pt",
+          "role": "R17 compact experimental adapter/checkpoint",
+          "source_path": "/mnt/data/flygraph_work/repo_snapshot/runs/r17/e2e_stress_only.pt",
+          "size_bytes": 69485,
+          "sha256": "767558248b469cbeddc48f4b8f0e5ca1dd80ebfe04ddb6bb17b713108c218efe",
+          "large_for_ordinary_github": false,
+          "persisted": true
+        },
+        {
+          "name": "latent_ce.pt",
+          "role": "R17 compact experimental adapter/checkpoint",
+          "source_path": "/mnt/data/flygraph_work/repo_snapshot/runs/r17/latent_ce.pt",
+          "size_bytes": 135089,
+          "sha256": "56953cd4caa4aefb17f140ba80ad163bbb6681d8ca9673dda7748c6d9d3135a4",
+          "large_for_ordinary_github": false,
+          "persisted": true
+        },
+        {
+          "name": "latent_ce_clean.pt",
+          "role": "R17 compact experimental adapter/checkpoint",
+          "source_path": "/mnt/data/flygraph_work/repo_snapshot/runs/r17/latent_ce_clean.pt",
+          "size_bytes": 135149,
+          "sha256": "d6ac8ffa58e16ebf2c24d2aecbe5440d02c6248804928ec6a5016def5b2c820d",
+          "large_for_ordinary_github": false,
+          "persisted": true
+        },
+        {
+          "name": "latent_only.pt",
+          "role": "R17 compact experimental adapter/checkpoint",
+          "source_path": "/mnt/data/flygraph_work/repo_snapshot/runs/r17/latent_only.pt",
+          "size_bytes": 135109,
+          "sha256": "c645d547f1457ad5606fed1cc9c5ac5f81a0094a0c3b26f5770cb1e96b8830e0",
+          "large_for_ordinary_github": false,
+          "persisted": true
+        },
+        {
+          "name": "value_cw05.pt",
+          "role": "R17 compact experimental adapter/checkpoint",
+          "source_path": "/mnt/data/flygraph_work/repo_snapshot/runs/r17/value_cw05.pt",
+          "size_bytes": 69307,
+          "sha256": "efda49fa8442c3573576172d2fb8cf6a0aaee5d21e7eb19faab1e6fe81fccfa1",
+          "large_for_ordinary_github": false,
+          "persisted": true
+        },
+        {
+          "name": "value_cw2.pt",
+          "role": "R17 compact experimental adapter/checkpoint",
+          "source_path": "/mnt/data/flygraph_work/repo_snapshot/runs/r17/value_cw2.pt",
+          "size_bytes": 69297,
+          "sha256": "80376f30b9efa97ea2bcd4eae85d7c763a2f608c2e14765c26a0e44c6853b6e5",
+          "large_for_ordinary_github": false,
+          "persisted": true
+        }
+      ],
+      "notes": [
+        "R16 full 100M stage1/stage2 checkpoints were not present in the imported R15/R16 zip used for this run; their metrics and reports are preserved.",
+        "R18 200M/300M short-probe weights were intentionally not persisted as full checkpoints because the run is exploratory and full weights are large; seeds/configs/scripts/metrics are persisted.",
+        "Large checkpoints should use Git LFS or Release/object storage rather than ordinary GitHub contents commits."
+      ]
+    },
+    "CHECKPOINTS_R22_R30.json": {
+      "date": "2026-09-22",
+      "checkpoints": [
+        {
+          "name": "r26_hard_state.pt",
+          "size_bytes": 18138,
+          "sha256": "45ad9c7d480a7ed1adf8db6ffe54e3435ec44b87139f5fac26c7544fc8ba0c3a",
+          "storage": "ChatGPT Library archive FlyGraph_R25_R26_Cognition_2026-09-21.zip",
+          "committed_to_git": false
+        },
+        {
+          "name": "r25_factorized_seed2521.pt",
+          "size_bytes": 18265,
+          "sha256": "6d6f5a11f7cba33bc9f9fb0f5512491e5abfab7ed269284d75a175bd26df00d4",
+          "storage": "ChatGPT Library archive FlyGraph_R25_R26_Cognition_2026-09-21.zip",
+          "committed_to_git": false
+        },
+        {
+          "name": "r22_late_query_gate.pt",
+          "size_bytes": 105893,
+          "sha256": "da17e712f28445e9334c3b514bc243923abc238e5082206ed798b11b0151b116",
+          "storage": "ChatGPT Library archive FlyGraph_R21_R22_Research_2026-09-21.zip",
+          "committed_to_git": false
+        }
+      ],
+      "r29_note": "100M/200M/300M associative weight tensors were not persisted; metrics are persisted and experiments are deterministically reconstructible from manifest/seed."
+    }
+  }
+}
