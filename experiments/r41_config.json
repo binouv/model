@@ -1,0 +1,15 @@
+{
+  "experiment": "FlyGraph R41 horizon-conditioned pairwise disagreement verifier",
+  "noise": 0.3,
+  "beta": 0.1,
+  "beam_width": 32,
+  "expand": 8,
+  "train_seeds": [4111,4112,4113],
+  "calibration_seeds": [4121,4122],
+  "held_seeds": [4141,4142,4143],
+  "train_counts": {"id8":10,"ood32":7,"ood64":5,"ood128":3},
+  "held_counts": {"id8":8,"ood32":6,"ood64":6,"ood128":4},
+  "calibration_n_per_seed": 2,
+  "threshold_grid": [0.5,0.6,0.7,0.8,0.9],
+  "success_criterion": "8-hop answer delta vs greedy >= -2pp; 64-hop and 128-hop answer strictly exceed R35 fixed32; 128-hop main strictly exceeds no-horizon ablation."
+}
