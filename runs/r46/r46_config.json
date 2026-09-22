@@ -1,0 +1,8 @@
+{
+  "experiment":"FlyGraph R46 distributional address-belief propagation","noise":0.3,"beam":32,"expand":8,"topk_address_belief":4,
+  "merge":"same reasoning state + weighted-Jaccard belief overlap >= calibrated threshold","posterior_group_mass":"logsumexp",
+  "calibration_seeds":[4621,4622],"held_seeds":[4641,4642,4643],"calibration_n_per_seed":1,
+  "threshold_grid":[0.35,0.55,0.75],"cap_grid":[2,4],"selected_threshold":0.35,"selected_cap":2,
+  "held_counts":{"id8":8,"ood32":6,"ood64":6,"ood128":4},
+  "success_criterion":"8-hop answer delta vs R35 >= -2pp; 64-hop and 128-hop answer strictly exceed R35; 128-hop main strictly exceed R45 single-address ablation."
+}
