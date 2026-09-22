@@ -1,0 +1,16 @@
+{
+  "experiment": "FlyGraph R44 nonlinear permutation-invariant set-context scorer",
+  "noise": 0.3,
+  "beam": 32,
+  "expand": 8,
+  "max_hard_negatives_per_set": 31,
+  "model": {"type":"HistGradientBoostingClassifier","learning_rate":0.05,"max_iter":90,"max_leaf_nodes":15,"max_depth":4,"min_samples_leaf":20,"l2_regularization":2.0},
+  "train_seeds": [4411,4412,4413],
+  "calibration_seeds": [4421,4422],
+  "held_seeds": [4441,4442,4443],
+  "train_counts": {"ood32":5,"ood64":4,"ood128":2},
+  "held_counts": {"id8":8,"ood32":6,"ood64":6,"ood128":4},
+  "calibration_n_per_seed": 2,
+  "lambda_grid": [0.0,0.1,0.25,0.5,1.0],
+  "success_criterion": "8-hop delta vs greedy >= -2pp; 64-hop and 128-hop answer strictly exceed R35 fixed32; 128-hop main strictly exceeds nonlinear candidate-independent ablation."
+}
