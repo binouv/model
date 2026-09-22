@@ -1,0 +1,16 @@
+{
+  "experiment": "FlyGraph R45 posterior address-state propagation",
+  "noise": 0.3,
+  "beam": 32,
+  "expand": 8,
+  "signature": "(reasoning_state, inferred next-address subject id)",
+  "posterior_group_mass": "logsumexp trajectory weights",
+  "resampling": "deterministic posterior quota, equal-weight particles preserving group mass",
+  "calibration_seeds": [4521,4522],
+  "held_seeds": [4541,4542,4543],
+  "calibration_n_per_seed": 2,
+  "cap_grid": [1,2,4,8],
+  "selected_cap": 2,
+  "held_counts": {"id8":8,"ood32":6,"ood64":6,"ood128":4},
+  "success_criterion": "8-hop answer delta vs R35 >= -2pp; 64-hop and 128-hop answer strictly exceed R35 fixed32; 128-hop main strictly exceeds same grouping/resampling with max-path group score."
+}
