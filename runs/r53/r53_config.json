@@ -1,0 +1,40 @@
+{
+  "experiment": "FlyGraph R53 syndrome-aware discrete multi-hypothesis ECC decoder",
+  "noise": 0.3,
+  "physical_bits": 96,
+  "logical_bits": 9,
+  "codewords": 512,
+  "frozen_address_model": "R52 optimized [96,9] ECC, min distance 41",
+  "frozen_reasoning_stack": "R35 verifier, beam width 32, edge expand 8",
+  "main": {
+    "decoder": "exact BSC codeword posterior over the frozen R52 ECC codebook",
+    "top_k": 4,
+    "decoder_prior_weight_beta": 0.1,
+    "candidate_policy": "for each noisy pointer retain 4 discrete codeword hypotheses; generate edge candidates from each clean codeword; score concrete trajectories with frozen R35 features computed on the original noisy pointer plus decoder branch prior; never average addresses or reasoning states"
+  },
+  "ablation": "same ECC, same frozen R35 stack and decoder likelihood, but hard nearest-code decode (top-1) at every step",
+  "held_seeds": [
+    5351,
+    5352,
+    5353
+  ],
+  "held_counts_per_seed": {
+    "id8": 6,
+    "ood32": 4,
+    "ood64": 4,
+    "ood128": 2
+  },
+  "hyperparameter_provenance": "top_k=4 and beta=0.10 were fixed implementation constants before final held-out seeds; a later exploratory calibration grid timed out and was discarded, with no result used for selection",
+  "excluded_incomplete": [
+    {
+      "attempt": "exploratory calibration grid",
+      "reason": "timed out; produced no completed calibration result and did not select hyperparameters"
+    },
+    {
+      "attempt": "monolithic held-out launcher including 128-hop",
+      "reason": "timed out after id8/32/64 files; its partial 128 work was discarded. 128-hop was rerun as six standalone completed episodes."
+    }
+  ],
+  "success_criterion": "8-hop delta vs paired R52 ECC R35 >= -2pp; R53 strictly improves answer accuracy at both 64 and 128 hops over paired R52 ECC R35 and over hard-decode ablation.",
+  "semantic_validation": "R52 v2 latest-write/target consistency check on every completed held episode"
+}
