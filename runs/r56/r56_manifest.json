@@ -1,0 +1,79 @@
+{
+  "experiment": "R56",
+  "status": "completed",
+  "verdict": "REFUTED",
+  "files": {
+    "RESEARCH_REPORT_R56_RU.md": {
+      "size_bytes": 4837,
+      "sha256": "21eda5cc58a96e7cb42b6d6c07a33231d8ac6e12658f49c77115e9c467a33b09"
+    },
+    "held_id8.json": {
+      "size_bytes": 26242,
+      "sha256": "0f71bada7e7c61e24dc02d65f730d1e72f8ebbbc880d4ebdce183031402ca9a1"
+    },
+    "held_ood128.json": {
+      "size_bytes": 19448,
+      "sha256": "a73631ac636827d315769996e8e0bb44cf7a4d00185637a2c32eeaa87a6bce29"
+    },
+    "held_ood32.json": {
+      "size_bytes": 23266,
+      "sha256": "d57270bc8e2f137f0b4dbce688170da180778f0cdd99bd8558fd06a4eb2fce67"
+    },
+    "held_ood64.json": {
+      "size_bytes": 23561,
+      "sha256": "f31ee736d01efd21b3abab8902221de992c72eb4f7700825c708fc3f2ba999b3"
+    },
+    "r35_base.py": {
+      "size_bytes": 14974,
+      "sha256": "838c28a0c8c7c1c72be0a07e04da4a3874115af8fe9dda444dae2815998f39d1"
+    },
+    "r35_verifier_weights.npz": {
+      "size_bytes": 3778,
+      "sha256": "c618260f21a3499d2443ec69a5cc227d359fcedfd16da771b62afb0ec2893f52"
+    },
+    "r37_base.py": {
+      "size_bytes": 22399,
+      "sha256": "4cca5e2519ce9d29c8ad3e2f25c210e8bb33a994d1fc40eef5c2fec87ecf8202"
+    },
+    "r52_base.py": {
+      "size_bytes": 18194,
+      "sha256": "e926a46d78da3483957f895c0b432f6e90e1af4da7521dd8e9a1edb5e2bad968"
+    },
+    "r52_ecc_model.npz": {
+      "size_bytes": 12973,
+      "sha256": "a437947093a0318348c4e7d3138d90927cd5aa8e291067a913a9a09e24c96672"
+    },
+    "r53_syndrome_multihyp_decoder.py": {
+      "size_bytes": 8937,
+      "sha256": "c468f61a5deb16c5c3fc71f17b743309229c4236b202216dba364f70330afc78"
+    },
+    "r54_adaptive_ecc_branching.py": {
+      "size_bytes": 10462,
+      "sha256": "e42d9c0e486cb0fcc028fa8df15a809b03fad28da4eb98fc869ddef78fed9e82"
+    },
+    "r56_address_diversity_allocation.py": {
+      "size_bytes": 12107,
+      "sha256": "f9ec83c782e09bd6977f6b03b1d1c220f8e83204375ddadbd068db15ac3d2377"
+    },
+    "r56_calibration.json": {
+      "size_bytes": 56950,
+      "sha256": "18d3d647148d982ea3a5c0d5853c64f6fc03e407489f27b8139995c99f309d98"
+    },
+    "r56_config.json": {
+      "size_bytes": 1305,
+      "sha256": "bf2f5e99d215818687c95c5d7cceaac4fc754b72cffa1cdbb115e2441dd59b00"
+    },
+    "r56_metrics.csv": {
+      "size_bytes": 1989,
+      "sha256": "73e31e71d5433d3829972545be00cdf16865e520ecef784183ba75f1d0b79365"
+    },
+    "r56_metrics.json": {
+      "size_bytes": 173857,
+      "sha256": "948f638797fcc314bf6c8e79a4f2aacad8c3a089198e3b134a14bc35c3e1f2a1"
+    },
+    "test_r56_semantics.py": {
+      "size_bytes": 806,
+      "sha256": "1871d35fa3f80edd739d89dfe64654971796231c9ef14d65c3b90e2ece2a7227"
+    }
+  }
+}
