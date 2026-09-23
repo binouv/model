@@ -1,0 +1,35 @@
+{
+  "experiment": "FlyGraph R49 discriminative protected joint filter",
+  "status": "completed_early_refutation",
+  "noise": 0.3,
+  "transition_topk": 8,
+  "calibration_seeds": [
+    4921,
+    4922
+  ],
+  "held_seeds": [
+    4941,
+    4942,
+    4943
+  ],
+  "gamma_grid": [
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "selected_gamma": 2.0,
+  "completed_held_counts": {
+    "id8": 24,
+    "ood32": 18,
+    "ood64": 18
+  },
+  "planned_but_excluded": {
+    "ood128": {
+      "reason": "parallel batch timed out before producing any completed episode JSON; excluded from all metrics",
+      "completed_episode_files": 0
+    }
+  },
+  "success_criterion": "8-hop answer delta vs R35 >= -2pp; 64-hop and 128-hop answer strictly exceed R35 fixed32; verifier-filter strictly exceeds local-likelihood ablation at long horizon.",
+  "early_stop_logic": "The conjunctive criterion is already falsified by completed OOD64: R49 < R35 and R49 < the single allowed ablation. OOD128 is therefore not required to determine the hypothesis verdict and incomplete attempts are not counted."
+}
