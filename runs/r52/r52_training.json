@@ -1,0 +1,92 @@
+{
+  "trials": [
+    {
+      "min_distance": 41,
+      "bottom8_mean": 41.0,
+      "bottom32_mean": 41.3125,
+      "bottom96_mean": 42.520833333333336,
+      "p05_distance": 42.0,
+      "median_distance": 48.0,
+      "mean_distance": 48.093933463796475,
+      "real_matrix_rank_diagnostic": 9,
+      "gf2_rank": 9,
+      "seed": 5211,
+      "accepted_flips": 68,
+      "objective": [
+        41,
+        41.0,
+        41.3125,
+        42.520833333333336
+      ]
+    },
+    {
+      "min_distance": 41,
+      "bottom8_mean": 41.75,
+      "bottom32_mean": 41.9375,
+      "bottom96_mean": 42.854166666666664,
+      "p05_distance": 42.0,
+      "median_distance": 47.0,
+      "mean_distance": 48.093933463796475,
+      "real_matrix_rank_diagnostic": 9,
+      "gf2_rank": 9,
+      "seed": 5212,
+      "accepted_flips": 88,
+      "objective": [
+        41,
+        41.75,
+        41.9375,
+        42.854166666666664
+      ]
+    },
+    {
+      "min_distance": 41,
+      "bottom8_mean": 41.0,
+      "bottom32_mean": 41.5,
+      "bottom96_mean": 42.3125,
+      "p05_distance": 42.0,
+      "median_distance": 48.0,
+      "mean_distance": 48.093933463796475,
+      "real_matrix_rank_diagnostic": 9,
+      "gf2_rank": 9,
+      "seed": 5213,
+      "accepted_flips": 47,
+      "objective": [
+        41,
+        41.0,
+        41.5,
+        42.3125
+      ]
+    }
+  ],
+  "selected": {
+    "min_distance": 41,
+    "bottom8_mean": 41.75,
+    "bottom32_mean": 41.9375,
+    "bottom96_mean": 42.854166666666664,
+    "p05_distance": 42.0,
+    "median_distance": 47.0,
+    "mean_distance": 48.093933463796475,
+    "real_matrix_rank_diagnostic": 9,
+    "gf2_rank": 9,
+    "seed": 5212,
+    "accepted_flips": 88,
+    "objective": [
+      41,
+      41.75,
+      41.9375,
+      42.854166666666664
+    ]
+  },
+  "ablation_random": {
+    "min_distance": 35,
+    "bottom8_mean": 36.0,
+    "bottom32_mean": 38.25,
+    "bottom96_mean": 40.96875,
+    "p05_distance": 40.0,
+    "median_distance": 48.0,
+    "mean_distance": 48.093933463796475,
+    "real_matrix_rank_diagnostic": 9,
+    "gf2_rank": 9,
+    "seed": 5299
+  }
+}
