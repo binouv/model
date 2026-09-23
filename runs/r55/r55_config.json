@@ -1,0 +1,53 @@
+{
+  "experiment": "FlyGraph R55 uncertainty-triggered protected branch reservation",
+  "priority": "cognition/reasoning/memory; audio/video/body unchanged",
+  "noise": 0.3,
+  "beam_width": 32,
+  "edge_expand": 8,
+  "frozen_address_model": "R52 optimized binary linear [96,9] ECC, 512 codewords, min distance 41",
+  "frozen_reasoning_stack": "R35 verifier",
+  "frozen_uncertainty_policy": {
+    "source": "R54 calibration",
+    "margin_threshold": 1.694594383239746,
+    "top_k": 4,
+    "decoder_prior_beta": 0.1
+  },
+  "main": {
+    "policy": "On uncertain hypothesis-steps preserve exact R54 raw+ECC candidate union, mark ECC-only edges as protected, carry protection for a fixed 2 pruning decisions, reserve a calibrated quota of the global 32 beam slots for the highest-scoring live protected descendants, then fill remaining slots by the ordinary global R35 score.",
+    "grace_pruning_decisions": 2,
+    "selected_reserved_slots": 2
+  },
+  "calibration": {
+    "seeds": [
+      5521,
+      5522
+    ],
+    "conditions": [
+      "id8",
+      "ood64",
+      "ood128"
+    ],
+    "n_per_condition_seed": 1,
+    "quota_grid": [
+      2,
+      4,
+      8
+    ],
+    "selection_rule": "maximize 2*answer128 + answer64 + 0.5*finalPath128 + 0.25*finalPath64 + answer8; ties prefer smaller quota"
+  },
+  "held_seeds": [
+    5551,
+    5552,
+    5553
+  ],
+  "held_counts_per_seed": {
+    "id8": 6,
+    "ood32": 4,
+    "ood64": 4,
+    "ood128": 2
+  },
+  "ablation": "Identical R54 uncertainty trigger, raw+ECC candidate union, top_k=4 and beta=.10, but ordinary global top-32 pruning with no reserved slots.",
+  "reference": "R52 ECC + frozen R35 baseline rerun on the identical held-out episodes.",
+  "success_criterion": "R55 vs R54 ablation: 8-hop delta >= -2pp and strict answer improvement at both 64 and 128 hops.",
+  "integrity_note": "An exploratory pre-final implementation returned reserved candidates before globally sorting the retained beam, which incorrectly made a protected candidate the output. Those exploratory files were deleted. Final calibration and every held-out condition were rerun after fixing this invariant. A separate parallel wrapper also timed out; only the subsequently completed per-seed JSON files listed in metrics are aggregated."
+}
