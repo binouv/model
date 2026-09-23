@@ -1,0 +1,43 @@
+{
+  "experiment": "FlyGraph R56 protected-address diversity allocation",
+  "status": "completed",
+  "priority": "cognition_memory_reasoning",
+  "noise": 0.3,
+  "beam_width": 32,
+  "expand": 8,
+  "adaptive_ecc_topk": 4,
+  "beta": 0.1,
+  "trigger_threshold": 1.694594383239746,
+  "calibration_seeds": [
+    5621,
+    5622
+  ],
+  "held_seeds": [
+    5651,
+    5652,
+    5653
+  ],
+  "calibration_conditions": [
+    "id8",
+    "ood64"
+  ],
+  "calibration_n_per_condition_seed": 1,
+  "cap_grid": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "selected_per_address_cap": 8,
+  "held_counts_per_seed": {
+    "id8": 6,
+    "ood32": 4,
+    "ood64": 4,
+    "ood128": 2
+  },
+  "main_hypothesis": "Group R54 candidates by the hard-decoded protected address of the child pointer and bound per-address beam occupancy before global backfill; this should reduce crowding and improve long-horizon trajectory survival/ranking without soft state mixing.",
+  "single_ablation": "Identical R54 adaptive candidate generation and frozen scorer, but ordinary global top-32 pruning with no protected-address diversity allocation.",
+  "decision_rule": "Confirm only if 8-hop answer regression vs ablation is no worse than 2pp and answer improves strictly at 64 or 128 hops.",
+  "incomplete_runs_in_metrics": 0,
+  "semantic_mismatch_total": 0
+}
