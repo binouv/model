@@ -1,0 +1,1000 @@
+{
+  "experiment": "FlyGraph R53 syndrome-aware discrete multi-hypothesis ECC decoder",
+  "status": "completed",
+  "hypothesis": "Keeping several discrete ECC codeword hypotheses for each noisy protected pointer, rather than forcing hard nearest-code cleanup, will preserve the true address under p=.30 and improve long-horizon 64/128-hop reasoning when the frozen R35 verifier selects among the resulting concrete trajectories.",
+  "protocol": {
+    "experiment": "FlyGraph R53 syndrome-aware discrete multi-hypothesis ECC decoder",
+    "noise": 0.3,
+    "physical_bits": 96,
+    "logical_bits": 9,
+    "codewords": 512,
+    "frozen_address_model": "R52 optimized [96,9] ECC, min distance 41",
+    "frozen_reasoning_stack": "R35 verifier, beam width 32, edge expand 8",
+    "main": {
+      "decoder": "exact BSC codeword posterior over the frozen R52 ECC codebook",
+      "top_k": 4,
+      "decoder_prior_weight_beta": 0.1,
+      "candidate_policy": "for each noisy pointer retain 4 discrete codeword hypotheses; generate edge candidates from each clean codeword; score concrete trajectories with frozen R35 features computed on the original noisy pointer plus decoder branch prior; never average addresses or reasoning states"
+    },
+    "ablation": "same ECC, same frozen R35 stack and decoder likelihood, but hard nearest-code decode (top-1) at every step",
+    "held_seeds": [
+      5351,
+      5352,
+      5353
+    ],
+    "held_counts_per_seed": {
+      "id8": 6,
+      "ood32": 4,
+      "ood64": 4,
+      "ood128": 2
+    },
+    "hyperparameter_provenance": "top_k=4 and beta=0.10 were fixed implementation constants before final held-out seeds; a later exploratory calibration grid timed out and was discarded, with no result used for selection",
+    "excluded_incomplete": [
+      {
+        "attempt": "exploratory calibration grid",
+        "reason": "timed out; produced no completed calibration result and did not select hyperparameters"
+      },
+      {
+        "attempt": "monolithic held-out launcher including 128-hop",
+        "reason": "timed out after id8/32/64 files; its partial 128 work was discarded. 128-hop was rerun as six standalone completed episodes."
+      }
+    ],
+    "success_criterion": "8-hop delta vs paired R52 ECC R35 >= -2pp; R53 strictly improves answer accuracy at both 64 and 128 hops over paired R52 ECC R35 and over hard-decode ablation.",
+    "semantic_validation": "R52 v2 latest-write/target consistency check on every completed held episode"
+  },
+  "held_results_completed_only": {
+    "id8": {
+      "r52_ecc_r35": {
+        "n_episodes": 18,
+        "answer": {
+          "mean": 0.9444444444444444,
+          "std": 0.2290614236454256,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "path_survival": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "selected_true_path": {
+          "mean": 0.9444444444444444,
+          "std": 0.2290614236454256,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "candidate_evals": {
+          "mean": 1608.0,
+          "std": 0.0,
+          "values": [
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0
+          ]
+        },
+        "seeds": [
+          {
+            "seed": 5351,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 5352,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 5353,
+            "n": 6,
+            "answer": {
+              "mean": 0.8333333333333334,
+              "std": 0.372677996249965
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 0.8333333333333334,
+              "std": 0.372677996249965
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            }
+          }
+        ]
+      },
+      "r53_topk_decoder": {
+        "n_episodes": 18,
+        "answer": {
+          "mean": 0.9444444444444444,
+          "std": 0.2290614236454256,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "path_survival": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "selected_true_path": {
+          "mean": 0.9444444444444444,
+          "std": 0.2290614236454256,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "candidate_evals": {
+          "mean": 6677.333333333333,
+          "std": 51.15553624866901,
+          "values": [
+            6656.0,
+            6784.0,
+            6592.0,
+            6592.0,
+            6688.0,
+            6656.0,
+            6688.0,
+            6752.0,
+            6688.0,
+            6688.0,
+            6624.0,
+            6656.0,
+            6624.0,
+            6752.0,
+            6688.0,
+            6720.0,
+            6656.0,
+            6688.0
+          ]
+        },
+        "decoder_true_in_topk": {
+          "mean": 0.9166666666666666,
+          "std": 0.11023963796102461,
+          "values": [
+            1.0,
+            1.0,
+            0.75,
+            1.0,
+            0.75,
+            0.875,
+            1.0,
+            0.875,
+            1.0,
+            0.875,
+            1.0,
+            1.0,
+            0.875,
+            0.625,
+            0.875,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "decoder_final_true_in_topk": {
+          "mean": 0.8888888888888888,
+          "std": 0.3142696805273545,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "seeds": [
+          {
+            "seed": 5351,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 6661.333333333333,
+              "std": 65.10162995057975
+            },
+            "decoder_true_in_topk": {
+              "mean": 0.8958333333333334,
+              "std": 0.11219093348196883
+            },
+            "decoder_final_true_in_topk": {
+              "mean": 0.8333333333333334,
+              "std": 0.37267799624996495
+            }
+          },
+          {
+            "seed": 5352,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 6682.666666666667,
+              "std": 38.82725274282944
+            },
+            "decoder_true_in_topk": {
+              "mean": 0.9583333333333334,
+              "std": 0.05892556509887896
+            },
+            "decoder_final_true_in_topk": {
+              "mean": 1.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 5353,
+            "n": 6,
+            "answer": {
+              "mean": 0.8333333333333334,
+              "std": 0.372677996249965
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 0.8333333333333334,
+              "std": 0.372677996249965
+            },
+            "candidate_evals": {
+              "mean": 6688.0,
+              "std": 41.31182235954578
+            },
+            "decoder_true_in_topk": {
+              "mean": 0.8958333333333334,
+              "std": 0.13339842161318433
+            },
+            "decoder_final_true_in_topk": {
+              "mean": 0.8333333333333334,
+              "std": 0.372677996249965
+            }
+          }
+        ]
+      },
+      "ablation_hard_decode": {
+        "n_episodes": 18,
+        "answer": {
+          "mean": 0.7222222222222222,
+          "std": 0.44790320823880836,
+          "values": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "path_survival": {
+          "mean": 0.8194444444444444,
+          "std": 0.3039731753922123,
+          "values": [
+            1.0,
+            1.0,
+            0.125,
+            0.25,
+            0.625,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.375,
+            1.0,
+            0.375,
+            1.0,
+            1.0
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 0.7222222222222222,
+          "std": 0.44790320823880836,
+          "values": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "selected_true_path": {
+          "mean": 0.6666666666666666,
+          "std": 0.4714045207910317,
+          "values": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "candidate_evals": {
+          "mean": 1608.0,
+          "std": 0.0,
+          "values": [
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0
+          ]
+        },
+        "decoder_true_in_topk": {
+          "mean": 0.8125,
+          "std": 0.15728821740147395,
+          "values": [
+            1.0,
+            1.0,
+            0.625,
+            0.875,
+            0.625,
+            0.625,
+            1.0,
+            0.75,
+            0.875,
+            0.875,
+            0.875,
+            1.0,
+            0.75,
+            0.5,
+            0.625,
+            0.75,
+            1.0,
+            0.875
+          ]
+        },
+        "decoder_final_true_in_topk": {
+          "mean": 0.7777777777777778,
+          "std": 0.41573970964154905,
+          "values": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "seeds": [
+          {
+            "seed": 5351,
+            "n": 6,
+            "answer": {
+              "mean": 0.5,
+              "std": 0.5
+            },
+            "path_survival": {
+              "mean": 0.6666666666666666,
+              "std": 0.3656235161413384
+            },
+            "final_true_path_in_beam": {
+              "mean": 0.5,
+              "std": 0.5
+            },
+            "selected_true_path": {
+              "mean": 0.5,
+              "std": 0.5
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            },
+            "decoder_true_in_topk": {
+              "mean": 0.7916666666666666,
+              "std": 0.1717960677340692
+            },
+            "decoder_final_true_in_topk": {
+              "mean": 0.5,
+              "std": 0.5
+            }
+          },
+          {
+            "seed": 5352,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            },
+            "decoder_true_in_topk": {
+              "mean": 0.8958333333333334,
+              "std": 0.0858980338670346
+            },
+            "decoder_final_true_in_topk": {
+              "mean": 1.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 5353,
+            "n": 6,
+            "answer": {
+              "mean": 0.6666666666666666,
+              "std": 0.4714045207910317
+            },
+            "path_survival": {
+              "mean": 0.7916666666666666,
+              "std": 0.29462782549439476
+            },
+            "final_true_path_in_beam": {
+              "mean": 0.6666666666666666,
+              "std": 0.4714045207910317
+            },
+            "selected_true_path": {
+              "mean": 0.5,
+              "std": 0.5
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            },
+            "decoder_true_in_topk": {
+              "mean": 0.75,
+              "std": 0.1613743060919757
+            },
+            "decoder_final_true_in_topk": {
+              "mean": 0.8333333333333334,
+              "std": 0.372677996249965
+            }
+          }
+        ]
+      }
+    },
+    "ood32": {
+      "r52_ecc_r35": {
+        "n_episodes": 12,
+        "answer": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "path_survival": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "selected_true_path": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "candidate_evals": {
+          "mean": 7752.0,
+          "std": 0.0,
+          "values": [
+            7752.0,
+            7752.0,
+            7752.0,
+            7752.0,
+            7752.0,
+            7752.0,
+            7752.0,
+            7752.0,
+            7752.0,
+            7752.0,
+            7752.0,
+            7752.0
+          ]
+        },
+        "seeds": [
+          {
+            "seed": 5351,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 7752.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 5352,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 7752.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 5353,
+            "n": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 7752.0,
+              "std": 0.0
+            }
+          }
+        ]
+      },
+      "r53_topk_decoder": {
+        "n_episodes": 12,
+        "answer": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "path_survival": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
