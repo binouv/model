@@ -1,0 +1,82 @@
+{
+  "experiment": "R54",
+  "status": "completed",
+  "files": {
+    "RESEARCH_REPORT_R54_RU.md": {
+      "size_bytes": 4146,
+      "sha256": "aad06d7d09fcefe7501c4d0b53c566dcc76eb6e1e79c6a43318c9c5f7724e8a4"
+    },
+    "held_id8.json": {
+      "size_bytes": 16033,
+      "sha256": "835ba02fb68e7a025940dc32b2eb8794aea13372942b87432e903077a1428127"
+    },
+    "held_ood128_seed5451.json": {
+      "size_bytes": 5847,
+      "sha256": "ad5682cbe9a4b9ad528773246045f2305c8c73308bee1875913a48f79975674e"
+    },
+    "held_ood128_seed5452.json": {
+      "size_bytes": 5827,
+      "sha256": "95c804fc178ab8479666f0ae3f544cdd83ac0635101f0b79e628b17de12ee875"
+    },
+    "held_ood128_seed5453.json": {
+      "size_bytes": 5830,
+      "sha256": "860e3ad2c6635812b5e611c948ddd96b0b2e5e1d70cf19a6334b3110b96a3d9e"
+    },
+    "held_ood32.json": {
+      "size_bytes": 14274,
+      "sha256": "26d591349a734216af346ee7e6fbffa4c78a05693f9c09fed15df314ac455fa4"
+    },
+    "held_ood64.json": {
+      "size_bytes": 14711,
+      "sha256": "88e001de4c59966a0f76835c270b4ebc4ce7773b5fbb0b43b2c999e2eedd0927"
+    },
+    "r35_base.py": {
+      "size_bytes": 14974,
+      "sha256": "838c28a0c8c7c1c72be0a07e04da4a3874115af8fe9dda444dae2815998f39d1"
+    },
+    "r35_verifier_weights.npz": {
+      "size_bytes": 3778,
+      "sha256": "c618260f21a3499d2443ec69a5cc227d359fcedfd16da771b62afb0ec2893f52"
+    },
+    "r37_base.py": {
+      "size_bytes": 22399,
+      "sha256": "4cca5e2519ce9d29c8ad3e2f25c210e8bb33a994d1fc40eef5c2fec87ecf8202"
+    },
+    "r52_base.py": {
+      "size_bytes": 18194,
+      "sha256": "e926a46d78da3483957f895c0b432f6e90e1af4da7521dd8e9a1edb5e2bad968"
+    },
+    "r52_ecc_model.npz": {
+      "size_bytes": 12973,
+      "sha256": "a437947093a0318348c4e7d3138d90927cd5aa8e291067a913a9a09e24c96672"
+    },
+    "r53_syndrome_multihyp_decoder.py": {
+      "size_bytes": 8937,
+      "sha256": "c468f61a5deb16c5c3fc71f17b743309229c4236b202216dba364f70330afc78"
+    },
+    "r54_adaptive_ecc_branching.py": {
+      "size_bytes": 10462,
+      "sha256": "e42d9c0e486cb0fcc028fa8df15a809b03fad28da4eb98fc869ddef78fed9e82"
+    },
+    "r54_calibration.json": {
+      "size_bytes": 3049,
+      "sha256": "a9986e729b74b6aae52e56468e926de1a5d94752958ee575a2eb84452826c59a"
+    },
+    "r54_config.json": {
+      "size_bytes": 1798,
+      "sha256": "1ffa03e0167d3f59b73fc67f027fe3d3aec4f7173494e789630643eef016f541"
+    },
+    "r54_metrics.csv": {
+      "size_bytes": 1721,
+      "sha256": "feb7ed169bb0a65b65876e28b3375117aa71292d1336cfb3e7cdd7ee2681b86a"
+    },
+    "r54_metrics.json": {
+      "size_bytes": 71063,
+      "sha256": "f80f246c94989241744e3e18a40e6c793aaa371a54a5f4818679df37049c94ab"
+    },
+    "test_r54_semantics.py": {
+      "size_bytes": 953,
+      "sha256": "2f5d9cacc669d2d8b9ff0e75ed2d5ac09c843294885cabdee2ff9978e5ccdb0b"
+    }
+  }
+}
