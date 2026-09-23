@@ -1,0 +1,1000 @@
+{
+  "experiment": "FlyGraph R49 discriminative protected joint filter",
+  "status": "completed",
+  "hypothesis": "Using the frozen R35 discriminative consistency verifier as transition evidence inside an explicit protected address\u00d7reasoning-state belief filter will correct the generative-likelihood mismatch and outperform both R35 beam search and the same joint filter driven only by local retrieval likelihood.",
+  "one_primary_hypothesis": true,
+  "one_confirming_ablation": "Identical joint state filter and top-k transition support, but transition weights use local retrieval likelihood instead of the R35 verifier score.",
+  "calibration": {
+    "seeds": [
+      4921,
+      4922
+    ],
+    "n_per_seed": 1,
+    "rows": [
+      {
+        "gamma": 0.5,
+        "score": 2.646484375,
+        "conditions": {
+          "id8": {
+            "n_episodes": 2,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "address_top1_acc": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "true_address_mass": {
+              "mean": 0.7249597779046197,
+              "std": 0.004928433373633689,
+              "values": [
+                0.720031344530986,
+                0.7298882112782534
+              ]
+            },
+            "address_in_top32": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_address_top1": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_address_mass": {
+              "mean": 0.6879997136059943,
+              "std": 0.031640599602458075,
+              "values": [
+                0.7196403132084525,
+                0.6563591140035363
+              ]
+            },
+            "joint_entropy": {
+              "mean": 1.960335229423214,
+              "std": 0.2959332547426383,
+              "values": [
+                2.2562684841658522,
+                1.6644019746805756
+              ]
+            },
+            "mean_address_support": {
+              "mean": 14.4375,
+              "std": 0.0625,
+              "values": [
+                14.5,
+                14.375
+              ]
+            },
+            "seeds": [
+              {
+                "seed": 4921,
+                "n": 1,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.720031344530986,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.7196403132084525,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 2.2562684841658522,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 14.5,
+                  "std": 0.0
+                }
+              },
+              {
+                "seed": 4922,
+                "n": 1,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.7298882112782534,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.6563591140035363,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 1.6644019746805756,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 14.375,
+                  "std": 0.0
+                }
+              }
+            ]
+          },
+          "ood64": {
+            "n_episodes": 2,
+            "answer": {
+              "mean": 0.5,
+              "std": 0.5,
+              "values": [
+                0.0,
+                1.0
+              ]
+            },
+            "address_top1_acc": {
+              "mean": 0.59375,
+              "std": 0.09375,
+              "values": [
+                0.5,
+                0.6875
+              ]
+            },
+            "true_address_mass": {
+              "mean": 0.21023582324474163,
+              "std": 0.027707260958493102,
+              "values": [
+                0.18252856228624853,
+                0.23794308420323473
+              ]
+            },
+            "address_in_top32": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_address_top1": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_address_mass": {
+              "mean": 0.3215821138416731,
+              "std": 0.009817067717588335,
+              "values": [
+                0.33139918155926146,
+                0.3117650461240848
+              ]
+            },
+            "joint_entropy": {
+              "mean": 5.466343688209739,
+              "std": 0.06153693117320014,
+              "values": [
+                5.527880619382939,
+                5.404806757036539
+              ]
+            },
+            "mean_address_support": {
+              "mean": 53.4921875,
+              "std": 0.3984375,
+              "values": [
+                53.890625,
+                53.09375
+              ]
+            },
+            "seeds": [
+              {
+                "seed": 4921,
+                "n": 1,
+                "answer": {
+                  "mean": 0.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 0.5,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.18252856228624853,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.33139918155926146,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 5.527880619382939,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 53.890625,
+                  "std": 0.0
+                }
+              },
+              {
+                "seed": 4922,
+                "n": 1,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 0.6875,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.23794308420323473,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.3117650461240848,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 5.404806757036539,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 53.09375,
+                  "std": 0.0
+                }
+              }
+            ]
+          },
+          "ood128": {
+            "n_episodes": 2,
+            "answer": {
+              "mean": 0.0,
+              "std": 0.0,
+              "values": [
+                0.0,
+                0.0
+              ]
+            },
+            "address_top1_acc": {
+              "mean": 0.29296875,
+              "std": 0.00390625,
+              "values": [
+                0.2890625,
+                0.296875
+              ]
+            },
+            "true_address_mass": {
+              "mean": 0.09136730999527297,
+              "std": 0.006518618777493032,
+              "values": [
+                0.097885928772766,
+                0.08484869121777994
+              ]
+            },
+            "address_in_top32": {
+              "mean": 0.9921875,
+              "std": 0.0078125,
+              "values": [
+                0.984375,
+                1.0
+              ]
+            },
+            "final_true_address_top1": {
+              "mean": 0.5,
+              "std": 0.5,
+              "values": [
+                1.0,
+                0.0
+              ]
+            },
+            "final_true_address_mass": {
+              "mean": 0.10579078411437319,
+              "std": 0.043030068982050876,
+              "values": [
+                0.14882085309642407,
+                0.06276071513232231
+              ]
+            },
+            "joint_entropy": {
+              "mean": 6.193493323246626,
+              "std": 0.08181725441686893,
+              "values": [
+                6.111676068829757,
+                6.275310577663495
+              ]
+            },
+            "mean_address_support": {
+              "mean": 86.23828125,
+              "std": 0.23828125,
+              "values": [
+                86.0,
+                86.4765625
+              ]
+            },
+            "seeds": [
+              {
+                "seed": 4921,
+                "n": 1,
+                "answer": {
+                  "mean": 0.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 0.2890625,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.097885928772766,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 0.984375,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.14882085309642407,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 6.111676068829757,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 86.0,
+                  "std": 0.0
+                }
+              },
+              {
+                "seed": 4922,
+                "n": 1,
+                "answer": {
+                  "mean": 0.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 0.296875,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.08484869121777994,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 0.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.06276071513232231,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 6.275310577663495,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 86.4765625,
+                  "std": 0.0
+                }
+              }
+            ]
+          }
+        },
+        "elapsed_sec": 29.748180866241455
+      },
+      {
+        "gamma": 1.0,
+        "score": 2.6875,
+        "conditions": {
+          "id8": {
+            "n_episodes": 2,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "address_top1_acc": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "true_address_mass": {
+              "mean": 0.8611222333416997,
+              "std": 0.09503292928136947,
+              "values": [
+                0.9561551626230691,
+                0.7660893040603302
+              ]
+            },
+            "address_in_top32": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_address_top1": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_address_mass": {
+              "mean": 0.8719606350894622,
+              "std": 0.09051939125585462,
+              "values": [
+                0.9624800263453168,
+                0.7814412438336076
+              ]
+            },
+            "joint_entropy": {
+              "mean": 0.8685003394793694,
+              "std": 0.3300128161840804,
+              "values": [
+                0.538487523295289,
+                1.1985131556634498
+              ]
+            },
+            "mean_address_support": {
+              "mean": 14.375,
+              "std": 0.125,
+              "values": [
+                14.5,
+                14.25
+              ]
+            },
+            "seeds": [
+              {
+                "seed": 4921,
+                "n": 1,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.9561551626230691,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.9624800263453168,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 0.538487523295289,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 14.5,
+                  "std": 0.0
+                }
+              },
+              {
+                "seed": 4922,
+                "n": 1,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.7660893040603302,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.7814412438336076,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 1.1985131556634498,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 14.25,
+                  "std": 0.0
+                }
+              }
+            ]
+          },
+          "ood64": {
+            "n_episodes": 2,
+            "answer": {
+              "mean": 0.5,
+              "std": 0.5,
+              "values": [
+                0.0,
+                1.0
+              ]
+            },
+            "address_top1_acc": {
+              "mean": 0.6875,
+              "std": 0.09375,
+              "values": [
+                0.59375,
+                0.78125
+              ]
+            },
+            "true_address_mass": {
+              "mean": 0.3187532315003066,
+              "std": 0.028418712660083056,
+              "values": [
+                0.29033451884022354,
+                0.34717194416038966
+              ]
+            },
+            "address_in_top32": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_address_top1": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_address_mass": {
+              "mean": 0.5294438434175057,
+              "std": 0.0715402905011038,
+              "values": [
+                0.6009841339186095,
+                0.4579035529164019
+              ]
+            },
+            "joint_entropy": {
+              "mean": 4.79752204759663,
+              "std": 0.0008933509499300385,
+              "values": [
+                4.79841539854656,
+                4.7966286966466996
+              ]
+            },
+            "mean_address_support": {
+              "mean": 53.0703125,
+              "std": 0.2421875,
+              "values": [
+                53.3125,
+                52.828125
+              ]
+            },
+            "seeds": [
+              {
+                "seed": 4921,
+                "n": 1,
+                "answer": {
+                  "mean": 0.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 0.59375,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.29033451884022354,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.6009841339186095,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 4.79841539854656,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 53.3125,
+                  "std": 0.0
+                }
+              },
+              {
+                "seed": 4922,
+                "n": 1,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 0.78125,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.34717194416038966,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.4579035529164019,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 4.7966286966466996,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 52.828125,
+                  "std": 0.0
+                }
+              }
+            ]
+          },
+          "ood128": {
+            "n_episodes": 2,
+            "answer": {
+              "mean": 0.0,
+              "std": 0.0,
+              "values": [
+                0.0,
+                0.0
+              ]
+            },
+            "address_top1_acc": {
+              "mean": 0.375,
+              "std": 0.015625,
+              "values": [
+                0.359375,
+                0.390625
+              ]
+            },
+            "true_address_mass": {
+              "mean": 0.14222143951563126,
+              "std": 0.0027603135805469026,
+              "values": [
+                0.14498175309617817,
+                0.13946112593508436
+              ]
+            },
+            "address_in_top32": {
+              "mean": 0.99609375,
+              "std": 0.00390625,
+              "values": [
+                0.9921875,
+                1.0
+              ]
+            },
+            "final_true_address_top1": {
+              "mean": 0.5,
+              "std": 0.5,
+              "values": [
+                1.0,
+                0.0
+              ]
+            },
+            "final_true_address_mass": {
+              "mean": 0.1794664373151429,
+              "std": 0.12106955641553807,
+              "values": [
+                0.30053599373068096,
+                0.058396880899604806
+              ]
+            },
+            "joint_entropy": {
+              "mean": 5.689724598982577,
+              "std": 0.10383535829069501,
+              "values": [
+                5.585889240691882,
+                5.793559957273272
+              ]
+            },
+            "mean_address_support": {
+              "mean": 85.85546875,
+              "std": 0.28515625,
+              "values": [
+                85.5703125,
+                86.140625
+              ]
+            },
+            "seeds": [
+              {
+                "seed": 4921,
+                "n": 1,
+                "answer": {
+                  "mean": 0.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 0.359375,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.14498175309617817,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 0.9921875,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.30053599373068096,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 5.585889240691882,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 85.5703125,
+                  "std": 0.0
+                }
+              },
+              {
+                "seed": 4922,
+                "n": 1,
+                "answer": {
+                  "mean": 0.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 0.390625,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.13946112593508436,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 0.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.058396880899604806,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 5.793559957273272,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 86.140625,
+                  "std": 0.0
+                }
+              }
+            ]
+          }
+        },
+        "elapsed_sec": 31.149242639541626
+      },
+      {
+        "gamma": 2.0,
+        "score": 4.1796875,
+        "conditions": {
+          "id8": {
+            "n_episodes": 2,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "address_top1_acc": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "true_address_mass": {
+              "mean": 0.9048189920458105,
+              "std": 0.09405385956251605,
+              "values": [
+                0.9988728516083266,
+                0.8107651324832945
+              ]
+            },
+            "address_in_top32": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_address_top1": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_address_mass": {
+              "mean": 0.9222860911504042,
+              "std": 0.07709529306566953,
+              "values": [
+                0.9993813842160737,
+                0.8451907980847346
+              ]
+            },
+            "joint_entropy": {
+              "mean": 0.4722349739258467,
+              "std": 0.44890669142433065,
+              "values": [
+                0.02332828250151605,
+                0.9211416653501773
+              ]
+            },
+            "mean_address_support": {
+              "mean": 10.5625,
+              "std": 1.3125,
+              "values": [
+                11.875,
+                9.25
+              ]
+            },
+            "seeds": [
+              {
+                "seed": 4921,
+                "n": 1,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.9988728516083266,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_mass": {
+                  "mean": 0.9993813842160737,
+                  "std": 0.0
+                },
+                "joint_entropy": {
+                  "mean": 0.02332828250151605,
+                  "std": 0.0
+                },
+                "mean_address_support": {
+                  "mean": 11.875,
+                  "std": 0.0
+                }
+              },
+              {
+                "seed": 4922,
+                "n": 1,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "address_top1_acc": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_address_mass": {
+                  "mean": 0.8107651324832945,
+                  "std": 0.0
+                },
+                "address_in_top32": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_address_top1": {
