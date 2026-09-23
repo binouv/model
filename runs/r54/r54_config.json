@@ -1,0 +1,45 @@
+{
+  "experiment": "FlyGraph R54 adaptive uncertainty-triggered ECC branching",
+  "priority": "cognition/reasoning/memory; audio/video/body unchanged",
+  "noise": 0.3,
+  "physical_bits": 96,
+  "logical_bits": 9,
+  "codewords": 512,
+  "frozen_address_model": "R52 optimized [96,9] ECC, min distance 41",
+  "frozen_reasoning_stack": "R35 verifier, beam width 32, edge expand 8",
+  "main": {
+    "policy": "exact R52/R35 raw candidate support on every hypothesis-step; if ECC top1-top2 log-posterior margin <= calibrated threshold, add top-4 discrete ECC-induced candidate support; never average addresses or reasoning states",
+    "top_k": 4,
+    "decoder_prior_beta": 0.1,
+    "selected_margin_threshold": 1.694594383239746
+  },
+  "calibration": {
+    "seeds": [
+      5421,
+      5422
+    ],
+    "n_per_condition_seed": 2,
+    "conditions": [
+      "id8",
+      "ood32",
+      "ood64",
+      "ood128"
+    ],
+    "selection_rule": "max F1 for detecting hard top-1 ECC decoder errors, subject to trigger_rate<=0.35; ties prefer lower trigger rate",
+    "max_trigger_rate": 0.35
+  },
+  "held_seeds": [
+    5451,
+    5452,
+    5453
+  ],
+  "held_counts_per_seed": {
+    "id8": 6,
+    "ood32": 4,
+    "ood64": 4,
+    "ood128": 2
+  },
+  "ablation": "always-on R53 top-4 discrete ECC branching, same frozen R52 codebook, R35 scorer, top_k=4 and beta=0.10",
+  "success_criterion": "8-hop delta vs R52 >= -2pp; adaptive branching strictly improves 64 and 128 answer over R52 and always-on R53 top-4, while reducing 128-hop candidate evaluations by >=30% vs always-on.",
+  "completion_note": "id8/32/64 completed as full condition batches. The first shell wrapper for 128 ended after two fully written seed batches; seed 5453 was run separately. Only the six fully completed 128-hop episodes are aggregated."
+}
