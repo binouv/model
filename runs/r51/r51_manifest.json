@@ -1,0 +1,46 @@
+{
+  "experiment": "R51",
+  "status": "completed",
+  "files": {
+    "RESEARCH_REPORT_R51_RU.md": {
+      "size_bytes": 1998,
+      "sha256": "3cebe820167a1460028ae76d5eccfb3823f3bdab2429645892881901d02359e0"
+    },
+    "r35_base.py": {
+      "size_bytes": 14974,
+      "sha256": "838c28a0c8c7c1c72be0a07e04da4a3874115af8fe9dda444dae2815998f39d1"
+    },
+    "r35_verifier_weights.npz": {
+      "size_bytes": 3778,
+      "sha256": "c618260f21a3499d2443ec69a5cc227d359fcedfd16da771b62afb0ec2893f52"
+    },
+    "r37_base.py": {
+      "size_bytes": 22399,
+      "sha256": "4cca5e2519ce9d29c8ad3e2f25c210e8bb33a994d1fc40eef5c2fec87ecf8202"
+    },
+    "r51_calibration_completed.json": {
+      "size_bytes": 187784,
+      "sha256": "5e23da42f7d2c0820b0baf11140aef76a7197a2ef832621f107a75bfdffe7666"
+    },
+    "r51_config.json": {
+      "size_bytes": 749,
+      "sha256": "0c5f193fcb03a0e7aa6c7e00554a08413c4ab60716d618d840baebcf8e054a1e"
+    },
+    "r51_metrics.csv": {
+      "size_bytes": 2175,
+      "sha256": "6cf00c218cb3cf705164c0bcdbd89693d140b0d6beb570bd269bff9f64394790"
+    },
+    "r51_metrics.json": {
+      "size_bytes": 372006,
+      "sha256": "f230d51865441d366b8889c18bc3ffc1ca988be594f975ba88bd957e92380c57"
+    },
+    "r51_midpoint_agreement.py": {
+      "size_bytes": 17674,
+      "sha256": "f97bf5563de0cb6823fd751673e590d0eea99fd65b3a6aca7a269afb9b7c4015"
+    },
+    "test_r51_semantics.py": {
+      "size_bytes": 344,
+      "sha256": "710eae3126233064842e0b87295d774c36a61f706497a8cd764f8b21b4ca4da7"
+    }
+  }
+}
