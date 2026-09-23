@@ -1,0 +1,1000 @@
+{
+  "experiment": "FlyGraph R54 adaptive uncertainty-triggered ECC branching",
+  "status": "completed",
+  "hypothesis": "Trigger discrete ECC multi-hypothesis expansion only when decoder uncertainty is high, while preserving the exact R52/R35 raw candidate support on confident steps, will recover the true-address benefit of R53 without its branch-budget collapse and thereby improve 64/128-hop reasoning at lower compute than always-on top-4 branching.",
+  "one_primary_hypothesis": true,
+  "one_confirming_ablation": "always-on R53 top-4 branching",
+  "protocol": {
+    "experiment": "FlyGraph R54 adaptive uncertainty-triggered ECC branching",
+    "priority": "cognition/reasoning/memory; audio/video/body unchanged",
+    "noise": 0.3,
+    "physical_bits": 96,
+    "logical_bits": 9,
+    "codewords": 512,
+    "frozen_address_model": "R52 optimized [96,9] ECC, min distance 41",
+    "frozen_reasoning_stack": "R35 verifier, beam width 32, edge expand 8",
+    "main": {
+      "policy": "exact R52/R35 raw candidate support on every hypothesis-step; if ECC top1-top2 log-posterior margin <= calibrated threshold, add top-4 discrete ECC-induced candidate support; never average addresses or reasoning states",
+      "top_k": 4,
+      "decoder_prior_beta": 0.1,
+      "selected_margin_threshold": 1.694594383239746
+    },
+    "calibration": {
+      "seeds": [
+        5421,
+        5422
+      ],
+      "n_per_condition_seed": 2,
+      "conditions": [
+        "id8",
+        "ood32",
+        "ood64",
+        "ood128"
+      ],
+      "selection_rule": "max F1 for detecting hard top-1 ECC decoder errors, subject to trigger_rate<=0.35; ties prefer lower trigger rate",
+      "max_trigger_rate": 0.35
+    },
+    "held_seeds": [
+      5451,
+      5452,
+      5453
+    ],
+    "held_counts_per_seed": {
+      "id8": 6,
+      "ood32": 4,
+      "ood64": 4,
+      "ood128": 2
+    },
+    "ablation": "always-on R53 top-4 discrete ECC branching, same frozen R52 codebook, R35 scorer, top_k=4 and beta=0.10",
+    "success_criterion": "8-hop delta vs R52 >= -2pp; adaptive branching strictly improves 64 and 128 answer over R52 and always-on R53 top-4, while reducing 128-hop candidate evaluations by >=30% vs always-on.",
+    "completion_note": "id8/32/64 completed as full condition batches. The first shell wrapper for 128 ended after two fully written seed batches; seed 5453 was run separately. Only the six fully completed 128-hop episodes are aggregated."
+  },
+  "calibration": {
+    "seeds": [
+      5421,
+      5422
+    ],
+    "n_per_condition_seed": 2,
+    "max_trigger_rate": 0.35,
+    "total_steps": 928,
+    "overall_top1_error_rate": 0.16594827586206898,
+    "per_condition": {
+      "id8": {
+        "steps": 32,
+        "top1_error_rate": 0.25,
+        "margin_median": 4.236485004425049
+      },
+      "ood32": {
+        "steps": 128,
+        "top1_error_rate": 0.09375,
+        "margin_median": 4.236485481262207
+      },
+      "ood64": {
+        "steps": 256,
+        "top1_error_rate": 0.203125,
+        "margin_median": 4.236484527587891
+      },
+      "ood128": {
+        "steps": 512,
+        "top1_error_rate": 0.16015625,
+        "margin_median": 4.236484527587891
+      }
+    },
+    "selection_rule": "max F1 for detecting hard top-1 ECC decoder errors, subject to trigger_rate<=0.35; ties prefer lower trigger rate",
+    "selected": {
+      "threshold": 1.694594383239746,
+      "f1": 0.5966587112171838,
+      "precision": 0.4716981132075472,
+      "recall": 0.8116883116883117,
+      "trigger_rate": 0.2855603448275862,
+      "tp": 125,
+      "fp": 140,
+      "fn": 29
+    },
+    "top_candidates": [
+      {
+        "threshold": 1.694594383239746,
+        "f1": 0.5966587112171838,
+        "precision": 0.4716981132075472,
+        "recall": 0.8116883116883117,
+        "trigger_rate": 0.2855603448275862,
+        "tp": 125,
+        "fp": 140,
+        "fn": 29
+      },
+      {
+        "threshold": 1.6945953369140625,
+        "f1": 0.5957446808510638,
+        "precision": 0.4684014869888476,
+        "recall": 0.8181818181818182,
+        "trigger_rate": 0.28987068965517243,
+        "tp": 126,
+        "fp": 143,
+        "fn": 28
+      },
+      {
+        "threshold": 1.6945934295654297,
+        "f1": 0.5898123324396782,
+        "precision": 0.502283105022831,
+        "recall": 0.7142857142857143,
+        "trigger_rate": 0.23599137931034483,
+        "tp": 110,
+        "fp": 109,
+        "fn": 44
+      },
+      {
+        "threshold": 0.8472976684570312,
+        "f1": 0.5885714285714285,
+        "precision": 0.5255102040816326,
+        "recall": 0.6688311688311688,
+        "trigger_rate": 0.21120689655172414,
+        "tp": 103,
+        "fp": 93,
+        "fn": 51
+      },
+      {
+        "threshold": 2.5418901443481445,
+        "f1": 0.5799086757990868,
+        "precision": 0.4471830985915493,
+        "recall": 0.8246753246753247,
+        "trigger_rate": 0.30603448275862066,
+        "tp": 127,
+        "fp": 157,
+        "fn": 27
+      },
+      {
+        "threshold": 0.8472967147827148,
+        "f1": 0.5559105431309904,
+        "precision": 0.5471698113207547,
+        "recall": 0.564935064935065,
+        "trigger_rate": 0.1713362068965517,
+        "tp": 87,
+        "fp": 72,
+        "fn": 67
+      },
+      {
+        "threshold": 0.0,
+        "f1": 0.41379310344827586,
+        "precision": 0.6153846153846154,
+        "recall": 0.3116883116883117,
+        "trigger_rate": 0.08405172413793104,
+        "tp": 48,
+        "fp": 30,
+        "fn": 106
+      },
+      {
+        "threshold": 0.8472957611083984,
+        "f1": 0.41201716738197425,
+        "precision": 0.6075949367088608,
+        "recall": 0.3116883116883117,
+        "trigger_rate": 0.08512931034482758,
+        "tp": 48,
+        "fp": 31,
+        "fn": 106
+      }
+    ]
+  },
+  "semantic_validation_mismatches": {
+    "id8": 0,
+    "ood32": 0,
+    "ood64": 0,
+    "ood128": 0
+  },
+  "held_results": {
+    "id8": {
+      "r52_ecc_r35": {
+        "n_episodes": 18,
+        "answer": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "path_survival": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "selected_true_path": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "candidate_evals": {
+          "mean": 1608.0,
+          "std": 0.0,
+          "values": [
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0,
+            1608.0
+          ]
+        },
+        "seeds": [
+          {
+            "seed": 5451,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 5452,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 5453,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0
+            }
+          }
+        ]
+      },
+      "r54_adaptive_branch": {
+        "n_episodes": 18,
+        "answer": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "path_survival": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "selected_true_path": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "candidate_evals": {
+          "mean": 3367.1111111111113,
+          "std": 403.4772317531807,
+          "values": [
+            3144.0,
+            3496.0,
+            3368.0,
+            3624.0,
+            3560.0,
+            3272.0,
+            4080.0,
+            2376.0,
+            3688.0,
+            2920.0,
+            3528.0,
+            3208.0,
+            3624.0,
+            2984.0,
+            2728.0,
+            3752.0,
+            3600.0,
+            3656.0
+          ]
+        },
+        "trigger_hyp_fraction": {
+          "mean": 0.27024205466307677,
+          "std": 0.061002890848498,
+          "values": [
+            0.23880597014925373,
+            0.2935323383084577,
+            0.2736318407960199,
+            0.31343283582089554,
+            0.3034825870646766,
+            0.25870646766169153,
+            0.35714285714285715,
+            0.11940298507462686,
+            0.32338308457711445,
+            0.20398009950248755,
+            0.29850746268656714,
+            0.24875621890547264,
+            0.31343283582089554,
+            0.19617224880382775,
+            0.17412935323383086,
+            0.3333333333333333,
+            0.2961165048543689,
+            0.31840796019900497
+          ]
+        },
+        "trigger_step_fraction": {
+          "mean": 0.8819444444444444,
+          "std": 0.0655137578615042,
+          "values": [
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            1.0,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            0.75,
+            1.0,
+            0.75,
+            0.875,
+            1.0,
+            0.875
+          ]
+        },
+        "true_source_trigger_rate": {
+          "mean": 0.24305555555555555,
+          "std": 0.11389735740872726,
+          "values": [
+            0.25,
+            0.25,
+            0.125,
+            0.25,
+            0.125,
+            0.375,
+            0.5,
+            0.0,
+            0.25,
+            0.125,
+            0.25,
+            0.375,
+            0.25,
+            0.25,
+            0.125,
+            0.25,
+            0.375,
+            0.25
+          ]
+        },
+        "decoder_true_top1": {
+          "mean": 0.8611111111111112,
+          "std": 0.11702985796078276,
+          "values": [
+            0.875,
+            0.875,
+            0.875,
+            0.875,
+            1.0,
+            0.75,
+            0.75,
+            1.0,
+            0.875,
+            1.0,
+            0.75,
+            0.75,
+            1.0,
+            0.75,
+            1.0,
+            0.625,
+            0.75,
+            1.0
+          ]
+        },
+        "decoder_true_topk": {
+          "mean": 0.9791666666666666,
+          "std": 0.06249999999999999,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.875,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.75,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "decoder_final_true_topk": {
+          "mean": 0.9444444444444444,
+          "std": 0.2290614236454256,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "seeds": [
+          {
+            "seed": 5451,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 3410.6666666666665,
+              "std": 166.95974231998431
+            },
+            "trigger_hyp_fraction": {
+              "mean": 0.2802653399668325,
+              "std": 0.025957671380594582
+            },
+            "trigger_step_fraction": {
+              "mean": 0.875,
+              "std": 0.0
+            },
+            "true_source_trigger_rate": {
+              "mean": 0.22916666666666666,
+              "std": 0.0858980338670346
+            },
+            "decoder_true_top1": {
+              "mean": 0.875,
+              "std": 0.07216878364870322
+            },
+            "decoder_true_topk": {
+              "mean": 0.9791666666666666,
+              "std": 0.04658474953124562
+            },
+            "decoder_final_true_topk": {
+              "mean": 1.0,
+              "std": 0.0
+            }
+          },
+          {
+            "seed": 5452,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 3300.0,
+              "std": 550.3889533775183
+            },
+            "trigger_hyp_fraction": {
+              "mean": 0.2585287846481876,
+              "std": 0.07953632336890123
+            },
+            "trigger_step_fraction": {
+              "mean": 0.8958333333333334,
+              "std": 0.046584749531245626
+            },
+            "true_source_trigger_rate": {
+              "mean": 0.25,
+              "std": 0.1613743060919757
+            },
+            "decoder_true_top1": {
+              "mean": 0.8541666666666666,
+              "std": 0.11219093348196883
+            },
+            "decoder_true_topk": {
+              "mean": 0.9583333333333334,
+              "std": 0.09316949906249122
+            },
+            "decoder_final_true_topk": {
+              "mean": 0.8333333333333334,
+              "std": 0.37267799624996495
+            }
+          },
+          {
+            "seed": 5453,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 3390.6666666666665,
+              "std": 388.10078874207693
+            },
+            "trigger_hyp_fraction": {
+              "mean": 0.2719320393742102,
+              "std": 0.06263950547402068
+            },
+            "trigger_step_fraction": {
+              "mean": 0.875,
+              "std": 0.10206207261596575
+            },
+            "true_source_trigger_rate": {
+              "mean": 0.25,
+              "std": 0.07216878364870322
+            },
+            "decoder_true_top1": {
+              "mean": 0.8541666666666666,
+              "std": 0.15166895602667746
+            },
+            "decoder_true_topk": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "decoder_final_true_topk": {
+              "mean": 1.0,
+              "std": 0.0
+            }
+          }
+        ]
+      },
+      "ablation_r53_always_top4": {
+        "n_episodes": 18,
+        "answer": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "path_survival": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "final_true_path_in_beam": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "selected_true_path": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "candidate_evals": {
+          "mean": 6666.666666666667,
+          "std": 54.38954147832304,
+          "values": [
+            6688.0,
+            6624.0,
+            6656.0,
+            6688.0,
+            6720.0,
+            6752.0,
+            6720.0,
+            6720.0,
+            6688.0,
+            6624.0,
+            6624.0,
+            6624.0,
+            6720.0,
+            6592.0,
+            6720.0,
+            6592.0,
+            6560.0,
+            6688.0
+          ]
+        },
+        "seeds": [
+          {
+            "seed": 5451,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 6688.0,
+              "std": 41.31182235954578
+            }
+          },
+          {
+            "seed": 5452,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 6666.666666666667,
+              "std": 43.97979333992171
+            }
+          },
+          {
+            "seed": 5453,
+            "n": 6,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0
+            },
+            "candidate_evals": {
+              "mean": 6645.333333333333,
+              "std": 65.75374936500242
+            }
+          }
+        ]
+      }
+    },
+    "ood32": {
+      "r52_ecc_r35": {
+        "n_episodes": 12,
+        "answer": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
