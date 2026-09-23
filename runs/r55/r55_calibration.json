@@ -1,0 +1,1000 @@
+{
+  "seeds": [
+    5521,
+    5522
+  ],
+  "conditions": [
+    "id8",
+    "ood64",
+    "ood128"
+  ],
+  "n_per_condition_seed": 1,
+  "quota_grid": [
+    2,
+    4,
+    8
+  ],
+  "fixed_grace": 2,
+  "frozen_trigger_threshold": 1.694594383239746,
+  "selection_rule": "maximize 2*answer128 + answer64 + 0.5*finalPath128 + 0.25*finalPath64 + answer8; ties prefer smaller quota",
+  "selected_quota": 2,
+  "trials": [
+    {
+      "quota": 2,
+      "objective": 4.75,
+      "summary": {
+        "id8": {
+          "n_episodes": 2,
+          "answer": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 2552.0,
+            "std": 48.0,
+            "values": [
+              2600.0,
+              2504.0
+            ]
+          },
+          "trigger_hyp_fraction": {
+            "mean": 0.14676616915422885,
+            "std": 0.007462686567164173,
+            "values": [
+              0.15422885572139303,
+              0.13930348258706468
+            ]
+          },
+          "trigger_step_fraction": {
+            "mean": 0.875,
+            "std": 0.0,
+            "values": [
+              0.875,
+              0.875
+            ]
+          },
+          "true_source_trigger_rate": {
+            "mean": 0.0625,
+            "std": 0.0625,
+            "values": [
+              0.125,
+              0.0
+            ]
+          },
+          "decoder_true_top1": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "decoder_true_topk": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "decoder_final_true_topk": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "reserved_slots_used_mean": {
+            "mean": 1.75,
+            "std": 0.0,
+            "values": [
+              1.75,
+              1.75
+            ]
+          },
+          "protected_beam_fraction": {
+            "mean": 0.0546875,
+            "std": 0.0,
+            "values": [
+              0.0546875,
+              0.0546875
+            ]
+          },
+          "true_prefix_reserved_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "values": [
+              0.0,
+              0.0
+            ]
+          },
+          "seeds": [
+            {
+              "seed": 5521,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 2600.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.15422885572139303,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.875,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.125,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "reserved_slots_used_mean": {
+                "mean": 1.75,
+                "std": 0.0
+              },
+              "protected_beam_fraction": {
+                "mean": 0.0546875,
+                "std": 0.0
+              },
+              "true_prefix_reserved_fraction": {
+                "mean": 0.0,
+                "std": 0.0
+              }
+            },
+            {
+              "seed": 5522,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 2504.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.13930348258706468,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.875,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.0,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "reserved_slots_used_mean": {
+                "mean": 1.75,
+                "std": 0.0
+              },
+              "protected_beam_fraction": {
+                "mean": 0.0546875,
+                "std": 0.0
+              },
+              "true_prefix_reserved_fraction": {
+                "mean": 0.0,
+                "std": 0.0
+              }
+            }
+          ]
+        },
+        "ood64": {
+          "n_episodes": 2,
+          "answer": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 32280.0,
+            "std": 2032.0,
+            "values": [
+              34312.0,
+              30248.0
+            ]
+          },
+          "trigger_hyp_fraction": {
+            "mean": 0.25614651279478173,
+            "std": 0.03186151530356246,
+            "values": [
+              0.2880080280983442,
+              0.22428499749121927
+            ]
+          },
+          "trigger_step_fraction": {
+            "mean": 0.9375,
+            "std": 0.0,
+            "values": [
+              0.9375,
+              0.9375
+            ]
+          },
+          "true_source_trigger_rate": {
+            "mean": 0.3046875,
+            "std": 0.0234375,
+            "values": [
+              0.328125,
+              0.28125
+            ]
+          },
+          "decoder_true_top1": {
+            "mean": 0.828125,
+            "std": 0.03125,
+            "values": [
+              0.796875,
+              0.859375
+            ]
+          },
+          "decoder_true_topk": {
+            "mean": 0.9765625,
+            "std": 0.0078125,
+            "values": [
+              0.96875,
+              0.984375
+            ]
+          },
+          "decoder_final_true_topk": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "reserved_slots_used_mean": {
+            "mean": 1.921875,
+            "std": 0.015625,
+            "values": [
+              1.9375,
+              1.90625
+            ]
+          },
+          "protected_beam_fraction": {
+            "mean": 0.0634765625,
+            "std": 0.0009765625,
+            "values": [
+              0.064453125,
+              0.0625
+            ]
+          },
+          "true_prefix_reserved_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "values": [
+              0.0,
+              0.0
+            ]
+          },
+          "seeds": [
+            {
+              "seed": 5521,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 34312.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.2880080280983442,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.9375,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.328125,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 0.796875,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 0.96875,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "reserved_slots_used_mean": {
+                "mean": 1.9375,
+                "std": 0.0
+              },
+              "protected_beam_fraction": {
+                "mean": 0.064453125,
+                "std": 0.0
+              },
+              "true_prefix_reserved_fraction": {
+                "mean": 0.0,
+                "std": 0.0
+              }
+            },
+            {
+              "seed": 5522,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 30248.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.22428499749121927,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.9375,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.28125,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 0.859375,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 0.984375,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "reserved_slots_used_mean": {
+                "mean": 1.90625,
+                "std": 0.0
+              },
+              "protected_beam_fraction": {
+                "mean": 0.0625,
+                "std": 0.0
+              },
+              "true_prefix_reserved_fraction": {
+                "mean": 0.0,
+                "std": 0.0
+              }
+            }
+          ]
+        },
+        "ood128": {
+          "n_episodes": 2,
+          "answer": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 71996.0,
+            "std": 3692.0,
+            "values": [
+              75688.0,
+              68304.0
+            ]
+          },
+          "trigger_hyp_fraction": {
+            "mean": 0.30539655020529966,
+            "std": 0.0299164911211047,
+            "values": [
+              0.3353130413264044,
+              0.275480059084195
+            ]
+          },
+          "trigger_step_fraction": {
+            "mean": 0.9609375,
+            "std": 0.0078125,
+            "values": [
+              0.953125,
+              0.96875
+            ]
+          },
+          "true_source_trigger_rate": {
+            "mean": 0.296875,
+            "std": 0.0234375,
+            "values": [
+              0.3203125,
+              0.2734375
+            ]
+          },
+          "decoder_true_top1": {
+            "mean": 0.859375,
+            "std": 0.015625,
+            "values": [
+              0.84375,
+              0.875
+            ]
+          },
+          "decoder_true_topk": {
+            "mean": 0.94921875,
+            "std": 0.00390625,
+            "values": [
+              0.9453125,
+              0.953125
+            ]
+          },
+          "decoder_final_true_topk": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "reserved_slots_used_mean": {
+            "mean": 1.953125,
+            "std": 0.015625,
+            "values": [
+              1.9375,
+              1.96875
+            ]
+          },
+          "protected_beam_fraction": {
+            "mean": 0.06386382004310345,
+            "std": 0.003316945043103446,
+            "values": [
+              0.060546875,
+              0.06718076508620689
+            ]
+          },
+          "true_prefix_reserved_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "values": [
+              0.0,
+              0.0
+            ]
+          },
+          "seeds": [
+            {
+              "seed": 5521,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 75688.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.3353130413264044,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.953125,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.3203125,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 0.84375,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 0.9453125,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "reserved_slots_used_mean": {
+                "mean": 1.9375,
+                "std": 0.0
+              },
+              "protected_beam_fraction": {
+                "mean": 0.060546875,
+                "std": 0.0
+              },
+              "true_prefix_reserved_fraction": {
+                "mean": 0.0,
+                "std": 0.0
+              }
+            },
+            {
+              "seed": 5522,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 68304.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.275480059084195,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.96875,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.2734375,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 0.875,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 0.953125,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "reserved_slots_used_mean": {
+                "mean": 1.96875,
+                "std": 0.0
+              },
+              "protected_beam_fraction": {
+                "mean": 0.06718076508620689,
+                "std": 0.0
+              },
+              "true_prefix_reserved_fraction": {
+                "mean": 0.0,
+                "std": 0.0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "quota": 4,
+      "objective": 4.75,
+      "summary": {
+        "id8": {
+          "n_episodes": 2,
+          "answer": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 2488.0,
+            "std": 16.0,
+            "values": [
+              2504.0,
+              2472.0
+            ]
+          },
+          "trigger_hyp_fraction": {
+            "mean": 0.13681592039800994,
+            "std": 0.002487562189054729,
+            "values": [
+              0.13930348258706468,
+              0.13432835820895522
+            ]
+          },
+          "trigger_step_fraction": {
+            "mean": 0.875,
+            "std": 0.0,
+            "values": [
+              0.875,
+              0.875
+            ]
+          },
+          "true_source_trigger_rate": {
+            "mean": 0.0625,
+            "std": 0.0625,
+            "values": [
+              0.125,
+              0.0
+            ]
+          },
+          "decoder_true_top1": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "decoder_true_topk": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "decoder_final_true_topk": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "reserved_slots_used_mean": {
+            "mean": 3.5,
+            "std": 0.0,
+            "values": [
+              3.5,
+              3.5
+            ]
+          },
+          "protected_beam_fraction": {
+            "mean": 0.109375,
+            "std": 0.0,
+            "values": [
+              0.109375,
+              0.109375
+            ]
+          },
+          "true_prefix_reserved_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "values": [
+              0.0,
+              0.0
+            ]
+          },
+          "seeds": [
+            {
+              "seed": 5521,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 2504.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.13930348258706468,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.875,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.125,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "reserved_slots_used_mean": {
+                "mean": 3.5,
+                "std": 0.0
+              },
+              "protected_beam_fraction": {
+                "mean": 0.109375,
+                "std": 0.0
+              },
+              "true_prefix_reserved_fraction": {
+                "mean": 0.0,
+                "std": 0.0
+              }
+            },
+            {
+              "seed": 5522,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 2472.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.13432835820895522,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.875,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.0,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "reserved_slots_used_mean": {
+                "mean": 3.5,
+                "std": 0.0
+              },
+              "protected_beam_fraction": {
+                "mean": 0.109375,
+                "std": 0.0
+              },
+              "true_prefix_reserved_fraction": {
+                "mean": 0.0,
+                "std": 0.0
+              }
+            }
+          ]
+        },
+        "ood64": {
+          "n_episodes": 2,
+          "answer": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 1.0,
+            "std": 0.0,
