@@ -1,0 +1,50 @@
+{
+  "experiment": "R53",
+  "status": "completed",
+  "files": {
+    "RESEARCH_REPORT_R53_RU.md": {
+      "size_bytes": 3963,
+      "sha256": "2ef8a764338a35942789fe9e6c23de8f396843867c7f0961c8d78499cabbedc9"
+    },
+    "r35_base.py": {
+      "size_bytes": 14974,
+      "sha256": "838c28a0c8c7c1c72be0a07e04da4a3874115af8fe9dda444dae2815998f39d1"
+    },
+    "r35_verifier_weights.npz": {
+      "size_bytes": 3778,
+      "sha256": "c618260f21a3499d2443ec69a5cc227d359fcedfd16da771b62afb0ec2893f52"
+    },
+    "r37_base.py": {
+      "size_bytes": 22399,
+      "sha256": "4cca5e2519ce9d29c8ad3e2f25c210e8bb33a994d1fc40eef5c2fec87ecf8202"
+    },
+    "r52_base.py": {
+      "size_bytes": 18194,
+      "sha256": "e926a46d78da3483957f895c0b432f6e90e1af4da7521dd8e9a1edb5e2bad968"
+    },
+    "r52_ecc_model.npz": {
+      "size_bytes": 12973,
+      "sha256": "a437947093a0318348c4e7d3138d90927cd5aa8e291067a913a9a09e24c96672"
+    },
+    "r53_config.json": {
+      "size_bytes": 1969,
+      "sha256": "8198df7113ee147667bcc9a0ca8714886bb9cac2f6904f0792898201dd86a8ec"
+    },
+    "r53_metrics.csv": {
+      "size_bytes": 1627,
+      "sha256": "5063e8599e65e3ae7648866086e8dfd5560af92f4adf9dbc1032f1c28f72492d"
+    },
+    "r53_metrics.json": {
+      "size_bytes": 59344,
+      "sha256": "6a6099c56eca64306792a22c519f266945e7614ac237b41130533e216884d547"
+    },
+    "r53_syndrome_multihyp_decoder.py": {
+      "size_bytes": 8937,
+      "sha256": "c468f61a5deb16c5c3fc71f17b743309229c4236b202216dba364f70330afc78"
+    },
+    "test_r53_semantics.py": {
+      "size_bytes": 1052,
+      "sha256": "b22cd3dde02c391198d3d6d57d3b946ffe8a527324e0099d23c385172495017c"
+    }
+  }
+}
