@@ -1,0 +1,42 @@
+{
+  "experiment": "R50",
+  "status": "completed",
+  "files": {
+    "r50_backward_consistency.py": {
+      "size_bytes": 23867,
+      "sha256": "51ce6f0991607ad227c076e3cb16442159aae40c3380c451fbfad0d342c4d062"
+    },
+    "r50_config.json": {
+      "size_bytes": 727,
+      "sha256": "7f4f8444666109575d0e68be250bf8ce68abcbb2d2bce4b2a4aa884a8e7bc75a"
+    },
+    "r50_metrics.json": {
+      "size_bytes": 367369,
+      "sha256": "260098ffc5cfa5f552930260824400ed6739de10bd3c7f87500455a3312bb5d2"
+    },
+    "r50_metrics.csv": {
+      "size_bytes": 2042,
+      "sha256": "8fc16be7c74cadaa847b5f26cf2441b3cb61f6ebb8489dc273d03e3896e48b22"
+    },
+    "RESEARCH_REPORT_R50_RU.md": {
+      "size_bytes": 2515,
+      "sha256": "1ad823a27262371e64755906bef532691f1101f5bf18d090d03b306707c9da50"
+    },
+    "test_r50_semantics.py": {
+      "size_bytes": 383,
+      "sha256": "e3df534a4bb30db41011ba69dca4b5f599fc766732397d85dd0ce43cfb43fc3a"
+    },
+    "r35_base.py": {
+      "size_bytes": 14974,
+      "sha256": "838c28a0c8c7c1c72be0a07e04da4a3874115af8fe9dda444dae2815998f39d1"
+    },
+    "r37_base.py": {
+      "size_bytes": 22399,
+      "sha256": "4cca5e2519ce9d29c8ad3e2f25c210e8bb33a994d1fc40eef5c2fec87ecf8202"
+    },
+    "r35_verifier_weights.npz": {
+      "size_bytes": 3778,
+      "sha256": "c618260f21a3499d2443ec69a5cc227d359fcedfd16da771b62afb0ec2893f52"
+    }
+  }
+}
