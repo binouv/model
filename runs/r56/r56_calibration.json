@@ -1,0 +1,1000 @@
+{
+  "seeds": [
+    5621,
+    5622
+  ],
+  "conditions": [
+    "id8",
+    "ood64"
+  ],
+  "n_per_condition_seed": 1,
+  "cap_grid": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "frozen_trigger_threshold": 1.694594383239746,
+  "topk": 4,
+  "beta": 0.1,
+  "selection_rule": "maximize 2*answer64 + 0.75*finalPath64 + 0.25*pathSurvival64 + answer8; ties prefer smaller per-address cap",
+  "selected_cap": 8,
+  "trials": [
+    {
+      "cap": 8,
+      "objective": 3.0,
+      "summary": {
+        "id8": {
+          "n_episodes": 2,
+          "answer": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 3400.0,
+            "std": 192.0,
+            "values": [
+              3208.0,
+              3592.0
+            ]
+          },
+          "trigger_hyp_fraction": {
+            "mean": 0.27860696517412936,
+            "std": 0.029850746268656705,
+            "values": [
+              0.24875621890547264,
+              0.30845771144278605
+            ]
+          },
+          "trigger_step_fraction": {
+            "mean": 0.8125,
+            "std": 0.0625,
+            "values": [
+              0.75,
+              0.875
+            ]
+          },
+          "true_source_trigger_rate": {
+            "mean": 0.0625,
+            "std": 0.0625,
+            "values": [
+              0.0,
+              0.125
+            ]
+          },
+          "decoder_true_top1": {
+            "mean": 0.9375,
+            "std": 0.0625,
+            "values": [
+              1.0,
+              0.875
+            ]
+          },
+          "decoder_true_topk": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "decoder_final_true_topk": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "unique_candidate_address_groups": {
+            "mean": 23.5,
+            "std": 0.625,
+            "values": [
+              24.125,
+              22.875
+            ]
+          },
+          "unique_beam_address_groups": {
+            "mean": 11.5,
+            "std": 0.625,
+            "values": [
+              12.125,
+              10.875
+            ]
+          },
+          "max_address_group_fraction": {
+            "mean": 0.220703125,
+            "std": 0.001953125,
+            "values": [
+              0.22265625,
+              0.21875
+            ]
+          },
+          "diversity_prune_changed_fraction": {
+            "mean": 0.375,
+            "std": 0.25,
+            "values": [
+              0.125,
+              0.625
+            ]
+          },
+          "true_prefix_group_fraction": {
+            "mean": 0.203125,
+            "std": 0.00390625,
+            "values": [
+              0.19921875,
+              0.20703125
+            ]
+          },
+          "seeds": [
+            {
+              "seed": 5621,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 3208.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.24875621890547264,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.75,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.0,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "unique_candidate_address_groups": {
+                "mean": 24.125,
+                "std": 0.0
+              },
+              "unique_beam_address_groups": {
+                "mean": 12.125,
+                "std": 0.0
+              },
+              "max_address_group_fraction": {
+                "mean": 0.22265625,
+                "std": 0.0
+              },
+              "diversity_prune_changed_fraction": {
+                "mean": 0.125,
+                "std": 0.0
+              },
+              "true_prefix_group_fraction": {
+                "mean": 0.19921875,
+                "std": 0.0
+              }
+            },
+            {
+              "seed": 5622,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 3592.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.30845771144278605,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.875,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.125,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 0.875,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "unique_candidate_address_groups": {
+                "mean": 22.875,
+                "std": 0.0
+              },
+              "unique_beam_address_groups": {
+                "mean": 10.875,
+                "std": 0.0
+              },
+              "max_address_group_fraction": {
+                "mean": 0.21875,
+                "std": 0.0
+              },
+              "diversity_prune_changed_fraction": {
+                "mean": 0.625,
+                "std": 0.0
+              },
+              "true_prefix_group_fraction": {
+                "mean": 0.20703125,
+                "std": 0.0
+              }
+            }
+          ]
+        },
+        "ood64": {
+          "n_episodes": 2,
+          "answer": {
+            "mean": 0.5,
+            "std": 0.5,
+            "values": [
+              0.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 0.5,
+            "std": 0.5,
+            "values": [
+              0.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 31352.0,
+            "std": 112.0,
+            "values": [
+              31464.0,
+              31240.0
+            ]
+          },
+          "trigger_hyp_fraction": {
+            "mean": 0.24159558454591068,
+            "std": 0.001756146512794779,
+            "values": [
+              0.24335173105870547,
+              0.23983943803311591
+            ]
+          },
+          "trigger_step_fraction": {
+            "mean": 0.9765625,
+            "std": 0.0078125,
+            "values": [
+              0.96875,
+              0.984375
+            ]
+          },
+          "true_source_trigger_rate": {
+            "mean": 0.2265625,
+            "std": 0.0234375,
+            "values": [
+              0.25,
+              0.203125
+            ]
+          },
+          "decoder_true_top1": {
+            "mean": 0.8515625,
+            "std": 0.0078125,
+            "values": [
+              0.84375,
+              0.859375
+            ]
+          },
+          "decoder_true_topk": {
+            "mean": 0.9765625,
+            "std": 0.0078125,
+            "values": [
+              0.96875,
+              0.984375
+            ]
+          },
+          "decoder_final_true_topk": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "unique_candidate_address_groups": {
+            "mean": 59.375,
+            "std": 0.390625,
+            "values": [
+              58.984375,
+              59.765625
+            ]
+          },
+          "unique_beam_address_groups": {
+            "mean": 13.6171875,
+            "std": 0.2734375,
+            "values": [
+              13.34375,
+              13.890625
+            ]
+          },
+          "max_address_group_fraction": {
+            "mean": 0.224609375,
+            "std": 0.00146484375,
+            "values": [
+              0.22314453125,
+              0.22607421875
+            ]
+          },
+          "diversity_prune_changed_fraction": {
+            "mean": 0.3828125,
+            "std": 0.0234375,
+            "values": [
+              0.359375,
+              0.40625
+            ]
+          },
+          "true_prefix_group_fraction": {
+            "mean": 0.209716796875,
+            "std": 0.003662109375,
+            "values": [
+              0.2060546875,
+              0.21337890625
+            ]
+          },
+          "seeds": [
+            {
+              "seed": 5621,
+              "n": 1,
+              "answer": {
+                "mean": 0.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 0.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 31464.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.24335173105870547,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.96875,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.25,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 0.84375,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 0.96875,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "unique_candidate_address_groups": {
+                "mean": 58.984375,
+                "std": 0.0
+              },
+              "unique_beam_address_groups": {
+                "mean": 13.34375,
+                "std": 0.0
+              },
+              "max_address_group_fraction": {
+                "mean": 0.22314453125,
+                "std": 0.0
+              },
+              "diversity_prune_changed_fraction": {
+                "mean": 0.359375,
+                "std": 0.0
+              },
+              "true_prefix_group_fraction": {
+                "mean": 0.2060546875,
+                "std": 0.0
+              }
+            },
+            {
+              "seed": 5622,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 31240.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.23983943803311591,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.984375,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.203125,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 0.859375,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 0.984375,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "unique_candidate_address_groups": {
+                "mean": 59.765625,
+                "std": 0.0
+              },
+              "unique_beam_address_groups": {
+                "mean": 13.890625,
+                "std": 0.0
+              },
+              "max_address_group_fraction": {
+                "mean": 0.22607421875,
+                "std": 0.0
+              },
+              "diversity_prune_changed_fraction": {
+                "mean": 0.40625,
+                "std": 0.0
+              },
+              "true_prefix_group_fraction": {
+                "mean": 0.21337890625,
+                "std": 0.0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "cap": 4,
+      "objective": 2.54296875,
+      "summary": {
+        "id8": {
+          "n_episodes": 2,
+          "answer": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 3640.0,
+            "std": 208.0,
+            "values": [
+              3432.0,
+              3848.0
+            ]
+          },
+          "trigger_hyp_fraction": {
+            "mean": 0.31592039800995025,
+            "std": 0.03233830845771146,
+            "values": [
+              0.2835820895522388,
+              0.3482587064676617
+            ]
+          },
+          "trigger_step_fraction": {
+            "mean": 0.8125,
+            "std": 0.0625,
+            "values": [
+              0.75,
+              0.875
+            ]
+          },
+          "true_source_trigger_rate": {
+            "mean": 0.0625,
+            "std": 0.0625,
+            "values": [
+              0.0,
+              0.125
+            ]
+          },
+          "decoder_true_top1": {
+            "mean": 0.9375,
+            "std": 0.0625,
+            "values": [
+              1.0,
+              0.875
+            ]
+          },
+          "decoder_true_topk": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "decoder_final_true_topk": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "unique_candidate_address_groups": {
+            "mean": 24.125,
+            "std": 0.875,
+            "values": [
+              25.0,
+              23.25
+            ]
+          },
+          "unique_beam_address_groups": {
+            "mean": 12.9375,
+            "std": 0.5625,
+            "values": [
+              13.5,
+              12.375
+            ]
+          },
+          "max_address_group_fraction": {
+            "mean": 0.1328125,
+            "std": 0.0078125,
+            "values": [
+              0.140625,
+              0.125
+            ]
+          },
+          "diversity_prune_changed_fraction": {
+            "mean": 0.875,
+            "std": 0.0,
+            "values": [
+              0.875,
+              0.875
+            ]
+          },
+          "true_prefix_group_fraction": {
+            "mean": 0.125,
+            "std": 0.0,
+            "values": [
+              0.125,
+              0.125
+            ]
+          },
+          "seeds": [
+            {
+              "seed": 5621,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 3432.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.2835820895522388,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.75,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.0,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "unique_candidate_address_groups": {
+                "mean": 25.0,
+                "std": 0.0
+              },
+              "unique_beam_address_groups": {
+                "mean": 13.5,
+                "std": 0.0
+              },
+              "max_address_group_fraction": {
+                "mean": 0.140625,
+                "std": 0.0
+              },
+              "diversity_prune_changed_fraction": {
+                "mean": 0.875,
+                "std": 0.0
+              },
+              "true_prefix_group_fraction": {
+                "mean": 0.125,
+                "std": 0.0
+              }
+            },
+            {
+              "seed": 5622,
+              "n": 1,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 3848.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.3482587064676617,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.875,
+                "std": 0.0
+              },
+              "true_source_trigger_rate": {
+                "mean": 0.125,
+                "std": 0.0
+              },
+              "decoder_true_top1": {
+                "mean": 0.875,
+                "std": 0.0
+              },
+              "decoder_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "decoder_final_true_topk": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "unique_candidate_address_groups": {
+                "mean": 23.25,
+                "std": 0.0
+              },
+              "unique_beam_address_groups": {
+                "mean": 12.375,
+                "std": 0.0
+              },
+              "max_address_group_fraction": {
+                "mean": 0.125,
+                "std": 0.0
+              },
+              "diversity_prune_changed_fraction": {
+                "mean": 0.875,
+                "std": 0.0
+              },
+              "true_prefix_group_fraction": {
+                "mean": 0.125,
+                "std": 0.0
+              }
+            }
+          ]
+        },
+        "ood64": {
+          "n_episodes": 2,
+          "answer": {
+            "mean": 0.5,
+            "std": 0.5,
+            "values": [
+              0.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 0.671875,
+            "std": 0.328125,
+            "values": [
+              0.34375,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 0.5,
+            "std": 0.5,
+            "values": [
+              0.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 0.5,
+            "std": 0.5,
+            "values": [
+              0.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 31848.0,
+            "std": 96.0,
+            "values": [
+              31752.0,
+              31944.0
+            ]
+          },
+          "trigger_hyp_fraction": {
+            "mean": 0.249372804816859,
+            "std": 0.001505268439538382,
+            "values": [
+              0.24786753637732062,
+              0.2508780732563974
+            ]
+          },
+          "trigger_step_fraction": {
+            "mean": 0.9765625,
+            "std": 0.0078125,
+            "values": [
+              0.96875,
+              0.984375
+            ]
+          },
+          "true_source_trigger_rate": {
+            "mean": 0.2265625,
+            "std": 0.0234375,
+            "values": [
+              0.25,
+              0.203125
+            ]
+          },
+          "decoder_true_top1": {
+            "mean": 0.8515625,
+            "std": 0.0078125,
+            "values": [
+              0.84375,
+              0.859375
+            ]
+          },
+          "decoder_true_topk": {
+            "mean": 0.9765625,
+            "std": 0.0078125,
+            "values": [
+              0.96875,
+              0.984375
+            ]
+          },
+          "decoder_final_true_topk": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "unique_candidate_address_groups": {
+            "mean": 62.40625,
+            "std": 0.421875,
+            "values": [
+              61.984375,
+              62.828125
+            ]
+          },
+          "unique_beam_address_groups": {
+            "mean": 15.2890625,
+            "std": 0.1796875,
+            "values": [
+              15.109375,
+              15.46875
+            ]
+          },
+          "max_address_group_fraction": {
+            "mean": 0.1240234375,
+            "std": 0.00048828125,
+            "values": [
+              0.12353515625,
+              0.12451171875
+            ]
+          },
+          "diversity_prune_changed_fraction": {
+            "mean": 0.7421875,
+            "std": 0.0703125,
+            "values": [
+              0.671875,
+              0.8125
+            ]
+          },
+          "true_prefix_group_fraction": {
+            "mean": 0.072998046875,
+            "std": 0.042724609375,
+            "values": [
+              0.0302734375,
+              0.11572265625
+            ]
+          },
+          "seeds": [
+            {
+              "seed": 5621,
+              "n": 1,
+              "answer": {
+                "mean": 0.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 0.34375,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 0.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 0.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 31752.0,
+                "std": 0.0
+              },
+              "trigger_hyp_fraction": {
+                "mean": 0.24786753637732062,
+                "std": 0.0
+              },
+              "trigger_step_fraction": {
+                "mean": 0.96875,
+                "std": 0.0
