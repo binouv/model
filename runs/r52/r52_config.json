@@ -1,0 +1,32 @@
+{
+  "experiment": "FlyGraph R52 learned linear ECC protected address codebook",
+  "noise": 0.3,
+  "physical_bits": 96,
+  "logical_bits": 9,
+  "codewords": 512,
+  "max_entities": 320,
+  "beam_width": 32,
+  "expand": 8,
+  "train_seeds": [
+    5211,
+    5212,
+    5213
+  ],
+  "ablation_seed": 5299,
+  "held_seeds": [
+    5241,
+    5242,
+    5243
+  ],
+  "held_counts_per_seed": {
+    "id8": 12,
+    "ood32": 8,
+    "ood64": 8,
+    "ood128": 6
+  },
+  "training_steps_per_seed": 30000,
+  "main": "optimized [96,9] binary linear code; entity->codeword mapping is randomly permuted every episode; frozen R35 verifier/inference",
+  "ablation": "same [96,9] representation and frozen R35 inference but unoptimized random generator matrix",
+  "success_criterion": "8-hop answer delta vs matched raw96 R35 >= -2pp; main strictly improves 64 and 128 answer over raw96 R35 and over random-linear ablation.",
+  "pairing": "same path/program/updates/ops/entity code IDs and exact channel flip masks across raw/main/ablation within each episode"
+}
