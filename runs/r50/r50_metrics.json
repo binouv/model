@@ -1,0 +1,1000 @@
+{
+  "experiment": "FlyGraph R50 terminal-state anchored backward consistency reranker",
+  "status": "completed",
+  "hypothesis": "A delayed reverse-memory consistency pass, anchored by each candidate terminal reasoning state and terminal pointer, can rerank complete protected R35 trajectories better than forward-only R35 and better than the same reverse pass without terminal-state anchoring.",
+  "protocol": {
+    "experiment": "FlyGraph R50 terminal-state anchored backward consistency reranker",
+    "noise": 0.3,
+    "forward_beam": 32,
+    "forward_expand": 8,
+    "reverse_beam": 24,
+    "reverse_expand": 4,
+    "calibration_seeds": [
+      5021,
+      5022
+    ],
+    "held_seeds": [
+      5041,
+      5042,
+      5043
+    ],
+    "calibration_n_per_seed": 2,
+    "held_counts": {
+      "id8": 8,
+      "ood32": 6,
+      "ood64": 6,
+      "ood128": 4
+    },
+    "lambda_grid": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "selected_main_lambda": 0.25,
+    "selected_ablation_lambda": 0.25,
+    "success_criterion": "8-hop answer delta vs R35 >= -2pp; 64-hop and 128-hop answer strictly exceed R35 fixed32; 128-hop main strictly exceeds address-only backward ablation.",
+    "one_primary_hypothesis": true,
+    "one_confirming_ablation": "identical reverse retrieval/beam/address closure but terminal reasoning state is marginalized; only reverse address closure is used",
+    "oracle_use": "none at inference; true path/target only for evaluation metrics"
+  },
+  "calibration": {
+    "main_grid": [
+      {
+        "lambda": 0.0,
+        "objective": 4.2,
+        "conditions": {
+          "id8": {
+            "n_episodes": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0,
+              "values": [
+                1608.0,
+                1608.0,
+                1608.0,
+                1608.0
+              ]
+            },
+            "true_rank_before": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "true_rank_after": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "backward_addr_mean": {
+              "mean": -0.03342464077562142,
+              "std": 0.09534445801517855,
+              "values": [
+                0.013560922572854272,
+                -0.19040793383721275,
+                -0.020025745643678015,
+                0.06317419380555081
+              ]
+            },
+            "backward_state_logp_mean": {
+              "mean": -10.300813122162605,
+              "std": 3.198774527573714,
+              "values": [
+                -10.264880059954644,
+                -7.684697713472739,
+                -15.536223648992674,
+                -7.717451066230364
+              ]
+            },
+            "selected_backward_addr": {
+              "mean": 0.05475422424552,
+              "std": 0.0937421402956881,
+              "values": [
+                0.11209363027363677,
+                -0.10382102187384587,
+                0.07715786028551438,
+                0.13358642829677472
+              ]
+            },
+            "selected_backward_state_logp": {
+              "mean": -0.396079508254104,
+              "std": 0.2344237825457915,
+              "values": [
+                -0.7683723272857056,
+                -0.4124613115622404,
+                -0.14971455210238982,
+                -0.2537698420660802
+              ]
+            },
+            "selected_valid_reverse_paths": {
+              "mean": 3.5,
+              "std": 1.118033988749895,
+              "values": [
+                2.0,
+                5.0,
+                3.0,
+                4.0
+              ]
+            },
+            "seeds": [
+              {
+                "seed": 5021,
+                "n": 2,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "path_survival": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_path_in_beam": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "selected_true_path": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "candidate_evals": {
+                  "mean": 1608.0,
+                  "std": 0.0
+                },
+                "true_rank_before": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_rank_after": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "backward_addr_mean": {
+                  "mean": -0.08842350563217924,
+                  "std": 0.1019844282050335
+                },
+                "backward_state_logp_mean": {
+                  "mean": -8.974788886713691,
+                  "std": 1.2900911732409526
+                },
+                "selected_backward_addr": {
+                  "mean": 0.004136304199895448,
+                  "std": 0.10795732607374131
+                },
+                "selected_backward_state_logp": {
+                  "mean": -0.590416819423973,
+                  "std": 0.1779555078617326
+                },
+                "selected_valid_reverse_paths": {
+                  "mean": 3.5,
+                  "std": 1.5
+                }
+              },
+              {
+                "seed": 5022,
+                "n": 2,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "path_survival": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_path_in_beam": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "selected_true_path": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "candidate_evals": {
+                  "mean": 1608.0,
+                  "std": 0.0
+                },
+                "true_rank_before": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_rank_after": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "backward_addr_mean": {
+                  "mean": 0.0215742240809364,
+                  "std": 0.04159996972461441
+                },
+                "backward_state_logp_mean": {
+                  "mean": -11.62683735761152,
+                  "std": 3.9093862913811552
+                },
+                "selected_backward_addr": {
+                  "mean": 0.10537214429114455,
+                  "std": 0.02821428400563017
+                },
+                "selected_backward_state_logp": {
+                  "mean": -0.20174219708423502,
+                  "std": 0.0520276449818452
+                },
+                "selected_valid_reverse_paths": {
+                  "mean": 3.5,
+                  "std": 0.5
+                }
+              }
+            ]
+          },
+          "ood64": {
+            "n_episodes": 4,
+            "answer": {
+              "mean": 0.5,
+              "std": 0.5,
+              "values": [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            "path_survival": {
+              "mean": 0.78125,
+              "std": 0.2744401260976609,
+              "values": [
+                0.796875,
+                0.328125,
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_path_in_beam": {
+              "mean": 0.5,
+              "std": 0.5,
+              "values": [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            "selected_true_path": {
+              "mean": 0.5,
+              "std": 0.5,
+              "values": [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            "candidate_evals": {
+              "mean": 15944.0,
+              "std": 0.0,
+              "values": [
+                15944.0,
+                15944.0,
+                15944.0,
+                15944.0
+              ]
+            },
+            "true_rank_before": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                null,
+                null,
+                1.0,
+                1.0
+              ]
+            },
+            "true_rank_after": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                null,
+                null,
+                1.0,
+                1.0
+              ]
+            },
+            "backward_addr_mean": {
+              "mean": -1.0474872843838912,
+              "std": 0.07303929448199808,
+              "values": [
+                -1.0708866466852518,
+                -1.1548970791229816,
+                -0.9633872223329893,
+                -1.000778189394342
+              ]
+            },
+            "backward_state_logp_mean": {
+              "mean": -9.88698725587213,
+              "std": 3.2783266492171763,
+              "values": [
+                -7.388011868449942,
+                -11.354397973354203,
+                -6.276059797252832,
+                -14.529479384431545
+              ]
+            },
+            "selected_backward_addr": {
+              "mean": -1.0276097746749981,
+              "std": 0.07163842982876781,
+              "values": [
+                -1.0519701126294074,
+                -1.1329143903274608,
+                -0.9479572055401513,
+                -0.9775973902029728
+              ]
+            },
+            "selected_backward_state_logp": {
+              "mean": -8.763999916828727,
+              "std": 12.316782234933113,
+              "values": [
+                -3.5668753448478157,
+                -30.0,
+                -1.0700858241113025,
+                -0.4190384983557891
+              ]
+            },
+            "selected_valid_reverse_paths": {
+              "mean": 1.5,
+              "std": 1.118033988749895,
+              "values": [
+                2.0,
+                0.0,
+                1.0,
+                3.0
+              ]
+            },
+            "seeds": [
+              {
+                "seed": 5021,
+                "n": 2,
+                "answer": {
+                  "mean": 0.0,
+                  "std": 0.0
+                },
+                "path_survival": {
+                  "mean": 0.5625,
+                  "std": 0.234375
+                },
+                "final_true_path_in_beam": {
+                  "mean": 0.0,
+                  "std": 0.0
+                },
+                "selected_true_path": {
+                  "mean": 0.0,
+                  "std": 0.0
+                },
+                "candidate_evals": {
+                  "mean": 15944.0,
+                  "std": 0.0
+                },
+                "true_rank_before": {
+                  "mean": null,
+                  "std": null
+                },
+                "true_rank_after": {
+                  "mean": null,
+                  "std": null
+                },
+                "backward_addr_mean": {
+                  "mean": -1.1128918629041167,
+                  "std": 0.04200521621886488
+                },
+                "backward_state_logp_mean": {
+                  "mean": -9.371204920902073,
+                  "std": 1.9831930524521306
+                },
+                "selected_backward_addr": {
+                  "mean": -1.0924422514784342,
+                  "std": 0.04047213884902667
+                },
+                "selected_backward_state_logp": {
+                  "mean": -16.783437672423908,
+                  "std": 13.216562327576092
+                },
+                "selected_valid_reverse_paths": {
+                  "mean": 1.0,
+                  "std": 1.0
+                }
+              },
+              {
+                "seed": 5022,
+                "n": 2,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "path_survival": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_path_in_beam": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "selected_true_path": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "candidate_evals": {
+                  "mean": 15944.0,
+                  "std": 0.0
+                },
+                "true_rank_before": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_rank_after": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "backward_addr_mean": {
+                  "mean": -0.9820827058636656,
+                  "std": 0.018695483530676293
+                },
+                "backward_state_logp_mean": {
+                  "mean": -10.402769590842189,
+                  "std": 4.126709793589356
+                },
+                "selected_backward_addr": {
+                  "mean": -0.9627772978715621,
+                  "std": 0.014820092331410739
+                },
+                "selected_backward_state_logp": {
+                  "mean": -0.7445621612335458,
+                  "std": 0.3255236628777567
+                },
+                "selected_valid_reverse_paths": {
+                  "mean": 2.0,
+                  "std": 1.0
+                }
+              }
+            ]
+          },
+          "ood128": {
+            "n_episodes": 4,
+            "answer": {
+              "mean": 0.5,
+              "std": 0.5,
+              "values": [
+                0.0,
+                1.0,
+                0.0,
+                1.0
+              ]
+            },
+            "path_survival": {
+              "mean": 0.59765625,
+              "std": 0.41444925923032183,
+              "values": [
+                0.0546875,
+                1.0,
+                0.3359375,
+                1.0
+              ]
+            },
+            "final_true_path_in_beam": {
+              "mean": 0.5,
+              "std": 0.5,
+              "values": [
+                0.0,
+                1.0,
+                0.0,
+                1.0
+              ]
+            },
+            "selected_true_path": {
+              "mean": 0.5,
+              "std": 0.5,
+              "values": [
+                0.0,
+                1.0,
+                0.0,
+                1.0
+              ]
+            },
+            "candidate_evals": {
+              "mean": 32328.0,
+              "std": 0.0,
+              "values": [
+                32328.0,
+                32328.0,
+                32328.0,
+                32328.0
+              ]
+            },
+            "true_rank_before": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                null,
+                1.0,
+                null,
+                1.0
+              ]
+            },
+            "true_rank_after": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                null,
+                1.0,
+                null,
+                1.0
+              ]
+            },
+            "backward_addr_mean": {
+              "mean": -1.4763991656913258,
+              "std": 0.0824705052007353,
+              "values": [
+                -1.5614539023737564,
+                -1.5485593076285773,
+                -1.363108275240952,
+                -1.4324751775220173
+              ]
+            },
+            "backward_state_logp_mean": {
+              "mean": -9.844894462477926,
+              "std": 4.533938690227569,
+              "values": [
+                -8.824479702815399,
+                -17.330384399108453,
+                -8.070779959369364,
+                -5.153933788618488
+              ]
+            },
+            "selected_backward_addr": {
+              "mean": -1.467276689156539,
+              "std": 0.08651620704486124,
+              "values": [
+                -1.5572104720940159,
+                -1.5413831859283385,
+                -1.3471399422589434,
+                -1.4233731563448584
+              ]
+            },
+            "selected_backward_state_logp": {
+              "mean": -10.925805038520942,
+              "std": 11.133287824175337,
+              "values": [
+                -3.5507925976260992,
+                -30.0,
+                -7.2150491326781605,
+                -2.9373784237795064
+              ]
+            },
+            "selected_valid_reverse_paths": {
+              "mean": 1.5,
+              "std": 0.8660254037844386,
+              "values": [
+                2.0,
+                0.0,
+                2.0,
+                2.0
+              ]
+            },
+            "seeds": [
+              {
+                "seed": 5021,
+                "n": 2,
+                "answer": {
+                  "mean": 0.5,
+                  "std": 0.5
+                },
+                "path_survival": {
+                  "mean": 0.52734375,
+                  "std": 0.47265625
+                },
+                "final_true_path_in_beam": {
+                  "mean": 0.5,
+                  "std": 0.5
+                },
+                "selected_true_path": {
+                  "mean": 0.5,
+                  "std": 0.5
+                },
+                "candidate_evals": {
+                  "mean": 32328.0,
+                  "std": 0.0
+                },
+                "true_rank_before": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_rank_after": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "backward_addr_mean": {
+                  "mean": -1.5550066050011668,
+                  "std": 0.006447297372589533
+                },
+                "backward_state_logp_mean": {
+                  "mean": -13.077432050961926,
+                  "std": 4.252952348146527
+                },
+                "selected_backward_addr": {
+                  "mean": -1.549296829011177,
+                  "std": 0.007913643082838706
+                },
+                "selected_backward_state_logp": {
+                  "mean": -16.77539629881305,
+                  "std": 13.22460370118695
+                },
+                "selected_valid_reverse_paths": {
+                  "mean": 1.0,
+                  "std": 1.0
+                }
+              },
+              {
+                "seed": 5022,
+                "n": 2,
+                "answer": {
+                  "mean": 0.5,
+                  "std": 0.5
+                },
+                "path_survival": {
+                  "mean": 0.66796875,
+                  "std": 0.33203125
+                },
+                "final_true_path_in_beam": {
+                  "mean": 0.5,
+                  "std": 0.5
+                },
+                "selected_true_path": {
+                  "mean": 0.5,
+                  "std": 0.5
+                },
+                "candidate_evals": {
+                  "mean": 32328.0,
+                  "std": 0.0
+                },
+                "true_rank_before": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_rank_after": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "backward_addr_mean": {
+                  "mean": -1.3977917263814845,
+                  "std": 0.03468345114053262
+                },
+                "backward_state_logp_mean": {
+                  "mean": -6.612356873993926,
+                  "std": 1.458423085375438
+                },
+                "selected_backward_addr": {
+                  "mean": -1.385256549301901,
+                  "std": 0.038116607042957495
+                },
+                "selected_backward_state_logp": {
+                  "mean": -5.0762137782288335,
+                  "std": 2.138835354449327
+                },
+                "selected_valid_reverse_paths": {
+                  "mean": 2.0,
+                  "std": 0.0
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "lambda": 0.25,
+        "objective": 4.2,
+        "conditions": {
+          "id8": {
+            "n_episodes": 4,
+            "answer": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "path_survival": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_path_in_beam": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "selected_true_path": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "candidate_evals": {
+              "mean": 1608.0,
+              "std": 0.0,
+              "values": [
+                1608.0,
+                1608.0,
+                1608.0,
+                1608.0
+              ]
+            },
+            "true_rank_before": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "true_rank_after": {
+              "mean": 1.0,
+              "std": 0.0,
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "backward_addr_mean": {
+              "mean": -0.03342464077562142,
+              "std": 0.09534445801517855,
+              "values": [
+                0.013560922572854272,
+                -0.19040793383721275,
+                -0.020025745643678015,
+                0.06317419380555081
+              ]
+            },
+            "backward_state_logp_mean": {
+              "mean": -10.300813122162605,
+              "std": 3.198774527573714,
+              "values": [
+                -10.264880059954644,
+                -7.684697713472739,
+                -15.536223648992674,
+                -7.717451066230364
+              ]
+            },
+            "selected_backward_addr": {
+              "mean": 0.05475422424552,
+              "std": 0.0937421402956881,
+              "values": [
+                0.11209363027363677,
+                -0.10382102187384587,
+                0.07715786028551438,
+                0.13358642829677472
+              ]
+            },
+            "selected_backward_state_logp": {
+              "mean": -0.396079508254104,
+              "std": 0.2344237825457915,
+              "values": [
+                -0.7683723272857056,
+                -0.4124613115622404,
+                -0.14971455210238982,
+                -0.2537698420660802
+              ]
+            },
+            "selected_valid_reverse_paths": {
+              "mean": 3.5,
+              "std": 1.118033988749895,
+              "values": [
+                2.0,
+                5.0,
+                3.0,
+                4.0
+              ]
+            },
+            "seeds": [
+              {
+                "seed": 5021,
+                "n": 2,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "path_survival": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_path_in_beam": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "selected_true_path": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "candidate_evals": {
+                  "mean": 1608.0,
+                  "std": 0.0
+                },
+                "true_rank_before": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_rank_after": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "backward_addr_mean": {
+                  "mean": -0.08842350563217924,
+                  "std": 0.1019844282050335
+                },
+                "backward_state_logp_mean": {
+                  "mean": -8.974788886713691,
+                  "std": 1.2900911732409526
+                },
+                "selected_backward_addr": {
+                  "mean": 0.004136304199895448,
+                  "std": 0.10795732607374131
+                },
+                "selected_backward_state_logp": {
+                  "mean": -0.590416819423973,
+                  "std": 0.1779555078617326
+                },
+                "selected_valid_reverse_paths": {
+                  "mean": 3.5,
+                  "std": 1.5
+                }
+              },
+              {
+                "seed": 5022,
+                "n": 2,
+                "answer": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "path_survival": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "final_true_path_in_beam": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "selected_true_path": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "candidate_evals": {
+                  "mean": 1608.0,
+                  "std": 0.0
+                },
+                "true_rank_before": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "true_rank_after": {
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                "backward_addr_mean": {
+                  "mean": 0.0215742240809364,
+                  "std": 0.04159996972461441
+                },
+                "backward_state_logp_mean": {
+                  "mean": -11.62683735761152,
+                  "std": 3.9093862913811552
+                },
+                "selected_backward_addr": {
+                  "mean": 0.10537214429114455,
+                  "std": 0.02821428400563017
+                },
+                "selected_backward_state_logp": {
+                  "mean": -0.20174219708423502,
+                  "std": 0.0520276449818452
+                },
+                "selected_valid_reverse_paths": {
+                  "mean": 3.5,
+                  "std": 0.5
+                }
+              }
+            ]
+          },
+          "ood64": {
+            "n_episodes": 4,
+            "answer": {
+              "mean": 0.5,
+              "std": 0.5,
+              "values": [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            "path_survival": {
+              "mean": 0.78125,
+              "std": 0.2744401260976609,
+              "values": [
+                0.796875,
+                0.328125,
+                1.0,
+                1.0
+              ]
+            },
+            "final_true_path_in_beam": {
+              "mean": 0.5,
+              "std": 0.5,
+              "values": [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ]
