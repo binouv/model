@@ -1,0 +1,36 @@
+{
+  "experiment": "FlyGraph R57 state-conditional diversity",
+  "noise": 0.3,
+  "beam_width": 32,
+  "expand": 8,
+  "ecc_topk": 4,
+  "ecc_beta": 0.1,
+  "trigger_threshold": 1.694594383239746,
+  "calibration_seeds": [
+    5721,
+    5722
+  ],
+  "held_seeds": [
+    5751,
+    5752,
+    5753
+  ],
+  "cap_grid": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "selected_cap": 1,
+  "held_counts_per_seed": {
+    "id8": 6,
+    "ood32": 4,
+    "ood64": 4,
+    "ood128": 2
+  },
+  "group_key": "(hard decoded protected child address, next reasoning state)",
+  "main_pruning": "cap selected joint-state occupancy before global backfill, then globally re-sort",
+  "ablation": "ordinary global top-32 on identical candidates",
+  "success_criterion": "8-hop delta >= -2pp and strictly higher answer at 64 or 128 hops",
+  "incomplete_runs_included": false
+}
