@@ -1,0 +1,1000 @@
+{
+  "main_grid": [
+    {
+      "lambda": 0.0,
+      "objective": 6.05,
+      "conditions": {
+        "id8": {
+          "n_episodes": 4,
+          "answer": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 1608.0,
+            "std": 0.0,
+            "values": [
+              1608.0,
+              1608.0,
+              1608.0,
+              1608.0
+            ]
+          },
+          "true_rank_before": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "true_rank_after": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "midpoint_address_evidence_mean": {
+            "mean": 1.8111418305808489,
+            "std": 0.8387640370343725,
+            "values": [
+              1.513975278616838,
+              1.7214695781783242,
+              3.1541109786537427,
+              0.8550114868744912
+            ]
+          },
+          "midpoint_joint_evidence_mean": {
+            "mean": -4.387368015746446,
+            "std": 3.8545420019453354,
+            "values": [
+              -9.636879386719746,
+              -1.7447445062480431,
+              0.19412528702300436,
+              -6.361973457040999
+            ]
+          },
+          "selected_midpoint_address_evidence": {
+            "mean": 3.545854096582162,
+            "std": 1.3003914251052056,
+            "values": [
+              2.8564077023445402,
+              4.337074114242332,
+              5.176860125075474,
+              1.813074444666303
+            ]
+          },
+          "selected_midpoint_joint_evidence": {
+            "mean": 3.301201415428657,
+            "std": 1.0909957087752524,
+            "values": [
+              2.775823136408192,
+              4.301955291650271,
+              4.3616979084865894,
+              1.7653293251695763
+            ]
+          },
+          "selected_valid_reverse_midpaths": {
+            "mean": 2.0,
+            "std": 0.7071067811865476,
+            "values": [
+              3.0,
+              2.0,
+              1.0,
+              2.0
+            ]
+          },
+          "seeds": [
+            {
+              "seed": 5121,
+              "n": 2,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 1608.0,
+                "std": 0.0
+              },
+              "true_rank_before": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "true_rank_after": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "midpoint_address_evidence_mean": {
+                "mean": 1.617722428397581,
+                "std": 0.10374714978074318
+              },
+              "midpoint_joint_evidence_mean": {
+                "mean": -5.690811946483895,
+                "std": 3.9460674402358515
+              },
+              "selected_midpoint_address_evidence": {
+                "mean": 3.5967409082934365,
+                "std": 0.7403332059488961
+              },
+              "selected_midpoint_joint_evidence": {
+                "mean": 3.538889214029231,
+                "std": 0.7630660776210394
+              },
+              "selected_valid_reverse_midpaths": {
+                "mean": 2.5,
+                "std": 0.5
+              }
+            },
+            {
+              "seed": 5122,
+              "n": 2,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 1608.0,
+                "std": 0.0
+              },
+              "true_rank_before": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "true_rank_after": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "midpoint_address_evidence_mean": {
+                "mean": 2.004561232764117,
+                "std": 1.1495497458896258
+              },
+              "midpoint_joint_evidence_mean": {
+                "mean": -3.0839240850089973,
+                "std": 3.2780493720320014
+              },
+              "selected_midpoint_address_evidence": {
+                "mean": 3.4949672848708886,
+                "std": 1.6818928402045854
+              },
+              "selected_midpoint_joint_evidence": {
+                "mean": 3.0635136168280828,
+                "std": 1.2981842916585067
+              },
+              "selected_valid_reverse_midpaths": {
+                "mean": 1.5,
+                "std": 0.5
+              }
+            }
+          ]
+        },
+        "ood64": {
+          "n_episodes": 4,
+          "answer": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 15944.0,
+            "std": 0.0,
+            "values": [
+              15944.0,
+              15944.0,
+              15944.0,
+              15944.0
+            ]
+          },
+          "true_rank_before": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "true_rank_after": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "midpoint_address_evidence_mean": {
+            "mean": 3.2643276546908977,
+            "std": 1.2868808616376002,
+            "values": [
+              4.335703098450198,
+              3.183033441286179,
+              4.34720733157889,
+              1.1913667474483232
+            ]
+          },
+          "midpoint_joint_evidence_mean": {
+            "mean": -4.506128173737734,
+            "std": 3.411096264664558,
+            "values": [
+              -8.951294905626114,
+              -3.2852323328788238,
+              0.2757277317978998,
+              -6.0637131882439
+            ]
+          },
+          "selected_midpoint_address_evidence": {
+            "mean": 3.4241001704535634,
+            "std": 1.0487100725665082,
+            "values": [
+              4.325123937149481,
+              3.2891936861312097,
+              4.320818820902119,
+              1.761264237631444
+            ]
+          },
+          "selected_midpoint_joint_evidence": {
+            "mean": 2.7107284801627394,
+            "std": 0.9979747523060777,
+            "values": [
+              3.514761455174707,
+              2.4482449570328413,
+              3.6893155704549656,
+              1.1905919379884438
+            ]
+          },
+          "selected_valid_reverse_midpaths": {
+            "mean": 3.0,
+            "std": 1.224744871391589,
+            "values": [
+              4.0,
+              3.0,
+              4.0,
+              1.0
+            ]
+          },
+          "seeds": [
+            {
+              "seed": 5121,
+              "n": 2,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 15944.0,
+                "std": 0.0
+              },
+              "true_rank_before": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "true_rank_after": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "midpoint_address_evidence_mean": {
+                "mean": 3.7593682698681885,
+                "std": 0.5763348285820094
+              },
+              "midpoint_joint_evidence_mean": {
+                "mean": -6.118263619252469,
+                "std": 2.833031286373645
+              },
+              "selected_midpoint_address_evidence": {
+                "mean": 3.8071588116403454,
+                "std": 0.5179651255091358
+              },
+              "selected_midpoint_joint_evidence": {
+                "mean": 2.981503206103774,
+                "std": 0.5332582490709328
+              },
+              "selected_valid_reverse_midpaths": {
+                "mean": 3.5,
+                "std": 0.5
+              }
+            },
+            {
+              "seed": 5122,
+              "n": 2,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 15944.0,
+                "std": 0.0
+              },
+              "true_rank_before": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "true_rank_after": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "midpoint_address_evidence_mean": {
+                "mean": 2.7692870395136064,
+                "std": 1.5779202920652833
+              },
+              "midpoint_joint_evidence_mean": {
+                "mean": -2.8939927282230005,
+                "std": 3.1697204600209
+              },
+              "selected_midpoint_address_evidence": {
+                "mean": 3.0410415292667814,
+                "std": 1.2797772916353374
+              },
+              "selected_midpoint_joint_evidence": {
+                "mean": 2.4399537542217047,
+                "std": 1.249361816233261
+              },
+              "selected_valid_reverse_midpaths": {
+                "mean": 2.5,
+                "std": 1.5
+              }
+            }
+          ]
+        },
+        "ood128": {
+          "n_episodes": 4,
+          "answer": {
+            "mean": 0.75,
+            "std": 0.4330127018922193,
+            "values": [
+              0.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 0.849609375,
+            "std": 0.2604842034820382,
+            "values": [
+              0.3984375,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 0.75,
+            "std": 0.4330127018922193,
+            "values": [
+              0.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 0.75,
+            "std": 0.4330127018922193,
+            "values": [
+              0.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 32328.0,
+            "std": 0.0,
+            "values": [
+              32328.0,
+              32328.0,
+              32328.0,
+              32328.0
+            ]
+          },
+          "true_rank_before": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              null,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "true_rank_after": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              null,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "midpoint_address_evidence_mean": {
+            "mean": 2.453057619324923,
+            "std": 0.7541780018757354,
+            "values": [
+              1.8639940032144713,
+              1.6769716900987985,
+              2.6917766270656416,
+              3.5794881569207813
+            ]
+          },
+          "midpoint_joint_evidence_mean": {
+            "mean": -6.523774144646501,
+            "std": 2.8933905142715624,
+            "values": [
+              -7.8035437567883,
+              -10.66486743349357,
+              -3.8745533531589866,
+              -3.75213203514515
+            ]
+          },
+          "selected_midpoint_address_evidence": {
+            "mean": 2.8502280102076547,
+            "std": 0.5477628140548533,
+            "values": [
+              3.167780655316932,
+              2.0510078755972643,
+              2.675982177863972,
+              3.506141332052451
+            ]
+          },
+          "selected_midpoint_joint_evidence": {
+            "mean": 1.2349097366859034,
+            "std": 1.387178556089458,
+            "values": [
+              -1.0911452046203465,
+              1.6246612457384941,
+              1.8425173735137577,
+              2.5636055321117084
+            ]
+          },
+          "selected_valid_reverse_midpaths": {
+            "mean": 3.0,
+            "std": 1.4142135623730951,
+            "values": [
+              5.0,
+              3.0,
+              1.0,
+              3.0
+            ]
+          },
+          "seeds": [
+            {
+              "seed": 5121,
+              "n": 2,
+              "answer": {
+                "mean": 0.5,
+                "std": 0.5
+              },
+              "path_survival": {
+                "mean": 0.69921875,
+                "std": 0.30078125
+              },
+              "final_true_path_in_beam": {
+                "mean": 0.5,
+                "std": 0.5
+              },
+              "selected_true_path": {
+                "mean": 0.5,
+                "std": 0.5
+              },
+              "candidate_evals": {
+                "mean": 32328.0,
+                "std": 0.0
+              },
+              "true_rank_before": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "true_rank_after": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "midpoint_address_evidence_mean": {
+                "mean": 1.770482846656635,
+                "std": 0.09351115655783637
+              },
+              "midpoint_joint_evidence_mean": {
+                "mean": -9.234205595140935,
+                "std": 1.4306618383526346
+              },
+              "selected_midpoint_address_evidence": {
+                "mean": 2.609394265457098,
+                "std": 0.5583863898598338
+              },
+              "selected_midpoint_joint_evidence": {
+                "mean": 0.2667580205590738,
+                "std": 1.3579032251794203
+              },
+              "selected_valid_reverse_midpaths": {
+                "mean": 4.0,
+                "std": 1.0
+              }
+            },
+            {
+              "seed": 5122,
+              "n": 2,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 32328.0,
+                "std": 0.0
+              },
+              "true_rank_before": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "true_rank_after": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "midpoint_address_evidence_mean": {
+                "mean": 3.1356323919932114,
+                "std": 0.44385576492756984
+              },
+              "midpoint_joint_evidence_mean": {
+                "mean": -3.8133426941520683,
+                "std": 0.061210659006918355
+              },
+              "selected_midpoint_address_evidence": {
+                "mean": 3.0910617549582113,
+                "std": 0.4150795770942395
+              },
+              "selected_midpoint_joint_evidence": {
+                "mean": 2.203061452812733,
+                "std": 0.36054407929897536
+              },
+              "selected_valid_reverse_midpaths": {
+                "mean": 2.0,
+                "std": 1.0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "lambda": 0.25,
+      "objective": 6.05,
+      "conditions": {
+        "id8": {
+          "n_episodes": 4,
+          "answer": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 1608.0,
+            "std": 0.0,
+            "values": [
+              1608.0,
+              1608.0,
+              1608.0,
+              1608.0
+            ]
+          },
+          "true_rank_before": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "true_rank_after": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "midpoint_address_evidence_mean": {
+            "mean": 1.8111418305808489,
+            "std": 0.8387640370343725,
+            "values": [
+              1.513975278616838,
+              1.7214695781783242,
+              3.1541109786537427,
+              0.8550114868744912
+            ]
+          },
+          "midpoint_joint_evidence_mean": {
+            "mean": -4.387368015746446,
+            "std": 3.8545420019453354,
+            "values": [
+              -9.636879386719746,
+              -1.7447445062480431,
+              0.19412528702300436,
+              -6.361973457040999
+            ]
+          },
+          "selected_midpoint_address_evidence": {
+            "mean": 3.545854096582162,
+            "std": 1.3003914251052056,
+            "values": [
+              2.8564077023445402,
+              4.337074114242332,
+              5.176860125075474,
+              1.813074444666303
+            ]
+          },
+          "selected_midpoint_joint_evidence": {
+            "mean": 3.301201415428657,
+            "std": 1.0909957087752524,
+            "values": [
+              2.775823136408192,
+              4.301955291650271,
+              4.3616979084865894,
+              1.7653293251695763
+            ]
+          },
+          "selected_valid_reverse_midpaths": {
+            "mean": 2.0,
+            "std": 0.7071067811865476,
+            "values": [
+              3.0,
+              2.0,
+              1.0,
+              2.0
+            ]
+          },
+          "seeds": [
+            {
+              "seed": 5121,
+              "n": 2,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 1608.0,
+                "std": 0.0
+              },
+              "true_rank_before": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "true_rank_after": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "midpoint_address_evidence_mean": {
+                "mean": 1.617722428397581,
+                "std": 0.10374714978074318
+              },
+              "midpoint_joint_evidence_mean": {
+                "mean": -5.690811946483895,
+                "std": 3.9460674402358515
+              },
+              "selected_midpoint_address_evidence": {
+                "mean": 3.5967409082934365,
+                "std": 0.7403332059488961
+              },
+              "selected_midpoint_joint_evidence": {
+                "mean": 3.538889214029231,
+                "std": 0.7630660776210394
+              },
+              "selected_valid_reverse_midpaths": {
+                "mean": 2.5,
+                "std": 0.5
+              }
+            },
+            {
+              "seed": 5122,
+              "n": 2,
+              "answer": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "path_survival": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "final_true_path_in_beam": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "selected_true_path": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "candidate_evals": {
+                "mean": 1608.0,
+                "std": 0.0
+              },
+              "true_rank_before": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "true_rank_after": {
+                "mean": 1.0,
+                "std": 0.0
+              },
+              "midpoint_address_evidence_mean": {
+                "mean": 2.004561232764117,
+                "std": 1.1495497458896258
+              },
+              "midpoint_joint_evidence_mean": {
+                "mean": -3.0839240850089973,
+                "std": 3.2780493720320014
+              },
+              "selected_midpoint_address_evidence": {
+                "mean": 3.4949672848708886,
+                "std": 1.6818928402045854
+              },
+              "selected_midpoint_joint_evidence": {
+                "mean": 3.0635136168280828,
+                "std": 1.2981842916585067
+              },
+              "selected_valid_reverse_midpaths": {
+                "mean": 1.5,
+                "std": 0.5
+              }
+            }
+          ]
+        },
+        "ood64": {
+          "n_episodes": 4,
+          "answer": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "path_survival": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "final_true_path_in_beam": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "selected_true_path": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "candidate_evals": {
+            "mean": 15944.0,
+            "std": 0.0,
+            "values": [
+              15944.0,
+              15944.0,
+              15944.0,
+              15944.0
+            ]
+          },
+          "true_rank_before": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "true_rank_after": {
+            "mean": 1.0,
+            "std": 0.0,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
