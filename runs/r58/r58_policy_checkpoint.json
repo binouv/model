@@ -1,0 +1,26 @@
+{
+  "release": "FlyGraph-R58",
+  "type": "inference_policy_checkpoint",
+  "trainable_parameters_added": 0,
+  "selected_horizon": 1,
+  "beam_width": 32,
+  "expand": 8,
+  "ecc_topk": 4,
+  "ecc_beta": 0.1,
+  "trigger_threshold": 1.694594383239746,
+  "rerank_pool": 48,
+  "lookahead_weight": 0.5,
+  "future_margin_weight": 0.15,
+  "discount": 0.8,
+  "frozen_dependencies": {
+    "r35_verifier_weights.npz": {
+      "sha256": "c618260f21a3499d2443ec69a5cc227d359fcedfd16da771b62afb0ec2893f52",
+      "size_bytes": 3778
+    },
+    "r52_ecc_model.npz": {
+      "sha256": "17e2088950559dfc72124efac4f8c77dcb84ef260320f93fdda097c1ea7308cf",
+      "size_bytes": 12611
+    }
+  },
+  "note": "R58 adds no learned weights; this checkpoint versions the successful cognition inference policy over frozen R35 + R52."
+}

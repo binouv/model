@@ -1,0 +1,38 @@
+{
+  "experiment": "FlyGraph R58 shallow lookahead value reranking",
+  "noise": 0.3,
+  "beam_width": 32,
+  "expand": 8,
+  "ecc_topk": 4,
+  "ecc_beta": 0.1,
+  "trigger_threshold": 1.694594383239746,
+  "rerank_pool": 48,
+  "lookahead_weight": 0.5,
+  "future_margin_weight": 0.15,
+  "discount": 0.8,
+  "horizon_grid": [
+    1,
+    2,
+    4
+  ],
+  "selected_horizon": 1,
+  "calibration_seeds": [
+    5821,
+    5822
+  ],
+  "held_seeds": [
+    5851,
+    5852,
+    5853
+  ],
+  "held_counts_per_seed": {
+    "id8": 6,
+    "ood32": 4,
+    "ood64": 4,
+    "ood128": 2
+  },
+  "main": "R54 candidate support + frozen R35 score; before each top-32 prune rerank immediate top-48 candidates by immediate cumulative score plus 0.5 * oracle-free shallow future consistency/value. Selected H is frozen from calibration.",
+  "ablation": "identical R54 candidate generation and frozen R35 scoring with ordinary immediate global top-32 pruning; no lookahead.",
+  "success_criterion": "8-hop answer delta >= -2pp and strictly higher answer at 64 or 128 hops.",
+  "incomplete_runs_included": false
+}

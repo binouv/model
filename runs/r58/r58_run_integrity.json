@@ -1,0 +1,25 @@
+{
+  "status": "completed",
+  "incomplete_or_timed_out_included": false,
+  "calibration_completed": true,
+  "selected_horizon": 1,
+  "held_completed": {
+    "id8": 18,
+    "ood32": 12,
+    "ood64": 12,
+    "ood128": 6
+  },
+  "ood128_completed_seed_chunks": [
+    5851,
+    5852,
+    5853
+  ],
+  "semantic_mismatch_total": 0,
+  "excluded_incomplete_attempts": [
+    {
+      "type": "full_rerun_wrapper",
+      "reason": "wall_time_timeout",
+      "included_in_metrics": false
+    }
+  ]
+}
