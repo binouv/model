@@ -1,0 +1,14 @@
+{
+  "experiment":"FlyGraph R59 distilled shallow branch value",
+  "status":"completed",
+  "held":{
+    "id8":{"n":12,"r59_student":{"answer":1.0,"path_survival":1.0,"final_true_path":1.0,"selected_true_path":1.0,"edge_evals":3470.6666666666665,"generation_losses_per_episode":0.0,"pruning_losses_per_episode":0.0},"exact_r58":{"answer":1.0,"path_survival":1.0,"final_true_path":1.0,"selected_true_path":1.0,"edge_evals":8706.666666666666}},
+    "ood64":{"n":12,"r59_student":{"answer":1.0,"path_survival":1.0,"final_true_path":1.0,"selected_true_path":1.0,"edge_evals":33948.0,"generation_losses_per_episode":0.0,"pruning_losses_per_episode":0.0},"exact_r58":{"answer":1.0,"path_survival":1.0,"final_true_path":1.0,"selected_true_path":1.0,"edge_evals":86202.66666666667}},
+    "ood128":{"n":6,"r59_student":{"answer":0.8333333333333334,"path_survival":0.9505208333333334,"final_true_path":0.8333333333333334,"selected_true_path":0.8333333333333334,"edge_evals":66126.66666666667,"generation_losses_per_episode":0.16666666666666666,"pruning_losses_per_episode":0.0},"exact_r58":{"answer":0.8333333333333334,"path_survival":0.9505208333333334,"final_true_path":0.8333333333333334,"selected_true_path":0.8333333333333334,"edge_evals":169624.0,"generation_losses_per_episode":0.16666666666666666,"pruning_losses_per_episode":0.0}}
+  },
+  "training":{"samples":32412,"feature_dim":34,"train_corr":0.8009219512401193,"train_rmse":0.8226417053600968,"iterations":170,"loss":0.1746490192911796},
+  "calibration":{"ood64_corr":0.5298582587607997,"ood128_corr":0.604915658596678},
+  "verdict":{"status":"CONFIRMED","criterion_met":true,"id8_delta_pp":0.0,"ood64_delta_pp":0.0,"ood128_delta_pp":0.0,"ood128_compute_ratio_vs_exact_r58":0.38984263233190275},
+  "semantic_mismatches":0,
+  "integrity":{"incomplete_or_timed_out_included":false,"note":"initial monolithic wrapper timeout excluded; only fully completed train/calibration/held chunks aggregated"}
+}
