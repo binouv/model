@@ -1,0 +1,15 @@
+{
+  "experiment": "FlyGraph R59 distilled shallow branch value",
+  "train_seeds": [5911,5912,5913],
+  "calibration_seeds": [5941,5942],
+  "held_seeds": [5951,5952,5953],
+  "train_conditions": ["id8","ood32","ood64","ood128"],
+  "held_counts_per_seed": {"id8":4,"ood64":4,"ood128":2},
+  "student_architecture": [34,48,24,1],
+  "features": "current R35 edge features + candidate/ancestry summaries + already-computed ECC decoder log-probs + pool-relative rank statistics; no future edge expansion",
+  "teacher": "frozen exact R58 H=1 rollout value",
+  "main": "student value, R58 weight 0.5, zero explicit lookahead edges",
+  "ablation": "exact R58 H=1 on identical episodes",
+  "success_criterion": "8-hop delta >= -2pp; mean 64/128 answer gap <=8.4pp; 128-hop edge-eval ratio <=0.55",
+  "incomplete_runs_included": false
+}
