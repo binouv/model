@@ -1,0 +1,8 @@
+{
+  "release":"FlyGraph-R60-policy",
+  "status":"REFUTED / SPURIOUS ANSWER GAIN",
+  "base_model":"FlyGraph-R59",
+  "trigger":"R59 boundary gap <= 0.0214364938712599",
+  "fallback":"exact R58 H=1",
+  "note":"Not promoted as cognition model: 256 answer gain was a final-state collision with zero true-path retention gain."
+}
