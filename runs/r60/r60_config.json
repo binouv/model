@@ -1,0 +1,12 @@
+{
+  "experiment":"FlyGraph R60 selective exact fallback",
+  "calibration_seeds":[6041,6042],
+  "held_seeds":[6051,6052,6053],
+  "trigger_quantile":0.25,
+  "trigger_threshold":0.0214364938712599,
+  "extended_256_condition":[256,480,900,0.50],
+  "main":"R59 student + exact H1 fallback when boundary gap <= threshold",
+  "ablation":"pure R59 student",
+  "primary_cognition_success_criterion":"improve 128/256 true-path retention or path survival without >2pp id8 regression; 256 compute ratio <=1.5",
+  "incomplete_runs_included":false
+}
