@@ -1,0 +1,18 @@
+{
+  "status":"completed",
+  "train_seeds":[5911,5912,5913],
+  "conditions":["id8","ood32","ood64","ood128"],
+  "episodes":12,
+  "samples":32412,
+  "feature_dim":34,
+  "target_mean":-0.48730032890749986,
+  "target_std":1.3724681344251486,
+  "train_rmse":0.8226417053600968,
+  "train_corr":0.8009219512401193,
+  "iterations":170,
+  "loss":0.1746490192911796,
+  "hidden":[48,24],
+  "teacher_edge_evals":570912,
+  "elapsed_sec":18.747045516967773,
+  "incomplete_or_timed_out_included":false
+}
