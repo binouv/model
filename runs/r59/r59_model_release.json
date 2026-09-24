@@ -1,0 +1,15 @@
+{
+  "release":"FlyGraph-R59",
+  "type":"trained_branch_value_student",
+  "status":"CONFIRMED",
+  "architecture":[34,48,24,1],
+  "trainable_parameters":2881,
+  "model_sha256":"b543bf415917a662e4ff2973b8e49282be74802f1a9b0e26d4f93aac0fac0009",
+  "frozen_dependencies":{
+    "r35_verifier_weights.npz":"c618260f21a3499d2443ec69a5cc227d359fcedfd16da771b62afb0ec2893f52",
+    "r52_codebook":"reproduces canonical R58 held results exactly"
+  },
+  "held_128_answer":0.8333333333333334,
+  "held_128_exact_r58_answer":0.8333333333333334,
+  "held_128_compute_ratio":0.38984263233190275
+}
