@@ -1,0 +1,12 @@
+{
+ "status":"completed_main_arm_only",
+ "arm":"answer_only",
+ "training":{"steps":256,"trainable_parameters":309993253,"example_presentations":1024,"unique_examples_presented":891,"input_tokens":49716,"supervised_tokens":5139,"padded_forward_tokens":51268,"changed_sampled_parameter_tensors":130,"parameter_tensors":130,"elapsed_sec":1870.450447894},
+ "held":{"test_iid":{"n":160,"correct":4,"accuracy":0.025},"test_surface":{"n":80,"correct":1,"accuracy":0.0125},"test_extrapolation":{"n":80,"correct":0,"accuracy":0.0},"test_counterfactual":{"n":80,"correct":0,"accuracy":0.0,"both_in_pair_correct":0,"pair_count":40}},
+ "all400primary_cases_completed":true,
+ "main_supplemental":{"correct":1,"n":40,"max_new_tokens":64},
+ "full_paired_experiment_status":"control_in_progress_at_this_snapshot",
+ "final_primary_verdict":null,
+ "weights_local_only":true,
+ "not_a_Qwen_level_reasoner":true
+}

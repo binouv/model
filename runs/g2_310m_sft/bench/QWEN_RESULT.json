@@ -1,0 +1,21 @@
+{
+ "status":"completed",
+ "protocol":"format_explicit_post_smoke_supplemental",
+ "n":40,"correct":32,"accuracy":0.8,"limit_stop_fraction":0.0,
+ "by_family":{"arithmetic":{"n":8,"correct":8},"conditional":{"n":8,"correct":3},"code_trace":{"n":8,"correct":5},"list_reasoning":{"n":8,"correct":8},"memory_update":{"n":8,"correct":8}},
+ "model_id":"Qwen/Qwen3.5-4B",
+ "conversion":"unsloth/Qwen3.5-4B-GGUF Q4_K_M",
+ "model_sha256":"00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+ "model_bytes":2740937888,
+ "llama_commit":"7fe450e19305b828c199d602c23a8337aaa1f03b",
+ "thinking":false,"max_new_tokens":64,"temperature":0,"tools":false,
+ "instruction_prefix":"Give only the final integer. Do not explain.\n",
+ "fixture_sha256":"ddef92124f5fe5f9058711480ceba522472606f06d4e2568aadf232f7317828d",
+ "workflow_run_id":36186603496,"workflow_job_id":108241335102,
+ "workflow_commit":"450d46f7cfaa0e8ee6954ab190abeb14e7f69c1c",
+ "raw_texts_in_same_fixture_order":["385","-4","1","99","20","64","39","52","45","43","968","17","17","87","15","319","29","44","47","36","-25","-7","-14","33","2","-38","4","49","79","31","1188","-15","70","18","1","6","-13","26","46","11"],
+ "all_responses_ended_with_eos":true,
+ "tokens_predicted_in_same_order":[4,3,2,3,3,3,3,3,3,3,4,3,3,3,3,4,3,3,3,3,4,3,4,3,2,4,2,3,3,3,5,4,3,3,2,2,4,3,3,3],
+ "first_8token_run":{"run_id":36184901486,"all40truncated":true,"intelligence_comparison_valid":false,"accuracy_not_reported":true},
+ "scope":"forty fixed synthetic tasks; quantized non-thinking result, not a full-precision/thinking ceiling or broad intelligence score. Qwen27B not run."
+}
