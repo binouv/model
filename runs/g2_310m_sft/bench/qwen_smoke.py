@@ -1,5 +1,7 @@
 """One finite CPU integration benchmark. No paid API, no generated-code execution.
-Quantized Qwen4B and an eight-token non-thinking budget are NOT its capability ceiling.
+Supplemental protocol after the eight-token smoke was censored by its budget.
+Same forty cases, explicit integer-only instruction for ALL compared models, 64-token cap.
+Quantized Qwen4B non-thinking is NOT its capability ceiling.
 Only raw prompts from the fixture are sent; gold labels remain outside this program.
 """
 from __future__ import annotations
@@ -29,7 +31,7 @@ def main():
             while b:=f.read(8<<20):out.write(b);h.update(b);count+=len(b)
         with model.open('rb') as f:magic=f.read(4)
         if h.hexdigest()!=MODEL_SHA or magic!=b'GGUF':raise ValueError('model checksum or format mismatch')
-        meta={'model_id':'Qwen/Qwen3.5-4B','conversion':'unsloth/Qwen3.5-4B-GGUF Q4_K_M','sha256':h.hexdigest(),'bytes':count,'llama_commit':commit,'llama_tag':TAG,'thinking':False,'max_new_tokens':8,'tools':False,'fixture_sha256':hashlib.sha256(a.prompts.read_bytes()).hexdigest()}
+        meta={'model_id':'Qwen/Qwen3.5-4B','conversion':'unsloth/Qwen3.5-4B-GGUF Q4_K_M','sha256':h.hexdigest(),'bytes':count,'llama_commit':commit,'llama_tag':TAG,'thinking':False,'max_new_tokens':64,'instruction_prefix':'Give only the final integer. Do not explain.\n','tools':False,'fixture_sha256':hashlib.sha256(a.prompts.read_bytes()).hexdigest()}
         print('FG_METADATA '+json.dumps(meta),flush=True)
         log=root/'server.log';f=log.open('w')
         p=subprocess.Popen([str(source/'build/bin/llama-server'),'-m',str(model),'-c','512','-t','4','-ngl','0','--host','127.0.0.1','--port','18080','--no-webui'],stdout=f,stderr=subprocess.STDOUT)
@@ -42,16 +44,18 @@ def main():
                         if q.status==200:ready=True;break
                 except Exception:time.sleep(1)
             if not ready:raise RuntimeError('server startup timeout')
+            compact=[]
             for z in rows:
                 # Official single-turn Qwen3.5 no-thinking template, empty system message omitted.
-                prompt='<|im_start|>user\n'+z['prompt']+'<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n'
-                body={'prompt':prompt,'n_predict':8,'temperature':0.0,'seed':7301,'cache_prompt':False}
+                prompt='<|im_start|>user\n'+'Give only the final integer. Do not explain.\n'+z['prompt']+'<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n'
+                body={'prompt':prompt,'n_predict':64,'temperature':0.0,'seed':7301,'cache_prompt':False}
                 request=urllib.request.Request('http://127.0.0.1:18080/completion',data=json.dumps(body).encode(),headers={'Content-Type':'application/json'})
                 t=time.perf_counter()
                 with urllib.request.urlopen(request,timeout=90) as q:response=json.load(q)
-                out={'id':z['id'],'family':z['family'],'lang':z['lang'],'prompt':z['prompt'],'generated':response['content'],'elapsed_sec':time.perf_counter()-t,'response':response}
+                out={'id':z['id'],'family':z['family'],'lang':z['lang'],'prompt':z['prompt'],'generated':response['content'],'elapsed_sec':time.perf_counter()-t,'stop_type':response.get('stop_type'),'tokens_predicted':response.get('tokens_predicted'),'timings':response.get('timings')}
+                compact.append([z['id'],response['content'],response.get('stop_type'),response.get('tokens_predicted')])
                 print('FG_PREDICTION '+json.dumps(out,ensure_ascii=False),flush=True)
-            print('FG_COMPLETE '+json.dumps({'n':40,'all_predictions_completed':True,'metadata':meta}),flush=True)
+            print('FG_COMPLETE '+json.dumps({'n':40,'all_predictions_completed':True,'metadata':meta,'compact_predictions':compact},ensure_ascii=False),flush=True)
         finally:
             p.terminate()
             try:p.wait(timeout=15)
