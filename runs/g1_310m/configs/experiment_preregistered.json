@@ -1,0 +1,23 @@
+{
+  "run_id": "FG-G1-310M-20260925",
+  "lineage": "Local C1/H7 + raw96 R54/R55 conceptual continuation. New generative weights start from scratch; controller weights are not silently repurposed.",
+  "primary_hypothesis": "Learned two-round inter-node messages in a causal generative graph workspace improve held next-token prediction over the same trained model with inter-node messages zeroed.",
+  "ablation_count": 1,
+  "ablation": "same weights, identical GRU iterations, zero inter-node messages at inference",
+  "training_model_count": 1,
+  "training_seed": 7101,
+  "training_steps_planned": 192,
+  "training_batch": 4,
+  "training_sequence_length": 128,
+  "training_tokens_planned": 98304,
+  "training_precision": "FP32 all parameters, FP32 gradients; Adafactor factorized moments",
+  "architecture_requirement": "300M..800M unique trainable parameters, genuine causal next-token output, no dummy/frozen parameter padding",
+  "bootstrap_learning_gate": "at least 10 percent lower validation macro-NLL than seeded initialization; this is learning, not intelligence validation",
+  "architecture_hypothesis_success": "at least 1 percent lower test macro-NLL versus zero-message ablation, and no lower synthetic memory answer accuracy",
+  "held_samples": "up to 4 disjoint 128-token blocks per test domain; 3 generation prompts per each of 7 synthetic task families",
+  "no_qwen_comparison_claim": true,
+  "not_production_pretraining": true,
+  "connectome_source": "synthetic; no FlyWire data found in mounted artifacts",
+  "git_used": false,
+  "timed_out_or_partial_runs_are_results": false
+}

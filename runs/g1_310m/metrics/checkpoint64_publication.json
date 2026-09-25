@@ -1,0 +1,15 @@
+{
+  "status": "completed_checkpoint_only_not_completed_training_run",
+  "step": 64,
+  "training_tokens": 32768,
+  "trainable_parameters": 309993253,
+  "initial_validation_macro_nll": 9.344726403554281,
+  "validation_macro_nll_step64": 4.649470395512051,
+  "validation_sampling": "2 blocks per domain; 128 tokens per block; 9 domains",
+  "local_weights_saved": true,
+  "weights_uploaded_to_github": false,
+  "excluded_uncheckpointed_steps_after_oom": [65,66,67,68,69,70,71,72,73,74,75,76],
+  "recovery": "resume from step64 with activation checkpointing; same 192-step and 98304-token final budget",
+  "broad_reasoning_claim": false,
+  "qwen_comparison_executed": false
+}
