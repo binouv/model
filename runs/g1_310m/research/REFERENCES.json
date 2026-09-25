@@ -1,0 +1,19 @@
+{
+  "retrieved_date":"2026-09-25",
+  "references":[
+    {"id":"qwen35_config","url":"https://huggingface.co/Qwen/Qwen3.5-4B/raw/main/config.json","inspected":"specific 4B dense text configuration: 3 linear layers per 1 full attention, output gating, tied embeddings"},
+    {"id":"qwen35_code","url":"https://github.com/huggingface/transformers/blob/main/src/transformers/models/qwen3_5/modeling_qwen3_5.py","inspected":"Qwen3_5Attention.forward, Q/K normalization, sigmoid output gate, GatedDeltaNet state/FP32 decay","scope":"model implementation, not the complete Qwen pretraining pipeline"},
+    {"id":"gated_delta","url":"https://arxiv.org/abs/2412.06464","inspected":"Gated Delta Networks"},
+    {"id":"deepseek_v3_code","url":"https://raw.githubusercontent.com/deepseek-ai/DeepSeek-V3/main/inference/model.py","inspected":"MLA KV latent/rotary cache, naive/absorb, shared/routed experts"},
+    {"id":"deepseek_v3_paper","url":"https://arxiv.org/html/2412.19437v2","inspected":"MLA, multi-token prediction, post-training"},
+    {"id":"deepseek_r1","url":"https://github.com/deepseek-ai/DeepSeek-R1","inspected":"distillation and staged post-training"},
+    {"id":"smollm2","url":"https://huggingface.co/HuggingFaceTB/SmolLM2-360M","inspected":"360M data recipe, 4T reported tokens, English limitation"},
+    {"id":"latent_recurrence","url":"https://arxiv.org/abs/2502.05171","inspected":"recurrent-depth language modelling"},
+    {"id":"latent_recurrence_code","url":"https://github.com/seal-rg/recurrent-pretraining","inspected":"official paper-linked code"},
+    {"id":"deepseek_license","url":"https://raw.githubusercontent.com/deepseek-ai/DeepSeek-V3/main/LICENSE-CODE","inspected":"MIT code; model terms separate"},
+    {"id":"transformers_license","url":"https://raw.githubusercontent.com/huggingface/transformers/main/LICENSE","inspected":"Apache-2.0 code"}
+  ],
+  "external_source_files_vendored":false,
+  "external_weights_imported":false,
+  "note":"Inspected through web tools; no container download claimed. Mutable main URLs must be commit-pinned before any production vendoring. Gate prototype is an original adapted design, not a copy of Qwen weights/code."
+}

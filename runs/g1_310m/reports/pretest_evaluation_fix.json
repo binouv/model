@@ -1,0 +1,7 @@
+{
+  "stage": "before first test evaluation",
+  "change": "Select fixed non-overlapping held windows instead of random windows sampled with replacement.",
+  "architecture_or_training_changed": false,
+  "test_metrics_existed_before_change": false,
+  "initial_and_intermediate_validation_unchanged": true
+}
