@@ -1,0 +1,1 @@
+{"status":"local_training_in_progress","completed_full_seed7301":{"steps":2000,"input_tokens":3471293,"validation_nll":0.7333,"rounded_validation":true},"held_not_yet_evaluated":true,"engineering_tests_passed":13,"thinking_workflow_run":36198379877,"thinking_result_not_yet_complete":true,"large_G2R_weights_unmodified":true,"model_weights_uploaded":false}
