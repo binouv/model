@@ -1,0 +1,16 @@
+{
+  "status":"completed_data_generation_not_model_result",
+  "train":{"examples":4096,"tokens":204547,"max_length":90,"ru":2101},
+  "validation":{"examples":160,"tokens":8074,"max_length":90,"ru":88},
+  "test_iid":{"examples":160,"tokens":7522,"max_length":89,"ru":69},
+  "test_surface":{"examples":80,"tokens":4730,"max_length":135,"ru":36},
+  "test_extrapolation":{"examples":80,"tokens":4585,"max_length":100,"ru":40},
+  "test_counterfactual":{"examples":80,"pairs":40,"max_length":90},
+  "semantic_group_cross_split_overlap":0,
+  "all_gold_replayed":true,
+  "fixed_G1_tokenizer":true,
+  "external_teacher_used":false,
+  "real_world_benchmark":false,
+  "memory_last_global_write_shortcut":0.2743455497382199,
+  "train_seed":72111,"validation_seed":72211,"iid_seed":72311,"surface_seed":72411,"extrapolation_seed":72511,"counterfactual_seed":72611
+}
