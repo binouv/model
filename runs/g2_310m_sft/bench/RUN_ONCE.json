@@ -1,0 +1,1 @@
+{"run":"G2-Qwen4B-Q4-smoke","attempt":1,"cases":40,"selection":"first8 per family in fixed G2 IID before G2 held results","no_paid_API":true,"standard_public_runner_only":true,"max_job_minutes":25,"no_artifact_upload_or_cache":true,"no_encyclopedic_or_broad_intelligence_claim":true}

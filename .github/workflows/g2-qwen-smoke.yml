@@ -1,0 +1,26 @@
+name: FlyGraph G2 one-shot Qwen CPU smoke
+on:
+  push:
+    branches: ['flygraph/g2-qwen-smoke']
+    paths: ['runs/g2_310m_sft/bench/RUN_ONCE.json']
+permissions:
+  contents: read
+jobs:
+  benchmark:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Fetch this public source revision without credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          cd repo
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: Build and run the finite baseline (no cache or artifact upload)
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd repo
+          python runs/g2_310m_sft/bench/qwen_smoke.py --prompts runs/g2_310m_sft/bench/qwen_smoke_prompts.jsonl
