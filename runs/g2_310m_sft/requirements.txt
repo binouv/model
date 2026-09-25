@@ -1,0 +1,6 @@
+# Exact software in the completed local protocol; CPU wheel for torch in this run.
+# Python 3.13.5. No external teacher or network call is part of the trainer.
+torch==2.10.0
+numpy>=2.0
+safetensors>=0.5
+pytest>=8
