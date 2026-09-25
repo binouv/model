@@ -1,0 +1,42 @@
+name: FlyGraph G3 complete missing thinking requests
+on:
+  push:
+    branches: ['flygraph/g3-thinking-resume-20260926']
+    paths: ['runs/g3_architecture/bench/RESUME_ONCE.json']
+permissions:
+  contents: read
+jobs:
+  finish:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    permissions:
+      contents: write
+    steps:
+      - name: Fetch exact public source
+        run: |
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          cd repo
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: Complete only missing8 requests
+        run: |
+          cd repo
+          python runs/g3_architecture/bench/resume_thinking.py --prompts runs/g3_architecture/bench/prompts.jsonl --out runs/g3_architecture/bench/q4_completed.json
+      - name: Preserve results without retriggering
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd repo
+          python - <<'PY'
+          import os,json,base64,urllib.request,hashlib
+          from pathlib import Path
+          d=Path('runs/g3_architecture/bench')
+          for p in [d/'q4_completed.json',d/'q4_completed.compact.json',d/'q4_completed.partial.json']:
+              if not p.exists():continue
+              raw=p.read_bytes();path=f'runs/g3_architecture/bench/{os.environ["GITHUB_RUN_ID"]}_{p.name}'
+              body={'message':'FlyGraph G3: preserve actual resumed thinking output','content':base64.b64encode(raw).decode(),'branch':os.environ['GITHUB_REF_NAME']}
+              req=urllib.request.Request(f'https://api.github.com/repos/{os.environ["GITHUB_REPOSITORY"]}/contents/{path}',data=json.dumps(body).encode(),method='PUT',headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Content-Type':'application/json'})
+              with urllib.request.urlopen(req,timeout=60) as r:z=json.load(r)
+              print('FG_SAVED',path,hashlib.sha256(raw).hexdigest(),z['commit']['sha'])
+          PY
