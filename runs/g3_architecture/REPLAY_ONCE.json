@@ -1,0 +1,1 @@
+{"replay":"three_architectures_seed7301","purpose":"actual remotely downloadable weight release and clean-source reproducibility; NOT independent training seeds or a mirror of local weights","steps_each":2000,"architectures":["full","shared","hybrid"],"publish_only_after_all_complete":true,"no_paid_api":true,"source_weight_artifacts_required":true}

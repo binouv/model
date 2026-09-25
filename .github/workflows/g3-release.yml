@@ -1,0 +1,50 @@
+name: FlyGraph G3 reproducible model release
+on:
+  push:
+    branches: ['flygraph/g3-release-20260926']
+    paths: ['runs/g3_architecture/REPLAY_ONCE.json']
+permissions:
+  contents: read
+jobs:
+  replay:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - name: Fetch exact public source without credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          cd repo
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: Install pinned CPU PyTorch in isolated environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m venv /tmp/fg-g3-venv
+          /tmp/fg-g3-venv/bin/pip install -q torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+          /tmp/fg-g3-venv/bin/pip install -q numpy safetensors pytest
+      - name: Exact data, tests, finite training and complete evaluation
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd repo/runs/g3_architecture
+          export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=4
+          PY=/tmp/fg-g3-venv/bin/python
+          $PY src/setup_data.py
+          $PY -m pytest -q tests
+          for variant in full shared hybrid; do
+            $PY src/train.py --variant "$variant" --seed 7301 --steps 2000 --batch 32 --threads 4
+            $PY src/train.py --variant "$variant" --seed 7301 --eval-only "checkpoints/${variant}_s7301/step2000.pt" --threads 4
+          done
+      - name: Upload actual verified weights as an explicitly labelled prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd repo/runs/g3_architecture
+          /tmp/fg-g3-venv/bin/python src/release_replay.py
