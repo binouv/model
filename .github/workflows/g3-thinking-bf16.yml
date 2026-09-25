@@ -1,0 +1,53 @@
+name: FlyGraph G3 BF16 thinking reference
+on:
+  push:
+    branches: ['flygraph/g3-thinking-bf16-20260926']
+    paths: ['runs/g3_architecture/bench/BF16_ONCE.json']
+permissions:
+  contents: read
+jobs:
+  thinking:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+    steps:
+      - name: Fetch exact public source without credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          cd repo
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: Finite non-quantized thinking reference
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd repo
+          python runs/g3_architecture/bench/qwen_thinking_bf16.py --prompts runs/g3_architecture/bench/prompts.jsonl --output runs/g3_architecture/bench/bf16_result.json
+      - name: Persist completed or explicitly incomplete raw output
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          cd repo
+          python - <<'PY'
+          import os,json,base64,urllib.request,hashlib
+          from pathlib import Path
+          root=Path('runs/g3_architecture/bench');p=root/'bf16_result.json'
+          if not p.exists():
+              p=root/'bf16_result.partial.json'
+              if not p.exists():
+                  print('No predictions; no benchmark result');raise SystemExit(0)
+              obj=json.loads(p.read_text());obj['status']='incomplete_not_a_benchmark_result';raw=json.dumps(obj,ensure_ascii=False,indent=2).encode()
+          else:
+              raw=p.read_bytes();obj=json.loads(raw);assert obj['status']=='completed' and len(obj['rows'])==40
+          path=f'runs/g3_architecture/bench/bf16_results_{os.environ["GITHUB_RUN_ID"]}.json'
+          body={'message':'FlyGraph G3: actual BF16 thinking outputs with censoring status','content':base64.b64encode(raw).decode(),'branch':os.environ['GITHUB_REF_NAME']}
+          url=f'https://api.github.com/repos/{os.environ["GITHUB_REPOSITORY"]}/contents/{path}'
+          req=urllib.request.Request(url,data=json.dumps(body).encode(),method='PUT',headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','Content-Type':'application/json'})
+          with urllib.request.urlopen(req,timeout=60) as r:receipt=json.load(r)
+          print('FG_BF16_PUBLICATION',json.dumps({'path':path,'status':obj['status'],'sha256':hashlib.sha256(raw).hexdigest(),'commit':receipt['commit']['sha']}))
+          PY

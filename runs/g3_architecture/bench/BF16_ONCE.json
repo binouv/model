@@ -1,0 +1,1 @@
+{"run":"G3-Qwen4B-BF16-thinking-20260926","n":40,"max_new_tokens":32768,"context":40960,"model_sha256":"9e6e2841a75f503ccb330831832fd7861266e187e0dbf149a954219ccb8c197a","purpose":"Remove low-bit-baseline caveat; same fixture and sampling as Q4 thinking. Not broad capability ceiling.","no_paid_API":true,"no_gold_input":true,"no_training_on_Qwen_test_outputs":true}
