@@ -1,0 +1,17 @@
+{
+  "experiment": "FlyGraph R61 learned pre-pruning top4→top8 address-support gate",
+  "primary_hypothesis": "A trained oracle-free gate can identify parent pointers where the correct discrete ECC address falls outside top4 but inside top8, expanding address support before pruning only on those ambiguous parents. This should reduce long-horizon generation losses while preserving the frozen R59 branch-value policy and short-horizon cognition.",
+  "single_ablation": "identical frozen R59/R54 stack with top4 ECC support only; learned top8 deepening disabled",
+  "train_seeds": [6111, 6112, 6113],
+  "calibration_seeds": [6141, 6142],
+  "held_seeds": [6151, 6152, 6153],
+  "held_counts_per_seed": {"id8": 4, "ood64": 4, "ood128": 2, "ood256ecc": 2},
+  "noise": 0.3,
+  "beam_width": 32,
+  "raw_expand": 8,
+  "base_ecc_topk": 4,
+  "deep_ecc_topk": 8,
+  "r54_margin_threshold": 1.694594383239746,
+  "max_calibration_gate_rate": 0.18,
+  "success_criterion": "ID8 answer regression >= -2pp; 256 generation loss/episode decreases; 256 path survival improves; at least one of 128/256 final true-path retention improves; 256 candidate-eval ratio <=1.40x."
+}
