@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "train_seeds": [6111, 6112, 6113],
+  "conditions": ["id8", "ood64", "ood128", "ood256ecc"],
+  "shape": [1368, 24],
+  "positive": 38,
+  "positive_rate": 0.027777777777777776,
+  "train_accuracy": 0.7821637426900585,
+  "train_positive_recall": 0.8947368421052632,
+  "per_condition": {
+    "id8": {"rows": 24, "positive": 1, "positive_rate": 0.041666666666666664, "true_top4": 0.9166666666666666, "true_top8": 0.9583333333333334},
+    "ood64": {"rows": 192, "positive": 4, "positive_rate": 0.020833333333333332, "true_top4": 0.953125, "true_top8": 0.9739583333333334},
+    "ood128": {"rows": 384, "positive": 12, "positive_rate": 0.03125, "true_top4": 0.9557291666666666, "true_top8": 0.9869791666666666},
+    "ood256ecc": {"rows": 768, "positive": 21, "positive_rate": 0.02734375, "true_top4": 0.9388020833333334, "true_top8": 0.9661458333333334}
+  },
+  "codebook_reproduction": {"seed": 5212, "objective": [41, 41.75, 41.9375, 42.854166666666664], "min_distance": 41},
+  "frozen_r59_validation": "separate held validation matched Git R59 8/64/128 exactly"
+}
