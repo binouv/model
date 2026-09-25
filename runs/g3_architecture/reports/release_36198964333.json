@@ -1,0 +1,75 @@
+{
+  "status": "published_prerelease",
+  "url": "https://github.com/binouv/model/releases/tag/flygraph-g3-cpu-replay-36198964333",
+  "tag": "flygraph-g3-cpu-replay-36198964333",
+  "release_id": 396974545,
+  "assets": [
+    {
+      "name": "MANIFEST.json",
+      "asset_id": 589434203,
+      "bytes": 6712,
+      "github_digest": "sha256:7d837838354331cc52f6b343c94fbc57edbb61501212eebc22903806f04ea584",
+      "local_sha256": "7d837838354331cc52f6b343c94fbc57edbb61501212eebc22903806f04ea584"
+    },
+    {
+      "name": "SourceDataResults.zip",
+      "asset_id": 589434212,
+      "bytes": 10152060,
+      "github_digest": "sha256:613c0d1386437692059c66abb8473a626bbbd2db59ecdb8769a6c780b47e80f4",
+      "local_sha256": "613c0d1386437692059c66abb8473a626bbbd2db59ecdb8769a6c780b47e80f4"
+    },
+    {
+      "name": "full_seed7301.config.json",
+      "asset_id": 589434230,
+      "bytes": 140,
+      "github_digest": "sha256:72a2027e1f2e9eb98a8f51242ae44d6aeaecc15098c5feca9f296fdd482da248",
+      "local_sha256": "72a2027e1f2e9eb98a8f51242ae44d6aeaecc15098c5feca9f296fdd482da248"
+    },
+    {
+      "name": "full_seed7301.safetensors",
+      "asset_id": 589434240,
+      "bytes": 7609064,
+      "github_digest": "sha256:2d48baddb9172049cc06c4728afffa4bd66f83646a968da88bdbfbf709470bd9",
+      "local_sha256": "2d48baddb9172049cc06c4728afffa4bd66f83646a968da88bdbfbf709470bd9"
+    },
+    {
+      "name": "hybrid_seed7301.config.json",
+      "asset_id": 589434262,
+      "bytes": 142,
+      "github_digest": "sha256:494c924c8f410413442542bdd14f3922de40be51115ea852c76b56487136383a",
+      "local_sha256": "494c924c8f410413442542bdd14f3922de40be51115ea852c76b56487136383a"
+    },
+    {
+      "name": "hybrid_seed7301.safetensors",
+      "asset_id": 589434273,
+      "bytes": 7618216,
+      "github_digest": "sha256:6c007e6b0f337a375e2517ad173c6cd888a9b971e6bef03a13ae7d94746317c6",
+      "local_sha256": "6c007e6b0f337a375e2517ad173c6cd888a9b971e6bef03a13ae7d94746317c6"
+    },
+    {
+      "name": "shared_seed7301.config.json",
+      "asset_id": 589434295,
+      "bytes": 142,
+      "github_digest": "sha256:99abfac201590bf7714662dae437a0df7757e6415fc777c006143a85d611f87c",
+      "local_sha256": "99abfac201590bf7714662dae437a0df7757e6415fc777c006143a85d611f87c"
+    },
+    {
+      "name": "shared_seed7301.safetensors",
+      "asset_id": 589434308,
+      "bytes": 5902016,
+      "github_digest": "sha256:f530563e8802324d93513f0d620ab9a4949922e62084465d38f4f7e27d2d45af",
+      "local_sha256": "f530563e8802324d93513f0d620ab9a4949922e62084465d38f4f7e27d2d45af"
+    },
+    {
+      "name": "tokenizer.json",
+      "asset_id": 589434328,
+      "bytes": 139193,
+      "github_digest": "sha256:aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500",
+      "local_sha256": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500"
+    }
+  ],
+  "local_all_hashes_verified": true,
+  "all_remote_digests_verified": true,
+  "bytewise_remote_download_repeated": false,
+  "not_the_local_container_model_bytes": true
+}
