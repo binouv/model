@@ -82,6 +82,7 @@ def audit_model(model):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--checkpoint',required=True);ap.add_argument('--mode',choices=['evaluate','export','verify_export','generation'],default='evaluate');ap.add_argument('--threads',type=int,default=4);args=ap.parse_args()
     torch.set_num_threads(args.threads);torch.set_num_interop_threads(1)
+    torch.set_grad_enabled(False)  # eval() alone does not disable autograd
     m,idx=load_checkpoint(args.checkpoint);m.eval();tok=Tokenizer.load(ROOT/'data/tokenizer.json')
     if args.mode=='export':
         z=save_checkpoint(m,ROOT/'release_bf16',step=idx['step'],training={**idx['training'],'precision':'BF16 export from FP32 trained checkpoint; not bit-exact resume'},dtype=torch.bfloat16)

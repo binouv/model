@@ -1,0 +1,93 @@
+{
+  "run_id": "FG-G1-310M-20260925",
+  "status": "completed_bootstrap",
+  "architecture_hypothesis_status": "NOT_CONFIRMED_IN_THIS_BOOTSTRAP",
+  "trained_model_count": 1,
+  "training_seed": 7101,
+  "trainable_parameters": 309993253,
+  "canonical_optimizer_steps": 192,
+  "canonical_training_tokens": 98304,
+  "full_parameter_training": true,
+  "initial_validation_macro_nll": 9.344726403554281,
+  "final_validation_macro_nll": 2.652657277054257,
+  "validation_relative_reduction_percent": 71.61332325315256,
+  "learning_gate_passed": true,
+  "test_macro_nll": {
+    "main": 2.7044322888056436,
+    "zero_messages": 2.704435815413793,
+    "relative_graph_gain_percent": 0.00013040088174424215,
+    "threshold_percent": 1.0
+  },
+  "test_token_count_per_arm": 4608,
+  "generation": {
+    "n": 21,
+    "main_correct": 0,
+    "zero_messages_correct": 0,
+    "strict_completion_main": 0.0,
+    "main_raw_file": "metrics/generation_main.json",
+    "control_raw_file": "metrics/generation_no_graph_messages.json"
+  },
+  "engineering_tests": {
+    "passed": 14,
+    "source": "metrics/engineering_tests.xml",
+    "not_cognition_benchmark": true
+  },
+  "model_audit": {
+    "causal_prefix_max_abs_diff": 0.0,
+    "cached_last_token_max_abs_diff": 3.814697265625e-06,
+    "graph_zero_message_max_abs_logit_diff": 0.0021147727966308594,
+    "all_parameter_values_finite": true,
+    "unique_parameters": 309993253,
+    "trainable_parameters": 309993253,
+    "components": {
+      "embed": 12582912,
+      "blocks": 292589568,
+      "graph": 4819237,
+      "final_norm": 1536
+    },
+    "graph": "synthetic directed cyclic graph; NOT FlyWire",
+    "output": "unrestricted autoregressive tokenizer vocabulary"
+  },
+  "bf16_export_reload_passed": true,
+  "oom_recovery": {
+    "canonical_resume_from_step": 64,
+    "uncheckpointed_attempt_steps_excluded": [65,66,67,68,69,70,71,72,73,74,75,76],
+    "same_final_token_budget": true,
+    "change": "activation checkpointing enabled"
+  },
+  "data": {
+    "corpus_tokens": 3742193,
+    "synthetic_family_overlap": true,
+    "exact_document_id_overlap": 0,
+    "memory_last_write_shortcut_detected": true,
+    "limitations_file": "reports/BOOTSTRAP_DATA_LIMITATIONS.json"
+  },
+  "gpu_training_executed": false,
+  "qwen_comparison_executed": false,
+  "external_teacher_called": false,
+  "connectome_is_biological": false,
+  "limitations": [
+    "98,304 presentations are only an initialization/bootstrap exercise, not adequate general pretraining.",
+    "Single trained seed and tiny partly synthetic held sets.",
+    "Graph recurrence is within-token readout, not inter-token persistent reasoning.",
+    "ProtectedMemory API has not been learned as a model capability.",
+    "NLL with different tokenizers is not directly comparable.",
+    "0/21 answers means no demonstrated task-solving capability."
+  ],
+  "weights": {
+    "fp32": {
+      "shards": 25,
+      "bytes": 1239985596,
+      "index_sha256": "5ddfd17923e4c7685df063d615eae00e45e26e95f037b3545824fef355a419c7",
+      "github_uploaded": false,
+      "local_hashes_verified": true
+    },
+    "bf16": {
+      "shards": 10,
+      "bytes": 619999114,
+      "index_sha256": "430a87eff7986f7b3b0e334696c579ef5a6184bf1d597846a9c675ff28930ebd",
+      "github_uploaded": false,
+      "local_hashes_verified": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "authorization": "User explicitly requested GitHub publication during the current G1 run; this supersedes older no-Git scheduled prompts.",
+  "repository": "binouv/model",
+  "namespace": "runs/g1_310m",
+  "source_code_pushed": true,
+  "completed_summary_metrics_pushed": true,
+  "research_and_untrained_prototypes_pushed": true,
+  "g1_weight_bytes_pushed": false,
+  "exact_tokenizer_vocabulary_pushed": false,
+  "exact_data_snapshot_pushed": false,
+  "all_local_historical_c1_artifacts_pushed": false,
+  "github_release_assets_uploaded": false,
+  "local_fp32_checkpoint_saved": true,
+  "local_optimizer_rng_saved": true,
+  "local_bf16_export_reloaded": true,
+  "note": "This is a partial publication, not a claim that everything is in Git. Large binary assets and the complete source/data snapshot are preserved in downloadable conversation archives. The installed connector exposes text/base64 Git object writes but no streamed local-file release uploader. No CLI credentials or paid service were used."
+}

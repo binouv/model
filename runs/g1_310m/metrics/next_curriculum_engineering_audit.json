@@ -1,0 +1,12 @@
+{
+  "status": "completed_engineering_data_audit",
+  "n": 1000,
+  "semantic_replay_valid": 1000,
+  "storage_interleaving_invariant": 1000,
+  "wrong_answer_rejected": 1000,
+  "lookup_last_global_value_shortcut_accuracy": 0.13,
+  "language_counts": {"lookup:en":271,"chain:ru":263,"lookup:ru":229,"chain:en":237},
+  "used_for_G1_training": false,
+  "external_teacher_called": false,
+  "not_a_model_benchmark": true
+}
