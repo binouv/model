@@ -1,0 +1,21 @@
+{
+ "run":"G2R-310M","status":"completed","trained_arms":2,"parameters_each":309993253,
+ "seed_count":1,"seed":7201,"steps_each":256,"input_tokens_each":49716,
+ "presentations_each":1024,"unique_training_cases_each":891,
+ "supervised_tokens":{"answer_only":5139,"full_sequence":49716},
+ "primary":{"baseline":{"iid":[0,160],"surface":[0,80],"extrapolation":[0,80],"counterfactual":[0,80],"both_correct_pairs":[0,40]},"answer_only":{"iid":[4,160],"surface":[1,80],"extrapolation":[0,80],"counterfactual":[0,80],"both_correct_pairs":[0,40]},"full_sequence":{"iid":[4,160],"surface":[1,80],"extrapolation":[0,80],"counterfactual":[1,80],"both_correct_pairs":[0,40]}},
+ "verdict":"NOT_CONFIRMED_IN_THIS_PROTOCOL","all_four_effect_gates_failed":true,
+ "iid_main_vs_control":{"wins":2,"losses":2,"ties":156,"delta_pp":0,"exact_p":1.0},
+ "iid_main_vs_G1":{"wins":4,"losses":0,"delta_pp":2.5,"exact_p":0.125},
+ "supplemental_same40prefix64token":{"Qwen3.5-4B_Q4_non_thinking":[32,40],"G1":[0,40],"answer_only":[1,40],"full_sequence":[3,40]},
+ "not_equal_FLOPs_external_comparison":true,"qwen_run_verified":36186603496,
+ "local_qwen_execution":false,"external_teacher_training":false,
+ "response_validation_nll":{"initial":4.146415957254381,"answer_only":1.0787307898602894,"full_sequence":1.0950467134240884},
+ "numeric_teacher_forced_accuracy":{"answer_only":[15,79],"full_sequence":[10,79]},
+ "whitespace_EOS_teacher_forced_accuracy":{"answer_only":[115,120],"full_sequence":[116,120]},
+ "matched_batches_LR_shapes_all256":true,"all18tests_passed":true,
+ "reload_checks":40,"reload_prediction_mismatches":0,
+ "all70_final_weight_shards_hash_verified":true,"all_parameter_values_finite":true,
+ "weight_bytes_uploaded_to_github":false,"same_seed_as_parallel_G2":true,
+ "known_semantic_exposure_caveats":true,"not_broad_pretraining":true,"no_Qwen_parity_claim":true
+}

@@ -1,0 +1,11 @@
+{
+ "status":"actual_local_checkpoints_verified_not_remote_weight_upload",
+ "all_parameters_per_model":309993253,"step_per_model":256,
+ "models":{
+  "answer_only":{"fp32":{"shards":25,"weight_bytes":1239985596,"index_sha256":"d1fa9860f0777cf502a992f7f842977b646aede2ecd80c8ab553f7575f7359dd","optimizer_rng_saved":true},"bf16":{"shards":10,"weight_bytes":619999114,"index_sha256":"ad0d275c788d9de776fa814a440c39f050fb37f2780e4acacfe454618e68ee8d"}},
+  "full_sequence":{"fp32":{"shards":25,"weight_bytes":1239985596,"index_sha256":"0748d3387bdd31e9424d4e6f2060430c0126522008463d6407ce549b247bae7e","optimizer_rng_saved":true},"bf16":{"shards":10,"weight_bytes":619999114,"index_sha256":"1612749d26b60978af7eddf813d401250479b0982940b1677326f490b378555a"}}
+ },
+ "all_values_finite":true,"all_shard_hashes_verified_locally":true,
+ "fp32_and_bf16_reloaded":true,"fixed10queries_per_model_precision":true,
+ "weight_bytes_in_this_git_tree":false,"release_asset_upload_executed":false
+}
