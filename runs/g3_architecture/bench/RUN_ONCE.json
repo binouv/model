@@ -1,0 +1,1 @@
+{"run":"G3-thinking-20260926","mode":"Qwen3.5-4B thinking","n":40,"max_new_tokens":32768,"context":40960,"source":"same fixed G2 forty synthetic tasks; no new task selection based on outcomes","trigger_count":1,"no_paid_api":true,"no_model_weight_upload":true,"not_broad_intelligence_benchmark":true}
