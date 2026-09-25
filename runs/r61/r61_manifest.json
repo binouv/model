@@ -1,0 +1,14 @@
+{
+  "experiment":"R61",
+  "status":"completed",
+  "core_hashes":{
+    "RESEARCH_REPORT_R61_RU.md":"80d0a9714ec99269e7020fa218fdb403ecd046ebb20194b7d71962b6fdb47ee7",
+    "r61_metrics.json":"6f6ea2d4b3433c45b7c8d3a1b9e710d2cbb9111036ea3df0c5f4dd89b544619b",
+    "r61_support_gate.py":"2acf717850d65a8af7776b55d11190f27d1570763898238e62080b409548c207",
+    "r61_support_gate_model.npz":"a1d75cdbaa860fb52e7f9091df9d0ae9ee4eca61e9c7ffd3d08bc42e6c0ab505",
+    "r35_verifier_weights.npz":"c618260f21a3499d2443ec69a5cc227d359fcedfd16da771b62afb0ec2893f52",
+    "r59_value_student_rebuilt.npz":"3a8c6d04954e72a587308af05db0241e372a6d6ed0413f4afd2ee5d1e0545eb4"
+  },
+  "semantic_tests":"5 passed",
+  "incomplete_or_timed_out_included":false
+}
