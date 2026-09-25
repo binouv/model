@@ -1,0 +1,40 @@
+{"id": "a8e480994e1d72b962eb9328cbe3effc309698e748cc3abededb3b5cec0141a9", "family": "arithmetic", "lang": "en", "prompt": "Calculate: 35 * 11.\nAnswer:"}
+{"id": "14dd17272d6056dab05a7fbb70763074724bda2369d14d75c6f85b84623bb84e", "family": "conditional", "lang": "en", "prompt": "x=4. If x<43, add 27; otherwise subtract 31.\nAnswer:"}
+{"id": "bdc8ad8b353811088f0c55f4281866897c7f04c003aa9c0f528396838132e8d4", "family": "code_trace", "lang": "en", "prompt": "What number does Python print?\nx = 34\nx -= 33\nx -= 2\nprint(x)\nAnswer:"}
+{"id": "3e4e11ed649b146f3eac467cac7af6b008da0ee141e90a6ee7664f383b7ba490", "family": "list_reasoning", "lang": "ru", "prompt": "Найди сумму: [33, 37, 29].\nОтвет:"}
+{"id": "d6776f2843526cf6445c85980af9eb15abc604846e258e0e6f2a92f126bcbeb7", "family": "memory_update", "lang": "ru", "prompt": "Записи по времени: c=37; d=7; b=26; a=20; d=30; b=2. Последнее значение a?\nОтвет:"}
+{"id": "760006cf7057b2f5659e9520f00748024ca64244609fa43b927e1e28b56b7e0d", "family": "arithmetic", "lang": "ru", "prompt": "Чему равно 47 + 17?\nОтвет:"}
+{"id": "9a019c85e6704e02d0e16d5c82e7fa590a4b897c3738e15b834a934870a246bf", "family": "conditional", "lang": "en", "prompt": "x=12. If x<31, add 39; otherwise subtract 4.\nAnswer:"}
+{"id": "7642d7279445e27511f7eafbd49658920664c019174d39d88be0886f11fa2a19", "family": "code_trace", "lang": "en", "prompt": "What number does Python print?\nx = 19\nx += 8\nx += 25\nprint(x)\nAnswer:"}
+{"id": "78cfeb2707974fb828694b0a967ab4ac262b5a960e0bcd6a068eb3c64d0d06d8", "family": "list_reasoning", "lang": "en", "prompt": "Find the maximum: [11, 45, 44].\nAnswer:"}
+{"id": "643205195c70fb3f1d262866a69fc7393c6b05cacd6744a7298e2699e8abc17d", "family": "memory_update", "lang": "en", "prompt": "Writes in time order: c=30; c=34; a=20; b=38; d=44; d=43. Latest value of d?\nAnswer:"}
+{"id": "06a75384eb1ebbacd48ac87b01dcbaaa7cf58234f19bb3062ab9c56fb0823973", "family": "arithmetic", "lang": "ru", "prompt": "Вычисли: 22 * 44.\nОтвет:"}
+{"id": "deb38e9f0fdafb950b800eba04355a0d9808f2cb2ebc28aab7c35f4c1bb33b52", "family": "conditional", "lang": "en", "prompt": "x=30. If x<40, add 7; otherwise subtract 13.\nAnswer:"}
+{"id": "3b6d54a2747d43b48969132aa3791e038e50edbece34c1d9bc12ef62ae80ba28", "family": "code_trace", "lang": "en", "prompt": "What number does Python print?\nx = 16\nx -= 15\nx += 32\nprint(x)\nAnswer:"}
+{"id": "149742a82ded85b9ce2cd3d99a5929e0ace943627f05f6c6833de49b6c2cf9a1", "family": "list_reasoning", "lang": "en", "prompt": "Find the sum: [12, 47, 28].\nAnswer:"}
+{"id": "631a3aee98baf3cb7c119cf7d4268f61857585af1214dbfd02c659ca3114d422", "family": "memory_update", "lang": "ru", "prompt": "Записи по времени: b=15; a=22; d=29; c=35; a=26; c=0. Последнее значение b?\nОтвет:"}
+{"id": "1280821225486a744557c62008fc3b9566cbea2f430b1e5d13a1ad2bc59af3c3", "family": "arithmetic", "lang": "ru", "prompt": "Чему равно 29 * 11?\nОтвет:"}
+{"id": "4587dfb4781225031d7bb6b45c5a3f31d3c6c84ddc007213d2492929e259ec29", "family": "conditional", "lang": "en", "prompt": "x=43. If x<24, add 34; otherwise subtract 14.\nAnswer:"}
+{"id": "47866f21b5cdd1aa8a6d7796abe758eb9611d993154d589b9416ab6b5b607846", "family": "code_trace", "lang": "ru", "prompt": "Какое число напечатает Python?\nx = 9\nx += 4\nx += 31\nprint(x)\nОтвет:"}
+{"id": "511e5844b8e812aa48a1bf36b66d99d9a9ca68d62674bbcaa043949ee3da688e", "family": "list_reasoning", "lang": "en", "prompt": "Find the maximum: [47, 42, 5].\nAnswer:"}
+{"id": "2ca9d7b6ade8e2ceec66963ee3a38971b022ce03951b4fa348c474606fcb2f87", "family": "memory_update", "lang": "ru", "prompt": "Записи по времени: c=39; b=0; d=45; c=15; a=22; a=36. Последнее значение a?\nОтвет:"}
+{"id": "eba682e8a710498a6ed2101f4eaf6d4955f7ad3698ed2a8ba27d55624f289677", "family": "arithmetic", "lang": "en", "prompt": "Calculate: 18 - 43.\nAnswer:"}
+{"id": "70581e47fa4fc3ccc6f179d65358f444486ae47448aac07af599dc1e2928899c", "family": "conditional", "lang": "ru", "prompt": "x=37. Если x<11, прибавь 27; иначе вычти 44.\nОтвет:"}
+{"id": "ad7b050a6f167b69df2dea6e2d589e3f8a42393e9f39844158cc1a3b189938ea", "family": "code_trace", "lang": "ru", "prompt": "Какое число напечатает Python?\nx = 44\nx -= 25\nx -= 33\nprint(x)\nОтвет:"}
+{"id": "484fad6f2e7d348f746fb8d6133fce9efce5e4f80080dbbd9a3a34560f259af7", "family": "list_reasoning", "lang": "ru", "prompt": "Найди максимум: [7, 33, 20].\nОтвет:"}
+{"id": "3812750acd70285860099a2d61886cc0561a6c60d8094c800bea2a9b60209892", "family": "memory_update", "lang": "en", "prompt": "Writes in time order: b=12; d=34; c=3; b=4; a=27; a=2. Latest value of a?\nAnswer:"}
+{"id": "1f40e51c20c97516cc6fcc2a362814a0756d3a046002331c50896583c8419961", "family": "arithmetic", "lang": "ru", "prompt": "Вычисли: 7 - 45.\nОтвет:"}
+{"id": "e1bff28e5391a78f781160a6dfcd458463acc1ba2c712498b19ab56cce22f3a3", "family": "conditional", "lang": "en", "prompt": "x=18. If x<29, add 14; otherwise subtract 5.\nAnswer:"}
+{"id": "bc672299acd6b8e46fb228c30f84992aef6ed78ec66806a056fb1179b1ae8496", "family": "code_trace", "lang": "en", "prompt": "What number does Python print?\nx = 45\nx += 8\nx -= 4\nprint(x)\nAnswer:"}
+{"id": "d53f2983c9aab35528b418ef21620d813551b6cc4df53fc8da6944332121d8b8", "family": "list_reasoning", "lang": "ru", "prompt": "Найди сумму: [32, 14, 33].\nОтвет:"}
+{"id": "aeafc9877aae40f1022029378bb32dc1ea7fcffe4542179178081d05a1ca5c5a", "family": "memory_update", "lang": "en", "prompt": "Writes in time order: c=31; d=35; b=14; a=14; d=8; b=22. Latest value of c?\nAnswer:"}
+{"id": "27049f0ad556b3a970625e836cff54da4d760ca9ac2cfd36307f8d7287f90012", "family": "arithmetic", "lang": "en", "prompt": "Calculate: 44 * 27.\nAnswer:"}
+{"id": "07d4febd3ebfc3e7f0e84c1eb887f1f02f2f2fd81038523c9d0470e685bcb61e", "family": "conditional", "lang": "en", "prompt": "x=3. If x<31, add 27; otherwise subtract 42.\nAnswer:"}
+{"id": "f06e252aee69baec3a867a808f03563381728025a45aa404f527bfc99f3dd756", "family": "code_trace", "lang": "ru", "prompt": "Какое число напечатает Python?\nx = 23\nx -= 1\nx += 47\nprint(x)\nОтвет:"}
+{"id": "af8203d4afd825b4fc80b17b4d45015ab001043656b7ea5f5e31f153fe6db84c", "family": "list_reasoning", "lang": "en", "prompt": "Find the minimum: [27, 18, 27].\nAnswer:"}
+{"id": "550cd695ee21cfed19da8c42d6413050b56db0dac2de2f155b21423bec621294", "family": "memory_update", "lang": "en", "prompt": "Writes in time order: c=45; b=3; b=3; a=47; d=1; a=8. Latest value of d?\nAnswer:"}
+{"id": "84fefedd8096eeda99d356c79561203dd4e1aa4a4c3689c2790bdc2d1fb43212", "family": "arithmetic", "lang": "ru", "prompt": "Чему равно 6 - 0?\nОтвет:"}
+{"id": "d3a787b2bdb1728742282b15147cec5fb199ed491e9d0a95a56d7107d04c4421", "family": "conditional", "lang": "en", "prompt": "x=25. If x<17, add 4; otherwise subtract 38.\nAnswer:"}
+{"id": "06d6088de885473414dde3f7f005d9fe41b153272f8cd9fb1e577220569868fb", "family": "code_trace", "lang": "en", "prompt": "What number does Python print?\nx = 22\nx += 46\nx -= 42\nprint(x)\nAnswer:"}
+{"id": "d4260590e68a2e7238c6ed9c953a6251416f278a63bdd203f9679c39446e7037", "family": "list_reasoning", "lang": "en", "prompt": "Find the maximum: [46, 19, 24].\nAnswer:"}
+{"id": "ec3f01108ce967182e738954b7cac5323149eb498b3cb5e53bee9bb7194a5a91", "family": "memory_update", "lang": "en", "prompt": "Writes in time order: a=42; d=11; a=22; c=45; b=34; c=3. Latest value of d?\nAnswer:"}

@@ -1,0 +1,22 @@
+{
+ "status":"completed_external_result_retrieved_and_rescored",
+ "local_qwen_execution":false,
+ "result_source_commit":"9df1a8be3487d5f87fd34a4eed8278afd72087a0",
+ "inference_source_commit":"450d46f7cfaa0e8ee6954ab190abeb14e7f69c1c",
+ "workflow_run_id":36186603496,"workflow_job_id":108241335102,
+ "workflow_status_verified":"completed/success",
+ "fixture_sha256":"ddef92124f5fe5f9058711480ceba522472606f06d4e2568aadf232f7317828d",
+ "fixture_reconstructed_byte_exactly":true,
+ "model":"Qwen/Qwen3.5-4B","conversion":"unsloth Q4_K_M",
+ "model_sha256":"00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+ "llama_commit":"7fe450e19305b828c199d602c23a8337aaa1f03b",
+ "instruction_prefix":"Give only the final integer. Do not explain.\n",
+ "thinking":false,"max_new_tokens":64,"temperature":0,"tools":false,
+ "n":40,"correct":32,"accuracy":0.8,
+ "by_family_correct_of8":{"arithmetic":8,"code_trace":5,"conditional":3,"list_reasoning":8,"memory_update":8},
+ "source_raw_results":"runs/g2_310m_sft/bench/QWEN_RESULT.json",
+ "protocol":"supplemental post-smoke, not the preregistered400case primary test",
+ "earlier_truncated_8token_smoke_excluded":true,
+ "qwen_outputs_used_for_training":false,
+ "G2R_supplemental_inference_not_yet_completed":true
+}

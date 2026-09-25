@@ -1,0 +1,16 @@
+{
+ "status":"completed_main_arm_only_control_still_training",
+ "arm":"answer_only","steps":256,"trainable_parameters":309993253,
+ "input_tokens":49716,"supervised_tokens":5139,
+ "changed_sampled_parameter_tensors":130,"total_parameter_tensors":130,
+ "final_response_validation_nll":1.0787307898602894,
+ "final_teacher_forced_response_token_accuracy":0.6532663316582915,
+ "generation":{"test_iid":{"n":160,"correct":4},"test_surface":{"n":80,"correct":1},"test_extrapolation":{"n":80,"correct":0},"test_counterfactual":{"n":80,"correct":0,"both_correct_pairs":0,"pairs":40},"total_correct":5,"total_cases":400,"eos_emitted":400},
+ "fp32":{"shards":25,"weight_bytes":1239985596,"index_sha256":"d1fa9860f0777cf502a992f7f842977b646aede2ecd80c8ab553f7575f7359dd"},
+ "bf16":{"shards":10,"weight_bytes":619999114,"index_sha256":"ad0d275c788d9de776fa814a440c39f050fb37f2780e4acacfe454618e68ee8d"},
+ "both_precisions_all_shard_hashes_verified_locally":true,
+ "all_weight_values_finite":true,"weight_bytes_uploaded":false,
+ "not_a_completed_paired_result_yet":true,
+ "not_broad_reasoning_success":true,
+ "parallel_G2_is_same_seed_not_an_independent_seed_replication":true
+}
