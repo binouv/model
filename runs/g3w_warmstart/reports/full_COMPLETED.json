@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "variant": "full",
+  "seed": 7301,
+  "new_training_seed": 7701,
+  "new_updates": 6000,
+  "ancestor_updates": 2000,
+  "parameters": {
+    "unique_parameters": 1901696,
+    "trainable_parameters": 1901696,
+    "unique_blocks": 4,
+    "executed_blocks": 4,
+    "variant": "full",
+    "persistent_delta_state_per_token": false,
+    "biological_connectome": false,
+    "full_vocabulary_generation": true
+  },
+  "initial_validation_nll": 0.7217447982454936,
+  "final_validation_nll": 0.48515260946567784,
+  "input_tokens": 10484420,
+  "supervised_tokens": 965057,
+  "padded_tokens": 10941024,
+  "training_seconds": 373.92113465899973,
+  "elapsed_seconds": 415.554894334,
+  "batch_sequence_sha256": "1ebae71b1687db77e900215f6e0f5c0e5b9040f21a5b4d9055ae8a059eb97217",
+  "safetensors_sha256": "91692c8da834e6fa9fcfdd6733cd74b5c105694922d91548b5d0f2dc35ca9ee5",
+  "native_sha256": "187f18eb8d6dadec5d202ecc9a8d5d266541723e92be7c0db8fbf16c3642eab3",
+  "reload_logits_equal": true,
+  "not_exact_original_G3_resume": true
+}
