@@ -2,11 +2,11 @@
   "status": "completed_reproduction_checkpoint_only",
   "arm": "final_only",
   "seed": 7603,
-  "step": 600,
+  "step": 800,
   "asset": {
-    "name": "final_only_s7603_step0600.resume.pt",
-    "bytes": 6091723,
-    "sha256": "7d3b4e6abca5bf9a0aec9ff43d4c180f3dca0537c129d9b06370c40caa4385d4",
+    "name": "final_only_s7603_step0800.resume.pt",
+    "bytes": 6175435,
+    "sha256": "d2b7053b99d6e6b1521453eaec15e59a774a06fc3df79656cab71aed36271966",
     "remote_bytes_redownload_verified": true
   },
   "not_independent_seed": true
