@@ -1,0 +1,183 @@
+{
+  "status": "completed_arms_only",
+  "completed_models": 1,
+  "expected_models": 6,
+  "models": [
+    {
+      "status": "completed",
+      "variant": "causal_hybrid",
+      "seed": 7501,
+      "steps": 800,
+      "parameters": {
+        "total_parameters": 469648,
+        "active_parameters": 469648,
+        "variant": "causal_hybrid",
+        "executed_blocks": 4,
+        "persistent_intertoken_delta_state": true,
+        "prefix_bidirectional_attention": false
+      },
+      "validation_nll": 1.693275432451875,
+      "tests": {
+        "test_iid": {
+          "n": 160,
+          "correct": 2,
+          "accuracy": 0.0125,
+          "eos": 160,
+          "both_correct_pairs": 0,
+          "pair_count": 0,
+          "by_family": {
+            "arithmetic": {
+              "n": 32,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 32,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 32,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 32,
+              "correct": 1
+            },
+            "memory_update": {
+              "n": 32,
+              "correct": 1
+            }
+          },
+          "seconds": 0.3921701239999891
+        },
+        "test_surface": {
+          "n": 80,
+          "correct": 0,
+          "accuracy": 0.0,
+          "eos": 80,
+          "both_correct_pairs": 0,
+          "pair_count": 0,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 0
+            }
+          },
+          "seconds": 0.275693019000002
+        },
+        "test_extrapolation": {
+          "n": 80,
+          "correct": 1,
+          "accuracy": 0.0125,
+          "eos": 80,
+          "both_correct_pairs": 0,
+          "pair_count": 0,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 1
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 0
+            }
+          },
+          "seconds": 0.1777415880000035
+        },
+        "test_counterfactual": {
+          "n": 80,
+          "correct": 0,
+          "accuracy": 0.0,
+          "eos": 80,
+          "both_correct_pairs": 0,
+          "pair_count": 40,
+          "by_family": {
+            "arithmetic": {
+              "n": 40,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 0,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 0,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 0,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 40,
+              "correct": 0
+            }
+          },
+          "seconds": 0.1497639700000093
+        }
+      },
+      "batch_sequence_sha256": "23650f7b495317581b93dbfc3a9a02daed2ef86285d63dfd9facc88aebd53fe3",
+      "median_step_seconds": 0.05128130099999595,
+      "mean_step_seconds": 0.05875232834874983,
+      "elapsed_seconds": 49.783876484,
+      "checkpoint_sha256": "09eaac987a6197ff5457804710c4cedc690bf2911d295816e672471272ace69c",
+      "checkpoint_bytes": 5691490,
+      "reload_probe_cases": 16,
+      "reload_mismatches": 0,
+      "all_losses_finite": true
+    }
+  ],
+  "assets": [
+    {
+      "name": "causal_hybrid_s7501.checkpoint.pt",
+      "bytes": 5691490,
+      "sha256": "09eaac987a6197ff5457804710c4cedc690bf2911d295816e672471272ace69c",
+      "remote_bytes_download_verified": true
+    },
+    {
+      "name": "causal_hybrid_s7501.safetensors",
+      "bytes": 1881704,
+      "sha256": "97af85493751f23dc1540486e2ce36d3b0ca9689720d360e1074355f3b03ea29",
+      "remote_bytes_download_verified": true
+    },
+    {
+      "name": "causal_hybrid_s7501.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_bytes_download_verified": true
+    },
+    {
+      "name": "causal_hybrid_s7501.metrics.json.gz",
+      "bytes": 56480,
+      "sha256": "199815662c69eaacdee9c536cd78f8d23ffa1e3255354607cbb996762f4f42c3",
+      "remote_bytes_download_verified": true
+    }
+  ]
+}
