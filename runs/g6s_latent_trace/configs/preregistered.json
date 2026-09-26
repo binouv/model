@@ -1,0 +1,17 @@
+{
+  "run":"G6S_LatentTraceDeepSupervision_20260926",
+  "status":"preregistered_before_training",
+  "primary_hypothesis":"Auxiliary verified intermediate-state supervision on the prompt-end latent state improves final-only free generation versus the same causal hybrid trained only on the final answer, without requiring trace text at inference.",
+  "arms":["latent_trace","final_only"],
+  "seeds":[7701,7702,7703],
+  "sampler_seed":77311,
+  "steps":2000,
+  "batch":16,
+  "parameters_expected":470424,
+  "aux_weight":1.0,
+  "generation":"final-only F=<integer>; greedy unrestricted byte259; max32 new bytes; no tools/gold/trace input",
+  "selection":"fixed final step2000 only; held never used for checkpoint or hyperparameter selection",
+  "success":{"mean_iid_gain_pp":5,"pooled_surface_extrapolation_gain_positive":true,"counterfactual_pair_regression_max_pp":2,"positive_iid_seeds":2},
+  "data_sha256":{"train":"a4835cf01ae37c389be9ce5039b31a9ac1506cc91c2e9cd69c6ee4dbd0d9598a","validation":"435b6d64a6921fd7a3d7a714e79c28bbbdbdc25c147865500e532492a53edb90","test_iid":"5b5672977e09ed99a05f8659e7c78d149ce04098909ebc987fa8a3f0e51e912e","test_surface":"54d9141c947256aaa190c37ce5424bd5f11e0f1fd88a8a86041f0609562f118e","test_extrapolation":"6fa8ceeadb00d9e68c7805087fb9e04599077d6a54f39544270dfcea55051961","test_counterfactual":"fd727815fd717ec837abb1c66553bbea3c095a44fb089d7570b738fe02fa7322"},
+  "scope":"small mechanism probe, not 300-800M and not Qwen parity"
+}
