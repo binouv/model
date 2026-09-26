@@ -1,0 +1,38 @@
+name: FlyGraph G3W finite warm-start and checkpoints
+on:
+  push:
+    branches: ['flygraph/g3w-warmstart-20260926']
+    paths: ['runs/g3w_warmstart/RUN_ONCE.json']
+permissions:
+  contents: write
+concurrency:
+  group: flygraph-g3w-warmstart-20260926
+  cancel-in-progress: false
+jobs:
+  continue:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - name: Fetch exact public source revision
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          cd repo
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: CPU-only dependencies and syntax checks
+        run: |
+          set -euo pipefail
+          python3 -m venv /tmp/fg
+          /tmp/fg/bin/pip install --index-url https://download.pytorch.org/whl/cpu torch==2.10.0
+          /tmp/fg/bin/pip install numpy==2.3.5 safetensors==0.7.0
+          /tmp/fg/bin/python -m py_compile repo/runs/g3w_warmstart/src/continue_ci.py
+      - name: Exactly two six-thousand-update warm-starts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OMP_NUM_THREADS: '4'
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          set -euo pipefail
+          cd repo
+          /tmp/fg/bin/python -u runs/g3w_warmstart/src/continue_ci.py
