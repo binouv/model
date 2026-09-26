@@ -1,6 +1,6 @@
 {
   "status": "completed_arms_only",
-  "completed_models": 5,
+  "completed_models": 6,
   "expected_models": 6,
   "models": [
     {
@@ -752,6 +752,156 @@
       "reload_probe_cases": 16,
       "reload_mismatches": 0,
       "all_losses_finite": true
+    },
+    {
+      "status": "completed",
+      "variant": "prefix_hybrid",
+      "seed": 7503,
+      "steps": 800,
+      "parameters": {
+        "total_parameters": 469648,
+        "active_parameters": 469648,
+        "variant": "prefix_hybrid",
+        "executed_blocks": 4,
+        "persistent_intertoken_delta_state": true,
+        "prefix_bidirectional_attention": true
+      },
+      "validation_nll": 1.7239250687744088,
+      "tests": {
+        "test_iid": {
+          "n": 160,
+          "correct": 2,
+          "accuracy": 0.0125,
+          "eos": 160,
+          "both_correct_pairs": 0,
+          "pair_count": 0,
+          "by_family": {
+            "arithmetic": {
+              "n": 32,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 32,
+              "correct": 1
+            },
+            "code_trace": {
+              "n": 32,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 32,
+              "correct": 1
+            },
+            "memory_update": {
+              "n": 32,
+              "correct": 0
+            }
+          },
+          "seconds": 0.38453945999998496
+        },
+        "test_surface": {
+          "n": 80,
+          "correct": 0,
+          "accuracy": 0.0,
+          "eos": 80,
+          "both_correct_pairs": 0,
+          "pair_count": 0,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 0
+            }
+          },
+          "seconds": 0.26746736900003043
+        },
+        "test_extrapolation": {
+          "n": 80,
+          "correct": 0,
+          "accuracy": 0.0,
+          "eos": 80,
+          "both_correct_pairs": 0,
+          "pair_count": 0,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 0
+            }
+          },
+          "seconds": 0.17965066499999693
+        },
+        "test_counterfactual": {
+          "n": 80,
+          "correct": 1,
+          "accuracy": 0.0125,
+          "eos": 80,
+          "both_correct_pairs": 0,
+          "pair_count": 40,
+          "by_family": {
+            "arithmetic": {
+              "n": 40,
+              "correct": 1
+            },
+            "conditional": {
+              "n": 0,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 0,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 0,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 40,
+              "correct": 0
+            }
+          },
+          "seconds": 0.1540499950000367
+        }
+      },
+      "batch_sequence_sha256": "23650f7b495317581b93dbfc3a9a02daed2ef86285d63dfd9facc88aebd53fe3",
+      "median_step_seconds": 0.05019083450000039,
+      "mean_step_seconds": 0.05724390462500082,
+      "elapsed_seconds": 48.518163095000034,
+      "checkpoint_sha256": "c7471c8703653f3306a3541194a5168b8b82beef9311421ab76732afb7978262",
+      "checkpoint_bytes": 5691490,
+      "reload_probe_cases": 16,
+      "reload_mismatches": 0,
+      "all_losses_finite": true
     }
   ],
   "assets": [
@@ -873,6 +1023,30 @@
       "name": "causal_hybrid_s7503.metrics.json.gz",
       "bytes": 56640,
       "sha256": "fa43440b5b49e6379459952e4aaf045fe7eb93824de001842f5186b44377c327",
+      "remote_bytes_download_verified": true
+    },
+    {
+      "name": "prefix_hybrid_s7503.checkpoint.pt",
+      "bytes": 5691490,
+      "sha256": "c7471c8703653f3306a3541194a5168b8b82beef9311421ab76732afb7978262",
+      "remote_bytes_download_verified": true
+    },
+    {
+      "name": "prefix_hybrid_s7503.safetensors",
+      "bytes": 1881704,
+      "sha256": "136dfd9ccf1df74abfa71aaaaa4016295f4b8720239b46e71d69fb5a35da0c26",
+      "remote_bytes_download_verified": true
+    },
+    {
+      "name": "prefix_hybrid_s7503.config.json",
+      "bytes": 131,
+      "sha256": "27f887d2379eaf27dde5cfa996d398a757bbbd82b49c9de8d69da8b1a456172a",
+      "remote_bytes_download_verified": true
+    },
+    {
+      "name": "prefix_hybrid_s7503.metrics.json.gz",
+      "bytes": 56662,
+      "sha256": "4acaed4ec12b21819c8ddf01799b660273f9cbbfae766eb9012ef77a8a4e5b78",
       "remote_bytes_download_verified": true
     }
   ]
