@@ -1,0 +1,39 @@
+name: FlyGraph completed G5S publication replay
+on:
+  push:
+    branches: ['flygraph/completion-replay-20260926']
+    paths: ['validation/completion_20260926/RUN_ONCE.json']
+permissions:
+  contents: write
+concurrency:
+  group: flygraph-completion-replay-20260926
+  cancel-in-progress: false
+jobs:
+  replay:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Read exact public source revision
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          cd repo
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: CPU dependencies and actual import check
+        run: |
+          set -euo pipefail
+          python3 -m venv /tmp/fg
+          /tmp/fg/bin/pip install --index-url https://download.pytorch.org/whl/cpu torch==2.10.0
+          /tmp/fg/bin/pip install numpy==2.3.5 safetensors==0.7.0 packaging==26.3
+          /tmp/fg/bin/python -c 'from safetensors.torch import load_file; import torch'
+          /tmp/fg/bin/python -m py_compile repo/validation/completion_20260926/replay_ci.py
+      - name: Finite reproduction and verified native-weight release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OMP_NUM_THREADS: '4'
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          set -euo pipefail
+          cd repo
+          /tmp/fg/bin/python -u validation/completion_20260926/replay_ci.py
