@@ -1,0 +1,90 @@
+{
+  "status": "completed",
+  "arm": "final_only",
+  "seed": 7603,
+  "parameters": 469648,
+  "steps": 1000,
+  "input_tokens": 1417158,
+  "loss_tokens": 87830,
+  "train_seconds": 80.57549283400056,
+  "elapsed_seconds": 108.48657059100003,
+  "initial_state_sha256": "d8b749f4dc99afa943c6ab85ec5f6d6264f9bf26fd9cd3204629cae95b0b6bf0",
+  "final_state_sha256": "995f57b98aee305e74808498e3f60435a05e93de07d8ef4c13d2cd9c002e635d",
+  "batch_sequence_sha256": "60141b5771730127b3c4b5aaf3fed4be61fabec3b14312ddadde2d40bff4335c",
+  "checkpoint": "/home/runner/work/model/model/repo/validation/completion_20260926/work/checkpoints/final_only_s7603/step1000",
+  "checkpoint_manifest": {
+    "step": 1000,
+    "parameters": 469648,
+    "files": {
+      "model.safetensors": {
+        "bytes": 1881704,
+        "sha256": "93b2d9745dbf623c56c9d04d1cc02242cb070033fb304ac8d734904a65183e38"
+      },
+      "resume.pt": {
+        "bytes": 6252107,
+        "sha256": "f0793396c4dddc5f0c4e3935917fbcf349067870afe9ef078731a22ba59e41fd"
+      },
+      "config.json": {
+        "bytes": 131,
+        "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52"
+      }
+    },
+    "optimizer_rng": true
+  },
+  "reload_cases": 12,
+  "reload_mismatches": 0,
+  "resume_next_update_verified": true,
+  "tests": {
+    "test_iid": {
+      "status": "completed",
+      "n": 160,
+      "correct": 3,
+      "accuracy": 0.01875,
+      "trace_correct": 0,
+      "eos_count": 160,
+      "both_correct_pairs": 0,
+      "pair_count": 0,
+      "seconds": 0.6071261360000335,
+      "generated_bytes": 803
+    },
+    "test_surface": {
+      "status": "completed",
+      "n": 80,
+      "correct": 1,
+      "accuracy": 0.0125,
+      "trace_correct": 0,
+      "eos_count": 80,
+      "both_correct_pairs": 0,
+      "pair_count": 0,
+      "seconds": 0.3984815950000211,
+      "generated_bytes": 387
+    },
+    "test_extrapolation": {
+      "status": "completed",
+      "n": 80,
+      "correct": 0,
+      "accuracy": 0.0,
+      "trace_correct": 0,
+      "eos_count": 80,
+      "both_correct_pairs": 0,
+      "pair_count": 0,
+      "seconds": 0.2372633869999845,
+      "generated_bytes": 397
+    },
+    "test_counterfactual": {
+      "status": "completed",
+      "n": 80,
+      "correct": 0,
+      "accuracy": 0.0,
+      "trace_correct": 0,
+      "eos_count": 80,
+      "both_correct_pairs": 0,
+      "pair_count": 40,
+      "seconds": 0.24209114200004933,
+      "generated_bytes": 394
+    }
+  },
+  "local_original_safetensors_sha256": "3ed64121a00b08f75fe7aceedac79d206f444d761bc1e47379904d69c24949e3",
+  "safetensors_byte_identical_to_original_local": false,
+  "IID_matches_original_local": true
+}
