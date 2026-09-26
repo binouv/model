@@ -1,0 +1,33 @@
+{
+  "run": "G7S_TraceCurriculum_20260926",
+  "status": "preregistered_before_training",
+  "primary_hypothesis": "A two-phase verified textual-trace curriculum (trace+final then final-only consolidation) improves final-only free generation versus final-only training for all updates.",
+  "arms": ["trace_then_final","final_only"],
+  "seeds": [7801,7802,7803],
+  "sampler_seed": 78311,
+  "steps": 2000,
+  "trace_phase_steps": 1000,
+  "batch": 16,
+  "parameters_each": 469648,
+  "optimizer": "AdamW lr .001 betas(.9,.95) wd .01 clip1 warmup100 cosine-to15%",
+  "train_n": 8192,
+  "validation_n": 400,
+  "held_n": 400,
+  "counterfactual_pairs": 40,
+  "generation": "final-only F=<integer>; greedy unrestricted byte259; max32 new bytes; EOS; no tools/gold/trace input",
+  "selection": "fixed final step2000 only; held never used for checkpoint or hyperparameter selection",
+  "success": {"mean_iid_gain_pp":5,"pooled_surface_extrapolation_gain_positive":true,"counterfactual_pair_regression_max_pp":2,"positive_iid_seeds":2},
+  "freshness": "All G7 canonical groups are disjoint from every G5S/G6S known train/validation/held canonical group.",
+  "compute_caveat": "same cases/updates/parameters, but trace phase has more supervised/output tokens and therefore more training FLOPs",
+  "scope": "small mechanism probe; not 300-800M and not Qwen parity",
+  "data_sha256": {
+    "train":"dd58a1cd7ac7943eec8b336cdad1bfce581b3cc527892b7b40520ef4d9ec6134",
+    "validation":"75b1d4ac8f2826c2cd915a75d3b0617b0363d0709011c63df0ca1e1120d685d4",
+    "test_iid":"934ac183234b958cbffc682f908abe4811a3af7f48882883db2186a05c8e5d64",
+    "test_surface":"25a52b6893320a954b3582ae1336eae4b66e575698261534a56b7e3955e562f9",
+    "test_extrapolation":"726d164eebfa1de683cea62509d5998f5f8462d5f3807cc95c3fee0e4d5036b6",
+    "test_counterfactual":"89d66bdffaa834b2dd6b3918ecd861f3675993406fc08abc7db5f17332245719"
+  },
+  "prior_denied_groups":8952,
+  "fresh_groups":8952
+}
