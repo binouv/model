@@ -1,13 +1,13 @@
 {
   "status": "completed_checkpoint_only",
-  "variant": "full",
-  "step": 6000,
-  "total_updates_including_parent": 8000,
+  "variant": "hybrid",
+  "step": 1000,
+  "total_updates_including_parent": 3000,
   "expected_new_updates": 6000,
   "actual_asset": {
-    "name": "full_step6000.resume.pt",
-    "sha256": "187f18eb8d6dadec5d202ecc9a8d5d266541723e92be7c0db8fbf16c3642eab3",
-    "bytes": 25604816,
+    "name": "hybrid_step1000.resume.pt",
+    "sha256": "450e1f459bd7899a41b21d95a49d7c81a15ebd1c133095f968f1ca713905eeb6",
+    "bytes": 24141302,
     "remote_redownload_sha256_verified": true
   },
   "fresh_optimizer": true
