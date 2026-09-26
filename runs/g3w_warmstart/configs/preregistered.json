@@ -1,0 +1,19 @@
+{
+ "run":"G3W_warmstart_20260926","status":"preregistered_before_training",
+ "hypothesis":"Longer matched optimization from actual G3 seed7301 release weights improves free-generated reasoning transfer; persistent-delta hybrid is compared to equally continued full-attention control.",
+ "arms":["full","hybrid"],"parent_seed":7301,"parent_updates":2000,"new_updates_each":6000,"batch":32,
+ "new_training_seed":7701,"new_data_sampler_seed":77311,"fresh_optimizer":true,"NOT_exact_G3_optimizer_resume":true,
+ "optimizer":"AdamW lr0.0005 betas(.9,.95) wd.01 clip1 warmup100 cosine-to15%",
+ "model_data_code":"unchanged G3 source and exact hash-checked data;16384train400validation400held; no architecture change",
+ "parameters":{"full":1901696,"hybrid":1903760},
+ "parent_release":"flygraph-g3-cpu-replay-36198964333",
+ "parent_weight_sha256":{"full":"2d48baddb9172049cc06c4728afffa4bd66f83646a968da88bdbfbf709470bd9","hybrid":"6c007e6b0f337a375e2517ad173c6cd888a9b971e6bef03a13ae7d94746317c6"},
+ "optimization_gate":{"hybrid_iid_gain_vs_own_parent_pp":10,"hybrid_pooled_surface_extrapolation_gain_positive":true,"hybrid_counterfactual_both_correct_pair_no_regression":true},
+ "secondary_architecture_gate":{"final_hybrid_minus_full_iid_pp":5,"pooled_surface_extrapolation_gain_positive":true},
+ "selection":"fixed6000newstep endpoint only; no held-based stopping or checkpoint selection",
+ "inference":"unchanged greedy full8192vocab,max16newtokens,no tools,no gold input",
+ "state_saving":"actual model+optimizer+torch/python/sampler RNG every1000newsteps; final safetensors; raw predictions and source/data",
+ "publication":"dedicated non-force branch, draft release until both models complete, every asset downloaded again and SHA256 verified",
+ "limitations":["one parent seed, not three new independent initializations","reuses earlier synthetic held suite, not fresh broad code/reasoning benchmark","warm-start not exact resume because old optimizer bytes not present","small~1.9M probes, not300-800M or Qwen parity","full and hybrid have slightly different params and FLOPs"],
+ "no_paid_services":true,"finite_ci":true
+}
