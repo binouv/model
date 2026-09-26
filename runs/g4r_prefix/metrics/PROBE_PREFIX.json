@@ -1,0 +1,1 @@
+{"variant":"prefix_hybrid","parameters":{"unique_parameters":469648,"active_parameters_per_forward":469648,"persistent_intertoken_delta_state":true,"prefix_bidirectional_attention":true},"initial_validation_nll":5.519972119343076,"median_step_seconds":0.11874251100016409,"mean_step_seconds":0.11603646960004425}

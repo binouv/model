@@ -1,0 +1,17 @@
+{
+  "run":"G4R-PrefixHybrid-Recovery-20260926",
+  "status":"completed_data_build",
+  "source":"exactly reconstructed G3 semantic cases; first8192 G3 train cases; byte retokenization only",
+  "vocab":259,
+  "pad":0,
+  "bos":1,
+  "eos":2,
+  "completion":"integer UTF-8 bytes + EOS, no whitespace wrapper",
+  "counts":{"train":8192,"validation":400,"test_iid":160,"test_surface":80,"test_extrapolation":80,"test_counterfactual":80},
+  "hashes":{"train.jsonl":"c886eeb2b9197539f548af4ac4f8d79e5cf3e854f035e5751dc7fa1a53b442e4","validation.jsonl":"8f9811c725bd60927583092a7434269ab1c871cebbe1ecd393658de9acca926e","test_iid.jsonl":"9f7fbed82f64e72a3bd93eaa380a4e523f24049f34f19db0c8161f20e281ec40","test_surface.jsonl":"cf4a5bce3287a12fe2b2fea0002b49ceb6ee3c5d38cec03ffb79e5c97e59d43e","test_extrapolation.jsonl":"0495e684583d6fb5b06ee3f3cc98ecaafe3013b62210c6f11b1136786bc6d733","test_counterfactual.jsonl":"b206ba78a24204d8831f8f627e576b1ad89c8ba6040407a6eb3e31aee817035a"},
+  "semantic_group_cross_split_overlap":0,
+  "gold_replayed":true,
+  "external_teacher":false,
+  "original_G4_manifest_reused":false,
+  "reason":"original G4 manifest existed but raw G4 JSONL/source were not published; recovery is a separately registered run"
+}
