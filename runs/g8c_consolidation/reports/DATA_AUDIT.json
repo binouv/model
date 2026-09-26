@@ -1,0 +1,22 @@
+{
+  "status": "completed_data_audit",
+  "parent_sha256_matched": true,
+  "parent_canonical_groups": 8952,
+  "fresh_groups": 1400,
+  "fresh_cases": 1600,
+  "parent_overlap": 0,
+  "language": "English",
+  "held_seeds": [
+    88301,
+    88302,
+    88303,
+    88304
+  ],
+  "fresh_sha256": {
+    "iid": "59c65a2c5e024e34713e7a1d49bc7fe83abb0809a6ab16da7c2e0606de18c2b9",
+    "surface": "e7f20cad34c00cd6327244ad09a731e40a60fb1e3f7d814b682ec5469e28b12a",
+    "extrapolation": "27733654cf75b93be7d21002b74b1848fd68df2e47e5591e9f9fddce909a2c10",
+    "counterfactual": "391db4705f93d26d7c2de30f7518911bd81f4c88bcf392c5afbdb2071b2c9906"
+  },
+  "scope": "fresh relative to available G5S datasets; no claim about absent G7S dataset or natural-language benchmarks"
+}

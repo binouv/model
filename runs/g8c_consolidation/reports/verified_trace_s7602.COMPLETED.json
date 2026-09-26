@@ -1,0 +1,154 @@
+{
+  "status": "completed",
+  "arm": "verified_trace",
+  "seed": 7602,
+  "parameters": 469648,
+  "parent_steps": 1000,
+  "additional_steps": 1000,
+  "parent_checkpoint_sha256": "b3ea93d12d4420d900ec641c4ed2ade38a75a899f7cc7ebc426f2dbce58635e2",
+  "parent_weight_state_sha256": "e8bac381aa8299214b7658ea0ac276bdf704ef6b1cb52f77eef74b01f4b13f41",
+  "final_weight_state_sha256": "9286ebeddddfe1e16359529e507a6c5519ea438394fc344fb279e2b7baf68844",
+  "parent_optimizer_restored": true,
+  "parent_rng_restored": true,
+  "LR_schedule_change": "registered cosine .0003 to .00006; not bitwise continuation of original1000step recipe",
+  "stage2_batch_sha256": "5c5e7155ced0e4429b51c2284e31433e765c852378f27b834613fd4e9a86e882",
+  "stage2_input_tokens": 1439918,
+  "stage2_supervised_tokens": 88062,
+  "stage2_padded_tokens": 1451264,
+  "train_seconds": 87.82724228199942,
+  "all_parameter_values_finite": true,
+  "reload_cases": 16,
+  "reload_mismatches": 0,
+  "next_update_replay_verified": true,
+  "checkpoint_manifest": {
+    "parameters": 469648,
+    "stage2_step": 1000,
+    "files": {
+      "resume.pt": {
+        "bytes": 6261190,
+        "sha256": "f4d5239f1e59c94f64666d7528f655efa1a1fdf7829b0826604297fb481fe69a"
+      },
+      "model.safetensors": {
+        "bytes": 1881704,
+        "sha256": "f2479f2641f96e69133393f040923593a4528daf16dd39a295e72514e5f0992b"
+      },
+      "config.json": {
+        "bytes": 131,
+        "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52"
+      }
+    }
+  },
+  "checkpoint": "/home/runner/work/model/model/repo/runs/g8c_consolidation/checkpoints/verified_trace_s7602/step2000",
+  "tests": {
+    "iid": {
+      "status": "completed",
+      "n": 400,
+      "correct": 24,
+      "accuracy": 0.06,
+      "both_correct_pairs": 0,
+      "pair_n": 0,
+      "truncated": 0,
+      "generation_seconds": 1.0861478139999008,
+      "generated_bytes": 1870
+    },
+    "surface": {
+      "status": "completed",
+      "n": 400,
+      "correct": 9,
+      "accuracy": 0.0225,
+      "both_correct_pairs": 0,
+      "pair_n": 0,
+      "truncated": 0,
+      "generation_seconds": 1.1329672089997302,
+      "generated_bytes": 1869
+    },
+    "extrapolation": {
+      "status": "completed",
+      "n": 400,
+      "correct": 7,
+      "accuracy": 0.0175,
+      "both_correct_pairs": 0,
+      "pair_n": 0,
+      "truncated": 0,
+      "generation_seconds": 1.0859608060001165,
+      "generated_bytes": 2021
+    },
+    "counterfactual": {
+      "status": "completed",
+      "n": 400,
+      "correct": 18,
+      "accuracy": 0.045,
+      "both_correct_pairs": 0,
+      "pair_n": 200,
+      "truncated": 0,
+      "generation_seconds": 0.9753135620000535,
+      "generated_bytes": 1832
+    }
+  },
+  "before": {
+    "iid": {
+      "status": "completed",
+      "n": 400,
+      "correct": 10,
+      "accuracy": 0.025,
+      "both_correct_pairs": 0,
+      "pair_n": 0,
+      "truncated": 0,
+      "generation_seconds": 2.2267774310002437,
+      "generated_bytes": 7443
+    },
+    "surface": {
+      "status": "completed",
+      "n": 400,
+      "correct": 4,
+      "accuracy": 0.01,
+      "both_correct_pairs": 0,
+      "pair_n": 0,
+      "truncated": 0,
+      "generation_seconds": 2.1768172159997903,
+      "generated_bytes": 6466
+    },
+    "extrapolation": {
+      "status": "completed",
+      "n": 400,
+      "correct": 0,
+      "accuracy": 0.0,
+      "both_correct_pairs": 0,
+      "pair_n": 0,
+      "truncated": 0,
+      "generation_seconds": 1.9635746100000802,
+      "generated_bytes": 7236
+    },
+    "counterfactual": {
+      "status": "completed",
+      "n": 400,
+      "correct": 9,
+      "accuracy": 0.0225,
+      "both_correct_pairs": 0,
+      "pair_n": 200,
+      "truncated": 0,
+      "generation_seconds": 1.668637818000093,
+      "generated_bytes": 6075
+    }
+  },
+  "release_assets": [
+    {
+      "name": "verified_trace_s7602.safetensors",
+      "bytes": 1881704,
+      "sha256": "f2479f2641f96e69133393f040923593a4528daf16dd39a295e72514e5f0992b",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "verified_trace_s7602.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "verified_trace_s7602.RAW.json.gz",
+      "bytes": 177637,
+      "sha256": "90d7a4ada7725f67dd1a7b03109b35380a74e53e3371bc13fdd3e6d098ca89cf",
+      "remote_redownload_sha256_verified": true
+    }
+  ]
+}
