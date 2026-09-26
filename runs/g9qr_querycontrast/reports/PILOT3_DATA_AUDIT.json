@@ -1,0 +1,14 @@
+{
+  "status":"completed_pretraining_data_audit",
+  "denied_parent_g8_groups":10352,
+  "new_query_invariant_groups":5552,
+  "cross_split_overlap":0,
+  "manifests":{
+    "train":{"n":4096,"attempts":4097,"sha256":"a150a89f1557db9b16f1b66d861f6e747e7d3b6dd2a0eac22a690c23741cc86e"},
+    "validation":{"n":256,"attempts":256,"sha256":"32c6708dc0233f90841042b4a362ee0c6eda5eac4588018750e78f487cfed77e"},
+    "iid":{"n":400,"attempts":400,"sha256":"d423c317280fcec5197cc61df60f98a7311d8b144950d541adc3564d8e5c1e71"},
+    "surface":{"n":200,"attempts":201,"sha256":"bb92ff56b0394c66c18497e99220c234aff3a7f4a265bc8b9f1d8c0b4e459d64"},
+    "extrapolation":{"n":200,"attempts":200,"sha256":"ddb2caf5ac8af6261175bfd506b6bc5b089fae854a26059e7f187ff902dcd6ca"},
+    "mixed":{"n":400,"sha256":"4351a4a0ca0f9f4f5b4a73dadc604c86e762ff47979f152e45a6583a850093ce"}
+  }
+}
