@@ -1,10 +1,10 @@
 {
   "status": "running",
   "stage": "G8C",
-  "active_arm": "verified_trace",
+  "active_arm": "final_only",
   "active_seed": 7602,
-  "last_durable_step": 2000,
-  "checkpoint": "/home/runner/work/model/model/repo/runs/g8c_consolidation/checkpoints/verified_trace_s7602/step2000",
+  "last_durable_step": 1250,
+  "checkpoint": "/home/runner/work/model/model/repo/runs/g8c_consolidation/checkpoints/final_only_s7602/step1250",
   "do_not_duplicate": true,
   "not_a_completed_grid": true
 }
