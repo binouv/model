@@ -1,0 +1,23 @@
+{
+  "run":"G7R_TraceCurriculum_Repro_20260926",
+  "status":"preregistered_before_training",
+  "supersedes":"G7S_TraceCurriculum_20260926 prereg only",
+  "reason":"G7S dataset hashes were committed without generator or rows; reconstruction did not match, so G7S remains untrained and unchanged.",
+  "hypothesis":"Two-phase verified textual-trace curriculum for steps1-1000 then final-only steps1001-2000 improves final-only free generation over final-only training for all2000 updates.",
+  "arms":["trace_then_final","final_only"],
+  "seeds":[7801,7802,7803],
+  "sampler_seed":78311,
+  "steps":2000,
+  "trace_phase_steps":1000,
+  "batch":16,
+  "parameters_each":469648,
+  "selection":"fixed final step2000 only; held never used for checkpoint or hyperparameter selection",
+  "success":{"mean_iid_gain_pp":5,"pooled_surface_extrapolation_gain_positive":true,"counterfactual_pair_regression_max_pp":2,"positive_iid_seeds":2},
+  "generation":"final-only F=<integer>; greedy byte259; max32 new bytes; EOS",
+  "compute_caveat":"trace arm has more supervised/output tokens during phase1 and is not compute-neutral",
+  "scope":"small mechanism probe; not 300-800M and not Qwen parity",
+  "data_sha256":{"train":"56d5b3b96df54be7ecb9c2d132517e30f94a251996056c2bb8143798a15e2c99","validation":"7dbb91aa095717b28eb710b8d888f3d1a473586f4c9dbf052db3a64135250ee8","test_iid":"cec83ca789aa7cf1f3dedb761c0b2ede59aa46838ee3177f41ef14def48e57c2","test_surface":"1f6d29ae68027415e311fe79e80144b3d0ddc53f25377ee051240fa174f48648","test_extrapolation":"6955a0b548511370c77ca33933fe078f37ad840c70642b17b93b11825a607872","test_counterfactual":"744b44373471740ae6eb347221aaaeab1895d773894edd3be3c564401eb6a21f"},
+  "prior_denied_groups":8952,
+  "fresh_groups":8952,
+  "goal_not_achieved":true
+}
