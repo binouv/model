@@ -1,1 +1,53 @@
-{"status_at_publication":"G3completed_G3Lrunning","latest_completed_local_stage":"G3nine2000-stepgenerativeprobes","next_active_stage":"runs/g3_long","G3L_selected":"hybrid","G3L_total_steps":8000,"G3L_seeds":[7301,7302,7303],"G3L_variants":["full","hybrid"],"do_not_duplicate_running_training":true,"thinking_runs":{"Q4":36198379877,"BF16":36200117074},"thinking_branches":{"Q4":"flygraph/g3-thinking-20260926","BF16":"flygraph/g3-thinking-bf16-20260926"},"real_release":{"run":36198964333,"release_id":396974545,"tag":"flygraph-g3-cpu-replay-36198964333","models":3,"scope":"independent CPUreplay of seed7301,NOTlocal9weightmirror; nooptimizerinremoteassets"},"prior_310M_weights_unchanged":true,"goal_not_achieved":true,"full_historical_backup_not_complete":true,"automation_old_noGit_R35_prompt_replaced":true,"resume_rule":"Check actual local checkpoints/CIstatus before another run. Never infer completion from run number or manifest."}
+{
+  "status_at_publication": "G3_completed; G3L not completed in visible state; G4 prefix-conditioning experiment active",
+  "latest_completed_stage": "G3 nine 2000-step generative probes",
+  "g3_long": {
+    "selected": "hybrid",
+    "target_total_steps": 8000,
+    "seeds": [
+      7301,
+      7302,
+      7303
+    ],
+    "variants": [
+      "full",
+      "hybrid"
+    ],
+    "completed_checkpoint_visible_in_git": false,
+    "current_runtime_exact_resume_blocker": "G3 parent .pt optimizer/RNG checkpoints are not mounted; remote G3 release has safetensors only",
+    "do_not_reconstruct_optimizer": true
+  },
+  "qwen_thinking_q4": {
+    "original_run": 36198379877,
+    "resume_run": 36201312886,
+    "status": "completed_40_of_40_uncensored",
+    "commit": "c4f98d9125304663a15cb9d9d4293fbd868af941",
+    "strict_exact": [
+      34,
+      40
+    ],
+    "posthoc_last_integer": [
+      40,
+      40
+    ],
+    "all_eos": true,
+    "all_thinking_closed": true,
+    "censored": 0,
+    "total_tokens": 27054
+  },
+  "qwen_thinking_bf16": {
+    "run": 36200117074,
+    "status": "incomplete_27_then_cancelled",
+    "use_as_benchmark": false
+  },
+  "release": {
+    "run": 36198964333,
+    "id": 396974545,
+    "tag": "flygraph-g3-cpu-replay-36198964333",
+    "scope": "actual seed7301 CPU-replay safetensors; no optimizer assets"
+  },
+  "next_active_stage": "runs/g4_prefix",
+  "goal_not_achieved": true,
+  "prior_310M_weights_unchanged": true,
+  "resume_rule": "Check actual checkpoints and workflow status before training; do not count incomplete runs."
+}

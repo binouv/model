@@ -1,0 +1,53 @@
+{
+  "status": "completed_uncensored_q4_thinking_reference",
+  "model": "Qwen/Qwen3.5-4B",
+  "quantization": "Q4_K_M",
+  "thinking": true,
+  "fixture_n": 40,
+  "original_run": 36198379877,
+  "resume_run": 36201312886,
+  "final_commit": "c4f98d9125304663a15cb9d9d4293fbd868af941",
+  "all_eos": true,
+  "all_thinking_closed": true,
+  "all_nonempty_thinking": true,
+  "censored_ids": [],
+  "strict_exact_integer_only": {
+    "correct": 34,
+    "n": 40,
+    "accuracy": 0.85
+  },
+  "semantic_last_integer_diagnostic": {
+    "correct": 40,
+    "n": 40,
+    "accuracy": 1,
+    "by_family": {
+      "arithmetic": [
+        8,
+        8
+      ],
+      "conditional": [
+        8,
+        8
+      ],
+      "code_trace": [
+        8,
+        8
+      ],
+      "list_reasoning": [
+        8,
+        8
+      ],
+      "memory_update": [
+        8,
+        8
+      ]
+    }
+  },
+  "generated_tokens": {
+    "total": 27054,
+    "mean": 676.35,
+    "max": 3038
+  },
+  "interpretation": "Valid uncensored thinking reference on this 40-case synthetic fixture. Last-integer scoring is a transparent posthoc semantic diagnostic, not the original strict-format metric or a broad intelligence benchmark.",
+  "no_tools": true
+}
