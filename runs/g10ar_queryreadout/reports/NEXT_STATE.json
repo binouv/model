@@ -1,0 +1,11 @@
+{
+  "status": "preregistered_not_started",
+  "run": "G10AR_QueryReadout_Reconstructed_20260926",
+  "parent_release": 397210425,
+  "parent_step": 2000,
+  "planned_models": 6,
+  "actual_training_completed": 0,
+  "do_not_duplicate": true,
+  "goal_300_800m_qwen_thinking_not_achieved": true,
+  "next": "commit executable source/tests/data builder; run one finite public CPU workflow; publish actual checkpoint bytes only after completed endpoints"
+}
