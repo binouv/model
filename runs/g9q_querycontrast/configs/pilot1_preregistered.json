@@ -1,0 +1,17 @@
+{
+  "run":"G9QP1_QueryContrastPilot_20260926",
+  "status":"preregistered_before_training",
+  "reason":"The full G9Q 600-update grid is computationally expensive on this 5-vCPU runtime; this finite pilot is a separate screen and cannot confirm the full G9Q hypothesis.",
+  "parent":"G8C verified_trace seed7601 step2000 actual optimizer/RNG checkpoint",
+  "arms":["query_contrast","nll_control"],
+  "seed":7601,
+  "updates":120,
+  "pair_groups_per_update":8,
+  "sampler_seed":90311,
+  "objective":"identical to G9Q registered objective and candidate-scoring compute",
+  "train_data":"same fresh G9Q train groups; no G8C held data",
+  "evaluation":{"held_iid_pair_groups":100,"held_surface_pair_groups":50,"held_extrapolation_pair_groups":50,"mixed_regression_cases":100},
+  "selection":"fixed step120 only; no early stopping or test selection",
+  "pilot_advance_rule":{"both_correct_pair_gain_pp_min":2.0,"individual_exact_gain_pp_min":2.0,"teacher_forced_margin_gain_nats_min":0.05,"mixed_regression_drop_pp_max":2.0},
+  "claim_limit":"one inherited seed; pilot only; no Qwen comparison; no 300-800M claim"
+}
