@@ -1,0 +1,19 @@
+{
+  "run":"G9QR_QueryContrast_Reconstructed_20260926",
+  "status":"preregistered_before_training",
+  "why_new_namespace":"Earlier G9Q was preregistered in Git but its exact experiment.py/data bytes were not present at the inspected branch and no completed training/release existed. This reconstruction changes data seeds and therefore is a separately registered experiment, not a completion claim for old G9Q.",
+  "parent":{"run":"G8C","release_id":397210425,"release_tag":"flygraph-g8c-consolidation-36238890991","arm":"verified_trace","checkpoint_step":2000,"seeds":[7601,7602,7603],"parameters_each":469648},
+  "architecture_changed":false,
+  "primary_hypothesis":"On identical memory histories, query-conditioned sequence-level contrastive ranking of the correct queried value above another current key value improves free generation and both-correct counterfactual pairs versus positive-NLL-only training with identical candidate scoring compute.",
+  "arms":["query_contrast","nll_control"],"updates":600,"pair_groups_per_update":8,"prompts_per_update":16,"candidate_sequences_scored_per_update":32,
+  "optimizer":"restore G8C AdamW state; stage3 LR cosine 0.0002 to 0.00004; betas(.9,.95), weight_decay .01, clip1","sampler_seed":91311,
+  "objective":{"query_contrast":"mean positive sequence NLL + 0.5*mean softplus(0.5 + nll_positive - nll_counterfactual_answer)","nll_control":"mean positive sequence NLL + 0.0*mean counterfactual-answer NLL; negative candidates are still scored in the same tensor/forward pass","sequence_score":"length-normalized NLL of F=<integer> plus EOS under the same prompt","lambda":0.5,"margin_nats":0.5},
+  "data":{"family":"memory_update only for primary train/validation/held","train_pair_groups":4096,"validation_pair_groups":256,"held_iid_pair_groups":400,"held_surface_pair_groups":200,"held_extrapolation_pair_groups":200,"mixed_regression_cases":400,"seeds":{"train":91301,"validation":91302,"held_iid":91303,"held_surface":91304,"held_extrapolation":91305,"mixed_regression":91306},"split_rule":"split by query-invariant memory-history canonical group before rendering","chronology":"per-key write chronology retained","denied":"all available G5S parent and G8C fresh canonical groups; G8C held is never training data"},
+  "free_generation":"prompt strings only; greedy unrestricted byte259; max32 new bytes; EOS required; one terminal F=<integer>; no solver/case/gold input",
+  "teacher_forced_diagnostic":"positive-vs-counterfactual sequence-score margin separately reported",
+  "selection":"fixed step600 only; validation and held never select checkpoint or hyperparameters",
+  "success":{"mean_both_correct_pair_gain_pp":5.0,"mean_individual_exact_gain_pp":5.0,"positive_both_correct_direction_seeds":2,"mean_query_sensitivity_gain_pp_min":0.0,"mean_negative_confusion_change_pp_max":0.0,"mixed_regression_drop_pp_max":2.0,"teacher_forced_margin_gain_nats_min":0.10},
+  "scope":"small memory-addressing mechanism test; NOT a 300-800M model, NOT broad reasoning/code evidence, NOT Qwen parity",
+  "next_if_positive":"port verified objective into broader generative training and retest fresh reasoning/code before scale",
+  "next_if_negative":"reject this objective at this scale and test an architectural query-readout/gate separately; do not merely extend updates"
+}
