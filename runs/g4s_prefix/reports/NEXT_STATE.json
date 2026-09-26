@@ -1,0 +1,9 @@
+{
+  "status": "G4S_completed",
+  "source_commit": "375fbe2c0d987a4f94a28ea5d5d11278612fe354",
+  "run_id": "36227840038",
+  "release_tag": "flygraph-g4s-completed-36227840038",
+  "six_native_optimizer_rng_checkpoints": true,
+  "goal_achieved": false,
+  "next": "G5 trace supervision needs exact new data registration; G3 long requires optimizer bytes or explicitly fresh optimizer warm-start. Do not repeat G4S."
+}
