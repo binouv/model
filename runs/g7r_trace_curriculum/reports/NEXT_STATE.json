@@ -1,1 +1,1 @@
-{"status":"preregistered_not_started","run":"G7R_TraceCurriculum_Repro_20260926","completed_results_claimed":false,"do_not_duplicate":true,"goal_not_achieved":true}
+{"status":"source_committed_before_local_training","run":"G7R_TraceCurriculum_Repro_20260926","completed_results_claimed":false,"branch":"flygraph/g7r-local-20260927","planned_models":6,"steps_each":2000,"do_not_duplicate":true,"goal_300_800m_qwen_thinking_not_achieved":true}
