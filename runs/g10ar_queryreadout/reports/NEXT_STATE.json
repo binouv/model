@@ -1,14 +1,20 @@
 {
-  "status":"data_audit_completed_training_not_started",
-  "run":"G10AR_QueryReadout_Reconstructed_20260926",
-  "parent_release":397210425,
-  "parent_step":2000,
-  "planned_models":6,
-  "actual_training_completed":0,
-  "data_audit_complete":true,
-  "data_sha256_frozen":true,
-  "source_blob_sha256":{"experiment.py":"7cc86f65d873ab48fb796db73ad48a5eb1e4fa2c","test_protocol.py":"8abfb208710b831266e9e4fb484eb0148d4b3b7f","preregistered.json":"8d24207c3d80773807e1981d727845fb420b30b0","model.py":"217e14d62f7cd40b16971c562ac208978354e1d1"},
-  "do_not_duplicate":true,
-  "goal_300_800m_qwen_thinking_not_achieved":true,
-  "next":"execute fixed six-model local paired screen from verified G8C native checkpoints; publish only completed endpoints"
+  "status": "completed",
+  "run": "G10AR_QueryReadout_Reconstructed_20260926",
+  "completed_training_models": 6,
+  "verdict": "NOT_CONFIRMED_IN_REGISTERED_PROTOCOL",
+  "source_commit_before_training": "f334e9b2cfdac5fb83aa5e0e9f3fa08307e44c40",
+  "actual_local_weight_bytes": true,
+  "optimizer_rng_present": true,
+  "final_reload_generation_cases": 96,
+  "final_reload_generation_mismatches": 0,
+  "next_update_replay_verified_all6": true,
+  "remote_release_created": false,
+  "local_bundle_sha256": "c27278bc7decfa4efc854d07f92ab0abd669f2b4d39cca9a1ab4dd9ce5179658",
+  "goal_300_800m_qwen_thinking_not_achieved": true,
+  "do_not_repeat": [
+    "G8C",
+    "G10AR"
+  ],
+  "next": "Return to fresh multi-family reasoning/code mechanism testing. G7R is preregistered but remains uncompleted; a local attempt below its first durable checkpoint is not a completed run and must not be counted."
 }

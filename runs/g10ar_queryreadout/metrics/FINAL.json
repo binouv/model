@@ -1,0 +1,270 @@
+{
+  "run": "G10AR",
+  "status": "completed",
+  "training_models": 6,
+  "ancestral_parent_seeds": [
+    7601,
+    7602,
+    7603
+  ],
+  "base_parameters": 469648,
+  "adapter_parameters": 36865,
+  "total_parameters": 506513,
+  "active_trainable_parameters": 36865,
+  "updates_each": 200,
+  "results": {
+    "query_readout_attention": {
+      "iid": {
+        "mean_individual_accuracy": 0.10583333333333333,
+        "individual_correct_by_seed": [
+          39,
+          45,
+          43
+        ],
+        "pair_n": 200,
+        "both_correct_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "query_sensitive_by_seed": [
+          7,
+          25,
+          7
+        ],
+        "other_key_confusions_by_seed": [
+          37,
+          45,
+          43
+        ],
+        "truncated_total": 0
+      },
+      "surface": {
+        "mean_individual_accuracy": 0.08,
+        "individual_correct_by_seed": [
+          14,
+          15,
+          19
+        ],
+        "pair_n": 100,
+        "both_correct_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "query_sensitive_by_seed": [
+          3,
+          15,
+          9
+        ],
+        "other_key_confusions_by_seed": [
+          13,
+          13,
+          16
+        ],
+        "truncated_total": 0
+      },
+      "extrapolation": {
+        "mean_individual_accuracy": 0.006666666666666667,
+        "individual_correct_by_seed": [
+          2,
+          2,
+          0
+        ],
+        "pair_n": 100,
+        "both_correct_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "query_sensitive_by_seed": [
+          5,
+          13,
+          5
+        ],
+        "other_key_confusions_by_seed": [
+          1,
+          3,
+          0
+        ],
+        "truncated_total": 0
+      },
+      "mixed": {
+        "mean_accuracy": 0,
+        "correct_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "n": 200
+      }
+    },
+    "token_mlp_control": {
+      "iid": {
+        "mean_individual_accuracy": 0.1075,
+        "individual_correct_by_seed": [
+          40,
+          46,
+          43
+        ],
+        "pair_n": 200,
+        "both_correct_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "query_sensitive_by_seed": [
+          7,
+          16,
+          6
+        ],
+        "other_key_confusions_by_seed": [
+          40,
+          48,
+          43
+        ],
+        "truncated_total": 0
+      },
+      "surface": {
+        "mean_individual_accuracy": 0.07166666666666667,
+        "individual_correct_by_seed": [
+          11,
+          12,
+          20
+        ],
+        "pair_n": 100,
+        "both_correct_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "query_sensitive_by_seed": [
+          2,
+          13,
+          7
+        ],
+        "other_key_confusions_by_seed": [
+          10,
+          14,
+          19
+        ],
+        "truncated_total": 0
+      },
+      "extrapolation": {
+        "mean_individual_accuracy": 0.006666666666666667,
+        "individual_correct_by_seed": [
+          1,
+          3,
+          0
+        ],
+        "pair_n": 100,
+        "both_correct_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "query_sensitive_by_seed": [
+          4,
+          14,
+          6
+        ],
+        "other_key_confusions_by_seed": [
+          1,
+          4,
+          0
+        ],
+        "truncated_total": 0
+      },
+      "mixed": {
+        "mean_accuracy": 0.0016666666666666668,
+        "correct_by_seed": [
+          0,
+          1,
+          0
+        ],
+        "n": 200
+      }
+    }
+  },
+  "paired_exact": {
+    "7601": {
+      "iid": {
+        "wins": 4,
+        "losses": 5,
+        "delta_pp": -0.25,
+        "exact_two_sided_p": 1
+      },
+      "surface": {
+        "wins": 3,
+        "losses": 0,
+        "delta_pp": 1.5,
+        "exact_two_sided_p": 0.25
+      },
+      "extrapolation": {
+        "wins": 1,
+        "losses": 0,
+        "delta_pp": 0.5,
+        "exact_two_sided_p": 1
+      }
+    },
+    "7602": {
+      "iid": {
+        "wins": 1,
+        "losses": 2,
+        "delta_pp": -0.25,
+        "exact_two_sided_p": 1
+      },
+      "surface": {
+        "wins": 4,
+        "losses": 1,
+        "delta_pp": 1.5,
+        "exact_two_sided_p": 0.375
+      },
+      "extrapolation": {
+        "wins": 0,
+        "losses": 1,
+        "delta_pp": -0.5,
+        "exact_two_sided_p": 1
+      }
+    },
+    "7603": {
+      "iid": {
+        "wins": 0,
+        "losses": 0,
+        "delta_pp": 0,
+        "exact_two_sided_p": 1
+      },
+      "surface": {
+        "wins": 1,
+        "losses": 2,
+        "delta_pp": -0.5,
+        "exact_two_sided_p": 1
+      },
+      "extrapolation": {
+        "wins": 0,
+        "losses": 0,
+        "delta_pp": 0,
+        "exact_two_sided_p": 1
+      }
+    }
+  },
+  "gains_pp": {
+    "iid_individual": -0.16666666666666635,
+    "iid_both_correct_pairs": 0,
+    "iid_query_sensitivity": 1.6666666666666663,
+    "iid_other_key_confusion_change": -0.5,
+    "mixed_regression_drop": 0.16666666666666669
+  },
+  "gates": {
+    "both_correct_gain_ge3pp": false,
+    "individual_gain_ge3pp": false,
+    "positive_both_correct_direction_2seeds": false,
+    "query_sensitivity_gain_ge3pp": false,
+    "negative_confusion_change_le0pp": true,
+    "mixed_regression_drop_le2pp": true
+  },
+  "verdict": "NOT_CONFIRMED_IN_REGISTERED_PROTOCOL",
+  "same_held_cases_across_seeds": true,
+  "same_training_group_sequence_across_all_models": true,
+  "scope": "506,513-parameter narrow synthetic memory-addressing screen; not broad reasoning/code, not300-800M, not Qwen parity"
+}

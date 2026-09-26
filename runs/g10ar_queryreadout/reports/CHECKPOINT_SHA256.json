@@ -1,0 +1,51 @@
+{
+  "status": "completed_local_checkpoint_bytes",
+  "models": 6,
+  "checkpoints": 12,
+  "optimizer_rng_in_resume": true,
+  "bundle": {
+    "name": "FlyGraph_G10AR_Completed_LocalBundle_2026-09-26.tar.gz",
+    "bytes": 51624207,
+    "sha256": "c27278bc7decfa4efc854d07f92ab0abd669f2b4d39cca9a1ab4dd9ce5179658"
+  },
+  "final_step200": [
+    {
+      "arm": "query_readout_attention",
+      "seed": 7601,
+      "safetensors": "312398ff06a23aea5726ac07caf2ddee7793702c1585502553861cbf0f853101",
+      "resume": "145c045f2f417774dfcea5bd3fefb0615aee459c22a2e2b42500eabbc3e24037"
+    },
+    {
+      "arm": "query_readout_attention",
+      "seed": 7602,
+      "safetensors": "fe04db6dfbe0f6aa52482cdabb061133632efcd52a7215c72edd32e9944fcb71",
+      "resume": "fcc48cb543424b94bbe770ceadbeafc5bab108c3d32ac388062d65b9fd0d5854"
+    },
+    {
+      "arm": "query_readout_attention",
+      "seed": 7603,
+      "safetensors": "4a49e2df61dad1438dacadc3c2e12f0accf0ab8de2ba0d784ed3334f59949ce1",
+      "resume": "2559b2a04d215faf78eb4cd9fce077ec772621434ae134e9e586a845c91d83f7"
+    },
+    {
+      "arm": "token_mlp_control",
+      "seed": 7601,
+      "safetensors": "136c9f0517d78372d4d499217c8b13714ffe5a48f4f5c24c626a70b1136704ae",
+      "resume": "8a0e11bbede1e0bd0efb64627a699fea93e6bf033b9b7a8b1b754120aa2c0854"
+    },
+    {
+      "arm": "token_mlp_control",
+      "seed": 7602,
+      "safetensors": "cc6a64ddbeb7baf20f931338625e8c683e540da784a0a74f355848d4cbbe8c8a",
+      "resume": "47dcec7477f01a588ce6bc933dfa4a7ad3d9161b8eced71a660d8bb4261b851d"
+    },
+    {
+      "arm": "token_mlp_control",
+      "seed": 7603,
+      "safetensors": "a1b2fff1ca504e74ae268559e2c49cb6934cc3cffd92f5cca4fc2aaf675c449a",
+      "resume": "4bfa5c322c85895079ba215cab726c10fd02d12d221af6101299dd8e4f2bbf1b"
+    }
+  ],
+  "remote_weight_release": false,
+  "remote_weight_release_reason": "No release-asset write action is exposed by the connected GitHub connector; actual bytes are preserved in the downloadable local bundle. This manifest is not a weight publication."
+}

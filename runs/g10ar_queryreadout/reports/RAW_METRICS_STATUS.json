@@ -1,0 +1,12 @@
+{
+  "status": "raw_metrics_retained_locally",
+  "complete_prediction_and_training_archive": "G10AR_RAW_METRICS.tar.gz",
+  "bytes": 1504908,
+  "sha256": "789901a301c0ed126ffa41e1d2e1c58e51619f6170961753b3ad3b3cd5747751",
+  "compact_csv_gz": "G10AR_RAW_METRICS_COMPACT.csv.gz",
+  "compact_bytes": 369733,
+  "compact_sha256": "b0676cac84ebf632dc53ba278ff7eee851d4a6e00a3789330a37890d80cf7e42",
+  "contains": "all1200 optimizer-step records plus all completed free-generation rows for six models",
+  "remote_raw_bytes_uploaded": false,
+  "reason": "connector exposes UTF-8 Git writes but no direct container-file or release-asset upload; exact local bytes are included in the downloadable completed bundle"
+}
