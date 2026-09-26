@@ -1,6 +1,6 @@
 {
   "status": "completed_arms_only",
-  "completed_models": 1,
+  "completed_models": 2,
   "expected_models": 6,
   "models": [
     {
@@ -152,6 +152,156 @@
       "reload_probe_cases": 16,
       "reload_mismatches": 0,
       "all_losses_finite": true
+    },
+    {
+      "status": "completed",
+      "variant": "prefix_hybrid",
+      "seed": 7501,
+      "steps": 800,
+      "parameters": {
+        "total_parameters": 469648,
+        "active_parameters": 469648,
+        "variant": "prefix_hybrid",
+        "executed_blocks": 4,
+        "persistent_intertoken_delta_state": true,
+        "prefix_bidirectional_attention": true
+      },
+      "validation_nll": 1.6966483954406038,
+      "tests": {
+        "test_iid": {
+          "n": 160,
+          "correct": 1,
+          "accuracy": 0.00625,
+          "eos": 160,
+          "both_correct_pairs": 0,
+          "pair_count": 0,
+          "by_family": {
+            "arithmetic": {
+              "n": 32,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 32,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 32,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 32,
+              "correct": 1
+            },
+            "memory_update": {
+              "n": 32,
+              "correct": 0
+            }
+          },
+          "seconds": 0.39663907400000653
+        },
+        "test_surface": {
+          "n": 80,
+          "correct": 0,
+          "accuracy": 0.0,
+          "eos": 80,
+          "both_correct_pairs": 0,
+          "pair_count": 0,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 0
+            }
+          },
+          "seconds": 0.27557451600000604
+        },
+        "test_extrapolation": {
+          "n": 80,
+          "correct": 0,
+          "accuracy": 0.0,
+          "eos": 80,
+          "both_correct_pairs": 0,
+          "pair_count": 0,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 0
+            }
+          },
+          "seconds": 0.17077776899998298
+        },
+        "test_counterfactual": {
+          "n": 80,
+          "correct": 0,
+          "accuracy": 0.0,
+          "eos": 80,
+          "both_correct_pairs": 0,
+          "pair_count": 40,
+          "by_family": {
+            "arithmetic": {
+              "n": 40,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 0,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 0,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 0,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 40,
+              "correct": 0
+            }
+          },
+          "seconds": 0.162390213000009
+        }
+      },
+      "batch_sequence_sha256": "23650f7b495317581b93dbfc3a9a02daed2ef86285d63dfd9facc88aebd53fe3",
+      "median_step_seconds": 0.05164276549999869,
+      "mean_step_seconds": 0.05880688086249977,
+      "elapsed_seconds": 49.77069374599999,
+      "checkpoint_sha256": "5722767af7e41113ac6ed13e31bcac9eb42428f17d26825a185806e613b28cbf",
+      "checkpoint_bytes": 5691490,
+      "reload_probe_cases": 16,
+      "reload_mismatches": 0,
+      "all_losses_finite": true
     }
   ],
   "assets": [
@@ -177,6 +327,30 @@
       "name": "causal_hybrid_s7501.metrics.json.gz",
       "bytes": 56480,
       "sha256": "199815662c69eaacdee9c536cd78f8d23ffa1e3255354607cbb996762f4f42c3",
+      "remote_bytes_download_verified": true
+    },
+    {
+      "name": "prefix_hybrid_s7501.checkpoint.pt",
+      "bytes": 5691490,
+      "sha256": "5722767af7e41113ac6ed13e31bcac9eb42428f17d26825a185806e613b28cbf",
+      "remote_bytes_download_verified": true
+    },
+    {
+      "name": "prefix_hybrid_s7501.safetensors",
+      "bytes": 1881704,
+      "sha256": "49f21279ba6282d8b882553e2a7333e696119d3786d9c2fe6463609ff37104b3",
+      "remote_bytes_download_verified": true
+    },
+    {
+      "name": "prefix_hybrid_s7501.config.json",
+      "bytes": 131,
+      "sha256": "27f887d2379eaf27dde5cfa996d398a757bbbd82b49c9de8d69da8b1a456172a",
+      "remote_bytes_download_verified": true
+    },
+    {
+      "name": "prefix_hybrid_s7501.metrics.json.gz",
+      "bytes": 56659,
+      "sha256": "d587d6636284cd835c6f6358d36ab1304220563ff2e80c42567ee0e1513a5ba6",
       "remote_bytes_download_verified": true
     }
   ]
