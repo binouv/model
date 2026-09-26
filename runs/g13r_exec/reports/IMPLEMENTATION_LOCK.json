@@ -1,0 +1,16 @@
+{
+  "status": "locked_before_training",
+  "date": "2026-09-27",
+  "protocol": "G13R_ExecutableCurriculumPilot_20260927",
+  "base_model_source": "runs/g8c_consolidation/base/model.py",
+  "base_model_blob_sha": "217e14d62f7cd40b16971c562ac208978354e1d1",
+  "intended_parameters": 469648,
+  "seeds": [
+    8611,
+    8612
+  ],
+  "steps": 400,
+  "batch": 16,
+  "objective": "strict completion-only F=<integer>+EOS",
+  "note": "No training or held scoring by this implementation had completed when this lock was written."
+}
