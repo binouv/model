@@ -1,11 +1,14 @@
 {
-  "status": "preregistered_not_started",
-  "run": "G10AR_QueryReadout_Reconstructed_20260926",
-  "parent_release": 397210425,
-  "parent_step": 2000,
-  "planned_models": 6,
-  "actual_training_completed": 0,
-  "do_not_duplicate": true,
-  "goal_300_800m_qwen_thinking_not_achieved": true,
-  "next": "commit executable source/tests/data builder; run one finite public CPU workflow; publish actual checkpoint bytes only after completed endpoints"
+  "status":"data_audit_completed_training_not_started",
+  "run":"G10AR_QueryReadout_Reconstructed_20260926",
+  "parent_release":397210425,
+  "parent_step":2000,
+  "planned_models":6,
+  "actual_training_completed":0,
+  "data_audit_complete":true,
+  "data_sha256_frozen":true,
+  "source_blob_sha256":{"experiment.py":"7cc86f65d873ab48fb796db73ad48a5eb1e4fa2c","test_protocol.py":"8abfb208710b831266e9e4fb484eb0148d4b3b7f","preregistered.json":"8d24207c3d80773807e1981d727845fb420b30b0","model.py":"217e14d62f7cd40b16971c562ac208978354e1d1"},
+  "do_not_duplicate":true,
+  "goal_300_800m_qwen_thinking_not_achieved":true,
+  "next":"execute fixed six-model local paired screen from verified G8C native checkpoints; publish only completed endpoints"
 }

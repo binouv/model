@@ -1,0 +1,20 @@
+{
+  "status": "completed_pretraining_data_audit",
+  "memory_key_space": ["w","x","y","z"],
+  "prior_memory_key_space": ["a","b","c","d"],
+  "structurally_disjoint_from_G5S_G8C_G9QR_memory": true,
+  "query_invariant_groups": 2576,
+  "cross_split_overlap": 0,
+  "per_key_chronology_preserved": true,
+  "cross_key_permutations_canonicalized": true,
+  "mixed_value_range": [256,511],
+  "g8c_known_nonmemory_max_value": 255,
+  "manifests": {
+    "train":{"groups":2048,"cases":4096,"attempts":2048,"sha256":"ffae4bf2539fa2eb87feeb69d18882e64d9339c809181d5c12e4393261d9c091"},
+    "validation":{"groups":128,"cases":256,"attempts":128,"sha256":"f696ab7fd465e61aa2f8cd06d92273ce75974a8a578c93f40dba71894c07e447"},
+    "iid":{"groups":200,"cases":400,"attempts":200,"sha256":"aeda010423660d5f1af2991e7625c5f93900cc6e31438517c8235aa2a146d284"},
+    "surface":{"groups":100,"cases":200,"attempts":100,"sha256":"45b3cbba7175c70d1affd8915721286fd46b985dd4590809fe883c7c7a2a0ebb"},
+    "extrapolation":{"groups":100,"cases":200,"attempts":100,"sha256":"dc6f5c6d4e5655bf68da2e55843b5f9e74645336845d5e449e430210bdf11a82"},
+    "mixed":{"cases":200,"sha256":"59e64ae3ec3d33e0fda9dd9ff51e3291422bec8ea0607ab3f8dbb1ff0d1d9f83"}
+  }
+}
