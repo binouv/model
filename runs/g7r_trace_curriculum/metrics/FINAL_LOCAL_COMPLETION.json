@@ -1,0 +1,1 @@
+{"run":"G7R","status":"completed","training_models":6,"verdict":"NOT_CONFIRMED_IN_REGISTERED_PROTOCOL","iid_gain_pp":4.375,"actual_local_weight_bytes":true,"optimizer_rng_present":true,"reload_cases":96,"reload_mismatches":0,"step500_safetensors_match_prior_partial_all3":true,"remote_weight_release_created":false,"goal_300_800m_qwen_thinking_not_achieved":true}
