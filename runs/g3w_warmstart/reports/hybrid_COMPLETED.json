@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "variant": "hybrid",
+  "seed": 7301,
+  "new_training_seed": 7701,
+  "new_updates": 6000,
+  "ancestor_updates": 2000,
+  "parameters": {
+    "unique_parameters": 1903760,
+    "trainable_parameters": 1903760,
+    "unique_blocks": 4,
+    "executed_blocks": 4,
+    "variant": "hybrid",
+    "persistent_delta_state_per_token": true,
+    "biological_connectome": false,
+    "full_vocabulary_generation": true
+  },
+  "initial_validation_nll": 0.7445806466607042,
+  "final_validation_nll": 0.5161704272252979,
+  "input_tokens": 10484420,
+  "supervised_tokens": 965057,
+  "padded_tokens": 10941024,
+  "training_seconds": 469.41588807800144,
+  "elapsed_seconds": 508.982375981,
+  "batch_sequence_sha256": "1ebae71b1687db77e900215f6e0f5c0e5b9040f21a5b4d9055ae8a059eb97217",
+  "safetensors_sha256": "2edb15cac4d6b3c518510510e82af38b49529452d90bc5a87392389dc6c8cd4c",
+  "native_sha256": "1bd29e5aa04e28bf981c5f15c789b8ffd92188b6bcc6a37c3d81909bc6b4e428",
+  "reload_logits_equal": true,
+  "not_exact_original_G3_resume": true
+}
