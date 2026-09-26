@@ -1,0 +1,19 @@
+{
+  "run":"G5S_IndependentSeed7604_20260926",
+  "status":"preregistered_before_training",
+  "parent":"G5S verified_trace versus final_only",
+  "purpose":"independent fourth initialization to test whether the observed direction survives beyond seeds7601-7603",
+  "arms":["verified_trace","final_only"],
+  "seed":7604,
+  "sampler_seed":76311,
+  "steps":1000,
+  "batch":16,
+  "parameters_each":469648,
+  "same_data_hashes_as_G5S":true,
+  "selection":"fixed step1000 only; no held-based selection",
+  "scoring":"free generation using existing G5S evaluator",
+  "scope":"evidence extension only; not a new architecture, not 300-800M, not Qwen parity",
+  "cpu_replay":false,
+  "independent_training_seed":true,
+  "goal_not_achieved":true
+}
