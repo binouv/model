@@ -1,0 +1,33 @@
+{
+  "run":"G8S_ReconstructedFresh_20260926",
+  "status":"preregistered_before_training",
+  "lineage":"New namespace because G7S saved hashes lack saved raw bytes/source. G7S is untouched and remains unstarted.",
+  "architecture":"469648-parameter causal d-a-d-a hybrid with inter-token gated-delta state",
+  "arms":["trace_then_final","final_only"],
+  "seeds":[7801,7802,7803],
+  "data_seeds":[78011,78012,78013,78014,78015,78016],
+  "sampler_seed":78311,
+  "steps":2000,
+  "trace_phase_steps":1000,
+  "batch":16,
+  "train_n":8192,
+  "validation_n":400,
+  "held":{"iid":160,"surface":80,"extrapolation":80,"counterfactual_rows":80,"counterfactual_pairs":40},
+  "optimizer":"AdamW lr .001 betas(.9,.95) wd .01 clip1 warmup100 cosine-to15%",
+  "generation":"exact final-only F=<integer>; greedy byte259; max32 new bytes; EOS; no tool/gold/trace input",
+  "selection":"fixed step2000 endpoints only; validation and held never select checkpoints",
+  "primary_hypothesis":"trace_then_final improves mean IID exact by at least 5pp, positive in at least 2 of 3 seeds, positive pooled surface plus extrapolation, and no more than 2pp counterfactual-pair regression",
+  "secondary_hypothesis":"trace_then_final improves pooled code_trace plus memory_update exact by at least 5pp without more than 2pp arithmetic regression",
+  "compute_caveat":"trace phase has more supervised tokens; report loss tokens, input tokens and wall time",
+  "freshness":"8952 new canonical groups are disjoint from all 8952 G5S/G6S-known groups",
+  "scope":"small mechanism probe only",
+  "data_sha256":{
+    "train":"56d5b3b96df54be7ecb9c2d132517e30f94a251996056c2bb8143798a15e2c99",
+    "validation":"7dbb91aa095717b28eb710b8d888f3d1a473586f4c9dbf052db3a64135250ee8",
+    "test_iid":"cec83ca789aa7cf1f3dedb761c0b2ede59aa46838ee3177f41ef14def48e57c2",
+    "test_surface":"1f6d29ae68027415e311fe79e80144b3d0ddc53f25377ee051240fa174f48648",
+    "test_extrapolation":"6955a0b548511370c77ca33933fe078f37ad840c70642b17b93b11825a607872",
+    "test_counterfactual":"744b44373471740ae6eb347221aaaeab1895d773894edd3be3c564401eb6a21f"
+  },
+  "checkpoint_policy":"resume checkpoint with model optimizer python torch and sampler RNG every500 steps; model-only safetensors; SHA256 manifest"
+}
