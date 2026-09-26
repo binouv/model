@@ -1,0 +1,3 @@
+# G13L pre-training I/O correction
+
+Two incomplete attempts (no durable checkpoint and no held score) showed that opening/appending the JSONL training log on every optimizer step dominated wall time on the mounted artifact filesystem. Before any completed endpoint, logging was changed to buffer the same rows and flush every500 steps. Model updates, exact batch order, optimizer/RNG, checkpoint cadence, objective and gates are unchanged. The incomplete attempts are invalid and were cleared. Local train.py SHA256 after this engineering-only change: 3ae4244d53b04da7185b5479f019e92778b74c945a1d7e35736fecf23a1b20d9.
