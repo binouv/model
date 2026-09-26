@@ -1,0 +1,17 @@
+{
+  "run":"G10A_QueryReadoutAdapter_20260926",
+  "status":"preregistered_before_training",
+  "parent":{"run":"G8C","release_id":397210425,"arm":"verified_trace","checkpoint_step":2000,"seeds":[7601,7602,7603],"base_parameters":469648},
+  "architecture_changed":true,
+  "hypothesis":"A parameter-matched causal cross-token readout adapter can make the queried memory key control generation better than a per-token MLP adapter, when the inherited G8C backbone is frozen.",
+  "arms":{"query_readout_attention":"four 96x96 projections plus scalar residual gate","token_mlp_control":"96->192->96 MLP plus scalar residual gate"},
+  "parameter_matching":{"adapter_parameters_each":36865,"total_parameters_each":506513,"active_trainable_parameters_each":36865,"base_frozen":true},
+  "seeds":[7601,7602,7603],"updates":200,"pair_groups_per_update":8,"prompts_per_update":16,
+  "optimizer":"fresh AdamW on adapter only; lr cosine .001 to .0001; betas(.9,.95), wd .01, clip1","sampler_seed":92311,
+  "objective":"positive completion NLL only; F=<integer>+EOS; identical examples and updates in both arms",
+  "data":{"train_pair_groups":2048,"validation_pair_groups":128,"held_iid_pair_groups":200,"held_surface_pair_groups":100,"held_extrapolation_pair_groups":100,"mixed_regression_cases":200,"seeds":{"train":92301,"validation":92302,"iid":92303,"surface":92304,"extrapolation":92305,"mixed":92306},"denied":"all available G5S/G8C groups and every G9QRP3 generated group","split":"query-invariant memory-history groups before rendering; per-key chronology retained"},
+  "inference":"prompt-only greedy byte259; max32 bytes; EOS; strict F=<integer>; no solver/gold/case object",
+  "selection":"fixed step200 only; validation/held never select checkpoints",
+  "success":{"mean_both_correct_pair_gain_pp_min":3.0,"mean_individual_exact_gain_pp_min":3.0,"positive_both_correct_direction_seeds":2,"mean_query_sensitivity_gain_pp_min":3.0,"mean_negative_confusion_change_pp_max":0.0,"mixed_regression_drop_pp_max":2.0},
+  "scope":"small paired architectural mechanism screen, not 300-800M and not Qwen parity"
+}
