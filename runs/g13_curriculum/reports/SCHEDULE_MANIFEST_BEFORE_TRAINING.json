@@ -1,0 +1,16 @@
+{
+  "status": "completed_before_training",
+  "ordered_sha256": "ed255edb014cf3ba62d5979076260d392b014f6892caf91a46909f56b549a27b",
+  "control_permutation_sha256": "65fdeec59e6d90fec424443bdf3b6ff9a323b9ba2ef0d9f1209692c9569bfbbb",
+  "exposure_multiset_sha256": "98a75a99cb1f1bb5ba56c1f9a705ae33df2e1f655cb39c9dea45fa541f938627",
+  "batches": 2000,
+  "batch": 32,
+  "exposures": 64000,
+  "phase_batches": [
+    500,
+    500,
+    500,
+    500
+  ],
+  "pretrain_tests": "9 passed"
+}

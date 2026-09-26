@@ -1,0 +1,39 @@
+{
+  "status": "completed_before_training",
+  "prior_denied_groups": 45980,
+  "fresh_groups": 10392,
+  "cross_split_canonical_overlap": 0,
+  "pretrain_tests": "9 passed",
+  "splits": {
+    "train": {
+      "n": 8192,
+      "sha256": "d4d0e01efabb678979ffb43bdfe8510ba0f82d46298e536afd7c572f5c2943f3"
+    },
+    "validation": {
+      "n": 400,
+      "sha256": "c5fd050746da5269ea2e8fa06d3486cd73fe4c2dad96a1fac1df32338bc01625"
+    },
+    "test_iid": {
+      "n": 800,
+      "sha256": "c608c9255be8738cf1b8b827a3e24eeaa58b0f47a563c39718cf86921cff6953"
+    },
+    "test_surface": {
+      "n": 400,
+      "sha256": "3fb4dccfb30b0f45f9c50608354996781d340cb4b08af262c93f1733890d7b49"
+    },
+    "test_extrapolation": {
+      "n": 400,
+      "sha256": "3609b953abc70a16ed68208bbfe686bfe46513962fda314d5843c18f12033365"
+    },
+    "test_counterfactual": {
+      "n": 400,
+      "pairs": 200,
+      "sha256": "659485d15ec2d6cb0372a67aaffaf69f37a5ff41581b39cab43d266f5a76b213"
+    }
+  },
+  "stage0_amended_range": [
+    0,
+    63
+  ],
+  "optimizer_updates_before_lock": 0
+}
