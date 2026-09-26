@@ -1,0 +1,15 @@
+{
+  "status": "source_integrity_record",
+  "exact_local_sha256": {
+    "src/aggregate.py": "2c1aaa2f2438a0ae243792dfb6cf5e6e34d6c0f63642f5225c01622c4a4f41b3",
+    "src/base_model.py": "1edc5e7e8982a85114b7beb4aa7b42611b1e49637d1f872ca3d0788b887dfe87",
+    "src/data.py": "892165f894987aa448fb1d5a9ce6923704f6d7f78556b79d6b44e75ef0dc84a6",
+    "src/finalize_from_checkpoint.py": "c7e1f09b5c4a9f7b3db217a7500153d5c706bb4ff55693b2ffe7600720df634c",
+    "src/train.py": "e175935334478039b6ee58e660256ba0c02d91ee61506ec3442e7b4ad7f4900a",
+    "tests/test_protocol.py": "3c7890283f53eb298b796c7aac394cb27a397fca10a2e4a6b2ca6c6117b58573",
+    "configs/preregistered.json": "2b88e52197f0f74a306785ead79331bba4344acfcebeb84b78cf9d78c13f2dc3"
+  },
+  "git_source_upload_complete": false,
+  "reason": "Connected repository action blocked upload of exact data.py content; complete exact source is preserved in local SourceMetrics and checkpoint bundles.",
+  "posttrain_tests": "8 passed"
+}

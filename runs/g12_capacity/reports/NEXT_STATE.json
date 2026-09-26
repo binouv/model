@@ -1,1 +1,50 @@
-{"status":"preregistered_not_started","run":"G12_CapacityLearnability_20260927","completed_training_models":0,"planned_models":6,"arms":["small_469648","wide_2118928"],"seeds":[8501,8502,8503],"steps_each":2000,"batch":32,"data_generated":false,"held_inspected":false,"goal_300_800m_qwen_thinking_not_achieved":true,"do_not_duplicate":["G7R","G11R"],"next":"Implement exact fresh split denial against G5S+G7R+G11R, run protocol tests, then execute six fixed endpoints with native optimizer/RNG checkpoints."}
+{
+  "status": "completed",
+  "run": "G12_CapacityLearnability_20260927",
+  "completed_training_models": 6,
+  "steps_each": 2000,
+  "arms": {
+    "small_params": 469648,
+    "wide_params": 2118928
+  },
+  "verdict": "NOT_CONFIRMED_IN_REGISTERED_PROTOCOL",
+  "arith_code_gain_pp": 0,
+  "iid_gain_pp": 0.04166666666666663,
+  "actual_local_weight_bytes": true,
+  "optimizer_rng_present": true,
+  "reload_mismatches_total": 0,
+  "next_update_replay_verified_all6": true,
+  "remote_release_created": false,
+  "local_bundles": [
+    {
+      "name": "FlyGraph_G12_FinalCheckpointBundle_2026-09-27.tar.gz",
+      "bytes": 139547941,
+      "sha256": "36e57f5f27b6f98a4788489d69c22032727f90175e0da3b154d97a2031cfd357"
+    },
+    {
+      "name": "FlyGraph_G12_FullCheckpoints_2026-09-27.tar.gz",
+      "bytes": 498879583,
+      "sha256": "3c2f78c507e4967c23e827ee983367e0a03cd52911e2cdae73622abac40bcaac"
+    },
+    {
+      "name": "FlyGraph_G12_SourceMetrics_2026-09-27.tar.gz",
+      "bytes": 16611667,
+      "sha256": "088e355ca5d194c11bc961e71b767e8dba4771bbb65490f23d92c63748a5f3ab"
+    }
+  ],
+  "archive_replay": {
+    "tests": "8 passed",
+    "generation_cases": 96,
+    "generation_mismatches": 0,
+    "optimizer_rng_replay_all": true
+  },
+  "goal_300_800m_qwen_thinking_not_achieved": true,
+  "do_not_repeat": [
+    "G8C",
+    "G10AR",
+    "G7R",
+    "G11R",
+    "G12"
+  ],
+  "next": "Register G13 ordered algorithmic difficulty curriculum vs same-example shuffled control on fresh groups; strict final-only free generation."
+}

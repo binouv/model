@@ -1,0 +1,110 @@
+{
+  "run": "G12",
+  "status": "completed",
+  "training_models": 6,
+  "seeds": [
+    8501,
+    8502,
+    8503
+  ],
+  "arms": {
+    "small_params": 469648,
+    "wide_params": 2118928
+  },
+  "arith_code_accuracy": {
+    "small": 0.0020833333333333333,
+    "wide": 0.0020833333333333333
+  },
+  "memory_list_accuracy": {
+    "small": 0.005208333333333333,
+    "wide": 0.007291666666666667
+  },
+  "gains_pp": {
+    "test_iid": 0.04166666666666663,
+    "test_surface": 0.08333333333333334,
+    "test_extrapolation": 0.08333333333333334,
+    "test_counterfactual": 0
+  },
+  "arith_code_gain_pp": 0,
+  "memory_list_gain_pp": 0.20833333333333337,
+  "counterfactual_pair_gain_pp": 0,
+  "correct_by_seed": {
+    "small_iid": [
+      2,
+      2,
+      4
+    ],
+    "wide_iid": [
+      4,
+      1,
+      4
+    ],
+    "small_surface": [
+      0,
+      0,
+      0
+    ],
+    "wide_surface": [
+      0,
+      1,
+      0
+    ],
+    "small_extrapolation": [
+      0,
+      0,
+      0
+    ],
+    "wide_extrapolation": [
+      0,
+      0,
+      1
+    ],
+    "small_counterfactual": [
+      0,
+      1,
+      1
+    ],
+    "wide_counterfactual": [
+      0,
+      2,
+      0
+    ]
+  },
+  "paired_primary": {
+    "8501": {
+      "wins": 0,
+      "losses": 1,
+      "delta_pp": -0.3125,
+      "p": 1
+    },
+    "8502": {
+      "wins": 0,
+      "losses": 0,
+      "delta_pp": 0,
+      "p": 1
+    },
+    "8503": {
+      "wins": 1,
+      "losses": 0,
+      "delta_pp": 0.3125,
+      "p": 1
+    }
+  },
+  "gates": {
+    "arith_code_gain_ge5pp": false,
+    "positive_arith_code_at_least2seeds": false,
+    "overall_iid_gain_ge2pp": false,
+    "surface_plus_extrap_gain_ge1pp": false,
+    "memory_list_regression_le2pp": true,
+    "counterfactual_pair_regression_le2pp": true
+  },
+  "verdict": "NOT_CONFIRMED_IN_REGISTERED_PROTOCOL",
+  "same_batches": true,
+  "compute_matched": false,
+  "profiler_supported_forward_backward_flops_batch32": {
+    "small": 1474047297,
+    "wide": 6601176609
+  },
+  "scope": "fresh synthetic capacity screen; not Qwen parity",
+  "goal_300_800m_qwen_thinking_not_achieved": true
+}
