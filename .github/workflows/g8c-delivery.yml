@@ -1,0 +1,32 @@
+name: FlyGraph G8C finite verified-asset delivery
+on:
+  push:
+    branches: ['flygraph/g8c-delivery-20260926']
+    paths: ['runs/g8c_consolidation/RUN_TRANSFER.json']
+permissions:
+  contents: read
+jobs:
+  deliver:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch exact public source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          test "$(git -C repo rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: Fetch only completed final weights and results, verify all SHA256
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXPECTED_RECEIPT_BLOB: '67c462a1743b4453d2ac4e1032275c796957bbbd'
+        run: python3 repo/runs/g8c_consolidation/transfer/fetch_release.py
+      - name: Deliver real files for connector download; no model execution
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: G8C_verified_final_bytes
+          path: downloaded/
+          retention-days: 7
+          if-no-files-found: error
+          compression-level: 1
