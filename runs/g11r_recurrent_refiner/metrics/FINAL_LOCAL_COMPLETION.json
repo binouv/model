@@ -1,0 +1,1 @@
+{"run":"G11R","status":"completed","training_models":6,"seeds":[8401,8402,8403],"parameters_each":580432,"arith_code_gain_pp":0.0,"iid_gain_pp":0.08333333333333334,"memory_list_gain_pp":0.4166666666666669,"counterfactual_gain_pp":-0.5,"verdict":"NOT_CONFIRMED_IN_REGISTERED_PROTOCOL","compute_matched":false,"goal_300_800m_qwen_thinking_not_achieved":true}
