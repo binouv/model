@@ -1,0 +1,3 @@
+# G14 pre-training objective clarification
+
+No optimizer update and no held score existed when this clarification was made. The preregistered objective says the model must freely generate `F=<integer>+EOS`. The initial local materializer accidentally placed `F=` inside the compact prompt and supervised only the integer. Before any training, both compact and verbose arms are therefore normalized to the same completion boundary: the prompt ends before `F=`, and the supervised/generated completion is exactly `F=<integer>` followed by EOS. Semantic cases, split hashes, schedules, model, optimizer, step counts, gates, and fixed-endpoint selection are unchanged.

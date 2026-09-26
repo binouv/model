@@ -1,0 +1,15 @@
+{
+  "status": "completed_before_training",
+  "cross_split_canonical_overlap": 0,
+  "splits": {
+    "train": {"n": 2048, "sha256": "43a0ade76c68a10d23d133af2042f557ddc2eccbf760b934591168017b1393c2"},
+    "test_iid": {"n": 100, "sha256": "c10351c46962d6cc04630d92a2c818b255ce45763dff01488e32a3a12af35b6c"},
+    "test_surface": {"n": 50, "sha256": "368bc4e6197f8732ed6142d4fa7ebbe14362b74ed762b3849cf13cc4f89d09d3"},
+    "test_extrapolation": {"n": 50, "sha256": "8d80f2afd5a20aff0ebe6f3904ed79b2d18fe96f92e1dba7906934091ca1b65d"},
+    "test_counterfactual": {"n": 40, "sha256": "ffa9f608b55780849e42fa96a3ff1d1f476510fc9323604a1c746a58377029dd"}
+  },
+  "ordered_sha256": "15f6e561a66a9b277a066d31c4fe67e8332edb5bfc712d68dcb68536d6dd1f87",
+  "shuffled_sha256": "0dc2fbfa5a89477e805f96e19195891eae471fbd4cb3f1bf76834f6847f22d3f",
+  "same_batch_multiset": true,
+  "parameters": 469648
+}

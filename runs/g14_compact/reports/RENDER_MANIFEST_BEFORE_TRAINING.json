@@ -1,0 +1,14 @@
+{
+  "status": "locked_before_training",
+  "objective_completion": "F=<integer>+EOS generated after prompt in all arms",
+  "optimizer_updates_before_lock": 0,
+  "semantic_data_manifest_sha256": "57117bc4d46e7ed1136b15cc90ae4ad3493ad8f17f3d552f0a0afe353592681d",
+  "render_hashes": {
+    "train_compact": "deea8f7e8890d221dc479a35aac4dea41ac1f1c444091889c5e35169ab92c523",
+    "train_verbose": "13d116c8f7159b8e60f4d7904477b2e888916abe9d1105df15123146ecc61062",
+    "iid_compact": "9ce35e7ff682d749846795d62630938147114a1434d4f4708f2e3d65f8393d8c",
+    "iid_verbose": "5535be559db4c31b1c022a278db349885ad9e5cc67fea0cd4d76b587a82ec25a",
+    "surface_compact": "70101561f521ef2fbeb48e217e31e230673777a29e0c4964e7ae0452f1da42e3",
+    "surface_verbose": "5d2b0c3dd48a6eee90166be4d91d2558b62985329ab6c669c15eb5be1189ec28"
+  }
+}
