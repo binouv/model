@@ -1,0 +1,50 @@
+{
+  "status": "durable_checkpoints_partial_not_completed_grid",
+  "run": "G7R",
+  "completed_models": 0,
+  "partial": [
+    {
+      "arm": "trace_then_final",
+      "seed": 7801,
+      "step": 500,
+      "resume": {
+        "bytes": 6041286,
+        "sha256": "6bb0784c9d703caadb6190702c094210c879cbdd472b80e31ce6d247e371925e"
+      },
+      "safetensors": {
+        "bytes": 1881704,
+        "sha256": "14e9205149762e6aa8617b034bdc94e2a413bf7b1ad18ecf1aa1d9485a98e95c"
+      }
+    },
+    {
+      "arm": "trace_then_final",
+      "seed": 7802,
+      "step": 500,
+      "resume": {
+        "bytes": 6041286,
+        "sha256": "88cef1807bcd9bfa7f5a7e5e61ebcbc6c0d6dc324208b75c117ad1f192f04c9c"
+      },
+      "safetensors": {
+        "bytes": 1881704,
+        "sha256": "87d05dfa95c44df8f101c67d2865ca9b25eac42c4a8ae95db11e25380fa59fcc"
+      }
+    },
+    {
+      "arm": "trace_then_final",
+      "seed": 7803,
+      "step": 500,
+      "resume": {
+        "bytes": 6041286,
+        "sha256": "144181fda70b5a88281d420228786a4f5f4dd6335c4ce961bd94bbe5a5710b15"
+      },
+      "safetensors": {
+        "bytes": 1881704,
+        "sha256": "1189c4195b626305e6dc7cee484377c37ca77850d5a8860886044b543d491c70"
+      }
+    }
+  ],
+  "actual_local_binary_bytes": true,
+  "optimizer_rng_present": true,
+  "remote_binary_release_created": false,
+  "note": "These are durable step500 checkpoints only, not completed endpoints and not valid evidence for hypothesis result."
+}
