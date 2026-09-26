@@ -1,0 +1,11 @@
+{
+  "amendment":"01-generator-feasibility",
+  "status":"registered_before_any_completed_training",
+  "parent_preregistration":"runs/g4s_prefix/configs/preregistered.json",
+  "reason":"The first source version used normal integer range 0..31 while canonical arithmetic grouping ignores operator and operand order. That permits only 528 arithmetic canonical groups, but the fixed 8192-case balanced train requires about 1638 arithmetic groups, so dataset construction cannot terminate. A local attempt was stopped during data construction before any optimizer update or model result.",
+  "change":{"normal_integer_range":[0,127],"extrapolation_integer_range":[128,255]},
+  "unchanged":["architecture","parameter_count","seeds","sampler_seed","steps","batch","optimizer","objective","templates","semantic canonicalization","held sizes","success gates","fixed endpoint selection"],
+  "rationale":"Range expansion restores enough disjoint canonical arithmetic groups without weakening semantic separation. Extrapolation remains strictly outside training range.",
+  "no_result_seen_before_amendment":true,
+  "aborted_attempt_is_not_a_run":true
+}
