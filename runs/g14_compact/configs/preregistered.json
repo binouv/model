@@ -1,0 +1,23 @@
+{
+  "run":"G14_CompactPromptCurriculumScreen_20260927",
+  "status":"preregistered_before_data_generation_or_training",
+  "relationship":"New finite screen; does not alter or complete G13/G13R.",
+  "hypotheses":{
+    "H14a":"At fixed semantic cases, model, targets, optimizer updates and shuffled batch order, compact symbolic prompts improve arithmetic+code free-generation exact over verbose natural-language prompts by >=5pp.",
+    "H14b":"Within compact prompts and the exact same batch multiset, ordered easy-to-hard presentation improves arithmetic+code exact over shuffled order by >=3pp."
+  },
+  "model":{"variant":"causal_hybrid_dada","expected_params":469648,"tokenizer":"byte259"},
+  "arms":["verbose_shuffled","compact_shuffled","compact_ordered"],
+  "seed":8701,
+  "steps":120,
+  "phase_steps":30,
+  "batch":12,
+  "train_unique_per_stage":512,
+  "stages":[{"range":[0,31],"code_steps":1},{"range":[0,127],"code_steps":2},{"range":[0,255],"code_steps":3},{"range":[0,511],"code_steps":4}],
+  "held":{"iid":100,"surface":50,"extrapolation":50,"counterfactual_members":40,"counterfactual_pairs":20},
+  "objective":"strict final-only F=<integer>+EOS; no trace target; no gold/case object at inference",
+  "selection":"fixed step120 only; no checkpoint selection",
+  "screen_interpretation":"One-seed screen can refute large effects but cannot by itself establish a stable mechanism. Any positive result must be replicated on >=3 fresh seeds before scaling.",
+  "scope":"mechanism screen only; not Qwen parity",
+  "goal_300_800m_qwen_thinking_not_achieved":true
+}
