@@ -1,0 +1,13 @@
+{
+  "status": "checkpoint_completed_not_whole_grid",
+  "arm": "verified_trace",
+  "seed": 7601,
+  "stage2_step": 250,
+  "release_tag": "flygraph-g8c-consolidation-36238890991",
+  "asset": {
+    "name": "verified_trace_s7601_stage2_0250.resume.pt",
+    "bytes": 5898502,
+    "sha256": "cf2e1ba9016c6674a86d48d2b13009254bf7bba2937746a07cc76e158837b009",
+    "remote_redownload_sha256_verified": true
+  }
+}
