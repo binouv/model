@@ -1,0 +1,41 @@
+name: FlyGraph G8C finite checkpoint continuation
+on:
+  push:
+    branches: ['flygraph/g8c-consolidation-20260926']
+    paths: ['runs/g8c_consolidation/RUN_ONCE.json']
+permissions:
+  contents: write
+jobs:
+  continue:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Fetch exact public source without saved credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          cd repo
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          python3 runs/g8c_consolidation/bootstrap.py
+      - name: Pinned CPU dependencies and registered correctness tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m venv /tmp/fg
+          /tmp/fg/bin/pip install --index-url https://download.pytorch.org/whl/cpu torch==2.10.0
+          /tmp/fg/bin/pip install numpy==2.3.5 safetensors==0.7.0 packaging==26.3 pytest==8.4.2
+          mkdir -p repo/runs/g8c_consolidation/metrics
+          /tmp/fg/bin/python -m compileall -q repo/runs/g8c_consolidation/src
+          OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=1 /tmp/fg/bin/pytest -q repo/runs/g8c_consolidation/tests --junitxml=repo/runs/g8c_consolidation/metrics/tests.xml
+      - name: Restore six real parents, continue once, verify and release actual bytes
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OMP_NUM_THREADS: '4'
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          set -euo pipefail
+          cd repo
+          /tmp/fg/bin/python -u runs/g8c_consolidation/src/ci.py

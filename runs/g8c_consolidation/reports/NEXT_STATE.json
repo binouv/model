@@ -1,0 +1,1 @@
+{"status":"registered_not_yet_started","run":"G8C","parent_release":397157104,"continuations_planned":6,"duplicate_parent_training":false,"goal_not_achieved":true,"next":"verify parent bytes, tests and execute finite1000-step consolidation per parent; do not duplicate while CI runs"}
