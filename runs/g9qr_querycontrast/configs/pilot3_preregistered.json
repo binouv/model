@@ -1,0 +1,26 @@
+{
+  "run":"G9QRP3_QueryContrastPilot3Seed_20260926",
+  "status":"preregistered_before_training",
+  "lineage":"Separate finite pilot of the already-registered G9QR mechanism. Uses G9QR data/objective family but 160 fixed updates on all three inherited G8C verified-trace seeds.",
+  "parent":{"run":"G8C","release_id":397210425,"release_tag":"flygraph-g8c-consolidation-36238890991","arm":"verified_trace","checkpoint_step":2000,"seeds":[7601,7602,7603],"parameters_each":469648},
+  "architecture_changed":false,
+  "hypotheses":[
+    "H1: query-conditioned sequence-level contrastive ranking improves both-correct counterfactual memory pairs versus matched-compute positive-NLL control.",
+    "H2: the same objective increases query sensitivity without increasing wrong-other-key confusion.",
+    "H3: the memory-specific objective does not regress a fresh mixed reasoning suite by more than 2 percentage points."
+  ],
+  "arms":["query_contrast","nll_control"],
+  "updates":160,
+  "pair_groups_per_update":8,
+  "prompts_per_update":16,
+  "candidate_sequences_scored_per_update":32,
+  "seeds":[7601,7602,7603],
+  "sampler_seed":91311,
+  "optimizer":"restore G8C AdamW state; stage3 LR cosine 0.0002 to 0.00004; betas/weight_decay from parent; clip1",
+  "objective":{"query_contrast":"mean positive sequence NLL + 0.5*mean softplus(0.5 + nll_positive - nll_counterfactual_answer)","nll_control":"mean positive sequence NLL + 0.0*mean softplus(0.5 + nll_positive - nll_counterfactual_answer); negative candidates still scored in identical tensors","sequence_score":"length-normalized NLL of F=<integer> plus EOS","lambda":0.5,"margin_nats":0.5},
+  "data":{"family":"memory_update primary","train_pair_groups":4096,"validation_pair_groups":256,"held_iid_pair_groups":400,"held_surface_pair_groups":200,"held_extrapolation_pair_groups":200,"mixed_regression_cases":400,"seeds":{"train":91301,"validation":91302,"held_iid":91303,"held_surface":91304,"held_extrapolation":91305,"mixed_regression":91306},"split_rule":"query-invariant history canonical groups split before rendering; all query variants of one history stay in one split","chronology":"per-key write chronology retained","denied":"all available G5S parent and G8C fresh canonical groups; G8C held never used for training"},
+  "free_generation":"prompt strings only; greedy byte259; max32 new bytes; EOS required; exactly F=<integer>; no solver/case/gold input",
+  "selection":"fixed step160 endpoints only; validation/held never select checkpoint or hyperparameters",
+  "pilot_success":{"mean_both_correct_pair_gain_pp_min":2.0,"mean_individual_exact_gain_pp_min":2.0,"positive_both_correct_direction_seeds":2,"mean_query_sensitivity_gain_pp_min":2.0,"mean_negative_confusion_change_pp_max":0.0,"mixed_regression_drop_pp_max":2.0,"teacher_forced_margin_gain_nats_min":0.05},
+  "scope":"small memory-addressing mechanism screen; not300-800M, not broad reasoning/code evidence, not Qwen parity"
+}
