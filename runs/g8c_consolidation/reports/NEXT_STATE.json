@@ -1,10 +1,16 @@
 {
-  "status": "running",
-  "stage": "G8C",
-  "active_arm": "final_only",
-  "active_seed": 7603,
-  "last_durable_step": 2000,
-  "checkpoint": "/home/runner/work/model/model/repo/runs/g8c_consolidation/checkpoints/final_only_s7603/step2000",
-  "do_not_duplicate": true,
-  "not_a_completed_grid": true
+  "status": "completed",
+  "run": "G8C",
+  "goal_not_achieved": true,
+  "verdict": "NOT_CONFIRMED_IN_REGISTERED_PROTOCOL",
+  "do_not_repeat": [
+    "G3",
+    "G5S_replay",
+    "G8C"
+  ],
+  "latest_checkpoint_steps": 2000,
+  "actual_new_weight_bytes": "see release receipt, not this manifest",
+  "next_step": "If OOD remains weak, change supervision/representation rather than extending this numeric-template curriculum. Register a single matched mechanism before scaling.",
+  "release_tag": "flygraph-g8c-consolidation-36238890991",
+  "weight_publication": "actual uploaded/redownload-verified bytes"
 }
