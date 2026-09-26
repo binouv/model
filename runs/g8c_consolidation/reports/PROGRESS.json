@@ -2,12 +2,12 @@
   "status": "checkpoint_completed_not_whole_grid",
   "arm": "final_only",
   "seed": 7603,
-  "stage2_step": 250,
+  "stage2_step": 500,
   "release_tag": "flygraph-g8c-consolidation-36238890991",
   "asset": {
-    "name": "final_only_s7603_stage2_0250.resume.pt",
-    "bytes": 5898502,
-    "sha256": "1e9443cf5dd36d2417e10cb7ccbd7c93d97df5a70d3dbef534e9fdb0daa31868",
+    "name": "final_only_s7603_stage2_0500.resume.pt",
+    "bytes": 6045574,
+    "sha256": "464bf4f58d15ddd1cdbc2daed275a981267c9a0e38e6a0743559de55dc664d9b",
     "remote_redownload_sha256_verified": true
   }
 }
