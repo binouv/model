@@ -1,0 +1,306 @@
+{
+  "status": "completed",
+  "source_commit": "2f280bd1e2997a4c668b849774502f7001c90cb4",
+  "workflow_run": "36229995214",
+  "release_tag": "flygraph-g5s-cpu-replay-36229995214",
+  "models": 6,
+  "independent_new_seeds": 0,
+  "native_optimizer_rng_present": true,
+  "all_assets_redownload_verified": true,
+  "assets": [
+    {
+      "name": "verified_trace_s7601_step0200.resume.pt",
+      "bytes": 5872075,
+      "sha256": "3cd84925870efc46b178a4289d86fe81264cc7b316cb264381b1bdffa7ab2730",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7601_step0400.resume.pt",
+      "bytes": 5990859,
+      "sha256": "877c7200a97af3ce39e109393274e275caf414eb64960ab2230735f7c6891348",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7601_step0600.resume.pt",
+      "bytes": 6092171,
+      "sha256": "d1e452d4e763452ce74cb0abd8277afefc3e43a53fbb6bc9883530944b3a9dbe",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7601_step0800.resume.pt",
+      "bytes": 6176075,
+      "sha256": "9b01e61bd18f57ba0babb749f64e4168fe3c1a225764fe7a3e93e0af32d922ce",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7601_step1000.resume.pt",
+      "bytes": 6252875,
+      "sha256": "d8eecdc6f8151822e676c4541823191e834fe0a944470d42cf36cbef35038e4a",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7601.safetensors",
+      "bytes": 1881704,
+      "sha256": "791c144540d49e15065c92f63bb4032012de312edd82899984b1df848d4b5e0a",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7601.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7601.RAW.json.gz",
+      "bytes": 25959,
+      "sha256": "d5d88c74eb27610673925f41224051f581dd994b2452d0b125661d7484bf91be",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7601_step0200.resume.pt",
+      "bytes": 5871947,
+      "sha256": "116bca4a8eeee3e3e8f6ef8523f706f140f1f69d48599773b597d9fa47e133c0",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7601_step0400.resume.pt",
+      "bytes": 5990539,
+      "sha256": "85a96aa2032d9173f745f6e96a6f6f0db972b279e50ed39c13747b136c4cef50",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7601_step0600.resume.pt",
+      "bytes": 6091723,
+      "sha256": "70930f06be7c6b4eb018e9129d7c106faa3643bb68a93c6961259d66ec4343c5",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7601_step0800.resume.pt",
+      "bytes": 6175435,
+      "sha256": "5d42a9c03696b2d3e008b519fc29c1c3a733b2ad2f9a23a010de865e5c13280c",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7601_step1000.resume.pt",
+      "bytes": 6252107,
+      "sha256": "11e148113c4c1b6ecc5c7f9632e718170a2c1f236435bea8fdfbce2f9152fbc0",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7601.safetensors",
+      "bytes": 1881704,
+      "sha256": "dd6fd37ee10105efb9a6fc6b98d7d0cf4f0ebe7bada7ce221b7f86a7dbe860b3",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7601.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7601.RAW.json.gz",
+      "bytes": 20119,
+      "sha256": "4ae38ddaf85483240e427e7b40833c255991566bb44a6b587a4c37315c43acc6",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7602_step0200.resume.pt",
+      "bytes": 5872139,
+      "sha256": "58c6d0ce1020f330595fc7ad7bf63b7f282cb0aab7525720cf1af3702bac3ee2",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7602_step0400.resume.pt",
+      "bytes": 5990859,
+      "sha256": "c870c46a14d2c4d4a86080ac40342a12abc27c8f08e5ca5cc25040fd5e2ccdc3",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7602_step0600.resume.pt",
+      "bytes": 6092235,
+      "sha256": "6bb162270d35c399bb5165081276b4e53f8212c81e1895e1551b52de06e290fd",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7602_step0800.resume.pt",
+      "bytes": 6176075,
+      "sha256": "65136974bb461ddebbafa360dc59fce3c691e94ca9a12a83d362283abf39b525",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7602_step1000.resume.pt",
+      "bytes": 6252939,
+      "sha256": "b3ea93d12d4420d900ec641c4ed2ade38a75a899f7cc7ebc426f2dbce58635e2",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7602.safetensors",
+      "bytes": 1881704,
+      "sha256": "30fded4e1b6a34ce2fd18e0c315e7e732847b62cfe132e377a1389fc94f2b853",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7602.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7602.RAW.json.gz",
+      "bytes": 25562,
+      "sha256": "bc8d453d5d1bc8a694233b13f365b759ee551681451a78c564389da690eeab69",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7602_step0200.resume.pt",
+      "bytes": 5871947,
+      "sha256": "5ec253a47ebea5552c7b626704904554405c9cf7dc6d26bec010727864b6184f",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7602_step0400.resume.pt",
+      "bytes": 5990539,
+      "sha256": "9c579175ab0e2d86a67413eac28fcf707ea464d9fbd9e0014550c18fe281a73e",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7602_step0600.resume.pt",
+      "bytes": 6091787,
+      "sha256": "1a8ab2b48ca80d3dcd4731c16ae3c0972764b5e7205417407feaf2d48c081d97",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7602_step0800.resume.pt",
+      "bytes": 6175499,
+      "sha256": "1bffc627fc25eff2b526d159879bc72e3f3be963f1418c8b1f70d3f6a8d6285a",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7602_step1000.resume.pt",
+      "bytes": 6252171,
+      "sha256": "f73d5fd2c3636aee0d424d98486e9515deff3f22651fd8735b3f45ffb86e5928",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7602.safetensors",
+      "bytes": 1881704,
+      "sha256": "5c36c6baef850add54c1215612cb35bb1e1b4772ed19301475a4f2aba475b9bb",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7602.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7602.RAW.json.gz",
+      "bytes": 19818,
+      "sha256": "1bc2b0e4c7ec0a785131e3bf2dfb3d4e0bfee8ad8ed9dbb8a7aabfa5339998bf",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7603_step0200.resume.pt",
+      "bytes": 5872075,
+      "sha256": "afd1c8ab502aa56af73776f8aa4f3a6a63233a8f37b7bff09ed5d1a903173dee",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7603_step0400.resume.pt",
+      "bytes": 5990795,
+      "sha256": "a0b2eaadd20c6c3847f4f3e27c5adc972e3b2a89be6c3af71b2475659d1eb928",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7603_step0600.resume.pt",
+      "bytes": 6092171,
+      "sha256": "82ac7929e94d17ed81a66e71f01ec3de1b8047df8c434f36e576e4e9a4a3aeef",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7603_step0800.resume.pt",
+      "bytes": 6176075,
+      "sha256": "0f8808b9b699dc7738fc137af02bd43ecc7bc235dca47e8c6db6c57469ed6c43",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7603_step1000.resume.pt",
+      "bytes": 6252875,
+      "sha256": "b0587d265de13d70223acc9f811ab55db8783f50155732de122bff42adc60d68",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7603.safetensors",
+      "bytes": 1881704,
+      "sha256": "4310281e64dc8053d9f19976c9228867dcf1485af1974a016237776953cfd66b",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7603.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "verified_trace_s7603.RAW.json.gz",
+      "bytes": 26899,
+      "sha256": "817ee34de87e6025edc080302dd19ea4c0945598f39ad766d08eeb6027e452d8",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7603_step0200.resume.pt",
+      "bytes": 5871883,
+      "sha256": "ae85a4cd57fd18645599033cd6695d3ef0e6f2a34b4b34de807dd2ceea2f160e",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7603_step0400.resume.pt",
+      "bytes": 5990539,
+      "sha256": "e2d81afc7eb3a9fe95d0a6edcf429a3e9af2b7a770e60c8e4d536147e0dfe3ab",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7603_step0600.resume.pt",
+      "bytes": 6091723,
+      "sha256": "7d3b4e6abca5bf9a0aec9ff43d4c180f3dca0537c129d9b06370c40caa4385d4",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7603_step0800.resume.pt",
+      "bytes": 6175435,
+      "sha256": "d2b7053b99d6e6b1521453eaec15e59a774a06fc3df79656cab71aed36271966",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7603_step1000.resume.pt",
+      "bytes": 6252107,
+      "sha256": "f0793396c4dddc5f0c4e3935917fbcf349067870afe9ef078731a22ba59e41fd",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7603.safetensors",
+      "bytes": 1881704,
+      "sha256": "93b2d9745dbf623c56c9d04d1cc02242cb070033fb304ac8d734904a65183e38",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7603.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "final_only_s7603.RAW.json.gz",
+      "bytes": 20080,
+      "sha256": "58e44fea00ef9774f20c9e6a464f0bd9365e9ae97288c3eee28a4ceb8b3ce28f",
+      "remote_bytes_redownload_verified": true
+    },
+    {
+      "name": "SOURCE_DATA_RAW_RESULTS.tar.gz",
+      "bytes": 4647580,
+      "sha256": "208519f618b458e4ba19fb1780dc9d79401a7f47e41d81e722124eb0d1647195",
+      "remote_bytes_redownload_verified": true
+    }
+  ]
+}
