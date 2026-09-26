@@ -1,0 +1,7 @@
+{
+  "status": "pretraining_execution_adjustment",
+  "scientific_protocol_changed": false,
+  "change": "CPU thread count made configurable; FG_THREADS=1 used for parallel seeds",
+  "discarded_attempt": "three trace-arm processes stopped before first durable checkpoint; partial logs deleted and not counted",
+  "reason": "avoid CPU oversubscription; optimizer/data/objective/seed/schedule unchanged"
+}

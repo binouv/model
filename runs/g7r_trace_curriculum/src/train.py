@@ -1,6 +1,6 @@
 """Finite preregistered G7R paired trace-curriculum training."""
 from __future__ import annotations
-import collections,copy,gzip,json,math,random,time
+import collections,copy,gzip,json,math,os,random,time
 import torch
 from safetensors.torch import load_file
 from common import ROOT,Model,Config,ByteTokenizer,EOS,ex,rows,mat,evaluate,save
@@ -124,4 +124,4 @@ def train_one(arm,seed,checkpoint_hook=None):
 if __name__=="__main__":
     import argparse
     ap=argparse.ArgumentParser();ap.add_argument("--arm",choices=ARMS,required=True);ap.add_argument("--seed",type=int,choices=SEEDS,required=True)
-    a=ap.parse_args();torch.set_num_threads(4);torch.set_num_interop_threads(1);train_one(a.arm,a.seed)
+    a=ap.parse_args();torch.set_num_threads(int(os.environ.get("FG_THREADS","1")));torch.set_num_interop_threads(1);train_one(a.arm,a.seed)
