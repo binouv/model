@@ -1,0 +1,108 @@
+{
+  "run": "G13_OrderedDifficultyCurriculum_20260927",
+  "status": "preregistered_before_data_generation_or_training",
+  "parent_evidence": {
+    "G7R": "trace curriculum improved list/memory but failed primary gate and arithmetic/code stayed near zero",
+    "G11R": "shared 4x recurrence gave 0.0pp arithmetic+code gain",
+    "G12": "4.5x width gave 0.0pp arithmetic+code gain"
+  },
+  "hypothesis": "Ordering the exact same training minibatch multiset from easier to harder algorithmic cases improves arithmetic+code free-generation exact accuracy versus a deterministic shuffled order, without changing parameters, objective, total examples or optimizer updates.",
+  "model": {
+    "params": 469648,
+    "variant": "causal_hybrid dada",
+    "dim": 96,
+    "hidden": 256,
+    "key_dim": 12,
+    "heads": 4,
+    "tokenizer": "byte259"
+  },
+  "arms": {
+    "ordered_curriculum": "four 500-update phases, difficulty increasing",
+    "shuffled_control": "same exact 2000 pre-sampled minibatches deterministically permuted across update positions"
+  },
+  "stages": [
+    {
+      "stage": 0,
+      "normal_range": [
+        0,
+        31
+      ],
+      "code_steps": 1,
+      "list_len": 3,
+      "memory_extra_writes": 1
+    },
+    {
+      "stage": 1,
+      "normal_range": [
+        0,
+        127
+      ],
+      "code_steps": 2,
+      "list_len": 4,
+      "memory_extra_writes": 3
+    },
+    {
+      "stage": 2,
+      "normal_range": [
+        0,
+        255
+      ],
+      "code_steps": 3,
+      "list_len": 5,
+      "memory_extra_writes": 4
+    },
+    {
+      "stage": 3,
+      "normal_range": [
+        0,
+        511
+      ],
+      "code_steps": 4,
+      "list_len": 7,
+      "memory_extra_writes": 6
+    }
+  ],
+  "train_unique_per_stage": 2048,
+  "train_unique_total": 8192,
+  "validation_n": 400,
+  "held": {
+    "iid": 800,
+    "surface": 400,
+    "extrapolation": 400,
+    "counterfactual_members": 400,
+    "counterfactual_pairs": 200
+  },
+  "held_hard_range": [
+    0,
+    511
+  ],
+  "extrapolation_range": [
+    512,
+    1023
+  ],
+  "split_rule": "fresh canonical groups denied against G5S+G7R+G11R+G12 before rendering; arithmetic/list commutative permutations canonicalize; memory preserves per-key chronology; G12 held never becomes training data",
+  "seeds": [
+    8601,
+    8602,
+    8603
+  ],
+  "schedule_sampling_seed": 86311,
+  "control_permutation_seed": 86312,
+  "steps": 2000,
+  "batch": 32,
+  "optimizer": "AdamW lr .001 warmup100 cosine-to15%, betas(.9,.95), wd .01, clip1",
+  "objective": "strict final-only F=<integer>+EOS; no textual trace target; no solver/case/gold at inference",
+  "primary_metric": "mean arithmetic+code_trace IID exact across seeds",
+  "success": {
+    "arith_code_gain_pp_min": 3,
+    "positive_arith_code_seeds": 2,
+    "overall_iid_gain_pp_min": 2,
+    "memory_list_regression_max_pp": 2,
+    "surface_plus_extrapolation_gain_sum_pp_min": 1,
+    "counterfactual_pair_regression_max_pp": 2
+  },
+  "compute": "same exact minibatch multiset, same tensor shapes per batch, parameters, total examples and optimizer updates. Different ordering means examples occur at different learning rates by design; record wall time/FLOPs/latency.",
+  "selection": "fixed step2000 only; validation/held never select checkpoint or hyperparameters",
+  "scope": "small optimization/curriculum mechanism screen; not300-800M and not Qwen parity",
+  "goal_300_800m_qwen_thinking_not_achieved": true
+}
