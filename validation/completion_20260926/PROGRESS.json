@@ -2,11 +2,11 @@
   "status": "completed_reproduction_checkpoint_only",
   "arm": "verified_trace",
   "seed": 7601,
-  "step": 400,
+  "step": 600,
   "asset": {
-    "name": "verified_trace_s7601_step0400.resume.pt",
-    "bytes": 5990859,
-    "sha256": "877c7200a97af3ce39e109393274e275caf414eb64960ab2230735f7c6891348",
+    "name": "verified_trace_s7601_step0600.resume.pt",
+    "bytes": 6092171,
+    "sha256": "d1e452d4e763452ce74cb0abd8277afefc3e43a53fbb6bc9883530944b3a9dbe",
     "remote_bytes_redownload_verified": true
   },
   "not_independent_seed": true
