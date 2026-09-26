@@ -20,12 +20,13 @@ jobs:
           git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
           cd repo
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
-      - name: CPU-only dependencies and syntax checks
+      - name: CPU-only dependencies and import checks
         run: |
           set -euo pipefail
           python3 -m venv /tmp/fg
           /tmp/fg/bin/pip install --index-url https://download.pytorch.org/whl/cpu torch==2.10.0
-          /tmp/fg/bin/pip install numpy==2.3.5 safetensors==0.7.0
+          /tmp/fg/bin/pip install numpy==2.3.5 safetensors==0.7.0 packaging==26.3
+          /tmp/fg/bin/python -c 'import torch; from safetensors.torch import load_file,save_file'
           /tmp/fg/bin/python -m py_compile repo/runs/g3w_warmstart/src/continue_ci.py
       - name: Exactly two six-thousand-update warm-starts
         env:

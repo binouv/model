@@ -1,0 +1,1 @@
+{"workflow_run":36228405487,"job":108366740185,"status":"setup_import_failure","exception":"ModuleNotFoundError: No module named packaging","training_updates":0,"checkpoints_created":0,"model_or_data_or_objective_changed":false,"fix":"Explicit packaging dependency and import check before training","counted_as_training_result":false}
