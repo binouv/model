@@ -1,4 +1,4 @@
-import hashlib,json,random
+import collections,hashlib,json,random
 from pathlib import Path
 from model import ByteTokenizer
 FAMS=('arithmetic','conditional','code_trace','list_reasoning','memory_update')
@@ -22,7 +22,7 @@ def solve(c):
  for k,v in c['writes']:mem[k]=v
  return mem[c['query']]
 def make(r,f,ood=False):
- lo,hi=(32,63) if ood else (0,31)
+ lo,hi=(128,255) if ood else (0,127)
  if f=='arithmetic':return {'family':f,'values':[r.randint(lo,hi),r.randint(lo,hi)],'op':r.choice('+-*')}
  if f=='conditional':return {'family':f,'values':[r.randint(lo,hi) for _ in range(4)]}
  if f=='code_trace':return {'family':f,'start':r.randint(lo,hi),'program':[[r.choice('+-'),r.randint(lo,hi)] for _ in range(4 if ood else 2)]}
@@ -32,10 +32,14 @@ def make(r,f,ood=False):
  r.shuffle(w);return {'family':f,'writes':w,'query':r.choice(ks)}
 def render(c,v=0):
  f=c['family']
- if f=='arithmetic':a,b=c['values'];e=f'{a} {c["op"]} {b}';return f'Calculate {e}.\nAnswer:' if v==0 else f'What integer is {e}?\nAnswer:'
- if f=='conditional':x,k,a,b=c['values'];return f'x={x}. If x<{k}, add {a}; else subtract {b}.\nAnswer:' if v==0 else f'Start at {x}. Below {k}: +{a}. Otherwise: -{b}.\nAnswer:'
- if f=='code_trace':s='x = '+str(c['start'])+'\n'+''.join(f'x {op}= {a}\n' for op,a in c['program'])+'print(x)';return ('What integer does this code print?\n' if v==0 else 'Trace this program and return only the printed integer.\n')+s+'\nAnswer:'
- if f=='list_reasoning':lab={'sum':'sum','min':'minimum','max':'maximum'}[c['kind']];return f'Find the {lab} of {c["values"]}.\nAnswer:' if v==0 else f'Numbers: {c["values"]}. Return their {lab}.\nAnswer:'
+ if f=='arithmetic':
+  a,b=c['values'];e=f'{a} {c["op"]} {b}';return f'Calculate {e}.\nAnswer:' if v==0 else f'What integer is {e}?\nAnswer:'
+ if f=='conditional':
+  x,k,a,b=c['values'];return f'x={x}. If x<{k}, add {a}; else subtract {b}.\nAnswer:' if v==0 else f'Start at {x}. Below {k}: +{a}. Otherwise: -{b}.\nAnswer:'
+ if f=='code_trace':
+  s='x = '+str(c['start'])+'\n'+''.join(f'x {op}= {a}\n' for op,a in c['program'])+'print(x)';return ('What integer does this code print?\n' if v==0 else 'Trace this program and return only the printed integer.\n')+s+'\nAnswer:'
+ if f=='list_reasoning':
+  lab={'sum':'sum','min':'minimum','max':'maximum'}[c['kind']];return f'Find the {lab} of {c["values"]}.\nAnswer:' if v==0 else f'Numbers: {c["values"]}. Return their {lab}.\nAnswer:'
  w='; '.join(f'{k}={x}' for k,x in c['writes']);return f'Writes in time order: {w}. Latest value of {c["query"]}?\nAnswer:' if v==0 else f'Apply these updates chronologically: {w}. Read current {c["query"]}.\nAnswer:'
 def row(c,v,tok,pid=None):
  p=render(c,v);a=str(solve(c));pt=tok.encode(p,bos=True);return {'id':h({'case':c,'variant':v,'pair':pid}),'canonical':canonical(c),'family':c['family'],'prompt':p,'answer':a,'case':c,'tokens':pt+tok.encode(a,eos=True),'prompt_tokens':len(pt),'pair_id':pid}
@@ -44,7 +48,9 @@ def build(root):
  for split,n,seed,ood,v in spec:
   r=random.Random(seed);out=[];attempt=0
   while len(out)<n:
-   attempt+=1;c=make(r,FAMS[len(out)%5],bool(ood));g=canonical(c)
+   attempt+=1
+   if attempt>2000000:raise RuntimeError('unique-case space exhausted')
+   c=make(r,FAMS[len(out)%5],bool(ood));g=canonical(c)
    if g in occ:continue
    z=row(c,v,tok)
    if len(z['tokens'])>256:continue
@@ -69,4 +75,4 @@ def build(root):
    assert str(solve(z['case']))==z['answer'];assert z['canonical'] not in seen;seen[z['canonical']]=split
  for z in map(json.loads,p.read_text().splitlines()):
   assert str(solve(z['case']))==z['answer'];assert z['canonical'] not in seen or seen[z['canonical']]=='test_counterfactual';seen[z['canonical']]='test_counterfactual'
- (root/'manifest.json').write_text(json.dumps({'status':'completed','tokenizer':'byte259','cross_split_canonical_overlap':0,'chronology':'per-key write order retained','splits':man},indent=2));return man
+ (root/'manifest.json').write_text(json.dumps({'status':'completed','tokenizer':'byte259','cross_split_canonical_overlap':0,'chronology':'per-key write order retained','normal_range':[0,127],'extrapolation_range':[128,255],'splits':man},indent=2));return man
