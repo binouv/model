@@ -1,0 +1,648 @@
+{
+  "status": "completed",
+  "hypothesis": "Longer matched training from actual saved weights improves generative transfer; hybrid compared with equally continued full-attention control.",
+  "models": [
+    {
+      "status": "completed",
+      "variant": "full",
+      "seed": 7301,
+      "new_training_seed": 7701,
+      "new_updates": 6000,
+      "ancestor_updates": 2000,
+      "parameters": {
+        "unique_parameters": 1901696,
+        "trainable_parameters": 1901696,
+        "unique_blocks": 4,
+        "executed_blocks": 4,
+        "variant": "full",
+        "persistent_delta_state_per_token": false,
+        "biological_connectome": false,
+        "full_vocabulary_generation": true
+      },
+      "initial_validation_nll": 0.7217447982454936,
+      "final_validation_nll": 0.48515260946567784,
+      "input_tokens": 10484420,
+      "supervised_tokens": 965057,
+      "padded_tokens": 10941024,
+      "training_seconds": 373.92113465899973,
+      "elapsed_seconds": 415.554894334,
+      "batch_sequence_sha256": "1ebae71b1687db77e900215f6e0f5c0e5b9040f21a5b4d9055ae8a059eb97217",
+      "safetensors_sha256": "91692c8da834e6fa9fcfdd6733cd74b5c105694922d91548b5d0f2dc35ca9ee5",
+      "native_sha256": "187f18eb8d6dadec5d202ecc9a8d5d266541723e92be7c0db8fbf16c3642eab3",
+      "reload_logits_equal": true,
+      "not_exact_original_G3_resume": true
+    },
+    {
+      "status": "completed",
+      "variant": "hybrid",
+      "seed": 7301,
+      "new_training_seed": 7701,
+      "new_updates": 6000,
+      "ancestor_updates": 2000,
+      "parameters": {
+        "unique_parameters": 1903760,
+        "trainable_parameters": 1903760,
+        "unique_blocks": 4,
+        "executed_blocks": 4,
+        "variant": "hybrid",
+        "persistent_delta_state_per_token": true,
+        "biological_connectome": false,
+        "full_vocabulary_generation": true
+      },
+      "initial_validation_nll": 0.7445806466607042,
+      "final_validation_nll": 0.5161704272252979,
+      "input_tokens": 10484420,
+      "supervised_tokens": 965057,
+      "padded_tokens": 10941024,
+      "training_seconds": 469.41588807800144,
+      "elapsed_seconds": 508.982375981,
+      "batch_sequence_sha256": "1ebae71b1687db77e900215f6e0f5c0e5b9040f21a5b4d9055ae8a059eb97217",
+      "safetensors_sha256": "2edb15cac4d6b3c518510510e82af38b49529452d90bc5a87392389dc6c8cd4c",
+      "native_sha256": "1bd29e5aa04e28bf981c5f15c789b8ffd92188b6bcc6a37c3d81909bc6b4e428",
+      "reload_logits_equal": true,
+      "not_exact_original_G3_resume": true
+    }
+  ],
+  "counts": {
+    "full": {
+      "initial": {
+        "test_iid": {
+          "status": "completed",
+          "n": 160,
+          "correct": 14,
+          "eos_count": 160,
+          "by_family": {
+            "arithmetic": {
+              "n": 32,
+              "correct": 3
+            },
+            "code_trace": {
+              "n": 32,
+              "correct": 1
+            },
+            "conditional": {
+              "n": 32,
+              "correct": 1
+            },
+            "list_reasoning": {
+              "n": 32,
+              "correct": 6
+            },
+            "memory_update": {
+              "n": 32,
+              "correct": 3
+            }
+          },
+          "pair_count": 0,
+          "both_correct": 0
+        },
+        "test_surface": {
+          "status": "completed",
+          "n": 80,
+          "correct": 1,
+          "eos_count": 80,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 1
+            }
+          },
+          "pair_count": 0,
+          "both_correct": 0
+        },
+        "test_extrapolation": {
+          "status": "completed",
+          "n": 80,
+          "correct": 0,
+          "eos_count": 80,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 0
+            }
+          },
+          "pair_count": 0,
+          "both_correct": 0
+        },
+        "test_counterfactual": {
+          "status": "completed",
+          "n": 80,
+          "correct": 0,
+          "eos_count": 80,
+          "by_family": {
+            "arithmetic": {
+              "n": 40,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 40,
+              "correct": 0
+            }
+          },
+          "pair_count": 40,
+          "both_correct": 0
+        }
+      },
+      "tests": {
+        "test_iid": {
+          "status": "completed",
+          "n": 160,
+          "correct": 42,
+          "eos_count": 160,
+          "by_family": {
+            "arithmetic": {
+              "n": 32,
+              "correct": 4
+            },
+            "code_trace": {
+              "n": 32,
+              "correct": 5
+            },
+            "conditional": {
+              "n": 32,
+              "correct": 5
+            },
+            "list_reasoning": {
+              "n": 32,
+              "correct": 23
+            },
+            "memory_update": {
+              "n": 32,
+              "correct": 5
+            }
+          },
+          "pair_count": 0,
+          "both_correct": 0
+        },
+        "test_surface": {
+          "status": "completed",
+          "n": 80,
+          "correct": 3,
+          "eos_count": 80,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 1
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 2
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 0
+            }
+          },
+          "pair_count": 0,
+          "both_correct": 0
+        },
+        "test_extrapolation": {
+          "status": "completed",
+          "n": 80,
+          "correct": 0,
+          "eos_count": 80,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 0
+            }
+          },
+          "pair_count": 0,
+          "both_correct": 0
+        },
+        "test_counterfactual": {
+          "status": "completed",
+          "n": 80,
+          "correct": 10,
+          "eos_count": 80,
+          "by_family": {
+            "arithmetic": {
+              "n": 40,
+              "correct": 5
+            },
+            "memory_update": {
+              "n": 40,
+              "correct": 5
+            }
+          },
+          "pair_count": 40,
+          "both_correct": 0
+        }
+      }
+    },
+    "hybrid": {
+      "initial": {
+        "test_iid": {
+          "status": "completed",
+          "n": 160,
+          "correct": 13,
+          "eos_count": 160,
+          "by_family": {
+            "arithmetic": {
+              "n": 32,
+              "correct": 2
+            },
+            "code_trace": {
+              "n": 32,
+              "correct": 2
+            },
+            "conditional": {
+              "n": 32,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 32,
+              "correct": 8
+            },
+            "memory_update": {
+              "n": 32,
+              "correct": 1
+            }
+          },
+          "pair_count": 0,
+          "both_correct": 0
+        },
+        "test_surface": {
+          "status": "completed",
+          "n": 80,
+          "correct": 3,
+          "eos_count": 80,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 1
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 1
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 1
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 0
+            }
+          },
+          "pair_count": 0,
+          "both_correct": 0
+        },
+        "test_extrapolation": {
+          "status": "completed",
+          "n": 80,
+          "correct": 0,
+          "eos_count": 80,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 0
+            }
+          },
+          "pair_count": 0,
+          "both_correct": 0
+        },
+        "test_counterfactual": {
+          "status": "completed",
+          "n": 80,
+          "correct": 2,
+          "eos_count": 80,
+          "by_family": {
+            "arithmetic": {
+              "n": 40,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 40,
+              "correct": 2
+            }
+          },
+          "pair_count": 40,
+          "both_correct": 0
+        }
+      },
+      "tests": {
+        "test_iid": {
+          "status": "completed",
+          "n": 160,
+          "correct": 39,
+          "eos_count": 160,
+          "by_family": {
+            "arithmetic": {
+              "n": 32,
+              "correct": 3
+            },
+            "code_trace": {
+              "n": 32,
+              "correct": 4
+            },
+            "conditional": {
+              "n": 32,
+              "correct": 4
+            },
+            "list_reasoning": {
+              "n": 32,
+              "correct": 24
+            },
+            "memory_update": {
+              "n": 32,
+              "correct": 4
+            }
+          },
+          "pair_count": 0,
+          "both_correct": 0
+        },
+        "test_surface": {
+          "status": "completed",
+          "n": 80,
+          "correct": 4,
+          "eos_count": 80,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 2
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 1
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 1
+            }
+          },
+          "pair_count": 0,
+          "both_correct": 0
+        },
+        "test_extrapolation": {
+          "status": "completed",
+          "n": 80,
+          "correct": 1,
+          "eos_count": 80,
+          "by_family": {
+            "arithmetic": {
+              "n": 16,
+              "correct": 0
+            },
+            "code_trace": {
+              "n": 16,
+              "correct": 0
+            },
+            "conditional": {
+              "n": 16,
+              "correct": 0
+            },
+            "list_reasoning": {
+              "n": 16,
+              "correct": 0
+            },
+            "memory_update": {
+              "n": 16,
+              "correct": 1
+            }
+          },
+          "pair_count": 0,
+          "both_correct": 0
+        },
+        "test_counterfactual": {
+          "status": "completed",
+          "n": 80,
+          "correct": 12,
+          "eos_count": 80,
+          "by_family": {
+            "arithmetic": {
+              "n": 40,
+              "correct": 5
+            },
+            "memory_update": {
+              "n": 40,
+              "correct": 7
+            }
+          },
+          "pair_count": 40,
+          "both_correct": 0
+        }
+      }
+    }
+  },
+  "within_gain_pp": {
+    "full": {
+      "test_iid": 17.5,
+      "test_surface": 2.5,
+      "test_extrapolation": 0.0,
+      "test_counterfactual": 12.5
+    },
+    "hybrid": {
+      "test_iid": 16.249999999999996,
+      "test_surface": 1.2500000000000004,
+      "test_extrapolation": 1.25,
+      "test_counterfactual": 12.5
+    }
+  },
+  "hybrid_minus_full_pp": {
+    "test_iid": -1.8750000000000018,
+    "test_surface": 1.2500000000000004,
+    "test_extrapolation": 1.25,
+    "test_counterfactual": 2.4999999999999996
+  },
+  "optimization_gate_met": true,
+  "hybrid_advantage_gate_met": false,
+  "seed_count": 1,
+  "same_seed_as_G3_parent": true,
+  "not_general_Qwen_parity": true,
+  "not_300M": true,
+  "assets": [
+    {
+      "name": "full_step1000.resume.pt",
+      "sha256": "981548e35dff54a0a0bbe423834a648800a92357dbd362c892f690c60d76fcaa",
+      "bytes": 24104400,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "full_step2000.resume.pt",
+      "sha256": "b4e6a27b0a6c01433a8fb087545ccbe55a5c11760327123138bf06b5b33157c9",
+      "bytes": 24510800,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "full_step3000.resume.pt",
+      "sha256": "5ce01250709099bf72b1a06c373170d9b8859722935f8532d4dd230d86522572",
+      "bytes": 24797520,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "full_step4000.resume.pt",
+      "sha256": "b48e4a14dd036ed04401a1e0d425f608fe317388180590708dfc705ca9ec6c64",
+      "bytes": 25068624,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "full_step5000.resume.pt",
+      "sha256": "4ed0656f47ef71796409882bd90997f808cabe760106c383321933293be2c696",
+      "bytes": 25336848,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "full_step6000.resume.pt",
+      "sha256": "187f18eb8d6dadec5d202ecc9a8d5d266541723e92be7c0db8fbf16c3642eab3",
+      "bytes": 25604816,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "full_step6000.safetensors",
+      "sha256": "91692c8da834e6fa9fcfdd6733cd74b5c105694922d91548b5d0f2dc35ca9ee5",
+      "bytes": 7609064,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "full.config.json",
+      "sha256": "72a2027e1f2e9eb98a8f51242ae44d6aeaecc15098c5feca9f296fdd482da248",
+      "bytes": 140,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "full_RAW_RESULTS.json.gz",
+      "sha256": "590a8d261cf39a5f03c33b4f388e063c2c074acba1b2c074085866bef76fce6a",
+      "bytes": 55246,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hybrid_step1000.resume.pt",
+      "sha256": "450e1f459bd7899a41b21d95a49d7c81a15ebd1c133095f968f1ca713905eeb6",
+      "bytes": 24141302,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hybrid_step2000.resume.pt",
+      "sha256": "ee7334c3fa798c6c9434a7e16f048f02f6238ad1fff4cddb4c72bf8bdf97658a",
+      "bytes": 24547766,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hybrid_step3000.resume.pt",
+      "sha256": "dc39db7f62e7d7003100c280f87e39d91dfe1176ba87303bfb07fb0647addc7c",
+      "bytes": 24834486,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hybrid_step4000.resume.pt",
+      "sha256": "21cc49a7c7f90471a949bdbaa77d44882de3d85401e3ca037be767fb7a3089d2",
+      "bytes": 25105526,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hybrid_step5000.resume.pt",
+      "sha256": "8a79f9395c005fa48808eef9dcf64fa4ab35229213de4c8e4b7dd7af54245e05",
+      "bytes": 25373814,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hybrid_step6000.resume.pt",
+      "sha256": "1bd29e5aa04e28bf981c5f15c789b8ffd92188b6bcc6a37c3d81909bc6b4e428",
+      "bytes": 25641718,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hybrid_step6000.safetensors",
+      "sha256": "2edb15cac4d6b3c518510510e82af38b49529452d90bc5a87392389dc6c8cd4c",
+      "bytes": 7618216,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hybrid.config.json",
+      "sha256": "494c924c8f410413442542bdd14f3922de40be51115ea852c76b56487136383a",
+      "bytes": 142,
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hybrid_RAW_RESULTS.json.gz",
+      "sha256": "8d2d5965bdad88abf16a62ff43cd2482018972210f1b2f3babf49aede9ec25fe",
+      "bytes": 55395,
+      "remote_redownload_sha256_verified": true
+    }
+  ]
+}

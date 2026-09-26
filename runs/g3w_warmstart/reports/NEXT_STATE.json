@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "tag": "flygraph-g3w-completed-36228678041",
+  "do_not_repeat": true,
+  "models": 2,
+  "new_steps_each": 6000,
+  "prior_steps": 2000,
+  "seed_count": 1,
+  "need_next": "Replicate promising direction on additional independently trained parent seeds, then diverse reasoning/code with uncontaminated held tests. No300Mscale merely for parameter count."
+}
