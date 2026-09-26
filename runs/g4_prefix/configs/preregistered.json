@@ -1,1 +1,20 @@
-{"run":"G4-PrefixHybrid-20260926","status":"preregistered_before_training","primary_hypothesis":"Bidirectional attention inside the fully observed prompt, while answer generation remains causal, improves generated reasoning over fully causal prompt processing in the same hybrid topology.","main":"prefix_hybrid","control":"causal_hybrid","seeds":[7501,7502,7503],"steps":1200,"batch":32,"train_n":8192,"validation_n":400,"held":{"iid":160,"surface":80,"extrapolation":80,"counterfactual_members":80,"counterfactual_pairs":40},"selection":"fixed final step1200 only","success_gates":{"mean_iid_gain_pp":5,"pooled_surface_extrapolation_gain_positive":true,"counterfactual_pair_regression_max_pp":2,"positive_iid_direction_seeds":2},"tokenizer":"lossless UTF-8 byte vocabulary259; absolute G3 accuracy diagnostic only","scope":"469648-parameter mechanism probe, not 300-800M result and not Qwen parity"}
+{
+  "run":"G4-PrefixHybrid-20260926",
+  "status":"preregistered_compute_amendment_before_any_completed_training",
+  "primary_hypothesis":"With the same hybrid delta+attention topology and training data, bidirectional attention inside the fully observed prompt (while keeping answer generation causal) improves generated reasoning versus fully causal prompt processing.",
+  "main":"prefix_hybrid","control":"causal_hybrid",
+  "seeds":[7501,7502,7503],
+  "steps":800,"batch":16,
+  "train_n":8192,"validation_n":400,
+  "held":{"iid":160,"surface":80,"extrapolation":80,"counterfactual_members":80,"counterfactual_pairs":40},
+  "optimizer":"AdamW betas(.9,.95) wd.01","lr":"0.001 warmup80 cosine-to15%",
+  "selection":"fixed final step800 only; no held checkpoint selection",
+  "success_gates":{"mean_iid_gain_pp":5,"pooled_surface_extrapolation_gain_positive":true,"counterfactual_pair_regression_max_pp":2,"positive_iid_direction_seeds":2},
+  "tokenizer":"lossless UTF-8 byte vocabulary259; absolute G3 accuracy diagnostic only",
+  "completion":"integer bytes + EOS only; shared across both arms",
+  "architecture":"2 gated-delta + 2 attention blocks; only prompt-attention visibility differs",
+  "delta_kernel":"mathematically identical sequential recurrent implementation substituted for triangular-solve implementation after timing probe; no held results had been computed",
+  "reason_for_compute_amendment":"batch32 triangular-solve path was resource-prohibitive; incomplete approximately200-step attempt is excluded. Timing-only probes led to batch16/800 before completed training or held evaluation.",
+  "no_oracle":"generation sees prompt only; gold/case never enters model call",
+  "scope":"469648-parameter mechanism probe, not 300-800M result and not Qwen parity"
+}
