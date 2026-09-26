@@ -1,0 +1,14 @@
+{
+  "status": "completed_checkpoint_only",
+  "variant": "full",
+  "step": 1000,
+  "total_updates_including_parent": 3000,
+  "expected_new_updates": 6000,
+  "actual_asset": {
+    "name": "full_step1000.resume.pt",
+    "sha256": "981548e35dff54a0a0bbe423834a648800a92357dbd362c892f690c60d76fcaa",
+    "bytes": 24104400,
+    "remote_redownload_sha256_verified": true
+  },
+  "fresh_optimizer": true
+}
