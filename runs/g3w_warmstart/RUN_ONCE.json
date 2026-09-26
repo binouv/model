@@ -1,0 +1,1 @@
+{"run":"G3W_warmstart_20260926","execute_once":true,"new_updates":6000,"arms":["full","hybrid"],"actual_G3_model_bytes_required":true,"fresh_optimizer_explicit":true,"paid_services":false,"repeat_only_after_checking_saved_checkpoints":false}
