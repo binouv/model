@@ -1,0 +1,11 @@
+{
+  "status":"completed_pair",
+  "seed":7501,
+  "steps_each":800,
+  "parameters_each":469648,
+  "batch_sequence_sha256":"c0d338181986f00086239b094f628f3aafbb0943f030cbe84b391e5a60124b89",
+  "causal":{"validation_nll":1.5382373632709088,"iid":[4,160],"surface":[1,80],"extrapolation":[0,80],"counterfactual":[3,80],"both_correct_pairs":[0,40],"checkpoint_sha256":"a368d07b95d2ddd52b1d97dc17e8af64f53b2e5f20e342d4bdca9d43fc079ef6","bf16_sha256":"0c16da3fe68ed2dccf2044dab892edd72e2ac455ddfb0fb4211e538c3b346ffa"},
+  "prefix":{"validation_nll":1.5867635131760955,"iid":[1,160],"surface":[2,80],"extrapolation":[0,80],"counterfactual":[1,80],"both_correct_pairs":[0,40],"checkpoint_sha256":"f9b91f0e3a340d672f0db7ab39f8fab5c258c9b1f0e12c321c30557d4a83a2d3","bf16_sha256":"e1f86164a13ea101f0ee82f76a9eb48d2d474779f6462d45619fd5306eba4b52"},
+  "campaign_complete":false,
+  "no_hypothesis_verdict_yet":true
+}
