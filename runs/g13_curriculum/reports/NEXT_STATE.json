@@ -1,17 +1,1 @@
-{
-  "status": "preregistered_not_started",
-  "run": "G13_OrderedDifficultyCurriculum_20260927",
-  "completed_training_models": 0,
-  "planned_models": 6,
-  "steps_each": 2000,
-  "seeds": [
-    8601,
-    8602,
-    8603
-  ],
-  "data_generated": false,
-  "schedule_generated": false,
-  "held_inspected": false,
-  "goal_300_800m_qwen_thinking_not_achieved": true,
-  "next": "Generate fresh denied groups and exact batch schedule, lock hashes, run protocol tests, then execute six fixed endpoints."
-}
+{"status":"completed","run":"G13_OrderedDifficultyCurriculum_20260927","completed_training_models":6,"steps_each":2000,"verdict":"NOT_CONFIRMED_IN_REGISTERED_PROTOCOL","arith_code_gain_pp":0.4166666666666667,"iid_gain_pp":0.25,"positive_primary_direction_seeds":3,"actual_local_weight_bytes":true,"optimizer_rng_present":true,"reload_mismatches_total":0,"next_update_replay_verified_all6":true,"remote_release_created":false,"goal_300_800m_qwen_thinking_not_achieved":true,"do_not_repeat":["G7R","G11R","G12","G13"],"next":"G13L hard-only continuation on the exact six G13 parents with a fresh held set never scored before."}
