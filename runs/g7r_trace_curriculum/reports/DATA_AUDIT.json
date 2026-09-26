@@ -1,0 +1,24 @@
+{
+  "status":"verified_before_training",
+  "run":"G7R_TraceCurriculum_Repro_20260926",
+  "execution_date":"2026-09-27",
+  "branch":"flygraph/g7r-local-20260927",
+  "source_commit":"86b09ad5bd26a12f6593717c6ea07ed16e11becb",
+  "python":"3.13.5",
+  "torch":"2.10.0+cpu",
+  "safetensors":"0.7.0",
+  "pytest":"8 passed",
+  "data_hashes_match_preregistered":true,
+  "data_sha256":{
+    "train":"56d5b3b96df54be7ecb9c2d132517e30f94a251996056c2bb8143798a15e2c99",
+    "validation":"7dbb91aa095717b28eb710b8d888f3d1a473586f4c9dbf052db3a64135250ee8",
+    "test_iid":"cec83ca789aa7cf1f3dedb761c0b2ede59aa46838ee3177f41ef14def48e57c2",
+    "test_surface":"1f6d29ae68027415e311fe79e80144b3d0ddc53f25377ee051240fa174f48648",
+    "test_extrapolation":"6955a0b548511370c77ca33933fe078f37ad840c70642b17b93b11825a607872",
+    "test_counterfactual":"744b44373471740ae6eb347221aaaeab1895d773894edd3be3c564401eb6a21f"
+  },
+  "prior_denied_groups":8952,
+  "fresh_groups":8952,
+  "held_used_for_selection":false,
+  "completed_training_claimed":false
+}
