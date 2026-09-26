@@ -1,0 +1,29 @@
+{
+  "run": "G13R_ExecutableCurriculumPilot_20260927",
+  "status": "preregistered_before_data_generation_or_training",
+  "relationship_to_G13": "Separate executable pilot. It does not replace or complete the locked G13 data-hash protocol because exact G12/G13 generator bytes are not remotely recoverable from the repository.",
+  "hypothesis": "With exactly the same pre-sampled minibatch multiset, presenting four difficulty stages in increasing order improves fresh arithmetic+code-trace free-generation exact accuracy versus a deterministic random permutation of the same batches.",
+  "model": {"variant":"causal_hybrid_dada","dim":96,"hidden":256,"key_dim":12,"heads":4,"expected_params":469648,"tokenizer":"byte259"},
+  "arms": {"ordered":"four consecutive stages","shuffled":"same exact batches in a fixed random permutation"},
+  "seeds": [8611,8612],
+  "data_seed": 86111,
+  "schedule_seed": 86321,
+  "control_permutation_seed": 86322,
+  "stages": [
+    {"range":[0,31],"code_steps":1,"list_len":3,"memory_extra_writes":1},
+    {"range":[0,127],"code_steps":2,"list_len":4,"memory_extra_writes":3},
+    {"range":[0,255],"code_steps":3,"list_len":5,"memory_extra_writes":4},
+    {"range":[0,511],"code_steps":4,"list_len":7,"memory_extra_writes":6}
+  ],
+  "train_unique_per_stage": 1024,
+  "steps": 400,
+  "phase_steps": 100,
+  "batch": 16,
+  "held": {"iid":200,"surface":100,"extrapolation":100,"counterfactual_members":100,"counterfactual_pairs":50},
+  "objective": "strict completion-only F=<integer>+EOS; no trace target; no solver/case/gold passed to model or parser",
+  "selection": "fixed step400 only; no held-based checkpoint or hyperparameter selection",
+  "primary_metric": "mean arithmetic+code_trace IID exact across the two seeds",
+  "success": {"arith_code_gain_pp_min":3,"positive_arith_code_seeds":2,"overall_iid_gain_pp_min":2,"memory_list_regression_max_pp":3,"surface_plus_extrapolation_gain_sum_pp_min":1,"counterfactual_pair_regression_max_pp":3},
+  "interpretation": "Pilot-scale mechanism evidence only. Even confirmation is not G13 completion, not Qwen parity, and not justification by itself for 300-800M scaling.",
+  "goal_300_800m_qwen_thinking_not_achieved": true
+}
