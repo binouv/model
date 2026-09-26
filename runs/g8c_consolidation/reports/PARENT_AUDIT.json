@@ -1,0 +1,44 @@
+{
+  "status": "completed",
+  "sources": [
+    {
+      "name": "verified_trace_s7601_step1000.resume.pt",
+      "bytes": 6252875,
+      "sha256": "d8eecdc6f8151822e676c4541823191e834fe0a944470d42cf36cbef35038e4a",
+      "actual_bytes_downloaded_and_verified": true
+    },
+    {
+      "name": "final_only_s7601_step1000.resume.pt",
+      "bytes": 6252107,
+      "sha256": "11e148113c4c1b6ecc5c7f9632e718170a2c1f236435bea8fdfbce2f9152fbc0",
+      "actual_bytes_downloaded_and_verified": true
+    },
+    {
+      "name": "verified_trace_s7602_step1000.resume.pt",
+      "bytes": 6252939,
+      "sha256": "b3ea93d12d4420d900ec641c4ed2ade38a75a899f7cc7ebc426f2dbce58635e2",
+      "actual_bytes_downloaded_and_verified": true
+    },
+    {
+      "name": "final_only_s7602_step1000.resume.pt",
+      "bytes": 6252171,
+      "sha256": "f73d5fd2c3636aee0d424d98486e9515deff3f22651fd8735b3f45ffb86e5928",
+      "actual_bytes_downloaded_and_verified": true
+    },
+    {
+      "name": "verified_trace_s7603_step1000.resume.pt",
+      "bytes": 6252875,
+      "sha256": "b0587d265de13d70223acc9f811ab55db8783f50155732de122bff42adc60d68",
+      "actual_bytes_downloaded_and_verified": true
+    },
+    {
+      "name": "final_only_s7603_step1000.resume.pt",
+      "bytes": 6252107,
+      "sha256": "f0793396c4dddc5f0c4e3935917fbcf349067870afe9ef078731a22ba59e41fd",
+      "actual_bytes_downloaded_and_verified": true
+    }
+  ],
+  "source_receipt_blob": "3ae441a949907244640c8ea54ac45eaccf6b11c4",
+  "optimizer_rng_present": true,
+  "parent_models_retrained": false
+}

@@ -1,0 +1,5 @@
+# Actual finite CPU experiment versions; no paid services required.
+torch==2.10.0
+numpy==2.3.5
+safetensors==0.7.0
+pytest==8.4.2

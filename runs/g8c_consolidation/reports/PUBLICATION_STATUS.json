@@ -1,0 +1,20 @@
+{
+ "status":"completed_actual_release_and_local_byte_recovery",
+ "training_ci":36238890991,"training_ci_success_verified":true,
+ "delivery_only_ci":36239755541,"delivery_ci_success_verified":true,
+ "new_model_training_in_delivery_ci":false,
+ "release_id":397210425,"release_tag":"flygraph-g8c-consolidation-36238890991",
+ "draft":false,"prerelease":true,"release_assets":44,
+ "payload_assets_sha256_redownload_verified_in_training_ci":43,
+ "release_payload_bytes_excluding_manifest":164918588,
+ "contains_real_model_weights":true,"contains_optimizer_rng":true,
+ "native_checkpoints_count":24,"final_safetensors_count":6,
+ "selected_final_assets_locally_downloaded":25,
+ "local_workflow_artifact_id":10905177615,
+ "local_workflow_artifact_sha256":"1a5fc4d74986b010719a3ba8d102b7a742ef40c47766a879d883db9a74064612",
+ "local_raw_predictions_rescored":19200,"local_generation_reload_cases":96,
+ "local_generation_mismatches":0,"all_six_optimizer_rng_next_update_replays_match":true,
+ "old_G1_G2R_C1_all_historical_weight_upload_claim":false,
+ "source_completed_commit":"e32acd23f06adb83bc428e1f0312b0e58c0f67da",
+ "note":"G8C is fully published with actual final/intermediate bytes. This does not establish that every old historical weight archive is uploaded. Delivery replay is not another independent training seed."
+}

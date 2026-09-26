@@ -1,53 +1,18 @@
 {
-  "status_at_publication": "G3_completed; G3L not completed in visible state; G4 prefix-conditioning experiment active",
-  "latest_completed_stage": "G3 nine 2000-step generative probes",
-  "g3_long": {
-    "selected": "hybrid",
-    "target_total_steps": 8000,
-    "seeds": [
-      7301,
-      7302,
-      7303
-    ],
-    "variants": [
-      "full",
-      "hybrid"
-    ],
-    "completed_checkpoint_visible_in_git": false,
-    "current_runtime_exact_resume_blocker": "G3 parent .pt optimizer/RNG checkpoints are not mounted; remote G3 release has safetensors only",
-    "do_not_reconstruct_optimizer": true
-  },
-  "qwen_thinking_q4": {
-    "original_run": 36198379877,
-    "resume_run": 36201312886,
-    "status": "completed_40_of_40_uncensored",
-    "commit": "c4f98d9125304663a15cb9d9d4293fbd868af941",
-    "strict_exact": [
-      34,
-      40
-    ],
-    "posthoc_last_integer": [
-      40,
-      40
-    ],
-    "all_eos": true,
-    "all_thinking_closed": true,
-    "censored": 0,
-    "total_tokens": 27054
-  },
-  "qwen_thinking_bf16": {
-    "run": 36200117074,
-    "status": "incomplete_27_then_cancelled",
-    "use_as_benchmark": false
-  },
-  "release": {
-    "run": 36198964333,
-    "id": 396974545,
-    "tag": "flygraph-g3-cpu-replay-36198964333",
-    "scope": "actual seed7301 CPU-replay safetensors; no optimizer assets"
-  },
-  "next_active_stage": "runs/g4_prefix",
-  "goal_not_achieved": true,
-  "prior_310M_weights_unchanged": true,
-  "resume_rule": "Check actual checkpoints and workflow status before training; do not count incomplete runs."
+ "status_at_publication":"Superseded by completed G8C; prior exact G3 handoff preserved in NEXT_STATE_before_G8C.json",
+ "latest_completed_stage":"runs/g8c_consolidation",
+ "authoritative_next_state":"runs/g8c_consolidation/reports/NEXT_STATE.json",
+ "completed_ci":36238890991,"delivery_ci":36239755541,
+ "actual_checkpoint_release_id":397210425,
+ "actual_checkpoint_release_tag":"flygraph-g8c-consolidation-36238890991",
+ "actual_weight_bytes_and_optimizer_rng":true,
+ "latest_global_checkpoint_step":2000,"new_updates_each":1000,
+ "continued_models":6,"ancestral_seeds":[7601,7602,7603],"parameters_each":469648,
+ "not_new_independent_parent_seeds":true,"not_a_300_800m_scaleup":true,
+ "qwen_thinking_q4":{"original_run":36198379877,"resume_run":36201312886,"status":"completed_40_of_40_uncensored","strict_exact":[34,40],"posthoc_last_integer":[40,40],"all_eos":true,"all_thinking_closed":true,"censored":0,"total_tokens":27054,"different_fixture_from_G8C":true},
+ "qwen_thinking_bf16":{"run":36200117074,"status":"incomplete27then_cancelled","use_as_benchmark":false},
+ "G3_long_exact_optimizer_resume":"not proven available; do not invent optimizer state or retrain duplicate",
+ "G6S_G7S":"registered plans in separate branches; no completed run claimed by this handoff",
+ "goal_not_achieved":true,"prior_310M_weights_unchanged":true,
+ "resume_rule":"Read actual G8C release bytes and latest CI/branch before continuing. Do not restart completed G3/G5S/G8C or thinking baseline."
 }

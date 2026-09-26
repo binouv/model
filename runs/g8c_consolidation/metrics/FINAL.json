@@ -1,0 +1,246 @@
+{
+  "run": "G8C",
+  "status": "completed",
+  "training_continuations": 6,
+  "new_random_initializations": 0,
+  "ancestral_initialization_seeds": [
+    7601,
+    7602,
+    7603
+  ],
+  "parameters_each": 469648,
+  "additional_updates_each": 1000,
+  "results": {
+    "verified_trace": {
+      "iid": {
+        "mean_accuracy": 0.05416666666666667,
+        "correct_by_seed": [
+          19,
+          24,
+          22
+        ],
+        "n_unique": 400,
+        "both_correct_pairs_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "pair_n": 0,
+        "truncated_total": 0
+      },
+      "surface": {
+        "mean_accuracy": 0.02666666666666667,
+        "correct_by_seed": [
+          9,
+          9,
+          14
+        ],
+        "n_unique": 400,
+        "both_correct_pairs_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "pair_n": 0,
+        "truncated_total": 0
+      },
+      "extrapolation": {
+        "mean_accuracy": 0.006666666666666667,
+        "correct_by_seed": [
+          1,
+          7,
+          0
+        ],
+        "n_unique": 400,
+        "both_correct_pairs_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "pair_n": 0,
+        "truncated_total": 0
+      },
+      "counterfactual": {
+        "mean_accuracy": 0.051666666666666666,
+        "correct_by_seed": [
+          19,
+          18,
+          25
+        ],
+        "n_unique": 400,
+        "both_correct_pairs_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "pair_n": 200,
+        "truncated_total": 0
+      }
+    },
+    "final_only": {
+      "iid": {
+        "mean_accuracy": 0.0075,
+        "correct_by_seed": [
+          2,
+          3,
+          4
+        ],
+        "n_unique": 400,
+        "both_correct_pairs_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "pair_n": 0,
+        "truncated_total": 0
+      },
+      "surface": {
+        "mean_accuracy": 0.0033333333333333335,
+        "correct_by_seed": [
+          1,
+          0,
+          3
+        ],
+        "n_unique": 400,
+        "both_correct_pairs_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "pair_n": 0,
+        "truncated_total": 0
+      },
+      "extrapolation": {
+        "mean_accuracy": 0.0016666666666666668,
+        "correct_by_seed": [
+          0,
+          1,
+          1
+        ],
+        "n_unique": 400,
+        "both_correct_pairs_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "pair_n": 0,
+        "truncated_total": 0
+      },
+      "counterfactual": {
+        "mean_accuracy": 0.004166666666666667,
+        "correct_by_seed": [
+          1,
+          2,
+          2
+        ],
+        "n_unique": 400,
+        "both_correct_pairs_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "pair_n": 200,
+        "truncated_total": 0
+      }
+    }
+  },
+  "paired_by_seed": {
+    "7601": {
+      "iid": {
+        "wins": 18,
+        "losses": 1,
+        "delta_pp": 4.25,
+        "exact_two_sided_p": 7.62939453125e-05
+      },
+      "surface": {
+        "wins": 9,
+        "losses": 1,
+        "delta_pp": 2.0,
+        "exact_two_sided_p": 0.021484375
+      },
+      "extrapolation": {
+        "wins": 1,
+        "losses": 0,
+        "delta_pp": 0.25,
+        "exact_two_sided_p": 1.0
+      },
+      "counterfactual": {
+        "wins": 18,
+        "losses": 0,
+        "delta_pp": 4.5,
+        "exact_two_sided_p": 7.62939453125e-06
+      }
+    },
+    "7602": {
+      "iid": {
+        "wins": 24,
+        "losses": 3,
+        "delta_pp": 5.25,
+        "exact_two_sided_p": 4.9233436584472656e-05
+      },
+      "surface": {
+        "wins": 9,
+        "losses": 0,
+        "delta_pp": 2.25,
+        "exact_two_sided_p": 0.00390625
+      },
+      "extrapolation": {
+        "wins": 7,
+        "losses": 1,
+        "delta_pp": 1.5,
+        "exact_two_sided_p": 0.0703125
+      },
+      "counterfactual": {
+        "wins": 18,
+        "losses": 2,
+        "delta_pp": 4.0,
+        "exact_two_sided_p": 0.0004024505615234375
+      }
+    },
+    "7603": {
+      "iid": {
+        "wins": 19,
+        "losses": 1,
+        "delta_pp": 4.5,
+        "exact_two_sided_p": 4.00543212890625e-05
+      },
+      "surface": {
+        "wins": 14,
+        "losses": 3,
+        "delta_pp": 2.75,
+        "exact_two_sided_p": 0.012725830078125
+      },
+      "extrapolation": {
+        "wins": 0,
+        "losses": 1,
+        "delta_pp": -0.25,
+        "exact_two_sided_p": 1.0
+      },
+      "counterfactual": {
+        "wins": 25,
+        "losses": 2,
+        "delta_pp": 5.75,
+        "exact_two_sided_p": 5.647540092468262e-06
+      }
+    }
+  },
+  "gains_pp": {
+    "iid": 4.666666666666667,
+    "surface": 2.3333333333333335,
+    "extrapolation": 0.5,
+    "counterfactual": 4.75
+  },
+  "counterfactual_pair_gain_pp": 0.0,
+  "gates": {
+    "iid_ge5pp": false,
+    "surface_extrapolation_positive": true,
+    "cf_pair_drop_le2pp": true,
+    "iid_positive_at_least2seeds": true
+  },
+  "verdict": "NOT_CONFIRMED_IN_REGISTERED_PROTOCOL",
+  "paired_case_count_per_seed": 1600,
+  "unique_test_cases": 1600,
+  "same_cases_repeated_across_seeds": true,
+  "all_stage2_batches_match": true,
+  "scope": "Small synthetic English mechanism test, not a300-800M model or Qwen parity; parent trace training had extra tokens/FLOPs."
+}
