@@ -1,0 +1,8 @@
+{
+  "status":"locked_before_training",
+  "optimizer_updates_before_lock":0,
+  "experiment_py_sha256":"5a26c77983a0a62c0eb694027e4391cf4f68f3119b6cb58694f984fdae830d97",
+  "model_source":"FlyGraph G8C causal_hybrid dada recreated locally from repository blob 217e14d62f7cd40b16971c562ac208978354e1d1",
+  "parent_safetensors_sha256":"86440fc60fe61037e098ea7d5eb486d565e77b8084d3a5e15f52efc14b78517f",
+  "note":"Training logger was corrected before optimizer step 1 so recorded CE is the pre-update CE used in the objective; architecture, data, objective, schedule and gates are unchanged."
+}
