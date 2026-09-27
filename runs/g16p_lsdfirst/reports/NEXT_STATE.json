@@ -1,0 +1,18 @@
+{
+  "status":"completed",
+  "run":"G16P_LSDFirstBudgetReducedPilot_20260927",
+  "verdict":"PILOT_POSITIVE_SIGNAL",
+  "completed_training_models":2,
+  "steps_each":100,
+  "actual_local_weight_bytes":true,
+  "optimizer_rng_present":true,
+  "reload_generation_mismatches_total":0,
+  "next_update_replay_verified_both":true,
+  "remote_release_created":false,
+  "original_G16R_600step_status":"incomplete_timeout_at_msd_control_seed8801_step295_no_checkpoint_do_not_count_as_completed",
+  "original_H16a_H16b_H16c_remain_open":true,
+  "pilot_limitations":["one seed only","very low absolute exact accuracy","carry_borrow_heavy exact remained 0/62 in both arms","counterfactual both-correct pairs remained 0/90 in both arms","not a natural reasoning/code benchmark"],
+  "goal_300_800m_qwen_thinking_not_achieved":true,
+  "do_not_repeat_completed":["G7R","G10AR","G11R","G12","G13","G14R","G15","G16P"],
+  "next":"Replicate the paired serialization intervention on two additional independent seeds with a bounded executable schedule and real binary release. Treat the original 600-step G16R as open, not completed. If the effect does not replicate beyond early NLL/low-exact signal, pivot to explicit latent/workspace supervision rather than scaling output-order alone."
+}
