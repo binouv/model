@@ -1,0 +1,61 @@
+{
+  "run": "G11K_MemoryCapacity_20260927",
+  "status": "preregistered_before_training",
+  "arms": {
+    "baseline_k8_ff96": {
+      "dim": 48,
+      "heads": 4,
+      "hidden": 96,
+      "key_dim": 8,
+      "parameters": 107344
+    },
+    "memory_k20_ff80": {
+      "dim": 48,
+      "heads": 4,
+      "hidden": 80,
+      "key_dim": 20,
+      "parameters": 107344
+    }
+  },
+  "seeds": [
+    7971,
+    7972,
+    7973
+  ],
+  "steps": 480,
+  "batch_rows": 8,
+  "sampler_seed": 79799,
+  "architecture_common": "causal d-a-d-a hybrid with persistent inter-token gated-delta state",
+  "optimizer": "AdamW lr .001 betas(.9,.95) wd .01 clip1; warmup48 cosine-to15%",
+  "selection": "fixed final step480; held never selects checkpoint or hyperparameters",
+  "generation": "prompt-only greedy byte259; max8 new tokens; EOS required; exact integer",
+  "success": {
+    "held_accuracy_positive": true,
+    "both_correct_pairs_positive": true,
+    "query_sensitivity_nonnegative": true,
+    "no_truncation_regression": true
+  },
+  "data": {
+    "train": {
+      "groups": 1024,
+      "rows": 2048,
+      "sha256": "015cd8fc5536fa88a533bcbba1d8d4293ff8203650be6816b3798a2374fffd0e"
+    },
+    "calibration": {
+      "groups": 128,
+      "rows": 256,
+      "sha256": "9e74accfb34663390892193de9bc6ce1879caf0903a1fcf9c8621fcca2e9dd5a"
+    },
+    "held": {
+      "groups": 256,
+      "rows": 512,
+      "sha256": "577b6f0191ef6f5d9dd8e680c8008f3c8c7bc484302b907b99ce48e0824b338b"
+    },
+    "held_ood": {
+      "groups": 128,
+      "rows": 256,
+      "sha256": "483855a1f63cce856af4d9013024a6e9cfeb3fd09d153363b21c90feb9cd9a6b"
+    }
+  },
+  "caveat": "small synthetic memory architecture probe; not target 300-800M model and not Qwen comparison"
+}
