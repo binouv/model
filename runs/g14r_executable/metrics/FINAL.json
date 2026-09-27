@@ -1,0 +1,12 @@
+{
+  "run":"G14R","status":"completed","training_models":3,"seed":8701,"parameters_each":469648,
+  "gains_pp":{"compact_vs_verbose_iid":0.0,"ordered_vs_compact_shuffled_iid":0.0},
+  "gates":{"H14Ra_ge5pp":false,"H14Rb_ge3pp":false},
+  "arms":{
+    "verbose_shuffled":{"iid":0.0,"surface":0.0,"extrapolation":0.0,"counterfactual":0.0,"counterfactual_both_correct_pairs":0,"iid_nll":1.4819919902425973,"train_seconds":11.696215044999917},
+    "compact_shuffled":{"iid":0.0,"surface":0.0,"extrapolation":0.0,"counterfactual":0.0,"counterfactual_both_correct_pairs":0,"iid_nll":1.4884176007206575,"train_seconds":4.2228810149999845},
+    "compact_ordered":{"iid":0.0,"surface":0.0,"extrapolation":0.016666666666666666,"counterfactual":0.0,"counterfactual_both_correct_pairs":0,"iid_nll":1.3814735214944949,"train_seconds":4.035591886999782}
+  },
+  "interpretation":"one-seed mechanism screen; neither preregistered gate passed; exact zero IID prevents subtle discrimination",
+  "goal_300_800m_qwen_thinking_not_achieved":true
+}
