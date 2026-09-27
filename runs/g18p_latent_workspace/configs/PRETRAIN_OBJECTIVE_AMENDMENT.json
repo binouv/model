@@ -1,0 +1,18 @@
+{
+  "run": "G18P_BudgetReducedLatentWorkspace_20260927",
+  "status": "locked_before_training",
+  "reason": "The existing preregistration fixed the architecture, data sizes, arms and success gates but did not define the 384-way workspace value encoding or exact intermediate-state construction. This amendment closes those degrees of freedom before any completed G18P model is trained.",
+  "workspace_value_encoding": {"classes":384,"integer_min":-128,"integer_max":255,"class_index":"value + 128","clipping":"forbidden; generator rejects out-of-range traces"},
+  "intermediate_states": {
+    "arithmetic": "four chronological accumulator states: initial x, then x after each of three +/- operations",
+    "code_trace": "four chronological execution states after each of four +/- program statements, starting from x=0",
+    "list_reasoning": "four chronological prefix reductions over exactly four values (running sum/min/max)",
+    "memory_update": "the four chronological values written to the exact queried key; distractor-key writes may interleave but per-key chronology is preserved"
+  },
+  "workspace_markers": "four literal '~' bytes appended after the full problem statement and before the generated answer instruction; no gold state value appears in the prompt",
+  "bag_target": "numerically sort the exact same four state values ascending; no information other than order is changed",
+  "final_target": "strict generated string F=<integer> followed by EOS",
+  "optimization": "answer-token CE + 0.35 * mean workspace CE for bag/ordered arms; final_only_control has identical workspace-head parameters but auxiliary weight exactly zero",
+  "schedule": "per seed, one fixed list of 41 minibatches from the 1024 training rows; first 40 train all three arms and batch 41 is reserved solely for deterministic next-update replay verification",
+  "notes": "No external weights, solver, gold answer, case object, or auxiliary target is passed into free generation. This remains a small scratch-trained mechanism pilot and cannot establish Qwen parity."
+}
