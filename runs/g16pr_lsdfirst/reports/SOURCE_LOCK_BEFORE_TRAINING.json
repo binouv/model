@@ -1,0 +1,14 @@
+{
+  "status":"locked_before_training",
+  "run":"G16PR_LSDFirstIndependentReplication_20260927",
+  "updates_completed":0,
+  "source_sha256":{
+    "preregistered_json":"92fb4d9f36393176eef350d461913cdaa198f76d1e57d173a5dd3a128ae17a23",
+    "model_py":"06da68f0c3c0ded222831dd002884f9522a2c1452a3a8ebc26783353f8ce4a9b",
+    "experiment_py":"33222ce6d5b7fdbbd9d251b87c855673cacaba370e6057b7c81b93227491edd8",
+    "replicate_runner_py":"5b8092fe4f0533fc641f9b3d80ca4288a828608be3dfa584faa7026b5cfd7bf8"
+  },
+  "training_budget":{"steps":100,"batch":32,"seeds":[8892,8893],"arms":["msd_control","lsd_first"]},
+  "held_used_for_selection":false,
+  "pilot_seed_excluded_from_primary_replication_verdict":8891
+}
