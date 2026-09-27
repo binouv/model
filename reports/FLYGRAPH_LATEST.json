@@ -1,1 +1,13 @@
-{"checked_date":"2026-09-27","main_integration_parent":"b777b1e7137cf1fbcb34cbc8499fb5dae991303c","latest_completed_research":[{"run":"G7R","branch":"flygraph/g7r-local-20260927","commit":"93e1d46aea9b5d63e7aa2f7157d1db791d649455","verdict":"NOT_CONFIRMED_IN_REGISTERED_PROTOCOL","iid_gain_pp":4.375,"remote_weight_release":false},{"run":"G11R","branch":"flygraph/g11r-recurrent-refiner-20260927","commit":"961c059b35c3039cdc652def338ade27de373e63","verdict":"NOT_CONFIRMED_IN_REGISTERED_PROTOCOL","arith_code_gain_pp":0.0,"remote_weight_release":false}],"last_remote_binary_release":{"run":"G8C","release_id":397210425,"tag":"flygraph-g8c-consolidation-36238890991","real_weight_bytes":true,"optimizer_rng":true},"qwen_thinking_baseline":{"status":"completed40","model":"Qwen3.5-4B Q4_K_M","native_thinking":true,"all_eos":true,"all_thinking_closed":true,"strict_exact":"34/40","different_fixture_from_latest_runs":true},"goal_300_800m_better_than_qwen_thinking":"not_achieved","next_registered_direction":"G12 capacity/data learnability screen before more recursion or trace tricks","conflicting_historical_lines":"raw96 R52-R56 and repo ECC R52-R61 remain separate"}
+{
+  "checked_date":"2026-09-27",
+  "main_integration_parent":"b777b1e7137cf1fbcb34cbc8499fb5dae991303c",
+  "latest_completed_research":[
+    {"run":"G19R","branch":"flygraph/g19-regression-workspace-20260927","verdict":"NOT_CONFIRMED_IN_REGISTERED_PILOT","reasoning_code_gain_pp":0.78125,"ordered_vs_bag_gain_pp":0.78125,"remote_weight_release":false},
+    {"run":"G11R","branch":"flygraph/g11r-recurrent-refiner-20260927","commit":"961c059b35c3039cdc652def338ade27de373e63","verdict":"NOT_CONFIRMED_IN_REGISTERED_PROTOCOL","arith_code_gain_pp":0.0,"remote_weight_release":false}
+  ],
+  "last_remote_binary_release":{"run":"G8C","release_id":397210425,"tag":"flygraph-g8c-consolidation-36238890991","real_weight_bytes":true,"optimizer_rng":true},
+  "qwen_thinking_baseline":{"status":"completed40","model":"Qwen3.5-4B Q4_K_M","native_thinking":true,"all_eos":true,"all_thinking_closed":true,"strict_exact":"34/40","different_fixture_from_latest_runs":true},
+  "goal_300_800m_better_than_qwen_thinking":"not_achieved",
+  "next_registered_direction":"collision-free G20 answer-preserving auxiliary optimization screen",
+  "conflicting_historical_lines":"raw96 R52-R56 and repo ECC R52-R61 remain separate"
+}

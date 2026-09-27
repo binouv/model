@@ -1,0 +1,21 @@
+{
+  "run": "G19R",
+  "status": "completed",
+  "training_models": 6,
+  "seeds": [9202, 9201],
+  "steps_each": 80,
+  "parameters_each": 470020,
+  "summary": {
+    "ordered_state_regression": {"iid_accuracy": 0.0625, "reasoning_code_accuracy": 0.046875, "memory_list_accuracy": 0.078125, "surface_accuracy": 0.03125, "extrapolation_accuracy": 0.0, "counterfactual_accuracy": 0.0625, "counterfactual_both_correct_pairs_mean": 1.0, "iid_answer_nll": 0.8239703427866024, "iid_ordered_workspace_mae": 6.476761292913579, "latency_ms_per_case": 10.07419135546872},
+    "final_only_control": {"iid_accuracy": 0.0625, "reasoning_code_accuracy": 0.0390625, "memory_list_accuracy": 0.0859375, "surface_accuracy": 0.03125, "extrapolation_accuracy": 0.0, "counterfactual_accuracy": 0.0390625, "counterfactual_both_correct_pairs_mean": 0.5, "iid_answer_nll": 0.8104825023925939, "iid_ordered_workspace_mae": 122.64691112254513, "latency_ms_per_case": 10.147556605468733},
+    "bag_state_regression": {"iid_accuracy": 0.0703125, "reasoning_code_accuracy": 0.0390625, "memory_list_accuracy": 0.1015625, "surface_accuracy": 0.0390625, "extrapolation_accuracy": 0.0, "counterfactual_accuracy": 0.046875, "counterfactual_both_correct_pairs_mean": 0.5, "iid_answer_nll": 0.822536179990752, "iid_ordered_workspace_mae": 7.544381145431544, "latency_ms_per_case": 10.18538006640668}
+  },
+  "gains": {"ordered_vs_final_reasoning_code_pp": 0.78125, "ordered_vs_bag_reasoning_code_pp": 0.78125, "ordered_vs_final_memory_list_pp": -0.78125, "ordered_minus_final_iid_nll": 0.013487840394008521, "ordered_minus_bag_workspace_mae": -1.0676198525179643, "positive_reasoning_code_seed_count": 1},
+  "gates": {"H19a_gain_ge1pp": false, "H19a_positive_seed_direction_min1": true, "H19b_ordered_vs_bag_ge0_5pp": true, "H19c_ordered_iid_nll_lower": false, "H19c_ordered_workspace_mae_lower_than_bag": true, "H19d_memory_list_regression_le3pp": true, "H19d_surface_nonnegative_vs_final": true},
+  "verdict": "NOT_CONFIRMED_IN_REGISTERED_PILOT",
+  "flops": {"kind": "analytic_architecture_estimate_not_hardware_counter", "forward_backward_batch8": 1648207740, "mean_sequence_tokens": 80.7109375},
+  "all_reload_generation_mismatches": 0,
+  "all_next_update_replay_verified": true,
+  "scope": "small scratch-trained mechanistic pilot; not natural reasoning/code benchmark and not Qwen parity",
+  "goal_300_800m_qwen_thinking_not_achieved": true
+}

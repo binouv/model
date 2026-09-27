@@ -1,0 +1,12 @@
+{
+  "checked_date": "2026-09-27",
+  "latest_completed": "G19R",
+  "verdict": "NOT_CONFIRMED_IN_REGISTERED_PILOT",
+  "gains": {"ordered_vs_final_reasoning_code_pp":0.78125,"ordered_vs_bag_reasoning_code_pp":0.78125,"ordered_vs_final_memory_list_pp":-0.78125,"ordered_minus_final_iid_nll":0.013487840394008521,"ordered_minus_bag_workspace_mae":-1.0676198525179643,"positive_reasoning_code_seed_count":1},
+  "gates": {"H19a_gain_ge1pp":false,"H19a_positive_seed_direction_min1":true,"H19b_ordered_vs_bag_ge0_5pp":true,"H19c_ordered_iid_nll_lower":false,"H19c_ordered_workspace_mae_lower_than_bag":true,"H19d_memory_list_regression_le3pp":true,"H19d_surface_nonnegative_vs_final":true},
+  "limitations": ["new architecture and objective were separately registered rather than exact G18 continuation","small scratch-trained synthetic pilot","semantic collision audit found train=5, iid=3, surface=2 collisions under the run canonicalizer","FLOPs are an analytic estimate, not a hardware counter"],
+  "next_direction": "G20 must use collision-free semantic rejection before rendering and isolate answer-loss interference, preferably final-only vs naive ordered auxiliary vs conflict-projected ordered auxiliary on fresh seeds.",
+  "qwen_thinking_reference": "Qwen3.5-4B Q4_K_M native thinking completed 40/40 with 34/40 strict exact on its fixed fixture; different fixture from G19R and not directly comparable.",
+  "binary_publication": "G19 checkpoint/optimizer/RNG bytes are real and SHA256-verified locally. No G19 remote release asset is claimed until actual remote binary bytes are independently fetched.",
+  "goal_300_800m_qwen_thinking_not_achieved": true
+}

@@ -1,0 +1,13 @@
+{
+  "status": "generated_before_training",
+  "semantic_group_split_before_rendering": true,
+  "splits": {
+    "train": {"n": 1024, "sha256": "c109c25cae01b0dcfab6dcec217266f22bbd7527eb62596817e91f044f53ef8f", "cross_split_semantic_collisions_observed": 5},
+    "validation": {"n": 64, "sha256": "27d83f2ccc633480c10732bf438a198959e6ee8b3a9eadbe3cae085187e15667", "cross_split_semantic_collisions_observed": 0},
+    "iid": {"n": 128, "sha256": "2df13fb48e214150782bd68759ddb7bc9bb5bebbeefd8530b1173d0d72cf31d8", "cross_split_semantic_collisions_observed": 3},
+    "surface": {"n": 64, "sha256": "9efe4fd12a7586d1c134f84435cff8df40fd2e88665a7c75b97fd90ea1452b01", "cross_split_semantic_collisions_observed": 2},
+    "extrapolation": {"n": 64, "sha256": "4e7eae4b6cd5efa21e5090340e77c877bdbe85a0917e85632a209ed02080e744", "cross_split_semantic_collisions_observed": 0},
+    "counterfactual": {"n": 64, "sha256": "2039ac77efec20d6b007477a4be1058ae3a9b09fd560a1c17e90fe0b22af457d", "cross_split_semantic_collisions_observed": 0}
+  },
+  "audit_note": "Observed semantic collisions are disclosed rather than hidden. They weaken strict held-set cleanliness for G19R and are a reason not to scale or claim generalization from this pilot."
+}

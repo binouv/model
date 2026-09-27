@@ -1,0 +1,65 @@
+{
+  "run": "G19R_AbsoluteStateRegressionWorkspace_20260927",
+  "status": "preregistered_before_training",
+  "parent_verified_state": "G18P completed negative: flat 384-way workspace classification, 6 models, 2 seeds, 40 steps; ordered vs final reasoning+code gain 0.0pp and ordered IID NLL worse by 0.02394.",
+  "scope_change": "New self-contained recurrent gated-delta generative probe plus scalar workspace-regression objective. This is a separately registered architecture/objective test and is not an exact continuation of G18P weights.",
+  "hypotheses": {
+    "H19a": "Within the G19R architecture, ordered absolute-state regression improves mean arithmetic+code IID strict exact by at least 1.0 percentage point over final-only across two fresh seeds.",
+    "H19b": "Ordered regression beats a same-multiset order-destroying bag regression by at least 0.5 percentage points on arithmetic+code IID strict exact.",
+    "H19c": "Ordered regression lowers IID answer-token NLL versus final-only and obtains lower chronological workspace MAE than bag on ordered targets.",
+    "H19d": "Any gain must survive surface paraphrase and may not regress memory+list IID by more than 3 percentage points."
+  },
+  "arms": ["final_only_control", "bag_state_regression", "ordered_state_regression"],
+  "seeds": [9201, 9202],
+  "model": {
+    "variant": "byte-level two-layer gated-delta GRU LM",
+    "tokenizer": "byte259",
+    "hidden": 160,
+    "layers": 2,
+    "same_parameters_all_arms": true,
+    "same_initial_weights_within_seed": true,
+    "scratch_trained": true
+  },
+  "workspace": {
+    "slots": 4,
+    "prompt_markers": "four literal ~ markers appended after problem statement",
+    "ordered_target": "four exact chronological absolute integer states",
+    "bag_ablation": "the exact same four target values numerically sorted ascending",
+    "encoding": "scalar normalized from fixed [-128,255] to [-1,1]",
+    "loss": "SmoothL1 beta=0.1; aux_weight=0.20; final-only uses identical head with auxiliary weight zero",
+    "gold_absent_from_generation": true
+  },
+  "data": {
+    "namespace": 191000,
+    "families": ["arithmetic", "code_trace", "list_reasoning", "memory_update"],
+    "train": 1024,
+    "validation": 64,
+    "iid": 128,
+    "surface": 64,
+    "extrapolation": 64,
+    "counterfactual_members": 64,
+    "semantic_group_split_before_rendering": true,
+    "chronology_preserved": true,
+    "list_commutativity_canonicalized": true,
+    "memory_cross_key_permutations_canonicalized": true,
+    "exact_query_address_separate_from_workspace": true
+  },
+  "training": {
+    "steps": 80,
+    "batch": 8,
+    "optimizer": "AdamW lr=0.001 warmup10 cosine-to10%, betas=(0.9,0.95), wd=0.01, clip=1",
+    "exact_minibatch_schedule_shared_within_seed": true,
+    "endpoint_only": true,
+    "reserved_batch_for_next_update_replay": true
+  },
+  "scoring": "Prompt-only greedy free generation first; EOS required; strict F=<integer>. Scorer receives no gold/case/solver. Report held splits, family slices, answer NLL, workspace MAE, paired counterfactual success, params, latency and estimated FLOPs.",
+  "success": {
+    "ordered_vs_final_reasoning_code_gain_pp_min": 1.0,
+    "ordered_vs_bag_reasoning_code_gain_pp_min": 0.5,
+    "ordered_iid_nll_lower_than_final": true,
+    "memory_list_regression_max_pp": 3.0,
+    "positive_direction_seeds_min": 1
+  },
+  "interpretation": "Mechanism pilot only; success cannot establish broad reasoning, Qwen parity, or the 300-800M target.",
+  "goal_300_800m_qwen_thinking_not_achieved": true
+}
