@@ -1,0 +1,13 @@
+{
+  "run":"G16R_LSDFirstPairedExecutable_20260927",
+  "status":"INCOMPLETE_TIMEOUT_NOT_A_RESULT",
+  "registered_steps_each":600,
+  "registered_seeds":[8801,8802,8803],
+  "registered_arms":["msd_control","lsd_first"],
+  "observed_before_timeout":{"arm":"msd_control","seed":8801,"logged_steps":295},
+  "completed_checkpoints":0,
+  "completed_models":0,
+  "use_as_evidence":false,
+  "reason":"Local finite execution hit the runtime ceiling before the first registered endpoint and before any checkpoint was written.",
+  "next_rule":"Do not count or aggregate the partial log. A separate preregistered G16P 100-step pilot was executed instead."
+}
