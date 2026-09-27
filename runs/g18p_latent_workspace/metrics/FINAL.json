@@ -1,0 +1,43 @@
+{
+  "run": "G18P",
+  "status": "completed",
+  "training_models": 6,
+  "seeds": [9101,9102],
+  "steps_each": 40,
+  "parameters_each": 506512,
+  "summary": {
+    "final_only_control": {
+      "validation":{"mean_accuracy":0.046875,"correct_by_seed":[3,3],"mean_answer_nll":2.207153547678562,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[null,null]},
+      "iid":{"mean_accuracy":0.03125,"correct_by_seed":[4,4],"mean_answer_nll":2.222860664721356,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[null,null]},
+      "surface":{"mean_accuracy":0.046875,"correct_by_seed":[3,3],"mean_answer_nll":2.2245635737001503,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[null,null]},
+      "extrapolation":{"mean_accuracy":0.015625,"correct_by_seed":[1,1],"mean_answer_nll":2.419305365587908,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[null,null]},
+      "counterfactual":{"mean_accuracy":0.0625,"correct_by_seed":[4,4],"mean_answer_nll":2.1628620905506892,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[null,null]}
+    },
+    "bag_workspace": {
+      "validation":{"mean_accuracy":0.046875,"correct_by_seed":[3,3],"mean_answer_nll":2.2315281747982203,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[0.03515625,0.0390625]},
+      "iid":{"mean_accuracy":0.03125,"correct_by_seed":[4,4],"mean_answer_nll":2.2468927901312217,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[0.046875,0.0546875]},
+      "surface":{"mean_accuracy":0.046875,"correct_by_seed":[3,3],"mean_answer_nll":2.2487408008450775,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[0.0625,0.078125]},
+      "extrapolation":{"mean_accuracy":0.015625,"correct_by_seed":[1,1],"mean_answer_nll":2.445082644680487,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[0.0078125,0.0]},
+      "counterfactual":{"mean_accuracy":0.0625,"correct_by_seed":[4,4],"mean_answer_nll":2.1875017724855983,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[0.01953125,0.09375]}
+    },
+    "ordered_workspace": {
+      "validation":{"mean_accuracy":0.046875,"correct_by_seed":[3,3],"mean_answer_nll":2.2314446304018136,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[0.03515625,0.0390625]},
+      "iid":{"mean_accuracy":0.03125,"correct_by_seed":[4,4],"mean_answer_nll":2.2468015784459396,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[0.046875,0.0546875]},
+      "surface":{"mean_accuracy":0.046875,"correct_by_seed":[3,3],"mean_answer_nll":2.2486428653492645,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[0.0625,0.078125]},
+      "extrapolation":{"mean_accuracy":0.015625,"correct_by_seed":[1,1],"mean_answer_nll":2.4448563889862873,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[0.0078125,0.0]},
+      "counterfactual":{"mean_accuracy":0.0625,"correct_by_seed":[4,4],"mean_answer_nll":2.1874085500184135,"both_correct_pairs_by_seed":[0,0],"workspace_accuracy_by_seed":[0.01953125,0.09375]}
+    }
+  },
+  "reasoning_code_accuracy":{"final_only_control":0.03125,"bag_workspace":0.03125,"ordered_workspace":0.03125},
+  "memory_list_accuracy":{"final_only_control":0.03125,"bag_workspace":0.03125,"ordered_workspace":0.03125},
+  "gains":{"ordered_vs_final_reasoning_code_pp":0.0,"ordered_vs_bag_reasoning_code_pp":0.0,"ordered_vs_final_memory_list_pp":0.0,"ordered_minus_final_iid_nll":0.023940913724583623},
+  "gates":{"H18Pa_gain_ge1pp":false,"H18Pa_positive_seed_direction_min1":false,"H18Pb_ordered_vs_bag_ge0_5pp":false,"H18Pc_ordered_iid_nll_lower":false,"H18Pc_memory_list_regression_le3pp":true},
+  "verdict":"NOT_CONFIRMED_IN_REGISTERED_PILOT",
+  "profiler_forward_backward_flops_batch8":3866850691,
+  "same_initial_weights_within_seed":true,
+  "same_exact_batch_schedule_within_seed":true,
+  "all_reload_generation_mismatches":0,
+  "all_next_update_replay_verified":true,
+  "scope":"budget-reduced scratch-trained mechanistic pilot; not natural reasoning/code benchmark and not Qwen parity",
+  "goal_300_800m_qwen_thinking_not_achieved":true
+}
