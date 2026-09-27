@@ -1,0 +1,8 @@
+{
+  "status":"completed","run":"G14R_CompactPromptExecutablePilot_20260927","completed_training_models":3,"steps_each":120,"parameters_each":469648,
+  "verdict":"NOT_CONFIRMED_ONE_SEED_SCREEN","gains_pp":{"compact_vs_verbose_iid":0.0,"ordered_vs_compact_shuffled_iid":0.0},
+  "actual_local_weight_bytes":true,"optimizer_rng_present":true,"reload_generation_cases_total":900,"reload_generation_mismatches_total":0,
+  "next_update_replay_verified_all3":true,"remote_release_created":false,"goal_300_800m_qwen_thinking_not_achieved":true,
+  "do_not_repeat":["G7R","G10AR","G11R","G12","G13","G14R"],
+  "next":"G15 paired continuation from G14R compact_shuffled: exact CE control vs persistent prompt-carry readout; optional hard-negative sequence-contrastive arm, all on fresh groups."
+}
