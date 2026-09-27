@@ -1,0 +1,19 @@
+{
+  "run":"G19_RecurrentWorkspacePilot_20260927",
+  "status":"preregistered_before_training",
+  "parent_result":"G18P completed and did not confirm passive marker workspace",
+  "arms":["reset_4step_control","persistent_4step_workspace"],
+  "seeds":[9201,9202],
+  "hypotheses":{
+    "H19a":"persistent state gains at least 1.0 pp arithmetic+code IID exact over reset control and improves both seeds",
+    "H19b":"persistent state lowers IID answer NLL and memory+list regression is no worse than 2 pp",
+    "H19c":"combined surface+extrapolation gain is non-negative and counterfactual both-correct-pair regression is no worse than 2 pp"
+  },
+  "architecture":"causal DADA backbone plus one shared gated latent cell evaluated four times; persistent arm carries latent state, reset control restarts from the same prompt state on every cell call; the final latent residual directly conditions generated answer tokens",
+  "address_path":"memory query addresses remain discrete prompt tokens in the backbone; workspace is an additive residual",
+  "objective":"answer-token CE plus equal deep answer supervision at early latent iterations in both arms; no intermediate-state labels",
+  "data":{"namespace":191000,"train":1536,"validation":64,"iid":128,"surface":64,"extrapolation":64,"counterfactual_members":64,"normal_range":[0,9],"extrapolation_range":[10,19],"semantic_split_before_rendering":true},
+  "training":{"steps":40,"batch":8,"same_init_within_seed":true,"same_batch_schedule_within_seed":true,"fixed_endpoint_only":true},
+  "inference":"greedy from prompt string; EOS required; strict final integer format",
+  "scope":"small scratch-trained mechanism pilot only"
+}
