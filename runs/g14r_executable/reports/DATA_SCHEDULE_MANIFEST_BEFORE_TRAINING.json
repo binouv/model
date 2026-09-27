@@ -1,0 +1,15 @@
+{
+  "counts": {"counterfactual_members":60,"counterfactual_pairs":30,"extrapolation":60,"iid":120,"surface":60,"train":2048},
+  "cross_split_canonical_overlap": 0,
+  "files": {
+    "counterfactual_semantic.jsonl":{"bytes":11292,"sha256":"18526a34e62969d959769b090d8f908e8c3394fb895f4b8fd6e66cf0121c8f98"},
+    "extrapolation_semantic.jsonl":{"bytes":9253,"sha256":"3bb68c0d8c8985e5dce7add68187c83638782c46bcd62b0c0a731f2581092d49"},
+    "iid_semantic.jsonl":{"bytes":18267,"sha256":"63b30ac70277dc3e2746f2a1c9fc0bce2e5e226256977428bc7c44f170307339"},
+    "schedule.json":{"bytes":217034,"sha256":"37c9f06b107468eea4f6e752510eb84bc1b1443cf56bff05d7f18bababfdf3c8"},
+    "surface_semantic.jsonl":{"bytes":9379,"sha256":"00892c16671f7f56c3ca841d9f22f932b2f5f555d899caadf861ca2da4256812"},
+    "train_semantic.jsonl":{"bytes":318339,"sha256":"754dead255d0154c1936a0227bcc4b0f9d0540bd8c81e2ccebcd8d1c9bf6f85b"}
+  },
+  "optimizer_updates_before_lock":0,
+  "schedule":{"ordered_sha256":"d7aa2d3e340a1224589e5d47478b275e3e5e00def39acebdcc20df3562ff5ecb","same_batch_multiset":true,"shuffled_sha256":"9a70651787daf85b56b03fe6b4089b4691c98b2a9d8392b6eb8e240a9b8309c2"},
+  "status":"completed_before_training"
+}
