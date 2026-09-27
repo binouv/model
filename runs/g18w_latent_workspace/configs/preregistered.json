@@ -1,0 +1,61 @@
+{
+  "run": "G18W_LatentWorkspacePilot_20260927",
+  "status": "preregistered_before_data_generation_or_training",
+  "relationship": "New finite mechanism pilot after G16PR2 failed to replicate the LSD-first output-serialization signal. Existing G17W contains only an incomplete loader commit and is not evidence.",
+  "hypotheses": {
+    "H18a": "Ordered latent execution-state supervision at four constant workspace markers improves mean arithmetic+code_trace IID free-generation exact by at least 1.0 percentage point over a final-answer-only control across two fixed seeds.",
+    "H18b": "Chronological workspace targets outperform a parameter- and auxiliary-loss-matched bag-of-states target by at least 0.5 percentage points on arithmetic+code_trace IID exact.",
+    "H18c": "The ordered workspace arm lowers IID answer-token NLL versus final-only control without more than 2 percentage points memory+list IID regression."
+  },
+  "arms": ["final_only_control", "bag_workspace", "ordered_workspace"],
+  "model": {
+    "variant": "causal_hybrid_dada",
+    "tokenizer": "byte259",
+    "backbone_expected_params": 469648,
+    "workspace_head_classes": 384,
+    "workspace_slots": 4
+  },
+  "workspace": "The prompt contains four constant '~' marker bytes. No gold trace is inserted into the prompt. During training only, an auxiliary head reads hidden states at these marker positions. Ordered arm predicts chronological intermediate integer states; bag arm predicts the same four state values sorted numerically; final-only uses auxiliary weight zero with identical parameters.",
+  "seeds": [9001, 9002],
+  "data": {
+    "train": 4096,
+    "validation": 256,
+    "iid": 256,
+    "surface": 128,
+    "extrapolation": 128,
+    "counterfactual_members": 128,
+    "families": ["arithmetic", "code_trace", "list_reasoning", "memory_update"],
+    "train_iid_value_range": [0, 15],
+    "extrapolation_range": [16, 31],
+    "semantic_group_split_before_rendering": true,
+    "chronology_preserved": true,
+    "semantic_canonicalization": {
+      "list_reasoning": "sort values because sum/min/max are permutation-invariant",
+      "memory_update": "canonicalize cross-key interleavings by per-key histories while retaining chronology within each key and exact queried address",
+      "arithmetic_code": "ordered operations/program steps retained exactly"
+    },
+    "split_before_rendering": true,
+    "exact_key_addresses_separate_from_workspace": true
+  },
+  "training": {
+    "steps": 200,
+    "batch": 32,
+    "optimizer": "AdamW lr .001 warmup10 cosine-to10%, betas(.9,.95), wd .01, clip1",
+    "aux_weight": 0.35,
+    "same_initial_weights_within_seed": true,
+    "same_exact_batch_schedule_within_seed": true,
+    "fixed_endpoint_only": true
+  },
+  "inference": "Greedy free generation from prompt strings only; EOS required; strict F=<integer>; no case object, gold answer, solver, or auxiliary target at inference.",
+  "selection": "Held sets never select checkpoints or hyperparameters; final step200 only.",
+  "success": {
+    "ordered_vs_final_reasoning_code_gain_pp_min": 1.0,
+    "ordered_vs_bag_reasoning_code_gain_pp_min": 0.5,
+    "positive_reasoning_code_direction_seeds": 2,
+    "ordered_iid_nll_lower_than_final": true,
+    "memory_list_regression_max_pp": 2.0
+  },
+  "scope": "Small mechanism pilot only. It cannot establish Qwen parity or the 300-800M target.",
+  "external_borrow": "No external code, weights, or pretrained base. Backbone mechanism is copied from this FlyGraph repository's G5S/G8C causal hybrid implementation.",
+  "goal_300_800m_qwen_thinking_not_achieved": true
+}
