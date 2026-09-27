@@ -1,0 +1,13 @@
+{
+  "counts":{"calibration":400,"general_held":500,"held":800,"train":4096},
+  "cross_split_group_overlap":0,
+  "new_canonical_groups":3148,
+  "prior_canonical_groups_excluded":10352,
+  "sha256":{
+    "calibration":"d9ccd8f31ccb21f8f514ea639f1f58a18e0a4d0a8c459325ba83874400e6cbd2",
+    "general_held":"b74ba864523dbce6963194ecf1a95558214971d8851044a2cb869ed77343e529",
+    "held":"04690abb4eb11a5520cef47cd0ca6a9f64460afd16d3f19096820749cff9d872",
+    "train":"8da7f2b2fdb929d5079aa72dbdc6733118eff1c408c8d91793df829ae241ae52"
+  },
+  "status":"completed"
+}
