@@ -1,0 +1,11 @@
+{
+  "status":"verified",
+  "run":"G16P",
+  "archive":{"file":"FlyGraph_G16P_completed_2026-09-27.tar.gz","bytes":14624378,"sha256":"004c1abc0ab745b01c66d902ce64a793104d22c7e06ae687927e4a4b172299fc","archive_extract_verified":true},
+  "msd_control":{"model_safetensors":{"bytes":1881704,"sha256":"061787dc25827b8126f2c077299a1d4a01f049e02ccf08914298ead89ce7c9f8"},"resume_pt":{"bytes":5682438,"sha256":"b70333f8e057056a6a0bd2076e76a26c028e5adb7a2945437abe680ca5066d7d"},"config_sha256":"4a9604368538f4f5135b3be0974b3bb8c4e1331d582ff05322f2996c3693ebc8","optimizer_present":true,"python_rng_present":true,"torch_rng_present":true,"safetensors_tensor_keys":36},
+  "lsd_first":{"model_safetensors":{"bytes":1881704,"sha256":"0673e9f1bceb5a356b07b4cdd3d4705cb13d0cf74d71790e9c36ec22b20cb32a"},"resume_pt":{"bytes":5682438,"sha256":"9294cc4ec01f7735e06f13b24d994b853a967b0bf55a1d2ecc4268f448fed476"},"config_sha256":"5cf0980cae619300cbf526ecb2aa5627fef7c87844e8436ccf505b0075910e8f","optimizer_present":true,"python_rng_present":true,"torch_rng_present":true,"safetensors_tensor_keys":36},
+  "reload_generation_cases_total":64,
+  "reload_generation_mismatches_total":0,
+  "next_update_replay_verified_both":true,
+  "release_asset_status":"No GitHub release asset was created in this run because the available connector exposes repository text writes but no release/upload-asset action. The archive and real checkpoint bytes remain local downloadable artifacts."
+}
