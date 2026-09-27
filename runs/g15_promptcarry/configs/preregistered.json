@@ -1,0 +1,18 @@
+{
+  "run":"G15_PromptCarryContrastiveContinuation_20260927",
+  "status":"preregistered_before_data_generation_or_training",
+  "parent":{"run":"G14R","arm":"compact_shuffled","local_safetensors_sha256":"86440fc60fe61037e098ea7d5eb486d565e77b8084d3a5e15f52efc14b78517f","parent_remote_release":false},
+  "hypotheses":{
+    "H15a":"A persistent prompt-summary carry injected into every answer readout improves strict arithmetic+code IID free-generation exact by >=3pp over an exact CE continuation from the same parent.",
+    "H15b":"Adding sequence-level hard-negative contrast to prompt carry improves strict IID exact by >=3pp over prompt carry CE alone and increases prediction diversity without >2pp transfer regression."
+  },
+  "arms":["ce_control","prompt_carry","prompt_carry_contrast"],
+  "architecture":{"base":"469648-param causal_hybrid dada","prompt_carry":"same base + one scalar gate; normalized final prompt hidden is residually added to every answer hidden before final norm/tied LM head","params_control":469648,"params_prompt_carry":469649},
+  "data":{"fresh_semantic_groups":true,"deny_all_G14R_semantics":true,"train":4096,"iid":240,"surface":120,"extrapolation":120,"counterfactual_members":120,"counterfactual_pairs":60,"normal_range":[0,511],"extrapolation_range":[512,1023]},
+  "training":{"steps":600,"batch":16,"optimizer":"AdamW lr .0005 warmup20 cosine-to10%, betas(.9,.95), wd .01, clip1","same_exact_batch_sequence":true,"init":"exact G14R compact_shuffled parent for all arms; prompt carry gate=0"},
+  "contrastive":{"weight":0.5,"margin_nats_per_token":0.5,"negative":"deterministic minimally changed arithmetic operator or final code operation; prefer same rendered answer length; no negative used at inference"},
+  "objective":"strict free generation F=<integer>+EOS; no solver/case/gold at inference or scoring",
+  "selection":"fixed step600 only; no held-based checkpoint selection",
+  "scope":"one-seed paired continuation screen; not Qwen parity and not 300-800M",
+  "goal_300_800m_qwen_thinking_not_achieved":true
+}
