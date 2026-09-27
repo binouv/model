@@ -1,0 +1,1 @@
+{"run":"G9A_BlockOrder_20260927","status":"preregistered_before_training","variants":["interleaved","grouped"],"seeds":[9101,9102,9103],"updates":200,"batch":16,"train_cases":4096,"held_memory_pairs":300,"held_general_cases":500,"same_batches_within_seed":true,"primary_gain_pp":3,"positive_seeds":2,"general_regression_max_pp":2,"scope":"small_architecture_screen"}
