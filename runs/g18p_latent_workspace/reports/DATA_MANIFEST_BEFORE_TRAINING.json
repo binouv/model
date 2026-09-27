@@ -1,0 +1,15 @@
+{
+  "status": "locked",
+  "namespace": 181000,
+  "semantic_group_split_before_rendering": true,
+  "chronology_preserved": true,
+  "exact_key_addresses_separate": true,
+  "splits": {
+    "train": {"n":1024,"sha256":"21848b65134da3ef06d61cbe8a7186953f111b00bd62377eda65b4e26e659e75"},
+    "validation": {"n":64,"sha256":"1352ce125a46d91e0ce3cc71a37f6be7438000765c787bfaeb8d31940a4d944b"},
+    "iid": {"n":128,"sha256":"452d00e8098d242c1dcc9f8986a643bfabeb123ae6e7681b65f0574f96401108"},
+    "surface": {"n":64,"sha256":"8f4374ddd670f1cb40ecd6ef108613ba95a7533ae8106e863187ac3c73bd33b9"},
+    "extrapolation": {"n":64,"sha256":"7d8d30dbc4aff99e929a95d677c3927fbd5c2530e12df11a88bbe48f2bd24384"},
+    "counterfactual": {"n":64,"pairs":32,"sha256":"a0dabd6612ef40c47877332bc1d3168831d322521f3523b98f9b3848556c3c15"}
+  }
+}
