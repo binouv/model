@@ -1,0 +1,14 @@
+{
+  "run":"G16PR_LSDFirstIndependentReplication_20260927",
+  "status":"preregistered_before_replication_training",
+  "relationship":"Sequential confirmatory replication registered after the one-seed G16P pilot showed an early positive signal. Pilot seed8891 is not counted as an independent preregistered replication seed for the primary replication verdict.",
+  "replication_seeds":[8892,8893],
+  "arms":["msd_control","lsd_first"],
+  "model":{"variant":"causal_hybrid_dada","parameters":469648,"tokenizer":"byte259"},
+  "training":{"steps":100,"batch":32,"same_protocol_as_G16P":true,"same_initial_weights_within_seed":true,"same_case_batch_schedule_within_seed":true,"fixed_endpoint_only":true},
+  "primary_hypothesis":"Across the two new seeds, mean arithmetic+code_trace IID semantic exact gain for lsd_first over msd_control is >=0.5 percentage points, at least one of two seeds has positive reasoning+code gain, and mean IID answer-token NLL is lower.",
+  "guardrail":"Mean memory_update IID gain must be >= -2 percentage points.",
+  "held_selection":false,
+  "interpretation":"Confirmation strengthens only the early output-serialization mechanism signal. It does not close the original 600-step H16 hypotheses, establish broad reasoning, or support Qwen parity.",
+  "goal_300_800m_qwen_thinking_not_achieved":true
+}
