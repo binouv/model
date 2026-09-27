@@ -1,0 +1,23 @@
+{
+  "run": "G20P_AnswerPreservingAuxGradient_20260927",
+  "status": "preregistered_before_training",
+  "parent": "G19R completed NOT_CONFIRMED; small chronology-specific +0.78125pp vs final and bag, but answer NLL worsened. G19R also exposed cross-split semantic collisions, which G20P fixes by collision-free rejection before rendering.",
+  "scope_change": "Optimization-only mechanism test on the same 470,020-parameter byte-level gated recurrent architecture class; fresh data namespace and fresh seeds. Compare final-only, naive ordered auxiliary loss, and answer-preserving projected ordered auxiliary gradients.",
+  "hypotheses": {
+    "H20a": "Conflict-projected ordered auxiliary training improves mean arithmetic+code IID strict exact by at least 0.5 percentage points over naive ordered auxiliary training across two fresh seeds.",
+    "H20b": "Projected ordered training improves arithmetic+code IID strict exact by at least 1.0 percentage point over final-only and has at least one positive seed.",
+    "H20c": "Projected ordered training does not worsen IID answer-token NLL versus final-only by more than 0.005 and has lower NLL than naive ordered.",
+    "H20d": "Projected ordered training does not regress memory+list IID by more than 3 percentage points and does not regress surface exact versus final-only."
+  },
+  "arms": ["final_only_control", "naive_ordered_aux", "projected_ordered_aux"],
+  "seeds": [9301, 9302],
+  "model": {"variant":"byte-level two-layer gated-delta GRU LM","hidden":160,"layers":2,"tokenizer":"byte259","same_parameters_all_arms":true,"same_initial_weights_within_seed":true,"scratch_trained":true},
+  "workspace": {"slots":4,"target":"four exact chronological absolute integer states","encoding":"scalar normalized fixed [-128,255] to [-1,1]","loss":"SmoothL1 beta=0.1","aux_weight":0.20,"gold_absent_from_generation":true},
+  "projected_gradient": "For projected_ordered_aux only, compute answer and auxiliary gradients separately. If their global dot product over trainable parameters is negative, replace g_aux by g_aux - dot(g_aux,g_answer)/||g_answer||^2 * g_answer, then apply g_answer + 0.20*g_aux_projected. If dot>=0, use g_answer + 0.20*g_aux. This is fixed before training.",
+  "data": {"namespace":201000,"families":["arithmetic","code_trace","list_reasoning","memory_update"],"train":1024,"validation":64,"iid":128,"surface":64,"extrapolation":64,"counterfactual_members":64,"semantic_group_split_before_rendering":true,"collision_free_rejection_across_train_validation_iid_surface_extrapolation":true,"counterfactual_pairs_isolated":true,"chronology_preserved":true,"list_commutativity_canonicalized":true,"memory_cross_key_permutations_canonicalized":true,"exact_query_address_separate_from_workspace":true},
+  "training": {"steps":100,"batch":8,"optimizer":"AdamW lr=0.001 warmup10 cosine-to10%, betas=(0.9,0.95), wd=0.01, clip=1","exact_minibatch_schedule_shared_within_seed":true,"endpoint_only":true,"reserved_batch_for_next_update_replay":true},
+  "scoring": "Prompt-only greedy generation first; EOS required; strict F=<integer>; no gold/case/solver at scoring. Report held splits, family slices, answer NLL, chronological workspace MAE, conflict frequency, params, latency, checkpoint hashes and next-update replay.",
+  "success": {"projected_vs_naive_reasoning_code_gain_pp_min":0.5,"projected_vs_final_reasoning_code_gain_pp_min":1.0,"positive_direction_seeds_min":1,"projected_minus_final_nll_max":0.005,"projected_nll_lower_than_naive":true,"memory_list_regression_max_pp":3.0,"surface_nonnegative_vs_final":true},
+  "interpretation": "Mechanism pilot only. Even success cannot establish broad reasoning, Qwen parity, or the 300-800M target.",
+  "goal_300_800m_qwen_thinking_not_achieved": true
+}
