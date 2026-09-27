@@ -1,0 +1,78 @@
+{
+  "run": "G19P_CausalTraceOrder_20260927",
+  "status": "preregistered_before_completed_training",
+  "parent_state": {
+    "branch": "flygraph/g18p-execution-20260927",
+    "commit": "4cd2b15cc91714ccc4eb5a0aad0bea671b76f967",
+    "g18p_verdict": "NOT_CONFIRMED_IN_REGISTERED_PILOT"
+  },
+  "motivation": "G8C verified trace supervision was the strongest prior directional signal (+4.667pp IID over final-only) but used extra trace tokens/FLOPs and did not isolate chronology. G18P training-only workspace supervision produced no exact gain and worse answer NLL, suggesting auxiliary states that are not themselves causally generated are insufficient. Test whether a compute-matched, autoregressively generated four-state trace helps specifically because of chronological order rather than merely extra tokens/state values.",
+  "hypotheses": {
+    "H19a": "Ordered causal trace improves arithmetic+code IID exact by >=3.0pp over same-length noop-trace control.",
+    "H19b": "Ordered causal trace improves arithmetic+code IID exact by >=2.0pp over same-multiset numerically sorted bag-trace control.",
+    "H19c": "Ordered-vs-noop reasoning+code direction is positive in both fixed seeds, ordered-vs-bag positive in at least one seed, and memory+list IID regression is no worse than 3.0pp."
+  },
+  "arms": [
+    "noop_trace",
+    "bag_trace",
+    "ordered_trace"
+  ],
+  "model": {
+    "architecture": "2-layer GRU autoregressive byte LM",
+    "vocab": 259,
+    "embedding": 128,
+    "hidden": 192,
+    "total_parameters_expected": 491072,
+    "scratch_trained": true,
+    "same_parameters_all_arms": true
+  },
+  "output_contract": "All arms generate exactly T=s1,s2,s3,s4;F=d then EOS. Noop uses x,x,x,x; bag uses the exact same four gold state values sorted numerically during training; ordered uses chronological states. At inference every arm receives prompt only and must generate its own trace and answer.",
+  "data": {
+    "namespace": 190001,
+    "train": 512,
+    "validation": 64,
+    "iid": 128,
+    "surface": 64,
+    "extrapolation": 64,
+    "counterfactual_members": 64,
+    "families": [
+      "arithmetic",
+      "code_trace",
+      "list_reasoning",
+      "memory_update"
+    ],
+    "semantic_groups_split_before_rendering": true,
+    "arithmetic_and_code_canonicalized_jointly": true,
+    "list_rule_noncommutative": true,
+    "memory_exact_query_address_retained": true,
+    "memory_cross_key_interleaving_canonicalized": true
+  },
+  "training": {
+    "seeds": [
+      9201,
+      9202
+    ],
+    "steps": 120,
+    "batch": 16,
+    "optimizer": "AdamW lr .001 warmup10 cosine-to10%, betas(.9,.95), wd .01, clip1",
+    "same_initial_weights_within_seed": true,
+    "same_exact_batch_schedule_within_seed": true,
+    "fixed_endpoint_only": true
+  },
+  "scoring": "Prompt-only greedy free generation first; parser sees generated text only. EOS/strict T=...;F=d syntax recorded. Gold/case objects are used only after generation for scoring. Report free exact, exact trace, final-digit NLL, surface/extrapolation, counterfactual both-correct/query sensitivity, wall time, total params, checkpoint hashes, reload and deterministic next-update replay.",
+  "success": {
+    "ordered_vs_noop_reasoning_code_gain_pp_min": 3,
+    "ordered_vs_bag_reasoning_code_gain_pp_min": 2,
+    "positive_vs_noop_seeds_min": 2,
+    "positive_vs_bag_seeds_min": 1,
+    "memory_list_regression_max_pp": 3
+  },
+  "interpretation": "Mechanism pilot only. Passing gates would justify scaling the causal trace mechanism, not establish broad reasoning, Qwen parity, or the 300-800M target.",
+  "source_payload": {
+    "compression": "gzip mtime=0 then base64",
+    "decoded_sha256": "f5e6774a13bd9a4d2e4e3b839357dacaa617babc959309a7a405a981443df885",
+    "decoded_bytes": 20896
+  },
+  "engineering_smoke": "A local 5-step one-seed smoke was used only to validate execution/reload mechanics; it is not a registered research result and is excluded from all claims.",
+  "goal_300_800m_qwen_thinking_not_achieved": true
+}
