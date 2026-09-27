@@ -1,0 +1,14 @@
+{
+  "run":"G16P_LSDFirstBudgetReducedPilot_20260927",
+  "status":"preregistered_before_pilot_training",
+  "relationship":"Budget-reduced paired pilot created only after the registered G16R 600-step attempt timed out at msd_control seed8801 step295 without any completed checkpoint. The incomplete attempt is not evidence and is not counted as training completion.",
+  "hypothesis":"At fixed fresh initialization, semantic cases and batch schedule, least-significant-digit-first serialization shows an early learnability signal after 100 updates: >=1pp arithmetic+code_trace IID semantic exact gain, lower IID answer-token NLL, and no >2pp memory_update IID regression versus conventional serialization.",
+  "arms":["msd_control","lsd_first"],
+  "seed":8891,
+  "model":{"variant":"causal_hybrid_dada","parameters":469648,"tokenizer":"byte259"},
+  "training":{"steps":100,"batch":32,"optimizer":"same AdamW family as G16R","same_initial_weights":true,"same_case_batch_schedule":true,"fixed_endpoint_only":true},
+  "data":"same deterministic G16R generator family and split rules; generated afresh in isolated pilot directory",
+  "scoring":"free generation first; deterministic parser has syntax/mode only and no case/gold; raw serialization exact and answer-token NLL also reported",
+  "interpretation":"This pilot can only show or fail to show an early signal. It does not close the original H16a/H16b/H16c 600-step hypotheses and cannot establish broad reasoning or Qwen parity.",
+  "goal_300_800m_qwen_thinking_not_achieved":true
+}
