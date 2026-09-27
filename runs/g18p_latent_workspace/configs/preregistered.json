@@ -1,0 +1,20 @@
+{
+  "run": "G18P_BudgetReducedLatentWorkspace_20260927",
+  "status": "preregistered_before_pilot_training",
+  "relationship": "Separate budget-reduced paired pilot created only after registered G18W timed out at final_only_control seed9001 step131 with zero completed endpoint checkpoints. G18W partial updates are preserved as a non-result and are not training input or evidence.",
+  "hypotheses": {
+    "H18Pa": "At fixed fresh initialization and exact minibatch schedule, ordered intermediate-state supervision shows an early reasoning+code IID exact gain of at least 1.0 percentage point over final-answer-only control across two fresh seeds.",
+    "H18Pb": "Ordered chronological targets beat a same-multiset order-destroying bag target by at least 0.5 percentage points in mean reasoning+code IID exact.",
+    "H18Pc": "Ordered supervision lowers mean IID answer-token NLL versus final-only while memory+list IID regression is no worse than 3 percentage points."
+  },
+  "arms": ["final_only_control","bag_workspace","ordered_workspace"],
+  "seeds": [9101,9102],
+  "model": {"variant":"causal_hybrid_dada","backbone_parameters":469648,"workspace_head_parameters":36864,"total_parameters":506512,"same_parameters_all_arms":true,"scratch_trained":true},
+  "workspace": "Four constant ~ marker positions. Gold states are absent from prompts and inference. Auxiliary targets are training-only: chronological states for ordered, the exact same state multiset sorted numerically for bag, and weight zero for control.",
+  "data": {"fresh_generator_namespace":181000,"train":1024,"validation":64,"iid":128,"surface":64,"extrapolation":64,"counterfactual_members":64,"split_before_rendering":true,"list_commutativity_canonicalized":true,"memory_cross_key_permutations_canonicalized":true,"per_key_chronology_retained":true,"exact_query_address_retained":true},
+  "training": {"steps":40,"batch":8,"optimizer":"AdamW lr .001 warmup10 cosine-to10%, betas(.9,.95), wd .01, clip1","aux_weight":0.35,"same_initial_weights_within_seed":true,"same_exact_batch_schedule_within_seed":true,"fixed_endpoint_only":true},
+  "scoring": "Prompt-only greedy free generation first; EOS required; strict F=<integer>; scoring sees no gold/case/solver. Also report answer NLL, workspace diagnostic, surface/extrapolation, counterfactual pairs, latency/FLOPs, params.",
+  "success": {"ordered_vs_final_reasoning_code_gain_pp_min":1.0,"ordered_vs_bag_reasoning_code_gain_pp_min":0.5,"positive_reasoning_code_direction_seeds_min":1,"ordered_iid_nll_lower_than_final":true,"memory_list_regression_max_pp":3.0},
+  "interpretation": "Only an early mechanism signal. It cannot close G18W, establish broad reasoning, or establish Qwen parity or the 300-800M target.",
+  "goal_300_800m_qwen_thinking_not_achieved": true
+}
