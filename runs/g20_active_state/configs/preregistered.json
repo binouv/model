@@ -1,0 +1,19 @@
+{
+  "run":"G20_ActiveRecurrentStateSupervision_20260927",
+  "status":"preregistered_before_training",
+  "parent_evidence":"G18 passive state supervision failed exact and NLL gates; G19 active persistent recurrence improved NLL but not exact.",
+  "arms":["persistent_answer_only","persistent_plus_state_supervision"],
+  "seeds":[9301,9302],
+  "hypotheses":{
+    "H20a":"adding chronological state supervision to active recurrent states improves arithmetic+code IID exact by at least 1.0 pp and has positive direction in both seeds",
+    "H20b":"state supervision lowers IID answer NLL versus answer-only recurrent control with memory+list regression no worse than 2 pp",
+    "H20c":"surface+extrapolation combined exact gain is non-negative and counterfactual both-correct-pair regression no worse than 2 pp"
+  },
+  "architecture":"G19 persistent four-step shared recurrent latent state directly conditions generated answer tokens. Both arms add the same 384-class state head; only auxiliary loss weight differs.",
+  "state_targets":"four chronological intermediate values aligned one-to-one with the four recurrent iterations; training-only; integer classes cover -128 through 255; out-of-range cases rejected",
+  "objective":"both arms use identical answer CE and deep answer supervision. control state auxiliary weight 0; supervised arm state auxiliary weight 0.35.",
+  "data":{"namespace":201000,"train":1536,"validation":64,"iid":128,"surface":64,"extrapolation":64,"counterfactual_members":64,"normal_range":[0,9],"extrapolation_range":[10,19],"semantic_split_before_rendering":true},
+  "training":{"steps":40,"batch":8,"same_init_within_seed":true,"same_batch_schedule_within_seed":true,"fixed_endpoint_only":true},
+  "inference":"prompt-only greedy generation with strict final integer format; state head is not used by the scorer",
+  "scope":"small scratch-trained factorial mechanism test"
+}
