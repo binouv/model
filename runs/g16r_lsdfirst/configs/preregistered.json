@@ -1,0 +1,67 @@
+{
+  "run": "G16R_LSDFirstPairedExecutable_20260927",
+  "status": "preregistered_before_training",
+  "relationship": "Executable reconstruction of the G16 direction recorded by completed G15. It is not an exact continuation of G15 because G15 checkpoint bytes were verified locally but were not published remotely; this screen starts both arms from identical fresh initialization and uses newly generated data.",
+  "hypotheses": {
+    "H16a": "Least-significant-digit-first answer serialization improves mean arithmetic+code_trace IID semantic exact accuracy by at least 5 percentage points over conventional most-significant-digit-first serialization, with positive direction in at least 2 of 3 paired seeds.",
+    "H16b": "Least-significant-digit-first serialization improves carry/borrow-heavy arithmetic IID semantic exact by at least 5 percentage points and does not reduce mean memory_update IID semantic exact by more than 2 percentage points.",
+    "H16c": "Least-significant-digit-first serialization does not reduce the sum of surface-transfer and extrapolation semantic exact accuracy by more than 2 percentage points and does not reduce counterfactual both-correct-pair rate by more than 2 percentage points."
+  },
+  "arms": ["msd_control", "lsd_first"],
+  "model": {
+    "variant": "causal_hybrid_dada",
+    "dim": 96,
+    "hidden": 256,
+    "heads": 4,
+    "key_dim": 12,
+    "tokenizer": "byte259",
+    "expected_parameters": 469648,
+    "initialization": "identical per seed across arms"
+  },
+  "seeds": [8801, 8802, 8803],
+  "data": {
+    "families": ["arithmetic", "code_trace", "memory_update"],
+    "train_unique": 6144,
+    "validation": 240,
+    "held_iid": 360,
+    "held_surface": 180,
+    "held_extrapolation": 180,
+    "counterfactual_members": 180,
+    "counterfactual_pairs": 90,
+    "normal_value_range": [0, 63],
+    "extrapolation_value_range": [64, 127],
+    "cross_split_semantic_overlap": 0,
+    "chronology": "memory write order preserved; query changes create counterfactual pairs"
+  },
+  "training": {
+    "steps": 600,
+    "batch": 32,
+    "optimizer": "AdamW lr 0.001 warmup30 cosine-to15%, betas(0.9,0.95), weight_decay0.01, grad_clip1",
+    "objective": "answer-only masked CE over full byte259 vocabulary",
+    "same_exact_case_batch_sequence_across_arms": true,
+    "selection": "fixed step600 endpoints only; validation and held never select checkpoints or hyperparameters"
+  },
+  "serialization": {
+    "msd_control": "F=<conventional signed decimal>",
+    "lsd_first": "MODE:L prompt plus F=<same sign prefix if negative, decimal digits reversed>; target prefix length is identical to control",
+    "scoring_parser": "deterministic external parser only; parser has no access to case/gold and performs only syntax validation plus digit reversal for lsd_first",
+    "inference_solver": false
+  },
+  "metrics": [
+    "free_generation_semantic_exact",
+    "raw_serialization_exact",
+    "teacher_forced_nll_per_token",
+    "family_exact",
+    "answer_digit_length_exact",
+    "carry_borrow_heavy_exact",
+    "counterfactual_both_correct_pairs",
+    "surface_transfer",
+    "extrapolation",
+    "generation_latency",
+    "supported_profiler_flops",
+    "total_and_active_parameters"
+  ],
+  "success_rule": "H16a is primary; H16b/H16c are required guardrails for calling the mechanism confirmed. This cannot establish Qwen parity or general intelligence.",
+  "scope": "small paired output-serialization mechanism screen; not 300-800M, not a Qwen comparison, not a claim of broad reasoning superiority",
+  "goal_300_800m_qwen_thinking_not_achieved": true
+}
