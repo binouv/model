@@ -1,0 +1,23 @@
+{
+  "run": "G14R_CompactPromptExecutablePilot_20260927",
+  "status": "preregistered_before_data_generation_or_training",
+  "relationship": "Separate executable reconstruction inspired by G14. It does NOT complete the locked G14 protocol because G14 semantic generator bytes are not recoverable from the branch; all G14R source/data are independently materialized and hashed.",
+  "hypotheses": {
+    "H14Ra": "At fixed semantic cases, initialization, optimizer updates, shuffled minibatch order and strict free-generation target, compact symbolic prompts improve arithmetic+code IID exact over verbose prompts by >=5 percentage points.",
+    "H14Rb": "With compact prompts and the exact same sampled minibatch multiset, easy-to-hard ordered presentation improves arithmetic+code IID exact over a deterministic shuffled schedule by >=3 percentage points."
+  },
+  "model": {"variant":"causal_hybrid_dada","parameters":469648,"tokenizer":"byte259","init_seed":8701},
+  "arms": ["verbose_shuffled","compact_shuffled","compact_ordered"],
+  "steps": 120,
+  "phase_steps": 30,
+  "batch": 12,
+  "train_unique_per_stage": 512,
+  "stages": [{"range":[0,31],"code_steps":1},{"range":[0,127],"code_steps":2},{"range":[0,255],"code_steps":3},{"range":[0,511],"code_steps":4}],
+  "held": {"iid":120,"surface":60,"extrapolation":60,"counterfactual_members":60,"counterfactual_pairs":30},
+  "optimizer": "AdamW lr .001 warmup10 cosine-to15%, betas(.9,.95), wd .01, clip1",
+  "objective": "strict free generation F=<integer>+EOS; no trace target; no solver/case/gold at inference",
+  "selection": "fixed step120 only; no held-based checkpoint selection",
+  "success": {"H14Ra_iid_gain_pp_min":5,"H14Rb_iid_gain_pp_min":3},
+  "scope": "one-seed mechanism screen only; cannot establish stable mechanism or Qwen parity",
+  "goal_300_800m_qwen_thinking_not_achieved": true
+}
