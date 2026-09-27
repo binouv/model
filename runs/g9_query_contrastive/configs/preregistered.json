@@ -1,0 +1,19 @@
+{
+"run":"G9Q_QueryContrastive_20260927",
+"status":"preregistered_before_training",
+"parent":"G8C verified_trace step2000, seeds7601/7602/7603,469648params",
+"arms":["ordinary_nll","paired_ranking"],
+"updates":300,
+"batch_pairs":8,
+"lr":[0.0001,0.00002],
+"train_pairs":2048,
+"calibration_pairs":200,
+"held_pairs":400,
+"general_held_cases":500,
+"split_rule":"fresh canonical write-history groups; exclude all prior G5S/G8C groups before split",
+"paired_ranking_loss":"positive sequence NLL plus 0.5 hinge margin 1.0 against the other query answer",
+"matched_control":"compute both sequence scores in both arms",
+"success":{"both_correct_pair_gain_pp":5,"positive_seeds":2,"general_regression_max_pp":2},
+"generation":"prompt strings only, greedy, EOS required",
+"claim_limit":"memory mechanism test only; not Qwen parity or 300-800M scale-up"
+}
