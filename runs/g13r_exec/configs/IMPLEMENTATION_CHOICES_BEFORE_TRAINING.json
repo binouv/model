@@ -1,0 +1,12 @@
+{
+  "status": "locked_before_data_materialization_or_training_in_this_runtime",
+  "relationship": "Executable materialization of already-preregistered G13R; no change to G13 or G13L.",
+  "architecture": "exact G8C causal_hybrid DADA model source semantics, 469648 trainable parameters, byte259 tokenizer",
+  "optimizer": "AdamW lr=0.001, warmup=100, cosine to 15% at step400, betas=(0.9,0.95), weight_decay=0.01, clip=1",
+  "data_family_mix": "round-robin arithmetic, conditional, code_trace, list_reasoning, memory_update within every difficulty stage",
+  "canonicalization": "commutative +/* permutations grouped; subtraction ordered; list multiset+operation grouped; memory per-key value chronology plus queried key",
+  "render": "same render for ordered and shuffled arms; completion boundary prompt -> F=<integer> -> EOS",
+  "evaluation": "greedy free generation; strict parser fullmatch F=(-?\\d+); generation function receives prompts only; gold joined after generation",
+  "checkpoint": "final model.safetensors plus resume.pt containing model, AdamW, Python RNG, torch RNG and update logs; SHA256 and reload/next-update replay",
+  "note": "G13R preregistration did not specify the optimizer recipe or exact text renderer; these implementation choices are frozen before data generation/training and are therefore not post-result tuning."
+}
