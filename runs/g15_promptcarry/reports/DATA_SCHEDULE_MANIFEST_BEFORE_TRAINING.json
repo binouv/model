@@ -1,0 +1,17 @@
+{
+  "counts": {"counterfactual_members":120,"counterfactual_pairs":60,"extrapolation":120,"iid":240,"surface":120,"train":4096},
+  "cross_split_overlap":0,
+  "denied_g14r_semantic_groups":2348,
+  "files":{
+    "counterfactual.jsonl":{"bytes":21480,"sha256":"41c84f1979ad3ca9efb5054a7ba30138d621cc49cb314713abb9b613fc8a4ab5"},
+    "extrapolation.jsonl":{"bytes":19423,"sha256":"c0ee1a4370f93e101cf358225c4b0ce0d41d575221765bc05f335f9507c8b813"},
+    "iid.jsonl":{"bytes":38423,"sha256":"8a8a8cb0c3f44207f295eb70b5b23d09e17a387db1e754404587459eb5e61c04"},
+    "schedule.json":{"bytes":696002,"sha256":"37ae304b74031a3ad1a3b081d7eae962080a73ec4e05d50c7eb505f86c68fe81"},
+    "surface.jsonl":{"bytes":19399,"sha256":"16f69748b91ca18a14d241fae2602bdda06ea0f3c98059272c6a932709612a18"},
+    "train.jsonl":{"bytes":660874,"sha256":"8a250fa89b5543715e829218ddcb99c7324385565054cba107826fe55d46a74e"}
+  },
+  "optimizer_updates_before_lock":0,
+  "parent_sha256":"86440fc60fe61037e098ea7d5eb486d565e77b8084d3a5e15f52efc14b78517f",
+  "schedule_sha256":"0802851c3c2ba2e07d96ee97c6bf9cb7dd9c1f3c327ed5dce6f1b1219f842c77",
+  "status":"completed_before_training"
+}
