@@ -1,9 +1,11 @@
 {
-  "status": "running_local",
+  "status": "completed",
   "run": "G9Q",
-  "arm": "random_negative_control",
-  "seed": 7603,
-  "stage3_step": 1000,
-  "checkpoint": "/home/runner/work/model/model/repo/runs/g9q_query_contrast/checkpoints/random_negative_control_s7603/step3000",
-  "do_not_duplicate": true
+  "verdict": "NOT_CONFIRMED_IN_REGISTERED_PROTOCOL",
+  "goal_300_800m_qwen_thinking_not_achieved": true,
+  "do_not_repeat": [
+    "G8C",
+    "G9Q"
+  ],
+  "next": "If hard negatives fail to improve both-correct pairs, stop optimizing scalar answer discrimination and move to explicit discrete key selection / pointer supervision as a separate registered mechanism. If supported, transfer query-contrastive objective into a larger RU/EN/code hybrid backbone."
 }
