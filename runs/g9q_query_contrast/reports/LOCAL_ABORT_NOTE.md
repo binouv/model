@@ -1,0 +1,1 @@
+A local pilot reached steps 1–111 for hard_query_negative seed7601 but hit the conversation tool execution limit before any durable checkpoint. Those steps were deleted and are not part of the canonical result. The GitHub finite run starts from the registered G8C parent and step1.

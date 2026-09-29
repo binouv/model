@@ -1,0 +1,35 @@
+name: FlyGraph G9Q finite query-grounding continuation
+on:
+  push:
+    branches: ['flygraph/g9q-query-contrast-20260929']
+    paths: ['runs/g9q_query_contrast/RUN_ONCE.json']
+permissions:
+  contents: write
+jobs:
+  train:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Fetch exact branch
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          test "$(git -C repo rev-parse HEAD)" = "$GITHUB_SHA"
+          python3 repo/runs/g9q_query_contrast/bootstrap.py
+      - name: Pinned CPU dependencies and tests
+        run: |
+          set -euo pipefail
+          python3 -m venv /tmp/fg
+          /tmp/fg/bin/pip install --index-url https://download.pytorch.org/whl/cpu torch==2.10.0
+          /tmp/fg/bin/pip install numpy==2.3.5 safetensors==0.7.0 pytest==8.4.2
+          /tmp/fg/bin/python -m pytest -q repo/runs/g9q_query_contrast/tests
+      - name: Six finite matched continuations and real release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OMP_NUM_THREADS: '4'
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          set -euo pipefail
+          cd repo
+          /tmp/fg/bin/python -u runs/g9q_query_contrast/src/ci.py

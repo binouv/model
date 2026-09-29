@@ -1,0 +1,22 @@
+{
+  "run": "G9Q_QueryContrast_20260929",
+  "status": "preregistered_before_training",
+  "parent": "G8C verified_trace -> final consolidation step2000",
+  "parent_seeds": [7601, 7602, 7603],
+  "parameters_each": 469648,
+  "primary_hypothesis": "Hard counterfactual answer negatives from the same mutable-memory state improve query grounding and both-correct paired generation more than random negatives from another memory state at matched scoring compute.",
+  "arms": ["hard_query_negative", "random_negative_control"],
+  "steps": 1000,
+  "batch_pairs": 8,
+  "optimizer": "restore G8C AdamW state; stage3 lr cosine .0002 to .00004, clip1",
+  "loss": "mean positive answer NLL + 0.5 * symmetric softplus(0.5 - (mean_logp_positive - mean_logp_negative))",
+  "compute_matching": "four scored prompt-answer sequences per pair in both arms; all answers are three digits so target lengths match exactly",
+  "train_pairs": 4096,
+  "validation_pairs": 256,
+  "held_pairs": {"iid": 200, "surface": 200, "extrapolation": 200, "counterfactual": 200},
+  "generation": "prompt only; greedy byte259; max32 new bytes; EOS required; exact F=<integer>; no tools/gold/candidates at inference",
+  "selection": "fixed final step1000; validation logged only; no held checkpoint selection",
+  "success": {"iid_question_gain_pp": 3, "iid_both_correct_pair_gain_pp": 2, "query_sensitivity_gain_pp": 10, "positive_iid_question_gain_seeds": 2, "surface_or_extrap_pair_regression_max_pp": 2},
+  "freshness": "all G9 memory values are 300..999 whereas all known G5S/G8C generated values are <=255; canonical group preserves ordered per-key histories; train/validation/held groups are mutually disjoint before rendering",
+  "scope": "small memory-grounding mechanism probe; not 300-800M and not a Qwen comparison"
+}
