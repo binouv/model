@@ -1,9 +1,9 @@
 {
   "status": "running_local",
   "run": "G9Q",
-  "arm": "hard_query_negative",
+  "arm": "random_negative_control",
   "seed": 7603,
   "stage3_step": 1000,
-  "checkpoint": "/home/runner/work/model/model/repo/runs/g9q_query_contrast/checkpoints/hard_query_negative_s7603/step3000",
+  "checkpoint": "/home/runner/work/model/model/repo/runs/g9q_query_contrast/checkpoints/random_negative_control_s7603/step3000",
   "do_not_duplicate": true
 }
