@@ -1,1 +1,9 @@
-{"status":"registered_not_started","run":"G9Q","do_not_duplicate":true,"parent_release":"flygraph-g8c-consolidation-36238890991","goal_not_achieved":true}
+{
+  "status": "running_local",
+  "run": "G9Q",
+  "arm": "hard_query_negative",
+  "seed": 7601,
+  "stage3_step": 1000,
+  "checkpoint": "/home/runner/work/model/model/repo/runs/g9q_query_contrast/checkpoints/hard_query_negative_s7601/step3000",
+  "do_not_duplicate": true
+}
