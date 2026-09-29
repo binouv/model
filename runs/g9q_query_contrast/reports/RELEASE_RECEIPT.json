@@ -1,0 +1,195 @@
+{
+  "status": "six_continuations_completed",
+  "tag": "flygraph-g9q-query-contrast-36614080397",
+  "workflow_run": "36614080397",
+  "assets": [
+    {
+      "name": "hard_query_negative_s7601.resume.pt",
+      "bytes": 5913286,
+      "sha256": "84af1a6ae81248b142ef7d2a5bfce149b8d91f40a98d2a519cca9d43f8e4c9d7",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7601.safetensors",
+      "bytes": 1881704,
+      "sha256": "70cd8403d14db15b489141e41ea4a8f97faa71d3701363a52335b4741b2da627",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7601.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7601.RAW.json.gz",
+      "bytes": 115938,
+      "sha256": "4f641ce9ca6ee293c29a6927acb425f4cccb8a198753d2cf4c78beaec43faa3f",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7601.STEPS.jsonl.gz",
+      "bytes": 98750,
+      "sha256": "7c9705e19cf7916cb680d66bed8828e9a614affe34c2609ed5f7f0bddcafb1db",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7601.resume.pt",
+      "bytes": 5913286,
+      "sha256": "d952ff2e5500766435d81b46a97cd9a674243ec9c134e7819f50bb175d752c44",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7601.safetensors",
+      "bytes": 1881704,
+      "sha256": "2bf62fb89f806e6a7647caddde0dbde81b0b5e8a0b7287faa9d9f8fb45ba42c0",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7601.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7601.RAW.json.gz",
+      "bytes": 116236,
+      "sha256": "8f25eb5cd4760039d23a083591f5d41cba69f9ebf06c645d240e6e37c265cfb5",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7601.STEPS.jsonl.gz",
+      "bytes": 98856,
+      "sha256": "3e1c2b23c3a640b2c4fe9cdf19218d8904fe56530288d32bf6e35323d3841a90",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7602.resume.pt",
+      "bytes": 5913286,
+      "sha256": "99401fe999560557d57e4e031c36c105741a72086e06966e8506a66d22cfe635",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7602.safetensors",
+      "bytes": 1881704,
+      "sha256": "327ad118631a4718a5010a95822bdc97455f9f8fb435a2bc71ddfd19c15688f1",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7602.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7602.RAW.json.gz",
+      "bytes": 116188,
+      "sha256": "9409f5a7f88bf34c6b739b601fc0065ad0282e2fa1905dd5b0b1f178342f10f1",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7602.STEPS.jsonl.gz",
+      "bytes": 99195,
+      "sha256": "0dd63cd8bc0c10d6c22064d706fc7e5df79a8d1cd82f254df3602def05b7fa46",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7602.resume.pt",
+      "bytes": 5913286,
+      "sha256": "4dd3fb2c42a3804e09355d8a9ad1d165b091dcb6b6229f29b4f3746a60821fe9",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7602.safetensors",
+      "bytes": 1881704,
+      "sha256": "ea3fcecde1422dd9e3529106bb88475432d15c20b0d340e74bd19f429ed8965b",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7602.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7602.RAW.json.gz",
+      "bytes": 116255,
+      "sha256": "a929f807f1e585a7288e21d6eaff50dcb63b695efbdbe92d2336f69ea7e1828b",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7602.STEPS.jsonl.gz",
+      "bytes": 98833,
+      "sha256": "adb160720760d045cd66721eaf1c081e7848c61ff791d32a7d5dca222b8e5a0d",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7603.resume.pt",
+      "bytes": 5913286,
+      "sha256": "f345ab6a4058131fdc2985dc62ac14358b1385dab7cba329c5366571bfcd4d06",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7603.safetensors",
+      "bytes": 1881704,
+      "sha256": "6a17c3b0e8beaeb88854526b987a7cc231d0f17d31f694f4cd9f04f0c9827f26",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7603.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7603.RAW.json.gz",
+      "bytes": 116281,
+      "sha256": "5d76dec17f14813ccd4114adac68fc2a3975410c6bb99a00c16b437e5d7faf0b",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "hard_query_negative_s7603.STEPS.jsonl.gz",
+      "bytes": 99073,
+      "sha256": "c865e2cc0e1d5f49ac7933828a319028ba2cdaeab09dc3b9c39e3b3b00a2f4ec",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7603.resume.pt",
+      "bytes": 5913286,
+      "sha256": "6d31bbe59e7d979257668443d390b2585cf6dfcbdf3dbc72abf405e518a5b5dd",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7603.safetensors",
+      "bytes": 1881704,
+      "sha256": "efc178faead522bc314dfdf58e7f73bdf4d19676bda4c6098bcd65f51af58025",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7603.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7603.RAW.json.gz",
+      "bytes": 116618,
+      "sha256": "7fe4b01beb4ebe53a13f948e04127eaa8b477a5b894f1fcb966b18476afdbd20",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7603.STEPS.jsonl.gz",
+      "bytes": 99018,
+      "sha256": "4f531344db2d13c3ee02425cbba79502a79c9e6f206d8d9cefad88c1c104239e",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "SOURCE_DATA_RESULTS.tar.gz",
+      "bytes": 2511704,
+      "sha256": "107e22277348c03eba4ac84f86aba46438766c663d0d8c1f275e29932ab46a1c",
+      "remote_redownload_sha256_verified": true
+    }
+  ],
+  "native_optimizer_rng_present": true,
+  "all_assets_redownload_verified": true
+}
