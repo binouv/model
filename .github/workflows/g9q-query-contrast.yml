@@ -17,6 +17,7 @@ jobs:
           git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
           test "$(git -C repo rev-parse HEAD)" = "$GITHUB_SHA"
           python3 repo/runs/g9q_query_contrast/bootstrap.py
+          mkdir -p repo/runs/g9q_query_contrast/{metrics,reports,checkpoints,assets,parents}
       - name: Pinned CPU dependencies and tests
         run: |
           set -euo pipefail

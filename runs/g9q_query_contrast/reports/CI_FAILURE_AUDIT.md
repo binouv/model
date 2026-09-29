@@ -1,0 +1,1 @@
+Runs 36613830766 and 36613907373 failed before completing the first optimizer update because the runtime metrics directory was missing. They produced no durable model checkpoint and are excluded from all scientific metrics. The only change in trigger 3 is creation of runtime output directories; the preregistered data, model, objective, optimizer, steps and criteria are unchanged.
