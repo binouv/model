@@ -1,0 +1,132 @@
+{
+  "status": "completed",
+  "arm": "random_negative_control",
+  "seed": 7601,
+  "parameters": 469648,
+  "parent_checkpoint": "/home/runner/work/model/model/repo/runs/g9q_query_contrast/parents/verified_trace_s7601/step2000/resume.pt",
+  "parent_sha256": "8dc94305108b1dd97f68f4d4b3d54c95e34e380847a2b04752b90eb8bcd1164e",
+  "parent_state_sha256": "3824d995a357c84b3293af80164410aba8e592d425512aff2aea0604b401fcca",
+  "final_state_sha256": "00aef34436f5f7601f66a34746e2ffd804798676fc8c48fa648fb4456c4ca23a",
+  "additional_steps": 1000,
+  "scored_sequences_per_step": 32,
+  "batch_sequence_sha256": "9d46eec8a3ffa69df911c9240ccbcf032dddf91a9c7e8fd317fd21e603d265cd",
+  "train_seconds": 349.92749315400226,
+  "checkpoint": "/home/runner/work/model/model/repo/runs/g9q_query_contrast/checkpoints/random_negative_control_s7601/step3000",
+  "checkpoint_manifest": {
+    "step": 3000,
+    "parameters": 469648,
+    "files": {
+      "resume.pt": {
+        "bytes": 5913286,
+        "sha256": "d952ff2e5500766435d81b46a97cd9a674243ec9c134e7819f50bb175d752c44"
+      },
+      "model.safetensors": {
+        "bytes": 1881704,
+        "sha256": "2bf62fb89f806e6a7647caddde0dbde81b0b5e8a0b7287faa9d9f8fb45ba42c0"
+      },
+      "config.json": {
+        "bytes": 131,
+        "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52"
+      }
+    },
+    "optimizer_rng": true
+  },
+  "reload_cases": 16,
+  "reload_mismatches": 0,
+  "next_update_replay_verified": true,
+  "all_weights_finite": true,
+  "validation": {
+    "status": "completed",
+    "pairs": 256,
+    "questions": 512,
+    "correct": 72,
+    "accuracy": 0.140625,
+    "both_correct_pairs": 0,
+    "pair_accuracy": 0.0,
+    "query_sensitivity": 0.03125,
+    "truncated": 0,
+    "generation_seconds": 1.8066861830001244
+  },
+  "tests": {
+    "iid": {
+      "status": "completed",
+      "pairs": 200,
+      "questions": 400,
+      "correct": 52,
+      "accuracy": 0.13,
+      "both_correct_pairs": 0,
+      "pair_accuracy": 0.0,
+      "query_sensitivity": 0.025,
+      "truncated": 0,
+      "generation_seconds": 1.4171395249996976
+    },
+    "surface": {
+      "status": "completed",
+      "pairs": 200,
+      "questions": 400,
+      "correct": 39,
+      "accuracy": 0.0975,
+      "both_correct_pairs": 0,
+      "pair_accuracy": 0.0,
+      "query_sensitivity": 0.04,
+      "truncated": 0,
+      "generation_seconds": 1.6056178440001077
+    },
+    "extrapolation": {
+      "status": "completed",
+      "pairs": 200,
+      "questions": 400,
+      "correct": 0,
+      "accuracy": 0.0,
+      "both_correct_pairs": 0,
+      "pair_accuracy": 0.0,
+      "query_sensitivity": 0.025,
+      "truncated": 0,
+      "generation_seconds": 2.4126136020001923
+    },
+    "counterfactual": {
+      "status": "completed",
+      "pairs": 200,
+      "questions": 400,
+      "correct": 47,
+      "accuracy": 0.1175,
+      "both_correct_pairs": 0,
+      "pair_accuracy": 0.0,
+      "query_sensitivity": 0.035,
+      "truncated": 0,
+      "generation_seconds": 1.4193165999998882
+    }
+  },
+  "release_assets": [
+    {
+      "name": "random_negative_control_s7601.resume.pt",
+      "bytes": 5913286,
+      "sha256": "d952ff2e5500766435d81b46a97cd9a674243ec9c134e7819f50bb175d752c44",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7601.safetensors",
+      "bytes": 1881704,
+      "sha256": "2bf62fb89f806e6a7647caddde0dbde81b0b5e8a0b7287faa9d9f8fb45ba42c0",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7601.config.json",
+      "bytes": 131,
+      "sha256": "b4f01037156d582083f752162d2cce8a4444eb52e7fea08dbb5b552e4d6f5a52",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7601.RAW.json.gz",
+      "bytes": 116236,
+      "sha256": "8f25eb5cd4760039d23a083591f5d41cba69f9ebf06c645d240e6e37c265cfb5",
+      "remote_redownload_sha256_verified": true
+    },
+    {
+      "name": "random_negative_control_s7601.STEPS.jsonl.gz",
+      "bytes": 98856,
+      "sha256": "3e1c2b23c3a640b2c4fe9cdf19218d8904fe56530288d32bf6e35323d3841a90",
+      "remote_redownload_sha256_verified": true
+    }
+  ]
+}
