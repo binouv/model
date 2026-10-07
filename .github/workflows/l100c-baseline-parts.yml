@@ -1,0 +1,56 @@
+name: L100C finite baseline artifact repack
+on:
+  push:
+    branches: ['flygraph/l100c-local-20261008']
+    paths: ['.github/workflows/l100c-baseline-parts.yml']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  deliver:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - name: Fetch existing completed artifact, verify and split model bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh run download 37697144715 --repo binouv/model --name L100C_Qwen08_BF16_OfflineBaseline --dir delivery
+          echo 'cedf89af31c9041b601fa58303285bc46d99c51baee1b13f5e919626ca526ee5  delivery/Qwen3.5-0.8B-BF16.gguf' | sha256sum -c -
+          mkdir parts
+          split -b 400000000 -d -a 2 delivery/Qwen3.5-0.8B-BF16.gguf parts/qwen.gguf.part
+          test "$(find parts -type f | wc -l)" = 4
+          rm delivery/Qwen3.5-0.8B-BF16.gguf
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Q08_BF16_Part00
+          path: parts/qwen.gguf.part00
+          compression-level: 0
+          retention-days: 7
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Q08_BF16_Part01
+          path: parts/qwen.gguf.part01
+          compression-level: 0
+          retention-days: 7
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Q08_BF16_Part02
+          path: parts/qwen.gguf.part02
+          compression-level: 0
+          retention-days: 7
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Q08_BF16_Part03
+          path: parts/qwen.gguf.part03
+          compression-level: 0
+          retention-days: 7
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Q08_EngineAndManifest
+          path: delivery/
+          compression-level: 1
+          retention-days: 7
