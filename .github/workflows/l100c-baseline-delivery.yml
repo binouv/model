@@ -1,0 +1,49 @@
+name: L100C baseline bytes delivery only
+on:
+  push:
+    branches: ['flygraph/l100c-local-20261008']
+    paths: ['.github/workflows/l100c-baseline-delivery.yml']
+permissions:
+  contents: read
+jobs:
+  deliver:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - name: Download pinned BF16 baseline and build pinned CPU inference engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p delivery/bin
+          curl --fail --location --retry 3 'https://huggingface.co/unsloth/Qwen3.5-0.8B-GGUF/resolve/6ab461498e2023f6e3c1baea90a8f0fe38ab64d0/Qwen3.5-0.8B-BF16.gguf' -o delivery/Qwen3.5-0.8B-BF16.gguf
+          echo 'cedf89af31c9041b601fa58303285bc46d99c51baee1b13f5e919626ca526ee5  delivery/Qwen3.5-0.8B-BF16.gguf' | sha256sum -c -
+          curl --fail --location --retry 3 'https://github.com/ggml-org/llama.cpp/archive/7fe450e19305b828c199d602c23a8337aaa1f03b.tar.gz' -o engine.tar.gz
+          tar -xzf engine.tar.gz
+          cmake -S llama.cpp-7fe450e19305b828c199d602c23a8337aaa1f03b -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DGGML_NATIVE=OFF -DGGML_AVX2=ON -DGGML_AVX512=ON -DGGML_AVX512_BF16=ON -DLLAMA_CURL=OFF -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=ON
+          cmake --build build -j 4 --target llama-server
+          cp build/bin/llama-server delivery/bin/
+          cp llama.cpp-7fe450e19305b828c199d602c23a8337aaa1f03b/LICENSE delivery/LLAMA_LICENSE
+          cp engine.tar.gz delivery/
+          curl --fail --location 'https://huggingface.co/Qwen/Qwen3.5-0.8B/raw/main/LICENSE' -o delivery/QWEN_LICENSE
+          curl --fail --location 'https://huggingface.co/Qwen/Qwen3.5-0.8B/raw/main/config.json' -o delivery/qwen_original_config.json
+          curl --fail --location 'https://huggingface.co/Qwen/Qwen3.5-0.8B/raw/main/chat_template.jinja' -o delivery/chat_template.jinja
+          python3 - <<'PY'
+          import hashlib,json,pathlib
+          root=pathlib.Path('delivery');rows=[]
+          for p in sorted(root.rglob('*')):
+            if p.is_file():
+              h=hashlib.sha256()
+              with p.open('rb') as f:
+                for b in iter(lambda:f.read(4<<20),b''):h.update(b)
+              rows.append({'path':str(p.relative_to(root)),'bytes':p.stat().st_size,'sha256':h.hexdigest()})
+          (root/'DELIVERY_MANIFEST.json').write_text(json.dumps({'status':'download_and_build_only','training_updates':0,'inference_requests':0,'model':'Qwen3.5-0.8B BF16 GGUF conversion by Unsloth','model_revision':'6ab461498e2023f6e3c1baea90a8f0fe38ab64d0','llama_commit':'7fe450e19305b828c199d602c23a8337aaa1f03b','files':rows},indent=2))
+          PY
+      - name: Transfer actual files for local evaluation
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: L100C_Qwen08_BF16_OfflineBaseline
+          path: delivery/
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
