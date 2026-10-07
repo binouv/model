@@ -1,0 +1,22 @@
+{
+  "run": "L100C_local_20261008",
+  "status": "verified_intermediate_checkpoint_not_completed_experiment",
+  "parameters": 100028328,
+  "training_location": "local conversation container, 4 CPU quota, 4 GiB RAM, no GPU",
+  "parent_weight_sha256": "b2112e21dcc653780da5c6f36137c0deab3f2fcc01bb04662eb518cf4a07b3ec",
+  "parent": "L100M step1024 BF16 upcast FP32; new optimizer, not exact resume",
+  "canonical_optimizer": "Adafactor lr0.01, weight_decay0, clip1, warmup64, cosine floor0.15",
+  "planned_updates": 3072,
+  "last_checkpoint_directory_verified": "step_0512",
+  "last_training_log_updates_verified": 554,
+  "checkpoint512_response_validation_nll": 1.5345747957213058,
+  "checkpoint512_response_validation_tokens": 576,
+  "checkpoint512_free_generation": {"correct":0,"n":80},
+  "comparison_fixture_sha256": "dcaae491fc5190609282d06c735b683b73687151a32fa2730b704414c5870248",
+  "excluded_attempt": {"optimizer":"AdamW","reason":"local cgroup OOM before first checkpoint","logged_updates":63,"weights_saved":false,"included_in_canonical_metrics":false},
+  "baseline": {"model":"Qwen3.5-0.8B BF16 GGUF conversion","sha256":"cedf89af31c9041b601fa58303285bc46d99c51baee1b13f5e919626ca526ee5","delivery_build_ci":37697144715,"repack_only_ci":37698005823,"remote_training_updates":0,"remote_inference_requests":0,"local_inference_completed":false},
+  "weight_bytes_in_this_commit":false,
+  "broad_intelligence_claim":false,
+  "Qwen_superiority_claim":false,
+  "do_not_duplicate_training":true
+}
