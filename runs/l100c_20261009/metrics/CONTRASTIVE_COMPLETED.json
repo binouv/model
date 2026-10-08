@@ -1,0 +1,14 @@
+{
+ "status":"completed_main_training_and_evaluation_not_completed_paired_experiment",
+ "arm":"contrastive","parameters":100028328,"additional_updates":1024,"global_step":2048,
+ "scored_input_tokens":443168,"positive_supervised_tokens":24146,"scored_supervised_tokens":48292,"padded_tokens":451776,"positive_presentations":4096,
+ "training_validation_save_seconds":1219.430722086,
+ "sampled_changed_tensors":135,"parameter_tensors":135,"all_values_finite":true,
+ "free_generation":{"test_iid":{"n":400,"correct":8,"both_correct_pairs":0,"pairs":200,"truncated":0},"test_surface":{"n":200,"correct":0,"both_correct_pairs":0,"pairs":100,"truncated":0},"test_extrapolation":{"n":200,"correct":0,"both_correct_pairs":0,"pairs":100,"truncated":0},"parent_regression":{"n":120,"correct":0}},
+ "iid_two_candidate_ranking_diagnostic":0.7775,"ranking_is_not_free_generation":true,
+ "final_state_sha256":"5ea50435e45351e323d40b6f6bbebce8217098d4fbba83b8f5c4ccebcb8fb78f",
+ "fp32_weights":{"bytes":400125984,"sha256":"f752b504db00c95c15e6e7e0bae1259875451a92226674751d1763d21047f641","uploaded":false},
+ "native_optimizer_rng":{"bytes":1033611,"sha256":"1528b6212fb13d6971178d72292b9518e5e300e14d08290a284c3a5277ea881a","uploaded":false},
+ "starting_point":"verified L100M BF16 upcast toFP32 with new optimizer, not exact ancestor resume",
+ "local_training":true,"gpu_used":false,"paired_control_still_running":true,"Qwen_superiority_claim":false
+}
