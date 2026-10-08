@@ -1,0 +1,9 @@
+# FlyGraph L100C — local paired 100M continuation
+
+Registered protocol; no new completed training results at this publication. Current container works (PyTorch2.10.0+cpu,4CPUthreads,4GiB,cuda unavailable). Recovering the ACTUAL L100M BF16 export, not recreating weights from a report. Its200069384weight bytes match SHA256b2112e21dcc653780da5c6f36137c0deab3f2fcc01bb04662eb518cf4a07b3ec. Both parent source/data and BF16 ZIP hashes and per-file manifests checked. Bundle-specific README differences are preserved separately. Original FP32/optimizer bytes are not mounted; this is an explicitly new-optimizer warm start, not exact resume.
+
+One paired hypothesis: conditional sequence ranking against the other member's verified counterfactual answer. All100028328parameters trainable in BOTH arms; architecture and tokenizer unchanged. Fixed1024updates each, same8forward rows/update including negatives. Control rank coefficient0, main0.5. Prompt strings only at unconstrained greedy generation. Labels and candidates belong only to training/evaluation, not to model inference.
+
+8192train questions/4096pairs,200validation,800fresh held plus120ancestor regression questions. New groups exclude27578available ancestor groups. Case/order/commutation grouping and chronology audited. Every answer independently recomputed; answer-token lengths matched within pairs. No Qwen comparison or broad intelligence claim at this point. Twelve engineering tests passed locally before training. Random-input throughput probe weights were discarded.
+
+Code and results are being published separately from actual binary checkpoints. This commit contains protocol and recovery status, NOT new weights or a GitHub Release. Native optimizer/RNG and downloadable archive will be saved with completed endpoints. No paid service and no remote training substituted for the requested local training.
