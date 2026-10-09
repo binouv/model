@@ -1,0 +1,24 @@
+{
+  "model": "Qwen3.5-0.8B",
+  "weights": "BF16 GGUF",
+  "sha256": "9a7bed4041b7975e0f71fa34670d1e9025213bc92905ac0db75d36c4fa3fa623",
+  "weight_bytes": 1557662496,
+  "llama_commit": "7fe450e19305b828c199d602c23a8337aaa1f03b",
+  "thinking": true,
+  "native_open_think_prefill": true,
+  "max_new_tokens": 32768,
+  "context": 40960,
+  "fixture_sha256": "74bfffeb6cf3014b58d14cc1402fb8e9fca28818a0962d5deeb9140e792de26c",
+  "instruction_prefix": "Solve the task and return F=<integer> as the final answer.\n",
+  "tools": false,
+  "workflow_run": "37950290677",
+  "source_commit": "b09de746a12f882e9249b4d5018937f23646fbb4",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 1.5,
+    "repeat_penalty": 1.0
+  }
+}
