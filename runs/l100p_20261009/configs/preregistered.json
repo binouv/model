@@ -1,0 +1,21 @@
+{
+ "run":"L100P-PromptPointer-20261009","status":"preregistered_before_training",
+ "hypothesis":"Learned prompt-token copy mixture improves free generated memory/list answers and query-counterfactual pairs versus the same backbone with copying disabled.",
+ "parent_weight_sha256":"b2112e21dcc653780da5c6f36137c0deab3f2fcc01bb04662eb518cf4a07b3ec",
+ "start":"own L100Mstep1024 BF16->FP32,new Adafactor,missing original optimizer; not exact resume",
+ "parent_parameters":100028328,"stored_parameters_each":100127401,"copy_parameters":99073,
+ "active_parameters":{"pointer":100127401,"no_copy":100028328},
+ "arms":["pointer","no_copy"],"seed":9201,"sampler_seed":92021,"new_random_ancestor_initializations":0,
+ "updates_each":768,"batch":4,"max_train_tokens":128,"learning_rate":0.006,"warmup_steps":32,"cosine_floor":0.15,
+ "optimizer":"Adafactor foreachFalse,weight_decay0,clip1","precision":"FP32weights/gradients,BF16backbone,FP32delta/copy probabilities",
+ "objective":"positive final-answer token NLL,F=integer+EOS in botharms",
+ "same_minibatches_LR_shapes":true,"copy_control":"identical projections/distribution computation; gate multiplied by zero; copy-only parameters receive zero gradients",
+ "train_count":16384,"train_sha256":"74976368da7c0c7a5630d2b33a25b09d886068d3583249e40f780dd62fd80de2",
+ "fresh_held":{"iid":400,"surface":200,"extrapolation":200,"memory_counterfactual":200,"pairs":100},"parent_regression_questions":120,
+ "held_seeds":[92101,92102,92103,92104,92105],"ancestor_canonical_groups_excluded":17234,
+ "generation":"prompt-only,full8192vocabulary,greedy64tokens,EOS required,one finalF optionallegacyT; no tools/gold candidate list",
+ "success":{"iid_memory_list_gain_pp":5,"counterfactual_both_correct_gain_pp":5,"overall_iid_regression_max_pp":2,"surface_regression_max_pp":2},
+ "selection":"fixed final768,no test-based checkpoint selection","local_only":true,"paid_services":false,"Qwen_run":false,
+ "distinct_from_parallel_L100C":true,"full_prereg_local_path":"configs/preregistered.json",
+ "limits":"single ancestor seed; synthetic RU/EN; copying not general reasoning; no broad Qwen superiority inference"
+}
