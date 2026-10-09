@@ -74,5 +74,5 @@ def main():
        'checkpoints':{a:'checkpoints/'+a+'/step_'+f"{cfg['updates_per_arm']:04d}" for a in ['pointer','no_copy']},
        'both_optimizer_RNG_saved':True,'do_not_duplicate':True,'new_weight_bytes_uploaded':False,
        'Qwen_goal_not_achieved':True,'L100C_parallel_not_touched':True})
-    print(json.dumps({'status':'completed','verdict':out['verdict'],'results':{a:{s:[r['correct'],r['n']] for s,r in z.items()} for a,z in res.items()},indent=2))
+    print(json.dumps({'status':'completed','verdict':out['verdict'],'results':{a:{s:[r['correct'],r['n']] for s,r in z.items()} for a,z in res.items()}},indent=2))
 if __name__=='__main__':main()

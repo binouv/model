@@ -1,6 +1,6 @@
 """Finite local full-backbone continuation: one pointer arm and one no-copy arm."""
 from __future__ import annotations
-import argparse,collections,copy,json,math,random,re,resource,sys,time,gc
+import argparse,collections,copy,json,math,random,re,resource,sys,time,gc,hashlib
 from pathlib import Path
 import torch
 from pointer_model import (ROOT,PointerModel,Tokenizer,init_parent,load_checkpoint,
