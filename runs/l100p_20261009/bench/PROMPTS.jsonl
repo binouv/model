@@ -1,0 +1,20 @@
+{"id":"ca2009300fde5b4efd0721a053de931e25c76bd7406b866f59ba5e5226c6ec35","family":"arithmetic","lang":"ru","prompt":"Вычисли: 217 - 221.\nОтвет:\n"}
+{"id":"44a7a9de30780f9a6cba4b41cf25dd510d572c5c7e16c1b27d5d2f293b0d869a","family":"conditional","lang":"en","prompt":"x=71. If x<33, add 152; else subtract 49.\nAnswer:\n"}
+{"id":"e2c9ccb2c65608d549b22bdcafcdbbf7115fce3d8cc607e0cfdb59321383d684","family":"code_trace","lang":"en","prompt":"What does this code print?\nx = 199\nx -= 149\nx -= 10\nprint(x)\nAnswer:\n"}
+{"id":"870a1ef95c637660fa70142b34bea14ef18fc651db04e20a946b1bc780ba9564","family":"list_reasoning","lang":"ru","prompt":"[250, 154, 127, 218]. Найди: минимум.\nОтвет:\n"}
+{"id":"c385dac180900fc1b4eac244bb03b98be5c009da2a7666eef83da78747f1036b","family":"memory_update","lang":"ru","prompt":"Записи по времени: d=44; c=183; d=25; b=16; d=233; a=28; b=98. Последнее значение b?\nОтвет:\n"}
+{"id":"b9526afa027b4cc346035f9fbb3a8ba58a70132718fcf312158961807007d18c","family":"arithmetic","lang":"en","prompt":"Calculate: 150 * 137.\nAnswer:\n"}
+{"id":"0446da7c9573d30bc205b6c3cc8870413c05ae1e552e3d578be2d36c8c680ed2","family":"conditional","lang":"ru","prompt":"x=197. Если x<2, прибавь 177, иначе вычти 204.\nОтвет:\n"}
+{"id":"a5d92de26596b42e64a6940c93783ba43cba2aacb909a69a04128c8acc02e3bf","family":"code_trace","lang":"en","prompt":"What does this code print?\nx = 157\nx -= 127\nx += 211\nprint(x)\nAnswer:\n"}
+{"id":"3944b85409c626162c8c3104ac35a18f042157c28b657e995838d66a07face67","family":"list_reasoning","lang":"en","prompt":"Find the maximum of [110, 250, 229, 144].\nAnswer:\n"}
+{"id":"b113efc87cab07cbeb592f0e0a27ae528c724c7046cceb631a4f7d9f5c60ed40","family":"memory_update","lang":"ru","prompt":"Записи по времени: d=196; b=133; b=8; c=156; a=55; a=7; d=237. Последнее значение b?\nОтвет:\n"}
+{"id":"0c01699fe636aa4549bb29f7b7892781bd5e7c42253a5ad2a1ca09ec76e11b59","family":"arithmetic","lang":"ru","prompt":"Вычисли: 166 - 30.\nОтвет:\n"}
+{"id":"82586fc3a4be84cfbb004803d4d6caa06b272219ee7f1dc254f15e51af88efb8","family":"conditional","lang":"ru","prompt":"x=22. Если x<107, прибавь 100, иначе вычти 248.\nОтвет:\n"}
+{"id":"cee7140e2974389c80d547fba97bb635ead5acd3bdea56c2246fb7fc8bc2ee34","family":"code_trace","lang":"ru","prompt":"Что напечатает код?\nx = 220\nx += 34\nx -= 229\nprint(x)\nОтвет:\n"}
+{"id":"0f9b1676af7107a950c284e9d731347a06279afc55a4b33f0d92d036132e9c50","family":"list_reasoning","lang":"ru","prompt":"[145, 166, 52, 238]. Найди: минимум.\nОтвет:\n"}
+{"id":"63c37e20376f2de5ff0dc7464f70d38663bf18bb5182de4f076d2d0d26ebb731","family":"conditional","lang":"en","prompt":"x=43. If x<37, add 86; else subtract 250.\nAnswer:\n"}
+{"id":"f83ad31e8129ee75d8501282cfaa92c2478c30196ffdfad5aec460f2c198c9b5","family":"code_trace","lang":"ru","prompt":"Что напечатает код?\nx = 124\nx -= 162\nx += 63\nprint(x)\nОтвет:\n"}
+{"id":"4605de6934598d1fc355cf83e482fb01e19ff0ea20153b66cd07bebe1ba16661","family":"list_reasoning","lang":"en","prompt":"Find the maximum of [0, 33, 70, 82].\nAnswer:\n"}
+{"id":"1f6331716111e4c54dab6c0c53704847ebdbde65e7c498bbf8a97882e9ad66b2","family":"arithmetic","lang":"en","prompt":"Calculate: 9 - 190.\nAnswer:\n"}
+{"id":"95a945bff7c4a54fd02543106efd00b9236f86dd219cbc41c076a26746996de2","family":"memory_update","lang":"en","prompt":"Writes in time order: a=146; d=236; d=199; b=223; c=56; b=216; c=39. Latest value of d?\nAnswer:\n"}
+{"id":"b7151b0414732d33562f1c00e2b812a6a20554bc3ac9522324c721c20bb8d825","family":"memory_update","lang":"en","prompt":"Writes in time order: b=50; b=232; a=236; c=134; d=188; d=191; a=131. Latest value of b?\nAnswer:\n"}

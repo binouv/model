@@ -1,0 +1,33 @@
+name: L100P finite Qwen0.8 BF16 thinking reference
+on:
+  push:
+    branches: ['flygraph/l100p-qwen08-reference-20261009']
+    paths: ['runs/l100p_20261009/bench/RUN_ONCE.json']
+permissions:
+  contents: write
+jobs:
+  reference:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Fetch exact public source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          test "$(git -C repo rev-parse HEAD)" = "$GITHUB_SHA"
+          python3 -m py_compile repo/runs/l100p_20261009/bench/qwen08_reference.py
+      - name: Finite reference inference only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OMP_NUM_THREADS: '4'
+        run: python3 -u repo/runs/l100p_20261009/bench/qwen08_reference.py
+      - name: Preserve raw completed requests even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: L100P_Qwen08_BF16_Reference
+          path: repo/runs/l100p_20261009/bench/outputs/
+          retention-days: 7
+          if-no-files-found: warn
