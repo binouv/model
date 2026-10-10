@@ -1,0 +1,31 @@
+name: L100S fixed Qwen08 BF16 thinking reference
+on:
+  push:
+    branches: ['flygraph/l100s-qwen-reference-20261011']
+    paths: ['runs/l100s_20261011/bench/RUN_ONCE.json']
+permissions:
+  contents: write
+jobs:
+  reference:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Fetch exact public source
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          test "$(git -C repo rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: Finite reference only; no FlyGraph training
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OMP_NUM_THREADS: '4'
+        run: python3 -u repo/runs/l100s_20261011/bench/run_reference.py
+      - name: Preserve raw responses
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: L100S_Qwen08_BF16_Reference
+          path: repo/runs/l100s_20261011/bench/outputs/
+          retention-days: 30
+          if-no-files-found: warn

@@ -1,0 +1,1 @@
+{"run":"L100S-fixed12-reference","status":"preregistered_before_outputs","n":12,"selection":"first8 IID plus first4 long prompts, consecutive full query pairs","thinking":true,"max_new_tokens":32768,"censored_not_evidence_of_weakness":true,"scope":"memory only, not broad superiority","own_model_training":"local only","reference":"public CPU, no paid APIs"}
