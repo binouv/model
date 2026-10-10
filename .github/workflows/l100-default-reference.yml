@@ -1,0 +1,31 @@
+name: L100 fixed32 Qwen08 default-mode reference
+on:
+  push:
+    branches: ['flygraph/l100-default-reference-20261011']
+    paths: ['runs/l100_default_reference/bench/RUN_ONCE.json']
+permissions:
+  contents: write
+jobs:
+  reference:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Fetch exact public source
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          test "$(git -C repo rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: Reference inference only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OMP_NUM_THREADS: '4'
+        run: python3 -u repo/runs/l100_default_reference/bench/run.py
+      - name: Preserve raw responses
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: L100_Qwen08_Default_Reference
+          path: repo/runs/l100_default_reference/bench/outputs/
+          retention-days: 30
+          if-no-files-found: warn
