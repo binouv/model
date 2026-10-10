@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "source_files_verified": 27,
+  "record_files_verified": 50,
+  "every_restored_file_matches_original_bytes": true,
+  "observed_predictions_recomputed_by_model": false,
+  "training_updates_executed": 0,
+  "bootstrap_sha256": "3523b12516e15cd809d5d756021d6ae37745daa404d14f03401689f06feed5b7"
+}

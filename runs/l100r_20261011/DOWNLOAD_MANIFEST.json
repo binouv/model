@@ -1,0 +1,11 @@
+{
+  "run": "L100R-20261011",
+  "status": "completed_verified_local_archives",
+  "archives": [
+    {"name":"FlyGraph_L100R_Source_Results_2026-10-11.zip","bytes":13252037,"sha256":"3ec414867002a8ea835cf1d15c49d5b486b17c03d67aa5197d6b678806f79b74","verification":{"status":"passed","verified_files":93,"has_weight_bytes":false}},
+    {"name":"FlyGraph_L100R_trace_FP32_Resume_2026-10-11.zip","bytes":373016522,"sha256":"2dcd18ff57d5004cfa434e125afed3460a441033f9435dc196a604a4a12172c2","verification":{"status":"passed","verified_files":13,"has_weight_bytes":true}},
+    {"name":"FlyGraph_L100R_final_FP32_Resume_2026-10-11.zip","bytes":372975036,"sha256":"8d9a1ad227e0da27158d624a43876fe9817a8de7c2e18418de7f0bd52de0272d","verification":{"status":"passed","verified_files":13,"has_weight_bytes":true}},
+    {"name":"FlyGraph_L100R_trace_BF16_2026-10-11.zip","bytes":160435956,"sha256":"2ed01fa4f13b52947b3c61b6e92c8dde383ab7c921d8e64c9db23449ebf6012d","verification":{"status":"passed","verified_files":12,"has_weight_bytes":true}}
+  ],
+  "not_a_github_weight_release": true
+}
