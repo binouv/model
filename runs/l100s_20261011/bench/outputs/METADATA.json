@@ -1,0 +1,24 @@
+{
+  "model": "Qwen3.5-0.8B",
+  "weights": "BF16 GGUF",
+  "sha256": "9a7bed4041b7975e0f71fa34670d1e9025213bc92905ac0db75d36c4fa3fa623",
+  "weight_bytes": 1557662496,
+  "llama_commit": "7fe450e19305b828c199d602c23a8337aaa1f03b",
+  "thinking": true,
+  "native_open_think_prefill": true,
+  "max_new_tokens": 32768,
+  "context": 40960,
+  "fixture_sha256": "ba2f624c62eea62fe7487f33b8461f0fe3c7bedb60d4f80c59bcbfe1c1d2046f",
+  "instruction_prefix": "",
+  "tools": false,
+  "workflow_run": "38088594524",
+  "source_commit": "1567186b34dc52f595ee8fff327de9d2b347b07c",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 1.5,
+    "repeat_penalty": 1.0
+  }
+}
