@@ -183,12 +183,12 @@ def run() -> None:
         public.update(workflow_run_id=os.environ.get('GITHUB_RUN_ID'), request_commit=os.environ.get('GITHUB_SHA'))
         cp.git('pull', '--ff-only', 'origin', 'main')
         (root / PREFIX / 'PUBLIC_KEY.json').write_text(json.dumps(public, indent=2) + '\n')
-        commit([PREFIX + '/PUBLIC_KEY.json'], 'Publish one-shot artifact transfer public key')
+        commit([PREFIX + '/PUBLIC_KEY.json', PREFIX + '/transport.py', PREFIX + '/test_transport.py'], 'Publish one-shot public key and byte-verified expanded transport source')
         print('Public key published; awaiting encrypted handoff.', flush=True)
         deadline = time.monotonic() + 600
         envelope = None
         while time.monotonic() < deadline:
-            cp.git('fetch', '--depth', '1', 'origin', 'main')
+            cp.git('fetch', 'origin', 'main')
             try:
                 cp.git('cat-file', '-e', 'FETCH_HEAD:' + PREFIX + '/ABORT.json')
             except RuntimeError:

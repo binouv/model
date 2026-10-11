@@ -31,7 +31,7 @@ class TransportTests(unittest.TestCase):
         c=copy.deepcopy(self.cipher); c['blocks'].pop()
         with self.assertRaises(ValueError): t.decrypt(self.key,self.public,c)
     def test_corruption(self):
-        c=copy.deepcopy(self.cipher); c['blocks'][0]='A'+c['blocks'][0][1:]
+        c=copy.deepcopy(self.cipher); c['blocks'][0]=('B' if c['blocks'][0][0]=='A' else 'A')+c['blocks'][0][1:]
         with self.assertRaises(ValueError): t.decrypt(self.key,self.public,c)
     def test_oversize(self):
         with self.assertRaises(ValueError): t.encrypt(self.public,{'transfer_id':self.public['transfer_id'],'blob':'x'*17000})
