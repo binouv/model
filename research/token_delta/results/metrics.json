@@ -1,0 +1,120 @@
+{
+  "motif": {
+    "task": "motif",
+    "seed": 24,
+    "samples": 1024,
+    "train_steps": 300,
+    "probe_steps": 230,
+    "train_loss_trace": [
+      [
+        75,
+        1.23548
+      ],
+      [
+        150,
+        0.54362
+      ],
+      [
+        225,
+        0.40516
+      ],
+      [
+        300,
+        0.36358
+      ]
+    ],
+    "probe_loss_trace": [
+      [
+        57,
+        1.17768
+      ],
+      [
+        114,
+        0.59415
+      ],
+      [
+        171,
+        0.3796
+      ],
+      [
+        228,
+        0.29673
+      ]
+    ],
+    "autoreg_next_accuracy": 1,
+    "probe_horizon_accuracy": [
+      1,
+      0.9404296875,
+      0.9833984375,
+      1,
+      1,
+      0.9375,
+      0.984375,
+      1
+    ],
+    "probe_next_matches_model_next": 1,
+    "mean_prefix_correct_against_ground_truth": 7.462890625,
+    "chance_accuracy": 0.0625,
+    "elapsed_wall_s": 6.888,
+    "toy_caveat": "synthetic motif or iid-random tokens; not an LLM and not tok/s"
+  },
+  "random": {
+    "task": "random",
+    "seed": 24,
+    "samples": 1024,
+    "train_steps": 300,
+    "probe_steps": 230,
+    "train_loss_trace": [
+      [
+        75,
+        2.77451
+      ],
+      [
+        150,
+        2.7739
+      ],
+      [
+        225,
+        2.77221
+      ],
+      [
+        300,
+        2.7736
+      ]
+    ],
+    "probe_loss_trace": [
+      [
+        57,
+        2.77348
+      ],
+      [
+        114,
+        2.77238
+      ],
+      [
+        171,
+        2.77381
+      ],
+      [
+        228,
+        2.77519
+      ]
+    ],
+    "autoreg_next_accuracy": 0.064453125,
+    "probe_horizon_accuracy": [
+      0.0576171875,
+      0.05859375,
+      0.0615234375,
+      0.0673828125,
+      0.0625,
+      0.0732421875,
+      0.0556640625,
+      0.0595703125
+    ],
+    "probe_next_matches_model_next": 0.025390625,
+    "mean_prefix_correct_against_ground_truth": 0.0595703125,
+    "chance_accuracy": 0.0625,
+    "elapsed_wall_s": 6.116,
+    "toy_caveat": "synthetic motif or iid-random tokens; not an LLM and not tok/s"
+  }
+}
