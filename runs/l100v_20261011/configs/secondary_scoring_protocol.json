@@ -1,0 +1,10 @@
+{
+  "status": "registered_before_new_Qwen_response_contents_and_final_FlyGraph_generation_were_read",
+  "role": "secondary semantic diagnostic, does not replace frozen primary scoring",
+  "numeric": "Exactly one final F label with optional whitespace around equals and harmless terminal Markdown/TeX closers or punctuation; not last-integer guessing.",
+  "code": "Same twelve integer tests, bounded affine straight-line Python; additionally permits local temporary variables, a docstring and removable type annotations. No calls, imports, loops, attributes or access to gold at generation.",
+  "applies_equally_to": ["parent", "final_FlyGraph", "Qwen_reference"],
+  "resource_limits": {"CPU_seconds": 1, "address_space_MiB": 128, "wall_seconds": 3},
+  "truncated_or_failed_Qwen": "censored, not treated as incorrect completed answers",
+  "broad_benchmark": false
+}
