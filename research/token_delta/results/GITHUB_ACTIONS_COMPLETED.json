@@ -1,0 +1,25 @@
+{
+  "status": "completed_binary_reproduction",
+  "source": "github_actions_cpu_retraining_not_original_sandbox_bytes",
+  "source_commit": "ca6afd0c8e0298c8ad6f8d65a3f2295795ca3c24",
+  "python": "3.12.15",
+  "torch": "2.10.0+cpu",
+  "numpy": "2.3.5",
+  "artifacts": [
+    {
+      "path": "research/token_delta/results/motif_training_checkpoint.pt",
+      "bytes": 699066,
+      "sha256": "249329ccf846f5e1e8e7461ca7ef55e872491193663b0989c7b7f6f1787a0de3"
+    },
+    {
+      "path": "research/token_delta/results/random_training_checkpoint.pt",
+      "bytes": 699109,
+      "sha256": "3e0be5df23c2968bb37813d2ef29e11cfb59ba835244b0948e5b2c01db03bdb5"
+    },
+    {
+      "path": "research/token_delta/results/latent_answer_training_checkpoint.pt",
+      "bytes": 473778,
+      "sha256": "f0307a39c3207eca7d6062e4efb698aa0f446f95c9466ff163d0ce54ef336574"
+    }
+  ]
+}

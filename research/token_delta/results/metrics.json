@@ -41,21 +41,21 @@
         0.29673
       ]
     ],
-    "autoreg_next_accuracy": 1,
+    "autoreg_next_accuracy": 1.0,
     "probe_horizon_accuracy": [
-      1,
+      1.0,
       0.9404296875,
       0.9833984375,
-      1,
-      1,
+      1.0,
+      1.0,
       0.9375,
       0.984375,
-      1
+      1.0
     ],
-    "probe_next_matches_model_next": 1,
+    "probe_next_matches_model_next": 1.0,
     "mean_prefix_correct_against_ground_truth": 7.462890625,
     "chance_accuracy": 0.0625,
-    "elapsed_wall_s": 6.888,
+    "elapsed_wall_s": 5.495,
     "toy_caveat": "synthetic motif or iid-random tokens; not an LLM and not tok/s"
   },
   "random": {
@@ -114,7 +114,7 @@
     "probe_next_matches_model_next": 0.025390625,
     "mean_prefix_correct_against_ground_truth": 0.0595703125,
     "chance_accuracy": 0.0625,
-    "elapsed_wall_s": 6.116,
+    "elapsed_wall_s": 5.363,
     "toy_caveat": "synthetic motif or iid-random tokens; not an LLM and not tok/s"
   }
 }
