@@ -1,0 +1,16 @@
+{
+  "query_aware": {
+    "step": 1024,
+    "elapsed_seconds": 3.4,
+    "last64_mean_loss": 0.3192201144993305,
+    "data_sha256": "63a57373e64131f57206794bf6e8d7fba054f823705c2b26dea772d12a0836af",
+    "trainable_parameters": 5219
+  },
+  "query_blind_control": {
+    "step": 1024,
+    "elapsed_seconds": 4.07,
+    "last64_mean_loss": 1.757135869935155,
+    "data_sha256": "63a57373e64131f57206794bf6e8d7fba054f823705c2b26dea772d12a0836af",
+    "trainable_parameters": 5219
+  }
+}

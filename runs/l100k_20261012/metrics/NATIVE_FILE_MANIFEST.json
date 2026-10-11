@@ -1,0 +1,33 @@
+{
+  "files": [
+    {
+      "path": "checkpoints/query_aware/step_1024/model.safetensors",
+      "bytes": 21412,
+      "sha256": "cf4ad7f53ccfaafcfb799d3f9c55ad9b041e96335f29b782106dec34cc85421c",
+      "kind": "native_adapter_weights"
+    },
+    {
+      "path": "checkpoints/query_aware/step_1024/training_state.pt",
+      "bytes": 71141,
+      "sha256": "21d4dabe4630bd4eeaba0cb1fd5467b58ae553b649106ac1ac833a72d0f9ad3a",
+      "kind": "optimizer_rng_sampler"
+    },
+    {
+      "path": "checkpoints/query_blind_control/step_1024/model.safetensors",
+      "bytes": 21412,
+      "sha256": "e3b7556604f44b727bc19b5844b35fece66fbfcd6cabce753ca846a5f60d467b",
+      "kind": "native_adapter_weights"
+    },
+    {
+      "path": "checkpoints/query_blind_control/step_1024/training_state.pt",
+      "bytes": 70425,
+      "sha256": "1c5a1ff45d937056654579dfdae9508dbbfa7e0d2668306890536587b01ae476",
+      "kind": "optimizer_rng_sampler"
+    }
+  ],
+  "parent_model_sha256": "07e33eb2c6aab5727fbb72c0b403bc83ca8e5695d379106af089b27baf995b25",
+  "both_arms_complete": true,
+  "technical_tests_passed": 6,
+  "original_checkpoint_interval": 64,
+  "general_Qwen_superiority": false
+}

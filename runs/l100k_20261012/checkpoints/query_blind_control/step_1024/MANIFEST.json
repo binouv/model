@@ -1,0 +1,15 @@
+{
+  "format": "FlyGraph.L100K.checkpoint.v1",
+  "status": "completed_endpoint",
+  "model": "NeuralBytePointer",
+  "arm": "query_blind_control",
+  "step": 1024,
+  "weights_size": 21412,
+  "weights_sha256": "e3b7556604f44b727bc19b5844b35fece66fbfcd6cabce753ca846a5f60d467b",
+  "train_state_size": 70425,
+  "train_state_sha256": "1c5a1ff45d937056654579dfdae9508dbbfa7e0d2668306890536587b01ae476",
+  "config_sha256": "37286bb91c9160a8e794a9adf640def8c1773a1cd94574bb8216f58c9a18ad23",
+  "data_sha256": "63a57373e64131f57206794bf6e8d7fba054f823705c2b26dea772d12a0836af",
+  "parent_model_sha256": "07e33eb2c6aab5727fbb72c0b403bc83ca8e5695d379106af089b27baf995b25",
+  "trainable_parameters": 5219
+}
