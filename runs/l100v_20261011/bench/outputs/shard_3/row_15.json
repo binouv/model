@@ -1,0 +1,13 @@
+{
+  "id": "b55ad2236bc7e4b25a2f670f3abe582428504ec1a984d8159f8b173c3f2a69dd",
+  "family": "list_reasoning",
+  "lang": "en",
+  "prompt": "Find the sum of [79, 125, 90, 92, 60].\nShow working and end with F=<integer>.\nAnswer:\n",
+  "index": 15,
+  "seed": 110377,
+  "status": "request_failed",
+  "error": "TimeoutError: timed out",
+  "uncensored": false,
+  "final_text": null,
+  "seconds": 1800.365217518
+}
