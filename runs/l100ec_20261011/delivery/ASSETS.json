@@ -1,0 +1,37 @@
+{
+  "format": "L100EC-recovered-inference-v1",
+  "models": {
+    "curriculum": {
+      "weights_path": "models/curriculum/model.safetensors",
+      "bytes": 200069384,
+      "sha256": "07e33eb2c6aab5727fbb72c0b403bc83ca8e5695d379106af089b27baf995b25",
+      "config_path": "models/curriculum/config.json",
+      "config_sha256": "2015d526e5d61220366a61411684db81ca8638b8fbef72cb0202f3c8f2ea6478",
+      "stored_precision": "BF16",
+      "parameters": 100028328,
+      "optimizer_rng_available": false
+    },
+    "shuffled": {
+      "weights_path": "models/shuffled/model.safetensors",
+      "bytes": 200069384,
+      "sha256": "2047dc31ccb58c9326fca9eeffff78c01bb323aec9462b7622d63738a2cb63e1",
+      "config_path": "models/shuffled/config.json",
+      "config_sha256": "2015d526e5d61220366a61411684db81ca8638b8fbef72cb0202f3c8f2ea6478",
+      "stored_precision": "BF16",
+      "parameters": 100028328,
+      "optimizer_rng_available": false
+    }
+  },
+  "tokenizer": {
+    "path": "data/tokenizer.json",
+    "sha256": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500",
+    "bytes": 139193
+  },
+  "base_source": {
+    "model.py": "ed03bbba6a430368ab127c638b888fa5b27c3537263bac14a71c48a833a11336",
+    "tokenizer.py": "7fd9d027849c8044c67604802058cbf51a149fd3f22e301058325ce003a7acdb"
+  },
+  "historical_training_step": 1536,
+  "new_training_updates": 0,
+  "not_exact_resume": true
+}
