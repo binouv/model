@@ -1,0 +1,141 @@
+{
+  "status": "completed_lossless_archive",
+  "archive_sha256": "f6333901457692f6718682c0c4c4c6f22904c3cee4b0721a6540d4aec9d26276",
+  "archive_bytes": 113972,
+  "uncompressed_sha256": "90481f3e55d61b7401bb4015667e3742e2cddef78366465fa5e567010d2d31ec",
+  "uncompressed_bytes": 1090277,
+  "parts": [
+    {
+      "name": "outputs/assembled/part000.b64",
+      "bytes": 6000,
+      "sha256": "cefba04ca3980f531d614fe4f61e17c774324a790e131183866b8cabd205e105"
+    },
+    {
+      "name": "outputs/assembled/part001.b64",
+      "bytes": 6000,
+      "sha256": "abf45071462ba18bb4a7e4bbf1212fd9bc979e2fc3d7e16a58c5d24792b7e824"
+    },
+    {
+      "name": "outputs/assembled/part002.b64",
+      "bytes": 6000,
+      "sha256": "df6cecf45847066895e8ed20b8960523039d51bacabdc10c0fe78906541f618f"
+    },
+    {
+      "name": "outputs/assembled/part003.b64",
+      "bytes": 6000,
+      "sha256": "b47f6b7c76ff1da9b3cd71f9d92553d124bea06429ee80927cd40433f00450e8"
+    },
+    {
+      "name": "outputs/assembled/part004.b64",
+      "bytes": 6000,
+      "sha256": "f149c6f7c03414bb44c12c74404f9b8cf2cf423235ff54bbbc319187298edcf9"
+    },
+    {
+      "name": "outputs/assembled/part005.b64",
+      "bytes": 6000,
+      "sha256": "2296b35f32d066013c8b7135070e761ec008fd73f783d018ad61d9ac088f2d6b"
+    },
+    {
+      "name": "outputs/assembled/part006.b64",
+      "bytes": 6000,
+      "sha256": "407bf17bd9e0f2e9153591619f44f9f60833482d45c9ac260af59f4b64cd7db3"
+    },
+    {
+      "name": "outputs/assembled/part007.b64",
+      "bytes": 6000,
+      "sha256": "7810611bcc6655d206eef524c58afeb2656e34dcce7850fe0e3fc80f609230e5"
+    },
+    {
+      "name": "outputs/assembled/part008.b64",
+      "bytes": 6000,
+      "sha256": "1edc61fe988cba8e2e3d6af9cf1b2c614244d8746e8518f7e24cdd815061284e"
+    },
+    {
+      "name": "outputs/assembled/part009.b64",
+      "bytes": 6000,
+      "sha256": "19c4ec618018f267fda3981b1818b13b7b669a2184c9db0f9523dab1f5b8cb83"
+    },
+    {
+      "name": "outputs/assembled/part010.b64",
+      "bytes": 6000,
+      "sha256": "b6dc15e66793ac9ef709fda689450c91029f0eb0e7e45e2536a17480b0f21458"
+    },
+    {
+      "name": "outputs/assembled/part011.b64",
+      "bytes": 6000,
+      "sha256": "a65faad7e321caced258648bc00b9f0cef4b6bb78062183dab9c3070f2524a05"
+    },
+    {
+      "name": "outputs/assembled/part012.b64",
+      "bytes": 6000,
+      "sha256": "0029cb63afdc9c457396a216639a3943bd7c85e395d62305ce8604d716b14a45"
+    },
+    {
+      "name": "outputs/assembled/part013.b64",
+      "bytes": 6000,
+      "sha256": "5bea8e0e0cb683e9d901234ebd777b4302a4f5804a96dbd29e2de1dbc5a89b1c"
+    },
+    {
+      "name": "outputs/assembled/part014.b64",
+      "bytes": 6000,
+      "sha256": "61120c46b1871bad6d09383bd15e948391eeb9db79cf4274c9e41f9f062e5fea"
+    },
+    {
+      "name": "outputs/assembled/part015.b64",
+      "bytes": 6000,
+      "sha256": "cf47f488c7a33dfa974d5892ae0ed93bef152f137a66e82fc62c85f264140276"
+    },
+    {
+      "name": "outputs/assembled/part016.b64",
+      "bytes": 6000,
+      "sha256": "f20664d82a31932846fbe779bfaa5983ec3bb5c13240d34c84aa49ccb9bda096"
+    },
+    {
+      "name": "outputs/assembled/part017.b64",
+      "bytes": 6000,
+      "sha256": "903dce99645dab107ccdfd7b46c85c6d47b7ce9cf3b173167da67ac9ca102e42"
+    },
+    {
+      "name": "outputs/assembled/part018.b64",
+      "bytes": 6000,
+      "sha256": "68b5823c1ce76b3f6cb67645886e9a1a979dad999bf196b08c94e1a40d054cd8"
+    },
+    {
+      "name": "outputs/assembled/part019.b64",
+      "bytes": 6000,
+      "sha256": "1a224405bd624e41ff7cca5dda79ae6f923ca0d834b17368e0a2e9209f8e3cd9"
+    },
+    {
+      "name": "outputs/assembled/part020.b64",
+      "bytes": 6000,
+      "sha256": "231e01537962d81b0d34bf05527715742a93569d4486a26b46d3848fd761d415"
+    },
+    {
+      "name": "outputs/assembled/part021.b64",
+      "bytes": 6000,
+      "sha256": "516594eb3f2290485272cd37b9eb302cf07a2c83c969fe549b330750491f206f"
+    },
+    {
+      "name": "outputs/assembled/part022.b64",
+      "bytes": 6000,
+      "sha256": "11eb2d3ba00fb4119dc5433e4b2882868c909bc4c31183c1c47b2f4351e9b873"
+    },
+    {
+      "name": "outputs/assembled/part023.b64",
+      "bytes": 6000,
+      "sha256": "18d7cfb7d761540f853655b7ab408e0dfa4ec9153c1803f7aaf72e537815a291"
+    },
+    {
+      "name": "outputs/assembled/part024.b64",
+      "bytes": 6000,
+      "sha256": "6e42e7ac3e8bddf4c662fe0503a4ce2bd59e42f80e16396a7ff7785038560c25"
+    },
+    {
+      "name": "outputs/assembled/part025.b64",
+      "bytes": 1964,
+      "sha256": "d22ffdcc938626f13b2aecf899e87ed5ea269f3595ea22083d424ba17d283258"
+    }
+  ],
+  "requests": 22,
+  "source_commit": "9577697cd2740eff1e9d081612939701e8ec8c36"
+}
