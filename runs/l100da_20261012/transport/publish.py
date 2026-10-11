@@ -1,6 +1,6 @@
 """Publish exact, locally trained artifacts via encrypted one-shot handoff; no training."""
 from __future__ import annotations
-import base64,hashlib,importlib.util,json,os,shutil,subprocess,sys,tempfile,time,zipfile,urllib.request
+import base64,hashlib,importlib.util,json,os,shutil,subprocess,sys,tempfile,time,zipfile
 from pathlib import Path,PurePosixPath
 RUN='runs/l100da_20261012';PREFIX=RUN+'/transport'
 ROOT=Path(__file__).resolve().parents[3]
@@ -37,24 +37,6 @@ def extract_checked(archive:Path,destination:Path,max_total:int,allowed_roots:se
                 with z.open(entry) as f,target.open('xb') as out:shutil.copyfileobj(f,out,1048576)
             paths.append(str(target.relative_to(ROOT)) if target.is_relative_to(ROOT) else str(rel))
     return paths
-
-def download_full(url,path,expected):
-    # Transport objects may exceed90MB; all actual Git files are split below90MB.
-    if not handoff.allowed_url(url) or not 0<expected['size_bytes']<=2_000_000_000:raise ValueError('Invalid transfer bound')
-    size=0;h=hashlib.sha256()
-    try:
-        opener=urllib.request.build_opener(handoff.SafeRedirect())
-        with opener.open(url,timeout=120) as response,path.open('xb') as out:
-            while True:
-                data=response.read(1048576)
-                if not data:break
-                size+=len(data)
-                if size>expected['size_bytes']:raise ValueError('Transfer too large')
-                h.update(data);out.write(data)
-        if size!=expected['size_bytes'] or h.hexdigest()!=expected['sha256']:raise ValueError('Checksum mismatch')
-    except Exception:
-        path.unlink(missing_ok=True)
-        raise RuntimeError('Bounded artifact transfer failed') from None
 
 def commit(paths,message):
     cp.git('add','-f','--',*paths)
@@ -98,13 +80,15 @@ def run():
         if envelope is None:raise RuntimeError('Finite handoff timeout')
         payload=handoff.decrypt(key,public,envelope)
         if payload.get('checkpoint_sha256')!=s['native_model_sha256']:raise ValueError('Wrong checkpoint identity')
-        expected={'source.zip':s['source']};staged={};full_paths={}
+        expected={'source.zip':s['source']};staged={};outputs={'source.zip':tmp/'source.zip'}
         for name,artifact in s['artifacts'].items():
             if name not in ('native','bf16'):raise ValueError('Unknown artifact type')
             if artifact['destination']!='models/l100da_20261012_step0256/'+name:raise ValueError('Unexpected model path')
-            manifest=artifact['manifest'];cp.safe_name(manifest['filename'])
-            expected[name]={'size_bytes':manifest['size_bytes'],'sha256':manifest['sha256']}
-            full_paths[name]=tmp/manifest['filename']
+            folder=tmp/name;folder.mkdir();staged[name]=folder
+            (folder/'MANIFEST.json').write_text(json.dumps(artifact['manifest'],indent=2)+'\n')
+            manifest=cp.read_manifest(folder)
+            for part in manifest['parts']:
+                label=name+'/'+part['name'];expected[label]=part;outputs[label]=folder/part['name']
         entries=payload.get('files')
         if not isinstance(entries,list) or len(entries)!=len(expected):raise ValueError('Wrong artifact count')
         by_name={e['name']:e for e in entries}
@@ -112,14 +96,9 @@ def run():
         for name,wanted in expected.items():
             actual=by_name[name]
             if actual['size_bytes']!=wanted['size_bytes'] or actual['sha256']!=wanted['sha256']:raise ValueError('Artifact metadata mismatch')
-            out=tmp/'source.zip' if name=='source.zip' else full_paths[name]
-            download_full(actual['url'],out,wanted)
+            handoff.download(actual['url'],outputs[name],wanted)
             print('Downloaded and verified '+name,flush=True)
         del payload,entries,by_name,actual
-        for name,artifact in s['artifacts'].items():
-            folder=tmp/name;staged[name]=folder
-            built=cp.split(full_paths[name],folder,80_000_000,artifact['manifest']['identity'],artifact['manifest']['sha256'])
-            if built!=artifact['manifest']:raise ValueError('Split parts differ from local manifest')
         cp.git('pull','--ff-only','origin','main')
         changed=extract_checked(tmp/'source.zip',ROOT/RUN,50_000_000,{'base','src','data','configs','tests','metrics','reports','checkpoints','requirements.txt','README.md','MODEL_CARD.md'})
         for name,artifact in s['artifacts'].items():
