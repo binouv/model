@@ -1,0 +1,5 @@
+/parent_runtime/models/curriculum/model.safetensors
+/artifacts/source_data_results.tar.xz
+/artifacts/all_native_checkpoints.tar.xz
+/data/
+/.pytest_cache/

@@ -1,0 +1,20 @@
+{
+  "format": "flygraph.checkpoint-parts.v1",
+  "identity": "L100GE_all_native_checkpoints.tar.xz",
+  "filename": "all_native_checkpoints.tar.xz",
+  "size_bytes": 572560,
+  "sha256": "fbc550be5b3e7777c1c9232f11d42f7eb8189ea38359acfbb6727dcda98a6972",
+  "max_part_bytes": 500000,
+  "parts": [
+    {
+      "name": "all_native_checkpoints.tar.xz.part0000",
+      "size_bytes": 500000,
+      "sha256": "2ce1c2e7285742133e8cfa9dcd91db881bada920b0d6abba6b2d21de4c45060c"
+    },
+    {
+      "name": "all_native_checkpoints.tar.xz.part0001",
+      "size_bytes": 72560,
+      "sha256": "207f25cc3bf15de86579e9e22bff27f69331820aa3675c88f307a7bd32b9e02b"
+    }
+  ]
+}

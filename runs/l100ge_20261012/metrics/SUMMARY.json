@@ -1,0 +1,67 @@
+{
+  "completed": true,
+  "fixed_endpoint": 256,
+  "count": 160,
+  "per_arm": {
+    "parent": {
+      "n": 160,
+      "exact_strict": 3,
+      "eos": 160,
+      "valid_format": 160,
+      "by_family": {
+        "arithmetic": {
+          "total": 15,
+          "correct": 0
+        },
+        "conditional": {
+          "total": 15,
+          "correct": 0
+        },
+        "code_trace": {
+          "total": 10,
+          "correct": 0
+        },
+        "list_reasoning": {
+          "total": 10,
+          "correct": 2
+        },
+        "memory_update": {
+          "total": 110,
+          "correct": 1
+        }
+      }
+    },
+    "readout_lora": {
+      "n": 160,
+      "exact_strict": 1,
+      "eos": 160,
+      "valid_format": 160,
+      "by_family": {
+        "arithmetic": {
+          "total": 15,
+          "correct": 0
+        },
+        "conditional": {
+          "total": 15,
+          "correct": 0
+        },
+        "code_trace": {
+          "total": 10,
+          "correct": 0
+        },
+        "list_reasoning": {
+          "total": 10,
+          "correct": 0
+        },
+        "memory_update": {
+          "total": 110,
+          "correct": 1
+        }
+      }
+    }
+  },
+  "goal_Qwen_superiority": false,
+  "gain_pp": -1.25,
+  "preregistered_gain_gate_met": false,
+  "scope": "fixed synthetic held from L100A; no Qwen inference, no external universal benchmark"
+}

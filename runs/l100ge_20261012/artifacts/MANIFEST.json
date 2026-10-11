@@ -1,0 +1,45 @@
+{
+  "format": "flygraph.l100ge.artifact-manifest.v1",
+  "status": "completed_scientific_run_negative_result",
+  "training_steps": 256,
+  "test_count_passed": 4,
+  "reference_parent_git_path": "models/l100ec_curriculum_bf16_07e33eb2/",
+  "archives": [
+    {
+      "file": "source_data_results.tar.xz",
+      "size_bytes": 2510816,
+      "sha256": "8366eb33fe83ece5729848e0271e0e3035b4b0e14cbc841b476c37c06bffc422",
+      "members": 30
+    },
+    {
+      "file": "all_native_checkpoints.tar.xz",
+      "size_bytes": 572560,
+      "sha256": "fbc550be5b3e7777c1c9232f11d42f7eb8189ea38359acfbb6727dcda98a6972",
+      "members": 12
+    },
+    {
+      "file": "final_native_checkpoint.tar.xz",
+      "size_bytes": 149840,
+      "sha256": "94d17d10cac8c32c1db9d8900c89e3524d6d4d42c739f026eaf215e3222110e0",
+      "members": 3
+    },
+    {
+      "file": "L100GE_Complete_Without_Parent_100M.zip",
+      "size_bytes": 3086340,
+      "sha256": "41a8c32271d4e1a6eb5f1428dcf93da5602ac72c9db3965ba400cfc43a7e742d",
+      "members": 3
+    }
+  ],
+  "final_adapter": {
+    "bytes": 49312,
+    "sha256": "a5bcb43d39fff4a8e2d038c192a93a24b4e8e788be0bd642a167379358c953b5"
+  },
+  "final_optimizer_rng": {
+    "bytes": 124076,
+    "sha256": "cebb337df6604e4c791e062e59b3c8dda15651e8d32e7bb2d55c6bd44c44c6ef"
+  },
+  "parent_held_correct": 3,
+  "adapted_held_correct": 1,
+  "held_count": 160,
+  "general_Qwen_superiority": false
+}

@@ -1,0 +1,11 @@
+{
+  "status": "completed_final",
+  "step": 256,
+  "parent_sha256": "07e33eb2c6aab5727fbb72c0b403bc83ca8e5695d379106af089b27baf995b25",
+  "model_total_parameters": 100040616,
+  "trainable_parameters": 12288,
+  "weights_sha256": "a5bcb43d39fff4a8e2d038c192a93a24b4e8e788be0bd642a167379358c953b5",
+  "weights_bytes": 49312,
+  "training_state_sha256": "cebb337df6604e4c791e062e59b3c8dda15651e8d32e7bb2d55c6bd44c44c6ef",
+  "training_state_bytes": 124076
+}

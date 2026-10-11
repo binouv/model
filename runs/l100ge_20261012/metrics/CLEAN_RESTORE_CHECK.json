@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "archive_parts_sha256_verified": true,
+  "clean_restore_verified": true,
+  "raw_predictions_byte_equal": true,
+  "weights_and_optimizer_byte_equal": true,
+  "pytest_count_passed": 4,
+  "parent_weight_not_in_archive": true,
+  "parent_restored_for_local_test_as_hardlink_from_verified_bytes": true
+}

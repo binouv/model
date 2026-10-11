@@ -1,0 +1,123 @@
+{
+  "format": "flygraph.l100ge.source_file_sha256.v1",
+  "files": {
+    "README.md": {
+      "bytes": 2586,
+      "sha256": "a0237f1285989e74637fa36bccbf5eed020e35bd4134a128a3a4d17f40249393"
+    },
+    "configs/registered.json": {
+      "bytes": 1929,
+      "sha256": "7ba78497e808a2facb967297fc617e4acca8ac48079cd7ac061158c35bedb980"
+    },
+    "data/iid.jsonl": {
+      "bytes": 188402,
+      "sha256": "f56138ac129958438b6700d50bda9f8605467874448f2d801b6de3bb24ef9c09"
+    },
+    "data/regression.jsonl": {
+      "bytes": 111629,
+      "sha256": "5337a961ddc4c383117005bbd42e19dff4a5b83d677c4ef992f14c23be189577"
+    },
+    "data/tokenizer.json": {
+      "bytes": 139193,
+      "sha256": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500"
+    },
+    "data/train_memory.jsonl": {
+      "bytes": 8510163,
+      "sha256": "5bc497d125fddca9e8b96300f98aef2b5fd15d454a15fe6790de8041633ed28e"
+    },
+    "data/train_replay.jsonl": {
+      "bytes": 9230642,
+      "sha256": "2e63cac3c4376f7635e36de9d9158f27baba6cd22f5d61eaa8a5d02576e74907"
+    },
+    "metrics/EVAL_EXIT.txt": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "metrics/EVAL_STDOUT.txt": {
+      "bytes": 1971,
+      "sha256": "ed6e4bc8a56d42ef10aa082a3f77db51762ef85ce27a675678d26dffb22f19fc"
+    },
+    "metrics/PREDICTIONS.jsonl": {
+      "bytes": 97158,
+      "sha256": "4725b46c012dce6ebcdf5dc1d03d558b809e32d0f1c3bb6c2e38db248382e7c5"
+    },
+    "metrics/SUMMARY.json": {
+      "bytes": 1384,
+      "sha256": "207436079d4c10b0167743d202d0f7d2dce75a901dee958e9d81bca74da59711"
+    },
+    "metrics/TRAIN_EXIT.txt": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "metrics/TRAIN_LOG.json": {
+      "bytes": 27362,
+      "sha256": "90d750d2ff4a190ab60b44b1cb1df581da478a693db7096bfbbbaff84a69627c"
+    },
+    "metrics/TRAIN_STDOUT.txt": {
+      "bytes": 596,
+      "sha256": "8ff36ddd5cf6184b98fc248d9d4671699d44dceedf7ab65aff68352699ab7a36"
+    },
+    "parent_runtime/ASSETS.json": {
+      "bytes": 960,
+      "sha256": "f60efc3b9918826eff70904cac4ac42ed4181c99397f16c4e9981ce20fc93a3d"
+    },
+    "parent_runtime/base/model.py": {
+      "bytes": 8469,
+      "sha256": "ed03bbba6a430368ab127c638b888fa5b27c3537263bac14a71c48a833a11336"
+    },
+    "parent_runtime/base/tokenizer.py": {
+      "bytes": 2602,
+      "sha256": "7fd9d027849c8044c67604802058cbf51a149fd3f22e301058325ce003a7acdb"
+    },
+    "parent_runtime/data/tokenizer.json": {
+      "bytes": 139193,
+      "sha256": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500"
+    },
+    "parent_runtime/models/curriculum/config.json": {
+      "bytes": 204,
+      "sha256": "2015d526e5d61220366a61411684db81ca8638b8fbef72cb0202f3c8f2ea6478"
+    },
+    "parent_runtime/src/runtime.py": {
+      "bytes": 2862,
+      "sha256": "bf6dd753f5c7277acfbda8e3642e01683e3d3bb67862b1d5a89012439d790119"
+    },
+    "reports/REPORT_RU.md": {
+      "bytes": 8677,
+      "sha256": "c2e6b11579d05f6ca582a4d50fef9033f323a96301e98d29cac546d85c94cd72"
+    },
+    "src/assemble_parent.py": {
+      "bytes": 1129,
+      "sha256": "cb30541a437f8fb0bde5ae979042f414528f7c49abd834855f910dc1bc28b0e6"
+    },
+    "src/infer.py": {
+      "bytes": 1718,
+      "sha256": "5795f894b88b2f9842195c66eebe945ce0dcc1cd54f47795cb955db36be5c9b0"
+    },
+    "src/package_release.py": {
+      "bytes": 4559,
+      "sha256": "2c53068beb2d265a6987a4e07059be912dfdf5b8b44a7ea8e5912e1b1663f5bf"
+    },
+    "src/run.py": {
+      "bytes": 8975,
+      "sha256": "dce0c382cb132747a7c4eb27016a359c78db9abd35f2169711e8efa61b0e8261"
+    },
+    "src/run_executed.py": {
+      "bytes": 9143,
+      "sha256": "d0aae78f6e73cb744ea0f6948ee1404e9b5c27a162c844b9538bcd85649ef5e1"
+    },
+    "tests/test_data.py": {
+      "bytes": 655,
+      "sha256": "d49ed9d31c3f08b1f12f635f621af51dc1ad589d7149945a02fe56d22802cf91"
+    },
+    "tests/test_infer.py": {
+      "bytes": 1057,
+      "sha256": "b5388f9f83eff600ce869c30b0a9f8ab234e45714e7bd84685c93a13f8562237"
+    },
+    "tests/test_resume.py": {
+      "bytes": 1743,
+      "sha256": "f44c23b4fc9ed9277282f629937fece851e50d83390e48be3f2a9efb78ca41ae"
+    }
+  },
+  "parent_weight_not_duplicated": true,
+  "already_git_published_parent_SHA256": "07e33eb2c6aab5727fbb72c0b403bc83ca8e5695d379106af089b27baf995b25"
+}

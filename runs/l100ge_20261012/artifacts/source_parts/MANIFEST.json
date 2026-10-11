@@ -1,0 +1,40 @@
+{
+  "format": "flygraph.checkpoint-parts.v1",
+  "identity": "L100GE_source_data_results.tar.xz",
+  "filename": "source_data_results.tar.xz",
+  "size_bytes": 2510816,
+  "sha256": "8366eb33fe83ece5729848e0271e0e3035b4b0e14cbc841b476c37c06bffc422",
+  "max_part_bytes": 500000,
+  "parts": [
+    {
+      "name": "source_data_results.tar.xz.part0000",
+      "size_bytes": 500000,
+      "sha256": "b1243ab0bc1b21fd96716838a1f5b4476db5ed608423be222b78023bbbe9c82c"
+    },
+    {
+      "name": "source_data_results.tar.xz.part0001",
+      "size_bytes": 500000,
+      "sha256": "175223f107012e309a5747623ce640254257432fde8942676eaedc983f18078b"
+    },
+    {
+      "name": "source_data_results.tar.xz.part0002",
+      "size_bytes": 500000,
+      "sha256": "7bafca0ec506b9053d60356d50f1020d313fc8479d1ac7e973510c677093bf9d"
+    },
+    {
+      "name": "source_data_results.tar.xz.part0003",
+      "size_bytes": 500000,
+      "sha256": "2b76319ce8ea6a8f983ab47d9d032c84887bced34122a3af7c3ecd6ad7fc6dbb"
+    },
+    {
+      "name": "source_data_results.tar.xz.part0004",
+      "size_bytes": 500000,
+      "sha256": "3d3c8298bbd838212812fdc6c6456e25657918261c6ffba236bb44f68b2907a9"
+    },
+    {
+      "name": "source_data_results.tar.xz.part0005",
+      "size_bytes": 10816,
+      "sha256": "030c80fe97571f7a25a1d8b6386a368b88d3f99cec95be25a9b6237c3d4e8c14"
+    }
+  ]
+}
