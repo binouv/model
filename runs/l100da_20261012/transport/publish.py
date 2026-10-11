@@ -67,19 +67,6 @@ def run():
         (ROOT/PREFIX/'PUBLIC_KEY.json').write_text(json.dumps(public,indent=2)+'\n')
         commit([PREFIX+'/PUBLIC_KEY.json'],'L100DA publish one-shot transfer public key')
         print('Public key ready for exact model-artifact handoff.',flush=True)
-        envelope=None;deadline=time.monotonic()+900
-        while time.monotonic()<deadline:
-            cp.git('fetch','origin','main')
-            try:
-                raw=cp.git('show','FETCH_HEAD:'+PREFIX+'/ENCRYPTED_URLS.json')
-                if len(raw)>50000:raise ValueError('Oversized envelope')
-                value=json.loads(raw)
-                if value.get('transfer_id')==public['transfer_id']:envelope=value;break
-            except RuntimeError:pass
-            time.sleep(5)
-        if envelope is None:raise RuntimeError('Finite handoff timeout')
-        payload=handoff.decrypt(key,public,envelope)
-        if payload.get('checkpoint_sha256')!=s['native_model_sha256']:raise ValueError('Wrong checkpoint identity')
         expected={'source.zip':s['source']};staged={};outputs={'source.zip':tmp/'source.zip'}
         for name,artifact in s['artifacts'].items():
             if name not in ('native','bf16'):raise ValueError('Unknown artifact type')
@@ -89,16 +76,31 @@ def run():
             manifest=cp.read_manifest(folder)
             for part in manifest['parts']:
                 label=name+'/'+part['name'];expected[label]=part;outputs[label]=folder/part['name']
-        entries=payload.get('files')
-        if not isinstance(entries,list) or len(entries)!=len(expected):raise ValueError('Wrong artifact count')
-        by_name={e['name']:e for e in entries}
-        if set(by_name)!=set(expected):raise ValueError('Artifact name mismatch')
-        for name,wanted in expected.items():
-            actual=by_name[name]
-            if actual['size_bytes']!=wanted['size_bytes'] or actual['sha256']!=wanted['sha256']:raise ValueError('Artifact metadata mismatch')
-            handoff.download(actual['url'],outputs[name],wanted)
-            print('Downloaded and verified '+name,flush=True)
-        del payload,entries,by_name,actual
+        names=list(expected);deadline=time.monotonic()+1200
+        for batch,start in enumerate(range(0,len(names),5)):
+            batch_names=names[start:start+5];envelope=None
+            while time.monotonic()<deadline:
+                cp.git('fetch','origin','main')
+                try:
+                    raw=cp.git('show','FETCH_HEAD:'+PREFIX+f'/ENCRYPTED_URLS_{batch:02d}.json')
+                    if len(raw)>50000:raise ValueError('Oversized envelope')
+                    value=json.loads(raw)
+                    if value.get('transfer_id')==public['transfer_id']:envelope=value;break
+                except RuntimeError:pass
+                time.sleep(5)
+            if envelope is None:raise RuntimeError('Finite handoff timeout')
+            payload=handoff.decrypt(key,public,envelope)
+            if payload.get('checkpoint_sha256')!=s['native_model_sha256'] or payload.get('batch')!=batch:raise ValueError('Wrong checkpoint or batch identity')
+            entries=payload.get('files')
+            if not isinstance(entries,list) or len(entries)!=len(batch_names):raise ValueError('Wrong artifact count')
+            by_name={e['name']:e for e in entries}
+            if set(by_name)!=set(batch_names):raise ValueError('Artifact name mismatch')
+            for name in batch_names:
+                wanted=expected[name];actual=by_name[name]
+                if actual['size_bytes']!=wanted['size_bytes'] or actual['sha256']!=wanted['sha256']:raise ValueError('Artifact metadata mismatch')
+                handoff.download(actual['url'],outputs[name],wanted)
+                print('Downloaded and verified '+name,flush=True)
+            del payload,entries,by_name,actual
         cp.git('pull','--ff-only','origin','main')
         changed=extract_checked(tmp/'source.zip',ROOT/RUN,50_000_000,{'base','src','data','configs','tests','metrics','reports','checkpoints','requirements.txt','README.md','MODEL_CARD.md'})
         for name,artifact in s['artifacts'].items():
