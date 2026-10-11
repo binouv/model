@@ -1,0 +1,36 @@
+name: FlyGraph one-shot existing checkpoint transfer
+on:
+  push:
+    branches: [main]
+    paths: ['runs/artifact_transfer_20261012/REQUEST.json']
+permissions:
+  contents: write
+concurrency:
+  group: flygraph-existing-checkpoint-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    if: github.repository == 'binouv/model'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Fetch exact source commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init repo
+          cd repo
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth 1 origin "$GITHUB_SHA"
+          git checkout -b main FETCH_HEAD
+      - name: Test and transfer existing bytes only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd repo
+          python runs/artifact_transfer_20261012/prepare_transport.py
+          python -m unittest discover -s runs/artifact_recovery_20261012 -p 'test_checkpoint_parts.py' -v
+          python -m unittest discover -s runs/artifact_transfer_20261012 -p 'test_transport.py' -v
+          python runs/artifact_transfer_20261012/transport.py
