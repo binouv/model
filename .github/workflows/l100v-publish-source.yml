@@ -1,0 +1,25 @@
+name: L100V publish verified source and dataset bytes
+on:
+  push:
+    branches: ['flygraph/l100v-source-publication-20261011']
+    paths: ['runs/l100v_20261011/SOURCE_PUBLICATION_ONCE.json']
+permissions:
+  contents: write
+jobs:
+  publish:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch exact publication source
+        run: |
+          set -euo pipefail
+          git init repo
+          git -C repo remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git -C repo fetch --depth 1 origin "$GITHUB_SHA"
+          git -C repo checkout --detach FETCH_HEAD
+          test "$(git -C repo rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: Verify exact bytes and publish without force
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 -u repo/runs/l100v_20261011/publish_source_data.py
