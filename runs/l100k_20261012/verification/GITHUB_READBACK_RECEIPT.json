@@ -1,0 +1,70 @@
+{
+  "run": "L100K-20261012",
+  "status": "published_verified_for_binaries",
+  "canonical_main_commit_at_readback": "bada399fd809e575678a767843b6394514710b99",
+  "primary_completed_updates": 1024,
+  "control_completed_updates": 1024,
+  "local_tests_passed": 6,
+  "actual_native_weights": [
+    {
+      "arm": "query_aware",
+      "file": "checkpoints/query_aware/step_1024/model.safetensors",
+      "bytes": 21412,
+      "sha256": "cf4ad7f53ccfaafcfb799d3f9c55ad9b041e96335f29b782106dec34cc85421c",
+      "git_blob_sha": "3ff98d6bd1d38eeb0ee894306164abeac98e9d5d",
+      "remote_base64_byte_equality_verified": true
+    },
+    {
+      "arm": "query_blind_control",
+      "file": "checkpoints/query_blind_control/step_1024/model.safetensors",
+      "bytes": 21412,
+      "sha256": "e3b7556604f44b727bc19b5844b35fece66fbfcd6cabce753ca846a5f60d467b",
+      "git_blob_sha": "1b3489f52aac976d963643fe72df47db7127da54",
+      "remote_base64_byte_equality_verified": true
+    }
+  ],
+  "actual_native_states": [
+    {
+      "arm": "query_aware",
+      "file": "checkpoints/query_aware/step_1024/training_state.pt",
+      "sha256": "21d4dabe4630bd4eeaba0cb1fd5467b58ae553b649106ac1ac833a72d0f9ad3a",
+      "git_blob_sha": "e8b93382857a4b8e8ba24c99bbd4b9caf775cb2d",
+      "remote_base64_byte_equality_verified": true
+    },
+    {
+      "arm": "query_blind_control",
+      "file": "checkpoints/query_blind_control/step_1024/training_state.pt",
+      "sha256": "1c5a1ff45d937056654579dfdae9508dbbfa7e0d2668306890536587b01ae476",
+      "git_blob_sha": "540a84d7ec81274fadc1059709d6a8d40a2e74b4",
+      "remote_base64_byte_equality_verified": true
+    }
+  ],
+  "all_steps_archive": {
+    "original_bytes": 1427576,
+    "original_sha256": "851cb1e254423310de3bf79f39dbfe7900808dccfb63d4310d562463f1b80e29",
+    "splits": [
+      {
+        "part": 0,
+        "bytes": 500000,
+        "git_blob_sha": "0c68526847c68b96cea61d652de48dc037f38a62"
+      },
+      {
+        "part": 1,
+        "bytes": 500000,
+        "git_blob_sha": "75a33fd0969233287ec21d89c9707605289dc105"
+      },
+      {
+        "part": 2,
+        "bytes": 427576,
+        "git_blob_sha": "85484b7bfac52dd458849c04bacbcbfc716538b4"
+      }
+    ],
+    "remote_readback_every_part_binary_equal": true,
+    "local_roundtrip_reassemble_SHA256_verified": true,
+    "remote_reassembly_executed": false
+  },
+  "source_archive_git_blob": "a0fd212f074e392e9c730c2c980b8760519ea150",
+  "source_remote_readback_byte_equal": true,
+  "raw_predictions_in_source_archive": true,
+  "limitations": "No clean postpublish binary runtime load from GitHub performed; each remote byte sequence was independently compared to local originals. No general Qwen comparison. Main 100M model not trained in this L100K run."
+}
