@@ -1,0 +1,23 @@
+{
+  "status": "completed_source_and_exact_data_publication_preparation",
+  "source_sha256": "83bc17c576a1d647245664f810930a5b3cb9d7c9eb03e51b1eedf0c26bc1998d",
+  "original_manifest_sha256": "3dfdc2ecdc802595039b137d33ba2514736b4fe9dc44591d077b2cfce4bd887a",
+  "row_files_verified": {
+    "data/validation.jsonl": "0cf93479968ab72b664c8ac905c6ccf803fde9e264a694812ab54258166f46c9",
+    "data/surface.jsonl": "d54f09dfb25c725adc0b0948f0e7ae663de72faa8e05be46adcea90fa741bd2d",
+    "data/iid.jsonl": "0943c26c9343a02a3c4db43e345123e04fed66c26673cbaa6f1111cf8bdc3f64",
+    "data/elementary.jsonl": "3bf0b9d799ccdf8132cd7e9480a95427057d67fef9f38229d8cf19c52656d1c1",
+    "data/ood.jsonl": "601fe7368f84e37db1c99273b98e9147ed22a443b78d255dc80bb45d7f959147",
+    "data/composed.jsonl": "4aab7072ff94c5dfcd4a5e157b813afbcdab91a29a5fcbbdaf6b7905c03d5b55",
+    "data/counterfactual.jsonl": "6e4ceb7941db1eb485519c20a0c8da0d8802a885b4cb2bcbfc1b0ea854c98f75",
+    "bench/prompts.jsonl": "1144d1b3eb23b7f33d223782d76e4fcc3dad839ea880a681fdf323d47dbb0a90",
+    "bench/reference_cases.jsonl": "fcda6352f682ca22ba32c664b4b365552e55f8aa1fc0fd86124915ea6bc854b3"
+  },
+  "all_row_hashes_match": true,
+  "torch_imported": false,
+  "model_training_performed": false,
+  "replay_mode": "fixed-seed empty-ancestor reproduction, empirically identical to original local dataset bytes; not a decontamination proof",
+  "legacy_overlap_caveat": "Schema-converted local audit found one old arithmetic item in validation and one in OOD; IID/surface/memory-CF have none among compatible available L100M cases. EC train is unavailable.",
+  "original_manifest_provenance": "Preserved from actual local initial build, not a claim this publication worker inspected the old corpus.",
+  "weights_in_commit": false
+}

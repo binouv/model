@@ -1,0 +1,76 @@
+{
+  "seed": 110341,
+  "statistics": {
+    "elementary": {
+      "n": 1536,
+      "groups": 793,
+      "max_tokens": 200
+    },
+    "composed": {
+      "n": 3072,
+      "groups": 3072,
+      "max_tokens": 235
+    },
+    "validation": {
+      "n": 120,
+      "groups": 120,
+      "max_tokens": 235
+    },
+    "iid": {
+      "n": 240,
+      "groups": 240,
+      "max_tokens": 235
+    },
+    "surface": {
+      "n": 120,
+      "groups": 120,
+      "max_tokens": 233
+    },
+    "ood": {
+      "n": 120,
+      "groups": 120,
+      "max_tokens": 278
+    },
+    "counterfactual": {
+      "n": 160,
+      "groups": 80,
+      "max_tokens": 176
+    }
+  },
+  "intersections": {
+    "elementary:validation": 0,
+    "elementary:iid": 0,
+    "elementary:surface": 0,
+    "elementary:ood": 0,
+    "composed:elementary": 0,
+    "composed:validation": 0,
+    "composed:iid": 0,
+    "composed:surface": 0,
+    "composed:ood": 0,
+    "composed:counterfactual": 0,
+    "iid:validation": 0,
+    "iid:surface": 0,
+    "iid:ood": 0,
+    "surface:validation": 0,
+    "ood:validation": 0,
+    "ood:surface": 0,
+    "counterfactual:elementary": 0,
+    "counterfactual:validation": 0,
+    "counterfactual:iid": 0,
+    "counterfactual:surface": 0,
+    "counterfactual:ood": 0
+  },
+  "available_ancestor_rows_inspected": 13797,
+  "unknown_EC_training_groups": "Exact EC train dataset is not available in this container; no decontamination guarantee against that unavailable corpus.",
+  "files": {
+    "validation.jsonl": "0cf93479968ab72b664c8ac905c6ccf803fde9e264a694812ab54258166f46c9",
+    "surface.jsonl": "d54f09dfb25c725adc0b0948f0e7ae663de72faa8e05be46adcea90fa741bd2d",
+    "iid.jsonl": "0943c26c9343a02a3c4db43e345123e04fed66c26673cbaa6f1111cf8bdc3f64",
+    "elementary.jsonl": "3bf0b9d799ccdf8132cd7e9480a95427057d67fef9f38229d8cf19c52656d1c1",
+    "ood.jsonl": "601fe7368f84e37db1c99273b98e9147ed22a443b78d255dc80bb45d7f959147",
+    "composed.jsonl": "4aab7072ff94c5dfcd4a5e157b813afbcdab91a29a5fcbbdaf6b7905c03d5b55",
+    "counterfactual.jsonl": "6e4ceb7941db1eb485519c20a0c8da0d8802a885b4cb2bcbfc1b0ea854c98f75"
+  },
+  "tokenizer_sha256": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500",
+  "elementary_repetitions": "Small atomic spaces can repeat within train. No new held group occurs in either train partition."
+}
