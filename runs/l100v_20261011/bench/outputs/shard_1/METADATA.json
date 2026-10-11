@@ -27,5 +27,6 @@
   "source_commit": "ac1fdc077f31e1e8fdb0f179d65faa852ae2244f",
   "workflow_run": "38108269209",
   "request_wall_timeout_seconds": 1800,
-  "note": "Wall time failures and truncated thinking remain censored, never scored as wrong."
+  "note": "Wall time failures and truncated thinking remain censored, never scored as wrong.",
+  "weight_bytes": 1557662496
 }
