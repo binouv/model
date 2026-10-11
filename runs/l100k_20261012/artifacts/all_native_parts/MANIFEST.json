@@ -1,0 +1,25 @@
+{
+  "format": "flygraph.checkpoint-parts.v1",
+  "identity": "L100K_both_arms_all64_native",
+  "filename": "L100K_All_64step_Native_Checkpoints_20261012.tar.xz",
+  "size_bytes": 1427576,
+  "sha256": "851cb1e254423310de3bf79f39dbfe7900808dccfb63d4310d562463f1b80e29",
+  "max_part_bytes": 500000,
+  "parts": [
+    {
+      "name": "L100K_All_64step_Native_Checkpoints_20261012.tar.xz.part0000",
+      "size_bytes": 500000,
+      "sha256": "72fc15f9f85ab296782cf5db6fb9519310bcac3b2e9c5957f1d13665934371a0"
+    },
+    {
+      "name": "L100K_All_64step_Native_Checkpoints_20261012.tar.xz.part0001",
+      "size_bytes": 500000,
+      "sha256": "0c85dce5d75ed05874cb946dabbfff8714814edaa66d002c985adb6c61fc8cdb"
+    },
+    {
+      "name": "L100K_All_64step_Native_Checkpoints_20261012.tar.xz.part0002",
+      "size_bytes": 427576,
+      "sha256": "8b07a4eb46dec9c4d87db1b52947dc7d3eee479317de2dacf83594fa24896a77"
+    }
+  ]
+}
