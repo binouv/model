@@ -1,0 +1,21 @@
+{
+  "operation": "checkpoint_recovery_and_lossless_splitting",
+  "checkpoint_identity": "L100EC_curriculum_100M",
+  "source_sha256": "07e33eb2c6aab5727fbb72c0b403bc83ca8e5695d379106af089b27baf995b25",
+  "source_size_bytes": 200069384,
+  "parameter_count": 100028328,
+  "tensor_count": 135,
+  "dtype": "BF16",
+  "part_sizes_bytes": [80000000, 80000000, 40069384],
+  "maximum_allowed_bytes_exclusive": 90000000,
+  "local_split_restore_sha256_match": true,
+  "unit_tests_passed": 19,
+  "unit_tests_failed": 0,
+  "local_bare_git_push_clone_test_passed": true,
+  "github_binary_upload_verified": false,
+  "private_drive_backup_uploads_acknowledged": true,
+  "l100ql_trained_checkpoint_recovered": false,
+  "new_optimizer_steps": 0,
+  "original_optimizer_recovered": false,
+  "qwen_superiority_claim": false
+}

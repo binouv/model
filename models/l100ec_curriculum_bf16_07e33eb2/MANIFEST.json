@@ -1,0 +1,25 @@
+{
+  "format": "flygraph.checkpoint-parts.v1",
+  "identity": "L100EC_curriculum_100M",
+  "filename": "model.safetensors",
+  "size_bytes": 200069384,
+  "sha256": "07e33eb2c6aab5727fbb72c0b403bc83ca8e5695d379106af089b27baf995b25",
+  "max_part_bytes": 80000000,
+  "parts": [
+    {
+      "name": "model.safetensors.part0000",
+      "size_bytes": 80000000,
+      "sha256": "e19891a72f2244d9100e28c1eba009155d0af457c767e7633a7c9f2df7c66d6b"
+    },
+    {
+      "name": "model.safetensors.part0001",
+      "size_bytes": 80000000,
+      "sha256": "7a72f27e85deeab91b404269c3a869458bd946147d7135bf83b81c1bcb8b2d5b"
+    },
+    {
+      "name": "model.safetensors.part0002",
+      "size_bytes": 40069384,
+      "sha256": "62f57efdf27f0288fa42b840c26cb0829813517679faf312abc311db2c1652cf"
+    }
+  ]
+}
