@@ -1,0 +1,31 @@
+{
+  "model": "Qwen3.5-0.8B",
+  "precision": "original BF16 GGUF, not quantized Q4",
+  "model_sha256": "9a7bed4041b7975e0f71fa34670d1e9025213bc92905ac0db75d36c4fa3fa623",
+  "llama_commit": "7fe450e19305b828c199d602c23a8337aaa1f03b",
+  "fixture_sha256": "1144d1b3eb23b7f33d223782d76e4fcc3dad839ea880a681fdf323d47dbb0a90",
+  "thinking": true,
+  "open_think_prefill": true,
+  "context": 40960,
+  "max_new_tokens": 32768,
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 1.5,
+    "repeat_penalty": 1.0
+  },
+  "seed_base": 110362,
+  "shard": 2,
+  "shards": 4,
+  "planned_all": 22,
+  "planned_shard": 5,
+  "own_model_training": false,
+  "prompt_prefix": "",
+  "tools": false,
+  "source_commit": "ac1fdc077f31e1e8fdb0f179d65faa852ae2244f",
+  "workflow_run": "38108269209",
+  "request_wall_timeout_seconds": 1800,
+  "note": "Wall time failures and truncated thinking remain censored, never scored as wrong."
+}
