@@ -19,7 +19,10 @@ jobs:
       - name: Fetch pinned public source
         run: |
           set -euo pipefail
-          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          git init repo
+          git -C repo remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git -C repo fetch --depth 1 origin "$GITHUB_SHA"
+          git -C repo checkout --detach FETCH_HEAD
           test "$(git -C repo rev-parse HEAD)" = "$GITHUB_SHA"
           python3 -m py_compile repo/runs/l100v_20261011/bench/run_reference.py
       - name: Qwen inference only
