@@ -1,0 +1,25 @@
+{
+  "format": "flygraph.checkpoint-parts.v1",
+  "identity": "L100DA_step256_BF16_100028328_parameters",
+  "filename": "model.bf16.safetensors",
+  "size_bytes": 200069384,
+  "sha256": "1c8b86de8cb6513f841d77b675245216f17b340da790d3c8f053770cd09b7379",
+  "max_part_bytes": 80000000,
+  "parts": [
+    {
+      "name": "model.bf16.safetensors.part0000",
+      "size_bytes": 80000000,
+      "sha256": "f43fb03b8e7b476401e60a130d6533e0755dd3c52ecd19f20508b14319cceb59"
+    },
+    {
+      "name": "model.bf16.safetensors.part0001",
+      "size_bytes": 80000000,
+      "sha256": "b346755e9ade4ed52c40915abc0512b9b38d7fe8c42c37f280072c95858a9656"
+    },
+    {
+      "name": "model.bf16.safetensors.part0002",
+      "size_bytes": 40069384,
+      "sha256": "0a42f4330fbb68ea301729489269ee1f62a133b0b5b185ca69b070777be8be19"
+    }
+  ]
+}
