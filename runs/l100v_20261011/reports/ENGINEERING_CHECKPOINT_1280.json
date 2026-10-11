@@ -1,0 +1,44 @@
+{
+  "status": "completed_engineering_tests_and_durable_intermediate_checkpoint_not_completed_training",
+  "checkpoint": {
+    "schema": "L100V_v1",
+    "step": 1280,
+    "parameters": 100028328,
+    "counts": {
+      "input_tokens": 1078721,
+      "supervised_tokens": 158732,
+      "padded_tokens": 1103400
+    },
+    "protocol_sha256": "eb1afbfe895546830bd5166cd86b3f19aa2b8eec190fa5f8a625ba2afc24f8f8",
+    "files": {
+      "model.safetensors": {
+        "bytes": 400125984,
+        "sha256": "797c11d40685e4ff8b5f5c70fccfcc80fdf2c8947795a15e610403316875688b"
+      },
+      "config.json": {
+        "bytes": 205,
+        "sha256": "56ee7cedb8996e10a05c713d159d285e9de73f0486acee6c4dcc87ceba220834"
+      },
+      "training_state.pt": {
+        "bytes": 800351767,
+        "sha256": "a29e69a03036f547c9a2af2982b1532011d31bd29cc6b98a2494bfcbb585ebea"
+      }
+    }
+  },
+  "neural_training_changed_by_scoring_patch": false,
+  "code_isolation_checks_passed": 49,
+  "affine_checker_checks_passed": 46,
+  "parent_rescoring_n": 662,
+  "parent_primary_metric_changes": 0,
+  "secondary_metric_predeclared_commit": "8647635a60eb0a5279169b7179a905ebf48e8bae",
+  "readable_source_data_commit": "5a2b27f96cae20d778abba4479f63b14b353392e",
+  "weights_uploaded_to_GitHub": false,
+  "goal_achieved": false,
+  "source_changes": {
+    "src/evaluate.py": "0e96d8a73e413eabc146177a07bc21441b22cbaabbdd6dad6cab89dfbcba89b4",
+    "src/code_worker.py": "fe565e827658c0dc765c2190a591bc98ccab21f60f50a697b04a02782b6df0d4",
+    "src/safe_code_eval.py": "22a1c924835c14882874409b53b5ccca79d4daff5beda6209532dbd13b76654b",
+    "src/semantic_score.py": "3b1219a1befdd5590ebd782056c69b861b736ddfd40147591646d7a9c64a1c67",
+    "src/affine_audit.py": "ed35d775464712016ecc1706f9f63c0e43d1b3079e5eec9454f4a562887111cc"
+  }
+}
