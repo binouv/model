@@ -1,0 +1,31 @@
+{
+  "audit_date": "2026-10-11",
+  "scope": "publication audit, not new training or re-evaluation",
+  "github_main_before": "0e56161e6ad076ab92efb4238be852b7c2e108e2",
+  "weights": {
+    "curriculum": {
+      "bf16_bytes": 200069384,
+      "bf16_sha256": "07e33eb2c6aab5727fbb72c0b403bc83ca8e5695d379106af089b27baf995b25",
+      "bf16_bytes_rehashed": true,
+      "fp32_weights_mounted": false,
+      "optimizer_rng_mounted": false,
+      "original_manifest_claim_is_historical_not_presence_check": true,
+      "original_manifest_sha256": "25cb88263666b73269b4e555abd8f18345cec9834f1cacb5fdb8a5c89b581bda"
+    },
+    "shuffled": {
+      "bf16_bytes": 200069384,
+      "bf16_sha256": "2047dc31ccb58c9326fca9eeffff78c01bb323aec9462b7622d63738a2cb63e1",
+      "bf16_bytes_rehashed": true,
+      "fp32_weights_mounted": false,
+      "optimizer_rng_mounted": false,
+      "original_manifest_claim_is_historical_not_presence_check": true,
+      "original_manifest_sha256": "abe5a423dbb20c869bfc46bc8b7dd8d7e4e54adff30f7aa55ca019cba7cf4a55"
+    }
+  },
+  "new_optimizer_updates": 0,
+  "model_reload_performed_this_audit": false,
+  "original_training_source_and_full_train_data_mounted": false,
+  "all_raw_primary_predictions_mounted": false,
+  "L100CS_only_preregistration_mounted": true,
+  "github_release_upload_performed": false
+}

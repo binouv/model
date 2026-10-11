@@ -1,0 +1,40 @@
+{
+  "run": "L100EC",
+  "saved_result_status": "completed_paired_training_and_evaluation",
+  "parameters_each": 100028328,
+  "hypothesis": "Elementary-to-compositional ordering of identical verified minibatches improves free generated reasoning and executable Python over shuffled order on the same100M backbone.",
+  "saved_verdict": "NOT_CONFIRMED_IN_REGISTERED_PROTOCOL",
+  "criterion_gates": {
+    "iid_gain_ge_registered": false,
+    "paired_iid_p_pass": false,
+    "surface_length_gain_positive": true,
+    "cf_pair_noninferiority": true,
+    "iid_code_not_worse": true
+  },
+  "goal_achieved": false,
+  "recomputed_training_or_held_this_audit": false,
+  "source_summary_sha256": "8a3abc9575070c7986683ac34ba914640cf8d5a8b649d569827a71212f6c049c",
+  "limitation": "Summary copied from mounted prior result; full primary raw predictions and training sources are not mounted in this context. No new scientific result.",
+  "training": {
+    "curriculum": {
+      "total_stage_steps": 1536,
+      "counts": {
+        "input_tokens": 686613,
+        "supervised_tokens": 203581,
+        "padded_tokens": 710384
+      },
+      "presentation_count": 12288,
+      "unique_presented_ids": 5676
+    },
+    "shuffled": {
+      "total_stage_steps": 1536,
+      "counts": {
+        "input_tokens": 686613,
+        "supervised_tokens": 203581,
+        "padded_tokens": 710384
+      },
+      "presentation_count": 12288,
+      "unique_presented_ids": 5676
+    }
+  }
+}

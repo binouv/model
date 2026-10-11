@@ -1,0 +1,79 @@
+{
+  "run": "L100CS-ComputedStateLoss-20261011",
+  "status": "registered_before_new_training_and_fresh_held_generation",
+  "hypothesis": "Prioritizing the first computed or retrieved intermediate-state tokens rather than repeated answers improves freely generated numeric solutions, versus uniform token NLL on the identical new continuation batches.",
+  "arms": [
+    "state_priority",
+    "uniform"
+  ],
+  "architecture_changed": false,
+  "parameters_each": 100028328,
+  "parent_checkpoint": "/mnt/data/flygraph_l100ec_2026-10-11/checkpoints/curriculum/step_1536",
+  "parent_model_sha256": "054115a136f5c5d7270ef429c1272b1699d7a0c8be26e451a674163b25c35de9",
+  "parent_optimizer_rng_sha256": "c3a12027793183d1befa6f08b96cd6c3453355e997c17ea0319b0d26639f4a0c",
+  "parent_selection": "Fixed EC curriculum endpoint, the declared primary lineage; no switch to control based on held scores.",
+  "parent_optimizer_updates": 1536,
+  "optimizer_restored": true,
+  "new_optimizer": false,
+  "ancestral_initializations": 1,
+  "updates_per_arm": 512,
+  "batch": 8,
+  "sampler_seed": 104201,
+  "lr": 0.0001,
+  "optimizer": "native AdamW moments restored; same betas(.9,.95),wd.01,clip1,foreachFalse",
+  "state_token_weight": 8.0,
+  "loss_normalization": "sum of weighted token CE divided by sum of weights; both arms compute the same unreduced loss and role masks",
+  "trained_roles": [
+    "first arithmetic result",
+    "conditional decision and new value",
+    "code/list running states after the initial copied value",
+    "queried memory value history"
+  ],
+  "not_upweighted": [
+    "copied arithmetic operands",
+    "repeated final answer",
+    "code-function transcription",
+    "format and EOS"
+  ],
+  "training_data": "exact same EC train files; no new teacher or held rows in training",
+  "native_RNG_restored": true,
+  "schedule": "512 fresh deterministic minibatches, 25% elementary / 75% composed, balanced families; identical in both arms",
+  "save_every": 256,
+  "precision": "FP32 parameters/AdamW, BF16 matmul, FP32 delta, activation checkpointing from the first step of both arms",
+  "inference": "unchanged generative Model; prompt strings only; full8192vocab greedy96tokens, EOS; no role labels/solver at inference",
+  "fresh_held": {
+    "iid": 240,
+    "surface": 120,
+    "length": 120,
+    "counterfactual": 120
+  },
+  "same_previous_natural_code32": "posthoc regression diagnostic only, not new held or primary criterion",
+  "success": {
+    "numeric_iid_gain_pp_at_least": 5,
+    "arithmetic_conditional_code_trace_pooled_gain_pp_at_least": 5,
+    "numeric_iid_p_lt": 0.05,
+    "numeric_counterfactual_pair_gain_positive": true,
+    "iid_code_drop_max_pp": 5
+  },
+  "selection": "fixed512updates, no search or interim held scoring",
+  "source_of_hypothesis": "EC posthoc gap: first arithmetic-result tokens12/83 vs repeated final-answer digits369/370, and numerical free generation remains weak",
+  "not_Qwen_comparison": true,
+  "goal_achieved": false,
+  "local_cpu_only": true,
+  "remote_push_available_at_start": false,
+  "registered_UTC": "2026-10-11T00:38:02.050756+00:00",
+  "data_manifest_sha256": "364857a972f491e094eba8afe25203d5519fd31ccbfb2a90354ce11589e33802",
+  "source_sha256": {
+    "src/data_ec.py": "035193771e1867ba0daf6a4b9a217bb3f719c2376b26e1cab7cb1e57afd9f8f2",
+    "src/engine.py": "a80700ddc099d317052cbfe2c8c42e44bdb9ccc67d217f475d53f81d45223cb2",
+    "src/infer.py": "c79e6bf566a1b7aa51e9347a672f7cb577144316c6e14cad74fc052b121a04bd",
+    "src/prepare.py": "6680dd84c454d1b177423ea1376c318d28471bb1daab23983759a01bd4e08124",
+    "src/reassemble_resume.py": "ce36523b21d4a98a38f25b636c9eed6913905bbbb828ac45b0f8b79ff810b209",
+    "src/state_roles.py": "e2441308b35e3f140f20d9ea8b43f252cfba96b3126c31ea2e9a6ad8ba84fe4c",
+    "src/train.py": "25d982d9e7a706448ac16c35498d6e2ec5b6bdfa02fcb516e23561ebf35075a1",
+    "src/verify_artifacts.py": "3853cefdb4c743bdc512d618c4a4800b5082867ca923e1857fd72e234534e78a",
+    "base/model.py": "ed03bbba6a430368ab127c638b888fa5b27c3537263bac14a71c48a833a11336",
+    "base/parent_io.py": "e2d6a70b7707c4db08633b51294d753e9d2253caafed2e81fda6c9ec53f5ddd1",
+    "base/tokenizer.py": "7fd9d027849c8044c67604802058cbf51a149fd3f22e301058325ce003a7acdb"
+  }
+}

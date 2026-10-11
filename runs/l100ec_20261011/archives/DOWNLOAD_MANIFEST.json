@@ -1,0 +1,9 @@
+{
+  "archive": "FlyGraph_L100EC_BF16_Weights_2026-10-11.zip",
+  "bytes": 400893364,
+  "sha256": "b5832d39ef5173e6f9791a5c66c53f9fd09c05439d3483daf8e94b4fd9a81a77",
+  "files_verified": 16,
+  "verification": "all zip payload hashes matched source; no model inference in this audit",
+  "includes_optimizer_rng": false,
+  "github_release_uploaded": false
+}
