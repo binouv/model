@@ -2,7 +2,7 @@ name: FlyGraph L100DA exact trained-artifact publication
 on:
   push:
     branches: [main]
-    paths: ['runs/l100da_20261012/transport/TRANSFER_SPEC.json']
+    paths: ['runs/l100da_20261012/transport/TRANSFER_SPEC.json', 'runs/l100da_20261012/transport/RETRY_PUBLICATION.json']
 permissions:
   contents: write
 concurrency:
@@ -39,4 +39,4 @@ jobs:
           cd repo
           python -m unittest discover -s runs/artifact_recovery_20261012 -p 'test_checkpoint_parts.py' -v
           python -m unittest discover -s runs/artifact_transfer_20261012 -p 'test_transport.py' -v
-          python runs/l100da_20261012/transport/publish.py
+          python runs/l100da_20261012/transport/resumable.py
