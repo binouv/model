@@ -1,0 +1,86 @@
+{
+  "status": "completed",
+  "task": "synthetic agent-verb-object to short/detailed",
+  "seed": 20261012,
+  "parameters": 35985,
+  "planner_parameters": 4736,
+  "renderer_parameters": 31249,
+  "train_combinations": 410,
+  "heldout_combinations": 102,
+  "train_steps": 600,
+  "loss_trace": [
+    {
+      "step": 120,
+      "loss": 0.01937
+    },
+    {
+      "step": 240,
+      "loss": 0.0029
+    },
+    {
+      "step": 360,
+      "loss": 0.00144
+    },
+    {
+      "step": 480,
+      "loss": 0.00092
+    },
+    {
+      "step": 600,
+      "loss": 0.0006
+    }
+  ],
+  "heldout": {
+    "short": {
+      "exact_accuracy": 1,
+      "semantic_slots_accuracy": 1,
+      "mean_target_tokens": 7
+    },
+    "detailed": {
+      "exact_accuracy": 1,
+      "semantic_slots_accuracy": 1,
+      "mean_target_tokens": 17
+    },
+    "paired_exact": 1
+  },
+  "ablations": {
+    "zero_latent": {
+      "short": {
+        "exact_accuracy": 0,
+        "semantic_slots_accuracy": 0,
+        "mean_target_tokens": 7
+      },
+      "detailed": {
+        "exact_accuracy": 0,
+        "semantic_slots_accuracy": 0,
+        "mean_target_tokens": 17
+      },
+      "paired_exact": 0
+    },
+    "shuffled_latent": {
+      "short": {
+        "exact_accuracy": 0,
+        "semantic_slots_accuracy": 0,
+        "mean_target_tokens": 7
+      },
+      "detailed": {
+        "exact_accuracy": 0,
+        "semantic_slots_accuracy": 0,
+        "mean_target_tokens": 17
+      },
+      "paired_exact": 0
+    }
+  },
+  "timings_cpu_ms": {
+    "planner_batch_102": 0.1692359999196924,
+    "two_styles_renderer_batch_102": 6.301956000015707
+  },
+  "training_seconds": 6.562785498000039,
+  "total_seconds": 6.64617436900005,
+  "checkpoint": {
+    "name": "latent_answer_training_checkpoint.pt",
+    "bytes": 473778,
+    "sha256": "d21b53b80c7f4fdf4721c92f84d07be0dd04d0a0131ec5eeb759f526d2547844"
+  },
+  "limitations": "Synthetic deterministic grammar; no pretrained LLM, no natural language reasoning; no verified speedup on Qwen."
+}
