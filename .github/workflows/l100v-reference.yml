@@ -1,0 +1,38 @@
+name: L100V Qwen08 BF16 thinking pilot
+on:
+  push:
+    branches: ['flygraph/l100v-reference-20261011']
+    paths: ['runs/l100v_20261011/bench/RUN_ONCE.json']
+permissions:
+  contents: write
+jobs:
+  reference:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - name: Fetch pinned public source
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/${GITHUB_REPOSITORY}.git" repo
+          test "$(git -C repo rev-parse HEAD)" = "$GITHUB_SHA"
+          python3 -m py_compile repo/runs/l100v_20261011/bench/run_reference.py
+      - name: Qwen inference only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHARD: ${{ matrix.shard }}
+          OMP_NUM_THREADS: '4'
+        run: python3 -u repo/runs/l100v_20261011/bench/run_reference.py
+      - name: Preserve all available responses
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: L100V-Qwen08-BF16-shard-${{ matrix.shard }}
+          path: repo/runs/l100v_20261011/bench/outputs/
+          retention-days: 30
+          if-no-files-found: warn
