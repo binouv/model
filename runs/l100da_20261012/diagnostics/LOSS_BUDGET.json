@@ -1,0 +1,16 @@
+{
+  "status": "completed_retrospective_diagnostic",
+  "candidate_optimizer_updates_added": 0,
+  "sampler_batches_replayed_and_hash_matched": 256,
+  "total_supervised_tokens": 19188,
+  "families": {
+    "arithmetic": {"presentations": 342,"supervised_tokens": 1682,"supervised_token_fraction": 0.08765895351261205},
+    "conditional": {"presentations": 342,"supervised_tokens": 1658,"supervised_token_fraction": 0.08640817177402543},
+    "code_trace": {"presentations": 341,"supervised_tokens": 1634,"supervised_token_fraction": 0.08515739003543882},
+    "list_reasoning": {"presentations": 341,"supervised_tokens": 1687,"supervised_token_fraction": 0.08791953304148425},
+    "memory_update": {"presentations": 341,"supervised_tokens": 1615,"supervised_token_fraction": 0.08416718782572441},
+    "code_generation": {"presentations": 341,"supervised_tokens": 10912,"supervised_token_fraction": 0.568688763810715}
+  },
+  "interpretation": "The fixed objective averages across supervised tokens, not examples. Long code answers contribute more token terms. This is an observed weighting imbalance, NOT a causal demonstration of why numeric transfer failed.",
+  "next_testable_hypothesis": "Compare per-example-normalized answer loss against current token-normalized loss with a matched checkpoint, sampler and fixed training budget; no claim of Qwen superiority."
+}
