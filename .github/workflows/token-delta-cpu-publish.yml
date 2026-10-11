@@ -1,0 +1,118 @@
+name: Token-Delta CPU artifact reproduction
+on:
+  push:
+    branches: [main]
+    paths: ['research/token_delta/RUN_TRIGGER.txt']
+permissions:
+  contents: write
+concurrency:
+  group: token-delta-cpu-models
+  cancel-in-progress: false
+jobs:
+  train-verify-publish:
+    if: github.repository == 'binouv/model'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install CPU dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu 'torch==2.10.0'
+          python -m pip install 'numpy==2.3.5'
+      - name: Reproduce future-token probes (trained checkpoints)
+        shell: bash
+        env:
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '2'
+        run: |
+          set -euo pipefail
+          python research/token_delta/src/tiny_future.py --train-steps 300 --probe-steps 230 --batch 128 --eval-samples 1024 --out research/token_delta/results
+      - name: Reproduce latent planner + student
+        shell: bash
+        env:
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '2'
+        run: |
+          set -euo pipefail
+          python research/token_delta/src/latent_answer.py --steps 600 --batch 64 --out research/token_delta/results
+      - name: Validate model semantics and binary checkpoints
+        shell: bash
+        env:
+          TOKEN_DELTA_CKPT: ../results/latent_answer_training_checkpoint.pt
+        run: |
+          set -euo pipefail
+          cd research/token_delta/src
+          python -m unittest test_latent_answer -v
+          cd ../../..
+          python - <<'PY'
+          import json
+          import hashlib
+          import torch
+          from pathlib import Path
+          base=Path('research/token_delta/results')
+          f=json.loads((base/'metrics.json').read_text())
+          l=json.loads((base/'latent_answer_metrics.json').read_text())
+          assert l['heldout']['paired_exact'] >= 0.99, l['heldout']
+          assert l['ablations']['zero_latent']['paired_exact'] < l['heldout']['paired_exact']
+          assert l['ablations']['shuffled_latent']['paired_exact'] < l['heldout']['paired_exact']
+          assert sum(f['motif']['probe_horizon_accuracy'])/8 > 0.90
+          assert abs(sum(f['random']['probe_horizon_accuracy'])/8 - 1/16) < 0.04
+          for name in ('motif_training_checkpoint.pt','random_training_checkpoint.pt','latent_answer_training_checkpoint.pt'):
+              path=base/name
+              assert path.is_file() and path.stat().st_size > 1024
+              ckpt=torch.load(path,map_location='cpu',weights_only=False)
+              assert isinstance(ckpt,dict)
+              print(name,path.stat().st_size,hashlib.sha256(path.read_bytes()).hexdigest())
+          assert l['checkpoint']['sha256'] == hashlib.sha256((base/'latent_answer_training_checkpoint.pt').read_bytes()).hexdigest()
+          PY
+      - name: Write SHA manifest, publish actual model bytes
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,platform,torch,numpy
+          from pathlib import Path
+          base=Path('research/token_delta/results')
+          names=['motif_training_checkpoint.pt','random_training_checkpoint.pt','latent_answer_training_checkpoint.pt']
+          artifacts=[]
+          for n in names:
+              p=base/n
+              assert p.stat().st_size < 90000000
+              artifacts.append({'path':str(p),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+          (base/'GITHUB_ACTIONS_COMPLETED.json').write_text(json.dumps({
+              'status':'completed_binary_reproduction','source':'github_actions_cpu_retraining_not_original_sandbox_bytes',
+              'source_commit':'${{ github.sha }}','python':platform.python_version(),
+              'torch':torch.__version__,'numpy':numpy.__version__,'artifacts':artifacts},indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/token_delta/results/metrics.json
+          git add research/token_delta/results/latent_answer_metrics.json
+          git add research/token_delta/results/examples.json
+          git add research/token_delta/results/GITHUB_ACTIONS_COMPLETED.json
+          git add research/token_delta/results/motif_training_checkpoint.pt
+          git add research/token_delta/results/random_training_checkpoint.pt
+          git add research/token_delta/results/latent_answer_training_checkpoint.pt
+          git commit -m 'research(token-delta): publish independently trained CPU weights and verification receipt'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
