@@ -1,0 +1,31 @@
+{
+  "status": "github_binary_roundtrip_verified",
+  "checkpoint_identity": "L100EC_curriculum_100M",
+  "parameters": 100028328,
+  "tensor_count": 135,
+  "dtype": "BF16",
+  "size_bytes": 200069384,
+  "sha256": "07e33eb2c6aab5727fbb72c0b403bc83ca8e5695d379106af089b27baf995b25",
+  "parts": [
+    {"name":"model.safetensors.part0000","size_bytes":80000000,"sha256":"e19891a72f2244d9100e28c1eba009155d0af457c767e7633a7c9f2df7c66d6b","git_blob_sha":"001301d0e98df5c9ccaa444a8a60d9a9d67c8f26"},
+    {"name":"model.safetensors.part0001","size_bytes":80000000,"sha256":"7a72f27e85deeab91b404269c3a869458bd946147d7135bf83b81c1bcb8b2d5b","git_blob_sha":"172bb2eaa7f06376a581d617dde9d755ba8db270"},
+    {"name":"model.safetensors.part0002","size_bytes":40069384,"sha256":"62f57efdf27f0288fa42b840c26cb0829813517679faf312abc311db2c1652cf","git_blob_sha":"37815b68855b30fef2926b67bb4fcd3c6900cccc"}
+  ],
+  "binary_commit": "e1c7344eb63a99c9e44645655e10cd07315aa84e",
+  "verification_commit": "e94ffbad58065bc1b7f2d6485d9b161fb188ff39",
+  "workflow_run_id": 38169386944,
+  "workflow_job_id": 114558586261,
+  "workflow_conclusion": "success",
+  "fresh_remote_clone_verified": true,
+  "git_blob_hashes_match_local": true,
+  "tests_passed": 30,
+  "tests_failed": 0,
+  "private_drive_readback_verified": true,
+  "new_optimizer_steps": 0,
+  "original_optimizer_recovered": false,
+  "l100ql_trained_checkpoint_recovered": false,
+  "qwen_superiority_claim": false,
+  "repository_path": "models/l100ec_curriculum_bf16_07e33eb2",
+  "supersedes_pending_publication_fields": ["STATUS.json", "README.md"],
+  "note": "Earlier pending-GitHub statements are historical. Three real binary blobs are now present and independently verified. This is artifact recovery, not a completed L100QL training pair."
+}
