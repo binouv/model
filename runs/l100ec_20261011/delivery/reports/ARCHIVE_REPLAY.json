@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "archive": "FlyGraph_L100EC_Runnable_BF16_2026-10-11.zip",
+  "archive_sha256": "2af9d1c3b438098dce71168961f84f406fd857a70e731667cff0ae685b365d3a",
+  "file_hashes_checked": 32,
+  "clean_extract_tests_passed": 12,
+  "actual_cli_generation_from_clean_extract": true,
+  "prompt": "Calculate 5 + 8.\nAnswer:",
+  "completion_was_not_correct": true,
+  "eos_within48tokens": false,
+  "not_a_quality_benchmark": true,
+  "independent_model_reload_sequences": 6,
+  "reload_mismatches": 0,
+  "model_parameter_values_finite": true,
+  "new_training_steps": 0,
+  "git_source_blobs_match_tested_local_runtime": {
+    "audit_runtime.py": "94eeb95ba987ab2569127dfdb7be8df718060be9",
+    "infer.py": "dfe2d6f084c7cf8191be44ed2233c88a4d6a06b9",
+    "runtime.py": "b8a894a87ca246453a21dc1818f6ac4ca556e739"
+  },
+  "optimizer_rng_included": false,
+  "github_weight_upload_performed": false
+}

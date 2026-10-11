@@ -1,0 +1,13 @@
+{
+  "checked_date": "2026-10-11",
+  "new_verified_scope": "Recovered runnable inference; original model/tokenizer implementation restored from exact L100M source bytes",
+  "authoritative_publication_status": "../delivery/reports/PUBLICATION_STATUS.json",
+  "download_manifest": "../delivery/archives/DOWNLOAD_MANIFEST.json",
+  "new_training_updates": 0,
+  "old_publication_audit_is_historical_snapshot": true,
+  "inherited_model_source_recovered": true,
+  "original_EC_specific_trainer_recovered": false,
+  "model_weight_bytes_uploaded": false,
+  "exact_resume_available": false,
+  "parallel_L100V_untouched": true
+}

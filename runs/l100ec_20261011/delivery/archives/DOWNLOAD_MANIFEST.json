@@ -1,0 +1,20 @@
+{
+  "archives": [
+    {
+      "name": "FlyGraph_L100EC_Runnable_BF16_2026-10-11.zip",
+      "bytes": 320988187,
+      "sha256": "2af9d1c3b438098dce71168961f84f406fd857a70e731667cff0ae685b365d3a",
+      "files_verified": 32,
+      "weights_included": true
+    },
+    {
+      "name": "FlyGraph_L100EC_Runnable_Source_2026-10-11.zip",
+      "bytes": 159007,
+      "sha256": "65c70383ae2137ede428003c8a3fb6f872f504eb947b51a48ce8a8460743004f",
+      "files_verified": 30,
+      "weights_included": false
+    }
+  ],
+  "optimizer_rng_included": false,
+  "github_release_uploaded": false
+}

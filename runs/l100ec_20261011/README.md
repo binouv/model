@@ -1,17 +1,19 @@
-# L100EC — recovered prior results and publication audit
+# L100EC — recovered results and runnable inference package
 
-Publication audited 2026-10-11. This directory adds available prior summary metrics and model metadata without modifying other experiments. No new training or held evaluation occurred during this audit.
+This directory preserves historical summary metrics and a separately verified recovery/publication layer. It does not report new training or a new quality benchmark.
 
-The mounted prior result reports two completed 100,028,328-parameter models, curriculum and shuffled-order control, 1536 updates each. Saved IID correct counts are47/240 and37/240; surface15/120 and11/120; length0/120 for both; counterfactual42/120 and28/120, with19/60 and13/60 both-correct pairs. The registered hypothesis was NOT_CONFIRMED_IN_REGISTERED_PROTOCOL. No Qwen superiority claim.
+The earlier result reports two100,028,328-parameter models, curriculum and shuffled-order control, trained for1536updates each. Saved IID counts47/240 versus37/240; surface15/120 versus11/120; length0/120 for both; counterfactual42/120 versus28/120, with19/60 versus13/60 both-correct pairs. Registered hypothesis NOT_CONFIRMED_IN_REGISTERED_PROTOCOL. No Qwen superiority claim.
 
-## Actual files versus historical manifests
+## New: executable inference recovery
 
-Both BF16 exports are physically present and were SHA256-hashed again. Each has200069384bytes. Curriculum:07e33eb2c6aab5727fbb72c0b403bc83ca8e5695d379106af089b27baf995b25. Shuffled:2047dc31ccb58c9326fca9eeffff78c01bb323aec9462b7622d63738a2cb63e1.
+`delivery/` now contains the exact inherited L100M model and tokenizer implementation, a hash-verifying loader, CPU/CUDA-selectable inference CLI, configurations, requirements and12tests. Both actual BF16 models were rehashed and loaded strictly; their100,028,328parameter values are finite. Three sequences per arm matched after independent reload. The runnable local archive was extracted cleanly, all32payload hashes verified and12tests plus actual CLI generation executed. This is engineering recovery, not evidence of useful reasoning. One sanity arithmetic prompt did not finish within48tokens; that output is not hidden or called correct.
 
-The FP32 weights and AdamW/RNG files named in earlier checkpoint manifests are NOT mounted in this current context. Original L100EC training/inference sources, full training data and all primary raw predictions are also not mounted. This is a recovery/publication limitation, not proof that the original training was never completed or that copies cannot exist elsewhere.
+The new downloadable archive is `FlyGraph_L100EC_Runnable_BF16_2026-10-11.zip`,320,988,187bytes, SHA2562af9d1c3b438098dce71168961f84f406fd857a70e731667cff0ae685b365d3a. It includes actual weights, exact tokenizer, runnable source, available historical metrics and report. The Source ZIP contains all of that except weights. Manifest and replay receipts are under delivery/.
 
-The local downloadable ZIP packages actual available BF16 weights, tokenizer, model configuration and prior metrics/report. It is NOT an exact-resume package, a complete training reproduction, or a GitHub weight release. Its metadata is in archives/DOWNLOAD_MANIFEST.json. No model inference was performed anew by this audit.
+## Remaining publication/recovery gaps
 
-L100CS has only its preserved preregistration available here; no completed checkpoint is established. The config records earlier intentions, not fresh execution evidence. Existing experimental results and parallel branches are untouched.
+The source/config/audit files are in Git. **The200,069,384-byte curriculum and shuffled weights are still NOT GitHub Release assets.** Use the conversation's runnable ZIP for actual bytes and place its model/tokenizer files at the paths in delivery/ASSETS.json when using the Git source directory. A manifest is not an upload.
 
-**Publication is partial: summaries, configuration and audit are in Git; model bytes, original optimizer/RNG and the full historical source/data collection are not all uploaded.**
+Native FP32/AdamW/RNG, the original EC-specific trainer, complete EC training data and all primary held predictions are not available in this execution. Their presence in an old manifest is not a present-file check. The inherited model source has been recovered; that does not recover the missing trainer. Earlier publication status snapshots remain unchanged for provenance.
+
+Current status: reports/CURRENT_PUBLICATION.json and delivery/reports/NEXT_STATE.json. L100CS/L100V and other parallel research runs were not changed or retrained by this publication task. The GitHub connector supports Git-object writes but not streamed local-file Release upload; direct container DNS access to GitHub failed. No unrelated storage account or paid service was used.

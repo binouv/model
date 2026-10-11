@@ -1,0 +1,10 @@
+{
+  "scope": "L100EC artifact recovery/publication only",
+  "completed": "runnable BF16 inference package, source push and local reload tests",
+  "research_progress_not_changed": true,
+  "starting_point_for_future_training": "verified BF16 only; use explicitly registered warm start with NEW optimizer unless real original FP32/AdamW/RNG is recovered",
+  "do_not_claim": ["exact historical resume", "new training", "new benchmark gain", "binary release upload"],
+  "remaining": ["upload actual final bundle or two safetensors files through a supported binary file uploader", "recover missing EC-specific training data/source and optimizer if available elsewhere"],
+  "do_not_duplicate_L100CS_or_L100V": true,
+  "weights_manifest": "ASSETS.json"
+}
