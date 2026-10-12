@@ -1,0 +1,20 @@
+{
+  "status": "dataset_generated_only_no_scientific_results",
+  "seed": 20261016,
+  "count": 1700,
+  "splits": {
+    "train": 1200,
+    "val": 200,
+    "test": 300
+  },
+  "canonical_sha256": "f06817743af405c27e6810bd859366d4d1b6c8c6714d02e699ff3f61f1ea65bf",
+  "jsonl_sha256": "c07f3de8a98e652ab25524a1f822ccbb01ac3b92ef433c6354f1978171131ecf",
+  "all_previous_groups_excluded": true,
+  "excluded_from": [
+    "H1 1700",
+    "H1b 128",
+    "H1c 1700"
+  ],
+  "teacher_revision": "c7429d5a8ed57f4a9cfdaf1af76a8943eba0ae97",
+  "writer_revision": "23eda19ab0239bc12350efba411911b8eb89f486"
+}

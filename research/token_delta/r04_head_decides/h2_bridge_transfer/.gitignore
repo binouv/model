@@ -1,0 +1,6 @@
+cache/
+results/pilot/
+results/full/*staging*
+__pycache__/
+*.pyc
+.venv/

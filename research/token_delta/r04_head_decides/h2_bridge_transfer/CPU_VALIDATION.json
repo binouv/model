@@ -1,0 +1,16 @@
+{
+  "status": "completed_cpu_semantics_only_no_pretrained_gpu_results",
+  "date": "2026-10-12",
+  "tests": 12,
+  "pass": 12,
+  "failures": 0,
+  "python": "3.13.5",
+  "torch": "2.10.0+cpu",
+  "gpu_tested": false,
+  "data_count": 1700,
+  "split": [1200, 200, 300],
+  "data_canonical_sha256": "f06817743af405c27e6810bd859366d4d1b6c8c6714d02e699ff3f61f1ea65bf",
+  "data_jsonl_sha256": "c07f3de8a98e652ab25524a1f822ccbb01ac3b92ef433c6354f1978171131ecf",
+  "controls": "dataset disjoint from all original H1/H1b/H1c operation tuples; causal loss; frozen writer gradient; strict checkpoint byte reassembly; no answer in lexical features",
+  "scientific_hypothesis_tested": false
+}

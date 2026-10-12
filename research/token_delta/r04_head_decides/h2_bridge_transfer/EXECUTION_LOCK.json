@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "experiment": "R04-H2 frozen head to frozen writer",
+  "registered_date": "2026-10-12",
+  "status": "source_cpu_validated_gpu_science_not_run",
+  "dataset": {
+    "generator_seed": 20261016,
+    "count": 1700,
+    "splits": {"train": 1200, "val": 200, "test": 300},
+    "canonical_sha256": "f06817743af405c27e6810bd859366d4d1b6c8c6714d02e699ff3f61f1ea65bf",
+    "jsonl_sha256": "c07f3de8a98e652ab25524a1f822ccbb01ac3b92ef433c6354f1978171131ecf",
+    "disjoint_group_pools": ["H1-1700", "H1b-128", "H1c-1700"]
+  },
+  "head": {
+    "id": "Qwen/Qwen3.5-4B",
+    "revision": "c7429d5a8ed57f4a9cfdaf1af76a8943eba0ae97",
+    "frozen": true,
+    "extraction": "prompt-only final hidden state, no answer/CoT tokens",
+    "hidden": 2560,
+    "generation": "enable_thinking=False, greedy, max_new_tokens=12"
+  },
+  "writer": {
+    "id": "Qwen/Qwen3.5-0.8B",
+    "revision": "23eda19ab0239bc12350efba411911b8eb89f486",
+    "frozen": true,
+    "hidden": 1024,
+    "inputs": "K soft-prefix embeddings and invariant assistant start only; no question, style, length, gold answer or CoT",
+    "max_new_tokens": 12
+  },
+  "bridge": {
+    "K_main": 4,
+    "K_ablations": [1, 8, 16],
+    "inner_size": 512,
+    "only_trainable_module": true,
+    "seeds": [11, 22, 33],
+    "ablations_seed": 11,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "batch": 4,
+    "steps": 400,
+    "model_inputs": ["frozen Qwen h", "question-only hash", "oracle upper-bound plan"],
+    "ablations": ["zero latent", "shuffled latent", "negated latent", "standalone writer with question"],
+    "teacher_targets": "all train-generated outputs, including incorrect ones; never test-derived"
+  },
+  "gates_unchanged_from_R04": {
+    "full_test_accuracy": 0.75,
+    "teacher_correct_accuracy": 0.80,
+    "hash_margin": 0.15,
+    "shuffle_margin": 0.30,
+    "minimum_seed_replications": 2
+  },
+  "hardware": "RTX3090 24GiB BF16, no concurrent H2 data extraction/training on same device",
+  "env": {"python": "3.13.x", "torch": "2.10.0+cu128", "transformers": "5.13.0"},
+  "checkpoint_part_ceiling": 80000000,
+  "not_evidence_for": ["H3 head-controlled verbosity", "H4 matched-quality end-to-end speedup", "lossless model compression"]
+}
