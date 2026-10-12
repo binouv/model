@@ -1,0 +1,37 @@
+{
+  "status": "completed_verified",
+  "experiment": "R02",
+  "source_commit": "1d18a9ab19a8734420f30856f1705ca88c44bac9",
+  "teacher": "Qwen/Qwen3-0.6B",
+  "pretrained_teacher_stored": false,
+  "python": "3.12.15",
+  "torch": "2.10.0+cpu",
+  "numpy": "2.3.5",
+  "artifacts": [
+    {
+      "path": "research/token_delta/r02_qwen_teacher/results/qwen_prompt_features.pt",
+      "bytes": 1117828,
+      "sha256": "e0add6315af0ac9f344c90d7339881d8711b49da28576eaae8e5e05055f8ff96"
+    },
+    {
+      "path": "research/token_delta/r02_qwen_teacher/results/qwen_student_full_checkpoint.pt",
+      "bytes": 1710259,
+      "sha256": "f26d6dfc882a8a6ad67a601e56f38af43f5be799a9c1db3051699a7e0bedd5df"
+    },
+    {
+      "path": "research/token_delta/r02_qwen_teacher/results/hash_bow_student_full_checkpoint.pt",
+      "bytes": 1710543,
+      "sha256": "cdcb057e1e7b065e9f6d56899455aa7cba20322657083b0c3b768e62f6400325"
+    },
+    {
+      "path": "research/token_delta/r02_qwen_teacher/results/metrics.json",
+      "bytes": 7790,
+      "sha256": "fa965ddefa5d10e5b9b4d4b67724e27411054b3904860374414a93b306c118e4"
+    },
+    {
+      "path": "research/token_delta/r02_qwen_teacher/results/predictions.json",
+      "bytes": 81545,
+      "sha256": "3211672086d87efa8518347cc0308a8ac43504917b6a21c2e4502890490967de"
+    }
+  ]
+}

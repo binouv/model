@@ -1,0 +1,1446 @@
+{
+  "qwen": [
+    {
+      "facts": [
+        "hare",
+        "hides",
+        "stone"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare hides the stone. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare conceals the stone. What happened? Give the main facts.",
+      "expected_short": "the hare hides the stone.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully hides the stone near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "duck",
+        "hides",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the duck hides the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the duck conceals the map. What happened? Give the main facts.",
+      "expected_short": "the duck hides the map.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the duck carefully hides the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "hides",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox hides the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox conceals the coin. What happened? Give the main facts.",
+      "expected_short": "the fox hides the coin.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "finds",
+        "book"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl finds the book. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl discovers the book. What happened? Give the main facts.",
+      "expected_short": "the owl finds the book.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully finds the book near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "moves",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare moves the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare relocates the key. What happened? Give the main facts.",
+      "expected_short": "the hare moves the key.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully moves the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "moves",
+        "stone"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox moves the stone. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox relocates the stone. What happened? Give the main facts.",
+      "expected_short": "the fox moves the stone.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully moves the stone near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "moves",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl moves the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl relocates the ring. What happened? Give the main facts.",
+      "expected_short": "the owl moves the ring.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "keeps",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare keeps the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare retains the key. What happened? Give the main facts.",
+      "expected_short": "the hare keeps the key.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully keeps the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "finds",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl finds the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl discovers the key. What happened? Give the main facts.",
+      "expected_short": "the owl finds the key.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully finds the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "hides",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl hides the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl conceals the key. What happened? Give the main facts.",
+      "expected_short": "the owl hides the key.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully hides the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "finds",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare finds the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare discovers the ring. What happened? Give the main facts.",
+      "expected_short": "the hare finds the ring.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully finds the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "finds",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare finds the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare discovers the coin. What happened? Give the main facts.",
+      "expected_short": "the hare finds the coin.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully finds the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "drops",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare drops the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare releases the ring. What happened? Give the main facts.",
+      "expected_short": "the hare drops the ring.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully drops the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "bear",
+        "takes",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the bear takes the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the bear grabs the ring. What happened? Give the main facts.",
+      "expected_short": "the bear takes the ring.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the bear carefully takes the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "moves",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl moves the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl relocates the key. What happened? Give the main facts.",
+      "expected_short": "the owl moves the key.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "duck",
+        "keeps",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the duck keeps the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the duck retains the ring. What happened? Give the main facts.",
+      "expected_short": "the duck keeps the ring.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the duck carefully keeps the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "hides",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox hides the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox conceals the ring. What happened? Give the main facts.",
+      "expected_short": "the fox hides the ring.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "frog",
+        "drops",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the frog drops the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the frog releases the key. What happened? Give the main facts.",
+      "expected_short": "the frog drops the key.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the frog carefully drops the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "takes",
+        "stone"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare takes the stone. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare grabs the stone. What happened? Give the main facts.",
+      "expected_short": "the hare takes the stone.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully takes the stone near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "keeps",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox keeps the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox retains the map. What happened? Give the main facts.",
+      "expected_short": "the fox keeps the map.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully keeps the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "hides",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox hides the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox conceals the key. What happened? Give the main facts.",
+      "expected_short": "the fox hides the key.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "drops",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl drops the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl releases the map. What happened? Give the main facts.",
+      "expected_short": "the owl drops the map.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully drops the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "moves",
+        "stone"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl moves the stone. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl relocates the stone. What happened? Give the main facts.",
+      "expected_short": "the owl moves the stone.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the stone near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "keeps",
+        "stone"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl keeps the stone. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl retains the stone. What happened? Give the main facts.",
+      "expected_short": "the owl keeps the stone.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully keeps the stone near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "finds",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl finds the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl discovers the ring. What happened? Give the main facts.",
+      "expected_short": "the owl finds the ring.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully finds the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "keeps",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare keeps the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare retains the ring. What happened? Give the main facts.",
+      "expected_short": "the hare keeps the ring.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully keeps the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "frog",
+        "hides",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the frog hides the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the frog conceals the key. What happened? Give the main facts.",
+      "expected_short": "the frog hides the key.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the frog carefully hides the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "bear",
+        "moves",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the bear moves the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the bear relocates the coin. What happened? Give the main facts.",
+      "expected_short": "the bear moves the coin.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the bear carefully moves the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "duck",
+        "hides",
+        "stone"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the duck hides the stone. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the duck conceals the stone. What happened? Give the main facts.",
+      "expected_short": "the duck hides the stone.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the duck carefully hides the stone near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "bear",
+        "moves",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the bear moves the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the bear relocates the map. What happened? Give the main facts.",
+      "expected_short": "the bear moves the map.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the bear carefully moves the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "bear",
+        "keeps",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the bear keeps the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the bear retains the coin. What happened? Give the main facts.",
+      "expected_short": "the bear keeps the coin.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the bear carefully keeps the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "hides",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox hides the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox conceals the map. What happened? Give the main facts.",
+      "expected_short": "the fox hides the map.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "duck",
+        "drops",
+        "book"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the duck drops the book. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the duck releases the book. What happened? Give the main facts.",
+      "expected_short": "the duck drops the book.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the duck carefully drops the book near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "takes",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare takes the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare grabs the coin. What happened? Give the main facts.",
+      "expected_short": "the hare takes the coin.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully takes the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "frog",
+        "finds",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the frog finds the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the frog discovers the key. What happened? Give the main facts.",
+      "expected_short": "the frog finds the key.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the frog carefully finds the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "finds",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox finds the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox discovers the ring. What happened? Give the main facts.",
+      "expected_short": "the fox finds the ring.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully finds the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "keeps",
+        "book"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl keeps the book. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl retains the book. What happened? Give the main facts.",
+      "expected_short": "the owl keeps the book.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully keeps the book near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "finds",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare finds the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare discovers the key. What happened? Give the main facts.",
+      "expected_short": "the hare finds the key.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully finds the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "duck",
+        "finds",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the duck finds the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the duck discovers the key. What happened? Give the main facts.",
+      "expected_short": "the duck finds the key.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the duck carefully finds the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "keeps",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl keeps the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl retains the coin. What happened? Give the main facts.",
+      "expected_short": "the owl keeps the coin.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully keeps the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "duck",
+        "finds",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the duck finds the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the duck discovers the coin. What happened? Give the main facts.",
+      "expected_short": "the duck finds the coin.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the duck carefully finds the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "bear",
+        "finds",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the bear finds the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the bear discovers the map. What happened? Give the main facts.",
+      "expected_short": "the bear finds the map.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the bear carefully finds the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "moves",
+        "book"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl moves the book. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl relocates the book. What happened? Give the main facts.",
+      "expected_short": "the owl moves the book.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the book near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "finds",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox finds the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox discovers the coin. What happened? Give the main facts.",
+      "expected_short": "the fox finds the coin.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully finds the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "drops",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl drops the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl releases the ring. What happened? Give the main facts.",
+      "expected_short": "the owl drops the ring.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully drops the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "frog",
+        "keeps",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the frog keeps the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the frog retains the key. What happened? Give the main facts.",
+      "expected_short": "the frog keeps the key.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the frog carefully keeps the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "bear",
+        "drops",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the bear drops the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the bear releases the coin. What happened? Give the main facts.",
+      "expected_short": "the bear drops the coin.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the bear carefully drops the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "facts": [
+        "frog",
+        "takes",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the frog takes the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the frog grabs the map. What happened? Give the main facts.",
+      "expected_short": "the frog takes the map.",
+      "predicted_iid_short": "the fox moves the ring.",
+      "predicted_ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the frog carefully takes the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    }
+  ],
+  "hash_bow": [
+    {
+      "facts": [
+        "hare",
+        "hides",
+        "stone"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare hides the stone. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare conceals the stone. What happened? Give the main facts.",
+      "expected_short": "the hare hides the stone.",
+      "predicted_iid_short": "the hare hides the stone.",
+      "predicted_ood_short": "the hare hides the stone.",
+      "expected_detailed": "in the quiet garden, the hare carefully hides the stone near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the hare carefully hides the stone near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the hare carefully drops the stone near the river today."
+    },
+    {
+      "facts": [
+        "duck",
+        "hides",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the duck hides the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the duck conceals the map. What happened? Give the main facts.",
+      "expected_short": "the duck hides the map.",
+      "predicted_iid_short": "the duck hides the map.",
+      "predicted_ood_short": "the duck drops the map.",
+      "expected_detailed": "in the quiet garden, the duck carefully hides the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the duck carefully hides the map near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the duck carefully drops the map near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "hides",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox hides the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox conceals the coin. What happened? Give the main facts.",
+      "expected_short": "the fox hides the coin.",
+      "predicted_iid_short": "the fox hides the coin.",
+      "predicted_ood_short": "the fox takes the coin.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully hides the coin near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully takes the coin near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "finds",
+        "book"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl finds the book. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl discovers the book. What happened? Give the main facts.",
+      "expected_short": "the owl finds the book.",
+      "predicted_iid_short": "the owl finds the book.",
+      "predicted_ood_short": "the owl takes the book.",
+      "expected_detailed": "in the quiet garden, the owl carefully finds the book near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully finds the book near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully takes the book near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "moves",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare moves the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare relocates the key. What happened? Give the main facts.",
+      "expected_short": "the hare moves the key.",
+      "predicted_iid_short": "the hare moves the key.",
+      "predicted_ood_short": "the hare hides the key.",
+      "expected_detailed": "in the quiet garden, the hare carefully moves the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the hare carefully moves the key near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the hare carefully hides the key near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "moves",
+        "stone"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox moves the stone. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox relocates the stone. What happened? Give the main facts.",
+      "expected_short": "the fox moves the stone.",
+      "predicted_iid_short": "the fox moves the stone.",
+      "predicted_ood_short": "the fox hides the stone.",
+      "expected_detailed": "in the quiet garden, the fox carefully moves the stone near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully moves the stone near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully takes the stone near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "moves",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl moves the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl relocates the ring. What happened? Give the main facts.",
+      "expected_short": "the owl moves the ring.",
+      "predicted_iid_short": "the owl moves the ring.",
+      "predicted_ood_short": "the owl hides the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully moves the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully takes the ring near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "keeps",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare keeps the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare retains the key. What happened? Give the main facts.",
+      "expected_short": "the hare keeps the key.",
+      "predicted_iid_short": "the hare keeps the key.",
+      "predicted_ood_short": "the hare hides the key.",
+      "expected_detailed": "in the quiet garden, the hare carefully keeps the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the hare carefully keeps the key near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the hare carefully hides the key near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "finds",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl finds the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl discovers the key. What happened? Give the main facts.",
+      "expected_short": "the owl finds the key.",
+      "predicted_iid_short": "the owl finds the key.",
+      "predicted_ood_short": "the owl takes the key.",
+      "expected_detailed": "in the quiet garden, the owl carefully finds the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully finds the key near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully hides the key near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "hides",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl hides the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl conceals the key. What happened? Give the main facts.",
+      "expected_short": "the owl hides the key.",
+      "predicted_iid_short": "the owl hides the key.",
+      "predicted_ood_short": "the owl takes the key.",
+      "expected_detailed": "in the quiet garden, the owl carefully hides the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully hides the key near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully hides the key near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "finds",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare finds the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare discovers the ring. What happened? Give the main facts.",
+      "expected_short": "the hare finds the ring.",
+      "predicted_iid_short": "the hare finds the ring.",
+      "predicted_ood_short": "the hare hides the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully finds the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the hare carefully finds the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the hare carefully drops the ring near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "finds",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare finds the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare discovers the coin. What happened? Give the main facts.",
+      "expected_short": "the hare finds the coin.",
+      "predicted_iid_short": "the hare finds the coin.",
+      "predicted_ood_short": "the hare takes the coin.",
+      "expected_detailed": "in the quiet garden, the hare carefully finds the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the hare carefully finds the coin near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the hare carefully hides the coin near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "drops",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare drops the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare releases the ring. What happened? Give the main facts.",
+      "expected_short": "the hare drops the ring.",
+      "predicted_iid_short": "the hare drops the ring.",
+      "predicted_ood_short": "the hare hides the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully drops the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the hare carefully drops the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the hare carefully drops the ring near the river today."
+    },
+    {
+      "facts": [
+        "bear",
+        "takes",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the bear takes the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the bear grabs the ring. What happened? Give the main facts.",
+      "expected_short": "the bear takes the ring.",
+      "predicted_iid_short": "the bear takes the ring.",
+      "predicted_ood_short": "the bear drops the ring.",
+      "expected_detailed": "in the quiet garden, the bear carefully takes the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the bear carefully takes the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the bear carefully drops the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "moves",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl moves the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl relocates the key. What happened? Give the main facts.",
+      "expected_short": "the owl moves the key.",
+      "predicted_iid_short": "the owl moves the key.",
+      "predicted_ood_short": "the owl takes the key.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully moves the key near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully hides the key near the river today."
+    },
+    {
+      "facts": [
+        "duck",
+        "keeps",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the duck keeps the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the duck retains the ring. What happened? Give the main facts.",
+      "expected_short": "the duck keeps the ring.",
+      "predicted_iid_short": "the duck keeps the ring.",
+      "predicted_ood_short": "the duck drops the ring.",
+      "expected_detailed": "in the quiet garden, the duck carefully keeps the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the duck carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the duck carefully drops the ring near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "hides",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox hides the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox conceals the ring. What happened? Give the main facts.",
+      "expected_short": "the fox hides the ring.",
+      "predicted_iid_short": "the fox hides the ring.",
+      "predicted_ood_short": "the fox takes the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully hides the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully takes the ring near the river today."
+    },
+    {
+      "facts": [
+        "frog",
+        "drops",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the frog drops the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the frog releases the key. What happened? Give the main facts.",
+      "expected_short": "the frog drops the key.",
+      "predicted_iid_short": "the frog drops the key.",
+      "predicted_ood_short": "the frog moves the key.",
+      "expected_detailed": "in the quiet garden, the frog carefully drops the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the frog carefully drops the key near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the frog carefully finds the key near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "takes",
+        "stone"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare takes the stone. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare grabs the stone. What happened? Give the main facts.",
+      "expected_short": "the hare takes the stone.",
+      "predicted_iid_short": "the hare takes the stone.",
+      "predicted_ood_short": "the hare hides the stone.",
+      "expected_detailed": "in the quiet garden, the hare carefully takes the stone near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the hare carefully takes the stone near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the hare carefully drops the stone near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "keeps",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox keeps the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox retains the map. What happened? Give the main facts.",
+      "expected_short": "the fox keeps the map.",
+      "predicted_iid_short": "the fox keeps the map.",
+      "predicted_ood_short": "the fox moves the map.",
+      "expected_detailed": "in the quiet garden, the fox carefully keeps the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully keeps the map near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully moves the map near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "hides",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox hides the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox conceals the key. What happened? Give the main facts.",
+      "expected_short": "the fox hides the key.",
+      "predicted_iid_short": "the fox hides the key.",
+      "predicted_ood_short": "the fox takes the key.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully hides the key near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully moves the key near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "drops",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl drops the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl releases the map. What happened? Give the main facts.",
+      "expected_short": "the owl drops the map.",
+      "predicted_iid_short": "the owl drops the map.",
+      "predicted_ood_short": "the owl hides the map.",
+      "expected_detailed": "in the quiet garden, the owl carefully drops the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully drops the map near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully hides the map near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "moves",
+        "stone"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl moves the stone. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl relocates the stone. What happened? Give the main facts.",
+      "expected_short": "the owl moves the stone.",
+      "predicted_iid_short": "the owl moves the stone.",
+      "predicted_ood_short": "the owl hides the stone.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the stone near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully moves the stone near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully hides the stone near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "keeps",
+        "stone"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl keeps the stone. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl retains the stone. What happened? Give the main facts.",
+      "expected_short": "the owl keeps the stone.",
+      "predicted_iid_short": "the owl keeps the stone.",
+      "predicted_ood_short": "the owl hides the stone.",
+      "expected_detailed": "in the quiet garden, the owl carefully keeps the stone near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully keeps the stone near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully hides the stone near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "finds",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl finds the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl discovers the ring. What happened? Give the main facts.",
+      "expected_short": "the owl finds the ring.",
+      "predicted_iid_short": "the owl finds the ring.",
+      "predicted_ood_short": "the owl takes the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully finds the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully finds the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully drops the ring near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "keeps",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare keeps the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare retains the ring. What happened? Give the main facts.",
+      "expected_short": "the hare keeps the ring.",
+      "predicted_iid_short": "the hare keeps the ring.",
+      "predicted_ood_short": "the hare hides the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully keeps the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the hare carefully keeps the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the hare carefully drops the ring near the river today."
+    },
+    {
+      "facts": [
+        "frog",
+        "hides",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the frog hides the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the frog conceals the key. What happened? Give the main facts.",
+      "expected_short": "the frog hides the key.",
+      "predicted_iid_short": "the frog hides the key.",
+      "predicted_ood_short": "the frog moves the key.",
+      "expected_detailed": "in the quiet garden, the frog carefully hides the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the frog carefully hides the key near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the frog carefully finds the key near the river today."
+    },
+    {
+      "facts": [
+        "bear",
+        "moves",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the bear moves the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the bear relocates the coin. What happened? Give the main facts.",
+      "expected_short": "the bear moves the coin.",
+      "predicted_iid_short": "the bear moves the coin.",
+      "predicted_ood_short": "the bear drops the coin.",
+      "expected_detailed": "in the quiet garden, the bear carefully moves the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the bear carefully moves the coin near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the bear carefully takes the coin near the river today."
+    },
+    {
+      "facts": [
+        "duck",
+        "hides",
+        "stone"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the duck hides the stone. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the duck conceals the stone. What happened? Give the main facts.",
+      "expected_short": "the duck hides the stone.",
+      "predicted_iid_short": "the duck hides the stone.",
+      "predicted_ood_short": "the duck drops the stone.",
+      "expected_detailed": "in the quiet garden, the duck carefully hides the stone near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the duck carefully hides the stone near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the duck carefully drops the stone near the river today."
+    },
+    {
+      "facts": [
+        "bear",
+        "moves",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the bear moves the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the bear relocates the map. What happened? Give the main facts.",
+      "expected_short": "the bear moves the map.",
+      "predicted_iid_short": "the bear moves the map.",
+      "predicted_ood_short": "the bear finds the map.",
+      "expected_detailed": "in the quiet garden, the bear carefully moves the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the bear carefully moves the map near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the bear carefully finds the map near the river today."
+    },
+    {
+      "facts": [
+        "bear",
+        "keeps",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the bear keeps the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the bear retains the coin. What happened? Give the main facts.",
+      "expected_short": "the bear keeps the coin.",
+      "predicted_iid_short": "the bear keeps the coin.",
+      "predicted_ood_short": "the bear finds the coin.",
+      "expected_detailed": "in the quiet garden, the bear carefully keeps the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the bear carefully keeps the coin near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the bear carefully takes the coin near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "hides",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox hides the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox conceals the map. What happened? Give the main facts.",
+      "expected_short": "the fox hides the map.",
+      "predicted_iid_short": "the fox hides the map.",
+      "predicted_ood_short": "the fox finds the map.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully hides the map near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully moves the map near the river today."
+    },
+    {
+      "facts": [
+        "duck",
+        "drops",
+        "book"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the duck drops the book. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the duck releases the book. What happened? Give the main facts.",
+      "expected_short": "the duck drops the book.",
+      "predicted_iid_short": "the duck drops the book.",
+      "predicted_ood_short": "the duck drops the book.",
+      "expected_detailed": "in the quiet garden, the duck carefully drops the book near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the duck carefully drops the book near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the duck carefully drops the book near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "takes",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare takes the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare grabs the coin. What happened? Give the main facts.",
+      "expected_short": "the hare takes the coin.",
+      "predicted_iid_short": "the hare takes the coin.",
+      "predicted_ood_short": "the hare takes the coin.",
+      "expected_detailed": "in the quiet garden, the hare carefully takes the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the hare carefully takes the coin near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the hare carefully hides the coin near the river today."
+    },
+    {
+      "facts": [
+        "frog",
+        "finds",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the frog finds the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the frog discovers the key. What happened? Give the main facts.",
+      "expected_short": "the frog finds the key.",
+      "predicted_iid_short": "the frog finds the key.",
+      "predicted_ood_short": "the frog moves the key.",
+      "expected_detailed": "in the quiet garden, the frog carefully finds the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the frog carefully finds the key near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the frog carefully finds the key near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "finds",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox finds the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox discovers the ring. What happened? Give the main facts.",
+      "expected_short": "the fox finds the ring.",
+      "predicted_iid_short": "the fox finds the ring.",
+      "predicted_ood_short": "the fox takes the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully finds the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully finds the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully moves the ring near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "keeps",
+        "book"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl keeps the book. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl retains the book. What happened? Give the main facts.",
+      "expected_short": "the owl keeps the book.",
+      "predicted_iid_short": "the owl keeps the book.",
+      "predicted_ood_short": "the owl takes the book.",
+      "expected_detailed": "in the quiet garden, the owl carefully keeps the book near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully keeps the book near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully hides the book near the river today."
+    },
+    {
+      "facts": [
+        "hare",
+        "finds",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the hare finds the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the hare discovers the key. What happened? Give the main facts.",
+      "expected_short": "the hare finds the key.",
+      "predicted_iid_short": "the hare finds the key.",
+      "predicted_ood_short": "the hare hides the key.",
+      "expected_detailed": "in the quiet garden, the hare carefully finds the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the hare carefully finds the key near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the hare carefully hides the key near the river today."
+    },
+    {
+      "facts": [
+        "duck",
+        "finds",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the duck finds the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the duck discovers the key. What happened? Give the main facts.",
+      "expected_short": "the duck finds the key.",
+      "predicted_iid_short": "the duck finds the key.",
+      "predicted_ood_short": "the duck finds the key.",
+      "expected_detailed": "in the quiet garden, the duck carefully finds the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the duck carefully finds the key near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the duck carefully finds the key near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "keeps",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl keeps the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl retains the coin. What happened? Give the main facts.",
+      "expected_short": "the owl keeps the coin.",
+      "predicted_iid_short": "the owl keeps the coin.",
+      "predicted_ood_short": "the owl takes the coin.",
+      "expected_detailed": "in the quiet garden, the owl carefully keeps the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully keeps the coin near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully takes the coin near the river today."
+    },
+    {
+      "facts": [
+        "duck",
+        "finds",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the duck finds the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the duck discovers the coin. What happened? Give the main facts.",
+      "expected_short": "the duck finds the coin.",
+      "predicted_iid_short": "the duck finds the coin.",
+      "predicted_ood_short": "the duck takes the coin.",
+      "expected_detailed": "in the quiet garden, the duck carefully finds the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the duck carefully finds the coin near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the duck carefully takes the coin near the river today."
+    },
+    {
+      "facts": [
+        "bear",
+        "finds",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the bear finds the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the bear discovers the map. What happened? Give the main facts.",
+      "expected_short": "the bear finds the map.",
+      "predicted_iid_short": "the bear finds the map.",
+      "predicted_ood_short": "the bear finds the map.",
+      "expected_detailed": "in the quiet garden, the bear carefully finds the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the bear carefully finds the map near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the bear carefully finds the map near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "moves",
+        "book"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl moves the book. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl relocates the book. What happened? Give the main facts.",
+      "expected_short": "the owl moves the book.",
+      "predicted_iid_short": "the owl moves the book.",
+      "predicted_ood_short": "the owl takes the book.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the book near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully moves the book near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully hides the book near the river today."
+    },
+    {
+      "facts": [
+        "fox",
+        "finds",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the fox finds the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the fox discovers the coin. What happened? Give the main facts.",
+      "expected_short": "the fox finds the coin.",
+      "predicted_iid_short": "the fox finds the coin.",
+      "predicted_ood_short": "the fox takes the coin.",
+      "expected_detailed": "in the quiet garden, the fox carefully finds the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the fox carefully finds the coin near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the fox carefully takes the coin near the river today."
+    },
+    {
+      "facts": [
+        "owl",
+        "drops",
+        "ring"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the owl drops the ring. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the owl releases the ring. What happened? Give the main facts.",
+      "expected_short": "the owl drops the ring.",
+      "predicted_iid_short": "the owl drops the ring.",
+      "predicted_ood_short": "the owl hides the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully drops the ring near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the owl carefully drops the ring near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the owl carefully drops the ring near the river today."
+    },
+    {
+      "facts": [
+        "frog",
+        "keeps",
+        "key"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the frog keeps the key. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the frog retains the key. What happened? Give the main facts.",
+      "expected_short": "the frog keeps the key.",
+      "predicted_iid_short": "the frog keeps the key.",
+      "predicted_ood_short": "the frog moves the key.",
+      "expected_detailed": "in the quiet garden, the frog carefully keeps the key near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the frog carefully keeps the key near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the frog carefully finds the key near the river today."
+    },
+    {
+      "facts": [
+        "bear",
+        "drops",
+        "coin"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the bear drops the coin. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the bear releases the coin. What happened? Give the main facts.",
+      "expected_short": "the bear drops the coin.",
+      "predicted_iid_short": "the bear drops the coin.",
+      "predicted_ood_short": "the bear hides the coin.",
+      "expected_detailed": "in the quiet garden, the bear carefully drops the coin near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the bear carefully drops the coin near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the bear carefully hides the coin near the river today."
+    },
+    {
+      "facts": [
+        "frog",
+        "takes",
+        "map"
+      ],
+      "input_iid": "Read the following scene carefully. Near the river, the frog takes the map. What happened? Give the main facts.",
+      "input_ood": "Read the following scene carefully. Near the river, the frog grabs the map. What happened? Give the main facts.",
+      "expected_short": "the frog takes the map.",
+      "predicted_iid_short": "the frog takes the map.",
+      "predicted_ood_short": "the frog finds the map.",
+      "expected_detailed": "in the quiet garden, the frog carefully takes the map near the river today.",
+      "predicted_iid_detailed": "in the quiet garden, the frog carefully takes the map near the river today.",
+      "predicted_ood_detailed": "in the quiet garden, the frog carefully finds the map near the river today."
+    }
+  ]
+}

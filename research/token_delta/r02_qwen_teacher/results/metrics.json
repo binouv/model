@@ -1,0 +1,298 @@
+{
+  "experiment": "r02_frozen_pretrained_qwen3_0.6b_latent_plan",
+  "status": "completed",
+  "model": "Qwen/Qwen3-0.6B",
+  "revision": "167b8104f88905a951069f5f95f9776908da5f68",
+  "seed": 20261012,
+  "train_facts": 168,
+  "test_facts": 48,
+  "train_verb_forms": "ACTIONS",
+  "ood_verb_forms": [
+    "discovers",
+    "relocates",
+    "retains",
+    "grabs",
+    "releases",
+    "conceals"
+  ],
+  "teacher": {
+    "model_id": "Qwen/Qwen3-0.6B",
+    "revision": "167b8104f88905a951069f5f95f9776908da5f68",
+    "dtype": "float32",
+    "hidden_layer": "last",
+    "pooling": "last nonpadding token",
+    "load_seconds": 18.602856478000007,
+    "forward_seconds": 87.25117760100011,
+    "n_questions": 264,
+    "total_prompt_tokens": 9521,
+    "seconds_per_question": 0.33049688485227313,
+    "feature_shape": [
+      264,
+      1024
+    ],
+    "feature_mean": 0.20130398869514465,
+    "feature_std": 4.653653621673584
+  },
+  "teacher_feature_sha256": "e0add6315af0ac9f344c90d7339881d8711b49da28576eaae8e5e05055f8ff96",
+  "feature_file": {
+    "name": "qwen_prompt_features.pt",
+    "bytes": 1117828,
+    "sha256": "e0add6315af0ac9f344c90d7339881d8711b49da28576eaae8e5e05055f8ff96"
+  },
+  "systems": {
+    "qwen": {
+      "iid": {
+        "short": {
+          "exact": 0.0,
+          "semantic_slots": 0.18055555555555555,
+          "exact_count": 0,
+          "examples": 48
+        },
+        "detailed": {
+          "exact": 0.0,
+          "semantic_slots": 0.1875,
+          "exact_count": 0,
+          "examples": 48
+        },
+        "paired_exact": 0.0,
+        "paired_exact_count": 0
+      },
+      "ood_unseen_verbs": {
+        "short": {
+          "exact": 0.0,
+          "semantic_slots": 0.18055555555555555,
+          "exact_count": 0,
+          "examples": 48
+        },
+        "detailed": {
+          "exact": 0.0,
+          "semantic_slots": 0.1875,
+          "exact_count": 0,
+          "examples": 48
+        },
+        "paired_exact": 0.0,
+        "paired_exact_count": 0
+      },
+      "zero": {
+        "short": {
+          "exact": 0.0,
+          "semantic_slots": 0.0,
+          "exact_count": 0,
+          "examples": 48
+        },
+        "detailed": {
+          "exact": 0.0,
+          "semantic_slots": 0.0,
+          "exact_count": 0,
+          "examples": 48
+        },
+        "paired_exact": 0.0,
+        "paired_exact_count": 0
+      },
+      "shuffled": {
+        "short": {
+          "exact": 0.0,
+          "semantic_slots": 0.18055555555555555,
+          "exact_count": 0,
+          "examples": 48
+        },
+        "detailed": {
+          "exact": 0.0,
+          "semantic_slots": 0.1875,
+          "exact_count": 0,
+          "examples": 48
+        },
+        "paired_exact": 0.0,
+        "paired_exact_count": 0
+      },
+      "training": {
+        "training_seconds": 8.687617834000008,
+        "trace": [
+          {
+            "step": 100,
+            "loss": 0.4628556966781616
+          },
+          {
+            "step": 200,
+            "loss": 0.440017431974411
+          },
+          {
+            "step": 300,
+            "loss": 0.4571819305419922
+          },
+          {
+            "step": 400,
+            "loss": 0.4329383969306946
+          },
+          {
+            "step": 500,
+            "loss": 0.4362114369869232
+          },
+          {
+            "step": 600,
+            "loss": 0.4859035015106201
+          },
+          {
+            "step": 700,
+            "loss": 0.4734785556793213
+          },
+          {
+            "step": 800,
+            "loss": 0.44339820742607117
+          }
+        ],
+        "steps": 800,
+        "batch": 48,
+        "parameters": {
+          "bridge": 105104,
+          "renderer": 34544,
+          "total": 139648
+        },
+        "optimizer": "AdamW",
+        "learning_rate": 0.004
+      },
+      "checkpoint": {
+        "path": "qwen_student_full_checkpoint.pt",
+        "bytes": 1710259,
+        "sha256": "f26d6dfc882a8a6ad67a601e56f38af43f5be799a9c1db3051699a7e0bedd5df"
+      },
+      "timing_single_cpu_ms": {
+        "plan": 0.07060200002229067,
+        "render_short": 1.4687469999898894
+      }
+    },
+    "hash_bow": {
+      "iid": {
+        "short": {
+          "exact": 1.0,
+          "semantic_slots": 1.0,
+          "exact_count": 48,
+          "examples": 48
+        },
+        "detailed": {
+          "exact": 1.0,
+          "semantic_slots": 1.0,
+          "exact_count": 48,
+          "examples": 48
+        },
+        "paired_exact": 1.0,
+        "paired_exact_count": 48
+      },
+      "ood_unseen_verbs": {
+        "short": {
+          "exact": 0.10416666666666667,
+          "semantic_slots": 0.7013888888888888,
+          "exact_count": 5,
+          "examples": 48
+        },
+        "detailed": {
+          "exact": 0.14583333333333334,
+          "semantic_slots": 0.7152777777777778,
+          "exact_count": 7,
+          "examples": 48
+        },
+        "paired_exact": 0.0625,
+        "paired_exact_count": 3
+      },
+      "zero": {
+        "short": {
+          "exact": 0.0,
+          "semantic_slots": 0.0,
+          "exact_count": 0,
+          "examples": 48
+        },
+        "detailed": {
+          "exact": 0.0,
+          "semantic_slots": 0.0,
+          "exact_count": 0,
+          "examples": 48
+        },
+        "paired_exact": 0.0,
+        "paired_exact_count": 0
+      },
+      "shuffled": {
+        "short": {
+          "exact": 0.0,
+          "semantic_slots": 0.1527777777777778,
+          "exact_count": 0,
+          "examples": 48
+        },
+        "detailed": {
+          "exact": 0.0,
+          "semantic_slots": 0.1527777777777778,
+          "exact_count": 0,
+          "examples": 48
+        },
+        "paired_exact": 0.0,
+        "paired_exact_count": 0
+      },
+      "training": {
+        "training_seconds": 8.574972298000006,
+        "trace": [
+          {
+            "step": 100,
+            "loss": 0.356690913438797
+          },
+          {
+            "step": 200,
+            "loss": 0.10165926814079285
+          },
+          {
+            "step": 300,
+            "loss": 0.011226224713027477
+          },
+          {
+            "step": 400,
+            "loss": 0.004587752278894186
+          },
+          {
+            "step": 500,
+            "loss": 0.0026165160816162825
+          },
+          {
+            "step": 600,
+            "loss": 0.001843164092861116
+          },
+          {
+            "step": 700,
+            "loss": 0.0013324852334335446
+          },
+          {
+            "step": 800,
+            "loss": 0.001001027412712574
+          }
+        ],
+        "steps": 800,
+        "batch": 48,
+        "parameters": {
+          "bridge": 105104,
+          "renderer": 34544,
+          "total": 139648
+        },
+        "optimizer": "AdamW",
+        "learning_rate": 0.004
+      },
+      "checkpoint": {
+        "path": "hash_bow_student_full_checkpoint.pt",
+        "bytes": 1710543,
+        "sha256": "cdcb057e1e7b065e9f6d56899455aa7cba20322657083b0c3b768e62f6400325"
+      },
+      "timing_single_cpu_ms": {
+        "plan": 0.07110300001045289,
+        "render_short": 1.4772430000107306
+      }
+    }
+  },
+  "assess_positive_transfer": "qwen OOD paired semantic > hash_bow by >0.10; evaluate actual values, no forced result",
+  "torch": "2.10.0+cpu",
+  "numpy": "2.3.5",
+  "python": "3.12.15",
+  "limitations": [
+    "Synthetic English scene description with explicit fact triples, not free open-domain answering.",
+    "Frozen teacher passes only prompt; no proof teacher has precomputed complete answer.",
+    "Both student heads generated tokens autoregressively.",
+    "Not lossless or distribution-exact relative to Qwen.",
+    "Inference wall time excludes initial teacher weight load, which is recorded separately.",
+    "No 20K context, multi-GPU or Qwen27B speed benchmark."
+  ]
+}
