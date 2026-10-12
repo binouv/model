@@ -48,6 +48,13 @@ For a clean NVIDIA install, `nvidia-smi` should show the RTX 3090. The PyTorch w
 
 The local Git push from `NeoXider` returned HTTP 403 because that account lacks write access to `binouv/model`; a separate GitHub connector authorized as `binouv` published the H1 **source** directly. The original exact smoke JSON remains at local commit `72922ba` until published through authorized credentials or fork/PR.
 
+
+## H1 completed negative; H1b diagnosis (2026-10-12)
+
+The RTX 3090 operator reports a fully completed frozen-head H1: **Qwen3.5-4B 50/300 (16.7%)** on strict two-digit greedy questions against the preregistered **80%** head gate; the best probes also failed the >=70% accuracy and baseline-superiority gates. **H1 is NOT_CONFIRMED**, not merely incomplete. This outcome is [documented separately](h1/H1_RESULT_REPORTED_20261012.md) as an **external user-reported result** pending synchronization of their exact 33 checkpoints and full raw predictions from local commit `c8e3641`. Do not rewrite the original [H1 preregistration](h1/H1_PREREGISTRATION.md).
+
+[H1b — preregistered fresh-data diagnosis](h1b_diagnosis/PREREGISTRATION.md) runs **128 new examples disjoint from all original H1 operands** and tests strict-format failures, 12 vs 96 token caps, 384-token thinking mode, and an easier one-step control. [Execution guide](h1b_diagnosis/README.md). The H1b CPU tests passed (14/14); **no H1b RTX3090 results have been collected yet**. H2 remains untested, and must not be presented as verified until the head can supply correct plans at a competitive quality threshold.
+
 ## What to run after smoke
 
 H1 is the first science experiment. Prepare disjoint programmatic RU/EN arithmetic and simple code-output tasks with true answers verified by a reference interpreter, run frozen Qwen3.5-4B forward and save last/mid-layer states; train linear/MLP probes against the **oracle answer** on train and evaluate heldout and hash-BOW/label-shuffle controls. Do **not** first train the 0.8B renderer to generate arbitrary text, or you risk repeating R02's failure without learning whether the head possesses a complete plan. H1 must pass before a bridge-trained student can be interpreted as receiving genuine resolved answers.
