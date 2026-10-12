@@ -1,0 +1,14 @@
+{
+  "status": "completed_cpu_unit_tests",
+  "experiment": "r04_head_decides",
+  "scientific_hypotheses_tested": 0,
+  "gpu_model_loaded": false,
+  "suite": "python -m unittest discover -s tests -v",
+  "tests_run": 5,
+  "failures": 0,
+  "errors": 0,
+  "python": "3.13.5",
+  "torch": "2.10.0+cpu",
+  "hardware": "authoring CPU sandbox, not user RTX3090",
+  "comment": "Functional bridge and loss tests only. No teacher/writer HF downloads or GPU tests."
+}
