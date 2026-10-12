@@ -1,0 +1,47 @@
+{
+  "experiment_id": "token_delta_r02_qwen_teacher",
+  "registration_date": "2026-10-12",
+  "pretrained_teacher": {
+    "model": "Qwen/Qwen3-0.6B",
+    "revision": "167b8104f88905a951069f5f95f9776908da5f68",
+    "frozen": true,
+    "dtype": "float32",
+    "feature": "final_hidden_state_last_prompt_token",
+    "feature_size": 1024
+  },
+  "dataset": {
+    "task": "English synthetic scene questions",
+    "subjects": 6,
+    "actions": 6,
+    "objects": 6,
+    "train_combinations": 168,
+    "test_combinations": 48,
+    "ood": "heldout action paraphrases",
+    "seed": 20261012,
+    "question_style_not_provided_to_teacher": true
+  },
+  "student": {
+    "bridge": "LayerNorm(1024),Linear(1024,96),SiLU,Linear(96,48),Tanh",
+    "latent_slots": 1,
+    "latent_dim": 48,
+    "text_decoder": "Embedding(32,24),GRUCell(hidden=64),autoregressive,conditioned_on_latent_and_style",
+    "teacher_forward_calls_per_answer": 1,
+    "output_styles": [
+      "short",
+      "detailed"
+    ],
+    "lr": 0.004,
+    "steps": 800,
+    "batch": 48,
+    "optimizer": "AdamW"
+  },
+  "controls": [
+    "matched_parameter_count_hashed_bow_question_encoding",
+    "zero_latent",
+    "shuffled_latent",
+    "heldout_combinations",
+    "OOD_unseen_verb_synonyms"
+  ],
+  "success_not_preassumed": true,
+  "readme": "Do not claim real 27B or 20K-context acceleration from this experiment."
+}
