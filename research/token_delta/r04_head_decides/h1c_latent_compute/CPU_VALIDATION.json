@@ -1,0 +1,22 @@
+{
+  "status": "cpu_mechanics_validated_no_pretrained_gpu_result",
+  "experiment": "R04-H1c",
+  "date": "2026-10-12",
+  "tests": 11,
+  "failures": 0,
+  "errors": 0,
+  "python": "3.13.5",
+  "torch": "2.10.0+cpu",
+  "data_count": 1700,
+  "train": 1200,
+  "val": 200,
+  "test": 300,
+  "dataset_sha256_canonical": "ac764eed8a0e06486dee8452219293941e208618fd95cbfa7495395f71184af7",
+  "jsonl_sha256": "cf50d791033ffce7d254a3e86d51a4a3d816696b7b9b701f556396fe4ebb9f41",
+  "control": "verified no group overlap with preregistered 1700 H1 and 128 H1b",
+  "adapter_parameters_qwen_width2560_hidden96": 308788,
+  "adapter_parameters_structured_width66_hidden96": 64376,
+  "gpu_ran": false,
+  "scientific_hypotheses_tested": 0,
+  "notes": "CPU validation verifies mechanics and checkpoint replay only; no learned H1c outcomes or speed claims."
+}

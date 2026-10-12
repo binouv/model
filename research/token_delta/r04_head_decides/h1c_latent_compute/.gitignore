@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+cache/
+results/tmp/
+results/*.partial
+# Finished, checksum-verified metrics and real probe weights are intentionally
+# NOT ignored. Publish only completed runs and check each file <90,000,000 bytes.

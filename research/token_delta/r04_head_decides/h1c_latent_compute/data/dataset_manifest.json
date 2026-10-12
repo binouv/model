@@ -1,0 +1,17 @@
+{
+  "status": "oracle_data_only_no_model_results",
+  "seed": 20261014,
+  "count": 1700,
+  "splits": {
+    "train": 1200,
+    "val": 200,
+    "test": 300
+  },
+  "dataset_sha256_canonical": "ac764eed8a0e06486dee8452219293941e208618fd95cbfa7495395f71184af7",
+  "file_sha256": "cf50d791033ffce7d254a3e86d51a4a3d816696b7b9b701f556396fe4ebb9f41",
+  "excluded_splits": [
+    "all H1 1700",
+    "all H1b 128"
+  ],
+  "teacher_weights_revision": "c7429d5a8ed57f4a9cfdaf1af76a8943eba0ae97"
+}
