@@ -1,0 +1,155 @@
+{
+  "source": "full 48-checkpoint replay",
+  "iid": {
+    "kind": "iid",
+    "exact_pairs": 48,
+    "total": 48,
+    "examples": [
+      {
+        "experiment": "R03 frozen real Qwen3-0.6B latent",
+        "teacher_forward_calls_in_demo": 0,
+        "precomputed_frozen_teacher_question": "Read the following scene carefully. Near the river, the hare hides the stone. What happened? Give the main facts.",
+        "checkpoint_sha256": "9017d0fa27090d65d2100d9a37500c6bfe832038fe1faf73eb4e20e52f5bb632",
+        "latent_dimensions": 48,
+        "latent_built_once": true,
+        "predicted_facts": [
+          "hare",
+          "hides",
+          "stone"
+        ],
+        "gold_facts": [
+          "hare",
+          "hides",
+          "stone"
+        ],
+        "short": "the hare hides the stone.",
+        "detailed": "in the quiet garden, the hare carefully hides the stone near the river today.",
+        "gold_short": "the hare hides the stone.",
+        "gold_detailed": "in the quiet garden, the hare carefully hides the stone near the river today.",
+        "both_exact": true
+      },
+      {
+        "experiment": "R03 frozen real Qwen3-0.6B latent",
+        "teacher_forward_calls_in_demo": 0,
+        "precomputed_frozen_teacher_question": "Read the following scene carefully. Near the river, the duck hides the map. What happened? Give the main facts.",
+        "checkpoint_sha256": "9017d0fa27090d65d2100d9a37500c6bfe832038fe1faf73eb4e20e52f5bb632",
+        "latent_dimensions": 48,
+        "latent_built_once": true,
+        "predicted_facts": [
+          "duck",
+          "hides",
+          "map"
+        ],
+        "gold_facts": [
+          "duck",
+          "hides",
+          "map"
+        ],
+        "short": "the duck hides the map.",
+        "detailed": "in the quiet garden, the duck carefully hides the map near the river today.",
+        "gold_short": "the duck hides the map.",
+        "gold_detailed": "in the quiet garden, the duck carefully hides the map near the river today.",
+        "both_exact": true
+      },
+      {
+        "experiment": "R03 frozen real Qwen3-0.6B latent",
+        "teacher_forward_calls_in_demo": 0,
+        "precomputed_frozen_teacher_question": "Read the following scene carefully. Near the river, the fox hides the coin. What happened? Give the main facts.",
+        "checkpoint_sha256": "9017d0fa27090d65d2100d9a37500c6bfe832038fe1faf73eb4e20e52f5bb632",
+        "latent_dimensions": 48,
+        "latent_built_once": true,
+        "predicted_facts": [
+          "fox",
+          "hides",
+          "coin"
+        ],
+        "gold_facts": [
+          "fox",
+          "hides",
+          "coin"
+        ],
+        "short": "the fox hides the coin.",
+        "detailed": "in the quiet garden, the fox carefully hides the coin near the river today.",
+        "gold_short": "the fox hides the coin.",
+        "gold_detailed": "in the quiet garden, the fox carefully hides the coin near the river today.",
+        "both_exact": true
+      }
+    ]
+  },
+  "ood": {
+    "kind": "ood",
+    "exact_pairs": 30,
+    "total": 48,
+    "examples": [
+      {
+        "experiment": "R03 frozen real Qwen3-0.6B latent",
+        "teacher_forward_calls_in_demo": 0,
+        "precomputed_frozen_teacher_question": "Read the following scene carefully. Near the river, the hare conceals the stone. What happened? Give the main facts.",
+        "checkpoint_sha256": "9017d0fa27090d65d2100d9a37500c6bfe832038fe1faf73eb4e20e52f5bb632",
+        "latent_dimensions": 48,
+        "latent_built_once": true,
+        "predicted_facts": [
+          "hare",
+          "hides",
+          "stone"
+        ],
+        "gold_facts": [
+          "hare",
+          "hides",
+          "stone"
+        ],
+        "short": "the hare hides the stone.",
+        "detailed": "in the quiet garden, the hare carefully hides the stone near the river today.",
+        "gold_short": "the hare hides the stone.",
+        "gold_detailed": "in the quiet garden, the hare carefully hides the stone near the river today.",
+        "both_exact": true
+      },
+      {
+        "experiment": "R03 frozen real Qwen3-0.6B latent",
+        "teacher_forward_calls_in_demo": 0,
+        "precomputed_frozen_teacher_question": "Read the following scene carefully. Near the river, the duck conceals the map. What happened? Give the main facts.",
+        "checkpoint_sha256": "9017d0fa27090d65d2100d9a37500c6bfe832038fe1faf73eb4e20e52f5bb632",
+        "latent_dimensions": 48,
+        "latent_built_once": true,
+        "predicted_facts": [
+          "duck",
+          "hides",
+          "map"
+        ],
+        "gold_facts": [
+          "duck",
+          "hides",
+          "map"
+        ],
+        "short": "the duck keeps the map.",
+        "detailed": "in the quiet garden, the duck carefully hides the map near the river today.",
+        "gold_short": "the duck hides the map.",
+        "gold_detailed": "in the quiet garden, the duck carefully hides the map near the river today.",
+        "both_exact": false
+      },
+      {
+        "experiment": "R03 frozen real Qwen3-0.6B latent",
+        "teacher_forward_calls_in_demo": 0,
+        "precomputed_frozen_teacher_question": "Read the following scene carefully. Near the river, the fox conceals the coin. What happened? Give the main facts.",
+        "checkpoint_sha256": "9017d0fa27090d65d2100d9a37500c6bfe832038fe1faf73eb4e20e52f5bb632",
+        "latent_dimensions": 48,
+        "latent_built_once": true,
+        "predicted_facts": [
+          "fox",
+          "keeps",
+          "coin"
+        ],
+        "gold_facts": [
+          "fox",
+          "hides",
+          "coin"
+        ],
+        "short": "the fox keeps the coin.",
+        "detailed": "in the quiet garden, the fox carefully keeps the coin near the river today.",
+        "gold_short": "the fox hides the coin.",
+        "gold_detailed": "in the quiet garden, the fox carefully hides the coin near the river today.",
+        "both_exact": false
+      }
+    ]
+  }
+}
