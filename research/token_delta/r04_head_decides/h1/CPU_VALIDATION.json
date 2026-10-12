@@ -1,0 +1,20 @@
+{
+  "status": "completed_cpu_only_engineering_tests_not_h1",
+  "hardware": "authoring CPU container (no NVIDIA GPU)",
+  "python": "3.13.5",
+  "pytorch": "2.10.0+cpu",
+  "unit_tests": 8,
+  "unit_failures": 0,
+  "unit_errors": 0,
+  "generated_tasks": 1700,
+  "expected_train_val_test": [
+    1200,
+    200,
+    300
+  ],
+  "oracle_verified_via_fixed_python_program": true,
+  "dataset_manifest_sha": "245cd44c8fbb6f10188079c9960c5093015622659f11a7468c166eda38916899",
+  "probe_fake_tensor_pipeline": "completed_path_test_no_scientific_metrics",
+  "gpu_h1_performed": false,
+  "note": "The synthetic random-feature software path was run with 2 training steps per model to validate implementation, NOT a preregistered H1 experiment; those trial scores are excluded."
+}

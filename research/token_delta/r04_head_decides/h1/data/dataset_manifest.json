@@ -1,0 +1,13 @@
+{
+  "status": "generated_oracle_data_not_model_results",
+  "seed": 20261012,
+  "count": 1700,
+  "splits": {
+    "train": 1200,
+    "val": 200,
+    "test": 300
+  },
+  "dataset_sha256_canonical": "245cd44c8fbb6f10188079c9960c5093015622659f11a7468c166eda38916899",
+  "file_sha256": "6f7dbd72f87a78cd6ad4f0314d71e8a6d7f0c1e4bbcb0838f533e32b6e8c374f",
+  "output_tokenization_unknown_until_teacher_loaded": true
+}

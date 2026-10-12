@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.log
+# Intermediate H1 model features and incomplete shards: preserve locally.
+cache/
+# Raw checkpoints and metrics must be published ONLY after validation, via explicit git add -f.
+results/
+# The canonical generator and hash manifest are committed; the 1700 raw rows can be regenerated.
+data/h1_dataset.jsonl
