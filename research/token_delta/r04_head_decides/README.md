@@ -63,7 +63,7 @@ The RTX 3090 operator reports a fully completed frozen-head H1: **Qwen3.5-4B 50/
 
 ## After H1/H1b/H1c: test original H2–H4 without changing gates
 
-**[New H2 transmission protocol](h2_bridge_transfer/PREREGISTRATION.md)** — frozen Qwen3.5-4B/0.8B, no question or style leaked to writer, fresh disjoint dataset, original H2 gates unchanged. Oracle-plan is an engineering upper-bound and no H2 GPU scores exist.  
+**[H2 executable GPU source + runbook](h2_bridge_transfer/README.md)** — 12/12 CPU unit tests, new disjoint dataset and SHA locked, staged/pre-registered head→writer transfer with no question/style leakage. [Original H2 scientific preregistration](h2_bridge_transfer/PREREGISTRATION.md) retained unchanged. — frozen Qwen3.5-4B/0.8B, no question or style leaked to writer, fresh disjoint dataset, original H2 gates unchanged. Oracle-plan is an engineering upper-bound and no H2 GPU scores exist.  
 **[Transfer original local commits / raw checkpoints](LOCAL_ARTIFACT_IMPORT_GUIDE.md)** — NeoXider fork branch publication instructions and exact missing H1/H1b/H1c artifacts.
 
 
