@@ -1,0 +1,113 @@
+name: R03 Qwen semantic bottleneck probes
+on:
+  push:
+    branches: [main]
+    paths: ['research/token_delta/r03_semantic_bottleneck/RUN_TRIGGER.txt']
+permissions:
+  contents: write
+concurrency:
+  group: r03-qwen-probe-verified
+  cancel-in-progress: false
+jobs:
+  train-verify-publish:
+    if: github.repository == 'binouv/model'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      TOKEN_DELTA_R03_RESULTS: ../results
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - name: Checkout source and actual R02 Qwen features
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned CPU stack
+        run: |
+          set -euo pipefail
+          python -m pip install -q --index-url https://download.pytorch.org/whl/cpu torch==2.10.0
+          python -m pip install -q numpy==2.3.5
+      - name: Verify official teacher cache and scientific protocol
+        run: |
+          set -euo pipefail
+          cd research/token_delta/r03_semantic_bottleneck/src
+          python -m unittest -v test_semantic_bottleneck
+      - name: Train semantic probes and dual-style student from real frozen Qwen vectors
+        run: |
+          set -euo pipefail
+          python research/token_delta/r03_semantic_bottleneck/src/probe_and_decode.py --out research/token_delta/r03_semantic_bottleneck/results --probe-steps 700 --joint-steps 900
+      - name: Independent checkpoint reload and metrics tests
+        run: |
+          set -euo pipefail
+          cd research/token_delta/r03_semantic_bottleneck/src
+          python -m unittest -v test_semantic_bottleneck
+          cd ../../../..
+          python - <<'PY'
+          import hashlib,json,math,torch
+          from pathlib import Path
+          folder=Path("research/token_delta/r03_semantic_bottleneck/results")
+          metrics=json.loads((folder/"metrics.json").read_text())
+          assert metrics["status"]=="completed"
+          assert metrics["source_cache_sha256"]=="e0add6315af0ac9f344c90d7339881d8711b49da28576eaae8e5e05055f8ff96"
+          for name,group in metrics["probes"].items():
+              p=folder/group["checkpoint"]["path"]
+              assert p.is_file() and hashlib.sha256(p.read_bytes()).hexdigest()==group["checkpoint"]["sha256"]
+              loaded=torch.load(p,weights_only=False,map_location="cpu")
+              assert "optimizer" in loaded and "student" in loaded
+              for type_ in ("heldout","ood_synonyms"):
+                  vals=group[type_]
+                  assert 0<=vals["full_triple"]<=1 and 0<=vals["mean_slots"]<=1
+          for name,group in metrics["joint"].items():
+              p=folder/group["checkpoint"]["path"]
+              assert p.is_file() and hashlib.sha256(p.read_bytes()).hexdigest()==group["checkpoint"]["sha256"]
+              for field in ("heldout","ood_synonyms","zero_latent","shuffled_latent"):
+                  assert 0<=group[field]["paired_exact"]<=1
+          print("R03 VERIFIED")
+          print(json.dumps({n:{"heldout":x["heldout"]["paired_exact"],"ood":x["ood_synonyms"]["paired_exact"]}
+                            for n,x in metrics["joint"].items()},indent=2))
+          PY
+      - name: Write SHA manifest and publish binary weights
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,platform,torch
+          from pathlib import Path
+          base=Path("research/token_delta/r03_semantic_bottleneck/results")
+          tracked=list(base.glob("*.pt"))+[base/"metrics.json",base/"predictions.json"]
+          artifacts=[]
+          for p in tracked:
+              assert p.stat().st_size<90000000
+              artifacts.append({"name":p.name,"bytes":p.stat().st_size,
+                                "sha256":hashlib.sha256(p.read_bytes()).hexdigest()})
+          (base/"CHECKPOINT_MANIFEST.json").write_text(json.dumps(
+            {"status":"completed_verified","experiment":"R03","original_qwen_weights":"not_republished",
+             "r02_features_provenance_sha256":"e0add6315af0ac9f344c90d7339881d8711b49da28576eaae8e5e05055f8ff96",
+             "python":platform.python_version(),"torch":torch.__version__,
+             "artifacts":artifacts},indent=2)+"\n")
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/token_delta/r03_semantic_bottleneck/results
+          git commit -m 'experiment(latent-r03): publish supervised semantic probes and verified weights'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
+      - name: Save diagnostic artifacts on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: latent-r03-cpu
+          path: research/token_delta/r03_semantic_bottleneck/results/
+          if-no-files-found: ignore
+          retention-days: 7
