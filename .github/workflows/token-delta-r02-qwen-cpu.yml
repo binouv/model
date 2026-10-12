@@ -1,0 +1,121 @@
+name: R02 frozen Qwen latent CPU
+on:
+  push:
+    branches: [main]
+    paths: ['research/token_delta/r02_qwen_teacher/RUN_TRIGGER.txt']
+permissions:
+  contents: write
+concurrency:
+  group: r02-qwen-latent-verified
+  cancel-in-progress: false
+jobs:
+  train-verify-publish:
+    if: github.repository == 'binouv/model'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      PYTHONUNBUFFERED: '1'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      HF_HUB_DISABLE_XET: '1'
+      HF_HOME: /tmp/token_delta_hf
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      TOKEN_DELTA_R02_RESULTS: ../results
+    steps:
+      - name: Checkout exact source commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Python CPU environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install -q --upgrade pip
+          python -m pip install -q --index-url https://download.pytorch.org/whl/cpu torch==2.10.0
+          python -m pip install -q numpy==2.3.5 transformers==4.57.1 accelerate==1.11.0 huggingface_hub==0.36.0 safetensors
+      - name: Validate protocols without model
+        run: |
+          set -euo pipefail
+          cd research/token_delta/r02_qwen_teacher/src
+          python -m unittest -v test_real_qwen_latent
+      - name: Encode prompts with real frozen Qwen, train two tiny students
+        run: |
+          set -euo pipefail
+          python research/token_delta/r02_qwen_teacher/src/real_qwen_latent.py --out research/token_delta/r02_qwen_teacher/results --steps 800 --batch 48 --teacher-batch 4 --threads 2
+      - name: Test full reloaded artifacts and scores
+        run: |
+          set -euo pipefail
+          cd research/token_delta/r02_qwen_teacher/src
+          python -m unittest -v test_real_qwen_latent
+          cd ../../../..
+          python - <<'PY'
+          import hashlib,json,math,torch
+          from pathlib import Path
+          p=Path('research/token_delta/r02_qwen_teacher/results')
+          r=json.loads((p/'metrics.json').read_text())
+          assert r['status']=='completed' and r['model']=='Qwen/Qwen3-0.6B'
+          assert r['teacher']['feature_shape']==[264,1024]
+          assert r['train_facts']==168 and r['test_facts']==48
+          for name in ('qwen','hash_bow'):
+              v=r['systems'][name]
+              for key in ('iid','ood_unseen_verbs','zero','shuffled'):
+                  e=v[key]
+                  for field in ('paired_exact','short','detailed'):
+                      score=e[field] if field=='paired_exact' else e[field]['semantic_slots']
+                      assert isinstance(score,(int,float)) and math.isfinite(score) and 0<=score<=1
+              ckpt=p/v['checkpoint']['path']
+              assert ckpt.is_file() and 1000<ckpt.stat().st_size<90000000
+              assert hashlib.sha256(ckpt.read_bytes()).hexdigest()==v['checkpoint']['sha256']
+              raw=torch.load(ckpt,weights_only=False,map_location='cpu')
+              assert 'optimizer_state_dict' in raw and 'student_state_dict' in raw
+          assert hashlib.sha256((p/'qwen_prompt_features.pt').read_bytes()).hexdigest()==r['teacher_feature_sha256']
+          print('SCORES:',json.dumps({n:{k:r['systems'][n][k]['paired_exact']
+                     for k in ['iid','ood_unseen_verbs','zero','shuffled']}
+                     for n in ['qwen','hash_bow']},indent=2))
+          PY
+      - name: Write exact SHA256 artifact manifest
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,platform,torch,numpy
+          from pathlib import Path
+          root=Path('research/token_delta/r02_qwen_teacher/results')
+          names=['qwen_prompt_features.pt','qwen_student_full_checkpoint.pt','hash_bow_student_full_checkpoint.pt','metrics.json','predictions.json']
+          items=[]
+          for n in names:
+              p=root/n
+              assert p.is_file() and p.stat().st_size<90000000
+              items.append({'path':str(p),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+          receipt={'status':'completed_verified','experiment':'R02','source_commit':'${{ github.sha }}',
+              'teacher':'Qwen/Qwen3-0.6B','pretrained_teacher_stored':False,
+              'python':platform.python_version(),'torch':torch.__version__,
+              'numpy':numpy.__version__,'artifacts':items}
+          (root/'CHECKPOINT_MANIFEST.json').write_text(json.dumps(receipt,indent=2)+'\n')
+          PY
+      - name: Push measured output and actual adapter weights (no force)
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/token_delta/r02_qwen_teacher/results
+          git commit -m 'experiment(latent-r02): verified Qwen features, adapter weights and comparisons'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
+      - name: Retain diagnostic artifacts if CI fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r02-qwen-cpu
+          path: research/token_delta/r02_qwen_teacher/results/
+          if-no-files-found: ignore
+          retention-days: 7
