@@ -1,0 +1,2 @@
+2026-10-12
+Run verified R02 experiment with official pretrained Qwen3-0.6B in isolated GitHub CPU environment. Preserve failures; no forced outcomes.
