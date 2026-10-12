@@ -1,0 +1,18 @@
+{
+  "status": "completed_cpu_protocol_validation_only",
+  "date": "2026-10-12",
+  "experiment": "R04 H1b new diagnostic after failed original H1",
+  "tests_passed": 14,
+  "tests_failed": 0,
+  "command": "python -m unittest discover -s h1b_diagnosis/tests -v",
+  "torch": "2.10.0+cpu",
+  "python": "3.13.5",
+  "cuda_available_in_authoring_environment": false,
+  "real_gpu_inference_performed": false,
+  "h1_original_user_report_not_independently_verified": true,
+  "h1b_dataset_sha256": "b78e21ee121fea467988df856ad03f1901eb1b738e3569dc542b83bf6760d3e4",
+  "h1_original_dataset_sha256": "245cd44c8fbb6f10188079c9960c5093015622659f11a7468c166eda38916899",
+  "new_tasks": 128,
+  "overlapping_original_h1_tasks": 0,
+  "notes": "No Qwen checkpoint downloaded to authoring sandbox; no H1b results invented."
+}

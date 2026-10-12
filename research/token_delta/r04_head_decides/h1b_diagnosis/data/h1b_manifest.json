@@ -1,0 +1,10 @@
+{
+  "status": "new_diagnostic_data_not_model_results",
+  "seed": 20261013,
+  "n": 128,
+  "per_bucket": 32,
+  "old_dataset_sha256": "245cd44c8fbb6f10188079c9960c5093015622659f11a7468c166eda38916899",
+  "new_dataset_sha256": "b78e21ee121fea467988df856ad03f1901eb1b738e3569dc542b83bf6760d3e4",
+  "file_sha256": "200a1a30ec9208f6f1dd40b64e390a34024b0f387e25007cb44b3733a2afe706",
+  "not_part_of_original_h1_scientific_test": true
+}
