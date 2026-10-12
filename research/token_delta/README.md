@@ -32,6 +32,10 @@ TOKEN_DELTA_CKPT=../results/latent_answer_training_checkpoint.pt python -m unitt
 The sandbox experiment saved real torch checkpoints with weights + optimizers + RNG. Check remote commit content for actual checkpoint bytes; a SHA manifest alone is not binary publication. PyTorch pickle checkpoints must be loaded only from trusted sources.
 
 
+## Scientific synthesis R02–R04
+
+**[Read the complete scientific manuscript in Russian](SYNTHESIS_R02_R04_20261012_RU.md)** — 26K-character draft covering verified R02–R03, operator-reported completed RTX3090 H1/H1b/H1c, the negative findings, original preregistered gates and the pending frozen/frozen H2–H4 program. The raw Windows commits for H1, H1b and H1c have **not been pushed**; they are explicitly tagged as pending archival verification. [R04 research index](r04_head_decides/).
+
 ## Pretrained-teacher continuation (R02–R03, 2026-10-12)
 
 - **[R02: Qwen3-0.6B + naive 48D answer plan](r02_qwen_teacher/REPORT_RU.md)** — real frozen pretrained teacher (official pinned checkpoint), identical supervised dataset/baselines; **negative result**: 0/48 exact Qwen-student vs 48/48 hash-BOW control on heldout question triples. Original frozen Qwen features, both actual trained student checkpoints, metrics and all predictions are checked in.
