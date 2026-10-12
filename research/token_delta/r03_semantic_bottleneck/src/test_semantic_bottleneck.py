@@ -7,11 +7,11 @@ import unittest
 from pathlib import Path
 
 import torch
-from real_qwen_latent import split_facts, question, response
 from probe_and_decode import (
   R02_ROOT,SOURCE_SHA,read_features,representation_geometry,
   FactProbe,SemanticsFirstStudent,probe_measure,evaluate_joint
 )
+from real_qwen_latent import split_facts, question, response
 
 class TestR03(unittest.TestCase):
     @classmethod
