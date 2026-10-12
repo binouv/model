@@ -233,13 +233,13 @@ def main():
         full8=lookup[("qwen_last",8,seed)]["test"]["exact"]
         readiness[str(seed)]={"threshold_selected_using_val_only":selected["threshold"],
             "validation_calibration":calibrations,"test":fresh,"test_fixed8":full8,
-            "C2_simulated_computation_steps":bool(fresh["mean_steps"]<=4 and fresh["exact"]>=full8-.03),
-            "note":"SIMULATED branching: trajectory computed to 8 internally; no runtime savings measured"}
+            "C2_actual_executed_steps":bool(fresh["mean_steps"]<=4 and fresh["exact"]>=full8-.03),
+            "note":"TRUE sample-wise early exit; actual recurrent GRUCell work skips samples that have stopped. Mean steps counts executed recurrent iterations, but GPU latency and total system speed remain unmeasured."}
         for idx,guess in zip(split["test"],preds):
             predictions.append({"id":rows[idx]["id"],"source":"qwen_adaptive",
                "seed":seed,"threshold":selected["threshold"],"gold":target[idx].tolist(),
                "prediction":guess,"exact":guess==target[idx].tolist()})
-    conclusion["C2_simulated"] = sum(v["C2_simulated_computation_steps"] for v in readiness.values())>=2
+    conclusion["C2_actual_executed_steps"] = sum(v["C2_actual_executed_steps"] for v in readiness.values())>=2
     with (output/"predictions.jsonl").open("w",encoding="utf-8",newline="\n") as f:
         for row in predictions:f.write(json.dumps(row,sort_keys=True)+"\n")
     report={"status":"completed_diagnostic_only_not_full_llm_acceleration",

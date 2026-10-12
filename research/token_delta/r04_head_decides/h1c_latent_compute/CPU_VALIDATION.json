@@ -2,7 +2,7 @@
   "status": "cpu_mechanics_validated_no_pretrained_gpu_result",
   "experiment": "R04-H1c",
   "date": "2026-10-12",
-  "tests": 11,
+  "tests": 13,
   "failures": 0,
   "errors": 0,
   "python": "3.13.5",
@@ -18,5 +18,5 @@
   "adapter_parameters_structured_width66_hidden96": 64376,
   "gpu_ran": false,
   "scientific_hypotheses_tested": 0,
-  "notes": "CPU validation verifies mechanics and checkpoint replay only; no learned H1c outcomes or speed claims."
+  "notes": "Mechanics, exact early-exit agreement with a full trajectory, and actual skipping of recurrent work; no Qwen GPU weights tested."
 }

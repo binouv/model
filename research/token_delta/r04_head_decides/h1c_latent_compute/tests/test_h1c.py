@@ -99,6 +99,44 @@ class H1cSmoke(unittest.TestCase):
         c=model.confidence(final)
         self.assertTrue(((c>=0)&(c<=1)).all())
 
+    def test_real_early_exit_matches_full_trajectory_policy(self):
+        torch.manual_seed(20261012)
+        net=LatentReasoner(32,16).eval()
+        batch=torch.randn(19,32)
+        _,trajectory=net(batch,8,save_trajectory=True)
+        for threshold in (.05,.12,.18,.25,.5,.99):
+            result,steps=net.adaptive(batch,threshold)
+            expected_steps=[]
+            for i in range(len(batch)):
+                stop=8
+                for step in (0,2,4):
+                    if net.confidence(trajectory[i:i+1,step,:,:])[0] >= threshold:
+                        stop=step
+                        break
+                expected_steps.append(stop)
+            self.assertEqual(steps.tolist(),expected_steps)
+            expected=trajectory[torch.arange(len(batch)),steps]
+            torch.testing.assert_close(result,expected,atol=1e-6,rtol=1e-5)
+
+    def test_early_exit_really_skips_future_recurrent_work(self):
+        net=LatentReasoner(32,16).eval()
+        class CountingCell(torch.nn.Module):
+            def __init__(self,inner):
+                super().__init__()
+                self.inner=inner
+                self.processed_rows=0
+            def forward(self,x,h):
+                self.processed_rows+=len(x)
+                return self.inner(x,h)
+        net.recurrent=CountingCell(net.recurrent)
+        x=torch.randn(10,32)
+        _,steps=net.adaptive(x,.01)
+        self.assertTrue((steps==0).all())
+        self.assertEqual(net.recurrent.processed_rows,0)
+        _,steps=net.adaptive(x,.999999999)
+        self.assertTrue((steps==8).all())
+        self.assertEqual(net.recurrent.processed_rows,8*len(x))
+
     def test_invalid_shapes_and_early_exit(self):
         model=LatentReasoner(32,16)
         with self.assertRaises(ValueError):model(torch.randn(2,33))

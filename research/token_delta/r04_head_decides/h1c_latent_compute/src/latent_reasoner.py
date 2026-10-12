@@ -50,21 +50,42 @@ class LatentReasoner(nn.Module):
 
     @torch.no_grad()
     def adaptive(self,x:torch.Tensor,threshold:float,checkpoints=(0,2,4,8)):
-        if not 0<threshold<1:
+        """Real early exit: recurrent work runs ONLY on still-undecided rows.
+
+        Unlike evaluating a full 8-step trajectory and selecting an earlier
+        output after the fact, this routine skips future GRUCell calls for
+        completed examples. The logits and selected depths should match the
+        simulated full-trajectory policy within floating point tolerance.
+        """
+        if not 0 < threshold < 1:
             raise ValueError("invalid stop confidence threshold")
         times=tuple(checkpoints)
-        if times[0]!=0 or times[-1]!=8 or sorted(set(times))!=list(times):
+        if not times or times[0]!=0 or times[-1]!=8 or sorted(set(times))!=list(times):
             raise ValueError("checkpoints must be ordered including zero and eight")
-        _,all_logits=self.forward(x,8,save_trajectory=True)
-        chosen_logits=all_logits[:,-1,:,:].clone()
+        if x.ndim!=2 or x.shape[1]!=self.input_width or len(x)==0:
+            raise ValueError(f"expected a nonempty [batch, {self.input_width}] feature tensor")
+
+        active_ids=torch.arange(len(x),device=x.device)
+        active_context=F.gelu(self.encoder(self.norm(x.float())))
+        active_state=active_context
+        chosen_logits=active_context.new_empty((len(x),2,10))
         chosen_steps=torch.full((len(x),),8,dtype=torch.long,device=x.device)
-        pending=torch.ones(len(x),dtype=torch.bool,device=x.device)
-        for step in times[:-1]:
-            candidate=all_logits[:,step,:,:]
-            newly_stop=pending & (self.confidence(candidate)>=threshold)
-            chosen_logits[newly_stop]=candidate[newly_stop]
-            chosen_steps[newly_stop]=step
-            pending &= ~newly_stop
+        prev=0
+        for t in times:
+            for _ in range(t-prev):
+                active_state=self.recurrent(active_context,active_state)
+            logits=self.readout(active_state).reshape(-1,2,10)
+            ready=(torch.ones(len(active_ids),dtype=torch.bool,device=x.device)
+                   if t==times[-1] else self.confidence(logits)>=threshold)
+            chosen_logits[active_ids[ready]]=logits[ready]
+            chosen_steps[active_ids[ready]]=t
+            if t==times[-1] or bool(ready.all()):
+                break
+            still=~ready
+            active_ids=active_ids[still]
+            active_context=active_context[still]
+            active_state=active_state[still]
+            prev=t
         return chosen_logits,chosen_steps
 
 
