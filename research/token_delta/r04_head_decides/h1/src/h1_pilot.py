@@ -9,7 +9,7 @@ import platform
 import time
 
 import torch
-from h1_dataset import load_dataset,strict_parse_answer
+from h1_dataset import load_dataset,strict_parse_answer,select_pilot
 from h1_extract import load_pinned_tokenizer,prompt_batch,runtime_info
 from gpu_smoke import pinned_model
 
@@ -25,8 +25,7 @@ def main():
     if not torch.cuda.is_available():raise RuntimeError('CUDA required, this is an RTX 3090 GPU pilot.')
     lock=json.loads(args.lock.read_text(encoding='utf-8'))
     rows,manifest=load_dataset(args.data)
-    test=[x for x in rows if x['split']=='test']
-    examples=test[:args.samples]
+    examples=select_pilot(rows,args.samples)
     if not 1<=len(examples)<=16:raise ValueError('Pilot supports 1..16 cases')
     torch.cuda.reset_peak_memory_stats()
     started=time.perf_counter()

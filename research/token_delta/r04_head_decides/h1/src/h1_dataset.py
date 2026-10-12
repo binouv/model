@@ -106,6 +106,15 @@ def build_dataset(seed: int = DATASET_SEED) -> list[dict]:
     return examples
 
 
+def select_pilot(examples: list[dict], n: int) -> list[dict]:
+    """Engineering pilots must only use TRAIN examples to keep H1 test sealed."""
+    if not 1 <= n <= 16:
+        raise ValueError('Engineering pilot size must be in 1..16')
+    chosen = [x for x in examples if x['split'] == 'train'][:n]
+    if len(chosen) != n:
+        raise RuntimeError('Not enough train examples for pilot')
+    return chosen
+
 def strict_parse_answer(reply: str) -> list[int] | None:
     """Invalid or explained teacher outputs are scored as wrong, not cleaned up."""
     match = re.fullmatch(r'\s*([0-9])\s+([0-9])\s*', reply, flags=re.DOTALL)

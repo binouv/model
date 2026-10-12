@@ -14,7 +14,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
 from h1_dataset import (
     build_dataset,dataset_sha256,materialize,load_dataset,solve,python_code,
-    verify_python,question,strict_parse_answer,
+    verify_python,question,strict_parse_answer,select_pilot,
 )
 from h1_probes import TwoDigitProbe, lexical_features, structured_features, classify
 
@@ -48,6 +48,12 @@ class TestH1Dataset(unittest.TestCase):
             self.assertEqual(original['dataset_sha256_canonical'],dataset_sha256(data))
             with (dest/'h1_dataset.jsonl').open('a',encoding='utf-8') as out:out.write(' ')  # modifies bytes
             with self.assertRaises(RuntimeError):load_dataset(dest)
+    def test_pilot_is_train_only(self):
+        # h1_pilot's documented subset: first N TRAIN examples, never peek at test.
+        pilot=select_pilot(self.all,8)
+        self.assertEqual(len(pilot),8)
+        self.assertTrue(all(x['split']=='train' for x in pilot))
+
     def test_strict_answer_parser(self):
         self.assertEqual(strict_parse_answer(' 3 7 '),[3,7])
         self.assertEqual(strict_parse_answer('2\n9'),[2,9])

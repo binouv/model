@@ -3,7 +3,7 @@
   "hardware": "authoring CPU container (no NVIDIA GPU)",
   "python": "3.13.5",
   "pytorch": "2.10.0+cpu",
-  "unit_tests": 8,
+  "unit_tests": 9,
   "unit_failures": 0,
   "unit_errors": 0,
   "generated_tasks": 1700,
@@ -16,5 +16,5 @@
   "dataset_manifest_sha": "245cd44c8fbb6f10188079c9960c5093015622659f11a7468c166eda38916899",
   "probe_fake_tensor_pipeline": "completed_path_test_no_scientific_metrics",
   "gpu_h1_performed": false,
-  "note": "The synthetic random-feature software path was run with 2 training steps per model to validate implementation, NOT a preregistered H1 experiment; those trial scores are excluded."
+  "note": "Nine CPU-only unit tests passed; the pilot explicitly uses TRAIN examples, never validation/test. Fake-tensor probe-path verification is engineering only, not R04 H1 science."
 }
