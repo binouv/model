@@ -1,0 +1,18 @@
+{
+  "status": "external_fork_read_failed_no_import",
+  "observed_date": "2026-10-12",
+  "source_repository": "NeoXider/model",
+  "source_branch": "r04-h1-series",
+  "attempt": "GitHub Actions read-only inventory via git fetch",
+  "run_url": "https://github.com/binouv/model/actions/runs/38293231814",
+  "error": "fatal: could not read Username for 'https://github.com': No such device or address",
+  "meaning": "Remote ref could not be fetched anonymously with current GitHub Actions environment. Does not prove branch absent/private; owner should inspect repository visibility and auth.",
+  "gh_plugin_scope": "Connected GitHub app installation exposes only binouv account; NeoXider repository is not accessible to current connector.",
+  "artifacts_imported": 0,
+  "next_actions": [
+    "Connect NeoXider/model to the ChatGPT GitHub integration so it is in accessible installations",
+    "or make the branch anonymously readable",
+    "or attach original H1/H1b/H1c metrics,predictions,manifests and checkpoints"
+  ],
+  "scientific_research_status": "Do not reclassify operator-reported RTX 3090 data as independently verified."
+}
