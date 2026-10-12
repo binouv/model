@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "experiment": "r04_head_decides",
+  "locked_at_utc_date": "2026-10-12",
+  "purpose": "Frozen teacher decides answer content AND verbosity; frozen writer only realizes teacher-derived latent; bridge only trained",
+  "head": {
+    "hf_id": "Qwen/Qwen3.5-4B",
+    "revision": "c7429d5a8ed57f4a9cfdaf1af76a8943eba0ae97",
+    "model_class": "AutoModelForCausalLM (text-only Qwen3_5ForCausalLM)",
+    "text_hidden_size": 2560,
+    "text_num_hidden_layers": 32,
+    "dtype": "bfloat16",
+    "trust_remote_code": false,
+    "frozen": true
+  },
+  "writer": {
+    "hf_id": "Qwen/Qwen3.5-0.8B",
+    "revision": "23eda19ab0239bc12350efba411911b8eb89f486",
+    "model_class": "AutoModelForCausalLM (text-only Qwen3_5ForCausalLM)",
+    "text_hidden_size": 1024,
+    "text_num_hidden_layers": 24,
+    "dtype": "bfloat16",
+    "trust_remote_code": false,
+    "frozen": true
+  },
+  "bridge": {"source_layer": "last", "plan_tokens": 4, "hidden_size": 1024, "trainable_only": true, "no_writer_prompt_or_style_signal": true},
+  "first_gpu_smoke": {"prompt": "Сколько будет 137 + 245?", "engineering_label": "тест", "scientific_accuracy_claim": false},
+  "software": {"python": "3.13.x", "torch": "2.10.0+cu128", "transformers": "5.13.0", "transformers_model_weights_dtype": "bfloat16", "cuda_wheel": "cu128", "note": "Installed versions and HF resolved SHA written into results/smoke.json"},
+  "hardware_target": {"gpu": "NVIDIA RTX 3090", "vram_gib": 24, "cpu": "Intel Core i7-10700K", "ram_gib": 64, "windows": true},
+  "pinned_hf_sources": [
+    "https://huggingface.co/Qwen/Qwen3.5-4B/tree/c7429d5a8ed57f4a9cfdaf1af76a8943eba0ae97",
+    "https://huggingface.co/Qwen/Qwen3.5-0.8B/tree/23eda19ab0239bc12350efba411911b8eb89f486"
+  ]
+}

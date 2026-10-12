@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+results/cache/
+results/temp/
+*.log
+# Do not commit model files of unknown provenance. Completed bridge checkpoints
+# must be published with hashes in unique run directories (<90MB each).

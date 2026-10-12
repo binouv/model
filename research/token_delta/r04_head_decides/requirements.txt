@@ -1,0 +1,6 @@
+# Install torch CUDA separately from the official cu128 PyTorch wheel index.
+transformers==5.13.0
+accelerate>=1.11,<2
+huggingface_hub>=1.0,<2
+safetensors>=0.6,<1
+numpy>=2.0,<3
