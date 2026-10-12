@@ -1,0 +1,95 @@
+name: R04 public fork archival inventory (read-only)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/token_delta/r04_head_decides/archive_import/REQUEST.json'
+permissions:
+  contents: write
+concurrency:
+  group: r04-archive-inventory
+  cancel-in-progress: false
+jobs:
+  inventory:
+    if: github.repository == 'binouv/model'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout binouv source only
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Fetch public NeoXider branch WITHOUT executing any of its code
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/fork"
+          git -C "$RUNNER_TEMP/fork" init -q
+          git -C "$RUNNER_TEMP/fork" remote add origin https://github.com/NeoXider/model.git
+          git -C "$RUNNER_TEMP/fork" -c protocol.version=2 fetch --depth=1 --filter=blob:none origin refs/heads/r04-h1-series
+          git -C "$RUNNER_TEMP/fork" rev-parse FETCH_HEAD
+      - name: Build allowlisted source manifest and original-byte SHA256
+        env:
+          FORK_GIT_DIR: ${{ runner.temp }}/fork
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,os,subprocess
+          from pathlib import Path
+          directory=Path(os.environ['FORK_GIT_DIR'])
+          head=subprocess.check_output(['git','-C',str(directory),'rev-parse','FETCH_HEAD'],text=True).strip()
+          listing=subprocess.check_output(['git','-C',str(directory),'ls-tree','-r','-l','FETCH_HEAD'],text=True)
+          prefix='research/token_delta/r04_head_decides/'
+          candidates=[]
+          for line in listing.splitlines():
+              info,path=line.split('\t',1)
+              parts=info.split()
+              if len(parts)<4 or parts[1]!='blob' or not path.startswith(prefix):
+                  continue
+              local=path[len(prefix):]
+              ok=(local=='results/smoke.json'
+                  or local.startswith(('h1/results/','h1/cache/','h1b_diagnosis/results/',
+                                       'h1c_latent_compute/results/','h1c_latent_compute/cache/')))
+              if not ok:continue
+              # Inventory is read-only, no scripts from the fork are executed.
+              if not (local.endswith(('.json','.jsonl','.safetensors','.pt','.pth','.bin','.csv','.txt'))
+                      or '.part' in local):continue
+              sha=hashlib.sha256(); total=0
+              proc=subprocess.Popen(['git','-C',str(directory),'show','FETCH_HEAD:'+path],
+                                    stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+              while True:
+                  block=proc.stdout.read(1024*1024)
+                  if not block:break
+                  sha.update(block); total+=len(block)
+              err=proc.stderr.read();proc.wait()
+              if proc.returncode:
+                  raise RuntimeError('Failed to read fork blob '+path+' '+err.decode(errors='replace'))
+              candidates.append({'source_path':path,'bytes':total,'sha256':sha.hexdigest(),
+                                 'git_blob_sha':parts[2],
+                                 'under_90mb':total<=90000000})
+          result={'status':'inventory_only_not_imported',
+                  'source_repository':'NeoXider/model','source_branch':'r04-h1-series',
+                  'source_commit_sha':head,'target_repository':'binouv/model',
+                  'candidate_count':len(candidates),
+                  'total_candidate_bytes':sum(x['bytes'] for x in candidates),
+                  'files':candidates,
+                  'caution':'No fork Python/scripts executed; weights not imported yet. Review paths before copying.'}
+          if not candidates:raise RuntimeError('No result artifacts found in advertised fork branch')
+          out=Path('research/token_delta/r04_head_decides/archive_import/INVENTORY.json')
+          out.parent.mkdir(parents=True,exist_ok=True)
+          out.write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')
+          print(json.dumps({k:result[k] for k in ('source_commit_sha','candidate_count',
+                                     'total_candidate_bytes','status')},indent=2))
+          PY
+      - name: Commit inventory metadata only (NOT fork weights)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/token_delta/r04_head_decides/archive_import/INVENTORY.json
+          git commit -m 'audit(r04): inventory public NeoXider result blobs and exact sha256'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
