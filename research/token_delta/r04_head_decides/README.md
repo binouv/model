@@ -63,6 +63,11 @@ The RTX 3090 operator reports a fully completed frozen-head H1: **Qwen3.5-4B 50/
 
 ## After H1/H1b/H1c: test original H2–H4 without changing gates
 
+**[New H2 transmission protocol](h2_bridge_transfer/PREREGISTRATION.md)** — frozen Qwen3.5-4B/0.8B, no question or style leaked to writer, fresh disjoint dataset, original H2 gates unchanged. Oracle-plan is an engineering upper-bound and no H2 GPU scores exist.  
+**[Transfer original local commits / raw checkpoints](LOCAL_ARTIFACT_IMPORT_GUIDE.md)** — NeoXider fork branch publication instructions and exact missing H1/H1b/H1c artifacts.
+
+
+
 H1 did **not** pass its registered gates. H2 is still useful as a transmission/negative-control experiment on a fresh split, but faithful imitation of a teacher with 16.7% accuracy cannot meet the original 75% all-test quality gate on the same task distribution. Never train on the ~50 teacher-correct **test** examples; evaluate teacher-correct as a conditional **reporting subset**, not a training set. H2a may separately use explicit oracle plans as an upper-bound engineering control, not as scientific evidence that the head computed the plan.
 
 For H2–H4, use offline teacher-produced answers as *training supervision* only; never pass answers/style/length to the writer during test. Only then time a real matched-quality GPU benchmark.
