@@ -1,0 +1,13 @@
+{
+  "operation": "inventory_only",
+  "requested_date": "2026-10-12",
+  "source_repository": "NeoXider/model",
+  "branch": "r04-h1-series",
+  "expected_commit_prefix": "1e4696c",
+  "target": "binouv/model",
+  "allowed_prefix": "research/token_delta/r04_head_decides/",
+  "preserve_fork_history": true,
+  "execute_fork_code": false,
+  "import_binary_files": false,
+  "reason": "Inspect original H1/H1b/H1c RTX3090 raw artifacts before importing their bytes and verifying scientific synthesis."
+}
