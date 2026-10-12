@@ -1,81 +1,87 @@
-# R03 — Supervised semantic bottleneck recovers facts from a real frozen Qwen hidden state
+# R03 — Извлечение смыслового плана из настоящей Qwen3-0.6B
 
-**Completed research report · 2026-10-12**  
-Code: [probe_and_decode.py](src/probe_and_decode.py). Verified results: [metrics.json](results/metrics.json), [all 48 predictions/method](results/predictions.json). Exact SHA256: [CHECKPOINT_MANIFEST.json](results/CHECKPOINT_MANIFEST.json). Binary checkpoints and optimizer state are stored in [results/](results/). Pre-registered method: [PREREGISTRATION.md](PREREGISTRATION.md).
+**Научно-экспериментальный отчёт · 12 октября 2026 г. · завершён.**  
+Исходники: [probe_and_decode.py](src/probe_and_decode.py), [тесты](src/test_semantic_bottleneck.py), [регистрация гипотез](PREREGISTRATION.md), [метрики](results/metrics.json), [все предсказания](results/predictions.json), [SHA256-манифест](results/CHECKPOINT_MANIFEST.json), [обученные веса](results/).
 
-## Abstract
+## Аннотация
 
-In R02, an unsupervised text-generation objective applied to the last hidden state of a frozen **Qwen3-0.6B** prompted a small renderer to ignore its input (0/48 exact heldout). Here we test whether the same actual pretrained hidden states represent recoverable semantic facts. Using the *identical SHA-verified cached states*, we train supervised 3×6 fact probes and a compact **semantic bottleneck → latent → GRU** student. A linear probe recovers all three explicit facts on **48/48 unseen combinations**, and **33/48** full triples when verbs are replaced by unseen synonyms. A matched hash-BOW linear probe attains 48/48 IID but only **4/48 OOD**. The dual-style 172,754-parameter latent decoder then generates both short and detailed forms accurately on **48/48 IID** and **30/48 OOD synonym** combinations, vs **5/48 OOD** for the same student fed hash-BOW features. Zeroing/shuffling the inferred latent destroys the text result. The frozen pretrained model does not run again during text realization.
+В R02 маленькая модель не смогла извлечь ответ из последнего скрытого состояния замороженной **Qwen3-0.6B**: 0/48 точных ответов на новых комбинациях фактов. R03 проверяет, не была ли проблема в способе обучения декодера, а не в отсутствии смысловой информации.
 
-**Interpretation:** the question-final hidden state carries linearly decodable semantic information under these toy constraints; R02's decoder objective failed to retrieve it. The result **does not** show complete frontier answer planning, lossless language-model imitation, long-answer correctness, or real LLM inference speedup.
+Использованы **те же настоящие признаки**, полученные из официальной pretrained Qwen3-0.6B (версия 167b8104f88905a951069f5f95f9776908da5f68), без нового запуска большого учителя. Обучены диагностические линейный и MLP-зонды, извлекающие три смысловых поля из 1024D hidden state: субъект, действие, объект. Затем обучен «смысловой bottleneck»: прогноз 3×6 категорий → мягкие эмбеддинги слотов → **один 48-мерный латент** → маленькая GRU для краткого или развёрнутого ответа.
 
-## Controlled protocol
+Результат: линейный зонд получил 48/48 на новых сочетаниях и 33/48 на глагольных синонимах, отсутствовавших в train. Сравнимый зонд без Qwen — 48/48 и 4/48. Полный студент из **172 754 параметров** выдал оба правильных варианта на **48/48** новых сочетаниях и **30/48** с новыми синонимами. Контроль без Qwen — 48/48 и **5/48**. Интервенции обнуления и перемешивания латентов разрушали ответы. Следовательно, информационный сигнал был в исходном hidden state, но прямой декодер R02 не научился им пользоваться.
 
-- Source teacher: the **actual official Qwen/Qwen3-0.6B** revision 167b8104f88905a951069f5f95f9776908da5f68. Entirely frozen in R02. SHA256 of published hidden-state cache: `e0add6315af0ac9f344c90d7339881d8711b49da28576eaae8e5e05055f8ff96`, independently verified in R03.
-- Data: 6 subjects, 6 verbs, 6 objects; 168 training triples, 48 unseen complete triples (all individual factors remain observed), plus the same 48 questions with held-out verb synonyms absent from training questions.
-- Features: 1024D **final hidden state** of pretrained Qwen after reading question and assistant-start prefix. No gold answer and no required style fed to Qwen.
-- Baseline: signed-hash BOW question features of the same 1024D; exactly matched student architecture and steps.
-- Experiment 1: direct linear probe and 128-hidden MLP probe with supervised 3×6 slot labels. Label-shuffle control.
-- Experiment 2: MLP semantic logits → 3 soft categorical embeddings (each 16D) → 48D latent → tiny style-conditioned recurrent word decoder. Loss = slot classification CE + autoregressive text CE. Train 900 updates, same seed and budget for both sources.
-- At evaluation: free-running generation without teacher forcing. Renderer called for both styles with the **same latent**. Zero-latent / shuffled-latent causal controls.
-- No Qwen weights copied to repository; only derived hidden cache and 1–2MB **actual student weights plus optimizer/RNG**.
+## Архитектура
 
-## Main results
+\[
+h= \mathrm{FrozenQwen3}(x)_{\mathrm{last\ position}}\in\mathbb{R}^{1024},
+\quad L=P_\theta(h)\in\mathbb{R}^{3\times6},
+\]
 
-| Test (48 new combinations) | Real Qwen feature | Hash-BOW |
+\[
+z=\mathrm{MLP}\big(\mathrm{concat}_{i=1}^{3}[
+\mathrm{softmax}(L_i)\,E_i]\big)\in\mathbb{R}^{48},
+\quad
+p_\phi(y_t\mid y_{<t},z,s).
+\]
+
+Здесь s задаёт степень подробности только декодеру. Большая модель не знает заранее, нужен ли краткий или подробный ответ. **После формирования z Qwen больше не вызывается**; GRU генерирует два текста.
+
+Входной вопрос содержит три явных факта, например: «Near the river, the hare hides the stone. What happened?» Цель: корректно восстановить эти факты, а не решить неизвестную математическую задачу.
+
+Строгое разделение: 6 субъектов × 6 действий × 6 объектов = 216 троек. В обучении 168 троек, в holdout 48 *других полных комбинаций*. Все отдельные категории встречались в train. В OOD меняются глаголы на **не встречавшиеся в обучающих вопросах синонимы**. Для студента выполнено 900 AdamW-обновлений при одинаковом бюджете для Qwen- и hash-BOW-признаков. Для диагностических зондов — 700 шагов.
+
+## Результаты
+
+| Тест на 48 новых сочетаниях | Признаки Qwen3-0.6B | Hash-BOW (без Qwen) |
 |---|---:|---:|
-| Linear probe: IID full 3-slot accuracy | 48/48 | 48/48 |
-| Linear probe: novel verb-synonym full 3-slot accuracy | **33/48 = 68.75%** | 4/48 = 8.33% |
-| MLP probe: novel verb-synonym full triple | 31/48 = 64.58% | 3/48 = 6.25% |
-| Full dual-style student: IID both exact | **48/48** | **48/48** |
-| Full dual-style student: OOD both exact | **30/48 = 62.5%** | 5/48 = 10.42% |
-| Semantic student: OOD full triple | **34/48 = 70.83%** | 7/48 = 14.58% |
-| Zeroed latent: paired IID exact | 0/48 | 1/48 |
-| Shuffled latent: paired IID exact | 0/48 | 0/48 |
-| Shuffled label probe: IID full triple | **0/48** | — |
+| Линейный зонд, все 3 факта, обычные слова | **48/48** | 48/48 |
+| Линейный зонд, все 3 факта, новые синонимы | **33/48 (68,75%)** | 4/48 (8,33%) |
+| MLP-зонд, все 3 факта, новые синонимы | **31/48 (64,58%)** | 3/48 (6,25%) |
+| Полный студент: оба ответа, обычные слова | **48/48** | 48/48 |
+| Полный студент: оба ответа, новые синонимы | **30/48 (62,5%)** | 5/48 (10,42%) |
+| Полный студент: все 3 факта, новые синонимы | **34/48 (70,83%)** | 7/48 (14,58%) |
+| Обнулённый 48D латент: оба ответа | **0/48** | 1/48 |
+| Перемешанный 48D латент: оба ответа | **0/48** | 0/48 |
+| Зонд Qwen со случайно перемешанными train-метками, все 3 факта | **0/48** | — |
 
-**Paired OOD comparison:** 4 examples both correct; 26 correct only with Qwen; 1 only with hash-BOW; 17 neither. The exact two-sided discordant-pair binomial/McNemar p-value is approximately **4.17 × 10^-7** on this fixed synthetic test. It measures evidence on **this test distribution and single seed**, not generalization to arbitrary user questions or LLM tasks.
+Парное сравнение одного и того же OOD-набора: Qwen и baseline одновременно верны на 4 примерах; только Qwen — на 26; только baseline — на 1; обе ошиблись на 17. Точный двусторонний биномиальный тест Мак-Немара на 27 несовпадениях даёт **p ≈ 4,17×10⁻⁷**. Это статистическое свидетельство преимущества **внутри данного маленького синтетического эксперимента**, а не на свободном естественном языке.
 
-The full student has **172,754** trainable parameters; training took 4.33 seconds (Qwen input features) and 4.35 seconds (BOW input features) on the GitHub Actions CPU. The original teacher forward passes were measured in R02; no new passes are included in this timing.
+## Механизм: почему R02 провалился
 
-## Why R02 failed while R03 worked
+Средняя косинусная близость скрытых состояний Qwen на разных вопросах: **0,99348**. Средняя норма центрированного отклонения составляла лишь **8,07%** средней полной L2-нормы. Значительная общая компонента доминировала над малыми различиями между вопросами.
 
-The cached states have **very high cosine similarity across prompts**: mean pairwise cosine **0.99348**. Their average centered variation is only about **8.07%** of full state L2 norm. This means the large constant/shared component dominates naive vectors, even though individual semantic coordinates carry discriminative signal. Hash-BOW inputs in contrast have pairwise cosine 0.9350 and centered norm ratio 0.2544.
+В R02 обучение только через loss генерации текста привело к почти постоянным ответам для разных вопросов. В R03 классификационная супервизия принудила проектор сохранить информацию о субъекте, глаголе и объекте. Линейная модель извлекла эти поля даже до GRU, а значит, дело не только в мощности сложного нелинейного декодера.
 
-A tiny R02 decoder trained directly on text cross-entropy appears to have converged toward a generic answer and ignored the weak differences between final-prompt teacher states. In R03, separate semantic-label losses force the projection to preserve the animal, verb and object. Then a tiny renderer turns the learned class distributions into either response style.
+Контроль с перемешанными метками потерял способность восстанавливать полные тройки (0/48), что снижает вероятность простой ошибки разбиения. Интервенции с латентом дополнительно демонстрируют, что GRU не обходится без него.
 
-The fact that a simple **linear** probe gets 48/48 IID and 33/48 OOD supports *accessible fact information in the teacher state*, not merely a fragile nonlinear fitting trick. The shuffled-label control's 0/48 triples further argues against deterministic label leakage through a split bug.
+## Вычислительная стоимость
 
-Crucially, the categorical slot labels are engineered supervision. The experimental pipeline provides the semantic schema (three 6-way fields), which would have to be **learned, discovered, or extended to variable-length structured plans** in a general-purpose system. This is not evidence that Qwen's original hidden state already stores exact token strings for an arbitrary answer.
+Обучение конечного студента на сохранённых признаках заняло **4,33 с** (Qwen) и **4,35 с** (hash-BOW) на CPU GitHub Actions; число обучаемых параметров студента — **172 754**. Но получение hidden states самой большой моделью требует отдельных вычислений: в R02 Qwen обрабатывала 264 коротких вопроса за **87,25 с** forward time, плюс загрузка весов 18,60 с.
 
-## Precision / speed / limitations
+Следовательно, здесь **нет доказанного ускорения относительно полного генеративного Qwen**: нет сопоставимого качества ответов для teacher-only, а при длинном контексте стоимость prefill может стать преобладающей.
 
-1. **The 48D latent is not a lossless compression of the 1024D state**. It is a supervised representation of a restricted three-field task. The language distribution differs from the official Qwen decoder.
-2. Full target Qwen sampling would require autoregressive teacher decoding; that end-to-end matched-quality test is not done here.
-3. This is simple semantic copying/composition from explicit question facts, not hidden multi-hop reasoning, coding, actual RU/EN conversation, or factual memory recall.
-4. All reported training/evaluation from one fixed, pre-registered seed. The OOD synonyms have different lexical realization but same templated question structure.
-5. The teacher CPU encoding cost (R02: ~87.25s / 264 short prompts) still exists. This experiment demonstrates decoder feasibility, not full system throughput versus optimized llama.cpp.
-6. Original teacher official weights are not republished. Frozen feature cache SHA and actual small-trained learner tensors, optimizer, RNG and predictions are published. The GitHub Actions verification reloaded checkpoints, recomputed all metrics and passed semantic unit tests.
-7. Previously discussed lossless RAM/VRAM weight and KV compression is a *separate and complementary* line; the 48D semantic bottleneck is task-specific and lossy.
+## Ограничения и научная интерпретация
 
-## Next scientific progression
+1. Изучались **три явно размеченные смысловые категории**, присутствующие в вопросе. Структура «субъект–действие–объект» задана исследователем и предоставлялась как target при обучении, а не была самостоятельно обнаружена моделью.
+2. Наш 48D латент — **сжатие с потерями** относительно исходного 1024D состояния. Это принципиально другое, чем lossless-сжатие весов и KV-cache в RAM/VRAM.
+3. Тесты не содержат новых неизвестных фактов, длинного кода, многошаговой математики, русского языка или контекста 20K–140K.
+4. Отдельная маленькая модель генерирует другое распределение токенов, чем оригинальная Qwen. Побитовая/распределительная эквивалентность генерации не доказана.
+5. Проверено одно заранее зафиксированное разделение и один seed. Преимущество 30/48 над 5/48 нельзя экстраполировать на промышленный инференс без независимого разнообразного бенчмарка.
+6. Утверждение «99% полного ответа уже вычислено в скрытых слоях» **не проверено**. Проверена лишь извлекаемая информация о трёх фактах.
 
-- Replace schema-specific triplet supervision with **language-driven plan targets** or structured reasoning traces and compare against text-CoT and tiny end-to-end direct renderer at equal parameters.
-- Evaluate real arithmetic/multi-hop questions where the correct answer is **not already directly stated in the input**. A simple hash-BOW baseline and frozen pretrained teacher must both be included.
-- Compare final-prompt vector with middle-layer states and learned query pooling of multiple token positions; report additional teacher prefill/memory cost.
-- Use confidence-gated multi-slot plans; permit call-backs to Qwen only when uncertainty is high; record actual fallback rate.
-- Only after accuracy is credible test CPU DDR4/DDR5 and RTX 3090 with equal output quality, 2K/20K/100K context, TTFT, ITL, total completion time and resident RAM/VRAM.
+## Воспроизводимость
 
-## Reproduction
+Кеш признаков исходной Qwen: [qwen_prompt_features.pt](../r02_qwen_teacher/results/qwen_prompt_features.pt), SHA256: `e0add6315af0ac9f344c90d7339881d8711b49da28576eaae8e5e05055f8ff96`. Он проверяется при загрузке R03. Бинарные checkpoints **включают реальные веса, состояния оптимизатора и RNG**, а не только ссылки/манифесты. В GitHub Actions завершены обучение, unit-тесты, восстановление весов, повторный расчёт метрик и push.
 
 ```bash
-# Using already published and SHA-verified pretrained teacher feature cache
 python -m pip install torch numpy
 python research/token_delta/r03_semantic_bottleneck/src/probe_and_decode.py \
-    --out research/token_delta/r03_semantic_bottleneck/results \
-    --probe-steps 700 --joint-steps 900
+ --out research/token_delta/r03_semantic_bottleneck/results --probe-steps 700 --joint-steps 900
 cd research/token_delta/r03_semantic_bottleneck/src
 python -m unittest -v test_semantic_bottleneck
 ```
 
-**Conclusion:** R03 supports the narrow hypothesis that pretrained Transformer context states can contain reusable semantic representations beyond an immediate next-token instruction. **A trained bottleneck, not a naive small generator, was necessary**. R03 is a genuine positive comparison on a defined task, not a claim of a drop-in LLM accelerator.
+## Вывод
+
+**Эксперимент подтверждает узкую, но важную гипотезу:** в последнем hidden state предобученной языковой модели могут находиться композиционные смысловые признаки, достаточные для построения разных текстовых ответов маленькой сетью без повторных проходов большой модели. При этом успех потребовал дополнительной супервизии смысловых слотов. Следующий принципиальный тест — **вопрос, для которого ответ не указан непосредственно в исходном тексте**, с проверкой reasoning, RU/EN и реального выигрыша времени по сравнению с original teacher и сильным speculative decoding baseline.
