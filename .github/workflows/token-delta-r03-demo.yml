@@ -1,0 +1,60 @@
+name: R03 offline latent inference demonstration
+on:
+  push:
+    branches: [main]
+    paths: ['research/token_delta/r03_semantic_bottleneck/VERIFY_DEMO.txt']
+permissions:
+  contents: write
+jobs:
+  verify-demo:
+    if: github.repository == 'binouv/model'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Python CPU inference
+        run: |
+          set -euo pipefail
+          python -m pip install -q --index-url https://download.pytorch.org/whl/cpu torch==2.10.0
+          python -m pip install -q numpy==2.3.5
+      - name: Replay actual trained student on cached real teacher vectors
+        run: |
+          set -euo pipefail
+          python research/token_delta/r03_semantic_bottleneck/src/demo_inference.py --all --kind iid > /tmp/r03_demo_iid.json
+          python research/token_delta/r03_semantic_bottleneck/src/demo_inference.py --all --kind ood > /tmp/r03_demo_ood.json
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          iid=json.loads(Path('/tmp/r03_demo_iid.json').read_text())
+          ood=json.loads(Path('/tmp/r03_demo_ood.json').read_text())
+          assert iid['exact_pairs']==48 and iid['total']==48,iid
+          assert ood['exact_pairs']==30 and ood['total']==48,ood
+          for dataset in (iid,ood):
+              for row in dataset['examples']:
+                  assert row['latent_built_once'] is True
+                  assert row['latent_dimensions']==48
+                  assert row['teacher_forward_calls_in_demo']==0
+                  assert len(row['checkpoint_sha256'])==64
+          out=Path('research/token_delta/r03_semantic_bottleneck/results')
+          (out/'demo_verified.json').write_text(json.dumps({'source':'full 48-checkpoint replay',
+              'iid':iid,'ood':ood},indent=2)+'\n')
+          print('R03 DEMO VERIFIED: 48/48 IID, 30/48 OOD')
+          PY
+      - name: Publish offline demo receipt
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/token_delta/r03_semantic_bottleneck/results/demo_verified.json
+          git commit -m 'demo(latent-r03): verify 48 IID and 30 OOD answers from one cached Qwen latent'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
