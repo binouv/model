@@ -1,0 +1,67 @@
+{
+  "experiment": "R04-H1c frozen head latent computations",
+  "status": "preregistered_no_gpu_results",
+  "date": "2026-10-12",
+  "head": {
+    "hf_id": "Qwen/Qwen3.5-4B",
+    "revision": "c7429d5a8ed57f4a9cfdaf1af76a8943eba0ae97",
+    "hidden_width": 2560,
+    "frozen": true,
+    "dtype": "bfloat16"
+  },
+  "writer": {
+    "hf_id": "Qwen/Qwen3.5-0.8B",
+    "revision": "23eda19ab0239bc12350efba411911b8eb89f486",
+    "used_in_H1c": false
+  },
+  "data": {
+    "count": 1700,
+    "seed": 20261014,
+    "splits": {
+      "train": 1200,
+      "val": 200,
+      "test": 300
+    },
+    "canonical_sha256": "ac764eed8a0e06486dee8452219293941e208618fd95cbfa7495395f71184af7",
+    "jsonl_sha256": "cf50d791033ffce7d254a3e86d51a4a3d816696b7b9b701f556396fe4ebb9f41",
+    "disjoint_from": [
+      "H1-1700",
+      "H1b-128"
+    ]
+  },
+  "adapter": {
+    "hidden": 96,
+    "depths": [
+      0,
+      2,
+      8
+    ],
+    "early_exit_probes": [
+      0,
+      2,
+      4,
+      8
+    ],
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "learning_rate": 0.0015,
+    "batch": 96,
+    "train_steps": 600,
+    "controls": [
+      "Qwen last pre-answer state",
+      "lexical hashed input",
+      "structured operator/operands",
+      "shuffled labels"
+    ],
+    "not_distribution_exact": true
+  },
+  "cpu_validation": {
+    "tests": 11,
+    "failures": 0,
+    "torch": "2.10.0+cpu",
+    "scientific_hypotheses_tested": 0
+  }
+}
