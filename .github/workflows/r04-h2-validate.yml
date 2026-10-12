@@ -1,0 +1,80 @@
+name: R04 H2 CPU protocol and locked dataset publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/token_delta/r04_head_decides/h2_bridge_transfer/src/h2_dataset.py'
+      - 'research/token_delta/r04_head_decides/h2_bridge_transfer/tests/**'
+      - '.github/workflows/r04-h2-validate.yml'
+permissions:
+  contents: write
+concurrency:
+  group: h2-cpu-protocol-data-lock
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned CPU test dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet --index-url https://download.pytorch.org/whl/cpu torch==2.10.0
+          python -m pip install --quiet numpy==2.3.5 safetensors==0.6.2
+      - name: Test causal loss, frozen writer, disjoint splits and checkpoint parts
+        run: |
+          set -euo pipefail
+          ROOT=research/token_delta/r04_head_decides/h2_bridge_transfer
+          python -m compileall -q "$ROOT/src" "$ROOT/tests"
+          python -m unittest discover -s "$ROOT/tests" -p 'test_h2.py' -v
+      - name: Independently regenerate H2 dataset and prove locked SHA
+        run: |
+          set -euo pipefail
+          ROOT=research/token_delta/r04_head_decides/h2_bridge_transfer
+          python "$ROOT/src/h2_dataset.py" --out "$RUNNER_TEMP/h2-new"
+          H2_ROOT="$ROOT" H2_TEMP="$RUNNER_TEMP/h2-new" python - <<'PY'
+          import hashlib,json,os
+          from pathlib import Path
+          root=Path(os.environ['H2_ROOT'])/'data'
+          fresh=Path(os.environ['H2_TEMP'])
+          for name in ('dataset_manifest.json',):
+              assert (root/name).read_bytes()==(fresh/name).read_bytes(),name
+          mf=json.loads((fresh/'dataset_manifest.json').read_text())
+          assert mf['count']==1700
+          assert mf['splits']=={'train':1200,'val':200,'test':300}
+          assert mf['canonical_sha256']=='f06817743af405c27e6810bd859366d4d1b6c8c6714d02e699ff3f61f1ea65bf'
+          assert mf['jsonl_sha256']=='c07f3de8a98e652ab25524a1f822ccbb01ac3b92ef433c6354f1978171131ecf'
+          p=fresh/'h2_dataset.jsonl'
+          assert hashlib.sha256(p.read_bytes()).hexdigest()==mf['jsonl_sha256']
+          print('Locked H2 dataset, no prior H1/H1b/H1c leakage; 12 unit tests passed')
+          PY
+          cp "$RUNNER_TEMP/h2-new/h2_dataset.jsonl" "$ROOT/data/h2_dataset.jsonl"
+      - name: Publish exact generated H2 dataset source bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/token_delta/r04_head_decides/h2_bridge_transfer/data/h2_dataset.jsonl
+          if git diff --cached --quiet; then
+            echo 'No new dataset bytes; validation only'
+            exit 0
+          fi
+          git commit -m 'dataset(r04-h2): publish reproducible 1700 fresh oracle problems'
+          for n in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
