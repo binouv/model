@@ -1,0 +1,58 @@
+name: R04 H1c CPU protocol verification
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/token_delta/r04_head_decides/h1c_latent_compute/**'
+      - '.github/workflows/r04-h1c-cpu-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned CPU dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet --index-url https://download.pytorch.org/whl/cpu torch==2.10.0
+          python -m pip install --quiet numpy==2.3.5 safetensors==0.6.2
+      - name: Compile source and run complete unit suite
+        run: |
+          set -euo pipefail
+          ROOT=research/token_delta/r04_head_decides/h1c_latent_compute
+          python -m compileall -q "$ROOT/src" "$ROOT/tests"
+          python -m unittest discover -s "$ROOT/tests" -p 'test_h1c.py' -v
+      - name: Independently regenerate locked 1700 cases and compare bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=research/token_delta/r04_head_decides/h1c_latent_compute
+          python "$ROOT/src/dataset.py" --out "$RUNNER_TEMP/h1c-dataset"
+          H1C_DATA_ROOT="$ROOT" H1C_TMP_ROOT="$RUNNER_TEMP/h1c-dataset" python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          root=Path(os.environ["H1C_DATA_ROOT"])/"data"
+          tmp=Path(os.environ["H1C_TMP_ROOT"])
+          for name in ("h1c_dataset.jsonl","dataset_manifest.json"):
+              a=(root/name).read_bytes()
+              b=(tmp/name).read_bytes()
+              assert a==b, f"Dataset mismatch: {name}"
+              print(name,len(a),hashlib.sha256(a).hexdigest())
+          manifest=json.loads((root/"dataset_manifest.json").read_text())
+          assert manifest["count"]==1700
+          assert manifest["splits"]=={"train":1200,"val":200,"test":300}
+          assert manifest["dataset_sha256_canonical"]=="ac764eed8a0e06486dee8452219293941e208618fd95cbfa7495395f71184af7"
+          assert manifest["file_sha256"]=="cf50d791033ffce7d254a3e86d51a4a3d816696b7b9b701f556396fe4ebb9f41"
+          print("R04 H1c CPU protocol PASSED; no GPU scientific claims")
+          PY
