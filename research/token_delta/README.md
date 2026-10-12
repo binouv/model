@@ -30,3 +30,13 @@ TOKEN_DELTA_CKPT=../results/latent_answer_training_checkpoint.pt python -m unitt
 ```
 
 The sandbox experiment saved real torch checkpoints with weights + optimizers + RNG. Check remote commit content for actual checkpoint bytes; a SHA manifest alone is not binary publication. PyTorch pickle checkpoints must be loaded only from trusted sources.
+
+
+## Pretrained-teacher continuation (R02–R03, 2026-10-12)
+
+- **[R02: Qwen3-0.6B + naive 48D answer plan](r02_qwen_teacher/REPORT_RU.md)** — real frozen pretrained teacher (official pinned checkpoint), identical supervised dataset/baselines; **negative result**: 0/48 exact Qwen-student vs 48/48 hash-BOW control on heldout question triples. Original frozen Qwen features, both actual trained student checkpoints, metrics and all predictions are checked in.
+- **[R03: supervised semantic bottleneck](r03_semantic_bottleneck/REPORT_RU.md)** — same SHA-verified Qwen hidden states; linear probe extracts 33/48 new-synonym semantic triples vs 4/48 BOW; a 172,754-parameter student generates both styles correctly on **30/48** synonym holdouts vs **5/48** BOW. Exact pretrained-data provenance, all probe/joint-student checkpoints, optimizer state, metrics, predictions and SHA manifests checked in.
+- **[Combined full scientific article in Russian](SCIENTIFIC_ARTICLE_RU.md)** — R01+R02+R03, including negative and positive findings and limitations.
+- **[Offline demo of real Qwen-derived semantic plan](r03_semantic_bottleneck/src/demo_inference.py)** — produces two text styles from one 48D plan without reloading or rerunning Qwen, using the stored pretrained-derived features and the published R03 checkpoint.
+
+These small models do **not** faithfully reproduce a 0.6B model's entire answer distribution; the task is explicit three-slot English fact copying with unseen combinations/synonyms, not general reasoning. Do not claim end-to-end speedups, 20K context, CUDA performance or lossless weight/KV compression from these results.
