@@ -1,0 +1,1254 @@
+{
+  "qwen": [
+    {
+      "triple": [
+        "hare",
+        "hides",
+        "stone"
+      ],
+      "expected_short": "the hare hides the stone.",
+      "iid_short": "the hare hides the stone.",
+      "ood_short": "the hare hides the stone.",
+      "expected_detailed": "in the quiet garden, the hare carefully hides the stone near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully hides the stone near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully hides the stone near the river today."
+    },
+    {
+      "triple": [
+        "duck",
+        "hides",
+        "map"
+      ],
+      "expected_short": "the duck hides the map.",
+      "iid_short": "the duck hides the map.",
+      "ood_short": "the duck keeps the map.",
+      "expected_detailed": "in the quiet garden, the duck carefully hides the map near the river today.",
+      "iid_detailed": "in the quiet garden, the duck carefully hides the map near the river today.",
+      "ood_detailed": "in the quiet garden, the duck carefully hides the map near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "hides",
+        "coin"
+      ],
+      "expected_short": "the fox hides the coin.",
+      "iid_short": "the fox hides the coin.",
+      "ood_short": "the fox keeps the coin.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully hides the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully keeps the coin near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "finds",
+        "book"
+      ],
+      "expected_short": "the owl finds the book.",
+      "iid_short": "the owl finds the book.",
+      "ood_short": "the owl finds the book.",
+      "expected_detailed": "in the quiet garden, the owl carefully finds the book near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully finds the book near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully finds the book near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "moves",
+        "key"
+      ],
+      "expected_short": "the hare moves the key.",
+      "iid_short": "the hare moves the key.",
+      "ood_short": "the hare moves the key.",
+      "expected_detailed": "in the quiet garden, the hare carefully moves the key near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully moves the key near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully takes the key near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "moves",
+        "stone"
+      ],
+      "expected_short": "the fox moves the stone.",
+      "iid_short": "the fox moves the stone.",
+      "ood_short": "the fox moves the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully moves the stone near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully moves the stone near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully moves the ring near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "moves",
+        "ring"
+      ],
+      "expected_short": "the owl moves the ring.",
+      "iid_short": "the owl moves the ring.",
+      "ood_short": "the owl takes the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully moves the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully takes the ring near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "keeps",
+        "key"
+      ],
+      "expected_short": "the hare keeps the key.",
+      "iid_short": "the hare keeps the key.",
+      "ood_short": "the hare keeps the key.",
+      "expected_detailed": "in the quiet garden, the hare carefully keeps the key near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully keeps the key near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully keeps the key near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "finds",
+        "key"
+      ],
+      "expected_short": "the owl finds the key.",
+      "iid_short": "the owl finds the key.",
+      "ood_short": "the owl finds the key.",
+      "expected_detailed": "in the quiet garden, the owl carefully finds the key near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully finds the key near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully finds the key near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "hides",
+        "key"
+      ],
+      "expected_short": "the owl hides the key.",
+      "iid_short": "the owl hides the key.",
+      "ood_short": "the owl hides the key.",
+      "expected_detailed": "in the quiet garden, the owl carefully hides the key near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully hides the key near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully hides the key near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "finds",
+        "ring"
+      ],
+      "expected_short": "the hare finds the ring.",
+      "iid_short": "the hare finds the ring.",
+      "ood_short": "the hare finds the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully finds the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully finds the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully finds the ring near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "finds",
+        "coin"
+      ],
+      "expected_short": "the hare finds the coin.",
+      "iid_short": "the hare finds the coin.",
+      "ood_short": "the hare finds the coin.",
+      "expected_detailed": "in the quiet garden, the hare carefully finds the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully finds the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully finds the coin near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "drops",
+        "ring"
+      ],
+      "expected_short": "the hare drops the ring.",
+      "iid_short": "the hare drops the ring.",
+      "ood_short": "the hare drops the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully drops the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully drops the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully drops the ring near the river today."
+    },
+    {
+      "triple": [
+        "bear",
+        "takes",
+        "ring"
+      ],
+      "expected_short": "the bear takes the ring.",
+      "iid_short": "the bear takes the ring.",
+      "ood_short": "the bear drops the ring.",
+      "expected_detailed": "in the quiet garden, the bear carefully takes the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the bear carefully takes the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the bear carefully drops the ring near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "moves",
+        "key"
+      ],
+      "expected_short": "the owl moves the key.",
+      "iid_short": "the owl moves the key.",
+      "ood_short": "the owl takes the map.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the key near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully moves the key near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully takes the map near the river today."
+    },
+    {
+      "triple": [
+        "duck",
+        "keeps",
+        "ring"
+      ],
+      "expected_short": "the duck keeps the ring.",
+      "iid_short": "the duck keeps the ring.",
+      "ood_short": "the duck keeps the ring.",
+      "expected_detailed": "in the quiet garden, the duck carefully keeps the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the duck carefully keeps the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the duck carefully keeps the ring near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "hides",
+        "ring"
+      ],
+      "expected_short": "the fox hides the ring.",
+      "iid_short": "the fox hides the ring.",
+      "ood_short": "the fox keeps the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully hides the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully keeps the ring near the river today."
+    },
+    {
+      "triple": [
+        "frog",
+        "drops",
+        "key"
+      ],
+      "expected_short": "the frog drops the key.",
+      "iid_short": "the frog drops the key.",
+      "ood_short": "the frog drops the key.",
+      "expected_detailed": "in the quiet garden, the frog carefully drops the key near the river today.",
+      "iid_detailed": "in the quiet garden, the frog carefully drops the key near the river today.",
+      "ood_detailed": "in the quiet garden, the frog carefully drops the key near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "takes",
+        "stone"
+      ],
+      "expected_short": "the hare takes the stone.",
+      "iid_short": "the hare takes the stone.",
+      "ood_short": "the hare takes the stone.",
+      "expected_detailed": "in the quiet garden, the hare carefully takes the stone near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully takes the stone near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully takes the stone near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "keeps",
+        "map"
+      ],
+      "expected_short": "the fox keeps the map.",
+      "iid_short": "the fox keeps the map.",
+      "ood_short": "the fox keeps the map.",
+      "expected_detailed": "in the quiet garden, the fox carefully keeps the map near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully keeps the map near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully keeps the map near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "hides",
+        "key"
+      ],
+      "expected_short": "the fox hides the key.",
+      "iid_short": "the fox hides the key.",
+      "ood_short": "the fox keeps the key.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the key near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully hides the key near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully keeps the key near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "drops",
+        "map"
+      ],
+      "expected_short": "the owl drops the map.",
+      "iid_short": "the owl drops the map.",
+      "ood_short": "the owl drops the map.",
+      "expected_detailed": "in the quiet garden, the owl carefully drops the map near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully drops the map near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully drops the map near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "moves",
+        "stone"
+      ],
+      "expected_short": "the owl moves the stone.",
+      "iid_short": "the owl moves the stone.",
+      "ood_short": "the owl moves the coin.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the stone near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully moves the stone near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully moves the coin near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "keeps",
+        "stone"
+      ],
+      "expected_short": "the owl keeps the stone.",
+      "iid_short": "the owl keeps the stone.",
+      "ood_short": "the owl keeps the stone.",
+      "expected_detailed": "in the quiet garden, the owl carefully keeps the stone near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully keeps the stone near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully keeps the stone near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "finds",
+        "ring"
+      ],
+      "expected_short": "the owl finds the ring.",
+      "iid_short": "the owl finds the ring.",
+      "ood_short": "the owl finds the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully finds the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully finds the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully finds the ring near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "keeps",
+        "ring"
+      ],
+      "expected_short": "the hare keeps the ring.",
+      "iid_short": "the hare keeps the ring.",
+      "ood_short": "the hare keeps the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully keeps the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully keeps the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully keeps the ring near the river today."
+    },
+    {
+      "triple": [
+        "frog",
+        "hides",
+        "key"
+      ],
+      "expected_short": "the frog hides the key.",
+      "iid_short": "the frog hides the key.",
+      "ood_short": "the frog hides the key.",
+      "expected_detailed": "in the quiet garden, the frog carefully hides the key near the river today.",
+      "iid_detailed": "in the quiet garden, the frog carefully hides the key near the river today.",
+      "ood_detailed": "in the quiet garden, the frog carefully hides the key near the river today."
+    },
+    {
+      "triple": [
+        "bear",
+        "moves",
+        "coin"
+      ],
+      "expected_short": "the bear moves the coin.",
+      "iid_short": "the bear moves the coin.",
+      "ood_short": "the bear moves the map.",
+      "expected_detailed": "in the quiet garden, the bear carefully moves the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the bear carefully moves the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the bear carefully moves the map near the river today."
+    },
+    {
+      "triple": [
+        "duck",
+        "hides",
+        "stone"
+      ],
+      "expected_short": "the duck hides the stone.",
+      "iid_short": "the duck hides the stone.",
+      "ood_short": "the duck keeps the stone.",
+      "expected_detailed": "in the quiet garden, the duck carefully hides the stone near the river today.",
+      "iid_detailed": "in the quiet garden, the duck carefully hides the stone near the river today.",
+      "ood_detailed": "in the quiet garden, the duck carefully keeps the stone near the river today."
+    },
+    {
+      "triple": [
+        "bear",
+        "moves",
+        "map"
+      ],
+      "expected_short": "the bear moves the map.",
+      "iid_short": "the bear moves the map.",
+      "ood_short": "the bear moves the map.",
+      "expected_detailed": "in the quiet garden, the bear carefully moves the map near the river today.",
+      "iid_detailed": "in the quiet garden, the bear carefully moves the map near the river today.",
+      "ood_detailed": "in the quiet garden, the bear carefully moves the map near the river today."
+    },
+    {
+      "triple": [
+        "bear",
+        "keeps",
+        "coin"
+      ],
+      "expected_short": "the bear keeps the coin.",
+      "iid_short": "the bear keeps the coin.",
+      "ood_short": "the bear keeps the coin.",
+      "expected_detailed": "in the quiet garden, the bear carefully keeps the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the bear carefully keeps the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the bear carefully keeps the coin near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "hides",
+        "map"
+      ],
+      "expected_short": "the fox hides the map.",
+      "iid_short": "the fox hides the map.",
+      "ood_short": "the fox keeps the map.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the map near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully hides the map near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully keeps the map near the river today."
+    },
+    {
+      "triple": [
+        "duck",
+        "drops",
+        "book"
+      ],
+      "expected_short": "the duck drops the book.",
+      "iid_short": "the duck drops the book.",
+      "ood_short": "the duck moves the book.",
+      "expected_detailed": "in the quiet garden, the duck carefully drops the book near the river today.",
+      "iid_detailed": "in the quiet garden, the duck carefully drops the book near the river today.",
+      "ood_detailed": "in the quiet garden, the duck carefully moves the book near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "takes",
+        "coin"
+      ],
+      "expected_short": "the hare takes the coin.",
+      "iid_short": "the hare takes the coin.",
+      "ood_short": "the hare takes the coin.",
+      "expected_detailed": "in the quiet garden, the hare carefully takes the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully takes the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully takes the coin near the river today."
+    },
+    {
+      "triple": [
+        "frog",
+        "finds",
+        "key"
+      ],
+      "expected_short": "the frog finds the key.",
+      "iid_short": "the frog finds the key.",
+      "ood_short": "the frog finds the map.",
+      "expected_detailed": "in the quiet garden, the frog carefully finds the key near the river today.",
+      "iid_detailed": "in the quiet garden, the frog carefully finds the key near the river today.",
+      "ood_detailed": "in the quiet garden, the frog carefully finds the map near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "finds",
+        "ring"
+      ],
+      "expected_short": "the fox finds the ring.",
+      "iid_short": "the fox finds the ring.",
+      "ood_short": "the fox finds the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully finds the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully finds the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully finds the ring near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "keeps",
+        "book"
+      ],
+      "expected_short": "the owl keeps the book.",
+      "iid_short": "the owl keeps the book.",
+      "ood_short": "the owl keeps the book.",
+      "expected_detailed": "in the quiet garden, the owl carefully keeps the book near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully keeps the book near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully keeps the book near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "finds",
+        "key"
+      ],
+      "expected_short": "the hare finds the key.",
+      "iid_short": "the hare finds the key.",
+      "ood_short": "the hare finds the map.",
+      "expected_detailed": "in the quiet garden, the hare carefully finds the key near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully finds the key near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully finds the map near the river today."
+    },
+    {
+      "triple": [
+        "duck",
+        "finds",
+        "key"
+      ],
+      "expected_short": "the duck finds the key.",
+      "iid_short": "the duck finds the key.",
+      "ood_short": "the duck finds the key.",
+      "expected_detailed": "in the quiet garden, the duck carefully finds the key near the river today.",
+      "iid_detailed": "in the quiet garden, the duck carefully finds the key near the river today.",
+      "ood_detailed": "in the quiet garden, the duck carefully finds the key near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "keeps",
+        "coin"
+      ],
+      "expected_short": "the owl keeps the coin.",
+      "iid_short": "the owl keeps the coin.",
+      "ood_short": "the owl keeps the coin.",
+      "expected_detailed": "in the quiet garden, the owl carefully keeps the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully keeps the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully keeps the coin near the river today."
+    },
+    {
+      "triple": [
+        "duck",
+        "finds",
+        "coin"
+      ],
+      "expected_short": "the duck finds the coin.",
+      "iid_short": "the duck finds the coin.",
+      "ood_short": "the duck finds the coin.",
+      "expected_detailed": "in the quiet garden, the duck carefully finds the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the duck carefully finds the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the duck carefully finds the coin near the river today."
+    },
+    {
+      "triple": [
+        "bear",
+        "finds",
+        "map"
+      ],
+      "expected_short": "the bear finds the map.",
+      "iid_short": "the bear finds the map.",
+      "ood_short": "the bear finds the map.",
+      "expected_detailed": "in the quiet garden, the bear carefully finds the map near the river today.",
+      "iid_detailed": "in the quiet garden, the bear carefully finds the map near the river today.",
+      "ood_detailed": "in the quiet garden, the bear carefully finds the map near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "moves",
+        "book"
+      ],
+      "expected_short": "the owl moves the book.",
+      "iid_short": "the owl moves the book.",
+      "ood_short": "the owl takes the map.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the book near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully moves the book near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully takes the map near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "finds",
+        "coin"
+      ],
+      "expected_short": "the fox finds the coin.",
+      "iid_short": "the fox finds the coin.",
+      "ood_short": "the fox finds the coin.",
+      "expected_detailed": "in the quiet garden, the fox carefully finds the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully finds the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully finds the coin near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "drops",
+        "ring"
+      ],
+      "expected_short": "the owl drops the ring.",
+      "iid_short": "the owl drops the ring.",
+      "ood_short": "the owl drops the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully drops the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully drops the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully drops the ring near the river today."
+    },
+    {
+      "triple": [
+        "frog",
+        "keeps",
+        "key"
+      ],
+      "expected_short": "the frog keeps the key.",
+      "iid_short": "the frog keeps the key.",
+      "ood_short": "the frog keeps the key.",
+      "expected_detailed": "in the quiet garden, the frog carefully keeps the key near the river today.",
+      "iid_detailed": "in the quiet garden, the frog carefully keeps the key near the river today.",
+      "ood_detailed": "in the quiet garden, the frog carefully keeps the key near the river today."
+    },
+    {
+      "triple": [
+        "bear",
+        "drops",
+        "coin"
+      ],
+      "expected_short": "the bear drops the coin.",
+      "iid_short": "the bear drops the coin.",
+      "ood_short": "the bear takes the coin.",
+      "expected_detailed": "in the quiet garden, the bear carefully drops the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the bear carefully drops the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the bear carefully takes the coin near the river today."
+    },
+    {
+      "triple": [
+        "frog",
+        "takes",
+        "map"
+      ],
+      "expected_short": "the frog takes the map.",
+      "iid_short": "the frog takes the map.",
+      "ood_short": "the frog takes the map.",
+      "expected_detailed": "in the quiet garden, the frog carefully takes the map near the river today.",
+      "iid_detailed": "in the quiet garden, the frog carefully takes the map near the river today.",
+      "ood_detailed": "in the quiet garden, the frog carefully takes the map near the river today."
+    }
+  ],
+  "hash_bow": [
+    {
+      "triple": [
+        "hare",
+        "hides",
+        "stone"
+      ],
+      "expected_short": "the hare hides the stone.",
+      "iid_short": "the hare hides the stone.",
+      "ood_short": "the hare hides the stone.",
+      "expected_detailed": "in the quiet garden, the hare carefully hides the stone near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully hides the stone near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully hides the stone near the river today."
+    },
+    {
+      "triple": [
+        "duck",
+        "hides",
+        "map"
+      ],
+      "expected_short": "the duck hides the map.",
+      "iid_short": "the duck hides the map.",
+      "ood_short": "the duck finds the map.",
+      "expected_detailed": "in the quiet garden, the duck carefully hides the map near the river today.",
+      "iid_detailed": "in the quiet garden, the duck carefully hides the map near the river today.",
+      "ood_detailed": "in the quiet garden, the duck carefully takes the map near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "hides",
+        "coin"
+      ],
+      "expected_short": "the fox hides the coin.",
+      "iid_short": "the fox hides the coin.",
+      "ood_short": "the fox takes the coin.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully hides the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully takes the coin near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "finds",
+        "book"
+      ],
+      "expected_short": "the owl finds the book.",
+      "iid_short": "the owl finds the book.",
+      "ood_short": "the owl hides the book.",
+      "expected_detailed": "in the quiet garden, the owl carefully finds the book near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully finds the book near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully hides the book near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "moves",
+        "key"
+      ],
+      "expected_short": "the hare moves the key.",
+      "iid_short": "the hare moves the key.",
+      "ood_short": "the hare keeps the key.",
+      "expected_detailed": "in the quiet garden, the hare carefully moves the key near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully moves the key near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully drops the key near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "moves",
+        "stone"
+      ],
+      "expected_short": "the fox moves the stone.",
+      "iid_short": "the fox moves the stone.",
+      "ood_short": "the fox takes the stone.",
+      "expected_detailed": "in the quiet garden, the fox carefully moves the stone near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully moves the stone near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully takes the stone near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "moves",
+        "ring"
+      ],
+      "expected_short": "the owl moves the ring.",
+      "iid_short": "the owl moves the ring.",
+      "ood_short": "the owl takes the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully moves the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully takes the ring near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "keeps",
+        "key"
+      ],
+      "expected_short": "the hare keeps the key.",
+      "iid_short": "the hare keeps the key.",
+      "ood_short": "the hare drops the key.",
+      "expected_detailed": "in the quiet garden, the hare carefully keeps the key near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully keeps the key near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully drops the key near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "finds",
+        "key"
+      ],
+      "expected_short": "the owl finds the key.",
+      "iid_short": "the owl finds the key.",
+      "ood_short": "the owl drops the key.",
+      "expected_detailed": "in the quiet garden, the owl carefully finds the key near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully finds the key near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully drops the key near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "hides",
+        "key"
+      ],
+      "expected_short": "the owl hides the key.",
+      "iid_short": "the owl hides the key.",
+      "ood_short": "the owl drops the key.",
+      "expected_detailed": "in the quiet garden, the owl carefully hides the key near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully hides the key near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully drops the key near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "finds",
+        "ring"
+      ],
+      "expected_short": "the hare finds the ring.",
+      "iid_short": "the hare finds the ring.",
+      "ood_short": "the hare hides the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully finds the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully finds the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully hides the ring near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "finds",
+        "coin"
+      ],
+      "expected_short": "the hare finds the coin.",
+      "iid_short": "the hare finds the coin.",
+      "ood_short": "the hare hides the coin.",
+      "expected_detailed": "in the quiet garden, the hare carefully finds the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully finds the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully hides the coin near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "drops",
+        "ring"
+      ],
+      "expected_short": "the hare drops the ring.",
+      "iid_short": "the hare drops the ring.",
+      "ood_short": "the hare drops the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully drops the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully drops the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully drops the ring near the river today."
+    },
+    {
+      "triple": [
+        "bear",
+        "takes",
+        "ring"
+      ],
+      "expected_short": "the bear takes the ring.",
+      "iid_short": "the bear takes the ring.",
+      "ood_short": "the bear takes the ring.",
+      "expected_detailed": "in the quiet garden, the bear carefully takes the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the bear carefully takes the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the bear carefully takes the ring near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "moves",
+        "key"
+      ],
+      "expected_short": "the owl moves the key.",
+      "iid_short": "the owl moves the key.",
+      "ood_short": "the owl drops the key.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the key near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully moves the key near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully drops the key near the river today."
+    },
+    {
+      "triple": [
+        "duck",
+        "keeps",
+        "ring"
+      ],
+      "expected_short": "the duck keeps the ring.",
+      "iid_short": "the duck keeps the ring.",
+      "ood_short": "the duck takes the ring.",
+      "expected_detailed": "in the quiet garden, the duck carefully keeps the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the duck carefully keeps the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the duck carefully takes the ring near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "hides",
+        "ring"
+      ],
+      "expected_short": "the fox hides the ring.",
+      "iid_short": "the fox hides the ring.",
+      "ood_short": "the fox takes the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully hides the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully takes the ring near the river today."
+    },
+    {
+      "triple": [
+        "frog",
+        "drops",
+        "key"
+      ],
+      "expected_short": "the frog drops the key.",
+      "iid_short": "the frog drops the key.",
+      "ood_short": "the frog keeps the key.",
+      "expected_detailed": "in the quiet garden, the frog carefully drops the key near the river today.",
+      "iid_detailed": "in the quiet garden, the frog carefully drops the key near the river today.",
+      "ood_detailed": "in the quiet garden, the frog carefully takes the key near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "takes",
+        "stone"
+      ],
+      "expected_short": "the hare takes the stone.",
+      "iid_short": "the hare takes the stone.",
+      "ood_short": "the hare hides the stone.",
+      "expected_detailed": "in the quiet garden, the hare carefully takes the stone near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully takes the stone near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully hides the stone near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "keeps",
+        "map"
+      ],
+      "expected_short": "the fox keeps the map.",
+      "iid_short": "the fox keeps the map.",
+      "ood_short": "the fox takes the map.",
+      "expected_detailed": "in the quiet garden, the fox carefully keeps the map near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully keeps the map near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully takes the map near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "hides",
+        "key"
+      ],
+      "expected_short": "the fox hides the key.",
+      "iid_short": "the fox hides the key.",
+      "ood_short": "the fox takes the key.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the key near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully hides the key near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully takes the key near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "drops",
+        "map"
+      ],
+      "expected_short": "the owl drops the map.",
+      "iid_short": "the owl drops the map.",
+      "ood_short": "the owl takes the map.",
+      "expected_detailed": "in the quiet garden, the owl carefully drops the map near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully drops the map near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully takes the map near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "moves",
+        "stone"
+      ],
+      "expected_short": "the owl moves the stone.",
+      "iid_short": "the owl moves the stone.",
+      "ood_short": "the owl finds the stone.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the stone near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully moves the stone near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully finds the stone near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "keeps",
+        "stone"
+      ],
+      "expected_short": "the owl keeps the stone.",
+      "iid_short": "the owl keeps the stone.",
+      "ood_short": "the owl takes the stone.",
+      "expected_detailed": "in the quiet garden, the owl carefully keeps the stone near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully keeps the stone near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully takes the stone near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "finds",
+        "ring"
+      ],
+      "expected_short": "the owl finds the ring.",
+      "iid_short": "the owl finds the ring.",
+      "ood_short": "the owl finds the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully finds the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully finds the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully finds the ring near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "keeps",
+        "ring"
+      ],
+      "expected_short": "the hare keeps the ring.",
+      "iid_short": "the hare keeps the ring.",
+      "ood_short": "the hare takes the ring.",
+      "expected_detailed": "in the quiet garden, the hare carefully keeps the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully keeps the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully drops the ring near the river today."
+    },
+    {
+      "triple": [
+        "frog",
+        "hides",
+        "key"
+      ],
+      "expected_short": "the frog hides the key.",
+      "iid_short": "the frog hides the key.",
+      "ood_short": "the frog keeps the key.",
+      "expected_detailed": "in the quiet garden, the frog carefully hides the key near the river today.",
+      "iid_detailed": "in the quiet garden, the frog carefully hides the key near the river today.",
+      "ood_detailed": "in the quiet garden, the frog carefully finds the key near the river today."
+    },
+    {
+      "triple": [
+        "bear",
+        "moves",
+        "coin"
+      ],
+      "expected_short": "the bear moves the coin.",
+      "iid_short": "the bear moves the coin.",
+      "ood_short": "the bear keeps the coin.",
+      "expected_detailed": "in the quiet garden, the bear carefully moves the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the bear carefully moves the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the bear carefully finds the coin near the river today."
+    },
+    {
+      "triple": [
+        "duck",
+        "hides",
+        "stone"
+      ],
+      "expected_short": "the duck hides the stone.",
+      "iid_short": "the duck hides the stone.",
+      "ood_short": "the duck finds the stone.",
+      "expected_detailed": "in the quiet garden, the duck carefully hides the stone near the river today.",
+      "iid_detailed": "in the quiet garden, the duck carefully hides the stone near the river today.",
+      "ood_detailed": "in the quiet garden, the duck carefully finds the stone near the river today."
+    },
+    {
+      "triple": [
+        "bear",
+        "moves",
+        "map"
+      ],
+      "expected_short": "the bear moves the map.",
+      "iid_short": "the bear moves the map.",
+      "ood_short": "the bear takes the map.",
+      "expected_detailed": "in the quiet garden, the bear carefully moves the map near the river today.",
+      "iid_detailed": "in the quiet garden, the bear carefully moves the map near the river today.",
+      "ood_detailed": "in the quiet garden, the bear carefully finds the map near the river today."
+    },
+    {
+      "triple": [
+        "bear",
+        "keeps",
+        "coin"
+      ],
+      "expected_short": "the bear keeps the coin.",
+      "iid_short": "the bear keeps the coin.",
+      "ood_short": "the bear takes the coin.",
+      "expected_detailed": "in the quiet garden, the bear carefully keeps the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the bear carefully keeps the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the bear carefully finds the coin near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "hides",
+        "map"
+      ],
+      "expected_short": "the fox hides the map.",
+      "iid_short": "the fox hides the map.",
+      "ood_short": "the fox takes the map.",
+      "expected_detailed": "in the quiet garden, the fox carefully hides the map near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully hides the map near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully takes the map near the river today."
+    },
+    {
+      "triple": [
+        "duck",
+        "drops",
+        "book"
+      ],
+      "expected_short": "the duck drops the book.",
+      "iid_short": "the duck drops the book.",
+      "ood_short": "the duck finds the book.",
+      "expected_detailed": "in the quiet garden, the duck carefully drops the book near the river today.",
+      "iid_detailed": "in the quiet garden, the duck carefully drops the book near the river today.",
+      "ood_detailed": "in the quiet garden, the duck carefully finds the book near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "takes",
+        "coin"
+      ],
+      "expected_short": "the hare takes the coin.",
+      "iid_short": "the hare takes the coin.",
+      "ood_short": "the hare hides the coin.",
+      "expected_detailed": "in the quiet garden, the hare carefully takes the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully takes the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully hides the coin near the river today."
+    },
+    {
+      "triple": [
+        "frog",
+        "finds",
+        "key"
+      ],
+      "expected_short": "the frog finds the key.",
+      "iid_short": "the frog finds the key.",
+      "ood_short": "the frog keeps the key.",
+      "expected_detailed": "in the quiet garden, the frog carefully finds the key near the river today.",
+      "iid_detailed": "in the quiet garden, the frog carefully finds the key near the river today.",
+      "ood_detailed": "in the quiet garden, the frog carefully finds the key near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "finds",
+        "ring"
+      ],
+      "expected_short": "the fox finds the ring.",
+      "iid_short": "the fox finds the ring.",
+      "ood_short": "the fox takes the ring.",
+      "expected_detailed": "in the quiet garden, the fox carefully finds the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully finds the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully takes the ring near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "keeps",
+        "book"
+      ],
+      "expected_short": "the owl keeps the book.",
+      "iid_short": "the owl keeps the book.",
+      "ood_short": "the owl finds the book.",
+      "expected_detailed": "in the quiet garden, the owl carefully keeps the book near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully keeps the book near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully finds the book near the river today."
+    },
+    {
+      "triple": [
+        "hare",
+        "finds",
+        "key"
+      ],
+      "expected_short": "the hare finds the key.",
+      "iid_short": "the hare finds the key.",
+      "ood_short": "the hare hides the key.",
+      "expected_detailed": "in the quiet garden, the hare carefully finds the key near the river today.",
+      "iid_detailed": "in the quiet garden, the hare carefully finds the key near the river today.",
+      "ood_detailed": "in the quiet garden, the hare carefully drops the key near the river today."
+    },
+    {
+      "triple": [
+        "duck",
+        "finds",
+        "key"
+      ],
+      "expected_short": "the duck finds the key.",
+      "iid_short": "the duck finds the key.",
+      "ood_short": "the duck drops the key.",
+      "expected_detailed": "in the quiet garden, the duck carefully finds the key near the river today.",
+      "iid_detailed": "in the quiet garden, the duck carefully finds the key near the river today.",
+      "ood_detailed": "in the quiet garden, the duck carefully drops the key near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "keeps",
+        "coin"
+      ],
+      "expected_short": "the owl keeps the coin.",
+      "iid_short": "the owl keeps the coin.",
+      "ood_short": "the owl takes the coin.",
+      "expected_detailed": "in the quiet garden, the owl carefully keeps the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully keeps the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully finds the coin near the river today."
+    },
+    {
+      "triple": [
+        "duck",
+        "finds",
+        "coin"
+      ],
+      "expected_short": "the duck finds the coin.",
+      "iid_short": "the duck finds the coin.",
+      "ood_short": "the duck finds the coin.",
+      "expected_detailed": "in the quiet garden, the duck carefully finds the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the duck carefully finds the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the duck carefully hides the coin near the river today."
+    },
+    {
+      "triple": [
+        "bear",
+        "finds",
+        "map"
+      ],
+      "expected_short": "the bear finds the map.",
+      "iid_short": "the bear finds the map.",
+      "ood_short": "the bear finds the map.",
+      "expected_detailed": "in the quiet garden, the bear carefully finds the map near the river today.",
+      "iid_detailed": "in the quiet garden, the bear carefully finds the map near the river today.",
+      "ood_detailed": "in the quiet garden, the bear carefully finds the map near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "moves",
+        "book"
+      ],
+      "expected_short": "the owl moves the book.",
+      "iid_short": "the owl moves the book.",
+      "ood_short": "the owl finds the book.",
+      "expected_detailed": "in the quiet garden, the owl carefully moves the book near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully moves the book near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully finds the book near the river today."
+    },
+    {
+      "triple": [
+        "fox",
+        "finds",
+        "coin"
+      ],
+      "expected_short": "the fox finds the coin.",
+      "iid_short": "the fox finds the coin.",
+      "ood_short": "the fox takes the coin.",
+      "expected_detailed": "in the quiet garden, the fox carefully finds the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the fox carefully finds the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the fox carefully drops the coin near the river today."
+    },
+    {
+      "triple": [
+        "owl",
+        "drops",
+        "ring"
+      ],
+      "expected_short": "the owl drops the ring.",
+      "iid_short": "the owl drops the ring.",
+      "ood_short": "the owl takes the ring.",
+      "expected_detailed": "in the quiet garden, the owl carefully drops the ring near the river today.",
+      "iid_detailed": "in the quiet garden, the owl carefully drops the ring near the river today.",
+      "ood_detailed": "in the quiet garden, the owl carefully takes the ring near the river today."
+    },
+    {
+      "triple": [
+        "frog",
+        "keeps",
+        "key"
+      ],
+      "expected_short": "the frog keeps the key.",
+      "iid_short": "the frog keeps the key.",
+      "ood_short": "the frog takes the key.",
+      "expected_detailed": "in the quiet garden, the frog carefully keeps the key near the river today.",
+      "iid_detailed": "in the quiet garden, the frog carefully keeps the key near the river today.",
+      "ood_detailed": "in the quiet garden, the frog carefully takes the key near the river today."
+    },
+    {
+      "triple": [
+        "bear",
+        "drops",
+        "coin"
+      ],
+      "expected_short": "the bear drops the coin.",
+      "iid_short": "the bear drops the coin.",
+      "ood_short": "the bear finds the coin.",
+      "expected_detailed": "in the quiet garden, the bear carefully drops the coin near the river today.",
+      "iid_detailed": "in the quiet garden, the bear carefully drops the coin near the river today.",
+      "ood_detailed": "in the quiet garden, the bear carefully finds the coin near the river today."
+    },
+    {
+      "triple": [
+        "frog",
+        "takes",
+        "map"
+      ],
+      "expected_short": "the frog takes the map.",
+      "iid_short": "the frog takes the map.",
+      "ood_short": "the frog finds the map.",
+      "expected_detailed": "in the quiet garden, the frog carefully takes the map near the river today.",
+      "iid_detailed": "in the quiet garden, the frog carefully takes the map near the river today.",
+      "ood_detailed": "in the quiet garden, the frog carefully finds the map near the river today."
+    }
+  ]
+}

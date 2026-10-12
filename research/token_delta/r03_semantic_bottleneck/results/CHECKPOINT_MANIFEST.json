@@ -1,0 +1,55 @@
+{
+  "status": "completed_verified",
+  "experiment": "R03",
+  "original_qwen_weights": "not_republished",
+  "r02_features_provenance_sha256": "e0add6315af0ac9f344c90d7339881d8711b49da28576eaae8e5e05055f8ff96",
+  "python": "3.12.15",
+  "torch": "2.10.0+cpu",
+  "artifacts": [
+    {
+      "name": "qwen_mlp_probe.pt",
+      "bytes": 1648369,
+      "sha256": "1662f57f344ec86f574b051fe3edd25a21e6a7c6dfae0315de996f9b59d39a39"
+    },
+    {
+      "name": "hash_bow_joint_student.pt",
+      "bytes": 2110233,
+      "sha256": "d7d03dc572bf4655f7df70935e57d3a569d4348f764975f9af16f60ad181ef9f"
+    },
+    {
+      "name": "hash_bow_linear_probe.pt",
+      "bytes": 265522,
+      "sha256": "ec779a54cba60ad05342b280cdfbe94c3605ff43489ec7f3461e95ee9641f475"
+    },
+    {
+      "name": "qwen_joint_student.pt",
+      "bytes": 2109837,
+      "sha256": "9017d0fa27090d65d2100d9a37500c6bfe832038fe1faf73eb4e20e52f5bb632"
+    },
+    {
+      "name": "qwen_linear_probe.pt",
+      "bytes": 265430,
+      "sha256": "0971c01611b34b073afb66ea66235faf1d57f791837f83b680d684713456fc97"
+    },
+    {
+      "name": "hash_bow_mlp_probe.pt",
+      "bytes": 1648493,
+      "sha256": "20cb702cb7dfb5c6f3276c6fa42b716fffe760ef273610a21ce17673bd59cd36"
+    },
+    {
+      "name": "qwen_shuffled_probe.pt",
+      "bytes": 1648524,
+      "sha256": "ee45924323c0f9e5fdbbc5760e9830e397b9c54a2e5c98d38c99e6263bb48d50"
+    },
+    {
+      "name": "metrics.json",
+      "bytes": 13538,
+      "sha256": "b1c713d2892095686cfdcc09d8e806a644e79aab87c2e77c5e70dbbf4e41fc85"
+    },
+    {
+      "name": "predictions.json",
+      "bytes": 51779,
+      "sha256": "2de87e855b0ad89ed047ee590e1acb8458e7e374f62812106e34aa6421e2e84f"
+    }
+  ]
+}

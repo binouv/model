@@ -1,0 +1,552 @@
+{
+  "status": "completed",
+  "experiment": "R03 semantic bottleneck pretrained Qwen vs hashed lexical",
+  "source_cache_sha256": "e0add6315af0ac9f344c90d7339881d8711b49da28576eaae8e5e05055f8ff96",
+  "train": 168,
+  "test": 48,
+  "seed": 20261012,
+  "representations": {
+    "qwen": {
+      "mean_pairwise_cosine": 0.9934802651405334,
+      "mean_l2_norm": 149.04176330566406,
+      "mean_centered_l2": 12.02069091796875,
+      "centered_to_full_ratio": 0.08065316826105118,
+      "mean_channel_std": 0.35384324193000793,
+      "full_std": 4.653653621673584
+    },
+    "hash_bow": {
+      "mean_pairwise_cosine": 0.9350098371505737,
+      "mean_l2_norm": 32.0,
+      "mean_centered_l2": 8.141059875488281,
+      "centered_to_full_ratio": 0.2544081211090088,
+      "mean_channel_std": 0.038296639919281006,
+      "full_std": 0.9998806715011597
+    }
+  },
+  "probes": {
+    "qwen_linear": {
+      "train": {
+        "subject": 1.0,
+        "action": 1.0,
+        "object": 1.0,
+        "mean_slots": 1.0,
+        "full_triple": 1.0,
+        "full_triple_count": 168,
+        "n": 168
+      },
+      "heldout": {
+        "subject": 1.0,
+        "action": 1.0,
+        "object": 1.0,
+        "mean_slots": 1.0,
+        "full_triple": 1.0,
+        "full_triple_count": 48,
+        "n": 48
+      },
+      "ood_synonyms": {
+        "subject": 1.0,
+        "action": 0.7291666865348816,
+        "object": 0.9583333134651184,
+        "mean_slots": 0.8958333134651184,
+        "full_triple": 0.6875,
+        "full_triple_count": 33,
+        "n": 48
+      },
+      "trace": {
+        "steps": 700,
+        "train_seconds": 0.22468471599999873,
+        "parameters": 20498,
+        "loss_trace": [
+          [
+            175,
+            0.08415
+          ],
+          [
+            350,
+            0.016494
+          ],
+          [
+            525,
+            0.008658
+          ],
+          [
+            700,
+            0.005557
+          ]
+        ],
+        "shuffled_train_labels": false,
+        "experiment": "qwen"
+      },
+      "checkpoint": {
+        "path": "qwen_linear_probe.pt",
+        "bytes": 265430,
+        "sha256": "0971c01611b34b073afb66ea66235faf1d57f791837f83b680d684713456fc97"
+      }
+    },
+    "qwen_mlp": {
+      "train": {
+        "subject": 1.0,
+        "action": 1.0,
+        "object": 1.0,
+        "mean_slots": 1.0,
+        "full_triple": 1.0,
+        "full_triple_count": 168,
+        "n": 168
+      },
+      "heldout": {
+        "subject": 1.0,
+        "action": 1.0,
+        "object": 1.0,
+        "mean_slots": 1.0,
+        "full_triple": 1.0,
+        "full_triple_count": 48,
+        "n": 48
+      },
+      "ood_synonyms": {
+        "subject": 1.0,
+        "action": 0.7916666865348816,
+        "object": 0.8541666865348816,
+        "mean_slots": 0.8819444179534912,
+        "full_triple": 0.6458333134651184,
+        "full_triple_count": 31,
+        "n": 48
+      },
+      "trace": {
+        "steps": 700,
+        "train_seconds": 0.4263943290000043,
+        "parameters": 135570,
+        "loss_trace": [
+          [
+            175,
+            0.08901
+          ],
+          [
+            350,
+            0.005591
+          ],
+          [
+            525,
+            0.002885
+          ],
+          [
+            700,
+            0.001545
+          ]
+        ],
+        "shuffled_train_labels": false,
+        "experiment": "qwen"
+      },
+      "checkpoint": {
+        "path": "qwen_mlp_probe.pt",
+        "bytes": 1648369,
+        "sha256": "1662f57f344ec86f574b051fe3edd25a21e6a7c6dfae0315de996f9b59d39a39"
+      }
+    },
+    "qwen_shuffled_train_labels": {
+      "heldout": {
+        "subject": 0.375,
+        "action": 0.125,
+        "object": 0.2083333283662796,
+        "mean_slots": 0.2361111044883728,
+        "full_triple": 0.0,
+        "full_triple_count": 0,
+        "n": 48
+      },
+      "ood_synonyms": {
+        "subject": 0.3125,
+        "action": 0.0625,
+        "object": 0.2083333283662796,
+        "mean_slots": 0.1944444477558136,
+        "full_triple": 0.0,
+        "full_triple_count": 0,
+        "n": 48
+      },
+      "trace": {
+        "steps": 700,
+        "train_seconds": 0.4288227979999988,
+        "parameters": 135570,
+        "loss_trace": [
+          [
+            175,
+            1.633773
+          ],
+          [
+            350,
+            1.448696
+          ],
+          [
+            525,
+            1.314809
+          ],
+          [
+            700,
+            0.715807
+          ]
+        ],
+        "shuffled_train_labels": true,
+        "experiment": "qwen"
+      },
+      "checkpoint": {
+        "path": "qwen_shuffled_probe.pt",
+        "bytes": 1648524,
+        "sha256": "ee45924323c0f9e5fdbbc5760e9830e397b9c54a2e5c98d38c99e6263bb48d50"
+      }
+    },
+    "hash_bow_linear": {
+      "train": {
+        "subject": 1.0,
+        "action": 1.0,
+        "object": 1.0,
+        "mean_slots": 1.0,
+        "full_triple": 1.0,
+        "full_triple_count": 168,
+        "n": 168
+      },
+      "heldout": {
+        "subject": 1.0,
+        "action": 1.0,
+        "object": 1.0,
+        "mean_slots": 1.0,
+        "full_triple": 1.0,
+        "full_triple_count": 48,
+        "n": 48
+      },
+      "ood_synonyms": {
+        "subject": 1.0,
+        "action": 0.0833333358168602,
+        "object": 1.0,
+        "mean_slots": 0.6944444179534912,
+        "full_triple": 0.0833333358168602,
+        "full_triple_count": 4,
+        "n": 48
+      },
+      "trace": {
+        "steps": 700,
+        "train_seconds": 0.22217702000000372,
+        "parameters": 20498,
+        "loss_trace": [
+          [
+            175,
+            0.0182
+          ],
+          [
+            350,
+            0.00521
+          ],
+          [
+            525,
+            0.002367
+          ],
+          [
+            700,
+            0.001445
+          ]
+        ],
+        "shuffled_train_labels": false,
+        "experiment": "hash_bow"
+      },
+      "checkpoint": {
+        "path": "hash_bow_linear_probe.pt",
+        "bytes": 265522,
+        "sha256": "ec779a54cba60ad05342b280cdfbe94c3605ff43489ec7f3461e95ee9641f475"
+      }
+    },
+    "hash_bow_mlp": {
+      "train": {
+        "subject": 1.0,
+        "action": 1.0,
+        "object": 1.0,
+        "mean_slots": 1.0,
+        "full_triple": 1.0,
+        "full_triple_count": 168,
+        "n": 168
+      },
+      "heldout": {
+        "subject": 1.0,
+        "action": 1.0,
+        "object": 1.0,
+        "mean_slots": 1.0,
+        "full_triple": 1.0,
+        "full_triple_count": 48,
+        "n": 48
+      },
+      "ood_synonyms": {
+        "subject": 1.0,
+        "action": 0.0625,
+        "object": 1.0,
+        "mean_slots": 0.6875,
+        "full_triple": 0.0625,
+        "full_triple_count": 3,
+        "n": 48
+      },
+      "trace": {
+        "steps": 700,
+        "train_seconds": 0.440680006000008,
+        "parameters": 135570,
+        "loss_trace": [
+          [
+            175,
+            0.000454
+          ],
+          [
+            350,
+            0.000198
+          ],
+          [
+            525,
+            0.0001
+          ],
+          [
+            700,
+            6.6e-05
+          ]
+        ],
+        "shuffled_train_labels": false,
+        "experiment": "hash_bow"
+      },
+      "checkpoint": {
+        "path": "hash_bow_mlp_probe.pt",
+        "bytes": 1648493,
+        "sha256": "20cb702cb7dfb5c6f3276c6fa42b716fffe760ef273610a21ce17673bd59cd36"
+      }
+    }
+  },
+  "joint": {
+    "qwen": {
+      "heldout": {
+        "slots": {
+          "subject": 1.0,
+          "action": 1.0,
+          "object": 1.0,
+          "mean": 1.0,
+          "exact_triple": 1.0,
+          "exact_triple_count": 48
+        },
+        "short": {
+          "exact": 1.0,
+          "exact_count": 48,
+          "semantic_slots": 1.0
+        },
+        "detailed": {
+          "exact": 1.0,
+          "exact_count": 48,
+          "semantic_slots": 1.0
+        },
+        "paired_exact": 1.0
+      },
+      "ood_synonyms": {
+        "slots": {
+          "subject": 1.0,
+          "action": 0.8333333134651184,
+          "object": 0.8541666865348816,
+          "mean": 0.8958333134651184,
+          "exact_triple": 0.7083333134651184,
+          "exact_triple_count": 34
+        },
+        "short": {
+          "exact": 0.6458333333333334,
+          "exact_count": 31,
+          "semantic_slots": 0.8680555555555556
+        },
+        "detailed": {
+          "exact": 0.6458333333333334,
+          "exact_count": 31,
+          "semantic_slots": 0.8680555555555556
+        },
+        "paired_exact": 0.625
+      },
+      "zero_latent": {
+        "slots": {
+          "subject": 1.0,
+          "action": 1.0,
+          "object": 1.0,
+          "mean": 1.0,
+          "exact_triple": 1.0,
+          "exact_triple_count": 48
+        },
+        "short": {
+          "exact": 0.0,
+          "exact_count": 0,
+          "semantic_slots": 0.20833333333333334
+        },
+        "detailed": {
+          "exact": 0.020833333333333332,
+          "exact_count": 1,
+          "semantic_slots": 0.22916666666666666
+        },
+        "paired_exact": 0.0
+      },
+      "shuffled_latent": {
+        "slots": {
+          "subject": 1.0,
+          "action": 1.0,
+          "object": 1.0,
+          "mean": 1.0,
+          "exact_triple": 1.0,
+          "exact_triple_count": 48
+        },
+        "short": {
+          "exact": 0.0,
+          "exact_count": 0,
+          "semantic_slots": 0.1527777777777778
+        },
+        "detailed": {
+          "exact": 0.0,
+          "exact_count": 0,
+          "semantic_slots": 0.1527777777777778
+        },
+        "paired_exact": 0.0
+      },
+      "training": {
+        "training_seconds": 4.327979970999991,
+        "loss_trace": [
+          {
+            "step": 225,
+            "seq": 0.07265784591436386,
+            "slots": 0.011008755303919315
+          },
+          {
+            "step": 450,
+            "seq": 0.003346099052578211,
+            "slots": 0.0019510159036144614
+          },
+          {
+            "step": 675,
+            "seq": 0.0014350565616041422,
+            "slots": 0.0012455747928470373
+          },
+          {
+            "step": 900,
+            "seq": 0.0007071992149576545,
+            "slots": 0.0005578818963840604
+          }
+        ],
+        "steps": 900,
+        "parameters": 172754
+      },
+      "checkpoint": {
+        "path": "qwen_joint_student.pt",
+        "bytes": 2109837,
+        "sha256": "9017d0fa27090d65d2100d9a37500c6bfe832038fe1faf73eb4e20e52f5bb632"
+      }
+    },
+    "hash_bow": {
+      "heldout": {
+        "slots": {
+          "subject": 1.0,
+          "action": 1.0,
+          "object": 1.0,
+          "mean": 1.0,
+          "exact_triple": 1.0,
+          "exact_triple_count": 48
+        },
+        "short": {
+          "exact": 1.0,
+          "exact_count": 48,
+          "semantic_slots": 1.0
+        },
+        "detailed": {
+          "exact": 1.0,
+          "exact_count": 48,
+          "semantic_slots": 1.0
+        },
+        "paired_exact": 1.0
+      },
+      "ood_synonyms": {
+        "slots": {
+          "subject": 1.0,
+          "action": 0.1458333283662796,
+          "object": 1.0,
+          "mean": 0.7152777910232544,
+          "exact_triple": 0.1458333283662796,
+          "exact_triple_count": 7
+        },
+        "short": {
+          "exact": 0.125,
+          "exact_count": 6,
+          "semantic_slots": 0.7083333333333334
+        },
+        "detailed": {
+          "exact": 0.125,
+          "exact_count": 6,
+          "semantic_slots": 0.7083333333333334
+        },
+        "paired_exact": 0.10416666666666667
+      },
+      "zero_latent": {
+        "slots": {
+          "subject": 1.0,
+          "action": 1.0,
+          "object": 1.0,
+          "mean": 1.0,
+          "exact_triple": 1.0,
+          "exact_triple_count": 48
+        },
+        "short": {
+          "exact": 0.020833333333333332,
+          "exact_count": 1,
+          "semantic_slots": 0.22916666666666666
+        },
+        "detailed": {
+          "exact": 0.020833333333333332,
+          "exact_count": 1,
+          "semantic_slots": 0.22916666666666666
+        },
+        "paired_exact": 0.020833333333333332
+      },
+      "shuffled_latent": {
+        "slots": {
+          "subject": 1.0,
+          "action": 1.0,
+          "object": 1.0,
+          "mean": 1.0,
+          "exact_triple": 1.0,
+          "exact_triple_count": 48
+        },
+        "short": {
+          "exact": 0.0,
+          "exact_count": 0,
+          "semantic_slots": 0.1527777777777778
+        },
+        "detailed": {
+          "exact": 0.0,
+          "exact_count": 0,
+          "semantic_slots": 0.1527777777777778
+        },
+        "paired_exact": 0.0
+      },
+      "training": {
+        "training_seconds": 4.345587315000003,
+        "loss_trace": [
+          {
+            "step": 225,
+            "seq": 0.024714691564440727,
+            "slots": 0.0006273093167692423
+          },
+          {
+            "step": 450,
+            "seq": 0.0032886408735066652,
+            "slots": 0.00023019859509076923
+          },
+          {
+            "step": 675,
+            "seq": 0.001581537420861423,
+            "slots": 0.00011801268556155264
+          },
+          {
+            "step": 900,
+            "seq": 0.0008014844497665763,
+            "slots": 6.664504326181486e-05
+          }
+        ],
+        "steps": 900,
+        "parameters": 172754
+      },
+      "checkpoint": {
+        "path": "hash_bow_joint_student.pt",
+        "bytes": 2110233,
+        "sha256": "d7d03dc572bf4655f7df70935e57d3a569d4348f764975f9af16f60ad181ef9f"
+      }
+    }
+  }
+}
