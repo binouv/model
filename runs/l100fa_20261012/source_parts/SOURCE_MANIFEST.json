@@ -1,0 +1,23 @@
+{
+  "format": "flygraph.source-parts.v1",
+  "filename": "source_data_tests.tar.gz",
+  "bytes": 2493200,
+  "sha256": "8d30748244120d3a4254de36c031f5bf1382be9be04a2c9546dd9a04fa39bb84",
+  "parts": [
+    {
+      "name": "source_data_tests.tar.gz.part0000",
+      "bytes": 850000,
+      "sha256": "83e3a363483973aa50eec16d094b57682f35e0f7fb60ccc6e28c10543ae03f50"
+    },
+    {
+      "name": "source_data_tests.tar.gz.part0001",
+      "bytes": 850000,
+      "sha256": "8c627423b5f6c0baa475f0f0ca5fc64e0b4dfb390aecb2d193af505008570ef5"
+    },
+    {
+      "name": "source_data_tests.tar.gz.part0002",
+      "bytes": 793200,
+      "sha256": "468bb12edad5e3af079c7dc78b1efb39e20de63665cfdd52377d7afdf89107a6"
+    }
+  ]
+}
