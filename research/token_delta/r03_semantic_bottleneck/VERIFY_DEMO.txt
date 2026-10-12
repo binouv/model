@@ -1,0 +1,1 @@
+2026-10-12: replay all 48 IID + all 48 synonym OOD examples from verified actual Qwen3-0.6B hidden state cache and loaded R03 checkpoint; publish demo receipt on success.
