@@ -25,7 +25,7 @@ $py = '.\.venv\Scripts\python.exe'
 & $py h1c_latent_compute\src\train.py --data h1c_latent_compute\data --cache h1c_latent_compute\cache --out h1c_latent_compute\results --device cuda --steps 600 --batch 96 --lr 0.0015
 ```
 
-**Source-publishing status:** the preregistration and this index are committed to binouv/model; the full local source and newly generated dataset are included in the downloadable ZIP, **not yet independently uploaded and verified as GitHub individual files**. Do not call a local code artifact a completed model result. Real checkpoint bytes and metrics will require the operator's GPU run.
+**Source-publishing status:** preregistration, this index, research note, config, the dataset generator, and the recurrent module are committed individually to binouv/model. The complete, CPU-tested pipeline (including 11 unit tests, locked manifest, CUDA extractor, train runner and 1700-case JSONL) is in the downloadable ZIP, **not yet independently synchronized to GitHub as individual files**. Do not call a local code artifact a completed model result. Real checkpoint bytes and metrics will require the operator's GPU run.
 
 ## Related research
 - [Latent Recurrent Thoughts](https://arxiv.org/abs/2609.01117): frozen LLM with an auxiliary recurrent latent processor.
