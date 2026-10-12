@@ -30,7 +30,7 @@ jobs:
         run: |
           set -euo pipefail
           python -m pip install --quiet --index-url https://download.pytorch.org/whl/cpu torch==2.10.0
-          python -m pip install --quiet numpy==2.3.5 safetensors==0.6.2
+          python -m pip install --quiet numpy==2.3.5 safetensors==0.6.2 packaging==25.0
       - name: Test causal loss, frozen writer, disjoint splits and checkpoint parts
         run: |
           set -euo pipefail
