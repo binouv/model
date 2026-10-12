@@ -1,6 +1,6 @@
 # R04 — Head Decides / Student Renders
 
-**2026-10-12 status: preregistered + CPU unit-tested source only; the actual RTX 3090 GPU smoke and H1–H4 experiments have NOT yet been run here.**
+**2026-10-12 status:** The user reports that the RTX 3090 ENGINEERING smoke passed on Windows (5/5 bridge CPU tests, 4B hidden [1,2560], writer + bridge plan [1,4,1024], peaks 7.883 / 8.074 GiB). This is **user-reported** until the original `results/smoke.json` from their local commit `72922ba` is published and its bytes checked. Scientific H1–H4 have **not** yet been measured.
 
 ## Architecture contract
 
@@ -41,6 +41,12 @@ py -3.13 -m venv .venv
 For a clean NVIDIA install, `nvidia-smi` should show the RTX 3090. The PyTorch wheel installs its compatible CUDA runtime, so **a separate CUDA Toolkit is not required** just for this smoke script. Driver 617.14 should be new enough for cu128, but the runtime preflight is authoritative. `HF_HOME` may be set to `D:\AI\hf_cache` if desired.
 
 **Successful smoke**: `run_status=passed_smoke_no_scientific_hypothesis_tested`, head hidden `[1,2560]`, bridge `[1,4,1024]`, writer trainable params 0, bridge gradient >0, peak reserved VRAM <22 GiB for each sequential phase. **Failure**: capture full traceback and environment in a `results/` diagnostic file, do not publish `complete` status.
+
+## H1 implementation published after the user's smoke report
+
+**[R04/H1 one-folder starter](h1/H1_RUNBOOK.md)** — GPU pilot, frozen Qwen3.5-4B hidden layer 16/24/32 extraction, all 1,700 oracle-checked arithmetic/code questions (1,200/200/300), frozen 4B and standalone 0.8B greedy baselines, lexical/structured/shuffled-label probes, three independent readout seeds, trained-probe checkpoints and mandatory raw predictions. [Locked H1 criteria](h1/H1_PREREGISTRATION.md) retain the original R04 H1 thresholds. Eight new CPU protocol/unit tests passed on the authoring CPU; **no actual H1 GPU science was claimed**.
+
+The local Git push from `NeoXider` returned HTTP 403 because that account lacks write access to `binouv/model`; a separate GitHub connector authorized as `binouv` published the H1 **source** directly. The original exact smoke JSON remains at local commit `72922ba` until published through authorized credentials or fork/PR.
 
 ## What to run after smoke
 
