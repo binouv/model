@@ -1,0 +1,15 @@
+# L100FB — complete-backbone tool-agent SFT pilot (registered 2026-10-17)
+
+**Registration before any scientific optimization in this L100FB run or inspecting its held outcomes.** Prior L100FA source-only registration is a separate run and must not be mislabeled completed.
+
+**Parent:** existing real L100EC curriculum 100,028,328-param BF16 weights; SHA256 `07e33eb2c6aab5727fbb72c0b403bc83ca8e5695d379106af089b27baf995b25`. Parent optimizer missing, therefore FP32 dense **warm start**, not exact previous resume. All 135 named backbone parameter tensors are trainable; no adapters, frozen base, or external teacher logits.
+
+**Primary finite test:** Can 128 updates of full-dense autoregressive SFT improve exact, independently selected tool-call and post-tool FINAL correctness over identical parent? We do not claim 128 updates or synthetic training will produce a generally capable model.
+
+**Training:** CPU-only current assistant runtime (no RTX3090), PyTorch AdamW/Adafactor optimizer as recorded in actual run config, BF16 autocast with FP32 delta, 4 CPU threads; original 8192-token reversible tokenizer; synthetic RU/EN task families (addition, list sum, last-write key memory, bounded Python x-trace); training examples are separate direct `CALL ...` and `FINAL ...` after a truthful tool observation. **128 completed optimizer updates**, one microbatch/sample per optimizer update, predeclared seed 17102026; every 5th update a different-family historical replay task with `F=<integer>`. Fixed no held-based endpoint selection. Checkpoints after **64 and 128** complete optimizer updates, native FP32 model plus actual optimizer/RNG and cursor. No unsupported shell/network tool execution; arithmetic and state tools are bounded deterministic functions.
+
+**Held:** 32 unique unseen task groups, 8 per family (4 RU and 4 EN each), separate seed 17102027, plus 16 direct-response replay questions. Both parent and trained model tested with greedy full-vocab generation: for each agent task measure (a) complete syntactically valid and exact `CALL` arguments from original user prompt, (b) `FINAL` after the same gold tool observation, and (c) end-to-end accuracy only when both are correct. Free generation, no solver repairing model output, EOS and truncation reported. Accuracy by family + paired agreement; no post hoc sample picking.
+
+**Main success gate:** +10 percentage points exact end-to-end tool success, with no >2pp regression on 16 direct tasks. One seed and very small synthetic held; a win is not evidence of broad Qwen superiority. Full Qwen3.5-0.8B and MiniCPM-V-4.7-1B remain separate, **unmet** multi-domain reference targets (the latter also vision/video).
+
+**Storage:** full native model and optimizer state locally after steps64 and128; SHA256 manifest and strict re-load. Publish losslessly split actual weights/optimizer files **strictly <90,000,000 bytes** each, as normal Git blobs only, and clean remote readback per `FLYGRAPH_RUN_POLICY.md`. Mark `saved_local` until every remote binary is verified; never claim `published_verified` for text-only commits. No background training promised.
