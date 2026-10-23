@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-10-22T22:41:55.754237+00:00",
+  "old_training_or_validation_rows": 1088,
+  "new_alpaca_held_exact_normalized_user_matches_to_old": [],
+  "frozen_primary_files_hashes_match": {
+    "src/train.py": true,
+    "src/common.py": true,
+    "src/model.py": true,
+    "src/tokenizer.py": true,
+    "config.json": true,
+    "data/manifest.json": true
+  }
+}

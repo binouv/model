@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-10-22T21:51:30.823753+00:00",
+  "python": "3.12.14",
+  "cpu_model": "AMD EPYC 9V74",
+  "cpu_quota": "400000 100000",
+  "memory_limit_bytes": 17179869184,
+  "gpu_device_nodes": [],
+  "git_base": "a0fc622a70074d2e09e184646fb99959c010099d",
+  "branch": "work",
+  "origin": "https://github.com/binouv/model.git",
+  "git_dry_run_write_access": "succeeded 2026-10-22 before training; no push yet",
+  "no_competing_training_process_at_start": true
+}

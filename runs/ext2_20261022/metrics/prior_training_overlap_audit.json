@@ -1,0 +1,716 @@
+{
+  "prior_EXT_train_rows_checked": 1024,
+  "new_dev_and_test_questions_checked": 960,
+  "normalized_question_substring_hits": [
+    {
+      "split": "dev",
+      "question_id": "piqa:dev:c1cb32c4-9cec-4958-9eee-c6121b120e3e",
+      "prior_train_id": "alpaca:51663"
+    },
+    {
+      "split": "dev",
+      "question_id": "piqa:dev:c1cb32c4-9cec-4958-9eee-c6121b120e3e",
+      "prior_train_id": "alpaca:29656"
+    },
+    {
+      "split": "dev",
+      "question_id": "piqa:dev:c1cb32c4-9cec-4958-9eee-c6121b120e3e",
+      "prior_train_id": "alpaca:48232"
+    },
+    {
+      "split": "dev",
+      "question_id": "piqa:dev:c1cb32c4-9cec-4958-9eee-c6121b120e3e",
+      "prior_train_id": "alpaca:25031"
+    },
+    {
+      "split": "dev",
+      "question_id": "piqa:dev:c1cb32c4-9cec-4958-9eee-c6121b120e3e",
+      "prior_train_id": "alpaca:4300"
+    },
+    {
+      "split": "dev",
+      "question_id": "piqa:dev:c1cb32c4-9cec-4958-9eee-c6121b120e3e",
+      "prior_train_id": "alpaca:13463"
+    },
+    {
+      "split": "dev",
+      "question_id": "piqa:dev:c1cb32c4-9cec-4958-9eee-c6121b120e3e",
+      "prior_train_id": "alpaca:31657"
+    },
+    {
+      "split": "dev",
+      "question_id": "piqa:dev:c1cb32c4-9cec-4958-9eee-c6121b120e3e",
+      "prior_train_id": "alpaca:9348"
+    },
+    {
+      "split": "dev",
+      "question_id": "piqa:dev:c1cb32c4-9cec-4958-9eee-c6121b120e3e",
+      "prior_train_id": "alpaca:33239"
+    },
+    {
+      "split": "dev",
+      "question_id": "piqa:dev:ac01f912-f2a1-44e0-86f4-923dffe7c4df",
+      "prior_train_id": "alpaca:37045"
+    },
+    {
+      "split": "dev",
+      "question_id": "piqa:dev:905a3812-d167-482f-ab9e-67d5d608a793",
+      "prior_train_id": "alpaca:17521"
+    },
+    {
+      "split": "test",
+      "question_id": "openbookqa:test:1554",
+      "prior_train_id": "alpaca:20459"
+    },
+    {
+      "split": "test",
+      "question_id": "openbookqa:test:1554",
+      "prior_train_id": "alpaca:32186"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d642d70c-c20d-4b2a-b32f-ac677e918ff8",
+      "prior_train_id": "alpaca:10434"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d642d70c-c20d-4b2a-b32f-ac677e918ff8",
+      "prior_train_id": "alpaca:3531"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:9f37bec9-35ab-4c71-8f88-2e74fe3225a4",
+      "prior_train_id": "alpaca:49572"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:9f37bec9-35ab-4c71-8f88-2e74fe3225a4",
+      "prior_train_id": "alpaca:44998"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:5e8683af-a032-463c-86f2-a2d3edd8af95",
+      "prior_train_id": "alpaca:13261"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:189765f5-0a3b-4b7c-a95c-e658e124d84b",
+      "prior_train_id": "alpaca:34634"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:1caac73b-753a-410b-908a-53ec90e3509d",
+      "prior_train_id": "alpaca:37972"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:1caac73b-753a-410b-908a-53ec90e3509d",
+      "prior_train_id": "alpaca:43371"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:f66bddac-915a-4804-96e0-680de520faed",
+      "prior_train_id": "alpaca:4648"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:857de274-3103-48af-9db0-d86ac3485014",
+      "prior_train_id": "alpaca:12"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:36368"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:28251"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:38769"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:10372"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:7368"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:22001"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:44919"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:23024"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:36836"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:46472"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:7619"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:3338"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:c19b2523-95a2-4418-bf6b-410cdf6a2163",
+      "prior_train_id": "alpaca:42242"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:8833"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:31377"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:45035"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:22445"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:42150"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:28039"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:48215"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:19285"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:19079"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:37045"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:38761"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:43873"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:19626"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:29517"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:45792"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:38164"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:29095"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:20999"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:4648"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:3547"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:47112"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:34718"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:50631"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:38126"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:34105"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:5272"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:496"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:5327"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:48969"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:6472"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:18529"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:32245"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:27392"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:42553"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:829"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:34609"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:5299"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:28661"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:7014"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:a74cd8e8-7d72-4e6c-80ae-73f9f4df4fbc",
+      "prior_train_id": "alpaca:29153"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:1ad9ec29-4720-42ba-bde0-648a638ab2a1",
+      "prior_train_id": "alpaca:5716"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:1ad9ec29-4720-42ba-bde0-648a638ab2a1",
+      "prior_train_id": "alpaca:40349"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:8833"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:3682"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:2838"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:31756"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:45035"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:2337"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:31573"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:42463"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:29944"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:23472"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:21950"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:34025"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:10560"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:50965"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:36070"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:33726"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:18300"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:2515"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:39027"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:50740"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:45792"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:18027"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:42433"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:12355"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:22291"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:6536"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:2873"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:531"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:35196"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:30729"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:32"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:2370"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:14417"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:2286"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:30018"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:46970"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:1137"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:34531"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:26169"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:30761"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:28661"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:4052"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:41960"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:d2664e02-88e8-410e-9844-f7a8572fcfca",
+      "prior_train_id": "alpaca:30158"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:8833"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:16458"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:37601"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:39799"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:30935"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:28425"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:48233"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:496"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:2215"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:12871"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:26783"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:3287"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:18529"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:31114"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:7619"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:8f25da28-430a-4b18-92d5-ff6a9ed2d352",
+      "prior_train_id": "alpaca:22989"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:aaaef0dd-a8f2-41a8-b99c-40c373145e9f",
+      "prior_train_id": "alpaca:39250"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:aaaef0dd-a8f2-41a8-b99c-40c373145e9f",
+      "prior_train_id": "alpaca:44998"
+    },
+    {
+      "split": "test",
+      "question_id": "piqa:dev:aaaef0dd-a8f2-41a8-b99c-40c373145e9f",
+      "prior_train_id": "alpaca:31502"
+    }
+  ],
+  "historic_L100EC_corpus": "unavailable; cannot assert no contamination",
+  "unique_stems_flagged": 17,
+  "longest_flagged_stem_characters": 7,
+  "full_stem_and_all_choices_in_same_prior_record_hits": [],
+  "interpretation": "All stem-only hits are short generic object words (3\u20137 characters), not complete held questions with their alternatives. Exact full-item matches are separately counted. Semantic/paraphrase contamination is not excluded. New-training filtering was deliberately more conservative and can remove unrelated records containing these short strings."
+}

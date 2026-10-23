@@ -1,0 +1,225 @@
+{
+  "different_label_and_generation_predictions": 15,
+  "all_disagreements_are_exact_top_score_ties": true,
+  "label_ranking_tie_break": "first option in A/B/C/D order",
+  "full_vocab_greedy_tie_break": "lowest vocabulary token ID",
+  "label_token_ids": {
+    "A": 468,
+    "B": 796,
+    "C": 578,
+    "D": 780
+  },
+  "rows": [
+    {
+      "id": "openbookqa:test:9-893",
+      "task": "openbookqa",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.4143893718719482,
+        -1.2268893718719482,
+        -1.7893893718719482,
+        -1.2268893718719482
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "openbookqa:test:9-858",
+      "task": "openbookqa",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.598028302192688,
+        -1.160528302192688,
+        -1.785528302192688,
+        -1.160528302192688
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "openbookqa:test:8-179",
+      "task": "openbookqa",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.538589596748352,
+        -1.163589596748352,
+        -1.851089596748352,
+        -1.163589596748352
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "openbookqa:test:1274",
+      "task": "openbookqa",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.529295563697815,
+        -1.154295563697815,
+        -1.904295563697815,
+        -1.154295563697815
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "openbookqa:test:7-391",
+      "task": "openbookqa",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.5384353399276733,
+        -1.1634353399276733,
+        -1.8509353399276733,
+        -1.1634353399276733
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "openbookqa:test:869",
+      "task": "openbookqa",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.5289058685302734,
+        -1.1539058685302734,
+        -1.9039058685302734,
+        -1.1539058685302734
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "openbookqa:test:354",
+      "task": "openbookqa",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.4802699089050293,
+        -1.1677699089050293,
+        -1.9177699089050293,
+        -1.1677699089050293
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "openbookqa:test:257",
+      "task": "openbookqa",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.5875818729400635,
+        -1.1500818729400635,
+        -1.8375818729400635,
+        -1.1500818729400635
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "openbookqa:test:7-386",
+      "task": "openbookqa",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.4998300075531006,
+        -1.1873300075531006,
+        -1.8123300075531006,
+        -1.1873300075531006
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "arc_challenge:test:Mercury_SC_408366",
+      "task": "arc_challenge",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.461795449256897,
+        -1.211795449256897,
+        -1.774295449256897,
+        -1.211795449256897
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "arc_challenge:test:Mercury_7137165",
+      "task": "arc_challenge",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.5879539251327515,
+        -1.1504539251327515,
+        -1.8379539251327515,
+        -1.1504539251327515
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "arc_challenge:test:Mercury_7086695",
+      "task": "arc_challenge",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.3212674856185913,
+        -1.2587674856185913,
+        -1.8212674856185913,
+        -1.2587674856185913
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "arc_challenge:test:TIMSS_2007_8_pg113",
+      "task": "arc_challenge",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.4731560945510864,
+        -1.2231560945510864,
+        -1.7231560945510864,
+        -1.2231560945510864
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "arc_challenge:test:MSA_2012_8_30",
+      "task": "arc_challenge",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.390067219734192,
+        -1.265067219734192,
+        -1.702567219734192,
+        -1.265067219734192
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    },
+    {
+      "id": "arc_challenge:test:Mercury_417137",
+      "task": "arc_challenge",
+      "label_prediction": 1,
+      "generation_prediction": 3,
+      "scores": [
+        -1.6201220750808716,
+        -1.1826220750808716,
+        -1.6826220750808716,
+        -1.1826220750808716
+      ],
+      "first_new_token": 780,
+      "top_score_tie": true
+    }
+  ],
+  "selection_or_evaluation_protocol_modified": false
+}

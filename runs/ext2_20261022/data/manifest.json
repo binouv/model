@@ -1,0 +1,126 @@
+{
+  "seed": 20261022,
+  "created_before_new_model_training_or_test_evaluation": true,
+  "external_archive": {
+    "release": "OpenCompassData-core-20240207 / 0.2.2.rc1",
+    "url": "https://github.com/open-compass/opencompass/releases/download/0.2.2.rc1/OpenCompassData-core-20240207.zip",
+    "sha256": "c259fa1b2f8f5c9ae2df58bb6cc3200e705e2945b24e896988006c546a572607",
+    "members": {
+      "data/openbookqa/Main/train.jsonl": {
+        "sha256": "388ce25926fa33b573ba6556d7245a6185f612dedf919871b6acb9340c8497a5",
+        "bytes": 1505097
+      },
+      "data/openbookqa/Main/dev.jsonl": {
+        "sha256": "a08f720be757a0f0b6aaf8e1e1162c2b05a882c9c031d2559ba3d5467d023466",
+        "bytes": 156928
+      },
+      "data/openbookqa/Main/test.jsonl": {
+        "sha256": "feb2bd9bfa6161dca4c44ce90e51e8cdada83eb5061407fcdc5005e44aaf2313",
+        "bytes": 153259
+      },
+      "data/piqa/train.jsonl": {
+        "sha256": "f55986008cf9f1a336854936b82cec4ccba6fb5c698d221861299fb508840a8c",
+        "bytes": 5123360
+      },
+      "data/piqa/train-labels.lst": {
+        "sha256": "df8ae080c41f02f88e81f6932d425f4b7ee72f433ad552e6a30d45e358e8f8bb",
+        "bytes": 32226
+      },
+      "data/piqa/dev.jsonl": {
+        "sha256": "a73f46cb5d72b2cc399522a79f27728a429d9b89d9a236243fcfda8c02588d54",
+        "bytes": 580477
+      },
+      "data/piqa/dev-labels.lst": {
+        "sha256": "b4192dc3a2a0363d9d60ccf79800cbbe2f32ebb17726efdde6970e0b8131bceb",
+        "bytes": 3676
+      },
+      "data/ARC/ARC-c/ARC-Challenge-Dev.jsonl": {
+        "sha256": "55224364abd2477f66a9a57c5cbef109fb71d83019aa5e37aec0e7ab757746ca",
+        "bytes": 126540
+      },
+      "data/ARC/ARC-c/ARC-Challenge-Test.jsonl": {
+        "sha256": "9fa8ffb3e3a1f88cb302d53dd95aae81e39209ad9bcf974376b319d8fd35717c",
+        "bytes": 492726
+      }
+    }
+  },
+  "alpaca": {
+    "revision": "761dc5bfbdeeffa89b8bff5d038781a4055f796a",
+    "sha256": "2eddafc6b977608d778aaab8dfc7e50e547b3af9826dfb9e909d9fc362e4a419",
+    "url": "https://github.com/tatsu-lab/stanford_alpaca",
+    "license": "CC-BY-NC-4.0, research/noncommercial",
+    "new_holdouts_exclude_old_1088_records": true
+  },
+  "licenses": {
+    "openbookqa": "Apache-2.0, https://github.com/allenai/OpenBookQA/blob/main/LICENSE",
+    "piqa": "AFL-3.0, https://github.com/ybisk/ybisk.github.io/blob/master/piqa/README.md",
+    "arc_challenge": "CC-BY-SA-4.0, ARC-V1-Feb2018"
+  },
+  "splits": {
+    "train": {
+      "alpaca": 8192,
+      "openbookqa_official_train": 4096,
+      "piqa_official_train": 4096
+    },
+    "dev": {
+      "alpaca_new_disjoint": 128,
+      "openbookqa_official_dev": 64,
+      "piqa_official_dev_disjoint_subset": 64,
+      "arc_challenge_official_dev": 64
+    },
+    "test": {
+      "alpaca_new_disjoint": 128,
+      "openbookqa_official_test": 256,
+      "piqa_official_dev_remaining_disjoint_subset": 256,
+      "arc_challenge_official_test": 256
+    }
+  },
+  "selection": {
+    "max_train_tokens": 512,
+    "minimum_nonempty_answer_tokens": 1,
+    "no_text_truncation": true,
+    "no_model_outcome_filter": true,
+    "old_arc128_not_used_for_selection_or_training": true,
+    "removed": {
+      "test_duplicate_questions_replaced_before_evaluation": 1,
+      "openbookqa_overlap_or_duplicate": 140,
+      "piqa_over_length": 472,
+      "piqa_overlap_or_duplicate": 1326,
+      "alpaca_empty_or_over_length": 3208,
+      "alpaca_held_question_substring": 1657
+    }
+  },
+  "overlap_checks": {
+    "train_vs_dev_test_normalized_same_source_inputs": 0,
+    "selected_alpaca_train_contains_selected_mcq_held_or_old_arc128_question": 0,
+    "historic_pretraining_contamination": "unknown",
+    "paraphrase_leakage": "not exhaustively established"
+  },
+  "files": {
+    "train.jsonl": {
+      "count": 16384,
+      "sha256": "4426273bdbb7cdbd8bdd500f838075b71b85062171f0a190744e1e81c8999b09",
+      "bytes": 17806212
+    },
+    "dev_mcq.jsonl": {
+      "count": 192,
+      "sha256": "4754304f48ee18673c1509753c3056f8bd08614d29a93d8ed0d972c5f9665886",
+      "bytes": 281163
+    },
+    "test_mcq.jsonl": {
+      "count": 768,
+      "sha256": "c66c7ba42a6c95ee3bd07d8dfc6476cd5f6eb8c03ae04143af58e02c2b32582e",
+      "bytes": 1092113
+    },
+    "dev_alpaca.jsonl": {
+      "count": 128,
+      "sha256": "027c338b48a51a7b747efe120ceb21929a400bff42711ee338f065ecdab1637e",
+      "bytes": 124337
+    },
+    "test_alpaca.jsonl": {
+      "count": 128,
+      "sha256": "e5cd0d86eaed795d5ed1b4c7977c92867ef3d1646b2cc738bd1e9e34ce5266d0",
+      "bytes": 124036
+    }
+  }
+}

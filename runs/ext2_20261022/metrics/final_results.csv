@@ -1,0 +1,9 @@
+model,dataset,status,n,label_correct,label_accuracy,generation_correct,generation_accuracy,valid_generation,alpaca_nll
+parent_EXT256,openbookqa,measured,256,67,0.26171875,0,0.0,0,3.3520009933650194
+parent_EXT256,piqa,measured,256,131,0.51171875,0,0.0,0,3.3520009933650194
+parent_EXT256,arc_challenge,measured,256,54,0.2109375,0,0.0,0,3.3520009933650194
+selected_EXT2,openbookqa,measured,256,73,0.28515625,76,0.296875,256,2.7622253510997004
+selected_EXT2,piqa,measured,256,122,0.4765625,122,0.4765625,256,2.7622253510997004
+selected_EXT2,arc_challenge,measured,256,60,0.234375,59,0.23046875,256,2.7622253510997004
+Qwen/Qwen3.5-0.8B,,blocked_proxy_403_not_measured,,,,,,,
+openbmb/MiniCPM-V-4.7-1B,,blocked_proxy_403_not_measured,,,,,,,

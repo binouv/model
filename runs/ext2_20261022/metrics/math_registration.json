@@ -1,0 +1,21 @@
+{
+  "registered_utc": "2026-10-22T22:21:28.577612+00:00",
+  "scope": "additional independent mathematical transfer diagnostic; excluded from training, hyperparameter/model selection, and the registered three-MCQ primary criterion",
+  "dataset": "GSM8K official test",
+  "canonical_source": "https://github.com/openai/grade-school-math",
+  "license": "MIT",
+  "transport": "OpenCompassData-core-20240207 / 0.2.2.rc1",
+  "archive_member": "data/gsm8k/test.jsonl",
+  "source_sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+  "seed": 20261024,
+  "n": 64,
+  "selected_sha256": "156fca550903fc437409eb282061bb64a0d2108b59a0c91c9be55c5d0593de84",
+  "generation_budget": 64,
+  "decoding": "full-vocabulary greedy; EOS stopping",
+  "scoring": "strict final numeric answer; Decimal-normalized; raw text and invalid format retained",
+  "training_substring_overlaps_removed": 0,
+  "original_EXT_train_checked": true,
+  "new_train_checked": true,
+  "historical_pretraining_contamination": "unknown",
+  "evaluated_before_registration": false
+}

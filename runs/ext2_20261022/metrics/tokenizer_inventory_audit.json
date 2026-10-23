@@ -1,0 +1,25 @@
+{
+  "lexical_slots": 7933,
+  "valid_utf8_slots": 7933,
+  "invalid_utf8_slots": 0,
+  "slots_containing_nonwhitespace_ASCII_controls": 0,
+  "alphabetic_word_slots": 7328,
+  "tokenizer_unchanged": true,
+  "optimizer_updates_in_this_audit": 0,
+  "slots_with_cyrillic": 17,
+  "slots_with_ascii_latin": 7311,
+  "slots_starting_space": 3913,
+  "common_english_word_tokens": {
+    " the": 262,
+    " a": 271,
+    " is": 269,
+    " and": 287,
+    " of": 286,
+    " to": 277,
+    " answer": 8017,
+    " question": null,
+    "the": 475,
+    "answer": null,
+    "question": null
+  }
+}

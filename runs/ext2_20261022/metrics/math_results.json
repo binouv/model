@@ -1,0 +1,56 @@
+{
+  "completed": true,
+  "registration": {
+    "registered_utc": "2026-10-22T22:21:28.577612+00:00",
+    "scope": "additional independent mathematical transfer diagnostic; excluded from training, hyperparameter/model selection, and the registered three-MCQ primary criterion",
+    "dataset": "GSM8K official test",
+    "canonical_source": "https://github.com/openai/grade-school-math",
+    "license": "MIT",
+    "transport": "OpenCompassData-core-20240207 / 0.2.2.rc1",
+    "archive_member": "data/gsm8k/test.jsonl",
+    "source_sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+    "seed": 20261024,
+    "n": 64,
+    "selected_sha256": "156fca550903fc437409eb282061bb64a0d2108b59a0c91c9be55c5d0593de84",
+    "generation_budget": 64,
+    "decoding": "full-vocabulary greedy; EOS stopping",
+    "scoring": "strict final numeric answer; Decimal-normalized; raw text and invalid format retained",
+    "training_substring_overlaps_removed": 0,
+    "original_EXT_train_checked": true,
+    "new_train_checked": true,
+    "historical_pretraining_contamination": "unknown",
+    "evaluated_before_registration": false
+  },
+  "selected_step": 3584,
+  "summary": {
+    "parent_EXT256": {
+      "n": 64,
+      "strict_correct": 0,
+      "strict_accuracy": 0.0,
+      "strict_wilson95": [
+        0.0,
+        0.05662405979280239
+      ],
+      "strict_valid": 9,
+      "last_number_correct_diagnostic": 1,
+      "budget_exhausted": 53,
+      "seconds": 135.37855856900023,
+      "weight_sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47"
+    },
+    "selected_EXT2": {
+      "n": 64,
+      "strict_correct": 0,
+      "strict_accuracy": 0.0,
+      "strict_wilson95": [
+        0.0,
+        0.05662405979280239
+      ],
+      "strict_valid": 16,
+      "last_number_correct_diagnostic": 1,
+      "budget_exhausted": 8,
+      "seconds": 46.16752761099997,
+      "weight_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe"
+    }
+  },
+  "scope": "direct numeric answers under64-token budget; diagnostic last-number score is reported separately; no GSM8K training or selection"
+}

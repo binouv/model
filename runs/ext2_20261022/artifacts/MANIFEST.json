@@ -1,0 +1,62 @@
+{
+  "status": "saved_local_pending_repository_push",
+  "run_id": "ext2_20261022",
+  "components": [
+    {
+      "role": "parent",
+      "directory": "artifacts/parent_parts",
+      "filename": "model.safetensors",
+      "size_bytes": 400125984,
+      "sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47",
+      "parts": 6,
+      "step": 0
+    },
+    {
+      "role": "final_model",
+      "directory": "artifacts/final_model_parts",
+      "filename": "model.safetensors",
+      "size_bytes": 400125984,
+      "sha256": "708a6bac159281316900c01a3ca8b688fd49f6df176d2c60c76b88681446f2b4",
+      "parts": 6,
+      "step": 4096
+    },
+    {
+      "role": "final_state",
+      "directory": "artifacts/final_state_parts",
+      "filename": "training_state.pt",
+      "size_bytes": 800351251,
+      "sha256": "5dc510cf6aee59c3d6fbb6568c3dbf13ddc41ba78f231fd4af17f7004d9b7c5b",
+      "parts": 11,
+      "step": 4096
+    },
+    {
+      "role": "selected_model",
+      "directory": "artifacts/selected_model_parts",
+      "filename": "model.safetensors",
+      "size_bytes": 400125984,
+      "sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe",
+      "parts": 6,
+      "step": 3584
+    },
+    {
+      "role": "selected_state",
+      "directory": "artifacts/selected_state_parts",
+      "filename": "training_state.pt",
+      "size_bytes": 800351251,
+      "sha256": "15036bf25cfff25ec6e959d2b11376efa37cb0b770510461ceb9d290a5c2ea6d",
+      "parts": 11,
+      "step": 3584
+    }
+  ],
+  "selected_model_role": "selected_model",
+  "selected_state_role": "selected_state",
+  "final_step": 4096,
+  "selected_step": 3584,
+  "changed_parameter_tensors": 135,
+  "general_superiority_established": false,
+  "all_parts_strictly_under_bytes": 90000000,
+  "training_completed_fixed_step_count": true,
+  "measured_comparison": "parent_EXT256 versus selected_EXT2 on frozen external holdouts",
+  "registered_improvement_criterion_met": false,
+  "reference_models_measured": false
+}

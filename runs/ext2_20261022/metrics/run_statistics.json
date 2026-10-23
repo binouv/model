@@ -1,0 +1,11 @@
+{
+  "completed_updates": 4096,
+  "input_tokens": 2899624,
+  "supervised_tokens": 1045986,
+  "unique_training_records": 16384,
+  "first64_mean_example_loss": 2.7161260181164835,
+  "last64_mean_example_loss": 1.5470986629952677,
+  "parent_sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47",
+  "selected_step": 3584,
+  "selected_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe"
+}

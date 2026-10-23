@@ -1,0 +1,21 @@
+{
+  "derived_from_training_labels_only": true,
+  "counts": {
+    "openbookqa": {
+      "0": 1146,
+      "2": 933,
+      "3": 1006,
+      "1": 1011
+    },
+    "piqa": {
+      "0": 2098,
+      "1": 1998
+    }
+  },
+  "constant_predictions": {
+    "openbookqa": 0,
+    "piqa": 0,
+    "arc_challenge": 0
+  },
+  "arc_prior_source": "OpenBookQA train majority; ARC train unused"
+}

@@ -1,0 +1,39 @@
+{
+  "arm": "step_1536",
+  "split": "dev",
+  "seconds": 102.67457752300015,
+  "n_mcq": 192,
+  "n_alpaca": 128,
+  "generation_evaluated": true,
+  "by_task": {
+    "openbookqa": {
+      "n": 64,
+      "label_correct": 14,
+      "label_accuracy": 0.21875,
+      "generation_correct": 14,
+      "generation_accuracy": 0.21875,
+      "valid_generation": 64,
+      "gold_label_eos_nll": 1.431718669404063
+    },
+    "piqa": {
+      "n": 64,
+      "label_correct": 27,
+      "label_accuracy": 0.421875,
+      "generation_correct": 27,
+      "generation_accuracy": 0.421875,
+      "valid_generation": 64,
+      "gold_label_eos_nll": 0.7771929800812813
+    },
+    "arc_challenge": {
+      "n": 64,
+      "label_correct": 16,
+      "label_accuracy": 0.25,
+      "generation_correct": 16,
+      "generation_accuracy": 0.25,
+      "valid_generation": 64,
+      "gold_label_eos_nll": 2.0768257038182583
+    }
+  },
+  "alpaca_nll": 2.9900967379769146,
+  "selection_objective": 1.733002795820753
+}

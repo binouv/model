@@ -1,0 +1,1264 @@
+{
+  "tokenizer": {
+    "vocab_size": 8192,
+    "tokenizer_sha256": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500",
+    "exact_roundtrip_all_dev": true,
+    "total_tokens": 65400,
+    "total_utf8_bytes": 103870,
+    "byte_fallback_token_fraction": 0.8336391437308869,
+    "lexical_piece_exact_vocab_coverage": 0.4479393964346,
+    "label_tokens": {
+      "A": [
+        468,
+        2
+      ],
+      "B": [
+        796,
+        2
+      ],
+      "C": [
+        578,
+        2
+      ],
+      "D": [
+        780,
+        2
+      ]
+    },
+    "random_uniform_token_nll": 9.010913347279288
+  },
+  "models": {
+    "L100EC_original": {
+      "weight_sha256": "07e33eb2c6aab5727fbb72c0b403bc83ca8e5695d379106af089b27baf995b25",
+      "strict_load_complete": true,
+      "parameters": 100028328,
+      "finite_tensors": 135,
+      "dev32_nll": 13.453329408805176,
+      "dev_generations": [
+        {
+          "id": "alpaca:45199",
+          "prompt": "User: Classify the following text as either scientific or not scientific.\nCats love to climb and scratch things, it is in their nature.\nAssistant:",
+          "source_target": " Not scientific.",
+          "generation": "22;F=22",
+          "tokens": [
+            53,
+            53,
+            62,
+            73,
+            64,
+            53,
+            53,
+            2
+          ]
+        },
+        {
+          "id": "alpaca:3606",
+          "prompt": "User: List five different ways to be environmentally friendly.\nAssistant:",
+          "source_target": " 1. Reduce waste by reusing, recycling, and composting.\n2. Use reusable products such as bags and water bottles. \n3. Drive less and use public transportation or carpool when possible. \n4. Avoid products with excessive packaging. \n5. Make use of renewable energy resources such as solar, wind, or hydroelectric power.",
+          "generation": "22;F=22",
+          "tokens": [
+            53,
+            53,
+            62,
+            73,
+            64,
+            53,
+            53,
+            2
+          ]
+        },
+        {
+          "id": "alpaca:41760",
+          "prompt": "User: Make the following sentence sound more formal for an essay.\nThis is really great.\nAssistant:",
+          "source_target": " This is particularly commendable.",
+          "generation": "22,22;F=22",
+          "tokens": [
+            53,
+            53,
+            47,
+            53,
+            53,
+            62,
+            73,
+            64,
+            53,
+            53,
+            2
+          ]
+        },
+        {
+          "id": "alpaca:21971",
+          "prompt": "User: Compare the health benefits of kiwi and mango.\nAssistant:",
+          "source_target": " Kiwi and mango both provide valuable health benefits. Kiwi is a great source of dietary fiber, vitamin C, and vitamin K. It also contains antioxidants and minerals, including potassium and copper. Mango is an excellent source of beta carotene, vitamin C, and vitamin A. It also contains copper, potassium, and magnesium. Both fruits are also low in calories and fat.",
+          "generation": "22,22;F=22",
+          "tokens": [
+            53,
+            53,
+            47,
+            53,
+            53,
+            62,
+            73,
+            64,
+            53,
+            53,
+            2
+          ]
+        },
+        {
+          "id": "alpaca:15743",
+          "prompt": "User: Describe the concept of preventative health care.\nAssistant:",
+          "source_target": " Preventive health care is a type of care that focuses on preventing illness and providing early diagnosis and treatment of health problems before they become serious. It includes regular check-ups and health screenings, lifestyle counseling and immunizations. The goal is to help people live a healthier life and detect any potential health problems before they become more serious. Preventive health care is an important part of overall health care, as it helps to limit both the cost and severity of health problems that may occur.",
+          "generation": "22,22;F=22",
+          "tokens": [
+            53,
+            53,
+            47,
+            53,
+            53,
+            62,
+            73,
+            64,
+            53,
+            53,
+            2
+          ]
+        },
+        {
+          "id": "alpaca:47466",
+          "prompt": "User: Give an example of a science experiment that uses the scientific method.\nAssistant:",
+          "source_target": " One example of a science experiment that uses the scientific method is measuring the effect of fertilizer on plant growth. The experiment could include the steps of making a hypothesis, testing the hypothesis, recording and analyzing the data, forming a conclusion, and communicating the results.",
+          "generation": "22,22;F=22",
+          "tokens": [
+            53,
+            53,
+            47,
+            53,
+            53,
+            62,
+            73,
+            64,
+            53,
+            53,
+            2
+          ]
+        },
+        {
+          "id": "alpaca:22799",
+          "prompt": "User: Create a list of at least five resources to help someone who is starting a new business.\nAssistant:",
+          "source_target": " 1. Small Business Administration (SBA) - Resources, workshops and online courses to help entrepreneurs launch and run a successful business.\n2. SCORE - Free consultation and mentorship from experienced business professionals. \n3. Business.gov - Comprehensive resources for entrepreneurs on topics like business planning, taxes, and rules and regulations.\n4. The U.S. Patent and Trademark Office (USPTO) - Instructions and resources for registering trademarks and patents. \n5. Internal Revenue Service (IRS) - Tax information including filing deadlines, rules and regulations, and other resources.",
+          "generation": "22;F=22",
+          "tokens": [
+            53,
+            53,
+            62,
+            73,
+            64,
+            53,
+            53,
+            2
+          ]
+        },
+        {
+          "id": "alpaca:17297",
+          "prompt": "User: Provide an example of a person using the habit of donating to charity.\nAssistant:",
+          "source_target": " John regularly donates 10% of his monthly salary to charity.",
+          "generation": "29\n    x *= 19\n    return x\n",
+          "tokens": [
+            53,
+            60,
+            259,
+            123,
+            35,
+            5875,
+            35,
+            52,
+            60,
+            259,
+            272,
+            314,
+            13,
+            2
+          ]
+        }
+      ],
+      "prompt_format_dev_diagnostic": [
+        {
+          "id": "openbookqa:dev:7-4",
+          "format": "matched",
+          "label_log_probs": [
+            -19.08920669555664,
+            -19.21420669555664,
+            -19.77670669555664,
+            -19.65170669555664
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:7-4",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -12.88641357421875,
+            -13.23016357421875,
+            -13.66766357421875,
+            -13.63641357421875
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:7-236",
+          "format": "matched",
+          "label_log_probs": [
+            -20.229480743408203,
+            -20.416980743408203,
+            -20.979480743408203,
+            -20.729480743408203
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:7-236",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -13.954442977905273,
+            -14.360692977905273,
+            -14.673192977905273,
+            -14.798192977905273
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:8-148",
+          "format": "matched",
+          "label_log_probs": [
+            -18.29392433166504,
+            -18.54392433166504,
+            -19.16892433166504,
+            -18.91892433166504
+          ],
+          "gold": 2
+        },
+        {
+          "id": "openbookqa:dev:8-148",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -16.699546813964844,
+            -16.949546813964844,
+            -17.387046813964844,
+            -17.387046813964844
+          ],
+          "gold": 2
+        },
+        {
+          "id": "openbookqa:dev:458",
+          "format": "matched",
+          "label_log_probs": [
+            -16.81009292602539,
+            -17.31009292602539,
+            -17.68509292602539,
+            -17.68509292602539
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:458",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -17.722963333129883,
+            -18.285463333129883,
+            -18.472963333129883,
+            -18.722963333129883
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:7-481",
+          "format": "matched",
+          "label_log_probs": [
+            -17.24048614501953,
+            -17.42798614501953,
+            -18.05298614501953,
+            -17.80298614501953
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:7-481",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -14.121662139892578,
+            -14.527912139892578,
+            -14.809162139892578,
+            -15.059162139892578
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:1706",
+          "format": "matched",
+          "label_log_probs": [
+            -20.903593063354492,
+            -21.091093063354492,
+            -21.653593063354492,
+            -21.341093063354492
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:1706",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -13.299409866333008,
+            -13.893159866333008,
+            -14.111909866333008,
+            -14.299409866333008
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:9-84",
+          "format": "matched",
+          "label_log_probs": [
+            -21.596765518188477,
+            -21.784265518188477,
+            -22.346765518188477,
+            -22.034265518188477
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:9-84",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -15.144746780395508,
+            -15.269746780395508,
+            -15.644746780395508,
+            -15.769746780395508
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:9-503",
+          "format": "matched",
+          "label_log_probs": [
+            -21.253000259399414,
+            -21.440500259399414,
+            -21.878000259399414,
+            -21.815500259399414
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:9-503",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -21.002975463867188,
+            -21.252975463867188,
+            -21.627975463867188,
+            -21.565475463867188
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:8-198",
+          "format": "matched",
+          "label_log_probs": [
+            -21.8043212890625,
+            -22.1168212890625,
+            -22.4293212890625,
+            -22.4293212890625
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:8-198",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -15.427362442016602,
+            -15.614862442016602,
+            -16.1148624420166,
+            -16.1148624420166
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:8-249",
+          "format": "matched",
+          "label_log_probs": [
+            -19.966472625732422,
+            -20.091472625732422,
+            -20.528972625732422,
+            -20.466472625732422
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:8-249",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -16.744211196899414,
+            -17.119211196899414,
+            -17.556711196899414,
+            -17.619211196899414
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:801",
+          "format": "matched",
+          "label_log_probs": [
+            -19.98848533630371,
+            -20.17598533630371,
+            -20.61348533630371,
+            -20.61348533630371
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:801",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -14.638381958007812,
+            -14.950881958007812,
+            -15.450881958007812,
+            -15.325881958007812
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:7-2",
+          "format": "matched",
+          "label_log_probs": [
+            -20.623743057250977,
+            -20.873743057250977,
+            -21.248743057250977,
+            -21.248743057250977
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:7-2",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -16.00274658203125,
+            -16.37774658203125,
+            -16.81524658203125,
+            -16.81524658203125
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:1212",
+          "format": "matched",
+          "label_log_probs": [
+            -18.41520881652832,
+            -18.85270881652832,
+            -19.29020881652832,
+            -19.16520881652832
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:1212",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -18.6723690032959,
+            -19.0473690032959,
+            -19.3598690032959,
+            -19.4223690032959
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:7-1003",
+          "format": "matched",
+          "label_log_probs": [
+            -20.320728302001953,
+            -20.695728302001953,
+            -21.195728302001953,
+            -21.008228302001953
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:7-1003",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -14.976910591125488,
+            -15.414410591125488,
+            -15.726910591125488,
+            -15.914410591125488
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:739",
+          "format": "matched",
+          "label_log_probs": [
+            -18.73858070373535,
+            -19.17608070373535,
+            -19.61358070373535,
+            -19.55108070373535
+          ],
+          "gold": 2
+        },
+        {
+          "id": "openbookqa:dev:739",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -13.099640846252441,
+            -13.755890846252441,
+            -13.880890846252441,
+            -14.130890846252441
+          ],
+          "gold": 2
+        },
+        {
+          "id": "openbookqa:dev:7-867",
+          "format": "matched",
+          "label_log_probs": [
+            -19.413984298706055,
+            -19.663984298706055,
+            -20.226484298706055,
+            -19.913984298706055
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:7-867",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -19.16620445251465,
+            -19.41620445251465,
+            -19.85370445251465,
+            -19.72870445251465
+          ],
+          "gold": 1
+        }
+      ],
+      "selected_parameter_norms": {
+        "embed.weight": {
+          "norm": 111.53968048095703,
+          "absmax": 0.19140625
+        },
+        "blocks.0.norm1.weight": {
+          "norm": 31.274568557739258,
+          "absmax": 1.6484375
+        },
+        "blocks.13.norm2.weight": {
+          "norm": 20.066360473632812,
+          "absmax": 1.21875
+        },
+        "norm.weight": {
+          "norm": 29.39809799194336,
+          "absmax": 1.5625
+        }
+      }
+    },
+    "EXT_step256": {
+      "weight_sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47",
+      "strict_load_complete": true,
+      "parameters": 100028328,
+      "finite_tensors": 135,
+      "dev32_nll": 3.1245240320323546,
+      "dev_generations": [
+        {
+          "id": "alpaca:45199",
+          "prompt": "User: Classify the following text as either scientific or not scientific.\nCats love to climb and scratch things, it is in their nature.\nAssistant:",
+          "source_target": " Not scientific.",
+          "generation": " Shering sterating coners, cores",
+          "tokens": [
+            35,
+            86,
+            107,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            118,
+            119,
+            104,
+            117,
+            100,
+            119,
+            108,
+            113,
+            106,
+            35,
+            102,
+            114,
+            113,
+            104,
+            117,
+            118,
+            47,
+            35,
+            102,
+            114,
+            117,
+            104,
+            118
+          ]
+        },
+        {
+          "id": "alpaca:3606",
+          "prompt": "User: List five different ways to be environmentally friendly.\nAssistant:",
+          "source_target": " 1. Reduce waste by reusing, recycling, and composting.\n2. Use reusable products such as bags and water bottles. \n3. Drive less and use public transportation or carpool when possible. \n4. Avoid products with excessive packaging. \n5. Make use of renewable energy resources such as solar, wind, or hydroelectric power.",
+          "generation": " Shering coners, comers, coratin",
+          "tokens": [
+            35,
+            86,
+            107,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            102,
+            114,
+            113,
+            104,
+            117,
+            118,
+            47,
+            35,
+            102,
+            114,
+            112,
+            104,
+            117,
+            118,
+            47,
+            35,
+            102,
+            114,
+            117,
+            100,
+            119,
+            108,
+            113
+          ]
+        },
+        {
+          "id": "alpaca:41760",
+          "prompt": "User: Make the following sentence sound more formal for an essay.\nThis is really great.\nAssistant:",
+          "source_target": " This is particularly commendable.",
+          "generation": " Sherering stering stering coner",
+          "tokens": [
+            35,
+            86,
+            107,
+            104,
+            117,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            118,
+            119,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            118,
+            119,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            102,
+            114,
+            113,
+            104,
+            117
+          ]
+        },
+        {
+          "id": "alpaca:21971",
+          "prompt": "User: Compare the health benefits of kiwi and mango.\nAssistant:",
+          "source_target": " Kiwi and mango both provide valuable health benefits. Kiwi is a great source of dietary fiber, vitamin C, and vitamin K. It also contains antioxidants and minerals, including potassium and copper. Mango is an excellent source of beta carotene, vitamin C, and vitamin A. It also contains copper, potassium, and magnesium. Both fruits are also low in calories and fat.",
+          "generation": " Sherering stering stering coner",
+          "tokens": [
+            35,
+            86,
+            107,
+            104,
+            117,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            118,
+            119,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            118,
+            119,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            102,
+            114,
+            113,
+            104,
+            117
+          ]
+        },
+        {
+          "id": "alpaca:15743",
+          "prompt": "User: Describe the concept of preventative health care.\nAssistant:",
+          "source_target": " Preventive health care is a type of care that focuses on preventing illness and providing early diagnosis and treatment of health problems before they become serious. It includes regular check-ups and health screenings, lifestyle counseling and immunizations. The goal is to help people live a healthier life and detect any potential health problems before they become more serious. Preventive health care is an important part of overall health care, as it helps to limit both the cost and severity of health problems that may occur.",
+          "generation": " Shering coners, stering coners,",
+          "tokens": [
+            35,
+            86,
+            107,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            102,
+            114,
+            113,
+            104,
+            117,
+            118,
+            47,
+            35,
+            118,
+            119,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            102,
+            114,
+            113,
+            104,
+            117,
+            118,
+            47
+          ]
+        },
+        {
+          "id": "alpaca:47466",
+          "prompt": "User: Give an example of a science experiment that uses the scientific method.\nAssistant:",
+          "source_target": " One example of a science experiment that uses the scientific method is measuring the effect of fertilizer on plant growth. The experiment could include the steps of making a hypothesis, testing the hypothesis, recording and analyzing the data, forming a conclusion, and communicating the results.",
+          "generation": " Shering coners, comers, coratin",
+          "tokens": [
+            35,
+            86,
+            107,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            102,
+            114,
+            113,
+            104,
+            117,
+            118,
+            47,
+            35,
+            102,
+            114,
+            112,
+            104,
+            117,
+            118,
+            47,
+            35,
+            102,
+            114,
+            117,
+            100,
+            119,
+            108,
+            113
+          ]
+        },
+        {
+          "id": "alpaca:22799",
+          "prompt": "User: Create a list of at least five resources to help someone who is starting a new business.\nAssistant:",
+          "source_target": " 1. Small Business Administration (SBA) - Resources, workshops and online courses to help entrepreneurs launch and run a successful business.\n2. SCORE - Free consultation and mentorship from experienced business professionals. \n3. Business.gov - Comprehensive resources for entrepreneurs on topics like business planning, taxes, and rules and regulations.\n4. The U.S. Patent and Trademark Office (USPTO) - Instructions and resources for registering trademarks and patents. \n5. Internal Revenue Service (IRS) - Tax information including filing deadlines, rules and regulations, and other resources.",
+          "generation": " Sherering coners, comers, conat",
+          "tokens": [
+            35,
+            86,
+            107,
+            104,
+            117,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            102,
+            114,
+            113,
+            104,
+            117,
+            118,
+            47,
+            35,
+            102,
+            114,
+            112,
+            104,
+            117,
+            118,
+            47,
+            35,
+            102,
+            114,
+            113,
+            100,
+            119
+          ]
+        },
+        {
+          "id": "alpaca:17297",
+          "prompt": "User: Provide an example of a person using the habit of donating to charity.\nAssistant:",
+          "source_target": " John regularly donates 10% of his monthly salary to charity.",
+          "generation": " Shering sterating coners, conat",
+          "tokens": [
+            35,
+            86,
+            107,
+            104,
+            117,
+            108,
+            113,
+            106,
+            35,
+            118,
+            119,
+            104,
+            117,
+            100,
+            119,
+            108,
+            113,
+            106,
+            35,
+            102,
+            114,
+            113,
+            104,
+            117,
+            118,
+            47,
+            35,
+            102,
+            114,
+            113,
+            100,
+            119
+          ]
+        }
+      ],
+      "prompt_format_dev_diagnostic": [
+        {
+          "id": "openbookqa:dev:7-4",
+          "format": "matched",
+          "label_log_probs": [
+            -3.557091474533081,
+            -8.50240421295166,
+            -8.90279483795166,
+            -9.20162296295166
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:7-4",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.2186551094055176,
+            -8.16592025756836,
+            -8.54043197631836,
+            -8.82802963256836
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:7-236",
+          "format": "matched",
+          "label_log_probs": [
+            -3.50569486618042,
+            -8.528887748718262,
+            -8.868975639343262,
+            -9.197100639343262
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:7-236",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.203798532485962,
+            -8.207704544067383,
+            -8.499635696411133,
+            -8.850282669067383
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:8-148",
+          "format": "matched",
+          "label_log_probs": [
+            -3.5023770332336426,
+            -8.46008014678955,
+            -8.8207368850708,
+            -9.1508150100708
+          ],
+          "gold": 2
+        },
+        {
+          "id": "openbookqa:dev:8-148",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.3052330017089844,
+            -8.251888275146484,
+            -8.590389251708984,
+            -8.879451751708984
+          ],
+          "gold": 2
+        },
+        {
+          "id": "openbookqa:dev:458",
+          "format": "matched",
+          "label_log_probs": [
+            -3.431339740753174,
+            -8.391301155090332,
+            -8.737980842590332,
+            -9.032902717590332
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:458",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.150333881378174,
+            -8.199161529541016,
+            -8.488285064697266,
+            -8.831974029541016
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:7-481",
+          "format": "matched",
+          "label_log_probs": [
+            -3.476478099822998,
+            -8.43839168548584,
+            -8.81436824798584,
+            -9.14444637298584
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:7-481",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.1499338150024414,
+            -8.050324440002441,
+            -8.470246315002441,
+            -8.730011940002441
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:1706",
+          "format": "matched",
+          "label_log_probs": [
+            -3.279808759689331,
+            -8.29934024810791,
+            -8.63430118560791,
+            -8.94973087310791
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:1706",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.1275124549865723,
+            -8.11774730682373,
+            -8.45221996307373,
+            -8.77692699432373
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:9-84",
+          "format": "matched",
+          "label_log_probs": [
+            -3.480292320251465,
+            -8.478827476501465,
+            -8.870917320251465,
+            -9.175604820251465
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:9-84",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.3185293674468994,
+            -8.29802131652832,
+            -8.68181037902832,
+            -8.99431037902832
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:9-503",
+          "format": "matched",
+          "label_log_probs": [
+            -3.5499038696289062,
+            -8.624122619628906,
+            -8.954200744628906,
+            -9.323341369628906
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:9-503",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.4478039741516113,
+            -8.38872241973877,
+            -8.79741382598877,
+            -9.04546070098877
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:8-198",
+          "format": "matched",
+          "label_log_probs": [
+            -3.5018393993377686,
+            -8.452340126037598,
+            -8.857308387756348,
+            -9.115120887756348
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:8-198",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.1956372261047363,
+            -8.127277374267578,
+            -8.498859405517578,
+            -8.795246124267578
+          ],
+          "gold": 3
+        },
+        {
+          "id": "openbookqa:dev:8-249",
+          "format": "matched",
+          "label_log_probs": [
+            -3.631211042404175,
+            -8.624375343322754,
+            -8.990586280822754,
+            -9.295273780822754
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:8-249",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.513500928878784,
+            -8.476178169250488,
+            -8.820141792297363,
+            -9.134594917297363
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:801",
+          "format": "matched",
+          "label_log_probs": [
+            -3.2608416080474854,
+            -8.240333557128906,
+            -8.631935119628906,
+            -8.919044494628906
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:801",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.2571170330047607,
+            -8.16727352142334,
+            -8.56827449798584,
+            -8.85477352142334
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:7-2",
+          "format": "matched",
+          "label_log_probs": [
+            -3.523766040802002,
+            -8.53035831451416,
+            -8.91048526763916,
+            -9.21126651763916
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:7-2",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.4113402366638184,
+            -8.414270401000977,
+            -8.702844619750977,
+            -9.091028213500977
+          ],
+          "gold": 0
+        },
+        {
+          "id": "openbookqa:dev:1212",
+          "format": "matched",
+          "label_log_probs": [
+            -3.4192991256713867,
+            -8.408068656921387,
+            -8.796252250671387,
+            -9.095080375671387
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:1212",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.1781797409057617,
+            -8.069781303405762,
+            -8.479937553405762,
+            -8.748492240905762
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:7-1003",
+          "format": "matched",
+          "label_log_probs": [
+            -3.3489248752593994,
+            -8.30497932434082,
+            -8.67119026184082,
+            -8.96611213684082
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:7-1003",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.0528385639190674,
+            -8.021588325500488,
+            -8.304791450500488,
+            -8.628521919250488
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:739",
+          "format": "matched",
+          "label_log_probs": [
+            -3.329648494720459,
+            -8.313047409057617,
+            -8.683164596557617,
+            -8.978086471557617
+          ],
+          "gold": 2
+        },
+        {
+          "id": "openbookqa:dev:739",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.2336761951446533,
+            -8.243929862976074,
+            -8.547152519226074,
+            -8.870394706726074
+          ],
+          "gold": 2
+        },
+        {
+          "id": "openbookqa:dev:7-867",
+          "format": "matched",
+          "label_log_probs": [
+            -3.508669853210449,
+            -8.47033977508545,
+            -8.84460735321045,
+            -9.15710735321045
+          ],
+          "gold": 1
+        },
+        {
+          "id": "openbookqa:dev:7-867",
+          "format": "plain_diagnostic",
+          "label_log_probs": [
+            -3.4545278549194336,
+            -8.451598167419434,
+            -8.768980979919434,
+            -9.099059104919434
+          ],
+          "gold": 1
+        }
+      ],
+      "selected_parameter_norms": {
+        "embed.weight": {
+          "norm": 116.6928482055664,
+          "absmax": 0.19674885272979736
+        },
+        "blocks.0.norm1.weight": {
+          "norm": 31.267826080322266,
+          "absmax": 1.6460182666778564
+        },
+        "blocks.13.norm2.weight": {
+          "norm": 20.019886016845703,
+          "absmax": 1.2182590961456299
+        },
+        "norm.weight": {
+          "norm": 29.326854705810547,
+          "absmax": 1.5617948770523071
+        }
+      }
+    }
+  },
+  "untrained_engineering_reference_dev8_nll": 9.075076455543693,
+  "test_data_read_by_this_script": false,
+  "optimizer_steps": 0,
+  "historical_evidence": "L100EC summary documents 1536 curriculum updates, 686613 input tokens and 203581 supervised tokens, 5676 unique synthetic curriculum IDs. Earlier full pretraining corpus/history unavailable; broad language pretraining is not established."
+}

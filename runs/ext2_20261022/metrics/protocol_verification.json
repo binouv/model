@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "selected_model_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe",
+  "checks": [
+    {
+      "id": "openbookqa:dev:7-4",
+      "task": "openbookqa",
+      "full_teacher_forced_nll": 0.821054995059967,
+      "cached_label_and_eos_nll": 0.8210547566350215,
+      "loss_abs_difference": 2.384249455644749e-07,
+      "cache_full_max_abs_logit_differences": [
+        0.0,
+        5.7220458984375e-06
+      ],
+      "greedy_argmax_equal": [
+        true,
+        true
+      ]
+    },
+    {
+      "id": "piqa:dev:532467ad-df88-4ef0-b21f-22dd2389a312",
+      "task": "piqa",
+      "full_teacher_forced_nll": 0.49789220094680786,
+      "cached_label_and_eos_nll": 0.4978924989204643,
+      "loss_abs_difference": 2.979736564157065e-07,
+      "cache_full_max_abs_logit_differences": [
+        0.0,
+        5.245208740234375e-06
+      ],
+      "greedy_argmax_equal": [
+        true,
+        true
+      ]
+    },
+    {
+      "id": "arc_challenge:dev:ACTAAP_2007_7_25",
+      "task": "arc_challenge",
+      "full_teacher_forced_nll": 0.4274826943874359,
+      "cached_label_and_eos_nll": 0.4274826943164953,
+      "loss_abs_difference": 7.09405867382884e-11,
+      "cache_full_max_abs_logit_differences": [
+        0.0,
+        4.76837158203125e-06
+      ],
+      "greedy_argmax_equal": [
+        true,
+        true
+      ]
+    }
+  ],
+  "input_and_target_alignment_passed": true,
+  "test_used": false
+}

@@ -1,0 +1,39 @@
+{
+  "files": {
+    "train.jsonl": {
+      "count": 16384,
+      "sha256": "4426273bdbb7cdbd8bdd500f838075b71b85062171f0a190744e1e81c8999b09",
+      "bytes": 17806212
+    },
+    "dev_mcq.jsonl": {
+      "count": 192,
+      "sha256": "4754304f48ee18673c1509753c3056f8bd08614d29a93d8ed0d972c5f9665886",
+      "bytes": 281163
+    },
+    "test_mcq.jsonl": {
+      "count": 768,
+      "sha256": "c66c7ba42a6c95ee3bd07d8dfc6476cd5f6eb8c03ae04143af58e02c2b32582e",
+      "bytes": 1092113
+    },
+    "dev_alpaca.jsonl": {
+      "count": 128,
+      "sha256": "027c338b48a51a7b747efe120ceb21929a400bff42711ee338f065ecdab1637e",
+      "bytes": 124337
+    },
+    "test_alpaca.jsonl": {
+      "count": 128,
+      "sha256": "e5cd0d86eaed795d5ed1b4c7977c92867ef3d1646b2cc738bd1e9e34ce5266d0",
+      "bytes": 124036
+    }
+  },
+  "removed": {
+    "test_duplicate_questions_replaced_before_evaluation": 1,
+    "openbookqa_overlap_or_duplicate": 140,
+    "piqa_over_length": 472,
+    "piqa_overlap_or_duplicate": 1326,
+    "alpaca_empty_or_over_length": 3208,
+    "alpaca_held_question_substring": 1657
+  },
+  "short_answers_under_8_tokens": 8447,
+  "input_tokens": 2899624
+}

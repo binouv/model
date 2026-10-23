@@ -1,0 +1,15 @@
+{
+  "status": "saved_local",
+  "scientific_status": "in_progress",
+  "step": 1216,
+  "parameters": 100028328,
+  "native_model_dtype": "float32",
+  "optimizer_dtype": "float32",
+  "parent_sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47",
+  "model_sha256": "ae09a3c3dfac06c08daf31115b211fb8e204851500e540b3b270d23e7d03d7dd",
+  "state_sha256": "b209b36acef26971e03bff6058537bd66fbc48a69d6faa0d0c08b0c873315a71",
+  "model_bytes": 400125984,
+  "state_bytes": 800351251,
+  "strict_reload_equal": true,
+  "data_manifest_sha256": "66baf05f1941c8b5ead94ccd022ae20c2562dee654ccd21d6136b74fddde829c"
+}

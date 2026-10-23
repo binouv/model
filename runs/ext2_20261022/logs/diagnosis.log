@@ -1,0 +1,3 @@
+L100EC_original NLL 13.453329408805176 example '22;F=22'
+EXT_step256 NLL 3.1245240320323546 example ' Shering sterating coners, cores'
+{"vocab_size": 8192, "tokenizer_sha256": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500", "exact_roundtrip_all_dev": true, "total_tokens": 65400, "total_utf8_bytes": 103870, "byte_fallback_token_fraction": 0.8336391437308869, "lexical_piece_exact_vocab_coverage": 0.4479393964346, "label_tokens": {"A": [468, 2], "B": [796, 2], "C": [578, 2], "D": [780, 2]}, "random_uniform_token_nll": 9.010913347279288}

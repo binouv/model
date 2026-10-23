@@ -1,0 +1,51 @@
+{
+  "format": "flygraph.checkpoint-parts.v1",
+  "identity": "EXT2_20261022_parent",
+  "filename": "model.safetensors",
+  "size_bytes": 400125984,
+  "sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47",
+  "max_part_bytes": 80000000,
+  "parts": [
+    {
+      "name": "model.safetensors.part0000",
+      "size_bytes": 80000000,
+      "sha256": "14d1580b98b02424cb3f353d4a868ba0cc61ec3b458cb1c0773fd62141de9f70"
+    },
+    {
+      "name": "model.safetensors.part0001",
+      "size_bytes": 80000000,
+      "sha256": "b4e4142fdc49c0c623d599d496cd709f6e11dff349e9254e2313ebe3e9e74f16"
+    },
+    {
+      "name": "model.safetensors.part0002",
+      "size_bytes": 80000000,
+      "sha256": "bc89ffce7d9c43aa44146c89999c8c0b81eccec2585d1420ce6745e7cd07c239"
+    },
+    {
+      "name": "model.safetensors.part0003",
+      "size_bytes": 80000000,
+      "sha256": "6a1eb8ced9c87561ebb2840b8d7e90f8fa7e71b1e29b4ba8215be445c6acc4e9"
+    },
+    {
+      "name": "model.safetensors.part0004",
+      "size_bytes": 80000000,
+      "sha256": "103ebcd68af4533099339c9a2e48488260204c1be72337368d4bf9993420f9c6"
+    },
+    {
+      "name": "model.safetensors.part0005",
+      "size_bytes": 125984,
+      "sha256": "d6c01c88258829f411d1bd11e9df8e3f1465afc34ef4c7bb9b1d9ec24825a84c"
+    }
+  ],
+  "run_id": "ext2_20261022",
+  "role": "parent",
+  "completed_new_optimizer_step": 0,
+  "parameters": 100028328,
+  "native_contents": "float32 model input from prior completed EXT run",
+  "parent_checkpoint_sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47",
+  "data_manifest_sha256": "66baf05f1941c8b5ead94ccd022ae20c2562dee654ccd21d6136b74fddde829c",
+  "tokenizer_sha256": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500",
+  "source_manifest_sha256": "3206754fe992ba1e89c5622eaa7b6a9e2befe7d5c8c561da68d225761722471b",
+  "status": "saved_local",
+  "model_tensor_count": 135
+}

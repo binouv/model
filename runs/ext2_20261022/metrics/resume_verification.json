@@ -1,0 +1,11 @@
+{
+  "replayed_updates": 64,
+  "from_completed_step": 64,
+  "to_completed_step": 128,
+  "all_64_loss_and_grad_norm_equal": true,
+  "all_135_native_tensors_bitwise_equal": true,
+  "expected_model_sha256": "98088d4e2a839f9d2a0beecd191b1d6dc5c0b89ca96128c95a195ba639b4794b",
+  "no_final_or_selected_checkpoint_modified": true,
+  "fixture": "same external training records used in actual updates65..128",
+  "status": "passed"
+}

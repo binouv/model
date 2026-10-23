@@ -1,0 +1,76 @@
+{
+  "format": "flygraph.checkpoint-parts.v1",
+  "identity": "EXT2_20261022_final_state",
+  "filename": "training_state.pt",
+  "size_bytes": 800351251,
+  "sha256": "5dc510cf6aee59c3d6fbb6568c3dbf13ddc41ba78f231fd4af17f7004d9b7c5b",
+  "max_part_bytes": 80000000,
+  "parts": [
+    {
+      "name": "training_state.pt.part0000",
+      "size_bytes": 80000000,
+      "sha256": "6a1aded3d9092016bb6f62e01f40ee2e122c7cf96eb85608dc3154e105b2912c"
+    },
+    {
+      "name": "training_state.pt.part0001",
+      "size_bytes": 80000000,
+      "sha256": "262a8b95932349f8c96c37ba330f4721124a32df7c904dad588a968f0f0dcc42"
+    },
+    {
+      "name": "training_state.pt.part0002",
+      "size_bytes": 80000000,
+      "sha256": "16ce3015227770168112125c7ccbd0c0f8a3f6c4e8edf01560c61c2be99671bf"
+    },
+    {
+      "name": "training_state.pt.part0003",
+      "size_bytes": 80000000,
+      "sha256": "6631c3b1045abc1c8f9bf45bf5805e264b1ff425f2486ea896cacd257cd79c3f"
+    },
+    {
+      "name": "training_state.pt.part0004",
+      "size_bytes": 80000000,
+      "sha256": "269c203e2e4811d9285a228be069016132d81ab7a004a4898a1c38823450a2dd"
+    },
+    {
+      "name": "training_state.pt.part0005",
+      "size_bytes": 80000000,
+      "sha256": "3dcdbf9dd97daac605937152adf28d884e19349b4ac6a97f75d789e5252a4d29"
+    },
+    {
+      "name": "training_state.pt.part0006",
+      "size_bytes": 80000000,
+      "sha256": "01632ea561500ac4cacd9cd001ded66f85741bc1c2890604241056bb5c542b43"
+    },
+    {
+      "name": "training_state.pt.part0007",
+      "size_bytes": 80000000,
+      "sha256": "c4a74ab1628e8d47c5000237c63748b008854d24a4520d3e012e9fa117640d03"
+    },
+    {
+      "name": "training_state.pt.part0008",
+      "size_bytes": 80000000,
+      "sha256": "8d2d17c85937f20b99e43030c8c20f6a2ff328db0a9ce6f214375dd94028d783"
+    },
+    {
+      "name": "training_state.pt.part0009",
+      "size_bytes": 80000000,
+      "sha256": "df57dca3e5540707d7186660a93d8e31fee4cdcb0eff8519aa8def5e4de0c3e7"
+    },
+    {
+      "name": "training_state.pt.part0010",
+      "size_bytes": 351251,
+      "sha256": "1fa6a44024b98b943ac53d8d9b07d44d9f91a24205b9bbbe124c35c149ea6313"
+    }
+  ],
+  "run_id": "ext2_20261022",
+  "role": "final_state",
+  "completed_new_optimizer_step": 4096,
+  "parameters": 100028328,
+  "native_contents": "float32 native AdamW; RNG, cursor, schedule and config",
+  "parent_checkpoint_sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47",
+  "data_manifest_sha256": "66baf05f1941c8b5ead94ccd022ae20c2562dee654ccd21d6136b74fddde829c",
+  "tokenizer_sha256": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500",
+  "source_manifest_sha256": "3206754fe992ba1e89c5622eaa7b6a9e2befe7d5c8c561da68d225761722471b",
+  "status": "saved_local",
+  "model_tensor_count": null
+}

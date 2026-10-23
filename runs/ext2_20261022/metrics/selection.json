@@ -1,0 +1,6 @@
+{
+  "best_step": 3584,
+  "best_objective": 1.6042297040114637,
+  "selected_weight_path": "/workspace/model/runs/ext2_20261022/checkpoints/step_3584/model.safetensors",
+  "criterion": "equal-task dev NLL: Alpaca, OpenBookQA, PIQA; ARC excluded"
+}

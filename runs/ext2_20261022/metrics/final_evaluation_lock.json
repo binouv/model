@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-23T00:30:25.017928+00:00",
+  "selection_sha256": "7d28cedf756eb4d10ac866e90ee30c9e5b62b5ac94fc73c103f95b4d0f33280a",
+  "training_summary_sha256": "4be153cf081a0a1dec0c8ab10ccf600457e4fa979a3bbbceae192b5f509cc880",
+  "test_mcq_sha256": "c66c7ba42a6c95ee3bd07d8dfc6476cd5f6eb8c03ae04143af58e02c2b32582e",
+  "test_alpaca_sha256": "e5cd0d86eaed795d5ed1b4c7977c92867ef3d1646b2cc738bd1e9e34ce5266d0",
+  "selected_step": 3584,
+  "criterion": "equal-task dev NLL: Alpaca, OpenBookQA, PIQA; ARC excluded"
+}

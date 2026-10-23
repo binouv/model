@@ -1,0 +1,45 @@
+{
+  "run_id": "ext2_20261022",
+  "seed": 20261022,
+  "parent_path": "../ext_20261018/checkpoints/step_0256/model.safetensors",
+  "parent_sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47",
+  "training_kind": "warm_start_from_EXT_step256_new_AdamW_new_external_mixture",
+  "parameters": 100028328,
+  "max_steps": 4096,
+  "effective_batch": 4,
+  "microbatch": 1,
+  "max_train_tokens": 512,
+  "minimum_answer_tokens": 1,
+  "learning_rate": 0.00015,
+  "warmup_steps": 64,
+  "checkpoint_interval": 64,
+  "dev_interval": 512,
+  "threads": 4,
+  "checkpoint_blocks": false,
+  "training_stop_utc": "2026-10-23T01:30:00+00:00",
+  "final_deadline_utc": "2026-10-23T02:35:31+00:00",
+  "generation_budget": 16,
+  "decoding": "full-vocabulary greedy, EOS stopping",
+  "data_mix_per_update": {
+    "alpaca": 2,
+    "openbookqa": 1,
+    "piqa": 1
+  },
+  "loss": "mean of four per-example assistant/EOS token cross-entropies; equal example weight",
+  "selection": "minimum equal-task mean dev NLL among step0 and completed 512-step checkpoints; frozen dev, no test selection",
+  "primary_hypothesis": "Matched instruction serialization plus short-answer supervised external QA mixed with broader Alpaca improves held-out label-ranking accuracy over EXT step256 without increasing held-out Alpaca NLL. Format validity alone does not establish knowledge improvement.",
+  "reference_models": [
+    "Qwen/Qwen3.5-0.8B",
+    "openbmb/MiniCPM-V-4.7-1B"
+  ],
+  "test_policy": "Never train/select on old ARC128; new OpenBookQA official test, held-out PIQA official-dev subset, ARC-Challenge official test and new Alpaca holdout.",
+  "registered_utc": "2026-10-22T21:48:45.227197+00:00",
+  "data_manifest_sha256": "66baf05f1941c8b5ead94ccd022ae20c2562dee654ccd21d6136b74fddde829c",
+  "checkpoint_retention": "step64, best dev, last two; hash receipts retained for pruned redundant recoveries",
+  "diagnostic_findings": {
+    "byte_fallback_fraction": 0.8336391437308869,
+    "parent_L100EC_dev32_nll": 13.453329408805176,
+    "EXT_step256_dev32_nll": 3.1245240320323546,
+    "tokenizer_retained_for_checkpoint_compatibility": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "completed_fixed_step_count": true,
+  "steps": 4096,
+  "unique_records": 16384,
+  "wall_seconds": 9329.910861523998,
+  "stop_reason": "fixed_step_count",
+  "best_dev_step": 3584,
+  "max_rss_kib": 6253348,
+  "end_utc": "2026-10-23T00:27:52.454846+00:00",
+  "checkpoint_retention": "first step64, best dev, latest two; redundant earlier recovery bytes pruned only after verified successor",
+  "test_evaluated_during_training": false
+}

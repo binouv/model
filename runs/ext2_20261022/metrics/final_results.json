@@ -1,0 +1,283 @@
+{
+  "run_id": "ext2_20261022",
+  "evaluation_completed": true,
+  "training": {
+    "completed_fixed_step_count": true,
+    "steps": 4096,
+    "unique_records": 16384,
+    "wall_seconds": 9329.910861523998,
+    "stop_reason": "fixed_step_count",
+    "best_dev_step": 3584,
+    "max_rss_kib": 6253348,
+    "end_utc": "2026-10-23T00:27:52.454846+00:00",
+    "checkpoint_retention": "first step64, best dev, latest two; redundant earlier recovery bytes pruned only after verified successor",
+    "test_evaluated_during_training": false
+  },
+  "selected_step": 3584,
+  "summaries": {
+    "parent_EXT256": {
+      "arm": "parent_EXT256",
+      "split": "test",
+      "seconds": 777.6049258380008,
+      "n_mcq": 768,
+      "n_alpaca": 128,
+      "generation_evaluated": true,
+      "by_task": {
+        "openbookqa": {
+          "n": 256,
+          "label_correct": 67,
+          "label_accuracy": 0.26171875,
+          "generation_correct": 0,
+          "generation_accuracy": 0.0,
+          "valid_generation": 0,
+          "gold_label_eos_nll": 11.823844397440553
+        },
+        "piqa": {
+          "n": 256,
+          "label_correct": 131,
+          "label_accuracy": 0.51171875,
+          "generation_correct": 0,
+          "generation_accuracy": 0.0,
+          "valid_generation": 0,
+          "gold_label_eos_nll": 10.515480887144804
+        },
+        "arc_challenge": {
+          "n": 256,
+          "label_correct": 54,
+          "label_accuracy": 0.2109375,
+          "generation_correct": 0,
+          "generation_accuracy": 0.0,
+          "valid_generation": 0,
+          "gold_label_eos_nll": 11.963282434269786
+        }
+      },
+      "alpaca_nll": 3.3520009933650194,
+      "selection_objective": 8.563775425983458,
+      "weight_sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47"
+    },
+    "selected_EXT2": {
+      "arm": "selected_EXT2",
+      "split": "test",
+      "seconds": 392.05756506299986,
+      "n_mcq": 768,
+      "n_alpaca": 128,
+      "generation_evaluated": true,
+      "by_task": {
+        "openbookqa": {
+          "n": 256,
+          "label_correct": 73,
+          "label_accuracy": 0.28515625,
+          "generation_correct": 76,
+          "generation_accuracy": 0.296875,
+          "valid_generation": 256,
+          "gold_label_eos_nll": 1.4495887963322165
+        },
+        "piqa": {
+          "n": 256,
+          "label_correct": 122,
+          "label_accuracy": 0.4765625,
+          "generation_correct": 122,
+          "generation_accuracy": 0.4765625,
+          "valid_generation": 256,
+          "gold_label_eos_nll": 0.7198024564010304
+        },
+        "arc_challenge": {
+          "n": 256,
+          "label_correct": 60,
+          "label_accuracy": 0.234375,
+          "generation_correct": 59,
+          "generation_accuracy": 0.23046875,
+          "valid_generation": 256,
+          "gold_label_eos_nll": 2.7728275098539363
+        }
+      },
+      "alpaca_nll": 2.7622253510997004,
+      "selection_objective": 1.643872201277649,
+      "weight_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe"
+    }
+  },
+  "paired_comparisons": {
+    "openbookqa": {
+      "label": {
+        "before_correct": 67,
+        "after_correct": 73,
+        "n": 256,
+        "difference": 0.0234375,
+        "paired_bootstrap95": [
+          -0.06640625,
+          0.11328125
+        ],
+        "before_wilson95": [
+          0.2116786380872453,
+          0.3188042934907086
+        ],
+        "after_wilson95": [
+          0.233344637402638,
+          0.34332030090535326
+        ],
+        "mcnemar_exact_p": 0.6727565036145104
+      },
+      "generation": {
+        "before_correct": 0,
+        "after_correct": 76,
+        "n": 256,
+        "difference": 0.296875,
+        "paired_bootstrap95": [
+          0.2421875,
+          0.3515625
+        ],
+        "before_wilson95": [
+          0.0,
+          0.014783856425870627
+        ],
+        "after_wilson95": [
+          0.2442452152949404,
+          0.3555107263780696
+        ],
+        "mcnemar_exact_p": 2.6469779601696886e-23
+      }
+    },
+    "piqa": {
+      "label": {
+        "before_correct": 131,
+        "after_correct": 122,
+        "n": 256,
+        "difference": -0.03515625,
+        "paired_bootstrap95": [
+          -0.15234375,
+          0.08203125
+        ],
+        "before_wilson95": [
+          0.45076751333371173,
+          0.5723234900313069
+        ],
+        "after_wilson95": [
+          0.41618039421813546,
+          0.5376375990518272
+        ],
+        "mcnemar_exact_p": 0.6049162086884319
+      },
+      "generation": {
+        "before_correct": 0,
+        "after_correct": 122,
+        "n": 256,
+        "difference": 0.4765625,
+        "paired_bootstrap95": [
+          0.4140625,
+          0.5390625
+        ],
+        "before_wilson95": [
+          0.0,
+          0.014783856425870627
+        ],
+        "after_wilson95": [
+          0.41618039421813546,
+          0.5376375990518272
+        ],
+        "mcnemar_exact_p": 3.76158192263132e-37
+      }
+    },
+    "arc_challenge": {
+      "label": {
+        "before_correct": 54,
+        "after_correct": 60,
+        "n": 256,
+        "difference": 0.0234375,
+        "paired_bootstrap95": [
+          -0.0546875,
+          0.10546875
+        ],
+        "before_wilson95": [
+          0.1654221047565809,
+          0.26499981223962554
+        ],
+        "after_wilson95": [
+          0.18664650822025552,
+          0.2899574155059883
+        ],
+        "mcnemar_exact_p": 0.6367997716142331
+      },
+      "generation": {
+        "before_correct": 0,
+        "after_correct": 59,
+        "n": 256,
+        "difference": 0.23046875,
+        "paired_bootstrap95": [
+          0.1796875,
+          0.28515625
+        ],
+        "before_wilson95": [
+          0.0,
+          0.014783856425870627
+        ],
+        "after_wilson95": [
+          0.18309357605673515,
+          0.28581334654783574
+        ],
+        "mcnemar_exact_p": 3.469446951953614e-18
+      }
+    }
+  },
+  "mean_label_accuracy_difference": 0.00390625,
+  "stratified_paired_bootstrap95": [
+    -0.05078125,
+    0.05859375
+  ],
+  "bootstrap_repeats": 10000,
+  "bootstrap_seed": 20261023,
+  "held_alpaca_nll_not_worse": true,
+  "registered_improvement_criterion_met": false,
+  "general_superiority_to_Qwen_and_MiniCPM_established": false,
+  "references": {
+    "checked_utc": "2026-10-22T21:43:17.613702+00:00",
+    "models": [
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "status": "blocked_not_measured",
+        "attempt": "official huggingface.co resolve/main/config.json",
+        "error": "Tunnel connection failed: 403 Forbidden"
+      },
+      {
+        "id": "openbmb/MiniCPM-V-4.7-1B",
+        "status": "blocked_not_measured",
+        "attempt": "official huggingface.co resolve/main/config.json",
+        "error": "Tunnel connection failed: 403 Forbidden"
+      }
+    ],
+    "no_alternate_hosts_attempted_this_run": true
+  },
+  "scope": "English external multiple-choice pilot and instruction-language NLL; PIQA test is a reserved subset of its official labeled validation split; historical contamination unknown.",
+  "training_label_prior_diagnostic": {
+    "openbookqa": {
+      "constant_prediction_from_train": 0,
+      "constant_correct": 67,
+      "n": 256,
+      "selected_prediction_counts": {
+        "1": 229,
+        "3": 27
+      },
+      "selected_most_common_prediction_fraction": 0.89453125
+    },
+    "piqa": {
+      "constant_prediction_from_train": 0,
+      "constant_correct": 131,
+      "n": 256,
+      "selected_prediction_counts": {
+        "1": 239,
+        "0": 17
+      },
+      "selected_most_common_prediction_fraction": 0.93359375
+    },
+    "arc_challenge": {
+      "constant_prediction_from_train": 0,
+      "constant_correct": 54,
+      "n": 256,
+      "selected_prediction_counts": {
+        "1": 245,
+        "0": 3,
+        "3": 8
+      },
+      "selected_most_common_prediction_fraction": 0.95703125
+    }
+  }
+}

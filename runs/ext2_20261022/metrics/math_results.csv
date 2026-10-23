@@ -1,0 +1,3 @@
+model,n,strict_correct,strict_accuracy,strict_valid,last_number_correct_diagnostic,budget_exhausted,seconds
+parent_EXT256,64,0,0.0,9,1,53,135.37855856900023
+selected_EXT2,64,0,0.0,16,1,8,46.16752761099997
