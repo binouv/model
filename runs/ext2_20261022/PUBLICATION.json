@@ -1,7 +1,91 @@
 {
-  "status": "uploaded_unverified_pending_readback",
+  "status": "published_verified",
   "repo": "https://github.com/binouv/model.git",
   "branch": "flygraph/ext-20261022",
+  "artifact_commit": "f430cf36fb6effbd402f92f455f4cc592198c8a9",
   "base_commit": "a0fc622a70074d2e09e184646fb99959c010099d",
+  "artifact_commits": [
+    "a45483f5b211edd4c62d6297f208f22cbab7e30d",
+    "f430cf36fb6effbd402f92f455f4cc592198c8a9"
+  ],
+  "verified_utc": "2026-10-23T01:05:55.352302+00:00",
+  "all_published_file_checksums_verified": true,
+  "all_remote_binary_components_reconstructed": [
+    {
+      "role": "parent",
+      "output": "/workspace/ext2_readback_20261022/restored/parent_model.safetensors",
+      "size_bytes": 400125984,
+      "sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47"
+    },
+    {
+      "role": "final_model",
+      "output": "/workspace/ext2_readback_20261022/restored/final_model_model.safetensors",
+      "size_bytes": 400125984,
+      "sha256": "708a6bac159281316900c01a3ca8b688fd49f6df176d2c60c76b88681446f2b4"
+    },
+    {
+      "role": "final_state",
+      "output": "/workspace/ext2_readback_20261022/restored/final_state_training_state.pt",
+      "size_bytes": 800351251,
+      "sha256": "5dc510cf6aee59c3d6fbb6568c3dbf13ddc41ba78f231fd4af17f7004d9b7c5b"
+    },
+    {
+      "role": "selected_model",
+      "output": "/workspace/ext2_readback_20261022/restored/selected_model_model.safetensors",
+      "size_bytes": 400125984,
+      "sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe"
+    },
+    {
+      "role": "selected_state",
+      "output": "/workspace/ext2_readback_20261022/restored/selected_state_training_state.pt",
+      "size_bytes": 800351251,
+      "sha256": "15036bf25cfff25ec6e959d2b11376efa37cb0b770510461ceb9d290a5c2ea6d"
+    }
+  ],
+  "native_resume_receipts": [
+    {
+      "status": "passed",
+      "weights_sha256": "708a6bac159281316900c01a3ca8b688fd49f6df176d2c60c76b88681446f2b4",
+      "native_state_sha256": "5dc510cf6aee59c3d6fbb6568c3dbf13ddc41ba78f231fd4af17f7004d9b7c5b",
+      "two_independent_native_loads_replay_identically": true,
+      "fixture": {
+        "checkpoint_step": 4096,
+        "fixture_ids": [
+          "alpaca:45551",
+          "openbookqa:train:12-291",
+          "alpaca:47434",
+          "piqa:train:aa0f1029-012d-460a-bf69-ab3fb7946291"
+        ],
+        "loss": 1.5745068937540054,
+        "grad_norm": 6.108815670013428,
+        "after_fixture_parameter_fingerprint": "71aee2060228c3d5d337837000d59b75f345440f1967f1c9369981b7a9c727f0"
+      },
+      "saved_files_not_modified": true,
+      "scope": "engineering continuation on already published training records only; not an additional quality run"
+    },
+    {
+      "status": "passed",
+      "weights_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe",
+      "native_state_sha256": "15036bf25cfff25ec6e959d2b11376efa37cb0b770510461ceb9d290a5c2ea6d",
+      "two_independent_native_loads_replay_identically": true,
+      "fixture": {
+        "checkpoint_step": 3584,
+        "fixture_ids": [
+          "alpaca:29362",
+          "openbookqa:train:11-134",
+          "alpaca:597",
+          "piqa:train:5dbd29f0-a21f-48c4-aded-af9e77e104b6"
+        ],
+        "loss": 1.512934796512127,
+        "grad_norm": 6.517490386962891,
+        "after_fixture_parameter_fingerprint": "5316d97aaab78acdc6d4dac34394dbf5328bfc24022b0fcdbe04363969e8ba14"
+      },
+      "saved_files_not_modified": true,
+      "scope": "engineering continuation on already published training records only; not an additional quality run"
+    }
+  ],
+  "fixed_external_dev_prompt": "User: Answer the question. Reply with only the letter A, B, C, D.\nQuestion: An electron microscope can\nA. move small magnets around\nB. create completed replicas of animals\nC. burn plastic with ease\nD. recreate an entire image\nAssistant:",
+  "fixed_prompt_inference_stdout": "{\"completion\": \" A\", \"new_token_ids\": [468, 2], \"eos\": true}\n",
+  "no_force_push": true,
   "general_superiority_established": false
 }
