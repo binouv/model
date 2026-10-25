@@ -1,7 +1,80 @@
 {
-  "status": "uploaded_unverified_pending_readback",
+  "status": "published_verified",
   "repo": "https://github.com/binouv/model.git",
   "branch": "flygraph/ext3-20261025",
+  "artifact_commit": "94c5484d90d9d75ef9486d4c443ac40b149aadfb",
   "base_commit": "7b712f2d557a85248639037348dd7b27f2705790",
+  "artifact_commits": [
+    "94c5484d90d9d75ef9486d4c443ac40b149aadfb"
+  ],
+  "verified_utc": "2026-10-25T07:38:39.244273+00:00",
+  "all_published_file_checksums_verified": true,
+  "all_remote_binary_components_reconstructed": [
+    {
+      "role": "final_model",
+      "output": "/workspace/ext3_readback_20261025/restored/final_model_model.safetensors",
+      "size_bytes": 400125984,
+      "sha256": "8188f8846c123b6ba72653456f4cafd6b216c92669ad70d7940a799192c26a79"
+    },
+    {
+      "role": "final_state",
+      "output": "/workspace/ext3_readback_20261025/restored/final_state_training_state.pt",
+      "size_bytes": 107164716,
+      "sha256": "44ce4a14eb3867514a21f1ede27519a5db5d008316ce3fe9623808cc31b200b7"
+    },
+    {
+      "role": "selected_model",
+      "output": "/workspace/ext3_readback_20261025/restored/selected_model_model.safetensors",
+      "size_bytes": 400125984,
+      "sha256": "84b5940341449d27dcc8f656719bff0598afe9c3d6dec97475b4123263a81ac3"
+    },
+    {
+      "role": "selected_state",
+      "output": "/workspace/ext3_readback_20261025/restored/selected_state_training_state.pt",
+      "size_bytes": 107164716,
+      "sha256": "14d7d373ad684d2ea9b9e628a02593ec3cfaa57c487bece21dccdbbbf1ebe565"
+    }
+  ],
+  "native_resume_receipts": [
+    {
+      "status": "passed",
+      "weights_sha256": "8188f8846c123b6ba72653456f4cafd6b216c92669ad70d7940a799192c26a79",
+      "native_state_sha256": "44ce4a14eb3867514a21f1ede27519a5db5d008316ce3fe9623808cc31b200b7",
+      "two_independent_native_loads_replay_identically": true,
+      "fixture": {
+        "checkpoint_step": 768,
+        "loss": 1.3193989634513856,
+        "grad_norm": 0.132892444729805,
+        "after_fixture_parameter_fingerprint": "20f3503ed803ce75115b3c299c66af0371c77f36a592932ab870cb77d0848986",
+        "fixture_ids": [
+          "openbookqa:train:11-215",
+          "piqa:train:915bd2f0-bced-43d2-8a51-bab94f5c2cd5",
+          "alpaca:35519"
+        ]
+      },
+      "saved_files_not_modified": true
+    },
+    {
+      "status": "passed",
+      "weights_sha256": "84b5940341449d27dcc8f656719bff0598afe9c3d6dec97475b4123263a81ac3",
+      "native_state_sha256": "14d7d373ad684d2ea9b9e628a02593ec3cfaa57c487bece21dccdbbbf1ebe565",
+      "two_independent_native_loads_replay_identically": true,
+      "fixture": {
+        "checkpoint_step": 640,
+        "loss": 1.1959649205207825,
+        "grad_norm": 0.10926905274391174,
+        "after_fixture_parameter_fingerprint": "a339e5af7f1ad0dfe026ea23f1031721ca43423a397f2192cbcebbf071d51c23",
+        "fixture_ids": [
+          "openbookqa:train:1254",
+          "piqa:train:9158348d-dad3-481b-8a84-49bced34b1e9",
+          "alpaca:5712"
+        ]
+      },
+      "saved_files_not_modified": true
+    }
+  ],
+  "fixed_external_dev_prompt": "User: Answer the question. Reply with only the letter A, B, C, D.\nQuestion: The element that heats toast is an example of:\nA. a semi-conductor?\nB. a thermal insulator\nC. a poor conductor\nD. a thermal conductor\nAssistant:",
+  "fixed_prompt_inference_stdout": "{\"completion\": \" C\", \"new_token_ids\": [578, 2], \"eos\": true}\n",
+  "no_force_push": true,
   "general_superiority_established": false
 }
