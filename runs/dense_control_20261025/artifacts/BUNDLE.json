@@ -1,0 +1,7 @@
+{
+  "path": "dense_control_UNTRAINED_scaffold.zip",
+  "bytes": 2282557,
+  "sha256": "6adc0f8f60907c3666b18ff694a6e3f76bda7e1d850d861a57c4fbc698bc2257",
+  "files": 29,
+  "weights": "Untrained tiny init only, not EXT3 or full-size dense weights"
+}

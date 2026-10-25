@@ -1,0 +1,7 @@
+{
+  "status": "uploaded_unverified_pending_readback",
+  "repo": "https://github.com/binouv/model.git",
+  "branch": "flygraph/dense-control-20261025",
+  "base_commit": "767a4d5468cc2bd175b8c9b63d15e3147db321ff",
+  "trained": false
+}

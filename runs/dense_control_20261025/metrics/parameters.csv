@@ -1,0 +1,4 @@
+configuration,parameters,tensor_count,trained
+dense_110m_existing_vocab,110922048,242,False
+dense_125m_vocab32k_template,125077824,242,False
+tiny_smoke,598336,18,False

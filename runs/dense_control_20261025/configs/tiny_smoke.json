@@ -1,0 +1,14 @@
+{
+  "architecture": "flygraph_dense_deepthin_v1",
+  "vocab_size": 8192,
+  "dim": 64,
+  "layers": 2,
+  "heads": 4,
+  "kv_heads": 2,
+  "hidden": 128,
+  "max_context": 512,
+  "rope_theta": 10000.0,
+  "norm_eps": 1e-06,
+  "initializer_std": 0.02,
+  "checkpoint_blocks": false
+}

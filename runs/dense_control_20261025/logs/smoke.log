@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "utc": "2026-10-25T08:26:54.638208+00:00",
+  "seed": 2026102505,
+  "device": "cpu",
+  "precision": "float32",
+  "check_count": 46,
+  "seconds": 0.9667922220005494,
+  "source_fixture_ids": [
+    "openbookqa:dev:7-1035",
+    "openbookqa:dev:1467"
+  ],
+  "fixture_tokens": 48,
+  "optimizer_updates": 0,
+  "backward_passes": 2,
+  "full_size_model_initialized": false,
+  "quality_evaluated": false,
+  "untrained_weight_sha256": "6e38f883d81f817bc822888cc8ac58ac4a12291b1315a654569403b0cbd47c4c",
+  "untrained_weight_bytes": 2395064
+}

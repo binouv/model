@@ -1,0 +1,47 @@
+check,passed,details
+logit_and_cache_shapes,True,{}
+finite_logits,True,{}
+causal_fixture_has_changed_future,True,{}
+causal_prefix_invariant_to_future,True,"{""max_abs"": 0.0, ""atol"": 1e-06, ""rtol"": 1e-05}"
+one_token_cache_matches_full,True,"{""max_abs"": 2.682209014892578e-07, ""atol"": 2e-05, ""rtol"": 0.0001}"
+multitoken_cache_matches_full,True,"{""max_abs"": 3.5762786865234375e-07, ""atol"": 2e-05, ""rtol"": 0.0001}"
+cache_input_not_mutated,True,{}
+last_only_matches_full,True,"{""max_abs"": 1.7881393432617188e-07, ""atol"": 2e-05, ""rtol"": 0.0001}"
+use_cache_false_logits,True,"{""max_abs"": 0.0, ""atol"": 2e-05, ""rtol"": 0.0001}"
+use_cache_false_returns_none,True,{}
+tied_same_parameter_and_storage,True,{}
+reject_inconsistent_cache_position,True,{}
+reject_inconsistent_cache_layers,True,{}
+reject_over_context,True,{}
+reject_empty_sequence,True,{}
+reject_invalid_dimensions,True,{}
+reject_foreign_architecture_marker,True,{}
+generation_cache_matches_full_greedy,True,{}
+generation_zero_budget,True,{}
+generation_respects_context_budget,True,{}
+finite_loss_and_all_gradients,True,{}
+nonzero_gradient_each_tensor,True,{}
+masked_loss_matches_dense,True,"{""max_abs"": 9.5367431640625e-07, ""atol"": 1e-06, ""rtol"": 0.0001}"
+reject_no_supervision,True,{}
+reject_target_shape_mismatch,True,{}
+checkpointed_loss_matches,True,"{""max_abs"": 0.0, ""atol"": 1e-06, ""rtol"": 0.0001}"
+checkpoint_gradient_embed.weight,True,{}
+checkpoint_gradient_blocks.0.norm1.weight,True,{}
+checkpoint_gradient_blocks.0.norm2.weight,True,{}
+checkpoint_gradient_blocks.0.attention.q.weight,True,{}
+checkpoint_gradient_blocks.0.attention.k.weight,True,{}
+checkpoint_gradient_blocks.0.attention.v.weight,True,{}
+checkpoint_gradient_blocks.0.attention.out.weight,True,{}
+checkpoint_gradient_blocks.0.uv.weight,True,{}
+checkpoint_gradient_blocks.0.down.weight,True,{}
+checkpoint_gradient_blocks.1.norm1.weight,True,{}
+checkpoint_gradient_blocks.1.norm2.weight,True,{}
+checkpoint_gradient_blocks.1.attention.q.weight,True,{}
+checkpoint_gradient_blocks.1.attention.k.weight,True,{}
+checkpoint_gradient_blocks.1.attention.v.weight,True,{}
+checkpoint_gradient_blocks.1.attention.out.weight,True,{}
+checkpoint_gradient_blocks.1.uv.weight,True,{}
+checkpoint_gradient_blocks.1.down.weight,True,{}
+checkpoint_gradient_norm.weight,True,{}
+native_reload_exact_logits,True,{}
+native_reload_retains_tie,True,{}

@@ -1,0 +1,25 @@
+{
+  "implementation": "Own adaptation of existing local FlyGraph components; no third-party model code or weights imported",
+  "local_component_origin": "runs/ext3_20261025/src/model.py",
+  "local_origin_sha256": "ed03bbba6a430368ab127c638b888fa5b27c3537263bac14a71c48a833a11336",
+  "local_origin_commit": "44aaa833f23e663f21415142bdd23369549fd707",
+  "ideas_only_sources": [
+    {
+      "url": "https://arxiv.org/html/2505.09388v1",
+      "use": "dense GQA/pre-RMSNorm/SwiGLU/RoPE design references"
+    },
+    {
+      "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M/blob/main/config.json",
+      "use": "30-layer,576-width,1536-FFN,9/3 GQA geometry reference; no weights or implementation copied"
+    },
+    {
+      "url": "https://arxiv.org/abs/2402.14905v2",
+      "use": "deep-thin design motivation only; NC code/weights not imported"
+    },
+    {
+      "url": "https://arxiv.org/html/2404.06395v2",
+      "use": "WSD and scaling methodology for future experiments; muP not implemented"
+    }
+  ],
+  "licensing": "No blanket new project license is inferred or assigned. Retain repository ownership/terms; external references are not imported implementations."
+}

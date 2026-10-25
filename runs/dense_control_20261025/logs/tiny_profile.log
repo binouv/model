@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "utc": "2026-10-25T08:24:22.574046+00:00",
+  "device": "cpu",
+  "precision": "float32",
+  "parameters": 598336,
+  "batch": 2,
+  "tokens_per_sequence": 32,
+  "warmup_iterations": 1,
+  "measured_iterations": 3,
+  "seconds": [
+    0.007743022999420646,
+    0.00844652399973711,
+    0.00865966999936063
+  ],
+  "median_seconds": 0.00844652399973711,
+  "median_input_tokens_per_second": 7577.081412660633,
+  "max_rss_kib": 254200,
+  "losses": [
+    9.020001411437988,
+    9.020001411437988,
+    9.020001411437988
+  ],
+  "optimizer_updates": 0,
+  "trained": false,
+  "quality_evaluated": false,
+  "note": "Forward/backward only on fixed source prefixes. Excludes optimizer, data loading, checkpoint and evaluation overhead; not end-to-end training throughput. No extrapolation to GPU."
+}

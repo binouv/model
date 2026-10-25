@@ -1,0 +1,165 @@
+{
+  "schema": "flygraph.architecture-scaffold.v1",
+  "status": "completed_engineering_scaffold",
+  "trained": false,
+  "quality_evaluated": false,
+  "full_size_weights_created": false,
+  "native_component": {
+    "path": "artifacts/tiny_UNTRAINED_initial.safetensors",
+    "bytes": 2395064,
+    "sha256": "6e38f883d81f817bc822888cc8ac58ac4a12291b1315a654569403b0cbd47c4c",
+    "tensor_count": 18,
+    "parameters": 598336,
+    "tensor_inventory": {
+      "blocks.0.attention.k.weight": {
+        "shape": [
+          32,
+          64
+        ],
+        "elements": 2048,
+        "dtype": "torch.float32"
+      },
+      "blocks.0.attention.out.weight": {
+        "shape": [
+          64,
+          64
+        ],
+        "elements": 4096,
+        "dtype": "torch.float32"
+      },
+      "blocks.0.attention.q.weight": {
+        "shape": [
+          64,
+          64
+        ],
+        "elements": 4096,
+        "dtype": "torch.float32"
+      },
+      "blocks.0.attention.v.weight": {
+        "shape": [
+          32,
+          64
+        ],
+        "elements": 2048,
+        "dtype": "torch.float32"
+      },
+      "blocks.0.down.weight": {
+        "shape": [
+          64,
+          128
+        ],
+        "elements": 8192,
+        "dtype": "torch.float32"
+      },
+      "blocks.0.norm1.weight": {
+        "shape": [
+          64
+        ],
+        "elements": 64,
+        "dtype": "torch.float32"
+      },
+      "blocks.0.norm2.weight": {
+        "shape": [
+          64
+        ],
+        "elements": 64,
+        "dtype": "torch.float32"
+      },
+      "blocks.0.uv.weight": {
+        "shape": [
+          256,
+          64
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32"
+      },
+      "blocks.1.attention.k.weight": {
+        "shape": [
+          32,
+          64
+        ],
+        "elements": 2048,
+        "dtype": "torch.float32"
+      },
+      "blocks.1.attention.out.weight": {
+        "shape": [
+          64,
+          64
+        ],
+        "elements": 4096,
+        "dtype": "torch.float32"
+      },
+      "blocks.1.attention.q.weight": {
+        "shape": [
+          64,
+          64
+        ],
+        "elements": 4096,
+        "dtype": "torch.float32"
+      },
+      "blocks.1.attention.v.weight": {
+        "shape": [
+          32,
+          64
+        ],
+        "elements": 2048,
+        "dtype": "torch.float32"
+      },
+      "blocks.1.down.weight": {
+        "shape": [
+          64,
+          128
+        ],
+        "elements": 8192,
+        "dtype": "torch.float32"
+      },
+      "blocks.1.norm1.weight": {
+        "shape": [
+          64
+        ],
+        "elements": 64,
+        "dtype": "torch.float32"
+      },
+      "blocks.1.norm2.weight": {
+        "shape": [
+          64
+        ],
+        "elements": 64,
+        "dtype": "torch.float32"
+      },
+      "blocks.1.uv.weight": {
+        "shape": [
+          256,
+          64
+        ],
+        "elements": 16384,
+        "dtype": "torch.float32"
+      },
+      "embed.weight": {
+        "shape": [
+          8192,
+          64
+        ],
+        "elements": 524288,
+        "dtype": "torch.float32"
+      },
+      "norm.weight": {
+        "shape": [
+          64
+        ],
+        "elements": 64,
+        "dtype": "torch.float32"
+      }
+    },
+    "metadata": {
+      "architecture": "flygraph_dense_deepthin_v1",
+      "status": "UNTRAINED_INITIALIZATION_ONLY",
+      "optimizer_updates": "0",
+      "seed": "2026102505"
+    }
+  },
+  "optimizer_state_applicable": false,
+  "parent_trained_checkpoint": null,
+  "initialization_seed": 2026102505,
+  "publication_status_source": "../PUBLICATION.json"
+}

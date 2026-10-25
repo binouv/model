@@ -1,0 +1,15 @@
+{
+  "configs/dense_110m_existing_vocab.json": "91a5e92d42e6dfb5014daaa1dbc98a25f8b8e1ac155d74c18e0aee544c9ee6aa",
+  "configs/dense_125m_vocab32k_template.json": "a97a25144b8af6369b96c1c1acd4c428e86ec119f74584ea69ad124006734dbf",
+  "configs/tiny_smoke.json": "dc85e16af81212fde56d311ec7cb163f07298552b228f6922ac003ec6dbcd060",
+  "data/external_dev_fixtures.jsonl": "9bdda7e14b8ba122cfb01b7ab61dc2fee8550403d2ce1b50de44e9feea5e02b7",
+  "data/manifest.json": "b2e8cc22d7b7f3fa4a9979d870601c94761077e07ad0493580f586db39657d25",
+  "data/tokenizer.json": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500",
+  "src/count_parameters.py": "39cd21e5bf217646b15d34b2a4d344a9ee0a9da5b1b106efa9b450510ee3fc5a",
+  "src/model.py": "cd3d9d1a5aa7f5d7cfa1cbf414b27b7afb106d6d77868e20a04b739a67cc39fe",
+  "src/package_artifacts.py": "b668acadecc0f4f6b1d609fa0b11922f0dddfa8929527043eed944cd43702d77",
+  "src/profile_step.py": "8e00f9d531051ee3f109693edcde055a79989ac9996055586303d0ff5aaf7156",
+  "src/publish_completed.py": "685ca83a4085f2177f805082c09a81230b7228f92360b6f2635213906fdf7ebb",
+  "src/smoke.py": "044843a5610528462287d289648669140f314cc45dd5311e132c93a1b3a1d03d",
+  "src/tokenizer.py": "7fd9d027849c8044c67604802058cbf51a149fd3f22e301058325ce003a7acdb"
+}

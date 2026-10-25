@@ -1,0 +1,37 @@
+{
+  "status": "planned_not_run",
+  "primary_config": "configs/dense_110m_existing_vocab.json",
+  "parameters": 110922048,
+  "initialization": "from scratch; never describe this as continuation of EXT3",
+  "existing_EXT3_weights_modified": false,
+  "recommended_first_action": "Measure this architecture on actual hardware with profile_step.py before allocating a training run",
+  "profiling_budget": {
+    "warmup_forward_backward": 1,
+    "measured_forward_backward": 3,
+    "sequence_length": 64,
+    "batch": 2,
+    "optimizer_updates": 0
+  },
+  "future_training_pilot_budget": {
+    "input_tokens": 1000000,
+    "context": 256,
+    "microbatch": 1,
+    "gradient_accumulation": 4,
+    "wall_limit_seconds": 7200,
+    "checkpoint_every_completed_optimizer_updates": 64,
+    "final_checkpoint": true,
+    "quality_claim": "none: a one-million-token initialization/pipeline pilot cannot establish broad pretrained capability"
+  },
+  "comparison_design": "A causal architecture experiment needs fresh dense and fresh hybrid controls with equal tokenizer, source split, token budget and measured compute; do not compare fresh dense against EXT3 as proof of architectural superiority",
+  "data_requirement": "Published external language/train data with pinned revision/license; dev separate; do not select on already revealed EXT2/EXT3/diagnostics4 test",
+  "training_runner_status": "Not implemented or executed by this minimal architecture scaffold. A resumable optimizer/data runner and separate benchmark registration are required before a full training command can honestly be supplied.",
+  "prototype_32k_template": {
+    "parameters": 125077824,
+    "matching_tokenizer_available": false,
+    "requires": "Explicit tokenizer training/reuse, preserved special IDs/segmentation contract and embedding initialization; no implicit 8k-to32k mapping"
+  },
+  "gpu3090_measured": false,
+  "gpu_resources_requested_or_rented": false,
+  "fp32_parameters_gradients_adam_slots_lower_bound_bytes_110m": 1774752768,
+  "bf16_KV_cache_bytes_per_sequence_at2048_110m": 47185920
+}
