@@ -1,0 +1,2 @@
+{"step": 1, "input_tokens_total": 64, "loss": 9.004130363464355, "grad_norm": 1.970631718635559, "lr": 0.0002, "id": "openbookqa:dev:1467", "record_index": 1, "offset": 0, "input_tokens": 64}
+{"step": 2, "input_tokens_total": 70, "loss": 8.841416358947754, "grad_norm": 5.770933151245117, "lr": 0.0002, "id": "openbookqa:dev:1467", "record_index": 1, "offset": 64, "input_tokens": 6}

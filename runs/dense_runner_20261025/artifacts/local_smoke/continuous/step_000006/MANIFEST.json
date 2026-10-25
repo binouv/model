@@ -1,0 +1,101 @@
+{
+  "schema": "flygraph.dense-checkpoint.v1",
+  "status": "completed_engineering_smoke",
+  "scope": "tiny_engineering_smoke",
+  "step": 6,
+  "input_tokens": 355,
+  "model_sha256": "9e504fa950fc3d840a5a4197062cc1b2a4cff0e85ea51e511b6c616ce21edd96",
+  "training_state_sha256": "c0bf26ec161fd12e6445a0806c659fcfcc28362ce1e1c6a98331f75c40eaabc1",
+  "components": {
+    "model": {
+      "format": "flygraph.checkpoint-parts.v1",
+      "identity": "dense_runner_20261025:tiny_engineering_smoke",
+      "filename": "model.safetensors",
+      "size_bytes": 2394920,
+      "sha256": "9e504fa950fc3d840a5a4197062cc1b2a4cff0e85ea51e511b6c616ce21edd96",
+      "max_part_bytes": 80000000,
+      "parts": [
+        {
+          "name": "model.safetensors.part0000",
+          "size_bytes": 2394920,
+          "sha256": "9e504fa950fc3d840a5a4197062cc1b2a4cff0e85ea51e511b6c616ce21edd96"
+        }
+      ],
+      "completed_optimizer_steps": 6,
+      "parent_checkpoint": null,
+      "model_parameter_count": 598336,
+      "tensor_inventory": {
+        "tensor_count": 18,
+        "elements": 598336,
+        "dtypes": {
+          "torch.float32": 18
+        }
+      }
+    },
+    "training_state": {
+      "format": "flygraph.checkpoint-parts.v1",
+      "identity": "dense_runner_20261025:tiny_engineering_smoke",
+      "filename": "training_state.pt",
+      "size_bytes": 4821737,
+      "sha256": "c0bf26ec161fd12e6445a0806c659fcfcc28362ce1e1c6a98331f75c40eaabc1",
+      "max_part_bytes": 80000000,
+      "parts": [
+        {
+          "name": "training_state.pt.part0000",
+          "size_bytes": 4821737,
+          "sha256": "c0bf26ec161fd12e6445a0806c659fcfcc28362ce1e1c6a98331f75c40eaabc1"
+        }
+      ],
+      "completed_optimizer_steps": 6,
+      "parent_checkpoint": null,
+      "model_parameter_count": 598336,
+      "tensor_inventory": {
+        "tensor_count": 55,
+        "elements": 1201746,
+        "dtypes": {
+          "torch.float32": 54,
+          "torch.uint8": 1
+        }
+      }
+    }
+  },
+  "identity": {
+    "model_config": {
+      "architecture": "flygraph_dense_deepthin_v1",
+      "vocab_size": 8192,
+      "dim": 64,
+      "layers": 2,
+      "heads": 4,
+      "kv_heads": 2,
+      "hidden": 128,
+      "max_context": 512,
+      "rope_theta": 10000.0,
+      "norm_eps": 1e-06,
+      "initializer_std": 0.02,
+      "checkpoint_blocks": false
+    },
+    "train_config": {
+      "seed": 2026102506,
+      "learning_rate": 0.0002,
+      "weight_decay": 0.01,
+      "max_steps": 6,
+      "token_budget": 1000,
+      "sequence_length": 64,
+      "checkpoint_every": 3,
+      "wall_limit_seconds": 120,
+      "run_scope": "tiny_engineering_smoke"
+    },
+    "data_sha256": "9bdda7e14b8ba122cfb01b7ab61dc2fee8550403d2ce1b50de44e9feea5e02b7",
+    "tokenizer_sha256": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500",
+    "source_sha256": {
+      "train.py": "0e433583d2f5939ce161c7109adea34a7d3c9746e6a8af8fde65022a6cc72265",
+      "model.py": "cd3d9d1a5aa7f5d7cfa1cbf414b27b7afb106d6d77868e20a04b739a67cc39fe",
+      "tokenizer.py": "7fd9d027849c8044c67604802058cbf51a149fd3f22e301058325ce003a7acdb",
+      "checkpoint_parts.py": "26004a3d41dc127c8a1af81124754a0d9a60502bbe68822e645b62f452fbe522"
+    },
+    "torch_version": "2.14.1+cpu",
+    "precision": "CPU FP32 weights/AdamW, no AMP",
+    "schedule": "constant LR, exact config and optimizer param_groups saved"
+  },
+  "optimizer_updates_complete": true
+}

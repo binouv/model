@@ -1,0 +1,11 @@
+{
+  "seed": 2026102506,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "max_steps": 100000,
+  "token_budget": 1000000,
+  "sequence_length": 256,
+  "checkpoint_every": 64,
+  "wall_limit_seconds": 7200,
+  "run_scope": "new_initialization_pipeline_pilot"
+}

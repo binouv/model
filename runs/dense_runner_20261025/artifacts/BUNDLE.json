@@ -1,0 +1,7 @@
+{
+  "path": "dense_runner_verified_bundle.zip",
+  "bytes": 40116838,
+  "sha256": "6408ab9a0e700a767a39bc4aebf486811f4790f22e0807d9df2b7feef54cc0b5",
+  "files": 62,
+  "contains": "Source/config/data/metrics and canonical step3, step6, budget70 native checkpoints and parts; duplicate replay checkpoint bytes remain separately in repository"
+}

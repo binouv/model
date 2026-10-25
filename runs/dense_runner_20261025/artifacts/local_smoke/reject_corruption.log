@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/workspace/model/runs/dense_runner_20261025/src/train.py", line 118, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/model/runs/dense_runner_20261025/src/train.py", line 116, in main
+    if a.resume:r.restore(a.resume)
+                ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/model/runs/dense_runner_20261025/src/train.py", line 93, in restore
+    if sha(path/'model.safetensors')!=manifest['model_sha256'] or sha(path/'training_state.pt')!=manifest['training_state_sha256']:raise ValueError('checkpoint hash mismatch')
+                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: checkpoint hash mismatch

@@ -1,0 +1,13 @@
+{
+  "status": "completed_engineering_smoke",
+  "complete": true,
+  "reason": "token_budget",
+  "step": 2,
+  "input_tokens": 70,
+  "checkpoint": "/workspace/model/runs/dense_runner_20261025/artifacts/local_smoke/budget/step_000002",
+  "model_parameters": 598336,
+  "scope": "tiny_engineering_smoke",
+  "quality_evaluated": false,
+  "seconds": 0.08285918799992942,
+  "utc": "2026-10-25T08:36:14.562347+00:00"
+}

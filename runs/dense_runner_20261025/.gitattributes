@@ -1,0 +1,4 @@
+*.safetensors -text -filter -diff -merge
+*.pt -text -filter -diff -merge
+*.part* -text -filter -diff -merge
+*.zip -text -filter -diff -merge

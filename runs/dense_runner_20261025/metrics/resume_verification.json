@@ -1,0 +1,170 @@
+{
+  "status": "passed",
+  "utc": "2026-10-25T08:36:19.840692+00:00",
+  "scope": "Tiny optimizer/resume engineering smoke only; not pretrained quality",
+  "canonical_steps": 6,
+  "split_after": 3,
+  "resumed_steps": 3,
+  "parameters": 598336,
+  "input_tokens": 355,
+  "epochs_crossed": 1,
+  "model_tensors_bitwise_equal": 18,
+  "entire_native_state_equal": true,
+  "optimizer_state_equal": true,
+  "python_numpy_torch_rng_equal": true,
+  "sampler_state_equal": true,
+  "all_losses_and_gradient_norms_equal": true,
+  "trace": [
+    {
+      "step": 1,
+      "input_tokens_total": 64,
+      "loss": 9.004130363464355,
+      "grad_norm": 1.970631718635559,
+      "lr": 0.0002,
+      "id": "openbookqa:dev:1467",
+      "record_index": 1,
+      "offset": 0,
+      "input_tokens": 64
+    },
+    {
+      "step": 2,
+      "input_tokens_total": 128,
+      "loss": 8.963616371154785,
+      "grad_norm": 2.141200304031372,
+      "lr": 0.0002,
+      "id": "openbookqa:dev:1467",
+      "record_index": 1,
+      "offset": 64,
+      "input_tokens": 64
+    },
+    {
+      "step": 3,
+      "input_tokens_total": 187,
+      "loss": 8.883382797241211,
+      "grad_norm": 2.4236180782318115,
+      "lr": 0.0002,
+      "id": "openbookqa:dev:1467",
+      "record_index": 1,
+      "offset": 128,
+      "input_tokens": 59
+    },
+    {
+      "step": 4,
+      "input_tokens_total": 251,
+      "loss": 8.958023071289062,
+      "grad_norm": 2.1901376247406006,
+      "lr": 0.0002,
+      "id": "openbookqa:dev:7-1035",
+      "record_index": 0,
+      "offset": 0,
+      "input_tokens": 64
+    },
+    {
+      "step": 5,
+      "input_tokens_total": 291,
+      "loss": 8.826620101928711,
+      "grad_norm": 3.1471264362335205,
+      "lr": 0.0002,
+      "id": "openbookqa:dev:7-1035",
+      "record_index": 0,
+      "offset": 64,
+      "input_tokens": 40
+    },
+    {
+      "step": 6,
+      "input_tokens_total": 355,
+      "loss": 8.859281539916992,
+      "grad_norm": 2.2238736152648926,
+      "lr": 0.0002,
+      "id": "openbookqa:dev:1467",
+      "record_index": 1,
+      "offset": 0,
+      "input_tokens": 64
+    }
+  ],
+  "parts_reconstruction_resume_equal": true,
+  "token_budget_test": {
+    "status": "completed_engineering_smoke",
+    "complete": true,
+    "reason": "token_budget",
+    "step": 2,
+    "input_tokens": 70,
+    "checkpoint": "/workspace/model/runs/dense_runner_20261025/artifacts/local_smoke/budget/step_000002",
+    "model_parameters": 598336,
+    "scope": "tiny_engineering_smoke",
+    "quality_evaluated": false,
+    "seconds": 0.08285918799992942,
+    "utc": "2026-10-25T08:36:14.562347+00:00"
+  },
+  "changed_data_rejected": true,
+  "corrupted_bytes_rejected": true,
+  "part_checks": [
+    {
+      "checkpoint": "runs/dense_runner_20261025/artifacts/local_smoke/split/step_000003",
+      "role": "model",
+      "sha256": "fe0a98e1f1df5610e6c2014d0ddf66abbd82a78c7eca935432f6c1db1278b3c8",
+      "parts": 1
+    },
+    {
+      "checkpoint": "runs/dense_runner_20261025/artifacts/local_smoke/split/step_000003",
+      "role": "training_state",
+      "sha256": "47201c7e894974fc40172a41f89dce37cc78b95277298d8cbcf0f2d8d2ccc68d",
+      "parts": 1
+    },
+    {
+      "checkpoint": "runs/dense_runner_20261025/artifacts/local_smoke/continuous/step_000006",
+      "role": "model",
+      "sha256": "9e504fa950fc3d840a5a4197062cc1b2a4cff0e85ea51e511b6c616ce21edd96",
+      "parts": 1
+    },
+    {
+      "checkpoint": "runs/dense_runner_20261025/artifacts/local_smoke/continuous/step_000006",
+      "role": "training_state",
+      "sha256": "c0bf26ec161fd12e6445a0806c659fcfcc28362ce1e1c6a98331f75c40eaabc1",
+      "parts": 1
+    },
+    {
+      "checkpoint": "runs/dense_runner_20261025/artifacts/local_smoke/resumed/step_000006",
+      "role": "model",
+      "sha256": "9e504fa950fc3d840a5a4197062cc1b2a4cff0e85ea51e511b6c616ce21edd96",
+      "parts": 1
+    },
+    {
+      "checkpoint": "runs/dense_runner_20261025/artifacts/local_smoke/resumed/step_000006",
+      "role": "training_state",
+      "sha256": "4aa6b5225514c02fa4e66b3439330292482e5f95468a52593494457957c07a48",
+      "parts": 1
+    }
+  ],
+  "subprocess_results": [
+    {
+      "name": "continuous",
+      "exit_code": 0
+    },
+    {
+      "name": "split",
+      "exit_code": 0
+    },
+    {
+      "name": "resumed",
+      "exit_code": 0
+    },
+    {
+      "name": "resumed_from_parts",
+      "exit_code": 0
+    },
+    {
+      "name": "budget",
+      "exit_code": 0
+    },
+    {
+      "name": "reject_data_change",
+      "exit_code": 1
+    },
+    {
+      "name": "reject_corruption",
+      "exit_code": 1
+    }
+  ],
+  "full_size_training_executed": false
+}

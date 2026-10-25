@@ -1,0 +1,26 @@
+{
+  "format": "flygraph.checkpoint-parts.v1",
+  "identity": "dense_runner_20261025:tiny_engineering_smoke",
+  "filename": "training_state.pt",
+  "size_bytes": 4821929,
+  "sha256": "4aa6b5225514c02fa4e66b3439330292482e5f95468a52593494457957c07a48",
+  "max_part_bytes": 80000000,
+  "parts": [
+    {
+      "name": "training_state.pt.part0000",
+      "size_bytes": 4821929,
+      "sha256": "4aa6b5225514c02fa4e66b3439330292482e5f95468a52593494457957c07a48"
+    }
+  ],
+  "completed_optimizer_steps": 6,
+  "parent_checkpoint": null,
+  "model_parameter_count": 598336,
+  "tensor_inventory": {
+    "tensor_count": 55,
+    "elements": 1201746,
+    "dtypes": {
+      "torch.float32": 54,
+      "torch.uint8": 1
+    }
+  }
+}

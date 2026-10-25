@@ -1,0 +1,13 @@
+{
+  "status": "interrupted_recoverable",
+  "complete": false,
+  "reason": "controlled_pause",
+  "step": 3,
+  "input_tokens": 187,
+  "checkpoint": "/workspace/model/runs/dense_runner_20261025/artifacts/local_smoke/split/step_000003",
+  "model_parameters": 598336,
+  "scope": "tiny_engineering_smoke",
+  "quality_evaluated": false,
+  "seconds": 0.10917275700012397,
+  "utc": "2026-10-25T08:36:07.153173+00:00"
+}

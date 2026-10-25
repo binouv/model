@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/workspace/model/runs/dense_runner_20261025/src/train.py", line 118, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/model/runs/dense_runner_20261025/src/train.py", line 116, in main
+    if a.resume:r.restore(a.resume)
+                ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/model/runs/dense_runner_20261025/src/train.py", line 92, in restore
+    if manifest['identity']!=self.identity:raise ValueError('config/data/tokenizer/code/runtime identity changed; exact resume refused')
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: config/data/tokenizer/code/runtime identity changed; exact resume refused

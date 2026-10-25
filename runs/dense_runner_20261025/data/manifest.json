@@ -1,0 +1,17 @@
+{
+  "source": "OpenBookQA official dev via OpenCompassData-core-20240207 release0.2.2.rc1",
+  "source_archive_sha256": "c259fa1b2f8f5c9ae2df58bb6cc3200e705e2945b24e896988006c546a572607",
+  "source_member_sha256": "a08f720be757a0f0b6aaf8e1e1162c2b05a882c9c031d2559ba3d5467d023466",
+  "source_url": "https://github.com/allenai/OpenBookQA",
+  "license": "Apache-2.0",
+  "fixture_ids": [
+    "openbookqa:dev:7-1035",
+    "openbookqa:dev:1467"
+  ],
+  "role": "Numerical engineering fixtures only; no benchmark, no pretraining or optimizer updates",
+  "new_semantic_questions_or_gold_answers_generated": false,
+  "files": {
+    "external_dev_fixtures.jsonl": "9bdda7e14b8ba122cfb01b7ab61dc2fee8550403d2ce1b50de44e9feea5e02b7",
+    "tokenizer.json": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500"
+  }
+}

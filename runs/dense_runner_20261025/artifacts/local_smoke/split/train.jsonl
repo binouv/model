@@ -1,0 +1,3 @@
+{"step": 1, "input_tokens_total": 64, "loss": 9.004130363464355, "grad_norm": 1.970631718635559, "lr": 0.0002, "id": "openbookqa:dev:1467", "record_index": 1, "offset": 0, "input_tokens": 64}
+{"step": 2, "input_tokens_total": 128, "loss": 8.963616371154785, "grad_norm": 2.141200304031372, "lr": 0.0002, "id": "openbookqa:dev:1467", "record_index": 1, "offset": 64, "input_tokens": 64}
+{"step": 3, "input_tokens_total": 187, "loss": 8.883382797241211, "grad_norm": 2.4236180782318115, "lr": 0.0002, "id": "openbookqa:dev:1467", "record_index": 1, "offset": 128, "input_tokens": 59}

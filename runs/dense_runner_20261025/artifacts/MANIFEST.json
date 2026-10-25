@@ -1,0 +1,62 @@
+{
+  "status": "completed_tiny_resume_engineering_proof",
+  "full_size_training_executed": false,
+  "checkpoints": [
+    {
+      "path": "artifacts/local_smoke/budget/step_000002",
+      "step": 2,
+      "input_tokens": 70,
+      "model_sha256": "e68092eeec91acc7fe67d2897f19e79d13de4cf0109003b83ad04c23288b41a3",
+      "training_state_sha256": "2827c025137794bbb8ca1135fed669e530562f240aae3a704f27784fa3870102",
+      "status": "completed_engineering_smoke",
+      "scope": "tiny_engineering_smoke"
+    },
+    {
+      "path": "artifacts/local_smoke/continuous/step_000003",
+      "step": 3,
+      "input_tokens": 187,
+      "model_sha256": "fe0a98e1f1df5610e6c2014d0ddf66abbd82a78c7eca935432f6c1db1278b3c8",
+      "training_state_sha256": "47201c7e894974fc40172a41f89dce37cc78b95277298d8cbcf0f2d8d2ccc68d",
+      "status": "recovery_in_progress",
+      "scope": "tiny_engineering_smoke"
+    },
+    {
+      "path": "artifacts/local_smoke/continuous/step_000006",
+      "step": 6,
+      "input_tokens": 355,
+      "model_sha256": "9e504fa950fc3d840a5a4197062cc1b2a4cff0e85ea51e511b6c616ce21edd96",
+      "training_state_sha256": "c0bf26ec161fd12e6445a0806c659fcfcc28362ce1e1c6a98331f75c40eaabc1",
+      "status": "completed_engineering_smoke",
+      "scope": "tiny_engineering_smoke"
+    },
+    {
+      "path": "artifacts/local_smoke/resumed/step_000006",
+      "step": 6,
+      "input_tokens": 355,
+      "model_sha256": "9e504fa950fc3d840a5a4197062cc1b2a4cff0e85ea51e511b6c616ce21edd96",
+      "training_state_sha256": "4aa6b5225514c02fa4e66b3439330292482e5f95468a52593494457957c07a48",
+      "status": "completed_engineering_smoke",
+      "scope": "tiny_engineering_smoke"
+    },
+    {
+      "path": "artifacts/local_smoke/resumed_from_parts/step_000006",
+      "step": 6,
+      "input_tokens": 355,
+      "model_sha256": "9e504fa950fc3d840a5a4197062cc1b2a4cff0e85ea51e511b6c616ce21edd96",
+      "training_state_sha256": "4aa6b5225514c02fa4e66b3439330292482e5f95468a52593494457957c07a48",
+      "status": "completed_engineering_smoke",
+      "scope": "tiny_engineering_smoke"
+    },
+    {
+      "path": "artifacts/local_smoke/split/step_000003",
+      "step": 3,
+      "input_tokens": 187,
+      "model_sha256": "fe0a98e1f1df5610e6c2014d0ddf66abbd82a78c7eca935432f6c1db1278b3c8",
+      "training_state_sha256": "47201c7e894974fc40172a41f89dce37cc78b95277298d8cbcf0f2d8d2ccc68d",
+      "status": "recovery_in_progress",
+      "scope": "tiny_engineering_smoke"
+    }
+  ],
+  "source_model": "dense_control_20261025/src/model.py unchanged",
+  "source_model_sha256": "cd3d9d1a5aa7f5d7cfa1cbf414b27b7afb106d6d77868e20a04b739a67cc39fe"
+}

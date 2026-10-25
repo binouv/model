@@ -1,0 +1,11 @@
+{
+  "seed": 2026102506,
+  "learning_rate": 0.0002,
+  "weight_decay": 0.01,
+  "max_steps": 6,
+  "token_budget": 70,
+  "sequence_length": 64,
+  "checkpoint_every": 3,
+  "wall_limit_seconds": 120,
+  "run_scope": "tiny_engineering_smoke"
+}
