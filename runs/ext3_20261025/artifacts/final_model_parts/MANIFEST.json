@@ -46,5 +46,15 @@
   "parent_checkpoint_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe",
   "data_manifest_sha256": "4cc682fb45223a2c81b3bade4e51c7957994465fe259ca937be370eb60793e76",
   "source_manifest_sha256": "858c5234e0fae1c7a4ae8e0bad49537c972ff413b5accd45ff511408945f491d",
-  "status": "saved_local"
+  "status": "saved_local",
+  "native_tensor_inventory": {
+    "schema": "flygraph.native-tensors.v1",
+    "model": {
+      "tensor_count": 135,
+      "elements": 100028328,
+      "tensor_dtypes": {
+        "torch.float32": 135
+      }
+    }
+  }
 }

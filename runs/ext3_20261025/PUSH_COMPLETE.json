@@ -1,0 +1,8 @@
+{
+  "status": "published_verified",
+  "branch": "flygraph/ext3-20261025",
+  "artifact_commit": "94c5484d90d9d75ef9486d4c443ac40b149aadfb",
+  "receipt_commit": "e44d002df3c2980de1d9e771e67054560c2133ac",
+  "report_url": "https://github.com/binouv/model/blob/e44d002df3c2980de1d9e771e67054560c2133ac/runs/ext3_20261025/REPORT_RU.md",
+  "receipt_url": "https://github.com/binouv/model/blob/e44d002df3c2980de1d9e771e67054560c2133ac/runs/ext3_20261025/PUBLICATION.json"
+}

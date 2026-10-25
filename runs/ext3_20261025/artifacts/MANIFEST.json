@@ -8,7 +8,17 @@
       "size_bytes": 400125984,
       "sha256": "8188f8846c123b6ba72653456f4cafd6b216c92669ad70d7940a799192c26a79",
       "parts": 6,
-      "step": 768
+      "step": 768,
+      "native_tensor_inventory": {
+        "schema": "flygraph.native-tensors.v1",
+        "model": {
+          "tensor_count": 135,
+          "elements": 100028328,
+          "tensor_dtypes": {
+            "torch.float32": 135
+          }
+        }
+      }
     },
     {
       "role": "final_state",
@@ -17,7 +27,22 @@
       "size_bytes": 107164716,
       "sha256": "44ce4a14eb3867514a21f1ede27519a5db5d008316ce3fe9623808cc31b200b7",
       "parts": 2,
-      "step": 768
+      "step": 768,
+      "native_tensor_inventory": {
+        "schema": "flygraph.native-tensors.v1",
+        "optimizer": {
+          "tensor_count": 60,
+          "elements": 26783300,
+          "tensor_dtypes": {
+            "torch.float32": 60
+          },
+          "parameter_states": 20
+        },
+        "torch_rng": {
+          "dtype": "torch.uint8",
+          "elements": 5056
+        }
+      }
     },
     {
       "role": "selected_model",
@@ -26,7 +51,17 @@
       "size_bytes": 400125984,
       "sha256": "84b5940341449d27dcc8f656719bff0598afe9c3d6dec97475b4123263a81ac3",
       "parts": 6,
-      "step": 640
+      "step": 640,
+      "native_tensor_inventory": {
+        "schema": "flygraph.native-tensors.v1",
+        "model": {
+          "tensor_count": 135,
+          "elements": 100028328,
+          "tensor_dtypes": {
+            "torch.float32": 135
+          }
+        }
+      }
     },
     {
       "role": "selected_state",
@@ -35,7 +70,22 @@
       "size_bytes": 107164716,
       "sha256": "14d7d373ad684d2ea9b9e628a02593ec3cfaa57c487bece21dccdbbbf1ebe565",
       "parts": 2,
-      "step": 640
+      "step": 640,
+      "native_tensor_inventory": {
+        "schema": "flygraph.native-tensors.v1",
+        "optimizer": {
+          "tensor_count": 60,
+          "elements": 26783300,
+          "tensor_dtypes": {
+            "torch.float32": 60
+          },
+          "parameter_states": 20
+        },
+        "torch_rng": {
+          "dtype": "torch.uint8",
+          "elements": 5056
+        }
+      }
     }
   ],
   "final_step": 768,
