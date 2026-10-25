@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "id": "openbookqa:dev:7-1035",
+      "cached_vs_full_target_nll_difference": 3.5764105632551946e-07
+    },
+    {
+      "id": "piqa:dev:e8d036fe-0c70-4b17-a3c8-eae96485037f",
+      "cached_vs_full_target_nll_difference": 2.3836400941945612e-07
+    },
+    {
+      "id": "arc_challenge:dev:MEA_2016_5_6",
+      "cached_vs_full_target_nll_difference": 1.7880074665299617e-07
+    }
+  ]
+}

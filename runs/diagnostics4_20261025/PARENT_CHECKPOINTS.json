@@ -1,0 +1,26 @@
+{
+  "EXT2": {
+    "run": "ext2_20261022",
+    "commit": "7b712f2d557a85248639037348dd7b27f2705790",
+    "selected_step": 3584,
+    "sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe",
+    "parameter_count": 100028328,
+    "native_dtype": "float32",
+    "bytes": 400125984,
+    "manifest_url": "https://github.com/binouv/model/blob/7b712f2d557a85248639037348dd7b27f2705790/runs/ext2_20261022/artifacts/selected_model_parts/MANIFEST.json",
+    "parts_directory": "runs/ext2_20261022/artifacts/selected_model_parts",
+    "unchanged_in_diagnostics": true
+  },
+  "EXT3": {
+    "run": "ext3_20261025",
+    "commit": "44aaa833f23e663f21415142bdd23369549fd707",
+    "selected_step": 640,
+    "sha256": "84b5940341449d27dcc8f656719bff0598afe9c3d6dec97475b4123263a81ac3",
+    "parameter_count": 100028328,
+    "native_dtype": "float32",
+    "bytes": 400125984,
+    "manifest_url": "https://github.com/binouv/model/blob/44aaa833f23e663f21415142bdd23369549fd707/runs/ext3_20261025/artifacts/selected_model_parts/MANIFEST.json",
+    "parts_directory": "runs/ext3_20261025/artifacts/selected_model_parts",
+    "unchanged_in_diagnostics": true
+  }
+}

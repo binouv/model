@@ -1,0 +1,745 @@
+{
+  "status": "passed",
+  "utc": "2026-10-25T08:10:20.187678+00:00",
+  "weights_sha256": "84b5940341449d27dcc8f656719bff0598afe9c3d6dec97475b4123263a81ac3",
+  "precision": "FP32",
+  "chunk_size": 64,
+  "atol": 0.001,
+  "rtol": 0.0001,
+  "forward_cache": [
+    {
+      "id": "openbookqa:dev:7-1035",
+      "tokens": 103,
+      "logits": {
+        "max_abs": 2.1457672119140625e-06,
+        "passed": true
+      },
+      "next_step_logits": {
+        "max_abs": 5.7220458984375e-06,
+        "passed": true
+      },
+      "same_next_token": true,
+      "delta_state_checks": [
+        {
+          "max_abs": 4.649162292480469e-06,
+          "passed": true
+        },
+        {
+          "max_abs": 8.106231689453125e-06,
+          "passed": true
+        },
+        {
+          "max_abs": 1.1235475540161133e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 8.244067430496216e-06,
+          "passed": true
+        },
+        {
+          "max_abs": 6.4373016357421875e-06,
+          "passed": true
+        },
+        {
+          "max_abs": 7.748603820800781e-06,
+          "passed": true
+        },
+        {
+          "max_abs": 6.079673767089844e-06,
+          "passed": true
+        }
+      ],
+      "seconds_original_prefill": 0.14090755699999136,
+      "seconds_chunk64_prefill": 0.1399195840003813
+    },
+    {
+      "id": "piqa:dev:e8d036fe-0c70-4b17-a3c8-eae96485037f",
+      "tokens": 225,
+      "logits": {
+        "max_abs": 3.814697265625e-06,
+        "passed": true
+      },
+      "next_step_logits": {
+        "max_abs": 4.76837158203125e-06,
+        "passed": true
+      },
+      "same_next_token": true,
+      "delta_state_checks": [
+        {
+          "max_abs": 7.450580596923828e-06,
+          "passed": true
+        },
+        {
+          "max_abs": 3.9577484130859375e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 2.7358531951904297e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 2.4557113647460938e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 2.1696090698242188e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 1.71661376953125e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 2.110004425048828e-05,
+          "passed": true
+        }
+      ],
+      "seconds_original_prefill": 0.3067557049998868,
+      "seconds_chunk64_prefill": 0.3070494690000487
+    },
+    {
+      "id": "arc_challenge:dev:MEA_2016_5_6",
+      "tokens": 154,
+      "logits": {
+        "max_abs": 3.337860107421875e-06,
+        "passed": true
+      },
+      "next_step_logits": {
+        "max_abs": 7.748603820800781e-06,
+        "passed": true
+      },
+      "same_next_token": true,
+      "delta_state_checks": [
+        {
+          "max_abs": 9.059906005859375e-06,
+          "passed": true
+        },
+        {
+          "max_abs": 2.384185791015625e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 1.5139579772949219e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 1.3232231140136719e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 1.1146068572998047e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 1.9311904907226562e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 1.0013580322265625e-05,
+          "passed": true
+        }
+      ],
+      "seconds_original_prefill": 0.22789282000030653,
+      "seconds_chunk64_prefill": 0.17301595299977635
+    },
+    {
+      "id": "piqa:dev:c76136cf-610f-4ecf-8fcd-2896e83b248a",
+      "tokens": 371,
+      "logits": {
+        "max_abs": 5.0067901611328125e-06,
+        "passed": true
+      },
+      "next_step_logits": {
+        "max_abs": 5.7220458984375e-06,
+        "passed": true
+      },
+      "same_next_token": true,
+      "delta_state_checks": [
+        {
+          "max_abs": 2.3126602172851562e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 3.904104232788086e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 2.3126602172851562e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 4.315376281738281e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 4.8160552978515625e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 3.921985626220703e-05,
+          "passed": true
+        },
+        {
+          "max_abs": 5.1021575927734375e-05,
+          "passed": true
+        }
+      ],
+      "seconds_original_prefill": 0.4446013189999576,
+      "seconds_chunk64_prefill": 0.4609969439998167
+    }
+  ],
+  "gradient_fixture": {
+    "id": "piqa:dev:c76136cf-610f-4ecf-8fcd-2896e83b248a",
+    "prefix_tokens": 128,
+    "losses": [
+      8.98559856414795,
+      8.985610961914062
+    ],
+    "tensor_count": 135,
+    "checks": {
+      "embed.weight": {
+        "max_abs": 3.933906555175781e-05,
+        "passed": true
+      },
+      "blocks.0.norm1.weight": {
+        "max_abs": 1.4789402484893799e-06,
+        "passed": true
+      },
+      "blocks.0.norm2.weight": {
+        "max_abs": 3.427267074584961e-07,
+        "passed": true
+      },
+      "blocks.0.mix.q.weight": {
+        "max_abs": 2.3245811462402344e-06,
+        "passed": true
+      },
+      "blocks.0.mix.k.weight": {
+        "max_abs": 3.159046173095703e-06,
+        "passed": true
+      },
+      "blocks.0.mix.v.weight": {
+        "max_abs": 3.337860107421875e-06,
+        "passed": true
+      },
+      "blocks.0.mix.gates.weight": {
+        "max_abs": 2.4318695068359375e-05,
+        "passed": true
+      },
+      "blocks.0.mix.gates.bias": {
+        "max_abs": 5.900859832763672e-06,
+        "passed": true
+      },
+      "blocks.0.mix.read.weight": {
+        "max_abs": 1.8328428268432617e-06,
+        "passed": true
+      },
+      "blocks.0.mix.out.weight": {
+        "max_abs": 2.16066837310791e-06,
+        "passed": true
+      },
+      "blocks.0.uv.weight": {
+        "max_abs": 8.195638656616211e-07,
+        "passed": true
+      },
+      "blocks.0.down.weight": {
+        "max_abs": 1.4379620552062988e-06,
+        "passed": true
+      },
+      "blocks.1.norm1.weight": {
+        "max_abs": 1.5273690223693848e-07,
+        "passed": true
+      },
+      "blocks.1.norm2.weight": {
+        "max_abs": 1.955777406692505e-08,
+        "passed": true
+      },
+      "blocks.1.mix.q.weight": {
+        "max_abs": 1.471489667892456e-06,
+        "passed": true
+      },
+      "blocks.1.mix.k.weight": {
+        "max_abs": 3.986060619354248e-07,
+        "passed": true
+      },
+      "blocks.1.mix.v.weight": {
+        "max_abs": 1.3969838619232178e-07,
+        "passed": true
+      },
+      "blocks.1.mix.out.weight": {
+        "max_abs": 1.0803341865539551e-07,
+        "passed": true
+      },
+      "blocks.1.uv.weight": {
+        "max_abs": 6.798654794692993e-08,
+        "passed": true
+      },
+      "blocks.1.down.weight": {
+        "max_abs": 1.30385160446167e-07,
+        "passed": true
+      },
+      "blocks.2.norm1.weight": {
+        "max_abs": 1.6205012798309326e-07,
+        "passed": true
+      },
+      "blocks.2.norm2.weight": {
+        "max_abs": 2.0721927285194397e-08,
+        "passed": true
+      },
+      "blocks.2.mix.q.weight": {
+        "max_abs": 8.568167686462402e-07,
+        "passed": true
+      },
+      "blocks.2.mix.k.weight": {
+        "max_abs": 1.2665987014770508e-06,
+        "passed": true
+      },
+      "blocks.2.mix.v.weight": {
+        "max_abs": 1.0174699127674103e-07,
+        "passed": true
+      },
+      "blocks.2.mix.gates.weight": {
+        "max_abs": 3.6135315895080566e-06,
+        "passed": true
+      },
+      "blocks.2.mix.gates.bias": {
+        "max_abs": 8.298084139823914e-07,
+        "passed": true
+      },
+      "blocks.2.mix.read.weight": {
+        "max_abs": 2.2724270820617676e-07,
+        "passed": true
+      },
+      "blocks.2.mix.out.weight": {
+        "max_abs": 1.2945383787155151e-07,
+        "passed": true
+      },
+      "blocks.2.uv.weight": {
+        "max_abs": 2.7939677238464355e-07,
+        "passed": true
+      },
+      "blocks.2.down.weight": {
+        "max_abs": 1.3236422091722488e-07,
+        "passed": true
+      },
+      "blocks.3.norm1.weight": {
+        "max_abs": 1.2712553143501282e-07,
+        "passed": true
+      },
+      "blocks.3.norm2.weight": {
+        "max_abs": 1.4435499906539917e-08,
+        "passed": true
+      },
+      "blocks.3.mix.q.weight": {
+        "max_abs": 5.923211574554443e-07,
+        "passed": true
+      },
+      "blocks.3.mix.k.weight": {
+        "max_abs": 4.507601261138916e-07,
+        "passed": true
+      },
+      "blocks.3.mix.v.weight": {
+        "max_abs": 1.30385160446167e-07,
+        "passed": true
+      },
+      "blocks.3.mix.out.weight": {
+        "max_abs": 6.332993507385254e-08,
+        "passed": true
+      },
+      "blocks.3.uv.weight": {
+        "max_abs": 1.387670636177063e-07,
+        "passed": true
+      },
+      "blocks.3.down.weight": {
+        "max_abs": 8.102506399154663e-08,
+        "passed": true
+      },
+      "blocks.4.norm1.weight": {
+        "max_abs": 1.9813887774944305e-07,
+        "passed": true
+      },
+      "blocks.4.norm2.weight": {
+        "max_abs": 1.798616722226143e-08,
+        "passed": true
+      },
+      "blocks.4.mix.q.weight": {
+        "max_abs": 5.774199962615967e-07,
+        "passed": true
+      },
+      "blocks.4.mix.k.weight": {
+        "max_abs": 8.344650268554688e-07,
+        "passed": true
+      },
+      "blocks.4.mix.v.weight": {
+        "max_abs": 1.0896474123001099e-07,
+        "passed": true
+      },
+      "blocks.4.mix.gates.weight": {
+        "max_abs": 3.3043324947357178e-06,
+        "passed": true
+      },
+      "blocks.4.mix.gates.bias": {
+        "max_abs": 8.996576070785522e-07,
+        "passed": true
+      },
+      "blocks.4.mix.read.weight": {
+        "max_abs": 1.210719347000122e-07,
+        "passed": true
+      },
+      "blocks.4.mix.out.weight": {
+        "max_abs": 2.4400651454925537e-07,
+        "passed": true
+      },
+      "blocks.4.uv.weight": {
+        "max_abs": 6.984919309616089e-08,
+        "passed": true
+      },
+      "blocks.4.down.weight": {
+        "max_abs": 4.257890395820141e-08,
+        "passed": true
+      },
+      "blocks.5.norm1.weight": {
+        "max_abs": 1.341104507446289e-07,
+        "passed": true
+      },
+      "blocks.5.norm2.weight": {
+        "max_abs": 1.4435499906539917e-08,
+        "passed": true
+      },
+      "blocks.5.mix.q.weight": {
+        "max_abs": 5.457550287246704e-07,
+        "passed": true
+      },
+      "blocks.5.mix.k.weight": {
+        "max_abs": 4.0885061025619507e-07,
+        "passed": true
+      },
+      "blocks.5.mix.v.weight": {
+        "max_abs": 7.450580596923828e-08,
+        "passed": true
+      },
+      "blocks.5.mix.out.weight": {
+        "max_abs": 8.940696716308594e-08,
+        "passed": true
+      },
+      "blocks.5.uv.weight": {
+        "max_abs": 5.98374754190445e-08,
+        "passed": true
+      },
+      "blocks.5.down.weight": {
+        "max_abs": 5.587935447692871e-08,
+        "passed": true
+      },
+      "blocks.6.norm1.weight": {
+        "max_abs": 9.685754776000977e-08,
+        "passed": true
+      },
+      "blocks.6.norm2.weight": {
+        "max_abs": 1.7462298274040222e-08,
+        "passed": true
+      },
+      "blocks.6.mix.q.weight": {
+        "max_abs": 3.6135315895080566e-07,
+        "passed": true
+      },
+      "blocks.6.mix.k.weight": {
+        "max_abs": 7.301568984985352e-07,
+        "passed": true
+      },
+      "blocks.6.mix.v.weight": {
+        "max_abs": 6.332993507385254e-08,
+        "passed": true
+      },
+      "blocks.6.mix.gates.weight": {
+        "max_abs": 1.169741153717041e-06,
+        "passed": true
+      },
+      "blocks.6.mix.gates.bias": {
+        "max_abs": 2.1420419216156006e-07,
+        "passed": true
+      },
+      "blocks.6.mix.read.weight": {
+        "max_abs": 8.381903171539307e-08,
+        "passed": true
+      },
+      "blocks.6.mix.out.weight": {
+        "max_abs": 1.0617077350616455e-07,
+        "passed": true
+      },
+      "blocks.6.uv.weight": {
+        "max_abs": 5.774199962615967e-08,
+        "passed": true
+      },
+      "blocks.6.down.weight": {
+        "max_abs": 5.029141902923584e-08,
+        "passed": true
+      },
+      "blocks.7.norm1.weight": {
+        "max_abs": 1.0617077350616455e-07,
+        "passed": true
+      },
+      "blocks.7.norm2.weight": {
+        "max_abs": 1.7695128917694092e-08,
+        "passed": true
+      },
+      "blocks.7.mix.q.weight": {
+        "max_abs": 3.762543201446533e-07,
+        "passed": true
+      },
+      "blocks.7.mix.k.weight": {
+        "max_abs": 6.370246410369873e-07,
+        "passed": true
+      },
+      "blocks.7.mix.v.weight": {
+        "max_abs": 1.0803341865539551e-07,
+        "passed": true
+      },
+      "blocks.7.mix.out.weight": {
+        "max_abs": 7.078051567077637e-08,
+        "passed": true
+      },
+      "blocks.7.uv.weight": {
+        "max_abs": 8.568167686462402e-08,
+        "passed": true
+      },
+      "blocks.7.down.weight": {
+        "max_abs": 5.774199962615967e-08,
+        "passed": true
+      },
+      "blocks.8.norm1.weight": {
+        "max_abs": 1.0244548320770264e-07,
+        "passed": true
+      },
+      "blocks.8.norm2.weight": {
+        "max_abs": 1.4901161193847656e-08,
+        "passed": true
+      },
+      "blocks.8.mix.q.weight": {
+        "max_abs": 7.450580596923828e-07,
+        "passed": true
+      },
+      "blocks.8.mix.k.weight": {
+        "max_abs": 8.940696716308594e-07,
+        "passed": true
+      },
+      "blocks.8.mix.v.weight": {
+        "max_abs": 9.872019290924072e-08,
+        "passed": true
+      },
+      "blocks.8.mix.gates.weight": {
+        "max_abs": 9.94652509689331e-07,
+        "passed": true
+      },
+      "blocks.8.mix.gates.bias": {
+        "max_abs": 9.872019290924072e-08,
+        "passed": true
+      },
+      "blocks.8.mix.read.weight": {
+        "max_abs": 1.0058283805847168e-07,
+        "passed": true
+      },
+      "blocks.8.mix.out.weight": {
+        "max_abs": 5.122274160385132e-08,
+        "passed": true
+      },
+      "blocks.8.uv.weight": {
+        "max_abs": 7.543712854385376e-08,
+        "passed": true
+      },
+      "blocks.8.down.weight": {
+        "max_abs": 3.4458935260772705e-08,
+        "passed": true
+      },
+      "blocks.9.norm1.weight": {
+        "max_abs": 9.313225746154785e-08,
+        "passed": true
+      },
+      "blocks.9.norm2.weight": {
+        "max_abs": 1.3969838619232178e-08,
+        "passed": true
+      },
+      "blocks.9.mix.q.weight": {
+        "max_abs": 9.033828973770142e-07,
+        "passed": true
+      },
+      "blocks.9.mix.k.weight": {
+        "max_abs": 5.62518835067749e-07,
+        "passed": true
+      },
+      "blocks.9.mix.v.weight": {
+        "max_abs": 9.778887033462524e-08,
+        "passed": true
+      },
+      "blocks.9.mix.out.weight": {
+        "max_abs": 6.612390279769897e-08,
+        "passed": true
+      },
+      "blocks.9.uv.weight": {
+        "max_abs": 8.102506399154663e-08,
+        "passed": true
+      },
+      "blocks.9.down.weight": {
+        "max_abs": 6.05359673500061e-08,
+        "passed": true
+      },
+      "blocks.10.norm1.weight": {
+        "max_abs": 8.009374141693115e-08,
+        "passed": true
+      },
+      "blocks.10.norm2.weight": {
+        "max_abs": 2.1944288164377213e-08,
+        "passed": true
+      },
+      "blocks.10.mix.q.weight": {
+        "max_abs": 5.513429641723633e-07,
+        "passed": true
+      },
+      "blocks.10.mix.k.weight": {
+        "max_abs": 5.736947059631348e-07,
+        "passed": true
+      },
+      "blocks.10.mix.v.weight": {
+        "max_abs": 7.264316082000732e-08,
+        "passed": true
+      },
+      "blocks.10.mix.gates.weight": {
+        "max_abs": 1.0579824447631836e-06,
+        "passed": true
+      },
+      "blocks.10.mix.gates.bias": {
+        "max_abs": 2.086162567138672e-07,
+        "passed": true
+      },
+      "blocks.10.mix.read.weight": {
+        "max_abs": 1.6577541828155518e-07,
+        "passed": true
+      },
+      "blocks.10.mix.out.weight": {
+        "max_abs": 7.82310962677002e-08,
+        "passed": true
+      },
+      "blocks.10.uv.weight": {
+        "max_abs": 1.3224780559539795e-07,
+        "passed": true
+      },
+      "blocks.10.down.weight": {
+        "max_abs": 5.448237061500549e-08,
+        "passed": true
+      },
+      "blocks.11.norm1.weight": {
+        "max_abs": 4.842877388000488e-08,
+        "passed": true
+      },
+      "blocks.11.norm2.weight": {
+        "max_abs": 4.237517714500427e-08,
+        "passed": true
+      },
+      "blocks.11.mix.q.weight": {
+        "max_abs": 3.501772880554199e-07,
+        "passed": true
+      },
+      "blocks.11.mix.k.weight": {
+        "max_abs": 5.960464477539062e-07,
+        "passed": true
+      },
+      "blocks.11.mix.v.weight": {
+        "max_abs": 1.043081283569336e-07,
+        "passed": true
+      },
+      "blocks.11.mix.out.weight": {
+        "max_abs": 5.587935447692871e-08,
+        "passed": true
+      },
+      "blocks.11.uv.weight": {
+        "max_abs": 1.9744038581848145e-07,
+        "passed": true
+      },
+      "blocks.11.down.weight": {
+        "max_abs": 5.681067705154419e-08,
+        "passed": true
+      },
+      "blocks.12.norm1.weight": {
+        "max_abs": 1.1175870895385742e-07,
+        "passed": true
+      },
+      "blocks.12.norm2.weight": {
+        "max_abs": 6.05359673500061e-08,
+        "passed": true
+      },
+      "blocks.12.mix.q.weight": {
+        "max_abs": 1.1026859283447266e-06,
+        "passed": true
+      },
+      "blocks.12.mix.k.weight": {
+        "max_abs": 5.029141902923584e-07,
+        "passed": true
+      },
+      "blocks.12.mix.v.weight": {
+        "max_abs": 1.601874828338623e-07,
+        "passed": true
+      },
+      "blocks.12.mix.gates.weight": {
+        "max_abs": 6.742775440216064e-07,
+        "passed": true
+      },
+      "blocks.12.mix.gates.bias": {
+        "max_abs": 1.0244548320770264e-07,
+        "passed": true
+      },
+      "blocks.12.mix.read.weight": {
+        "max_abs": 9.220093488693237e-08,
+        "passed": true
+      },
+      "blocks.12.mix.out.weight": {
+        "max_abs": 6.239861249923706e-08,
+        "passed": true
+      },
+      "blocks.12.uv.weight": {
+        "max_abs": 2.3096799850463867e-07,
+        "passed": true
+      },
+      "blocks.12.down.weight": {
+        "max_abs": 5.4016709327697754e-08,
+        "passed": true
+      },
+      "blocks.13.norm1.weight": {
+        "max_abs": 1.30385160446167e-07,
+        "passed": true
+      },
+      "blocks.13.norm2.weight": {
+        "max_abs": 1.8440186977386475e-07,
+        "passed": true
+      },
+      "blocks.13.mix.q.weight": {
+        "max_abs": 7.37607479095459e-07,
+        "passed": true
+      },
+      "blocks.13.mix.k.weight": {
+        "max_abs": 6.09084963798523e-07,
+        "passed": true
+      },
+      "blocks.13.mix.v.weight": {
+        "max_abs": 1.30385160446167e-07,
+        "passed": true
+      },
+      "blocks.13.mix.out.weight": {
+        "max_abs": 8.381903171539307e-08,
+        "passed": true
+      },
+      "blocks.13.uv.weight": {
+        "max_abs": 9.5367431640625e-07,
+        "passed": true
+      },
+      "blocks.13.down.weight": {
+        "max_abs": 8.242204785346985e-08,
+        "passed": true
+      },
+      "norm.weight": {
+        "max_abs": 6.812624633312225e-07,
+        "passed": true
+      }
+    }
+  },
+  "neural_optimizer_updates": 0,
+  "new_learned_parameters": 0,
+  "note": "External dev numerical fixtures only; no quality benchmark result and no exact-bitwise resume claim. Timing includes no warmup and is a single observation, not a throughput estimate."
+}

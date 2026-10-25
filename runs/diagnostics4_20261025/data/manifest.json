@@ -1,0 +1,48 @@
+{
+  "seed": 2026102504,
+  "created_utc": "2026-10-25T07:52:20.446288+00:00",
+  "source_archive_sha256": "c259fa1b2f8f5c9ae2df58bb6cc3200e705e2945b24e896988006c546a572607",
+  "source_release": "OpenCompassData-core-20240207 /0.2.2.rc1",
+  "source_members": {
+    "data/openbookqa/Main/dev.jsonl": "a08f720be757a0f0b6aaf8e1e1162c2b05a882c9c031d2559ba3d5467d023466",
+    "data/openbookqa/Main/test.jsonl": "feb2bd9bfa6161dca4c44ce90e51e8cdada83eb5061407fcdc5005e44aaf2313",
+    "data/piqa/dev.jsonl": "a73f46cb5d72b2cc399522a79f27728a429d9b89d9a236243fcfda8c02588d54",
+    "data/piqa/dev-labels.lst": "b4192dc3a2a0363d9d60ccf79800cbbe2f32ebb17726efdde6970e0b8131bceb",
+    "data/ARC/ARC-c/ARC-Challenge-Dev.jsonl": "55224364abd2477f66a9a57c5cbef109fb71d83019aa5e37aec0e7ab757746ca",
+    "data/ARC/ARC-c/ARC-Challenge-Test.jsonl": "9fa8ffb3e3a1f88cb302d53dd95aae81e39209ad9bcf974376b319d8fd35717c"
+  },
+  "files": {
+    "probe_train.jsonl": {
+      "n": 512,
+      "sha256": "bc6ad1ce37cf6265981e2883e233354aa99f33cf2c5445689b05ac56a013324a"
+    },
+    "seen_control.jsonl": {
+      "n": 64,
+      "sha256": "750abea9a8a3e579cc736935b7da44841c71d207f03924b3f69acd8ac7f386ca"
+    },
+    "tiny_train.jsonl": {
+      "n": 32,
+      "sha256": "70857f464d26687006f41db31727c57c2de6818e0da1efe27dc1ecb704fe1725"
+    },
+    "dev_mcq.jsonl": {
+      "n": 96,
+      "sha256": "b1a3a2c3d0aed76f4978f8e2ec5c9290626e43fab06749c73682fcfb21dbd86b"
+    },
+    "test_mcq.jsonl": {
+      "n": 192,
+      "sha256": "fa093d262676c67f3d94cae8c55184b3f7aa0e2f8509f55dba011b3fbb7edab8"
+    }
+  },
+  "train_seen_by_both_models": true,
+  "selected_EXT3_training_cursor_exclusion": "only source rows before3*640",
+  "balanced_probe_train_per_task": 256,
+  "seen_control_per_task": 32,
+  "tiny_train_per_task": 16,
+  "new_dev_per_task": 32,
+  "new_test_per_task": 64,
+  "all_new_holdouts_exclude_previous_EXT2_EXT3_mcq_train_dev_test_and_ARC128": true,
+  "known_prior_alpaca_long_stem_or_full_item_exclusions": 0,
+  "piqa_test": "new reserved official validation subset; not hidden official test",
+  "historical_pretraining_overlap": "unknown",
+  "no_generated_question_or_answer_content": true
+}

@@ -1,0 +1,447 @@
+{
+  "scoring": {
+    "EXT2": {
+      "seen_control": {
+        "openbookqa": {
+          "methods": {
+            "label_bf16": {
+              "correct": 8,
+              "n": 32
+            },
+            "label_fp32": {
+              "correct": 10,
+              "n": 32
+            },
+            "answer_mean": {
+              "correct": 10,
+              "n": 32
+            },
+            "answer_sum": {
+              "correct": 2,
+              "n": 32
+            },
+            "answer_calibrated_mean": {
+              "correct": 3,
+              "n": 32
+            },
+            "answer_calibrated_sum": {
+              "correct": 3,
+              "n": 32
+            },
+            "answer_without_question_mean": {
+              "correct": 11,
+              "n": 32
+            },
+            "generation16": {
+              "correct": 10,
+              "valid": 32,
+              "n": 32
+            }
+          },
+          "bf16_fp32_label_disagreements": 2,
+          "conditioned_vs_question_ablated_answer_disagreements": 1
+        },
+        "piqa": {
+          "methods": {
+            "label_bf16": {
+              "correct": 16,
+              "n": 32
+            },
+            "label_fp32": {
+              "correct": 15,
+              "n": 32
+            },
+            "answer_mean": {
+              "correct": 17,
+              "n": 32
+            },
+            "answer_sum": {
+              "correct": 15,
+              "n": 32
+            },
+            "answer_calibrated_mean": {
+              "correct": 17,
+              "n": 32
+            },
+            "answer_calibrated_sum": {
+              "correct": 18,
+              "n": 32
+            },
+            "answer_without_question_mean": {
+              "correct": 18,
+              "n": 32
+            },
+            "generation16": {
+              "correct": 16,
+              "valid": 32,
+              "n": 32
+            }
+          },
+          "bf16_fp32_label_disagreements": 1,
+          "conditioned_vs_question_ablated_answer_disagreements": 1
+        }
+      },
+      "test_mcq": {
+        "openbookqa": {
+          "methods": {
+            "label_bf16": {
+              "correct": 14,
+              "n": 64
+            },
+            "label_fp32": {
+              "correct": 14,
+              "n": 64
+            },
+            "answer_mean": {
+              "correct": 18,
+              "n": 64
+            },
+            "answer_sum": {
+              "correct": 9,
+              "n": 64
+            },
+            "answer_calibrated_mean": {
+              "correct": 13,
+              "n": 64
+            },
+            "answer_calibrated_sum": {
+              "correct": 12,
+              "n": 64
+            },
+            "answer_without_question_mean": {
+              "correct": 18,
+              "n": 64
+            },
+            "generation16": {
+              "correct": 14,
+              "valid": 64,
+              "n": 64
+            }
+          },
+          "bf16_fp32_label_disagreements": 0,
+          "conditioned_vs_question_ablated_answer_disagreements": 5
+        },
+        "piqa": {
+          "methods": {
+            "label_bf16": {
+              "correct": 31,
+              "n": 64
+            },
+            "label_fp32": {
+              "correct": 31,
+              "n": 64
+            },
+            "answer_mean": {
+              "correct": 28,
+              "n": 64
+            },
+            "answer_sum": {
+              "correct": 39,
+              "n": 64
+            },
+            "answer_calibrated_mean": {
+              "correct": 37,
+              "n": 64
+            },
+            "answer_calibrated_sum": {
+              "correct": 36,
+              "n": 64
+            },
+            "answer_without_question_mean": {
+              "correct": 29,
+              "n": 64
+            },
+            "generation16": {
+              "correct": 31,
+              "valid": 64,
+              "n": 64
+            }
+          },
+          "bf16_fp32_label_disagreements": 0,
+          "conditioned_vs_question_ablated_answer_disagreements": 1
+        },
+        "arc_challenge": {
+          "methods": {
+            "label_bf16": {
+              "correct": 23,
+              "n": 64
+            },
+            "label_fp32": {
+              "correct": 23,
+              "n": 64
+            },
+            "answer_mean": {
+              "correct": 12,
+              "n": 64
+            },
+            "answer_sum": {
+              "correct": 11,
+              "n": 64
+            },
+            "answer_calibrated_mean": {
+              "correct": 19,
+              "n": 64
+            },
+            "answer_calibrated_sum": {
+              "correct": 19,
+              "n": 64
+            },
+            "answer_without_question_mean": {
+              "correct": 13,
+              "n": 64
+            },
+            "generation16": {
+              "correct": 23,
+              "valid": 64,
+              "n": 64
+            }
+          },
+          "bf16_fp32_label_disagreements": 0,
+          "conditioned_vs_question_ablated_answer_disagreements": 4
+        }
+      }
+    },
+    "EXT3": {
+      "seen_control": {
+        "openbookqa": {
+          "methods": {
+            "label_bf16": {
+              "correct": 11,
+              "n": 32
+            },
+            "label_fp32": {
+              "correct": 9,
+              "n": 32
+            },
+            "answer_mean": {
+              "correct": 10,
+              "n": 32
+            },
+            "answer_sum": {
+              "correct": 2,
+              "n": 32
+            },
+            "answer_calibrated_mean": {
+              "correct": 4,
+              "n": 32
+            },
+            "answer_calibrated_sum": {
+              "correct": 5,
+              "n": 32
+            },
+            "answer_without_question_mean": {
+              "correct": 11,
+              "n": 32
+            },
+            "generation16": {
+              "correct": 11,
+              "valid": 32,
+              "n": 32
+            }
+          },
+          "bf16_fp32_label_disagreements": 5,
+          "conditioned_vs_question_ablated_answer_disagreements": 3
+        },
+        "piqa": {
+          "methods": {
+            "label_bf16": {
+              "correct": 19,
+              "n": 32
+            },
+            "label_fp32": {
+              "correct": 21,
+              "n": 32
+            },
+            "answer_mean": {
+              "correct": 16,
+              "n": 32
+            },
+            "answer_sum": {
+              "correct": 16,
+              "n": 32
+            },
+            "answer_calibrated_mean": {
+              "correct": 16,
+              "n": 32
+            },
+            "answer_calibrated_sum": {
+              "correct": 17,
+              "n": 32
+            },
+            "answer_without_question_mean": {
+              "correct": 16,
+              "n": 32
+            },
+            "generation16": {
+              "correct": 19,
+              "valid": 32,
+              "n": 32
+            }
+          },
+          "bf16_fp32_label_disagreements": 4,
+          "conditioned_vs_question_ablated_answer_disagreements": 2
+        }
+      },
+      "test_mcq": {
+        "openbookqa": {
+          "methods": {
+            "label_bf16": {
+              "correct": 17,
+              "n": 64
+            },
+            "label_fp32": {
+              "correct": 16,
+              "n": 64
+            },
+            "answer_mean": {
+              "correct": 18,
+              "n": 64
+            },
+            "answer_sum": {
+              "correct": 9,
+              "n": 64
+            },
+            "answer_calibrated_mean": {
+              "correct": 12,
+              "n": 64
+            },
+            "answer_calibrated_sum": {
+              "correct": 12,
+              "n": 64
+            },
+            "answer_without_question_mean": {
+              "correct": 17,
+              "n": 64
+            },
+            "generation16": {
+              "correct": 15,
+              "valid": 64,
+              "n": 64
+            }
+          },
+          "bf16_fp32_label_disagreements": 9,
+          "conditioned_vs_question_ablated_answer_disagreements": 1
+        },
+        "piqa": {
+          "methods": {
+            "label_bf16": {
+              "correct": 34,
+              "n": 64
+            },
+            "label_fp32": {
+              "correct": 30,
+              "n": 64
+            },
+            "answer_mean": {
+              "correct": 31,
+              "n": 64
+            },
+            "answer_sum": {
+              "correct": 39,
+              "n": 64
+            },
+            "answer_calibrated_mean": {
+              "correct": 41,
+              "n": 64
+            },
+            "answer_calibrated_sum": {
+              "correct": 40,
+              "n": 64
+            },
+            "answer_without_question_mean": {
+              "correct": 29,
+              "n": 64
+            },
+            "generation16": {
+              "correct": 33,
+              "valid": 63,
+              "n": 64
+            }
+          },
+          "bf16_fp32_label_disagreements": 8,
+          "conditioned_vs_question_ablated_answer_disagreements": 2
+        },
+        "arc_challenge": {
+          "methods": {
+            "label_bf16": {
+              "correct": 16,
+              "n": 64
+            },
+            "label_fp32": {
+              "correct": 16,
+              "n": 64
+            },
+            "answer_mean": {
+              "correct": 12,
+              "n": 64
+            },
+            "answer_sum": {
+              "correct": 11,
+              "n": 64
+            },
+            "answer_calibrated_mean": {
+              "correct": 18,
+              "n": 64
+            },
+            "answer_calibrated_sum": {
+              "correct": 19,
+              "n": 64
+            },
+            "answer_without_question_mean": {
+              "correct": 11,
+              "n": 64
+            },
+            "generation16": {
+              "correct": 16,
+              "valid": 64,
+              "n": 64
+            }
+          },
+          "bf16_fp32_label_disagreements": 9,
+          "conditioned_vs_question_ablated_answer_disagreements": 6
+        }
+      }
+    }
+  },
+  "probe": {
+    "openbookqa": {
+      "train_correct": 234,
+      "train_n": 256,
+      "tiny_train_correct": 16,
+      "tiny_train_n": 16,
+      "dev_mcq": {
+        "correct": 7,
+        "n": 32
+      },
+      "test_mcq": {
+        "correct": 13,
+        "n": 64
+      }
+    },
+    "piqa": {
+      "train_correct": 237,
+      "train_n": 256,
+      "tiny_train_correct": 16,
+      "tiny_train_n": 16,
+      "dev_mcq": {
+        "correct": 18,
+        "n": 32
+      },
+      "test_mcq": {
+        "correct": 30,
+        "n": 64
+      }
+    },
+    "arc_challenge": {
+      "dev_mcq": {
+        "correct": 9,
+        "n": 32
+      },
+      "test_mcq": {
+        "correct": 19,
+        "n": 64
+      }
+    }
+  },
+  "wall_seconds": 734.2926029580003
+}

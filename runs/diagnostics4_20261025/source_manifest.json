@@ -1,0 +1,12 @@
+{
+  "config.json": "84e3dc12fe79c1f47ac69292d24a715b8af8211cb6a1c0b4cf1e7b2329a8c20c",
+  "REGISTRATION.md": "9710d897cbf49bd6b06cbf96dc23ba69c2886a1b087337c966ab345e4e3d62ec",
+  "data/manifest.json": "dece618b94535b5f54ebb3abfb977a35de5c58bab2dca04954b47de3e06d9637",
+  "data/tokenizer.json": "aa6f3b462d4d1bb9ace09d0421a1879500fea91127a347a29df3e46a6f58c500",
+  "checkpoints/config.json": "2015d526e5d61220366a61411684db81ca8638b8fbef72cb0202f3c8f2ea6478",
+  "src/prepare_data.py": "19aed311acee9e784baa30d81c56ece8848ba353bc08f991dada2af1d349e1d9",
+  "src/tokenizer.py": "7fd9d027849c8044c67604802058cbf51a149fd3f22e301058325ce003a7acdb",
+  "src/model.py": "ed03bbba6a430368ab127c638b888fa5b27c3537263bac14a71c48a833a11336",
+  "src/common.py": "e216fefafe90ccda06c986769e4df01907ed7188b1e021ebf5fbc19c0ab33c05",
+  "src/run_diagnostics.py": "bb239e1d411dee954e7381d9a48ea7cabcc7ac27162fe80a6367e350f3274d19"
+}

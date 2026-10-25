@@ -1,0 +1,20 @@
+{
+  "run_id": "diagnostics4_20261025",
+  "seed": 2026102504,
+  "EXT2_path": "../ext2_20261022/checkpoints/step_3584/model.safetensors",
+  "EXT2_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe",
+  "EXT3_path": "../ext3_20261025/checkpoints/step_0640/model.safetensors",
+  "EXT3_sha256": "84b5940341449d27dcc8f656719bff0598afe9c3d6dec97475b4123263a81ac3",
+  "ridge_lambdas": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "tiny_ridge_lambda": 1e-06,
+  "probe_native_precision": "float64 closed-form ridge; no optimizer state applies",
+  "generation_budget": 16,
+  "registered_utc": "2026-10-25T07:56:58.050908+00:00",
+  "deadline_utc": "2026-10-25T08:49:00+00:00"
+}

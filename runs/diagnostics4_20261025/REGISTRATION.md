@@ -1,0 +1,9 @@
+# Frozen diagnostics, registered before outputs
+
+One diagnostic hypothesis: near-chance label accuracy may reflect an answer interface/numerical bottleneck rather than missing useful answer information. Compare frozen EXT2 and EXT3 on32 already-seen examples per trained task and64 completely new held examples per OBQA/PIQA/ARC task. No existing revealed test is used.
+
+Report all fixed methods: original label likelihood BF16 and FP32; full external answer text likelihood, mean and sum; context-calibrated scores subtracting the same answer without the question, mean and sum; question-ablated answer mean; original full-vocabulary greedy16. Candidate continuations contain original external choices, no generated gold text. Scoring without the question is an engineering ablation, not a new benchmark. Do not select a winning scoring rule on final held data.
+
+Probe diagnostic: extract frozen EXT3 last normalized hidden states from original MCQ prompts. Fit separate closed-form ridge heads on256 balanced already-seen public questions per OBQA/PIQA. Choose lambda from[.01,.1,1,10,100] only on32 new dev/task; equal dev accuracy selects larger lambda. Apply OBQA head to ARC as an explicitly exploratory transfer check. Coefficients/std/means saved in native float64. No backbone updates; no fabricated AdamW state.
+
+One capacity control: fit tiny balanced16-question subsets per task using fixed lambda1e-6 and report training fit. High tiny training fit with poor unseen results supports a generalization/information bottleneck; poor fit leaves optimization/readout/representation limitations unresolved. Neither outcome proves absence of all knowledge. Report raw predictions, all methods including negatives, and parent hashes. These diagnostics do not establish broad superiority or replace exact absent Qwen/MiniCPM baselines. No new403 attempts.

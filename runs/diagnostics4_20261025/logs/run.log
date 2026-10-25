@@ -1,0 +1,20 @@
+SCORING EXT2 seen_control 1 / 64
+SCORING EXT2 seen_control 33 / 64
+SCORING EXT2 test_mcq 1 / 192
+SCORING EXT2 test_mcq 33 / 192
+SCORING EXT2 test_mcq 65 / 192
+SCORING EXT2 test_mcq 97 / 192
+SCORING EXT2 test_mcq 129 / 192
+SCORING EXT2 test_mcq 161 / 192
+SCORING EXT3 seen_control 1 / 64
+SCORING EXT3 seen_control 33 / 64
+SCORING EXT3 test_mcq 1 / 192
+SCORING EXT3 test_mcq 33 / 192
+SCORING EXT3 test_mcq 65 / 192
+SCORING EXT3 test_mcq 97 / 192
+SCORING EXT3 test_mcq 129 / 192
+SCORING EXT3 test_mcq 161 / 192
+FEATURES probe_train 512
+FEATURES dev_mcq 96
+FEATURES test_mcq 192
+DIAGNOSTICS_FINISHED {"openbookqa": {"train_correct": 234, "train_n": 256, "tiny_train_correct": 16, "tiny_train_n": 16, "dev_mcq": {"correct": 7, "n": 32}, "test_mcq": {"correct": 13, "n": 64}}, "piqa": {"train_correct": 237, "train_n": 256, "tiny_train_correct": 16, "tiny_train_n": 16, "dev_mcq": {"correct": 18, "n": 32}, "test_mcq": {"correct": 30, "n": 64}}, "arc_challenge": {"dev_mcq": {"correct": 9, "n": 32}, "test_mcq": {"correct": 19, "n": 64}}}

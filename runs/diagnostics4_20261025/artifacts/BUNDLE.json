@@ -1,0 +1,9 @@
+{
+  "path": "diagnostics4_complete_bundle.zip",
+  "bytes": 2786059,
+  "sha256": "7c01c8a63a0349ae51186c766a8e90a0d6a8130133494ef73decd76b68b2cf3b",
+  "files": 58,
+  "contains_actual_native_probe_and_feature_bytes": true,
+  "full_backbone_reference": "PARENT_CHECKPOINTS.json; already published native EXT2/EXT3 parts, intentionally not duplicated",
+  "publication_receipt": "External PUBLICATION.json created after clean remote readback"
+}

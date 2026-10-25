@@ -1,0 +1,11 @@
+task,split,correct,n,accuracy
+openbookqa,train,234,256,0.9140625
+openbookqa,tiny_train,16,16,1.0
+openbookqa,dev_mcq,7,32,0.21875
+openbookqa,test_mcq,13,64,0.203125
+piqa,train,237,256,0.92578125
+piqa,tiny_train,16,16,1.0
+piqa,dev_mcq,18,32,0.5625
+piqa,test_mcq,30,64,0.46875
+arc_challenge,dev_mcq,9,32,0.28125
+arc_challenge,test_mcq,19,64,0.296875

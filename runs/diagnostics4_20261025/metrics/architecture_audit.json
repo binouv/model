@@ -1,0 +1,167 @@
+{
+  "utc": "2026-10-25T08:02:07.110321+00:00",
+  "config": {
+    "vocab_size": 8192,
+    "dim": 768,
+    "layers": 14,
+    "heads": 12,
+    "kv_heads": 4,
+    "hidden": 2048,
+    "delta_key_dim": 32,
+    "max_context": 2048,
+    "checkpoint_blocks": true,
+    "rope_theta": 10000.0
+  },
+  "parameters": 100028328,
+  "components": {
+    "embedding": 6291456,
+    "block_norm": 21504,
+    "delta_mix": 16644264,
+    "ffn": 66060288,
+    "attention_mix": 11010048,
+    "final_norm": 768
+  },
+  "block_pattern": "dadadadadadada",
+  "parameter_tensors": 135,
+  "delta_state_bytes_per_sequence": 688128,
+  "attention_KV_bytes_at_context2048_BF16": 14680064,
+  "variants_meta_only": [
+    {
+      "name": "current",
+      "config": {
+        "vocab_size": 8192,
+        "dim": 768,
+        "layers": 14,
+        "heads": 12,
+        "kv_heads": 4,
+        "hidden": 2048,
+        "delta_key_dim": 32,
+        "max_context": 2048,
+        "checkpoint_blocks": true,
+        "rope_theta": 10000.0
+      },
+      "parameters": 100028328,
+      "trained": "existing checkpoint; not trained by this script"
+    },
+    {
+      "name": "same_backbone_vocab32k",
+      "config": {
+        "vocab_size": 32768,
+        "dim": 768,
+        "layers": 14,
+        "heads": 12,
+        "kv_heads": 4,
+        "hidden": 2048,
+        "delta_key_dim": 32,
+        "max_context": 2048,
+        "checkpoint_blocks": true,
+        "rope_theta": 10000.0
+      },
+      "parameters": 118902696,
+      "trained": false
+    },
+    {
+      "name": "depth28_meta_only",
+      "config": {
+        "vocab_size": 8192,
+        "dim": 768,
+        "layers": 28,
+        "heads": 12,
+        "kv_heads": 4,
+        "hidden": 2048,
+        "delta_key_dim": 32,
+        "max_context": 2048,
+        "checkpoint_blocks": true,
+        "rope_theta": 10000.0
+      },
+      "parameters": 193764432,
+      "trained": false
+    },
+    {
+      "name": "depth42_meta_only",
+      "config": {
+        "vocab_size": 8192,
+        "dim": 768,
+        "layers": 42,
+        "heads": 12,
+        "kv_heads": 4,
+        "hidden": 2048,
+        "delta_key_dim": 32,
+        "max_context": 2048,
+        "checkpoint_blocks": true,
+        "rope_theta": 10000.0
+      },
+      "parameters": 287500536,
+      "trained": false
+    },
+    {
+      "name": "deep_thin_hybrid_meta_only",
+      "config": {
+        "vocab_size": 32768,
+        "dim": 576,
+        "layers": 30,
+        "heads": 9,
+        "kv_heads": 3,
+        "hidden": 1536,
+        "delta_key_dim": 32,
+        "max_context": 2048,
+        "checkpoint_blocks": true,
+        "rope_theta": 10000.0
+      },
+      "parameters": 131869134,
+      "trained": false
+    }
+  ],
+  "tokenizer_new_dev": {
+    "openbookqa": {
+      "n": 32,
+      "tokens": 2617,
+      "utf8_bytes": 4082,
+      "characters": 4082,
+      "byte_fallback_tokens": 2196,
+      "byte_fallback_fraction": 0.8391287734046619,
+      "all_exact_roundtrips": true
+    },
+    "piqa": {
+      "n": 32,
+      "tokens": 3829,
+      "utf8_bytes": 6503,
+      "characters": 6503,
+      "byte_fallback_tokens": 3024,
+      "byte_fallback_fraction": 0.7897623400365631,
+      "all_exact_roundtrips": true
+    },
+    "arc_challenge": {
+      "n": 32,
+      "tokens": 4745,
+      "utf8_bytes": 8018,
+      "characters": 8018,
+      "byte_fallback_tokens": 3894,
+      "byte_fallback_fraction": 0.8206533192834563,
+      "all_exact_roundtrips": true
+    }
+  },
+  "nominal_zero_gate_half_life": 38.19007644237764,
+  "exact_label_token_ids": {
+    "A": [
+      468
+    ],
+    "B": [
+      796
+    ],
+    "C": [
+      578
+    ],
+    "D": [
+      780
+    ]
+  },
+  "architecture_limits": [
+    "multi-token delta_rule materializes TxT matrices and a triangular solve",
+    "Model.forward context accounting assumes first attention cache at index1",
+    "Attention uses repeated KV tensors before SDPA",
+    "no QK-RMSNorm in attention; L2 q/k normalization in Delta is different",
+    "no MoE, no retrieval, no convolution in Delta"
+  ],
+  "inference_cache_scopes": "State/KV bytes exclude other activations, repeated KV and logits; full attention KV still grows with context."
+}

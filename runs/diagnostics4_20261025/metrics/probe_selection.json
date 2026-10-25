@@ -1,0 +1,64 @@
+{
+  "openbookqa": {
+    "selected_regularization": 10.0,
+    "candidates": [
+      {
+        "regularization": 0.01,
+        "dev_correct": 7,
+        "n": 32
+      },
+      {
+        "regularization": 0.1,
+        "dev_correct": 4,
+        "n": 32
+      },
+      {
+        "regularization": 1.0,
+        "dev_correct": 4,
+        "n": 32
+      },
+      {
+        "regularization": 10.0,
+        "dev_correct": 7,
+        "n": 32
+      },
+      {
+        "regularization": 100.0,
+        "dev_correct": 6,
+        "n": 32
+      }
+    ],
+    "tie_break": "largest regularization among equal dev accuracy"
+  },
+  "piqa": {
+    "selected_regularization": 10.0,
+    "candidates": [
+      {
+        "regularization": 0.01,
+        "dev_correct": 18,
+        "n": 32
+      },
+      {
+        "regularization": 0.1,
+        "dev_correct": 18,
+        "n": 32
+      },
+      {
+        "regularization": 1.0,
+        "dev_correct": 18,
+        "n": 32
+      },
+      {
+        "regularization": 10.0,
+        "dev_correct": 18,
+        "n": 32
+      },
+      {
+        "regularization": 100.0,
+        "dev_correct": 17,
+        "n": 32
+      }
+    ],
+    "tie_break": "largest regularization among equal dev accuracy"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-25T08:10:13.558697+00:00",
+  "python": "3.12.14",
+  "torch": "2.14.1+cpu",
+  "cpu_quota": "400000 100000",
+  "memory_limit_bytes": 17179869184,
+  "gpu_available": false,
+  "data_sampling_seed": 2026102504,
+  "runtime_setup_seed": 20261025,
+  "probe_fit": "deterministic closed form; no random initialization or optimizer updates",
+  "generation": "greedy max16; identical per model",
+  "candidate_scoring": "Same complete external answer strings for both models, no EOS, sum/mean; variable length per candidate is retained and reported",
+  "scope": "Reference access not retried; no paid resources or APIs used"
+}

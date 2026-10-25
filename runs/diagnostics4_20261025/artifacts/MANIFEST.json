@@ -1,0 +1,170 @@
+{
+  "schema": "flygraph.frozen-diagnostics.v1",
+  "run_id": "diagnostics4_20261025",
+  "completed": true,
+  "created_utc": "2026-10-25T08:13:50.986703+00:00",
+  "neural_optimizer_updates": 0,
+  "optimizer_state_applicable": false,
+  "readout_training": "closed-form float64 ridge; deterministic, no neural resume claim",
+  "parent_model_parameter_count": 100028328,
+  "parent_model_sha256": "84b5940341449d27dcc8f656719bff0598afe9c3d6dec97475b4123263a81ac3",
+  "components": [
+    {
+      "path": "artifacts/dev_mcq_features.safetensors",
+      "bytes": 295000,
+      "sha256": "fae1499aacb5b2485b4004853a4ba9b92f0985777addb0c4d05eba87bb6a69ca",
+      "tensor_count": 1,
+      "total_elements": 73728,
+      "inventory": {
+        "last_hidden_state": {
+          "shape": [
+            96,
+            768
+          ],
+          "dtype": "torch.float32",
+          "elements": 73728
+        }
+      },
+      "kind": "frozen EXT3 last-normalized-hidden features, not model weights",
+      "splitting_required": false
+    },
+    {
+      "path": "artifacts/probe_train_features.safetensors",
+      "bytes": 1572960,
+      "sha256": "87280ddc16dfede5c1b42a11adbaf5563ceb8db88c124bc56fb273ff1b44d243",
+      "tensor_count": 1,
+      "total_elements": 393216,
+      "inventory": {
+        "last_hidden_state": {
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32",
+          "elements": 393216
+        }
+      },
+      "kind": "frozen EXT3 last-normalized-hidden features, not model weights",
+      "splitting_required": false
+    },
+    {
+      "path": "artifacts/probe_weights.native_float64.safetensors",
+      "bytes": 123920,
+      "sha256": "e439738106bc1ed2909b218d493087382eaef931b5649a6d96d902ae8275832b",
+      "tensor_count": 12,
+      "total_elements": 15372,
+      "inventory": {
+        "openbookqa_mean": {
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float64",
+          "elements": 768
+        },
+        "openbookqa_std": {
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float64",
+          "elements": 768
+        },
+        "openbookqa_weight": {
+          "shape": [
+            769,
+            4
+          ],
+          "dtype": "torch.float64",
+          "elements": 3076
+        },
+        "piqa_mean": {
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float64",
+          "elements": 768
+        },
+        "piqa_std": {
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float64",
+          "elements": 768
+        },
+        "piqa_weight": {
+          "shape": [
+            769,
+            2
+          ],
+          "dtype": "torch.float64",
+          "elements": 1538
+        },
+        "tiny_openbookqa_mean": {
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float64",
+          "elements": 768
+        },
+        "tiny_openbookqa_std": {
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float64",
+          "elements": 768
+        },
+        "tiny_openbookqa_weight": {
+          "shape": [
+            769,
+            4
+          ],
+          "dtype": "torch.float64",
+          "elements": 3076
+        },
+        "tiny_piqa_mean": {
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float64",
+          "elements": 768
+        },
+        "tiny_piqa_std": {
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float64",
+          "elements": 768
+        },
+        "tiny_piqa_weight": {
+          "shape": [
+            769,
+            2
+          ],
+          "dtype": "torch.float64",
+          "elements": 1538
+        }
+      },
+      "kind": "native closed-form readout coefficients and sufficient standardization state",
+      "splitting_required": false
+    },
+    {
+      "path": "artifacts/test_mcq_features.safetensors",
+      "bytes": 589920,
+      "sha256": "a4f49ca3b0c8189ea5f9b38dc8088bf3f10f3942f1abca003f2ee90d1e6acb88",
+      "tensor_count": 1,
+      "total_elements": 147456,
+      "inventory": {
+        "last_hidden_state": {
+          "shape": [
+            192,
+            768
+          ],
+          "dtype": "torch.float32",
+          "elements": 147456
+        }
+      },
+      "kind": "frozen EXT3 last-normalized-hidden features, not model weights",
+      "splitting_required": false
+    }
+  ],
+  "publication_status_source": "../PUBLICATION.json"
+}

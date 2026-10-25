@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "utc": "2026-10-25T08:10:12.253036+00:00",
+  "source_manifest_unchanged": true,
+  "data_checksums_passed": true,
+  "local_train_dev_test_stems_disjoint": true,
+  "tiny_and_seen_are_intentional_training_subsets": true,
+  "all_candidate_token_boundaries_exact": true,
+  "max_candidate_context_tokens": 359,
+  "historical_overlap_check": {
+    "previous_mcq_unique_stems": 9760,
+    "new_holdout_overlap": 0,
+    "prior_unrecorded_pretraining": "unknown"
+  },
+  "probe_refit": [
+    {
+      "head": "openbookqa",
+      "refit_bitwise_equal": true,
+      "n": 256,
+      "regularization": 10.0
+    },
+    {
+      "head": "tiny_openbookqa",
+      "refit_bitwise_equal": true,
+      "n": 16,
+      "regularization": 1e-06
+    },
+    {
+      "head": "piqa",
+      "refit_bitwise_equal": true,
+      "n": 256,
+      "regularization": 10.0
+    },
+    {
+      "head": "tiny_piqa",
+      "refit_bitwise_equal": true,
+      "n": 16,
+      "regularization": 1e-06
+    }
+  ],
+  "stored_probe_prediction_matches": 288,
+  "features": {
+    "probe_train": {
+      "shape": [
+        512,
+        768
+      ],
+      "dtype": "torch.float32",
+      "sha256": "87280ddc16dfede5c1b42a11adbaf5563ceb8db88c124bc56fb273ff1b44d243"
+    },
+    "dev_mcq": {
+      "shape": [
+        96,
+        768
+      ],
+      "dtype": "torch.float32",
+      "sha256": "fae1499aacb5b2485b4004853a4ba9b92f0985777addb0c4d05eba87bb6a69ca"
+    },
+    "test_mcq": {
+      "shape": [
+        192,
+        768
+      ],
+      "dtype": "torch.float32",
+      "sha256": "a4f49ca3b0c8189ea5f9b38dc8088bf3f10f3942f1abca003f2ee90d1e6acb88"
+    }
+  },
+  "probe_weights_sha256": "e439738106bc1ed2909b218d493087382eaef931b5649a6d96d902ae8275832b",
+  "scope": "Saved frozen features and closed-form coefficients replay; no optimizer state exists or is claimed. Backbone checkpoint bytes preserved by EXT2/EXT3 immutable references."
+}
