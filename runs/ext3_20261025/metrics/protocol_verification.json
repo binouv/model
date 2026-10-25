@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "selected_model_sha256": "84b5940341449d27dcc8f656719bff0598afe9c3d6dec97475b4123263a81ac3",
+  "checks": [
+    {
+      "id": "openbookqa:dev:220",
+      "task": "openbookqa",
+      "full_teacher_forced_nll": 0.6710470914840698,
+      "cached_label_and_eos_nll": 0.6710466742351855,
+      "loss_abs_difference": 4.172488843323663e-07,
+      "cache_full_max_abs_logit_differences": [
+        0.0,
+        1.049041748046875e-05
+      ],
+      "greedy_argmax_equal": [
+        true,
+        true
+      ]
+    },
+    {
+      "id": "piqa:dev:90e8f74b-c861-41ad-b39c-657c7a35f833",
+      "task": "piqa",
+      "full_teacher_forced_nll": 0.35649195313453674,
+      "cached_label_and_eos_nll": 0.3564914762328044,
+      "loss_abs_difference": 4.769017323269509e-07,
+      "cache_full_max_abs_logit_differences": [
+        0.0,
+        4.76837158203125e-06
+      ],
+      "greedy_argmax_equal": [
+        true,
+        true
+      ]
+    },
+    {
+      "id": "arc_challenge:dev:Mercury_7032340",
+      "task": "arc_challenge",
+      "full_teacher_forced_nll": 2.0485355854034424,
+      "cached_label_and_eos_nll": 2.0485365390077277,
+      "loss_abs_difference": 9.536042853142135e-07,
+      "cache_full_max_abs_logit_differences": [
+        0.0,
+        5.7220458984375e-06
+      ],
+      "greedy_argmax_equal": [
+        true,
+        true
+      ]
+    }
+  ],
+  "input_and_target_alignment_passed": true,
+  "test_used": false
+}

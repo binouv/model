@@ -1,0 +1,13 @@
+{
+  "steps": 768,
+  "completed_fixed_step_count": true,
+  "stop_reason": "fixed_step_count",
+  "unique_source_examples": 2304,
+  "qa_permutation_presentations": 4608,
+  "alpaca_presentations": 768,
+  "wall_seconds": 1113.5037718689998,
+  "end_utc": "2026-10-25T07:21:02.664964+00:00",
+  "selected_step": 640,
+  "max_rss_kib": 3697064,
+  "test_used": false
+}

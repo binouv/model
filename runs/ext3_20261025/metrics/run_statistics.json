@@ -1,0 +1,9 @@
+{
+  "completed_steps": 768,
+  "unique_source_examples": 2304,
+  "input_tokens": 865716,
+  "first64_mean_loss": 1.3653170994482935,
+  "last64_mean_loss": 1.3822616394609213,
+  "updated_parameters": 13391640,
+  "total_parameters": 100028328
+}

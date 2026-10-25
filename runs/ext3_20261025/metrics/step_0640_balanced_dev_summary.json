@@ -1,0 +1,28 @@
+{
+  "arm": "step_0640",
+  "selection_objective": 1.0605169725604355,
+  "by_task": {
+    "openbookqa": {
+      "n": 128,
+      "correct": 32,
+      "nll": 1.4281660551205277,
+      "prediction_counts": {
+        "0": 54,
+        "1": 15,
+        "2": 50,
+        "3": 9
+      }
+    },
+    "piqa": {
+      "n": 64,
+      "correct": 32,
+      "nll": 0.6928678900003433,
+      "prediction_counts": {
+        "0": 52,
+        "1": 12
+      }
+    }
+  },
+  "source_option_invariant_questions": 0,
+  "n_unique_questions": 64
+}

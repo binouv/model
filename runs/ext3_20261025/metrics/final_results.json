@@ -1,0 +1,413 @@
+{
+  "completed": true,
+  "training": {
+    "steps": 768,
+    "completed_fixed_step_count": true,
+    "stop_reason": "fixed_step_count",
+    "unique_source_examples": 2304,
+    "qa_permutation_presentations": 4608,
+    "alpaca_presentations": 768,
+    "wall_seconds": 1113.5037718689998,
+    "end_utc": "2026-10-25T07:21:02.664964+00:00",
+    "selected_step": 640,
+    "max_rss_kib": 3697064,
+    "test_used": false
+  },
+  "selection": {
+    "best_step": 640,
+    "best_objective": 1.0605169725604355,
+    "criterion": "mean normalized choice NLL over balanced cyclic permutations of new OBQA/PIQA dev"
+  },
+  "summaries": {
+    "original_EXT256": {
+      "arm": "original_EXT256",
+      "split": "test",
+      "seconds": 379.62172401099997,
+      "n_mcq": 384,
+      "n_alpaca": 64,
+      "generation_evaluated": true,
+      "by_task": {
+        "openbookqa": {
+          "n": 128,
+          "label_correct": 38,
+          "label_accuracy": 0.296875,
+          "generation_correct": 0,
+          "generation_accuracy": 0.0,
+          "valid_generation": 0,
+          "gold_label_eos_nll": 11.690310215577483
+        },
+        "piqa": {
+          "n": 128,
+          "label_correct": 64,
+          "label_accuracy": 0.5,
+          "generation_correct": 0,
+          "generation_accuracy": 0.0,
+          "valid_generation": 0,
+          "gold_label_eos_nll": 10.567890159785748
+        },
+        "arc_challenge": {
+          "n": 128,
+          "label_correct": 28,
+          "label_accuracy": 0.21875,
+          "generation_correct": 0,
+          "generation_accuracy": 0.0,
+          "valid_generation": 0,
+          "gold_label_eos_nll": 11.965872125700116
+        }
+      },
+      "alpaca_nll": 3.2819516713288324,
+      "selection_objective": 8.513384015564021,
+      "weight_sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47"
+    },
+    "parent_EXT2": {
+      "arm": "parent_EXT2",
+      "split": "test",
+      "seconds": 184.06413495900006,
+      "n_mcq": 384,
+      "n_alpaca": 64,
+      "generation_evaluated": true,
+      "by_task": {
+        "openbookqa": {
+          "n": 128,
+          "label_correct": 31,
+          "label_accuracy": 0.2421875,
+          "generation_correct": 30,
+          "generation_accuracy": 0.234375,
+          "valid_generation": 128,
+          "gold_label_eos_nll": 1.5425996929034582
+        },
+        "piqa": {
+          "n": 128,
+          "label_correct": 63,
+          "label_accuracy": 0.4921875,
+          "generation_correct": 63,
+          "generation_accuracy": 0.4921875,
+          "valid_generation": 127,
+          "gold_label_eos_nll": 0.7202302765199882
+        },
+        "arc_challenge": {
+          "n": 128,
+          "label_correct": 29,
+          "label_accuracy": 0.2265625,
+          "generation_correct": 29,
+          "generation_accuracy": 0.2265625,
+          "valid_generation": 128,
+          "gold_label_eos_nll": 2.6524368249198
+        }
+      },
+      "alpaca_nll": 2.6198021009779393,
+      "selection_objective": 1.6275440234671283,
+      "weight_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe"
+    },
+    "selected_EXT3": {
+      "arm": "selected_EXT3",
+      "split": "test",
+      "seconds": 168.09675351000033,
+      "n_mcq": 384,
+      "n_alpaca": 64,
+      "generation_evaluated": true,
+      "by_task": {
+        "openbookqa": {
+          "n": 128,
+          "label_correct": 29,
+          "label_accuracy": 0.2265625,
+          "generation_correct": 28,
+          "generation_accuracy": 0.21875,
+          "valid_generation": 128,
+          "gold_label_eos_nll": 1.4330633644799562
+        },
+        "piqa": {
+          "n": 128,
+          "label_correct": 66,
+          "label_accuracy": 0.515625,
+          "generation_correct": 66,
+          "generation_accuracy": 0.515625,
+          "valid_generation": 126,
+          "gold_label_eos_nll": 0.7211070069359415
+        },
+        "arc_challenge": {
+          "n": 128,
+          "label_correct": 29,
+          "label_accuracy": 0.2265625,
+          "generation_correct": 31,
+          "generation_accuracy": 0.2421875,
+          "valid_generation": 128,
+          "gold_label_eos_nll": 2.1689931105872375
+        }
+      },
+      "alpaca_nll": 2.6128191418084303,
+      "selection_objective": 1.5889965044081091,
+      "weight_sha256": "84b5940341449d27dcc8f656719bff0598afe9c3d6dec97475b4123263a81ac3"
+    }
+  },
+  "comparisons": {
+    "original_EXT256": {
+      "by_task": {
+        "openbookqa": {
+          "label": {
+            "before_correct": 38,
+            "after_correct": 29,
+            "n": 128,
+            "difference": -0.0703125,
+            "paired_bootstrap95": [
+              -0.1796875,
+              0.0390625
+            ],
+            "after_wilson95": [
+              0.16263248458646878,
+              0.30642678837560533
+            ]
+          },
+          "generation": {
+            "before_correct": 0,
+            "after_correct": 28,
+            "n": 128,
+            "difference": 0.21875,
+            "paired_bootstrap95": [
+              0.1484375,
+              0.2890625
+            ],
+            "after_wilson95": [
+              0.15590524094938457,
+              0.2979842969544631
+            ]
+          }
+        },
+        "piqa": {
+          "label": {
+            "before_correct": 64,
+            "after_correct": 66,
+            "n": 128,
+            "difference": 0.015625,
+            "paired_bootstrap95": [
+              -0.0859375,
+              0.1171875
+            ],
+            "after_wilson95": [
+              0.4298624503761508,
+              0.6004770197403022
+            ]
+          },
+          "generation": {
+            "before_correct": 0,
+            "after_correct": 66,
+            "n": 128,
+            "difference": 0.515625,
+            "paired_bootstrap95": [
+              0.4296875,
+              0.6015625
+            ],
+            "after_wilson95": [
+              0.4298624503761508,
+              0.6004770197403022
+            ]
+          }
+        },
+        "arc_challenge": {
+          "label": {
+            "before_correct": 28,
+            "after_correct": 29,
+            "n": 128,
+            "difference": 0.0078125,
+            "paired_bootstrap95": [
+              -0.0859375,
+              0.1015625
+            ],
+            "after_wilson95": [
+              0.16263248458646878,
+              0.30642678837560533
+            ]
+          },
+          "generation": {
+            "before_correct": 0,
+            "after_correct": 31,
+            "n": 128,
+            "difference": 0.2421875,
+            "paired_bootstrap95": [
+              0.171875,
+              0.3203125
+            ],
+            "after_wilson95": [
+              0.17618737999242307,
+              0.323211363086104
+            ]
+          }
+        }
+      },
+      "mean_label_difference": -0.015625,
+      "stratified_paired_bootstrap95": [
+        -0.07291666666666667,
+        0.041666666666666664
+      ],
+      "positive_tasks": 2
+    },
+    "parent_EXT2": {
+      "by_task": {
+        "openbookqa": {
+          "label": {
+            "before_correct": 31,
+            "after_correct": 29,
+            "n": 128,
+            "difference": -0.015625,
+            "paired_bootstrap95": [
+              -0.125,
+              0.09375
+            ],
+            "after_wilson95": [
+              0.16263248458646878,
+              0.30642678837560533
+            ]
+          },
+          "generation": {
+            "before_correct": 30,
+            "after_correct": 28,
+            "n": 128,
+            "difference": -0.015625,
+            "paired_bootstrap95": [
+              -0.125,
+              0.09375
+            ],
+            "after_wilson95": [
+              0.15590524094938457,
+              0.2979842969544631
+            ]
+          }
+        },
+        "piqa": {
+          "label": {
+            "before_correct": 63,
+            "after_correct": 66,
+            "n": 128,
+            "difference": 0.0234375,
+            "paired_bootstrap95": [
+              -0.109375,
+              0.15625
+            ],
+            "after_wilson95": [
+              0.4298624503761508,
+              0.6004770197403022
+            ]
+          },
+          "generation": {
+            "before_correct": 63,
+            "after_correct": 66,
+            "n": 128,
+            "difference": 0.0234375,
+            "paired_bootstrap95": [
+              -0.109375,
+              0.15625
+            ],
+            "after_wilson95": [
+              0.4298624503761508,
+              0.6004770197403022
+            ]
+          }
+        },
+        "arc_challenge": {
+          "label": {
+            "before_correct": 29,
+            "after_correct": 29,
+            "n": 128,
+            "difference": 0.0,
+            "paired_bootstrap95": [
+              -0.1015625,
+              0.1015625
+            ],
+            "after_wilson95": [
+              0.16263248458646878,
+              0.30642678837560533
+            ]
+          },
+          "generation": {
+            "before_correct": 29,
+            "after_correct": 31,
+            "n": 128,
+            "difference": 0.015625,
+            "paired_bootstrap95": [
+              -0.0859375,
+              0.1171875
+            ],
+            "after_wilson95": [
+              0.17618737999242307,
+              0.323211363086104
+            ]
+          }
+        }
+      },
+      "mean_label_difference": 0.0026041666666666665,
+      "stratified_paired_bootstrap95": [
+        -0.0625,
+        0.06770833333333333
+      ],
+      "positive_tasks": 1
+    }
+  },
+  "alpaca_nll_not_worse_than_EXT2": true,
+  "registered_improvement_criterion_met": false,
+  "prediction_counts": {
+    "original_EXT256": {
+      "openbookqa": {
+        "0": 128
+      },
+      "piqa": {
+        "0": 128
+      },
+      "arc_challenge": {
+        "0": 128
+      }
+    },
+    "parent_EXT2": {
+      "openbookqa": {
+        "1": 118,
+        "3": 10
+      },
+      "piqa": {
+        "1": 117,
+        "0": 11
+      },
+      "arc_challenge": {
+        "1": 125,
+        "3": 3
+      }
+    },
+    "selected_EXT3": {
+      "openbookqa": {
+        "0": 40,
+        "2": 47,
+        "1": 26,
+        "3": 15
+      },
+      "piqa": {
+        "0": 84,
+        "1": 44
+      },
+      "arc_challenge": {
+        "1": 34,
+        "0": 56,
+        "2": 35,
+        "3": 3
+      }
+    }
+  },
+  "bootstrap_seed": 20261026,
+  "bootstrap_repeats": 10000,
+  "general_superiority_established": false,
+  "references": {
+    "checked_utc": "2026-10-25T07:02:26.044195+00:00",
+    "models": [
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "status": "blocked_not_measured",
+        "error": "Tunnel connection failed: 403 Forbidden",
+        "attempt": "official huggingface.co resolve/main/config.json"
+      },
+      {
+        "id": "openbmb/MiniCPM-V-4.7-1B",
+        "status": "blocked_not_measured",
+        "error": "Tunnel connection failed: 403 Forbidden",
+        "attempt": "official huggingface.co resolve/main/config.json"
+      }
+    ],
+    "alternate_routes_attempted": false
+  }
+}

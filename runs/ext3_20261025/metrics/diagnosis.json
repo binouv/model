@@ -1,0 +1,40 @@
+{
+  "utc": "2026-10-25T07:00:53.097566+00:00",
+  "parent_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe",
+  "strict_load_135_tensors_passed": true,
+  "parameters": 100028328,
+  "proposed_trainable_parameters": 13391640,
+  "proposed_trainable_prefixes": [
+    "blocks.12.",
+    "blocks.13.",
+    "norm."
+  ],
+  "balanced_dev": {
+    "arm": "parent_EXT2",
+    "selection_objective": 1.117190136341378,
+    "by_task": {
+      "openbookqa": {
+        "n": 128,
+        "correct": 32,
+        "nll": 1.5304499110206962,
+        "prediction_counts": {
+          "0": 0,
+          "1": 122,
+          "2": 0,
+          "3": 6
+        }
+      },
+      "piqa": {
+        "n": 64,
+        "correct": 31,
+        "nll": 0.70393036166206,
+        "prediction_counts": {
+          "0": 5,
+          "1": 59
+        }
+      }
+    },
+    "source_option_invariant_questions": 1,
+    "n_unique_questions": 64
+  }
+}

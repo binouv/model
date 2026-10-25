@@ -1,0 +1,33 @@
+{
+  "run_id": "ext3_20261025",
+  "seed": 20261025,
+  "parameters": 100028328,
+  "trainable_parameters": 13391640,
+  "trainable_prefixes": [
+    "blocks.12.",
+    "blocks.13.",
+    "norm."
+  ],
+  "parent_path": "../ext2_20261022/checkpoints/step_3584/model.safetensors",
+  "parent_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe",
+  "original_EXT256_path": "../ext_20261018/checkpoints/step_0256/model.safetensors",
+  "original_EXT256_sha256": "20048dd39bf44dcadfc40935736323767494e56437d1e502dfa94627c2956b47",
+  "training_kind": "warm_start_existing_EXT2_selected_weights_new_AdamW_last_two_blocks_and_norm",
+  "max_steps": 768,
+  "learning_rate": 5e-05,
+  "warmup_steps": 32,
+  "checkpoint_interval": 64,
+  "dev_interval": 128,
+  "training_stop_utc": "2026-10-25T07:55:00+00:00",
+  "deadline_utc": "2026-10-25T08:49:00+00:00",
+  "objective": "0.4 OBQA normalized label CE averaged over all4 cyclic orders +0.4 PIQA CE averaged over both orders +0.2 Alpaca assistant/EOS CE",
+  "native_precision": "FP32 model and AdamW; BF16 CPU autocast; FP32 delta state",
+  "generation_budget": 16,
+  "selection": "minimum new balanced-permutation dev choice NLL; no test selection",
+  "data_manifest_sha256": "4cc682fb45223a2c81b3bade4e51c7957994465fe259ca937be370eb60793e76",
+  "registered_utc": "2026-10-25T07:02:26.044008+00:00",
+  "reference_models": [
+    "Qwen/Qwen3.5-0.8B",
+    "openbmb/MiniCPM-V-4.7-1B"
+  ]
+}

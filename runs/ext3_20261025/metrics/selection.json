@@ -1,0 +1,5 @@
+{
+  "best_step": 640,
+  "best_objective": 1.0605169725604355,
+  "criterion": "mean normalized choice NLL over balanced cyclic permutations of new OBQA/PIQA dev"
+}

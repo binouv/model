@@ -1,0 +1,52 @@
+{
+  "seed": 20261025,
+  "created_utc": "2026-10-25T07:00:07.371572+00:00",
+  "source_archive_sha256": "c259fa1b2f8f5c9ae2df58bb6cc3200e705e2945b24e896988006c546a572607",
+  "source_release": "OpenCompassData-core-20240207 / 0.2.2.rc1",
+  "source_members": {
+    "data/openbookqa/Main/dev.jsonl": "a08f720be757a0f0b6aaf8e1e1162c2b05a882c9c031d2559ba3d5467d023466",
+    "data/openbookqa/Main/test.jsonl": "feb2bd9bfa6161dca4c44ce90e51e8cdada83eb5061407fcdc5005e44aaf2313",
+    "data/piqa/dev.jsonl": "a73f46cb5d72b2cc399522a79f27728a429d9b89d9a236243fcfda8c02588d54",
+    "data/piqa/dev-labels.lst": "b4192dc3a2a0363d9d60ccf79800cbbe2f32ebb17726efdde6970e0b8131bceb",
+    "data/ARC/ARC-c/ARC-Challenge-Dev.jsonl": "55224364abd2477f66a9a57c5cbef109fb71d83019aa5e37aec0e7ab757746ca",
+    "data/ARC/ARC-c/ARC-Challenge-Test.jsonl": "9fa8ffb3e3a1f88cb302d53dd95aae81e39209ad9bcf974376b319d8fd35717c"
+  },
+  "original_ext2_data_manifest_sha256": "66baf05f1941c8b5ead94ccd022ae20c2562dee654ccd21d6136b74fddde829c",
+  "alpaca_revision": "761dc5bfbdeeffa89b8bff5d038781a4055f796a",
+  "alpaca_raw_sha256": "2eddafc6b977608d778aaab8dfc7e50e547b3af9826dfb9e909d9fc362e4a419",
+  "licenses": {
+    "alpaca": "CC-BY-NC-4.0",
+    "openbookqa": "Apache-2.0",
+    "piqa": "AFL-3.0",
+    "arc_challenge": "CC-BY-SA-4.0"
+  },
+  "files": {
+    "train.jsonl": {
+      "count": 2304,
+      "sha256": "322f870c8e1e9b167ac02c2283124d95099de48812e9b8cdaaea8f5c5d3eba03"
+    },
+    "dev_mcq.jsonl": {
+      "count": 96,
+      "sha256": "91fdec6b7581fb618c676cf9819dfafe7b705ee21e00b60cef2f498076ea120b"
+    },
+    "test_mcq.jsonl": {
+      "count": 384,
+      "sha256": "2736d4e439a36c15fcd95a1fc23e7592d8e37dc21130575cbb707adc7c299cbe"
+    },
+    "dev_alpaca.jsonl": {
+      "count": 32,
+      "sha256": "a72d0b46f896894bc0b92b8405ff57ece886f2d9c671896b396a58680ac658ad"
+    },
+    "test_alpaca.jsonl": {
+      "count": 64,
+      "sha256": "81f7b00d149e21fe04edb921ae87a159adac5f9eb62e86649e93191058085b58"
+    }
+  },
+  "train_unique_source_examples": 2304,
+  "train_overlap_with_prior_training": "allowed and disclosed; source records sampled from EXT2 training only",
+  "new_mcq_holdout_intersection_with_prior_ext2_mcq_train_dev_test_and_arc128": 0,
+  "new_alpaca_holdouts_exclude_prior_ext_and_ext2_train_dev_test": true,
+  "piqa_test": "reserved new disjoint official validation subset; not hidden official test",
+  "augmentation": "cyclic permutations of original unchanged alternatives; gold index remapped; no new questions, answers, or rationales",
+  "historical_pretraining_contamination": "unknown; semantic/paraphrase overlap not excluded"
+}

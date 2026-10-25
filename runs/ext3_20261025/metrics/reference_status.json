@@ -1,0 +1,18 @@
+{
+  "checked_utc": "2026-10-25T07:02:26.044195+00:00",
+  "models": [
+    {
+      "id": "Qwen/Qwen3.5-0.8B",
+      "status": "blocked_not_measured",
+      "error": "Tunnel connection failed: 403 Forbidden",
+      "attempt": "official huggingface.co resolve/main/config.json"
+    },
+    {
+      "id": "openbmb/MiniCPM-V-4.7-1B",
+      "status": "blocked_not_measured",
+      "error": "Tunnel connection failed: 403 Forbidden",
+      "attempt": "official huggingface.co resolve/main/config.json"
+    }
+  ],
+  "alternate_routes_attempted": false
+}

@@ -1,0 +1,50 @@
+{
+  "format": "flygraph.checkpoint-parts.v1",
+  "identity": "EXT3_20261025_final_model",
+  "filename": "model.safetensors",
+  "size_bytes": 400125984,
+  "sha256": "8188f8846c123b6ba72653456f4cafd6b216c92669ad70d7940a799192c26a79",
+  "max_part_bytes": 80000000,
+  "parts": [
+    {
+      "name": "model.safetensors.part0000",
+      "size_bytes": 80000000,
+      "sha256": "87310e0b04b03513fd29c4a55d56bc2b4310dffec05aff2afa2488058ed6cf71"
+    },
+    {
+      "name": "model.safetensors.part0001",
+      "size_bytes": 80000000,
+      "sha256": "fda41abe56ddd9417b47ebb2f35b7193100c4d643acfe570fdaa0be4bb115fa4"
+    },
+    {
+      "name": "model.safetensors.part0002",
+      "size_bytes": 80000000,
+      "sha256": "9c2133000c0db36094d401972b5655949fe6ea09fb318d6d9679e486a6e0b4f8"
+    },
+    {
+      "name": "model.safetensors.part0003",
+      "size_bytes": 80000000,
+      "sha256": "4a1c1b4bb156c1e07da1d3366b1b9b242f7611dad457485ea8a39407c7b133d5"
+    },
+    {
+      "name": "model.safetensors.part0004",
+      "size_bytes": 80000000,
+      "sha256": "312e84b4c04a24b383cf94ac13945cff0a33533b047d24e78b0be06b1c6cfa14"
+    },
+    {
+      "name": "model.safetensors.part0005",
+      "size_bytes": 125984,
+      "sha256": "ff2b930033aed3dc60d039696de680c454b90078df05257a09f170c0786b60b4"
+    }
+  ],
+  "run_id": "ext3_20261025",
+  "role": "final_model",
+  "completed_new_optimizer_step": 768,
+  "parameters": 100028328,
+  "trainable_parameters": 13391640,
+  "native_precision": "float32",
+  "parent_checkpoint_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe",
+  "data_manifest_sha256": "4cc682fb45223a2c81b3bade4e51c7957994465fe259ca937be370eb60793e76",
+  "source_manifest_sha256": "858c5234e0fae1c7a4ae8e0bad49537c972ff413b5accd45ff511408945f491d",
+  "status": "saved_local"
+}

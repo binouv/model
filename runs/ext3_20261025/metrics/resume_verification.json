@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "from_step": 64,
+  "to_step": 128,
+  "all64_losses_and_gradient_norms_exact": true,
+  "all135_native_tensors_bitwise_equal": true,
+  "expected_model_sha256": "20258c74432512c3b4e90b4cc1de56c4d359aa32dad94240a5a097eef30edaab",
+  "final_weights_not_modified": true
+}

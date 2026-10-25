@@ -1,0 +1,76 @@
+{
+  "status": "saved_local_pending_repository_push",
+  "components": [
+    {
+      "role": "final_model",
+      "directory": "artifacts/final_model_parts",
+      "filename": "model.safetensors",
+      "size_bytes": 400125984,
+      "sha256": "8188f8846c123b6ba72653456f4cafd6b216c92669ad70d7940a799192c26a79",
+      "parts": 6,
+      "step": 768
+    },
+    {
+      "role": "final_state",
+      "directory": "artifacts/final_state_parts",
+      "filename": "training_state.pt",
+      "size_bytes": 107164716,
+      "sha256": "44ce4a14eb3867514a21f1ede27519a5db5d008316ce3fe9623808cc31b200b7",
+      "parts": 2,
+      "step": 768
+    },
+    {
+      "role": "selected_model",
+      "directory": "artifacts/selected_model_parts",
+      "filename": "model.safetensors",
+      "size_bytes": 400125984,
+      "sha256": "84b5940341449d27dcc8f656719bff0598afe9c3d6dec97475b4123263a81ac3",
+      "parts": 6,
+      "step": 640
+    },
+    {
+      "role": "selected_state",
+      "directory": "artifacts/selected_state_parts",
+      "filename": "training_state.pt",
+      "size_bytes": 107164716,
+      "sha256": "14d7d373ad684d2ea9b9e628a02593ec3cfaa57c487bece21dccdbbbf1ebe565",
+      "parts": 2,
+      "step": 640
+    }
+  ],
+  "final_step": 768,
+  "selected_step": 640,
+  "selected_model_role": "selected_model",
+  "parent_checkpoint_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe",
+  "parent_published_commit": "7b712f2d557a85248639037348dd7b27f2705790",
+  "parent_parts": "runs/ext2_20261022/artifacts/selected_model_parts",
+  "original_EXT256_parts": "runs/ext2_20261022/artifacts/parent_parts",
+  "native_model_dtype": "float32",
+  "native_optimizer_dtype": "float32",
+  "changed_tensors": [
+    "blocks.12.down.weight",
+    "blocks.12.mix.gates.bias",
+    "blocks.12.mix.gates.weight",
+    "blocks.12.mix.k.weight",
+    "blocks.12.mix.out.weight",
+    "blocks.12.mix.q.weight",
+    "blocks.12.mix.read.weight",
+    "blocks.12.mix.v.weight",
+    "blocks.12.norm1.weight",
+    "blocks.12.norm2.weight",
+    "blocks.12.uv.weight",
+    "blocks.13.down.weight",
+    "blocks.13.mix.k.weight",
+    "blocks.13.mix.out.weight",
+    "blocks.13.mix.q.weight",
+    "blocks.13.mix.v.weight",
+    "blocks.13.norm1.weight",
+    "blocks.13.norm2.weight",
+    "blocks.13.uv.weight",
+    "norm.weight"
+  ],
+  "all_frozen_parameters_bitwise_unchanged": true,
+  "registered_improvement_criterion_met": false,
+  "general_superiority_established": false,
+  "all_parts_strictly_under_bytes": 90000000
+}

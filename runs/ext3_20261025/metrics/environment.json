@@ -1,0 +1,20 @@
+{
+  "checked_utc": "2026-10-25T07:09:29.109783+00:00",
+  "cpu_quota": "400000 100000",
+  "memory_limit_bytes": 17179869184,
+  "gpu_available": false,
+  "torch": "2.14.1+cpu",
+  "original_branch": "work",
+  "original_head": "a0fc622a70074d2e09e184646fb99959c010099d",
+  "repository": "https://github.com/binouv/model.git",
+  "primary_frozen_source_hashes_match": {
+    "src/train.py": true,
+    "src/objective.py": true,
+    "src/common.py": true,
+    "src/model.py": true,
+    "src/tokenizer.py": true,
+    "config.json": true,
+    "data/manifest.json": true
+  },
+  "no_relevant_AGENTS_or_skill_files_found": true
+}

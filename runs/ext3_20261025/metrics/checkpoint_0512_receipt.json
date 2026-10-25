@@ -1,0 +1,10 @@
+{
+  "step": 512,
+  "status": "saved_local",
+  "scientific_status": "in_progress",
+  "model_sha256": "6c225625c496c7a2f411b8f7c2160a41775942cc56964f90ea164eee2db31c94",
+  "state_sha256": "72f85f131f881b30301bb896cf65ecd9b0abf9bac90c467ffb8b95bcfce7c607",
+  "model_bytes": 400125984,
+  "state_bytes": 107164716,
+  "strict_reload_equal": true
+}

@@ -1,0 +1,30 @@
+{
+  "format": "flygraph.checkpoint-parts.v1",
+  "identity": "EXT3_20261025_selected_state",
+  "filename": "training_state.pt",
+  "size_bytes": 107164716,
+  "sha256": "14d7d373ad684d2ea9b9e628a02593ec3cfaa57c487bece21dccdbbbf1ebe565",
+  "max_part_bytes": 80000000,
+  "parts": [
+    {
+      "name": "training_state.pt.part0000",
+      "size_bytes": 80000000,
+      "sha256": "beb3724aa33d4228bbe54aa9357345ea139ca0e4acc0891380170c7d547c671c"
+    },
+    {
+      "name": "training_state.pt.part0001",
+      "size_bytes": 27164716,
+      "sha256": "a20b8cebbe9ecf7718ce745678f27b4fc7f32abd64f322606071607d41df2627"
+    }
+  ],
+  "run_id": "ext3_20261025",
+  "role": "selected_state",
+  "completed_new_optimizer_step": 640,
+  "parameters": 100028328,
+  "trainable_parameters": 13391640,
+  "native_precision": "float32",
+  "parent_checkpoint_sha256": "b79907ef591f16f73ac98c9c4774f02d26cfc404b12272587cb0e4900530effe",
+  "data_manifest_sha256": "4cc682fb45223a2c81b3bade4e51c7957994465fe259ca937be370eb60793e76",
+  "source_manifest_sha256": "858c5234e0fae1c7a4ae8e0bad49537c972ff413b5accd45ff511408945f491d",
+  "status": "saved_local"
+}

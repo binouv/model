@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Apache-2.0.txt",
+    "source_url": "https://raw.githubusercontent.com/allenai/OpenBookQA/main/LICENSE",
+    "bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "status": "downloaded"
+  },
+  {
+    "name": "PIQA_README.txt",
+    "source_url": "https://raw.githubusercontent.com/ybisk/ybisk.github.io/master/piqa/README.md",
+    "bytes": 244,
+    "sha256": "f7bcb808a64959151698f2bca621572c4809459733d04b95d53f3c62588f1593",
+    "status": "downloaded"
+  },
+  {
+    "name": "AFL-3.0.txt",
+    "source_url": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/AFL-3.0.txt",
+    "bytes": 10334,
+    "sha256": "de0612c5780d0d21f9982d2cadfd715d2d3b7a0dfeb532a5023d42a1d4fdce5c",
+    "status": "downloaded"
+  },
+  {
+    "name": "CC-BY-NC-4.0.txt",
+    "source_url": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/CC-BY-NC-4.0.txt",
+    "bytes": 17649,
+    "sha256": "cc97a2c4ff7723a1f25179dc7c18f676fa84191bbb36ea7d0061acaf3c102559",
+    "status": "downloaded"
+  },
+  {
+    "name": "CC-BY-SA-4.0.txt",
+    "source_url": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/CC-BY-SA-4.0.txt",
+    "bytes": 18375,
+    "sha256": "cde7883b9050a1104f4ac19a1572aafd6e5d7323b68351aaf51fbf4beba54966",
+    "status": "downloaded"
+  },
+  {
+    "name": "GSM8K_MIT_LICENSE.txt",
+    "source_url": "https://raw.githubusercontent.com/openai/grade-school-math/master/LICENSE",
+    "bytes": 1062,
+    "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b",
+    "status": "downloaded"
+  }
+]

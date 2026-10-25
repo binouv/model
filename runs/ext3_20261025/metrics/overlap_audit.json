@@ -1,0 +1,9 @@
+{
+  "new_mcq_train_vs_dev_test_exact_normalized_stem": 0,
+  "new_mcq_dev_vs_test_exact_normalized_stem": 0,
+  "new_mcq_held_vs_prior_ext2_mcq_train_dev_test": 0,
+  "known_prior_alpaca_training_texts_checked": 9216,
+  "prior_alpaca_full_stem_and_all_choices_hits": [],
+  "prior_alpaca_long_stem_only_substring_hits": [],
+  "limitations": "Generic short stems are not entire items. Exact screens do not exclude semantic/paraphrase overlap or unknown historical pretraining contamination."
+}
