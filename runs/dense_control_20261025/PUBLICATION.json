@@ -1,7 +1,150 @@
 {
-  "status": "uploaded_unverified_pending_readback",
+  "status": "published_verified",
   "repo": "https://github.com/binouv/model.git",
   "branch": "flygraph/dense-control-20261025",
   "base_commit": "767a4d5468cc2bd175b8c9b63d15e3147db321ff",
-  "trained": false
+  "artifact_commit": "f3e585a5387d59d49a37adca9db1d592e680afc8",
+  "verified_utc": "2026-10-25T08:28:57.418402+00:00",
+  "all_published_file_checksums_verified": 33,
+  "remote_smoke": {
+    "status": "passed",
+    "utc": "2026-10-25T08:28:54.127127+00:00",
+    "seed": 2026102505,
+    "device": "cpu",
+    "precision": "float32",
+    "checks": {
+      "logit_and_cache_shapes": true,
+      "finite_logits": true,
+      "causal_fixture_has_changed_future": true,
+      "causal_prefix_invariant_to_future": true,
+      "one_token_cache_matches_full": true,
+      "multitoken_cache_matches_full": true,
+      "cache_input_not_mutated": true,
+      "last_only_matches_full": true,
+      "use_cache_false_logits": true,
+      "use_cache_false_returns_none": true,
+      "tied_same_parameter_and_storage": true,
+      "reject_inconsistent_cache_position": true,
+      "reject_inconsistent_cache_layers": true,
+      "reject_over_context": true,
+      "reject_empty_sequence": true,
+      "reject_invalid_dimensions": true,
+      "reject_foreign_architecture_marker": true,
+      "generation_cache_matches_full_greedy": true,
+      "generation_zero_budget": true,
+      "generation_respects_context_budget": true,
+      "finite_loss_and_all_gradients": true,
+      "nonzero_gradient_each_tensor": true,
+      "masked_loss_matches_dense": true,
+      "reject_no_supervision": true,
+      "reject_target_shape_mismatch": true,
+      "checkpointed_loss_matches": true,
+      "checkpoint_gradient_embed.weight": true,
+      "checkpoint_gradient_blocks.0.norm1.weight": true,
+      "checkpoint_gradient_blocks.0.norm2.weight": true,
+      "checkpoint_gradient_blocks.0.attention.q.weight": true,
+      "checkpoint_gradient_blocks.0.attention.k.weight": true,
+      "checkpoint_gradient_blocks.0.attention.v.weight": true,
+      "checkpoint_gradient_blocks.0.attention.out.weight": true,
+      "checkpoint_gradient_blocks.0.uv.weight": true,
+      "checkpoint_gradient_blocks.0.down.weight": true,
+      "checkpoint_gradient_blocks.1.norm1.weight": true,
+      "checkpoint_gradient_blocks.1.norm2.weight": true,
+      "checkpoint_gradient_blocks.1.attention.q.weight": true,
+      "checkpoint_gradient_blocks.1.attention.k.weight": true,
+      "checkpoint_gradient_blocks.1.attention.v.weight": true,
+      "checkpoint_gradient_blocks.1.attention.out.weight": true,
+      "checkpoint_gradient_blocks.1.uv.weight": true,
+      "checkpoint_gradient_blocks.1.down.weight": true,
+      "checkpoint_gradient_norm.weight": true,
+      "saved_init_matches_seed": true,
+      "native_reload_exact_logits": true,
+      "native_reload_retains_tie": true
+    },
+    "details": {
+      "causal_prefix_invariant_to_future": {
+        "max_abs": 0.0,
+        "atol": 1e-06,
+        "rtol": 1e-05
+      },
+      "one_token_cache_matches_full": {
+        "max_abs": 2.682209014892578e-07,
+        "atol": 2e-05,
+        "rtol": 0.0001
+      },
+      "multitoken_cache_matches_full": {
+        "max_abs": 3.5762786865234375e-07,
+        "atol": 2e-05,
+        "rtol": 0.0001
+      },
+      "last_only_matches_full": {
+        "max_abs": 1.7881393432617188e-07,
+        "atol": 2e-05,
+        "rtol": 0.0001
+      },
+      "use_cache_false_logits": {
+        "max_abs": 0.0,
+        "atol": 2e-05,
+        "rtol": 0.0001
+      },
+      "loss": 9.02388858795166,
+      "masked_loss_matches_dense": {
+        "max_abs": 9.5367431640625e-07,
+        "atol": 1e-06,
+        "rtol": 0.0001
+      },
+      "checkpointed_loss_matches": {
+        "max_abs": 0.0,
+        "atol": 1e-06,
+        "rtol": 0.0001
+      },
+      "checkpoint_gradient_max_abs": 0.0
+    },
+    "check_count": 47,
+    "seconds": 0.9795011239993983,
+    "parameters": {
+      "architecture": "flygraph_dense_deepthin_v1",
+      "parameters": 598336,
+      "formula_parameters": 598336,
+      "tensor_count": 18,
+      "embedding_parameters": 524288,
+      "block_parameters": 73984,
+      "final_norm_parameters": 64,
+      "tied_embeddings": true,
+      "unique_blocks": 2,
+      "executed_blocks": 2,
+      "all_attention": true,
+      "has_moe": false,
+      "trained": false,
+      "config": {
+        "architecture": "flygraph_dense_deepthin_v1",
+        "vocab_size": 8192,
+        "dim": 64,
+        "layers": 2,
+        "heads": 4,
+        "kv_heads": 2,
+        "hidden": 128,
+        "max_context": 512,
+        "rope_theta": 10000.0,
+        "norm_eps": 1e-06,
+        "initializer_std": 0.02,
+        "checkpoint_blocks": false
+      }
+    },
+    "source_fixture_ids": [
+      "openbookqa:dev:7-1035",
+      "openbookqa:dev:1467"
+    ],
+    "fixture_tokens": 48,
+    "optimizer_updates": 0,
+    "backward_passes": 2,
+    "full_size_model_initialized": false,
+    "quality_evaluated": false,
+    "untrained_weight_sha256": "6e38f883d81f817bc822888cc8ac58ac4a12291b1315a654569403b0cbd47c4c",
+    "untrained_weight_bytes": 2395064
+  },
+  "remote_parameter_counts_equal": true,
+  "no_force_push": true,
+  "scope": "Untrained architecture scaffold; tiny init weights only; no quality benchmark or full-size training",
+  "original_EXT3_unchanged": true
 }
