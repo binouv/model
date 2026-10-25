@@ -76,5 +76,9 @@
   "fixed_external_dev_prompt": "User: Answer the question. Reply with only the letter A, B, C, D.\nQuestion: The element that heats toast is an example of:\nA. a semi-conductor?\nB. a thermal insulator\nC. a poor conductor\nD. a thermal conductor\nAssistant:",
   "fixed_prompt_inference_stdout": "{\"completion\": \" C\", \"new_token_ids\": [578, 2], \"eos\": true}\n",
   "no_force_push": true,
-  "general_superiority_established": false
+  "general_superiority_established": false,
+  "metadata_commit": "34bc4a1408795ae085f7b56ad4e1d5224bbb81ee",
+  "native_tensor_inventory_verified_against_reconstructed_remote_files": true,
+  "metadata_verified_utc": "2026-10-25T07:42:00.654510+00:00",
+  "all_published_file_checksums_verified_at_metadata_commit": true
 }
